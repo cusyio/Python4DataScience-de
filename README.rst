@@ -1,7 +1,7 @@
 Schnelleinstieg
 ===============
 
-|Contributors| |License| |Docs| |Pyup|
+|Contributors| |License| |Docs| |Pyup| |DOI|
 
 .. |Contributors| image:: https://img.shields.io/github/contributors/veit/jupyter-tutorial-de.svg
    :target: https://github.com/veit/jupyter-tutorial-de/graphs/contributors
@@ -11,6 +11,8 @@ Schnelleinstieg
    :target: https://jupyter-tutorial.readthedocs.io/de/latest/
 .. |Pyup| image:: https://pyup.io/repos/github/veit/jupyter-tutorial-de/shield.svg
    :target: https://pyup.io/repos/github/veit/jupyter-tutorial-de/
+.. |DOI| image:: https://zenodo.org/badge/307380211.svg
+   :target: https://zenodo.org/badge/latestdoi/307380211
 
 .. first-steps::
 

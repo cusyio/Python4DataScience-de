@@ -4,7 +4,7 @@ Einführung
 Status
 ------
 
--|Contributors| |Commits| |License| |Docs|
+|Contributors| |Commits| |License| |Docs| |Pyup| |DOI|
 
 .. |Contributors| image:: https://img.shields.io/github/contributors/veit/jupyter-tutorial.svg
    :target: https://github.com/veit/jupyter-tutorial/graphs/contributors
@@ -14,6 +14,10 @@ Status
    :target: https://github.com/veit/jupyter-tutorial/blob/master/LICENSE
 .. |Docs| image:: https://readthedocs.org/projects/jupyter-tutorial/badge/?version=latest
    :target: https://jupyter-tutorial.readthedocs.io/de/latest/
+.. |Pyup| image:: https://pyup.io/repos/github/veit/jupyter-tutorial-de/shield.svg
+   :target: https://pyup.io/repos/github/veit/jupyter-tutorial-de/
+.. |DOI| image:: https://zenodo.org/badge/307380211.svg
+   :target: https://zenodo.org/badge/latestdoi/307380211
 
 Zielgruppe
 ----------
