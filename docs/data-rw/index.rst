@@ -15,6 +15,7 @@ Speichermedien </data-rw/overview.rst#entfernte-speichermedien>` und
 * :doc:`DVC <../productive/dvc/index>`
 
 .. seealso::
+    `pandas I/O API <https://pandas.pydata.org/docs/user_guide/io.html>`_
     `Scrapy <https://scrapy.org/>`_
         Framework zum Extrahieren von Daten aus Websites als JSON-, CSV- oder
         XML-Dateien.
