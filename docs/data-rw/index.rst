@@ -16,6 +16,9 @@ Speichermedien </data-rw/overview.rst#entfernte-speichermedien>` und
 
 .. seealso::
     `pandas I/O API <https://pandas.pydata.org/docs/user_guide/io.html>`_
+        Die pandas I/O API ist eine Sammlung von ``reader``-Funktionen, die ein
+        pandas-Objekt zurückgeben. Meist stehen auch entsprechende
+        ``write``-Methoden zur Verfügung.
     `Scrapy <https://scrapy.org/>`_
         Framework zum Extrahieren von Daten aus Websites als JSON-, CSV- oder
         XML-Dateien.
