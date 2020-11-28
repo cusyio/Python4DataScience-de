@@ -18,6 +18,11 @@
     übernimmt die Änderungen von Remote, aktualisiert jedoch nicht die Zweige.
 ``$ git fetch --prune [remote]``
     Remote-Refs werden entfernt wenn sie im Remote-Repository entfernt wurden.
+``$ git commit --amend``
+    aktualisiert und ersetzt den letzten Commit durch einen neuen Commit, der
+    alle bereitgestellten Änderungen mit dem Inhalt des vorherigen Commits
+    kombiniert. Wenn nichts bereitgestellt ist, wird nur die vorherige
+    Commit-Nachricht neu geschrieben.
 ``$ git pull [remote]``
     ruft Änderungen aus dem Remote-Repository ab und führt den aktuellen Zweig
     mit dem Upstream zusammen.
