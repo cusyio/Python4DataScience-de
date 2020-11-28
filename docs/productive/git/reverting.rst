@@ -23,6 +23,11 @@
     alle bereitgestellten Änderungen mit dem Inhalt des vorherigen Commits
     kombiniert. Wenn nichts bereitgestellt ist, wird nur die vorherige
     Commit-Nachricht neu geschrieben.
+``$ git checkout [file]``
+    ändert Dateien im Arbeitsverzeichnis in einen Zustand, der Git zuvor bekannt
+    war. Standardmäßig checkt Git ``HEAD``, den letzten Commit des aktuell
+    ausgecheckten Zweigs, aus. Alternativ könnt Ihr auch einen bestimmte Zweig
+    oder SHA auswählen.
 ``$ git pull [remote]``
     ruft Änderungen aus dem Remote-Repository ab und führt den aktuellen Zweig
     mit dem Upstream zusammen.
