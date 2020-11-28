@@ -59,4 +59,4 @@ Für ältere Python-Versionen kann sie installiert werden mit
 
 .. seealso::
    Mit `responses <https://github.com/getsentry/responses>`_ könnt Ihr
-   Mock-Objekte für die :doc:`/data-rw/requests/index`-Bibliothek erstellen.
+   Mock-Objekte für die :doc:`/data/requests/index`-Bibliothek erstellen.

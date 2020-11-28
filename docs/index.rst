@@ -18,7 +18,7 @@ und neue Verwendungsmöglichkeiten ermöglichen.
     intro
     first-steps/index
     workspace/index
-    data-rw/index
+    data/index
     clean-prep/index
     viz/index
     refactoring/index

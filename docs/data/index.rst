@@ -1,18 +1,18 @@
-Daten lesen und schreiben
-=========================
+Daten lesen, speichern und bereitstellen
+========================================
 
 Einen Überblick über öffentliche Repositories mit Forschungsdaten erhaltet ihr
 z.B. in der `Registry of research data repositories (re3data)
 <https://www.re3data.org/>`_.
 
 Neben spezifischen Python-Bibliotheken zum Zugriff auf :ref:`entfernte
-Speichermedien </data-rw/overview.rst#entfernte-speichermedien>` und
-:ref:`/data-rw/overview.rst#geodaten` stellen wir Euch vier Werkzeuge genauer vor:
+Speichermedien </data/overview.rst#entfernte-speichermedien>` und
+:ref:`/data/overview.rst#geodaten` stellen wir Euch
+:doc:`serialisation-formats/index` und drei Werkzeuge genauer vor:
 
 * :doc:`requests/index`
 * :doc:`beautifulsoup`
 * :doc:`intake/index`
-* :doc:`DVC <../productive/dvc/index>`
 
 .. seealso::
     `pandas I/O API <https://pandas.pydata.org/docs/user_guide/io.html>`_
@@ -32,14 +32,23 @@ Zum Speichern von relationalen Daten, Python-Objekten und Geodaten stellen wir
 Euch :doc:`postgresql/index`, :doc:`postgresql/sqlalchemy` und
 :doc:`postgresql/postgis/index` vor.
 
-Zum Bereinigen und Vorbereiten der Daten stellen wir Euch einige Best Practices
-und hilfreiche Python-Pakete in :doc:`../clean-prep/index` vor.
+Mit :doc:`fastapi/index` zeigen wir Euch eine Möglichkeit, Daten über eine
+REST-Server bereitzustellen.
+
+Mit :doc:`DVC <../productive/dvc/index>` stellen wir Euch ein Werkzeug vor, das
+Euch Datenprovenienz erlaubt, d.h. die Herkunft und den Entstehungsweg von Daten
+nachvollziehen zu können.
+
+Schließlich lernt Ihr im nächsten Kapitel einige Good Practices und hilfreiche
+Python-Pakete zum :doc:`Bereinigen und Validieren von Daten
+<../clean-prep/index>` kennen.
 
 .. toctree::
     :hidden:
     :titlesonly:
     :maxdepth: 0
 
+    serialisation-formats/index
     requests/index
     beautifulsoup
     intake/index
