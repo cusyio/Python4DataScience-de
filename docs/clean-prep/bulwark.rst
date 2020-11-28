@@ -3,7 +3,8 @@ Pandas DataFrame-Validierung mit Bulwark
 
 `Bulwark <https://bulwark.readthedocs.io/en/stable/index.html>`_ ist ein Paket
 zum eigenschaftsbasierten Testen von pandas-Dataframes. Das Projekt wurde stark
-von der nicht mehr unterstützten :doc:`engarde.ipynb`-Bibliothek beeinflusst.
+von der nicht mehr unterstützten :doc:`Engarde <engarde>`-Bibliothek
+beeinflusst.
 
 Installation
 ------------
