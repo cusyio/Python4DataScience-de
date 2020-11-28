@@ -43,7 +43,7 @@ JSON
 |                       |       | Hinweise.                                             |
 +-----------------------+-------+-------------------------------------------------------+
 | Schema IDL            | +-    | Zum Teil mit `JSON Schema Proposal`_, `JSON Encoding  |
-|                       |       | Rules (JER)`_, `Kwalify`_, `Rx`_, `JSON-LD`_ ooder    |
+|                       |       | Rules (JER)`_, `Kwalify`_, `Rx`_, `JSON-LD`_ oder     |
 |                       |       | `JMESPath`_.                                          |
 |                       |       |                                                       |
 |                       |       | Immerhin gibt es viele verschiedene `Validatoren`_.   |
