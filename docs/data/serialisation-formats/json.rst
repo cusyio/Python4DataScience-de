@@ -20,7 +20,7 @@ JSON
 |                       |       | Schlüssel/Wert-Paar.                                  |
 +-----------------------+-------+-------------------------------------------------------+
 | Standardisierung      | \+    | JSON hat einen formal streng typisierten `Standard`_  |
-|                       |       | siehe auc `RFC 8259`_).                               |
+|                       |       | siehe auch `RFC 8259`_).                              |
 |                       |       | Jedoch enthalten JSON-Daten auch einige Fallstricke   |
 |                       |       | aufgrund der Mehrdeutigkeit der JSON-Specifikationen: |
 |                       |       |                                                       |
