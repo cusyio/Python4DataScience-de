@@ -54,4 +54,5 @@ Python-Pakete zum :doc:`Bereinigen und Validieren von Daten
     intake/index
     postgresql/index
     nosql/index
+    fastapi/index
     glossary
