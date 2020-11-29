@@ -43,7 +43,7 @@ sehen:
 
 .. figure:: fastapi-example.png
 
-   :alt: FastAPI root
+   :alt:FastAPI root
 
 Ihr erhaltet auch eine interaktive API-Dokumentation, die vom `Swagger UI
 <https://github.com/swagger-api/swagger-ui>`_ unter http://127.0.0.1:8000/docs
@@ -51,14 +51,14 @@ bereitgestellt wird:
 
 .. figure:: fastapi-docs-example.png
 
-   :alt: FastAPI swagger docs
+   :alt:FastAPI swagger docs
 
 Ihr erhaltet auch eine alternative automatische Dokumentation von `ReDoc
 <https://github.com/Redocly/redoc>`_ unter http://127.0.0.1:8000/redoc:
 
 .. figure:: fastapi-redoc-example.png
 
-   :alt: FastAPI ReDoc documentation
+   :alt:FastAPI ReDoc documentation
 
 4. Aktualisierungen
 -------------------
