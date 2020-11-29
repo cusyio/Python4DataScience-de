@@ -198,8 +198,9 @@ aussehen:
 
     name: pypi
     on:
-      release:
-        types: [created]
+      push:
+        tags:
+        - '*'
 
     jobs:
       package-and-deploy:
@@ -207,14 +208,21 @@ aussehen:
         runs-on: ubuntu-latest
 
         steps:
-          - uses: actions/checkout@v2
-          - name: Set up Python
-          - uses: actions/setup-python@v2
+          - name: Checkout
+            uses: actions/checkout@v2
             with:
-              python-version: 3.7
+              fetch-depth: 0
+
+          - name: Set up Python
+            uses: actions/setup-python@v2
+            with:
+              python-version: 3.8
+
           - name: Install dependencies
             run: |
-              python -m pip install --upgrade pip setuptools wheel twine
+              python -m pip install -U pip
+              python -m pip install -U setuptools twine wheel
+
           - name: Build and publish
             env:
               TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
