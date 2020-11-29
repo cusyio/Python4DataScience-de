@@ -43,7 +43,7 @@ Pydantic kann die folgenden optionalen Abhängigkeiten verwenden:
 
 Starlette kann die folgenden optionalen Abhängigkeiten verwenden:
 
-:doc:`requests <../data/requests/index>`
+:doc:`requests <../requests/index>`
     wenn Ihr den ``TestClient`` verwenden wollt.
 `aiofiles <https://github.com/Tinche/aiofiles>`_
     wenn Ihr ``FileResponse`` oder ``StaticFiles`` verwenden wollt.
