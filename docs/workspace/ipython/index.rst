@@ -9,6 +9,10 @@ Schnittstelle zu Python, sondern bietet auch eine Reihe nützlicher syntaktische
 Ergänzungen für die Sprache. Darüberhinaus ist IPython eng mit dem
 `Jupyter-Projekt <https://jupyter.org/>`_ verbunden.
 
+.. seealso::
+    * `Miki Tebeka - IPython: The Productivity Booster
+      <https://www.youtube.com/watch?v=Zmo2ZN1SJ_Q>`_
+
 .. toctree::
     :hidden:
     :titlesonly:
