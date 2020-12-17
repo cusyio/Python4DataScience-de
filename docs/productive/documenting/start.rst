@@ -45,7 +45,7 @@ Sphinx-Layout
 
 ::
 
-    my.package
+    example
     ├── Pipfile
     └── docs
         ├── Makefile
