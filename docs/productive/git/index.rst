@@ -35,4 +35,5 @@ Im Wesentlichen zeige ich in diesem Tutorial einerseits, wie :doc:`Jupyter Noteb
     reverting
     best-practices
     workflows/index
+    git-big-picture
     glossary
