@@ -152,11 +152,11 @@ Standardkonsolenfenster von Windows auswählen.
     `dotfiles <https://github.com/veit/dotfiles/>`_-Repository: `.gitconfig
     <https://github.com/veit/dotfiles/blob/master/.gitconfig>`_.
 
-Die ``.gitgnore``-Datei
-~~~~~~~~~~~~~~~~~~~~~~~
+Die ``.gitignore``-Datei
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-In der ``.gitgnore``-Datei eines Repository könnt Ihr Dateien von der
-Versionsverwaltung ausschließen. Eine typische ``.gitgnore``-Datei kann z.B. so
+In der ``.gitignore``-Datei eines Repository könnt Ihr Dateien von der
+Versionsverwaltung ausschließen. Eine typische ``.gitignore``-Datei kann z.B. so
 aussehen:
 
 .. code-block:: ini
