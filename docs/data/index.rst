@@ -15,7 +15,7 @@ z.B. in:
   <https://www.who.int/data/gho/>`_
 * `UNICEF Data <https://data.unicef.org/>`_
 * `World Bank Open Data <https://data.worldbank.org/>`_
-* `EU Open Data Portal Data <>http://open-data.europa.eu/en/data/`_
+* `EU Open Data Portal Data <http://open-data.europa.eu/en/data/>`_
 * `US Census Bureau <https://www.census.gov/data.html>`_
 * `data.gov <https://www.data.gov/>`_
 * `Google Dataset Search <https://datasetsearch.research.google.com/>`_
