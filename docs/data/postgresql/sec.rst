@@ -138,5 +138,7 @@ PostgreSQL-Erweiterung `pg_partman <https://t.co/3Q1FsU8uVg?amp=1>`_ eine eigene
 `Partition <https://www.cusy.io/de/blog/TablePartitioning>`_ erstellt wird.
 
 .. seealso::
+   * `Veil2  – Relational Security for Postgres
+     <https://marcmunro.github.io/veil2/html/index.html>`_
    * `PostgreSQL Secure Monitoring (Posemo)
      <https://github.com/alvar-freude/Posemo>`_
