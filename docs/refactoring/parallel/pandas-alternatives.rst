@@ -21,7 +21,7 @@ cuDF ist eine GPU-DataFrame-Bibliothek, die eine `Pandas-ähnliche API
       <https://github.com/rapidsai-community/notebooks-contrib>`_
 
 Modin
-=====
+-----
 
 Modin parallelisiert fast die gesamte Pandas-API. Dabei muss der bestehende
 Pandas-Code meist nur um folgenden Import erweitert werden:
@@ -39,7 +39,7 @@ Die Einschränkungen beziehen sich auf ``pd.read_json``, das nur für
     * `GitHub <https://github.com/modin-project/modin>`_
 
 Dask
-====
+----
 
 Dask DataFrame ist ein großer paralleler DataFrame aus mehreren Pandas
 DataFrames. Dabei ist die ``dask.dataframe``-API eine Teilmenge der Pandas-API,
