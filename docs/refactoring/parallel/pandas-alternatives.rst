@@ -10,7 +10,7 @@ cuDF
 ----
 
 cuDF ist eine GPU-DataFrame-Bibliothek, die eine `Pandas-ähnliche API
-<https://docs.rapids.ai/api/cudf/stable/api.html>` implementiert.
+<https://docs.rapids.ai/api/cudf/stable/api.html>`_ implementiert.
 
 .. seealso::
 
