@@ -1,5 +1,5 @@
-Pandas-Alternativen
-===================
+Pandas parallelisieren
+======================
 
 In :doc:`pandas:user_guide/enhancingperf` werden einige Möglichkeiten
 beschrieben, wie die Performance von Pandas verbessert werden kann. Es gibt
