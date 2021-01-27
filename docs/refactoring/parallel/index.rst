@@ -16,7 +16,8 @@ paralleler Programmierung in Python veranschaulicht.
     multiprocessing.ipynb
     threading-forking-combined.ipynb
     async-example.ipynb
-    ipyparallel/index.rst
+    ipyparallel/index
+    pandas-alternatives
 
 .. seealso::
     * `Faster CPython <https://faster-cpython.readthedocs.io/>`_
