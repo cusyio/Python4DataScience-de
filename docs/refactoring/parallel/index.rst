@@ -1,10 +1,10 @@
-Ausführung parallelisieren
-==========================
+Parallele Programmierung
+========================
 
 Anhand von drei Beispielen zu :doc:`Threading <threading-example>`,
 :doc:`Multiprocessing <multiprocessing>` und :doc:`Async
 <async-example>` werden die Regeln und Best Practices bei der Nutzung von
-Parallelisierung veranschaulicht.
+paralleler Programmierung in Python veranschaulicht.
 
 .. toctree::
     :hidden:
