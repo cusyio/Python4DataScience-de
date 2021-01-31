@@ -16,6 +16,10 @@ Konzepte
     Test Fixture (Prüfvorrichtung)
         ist eine konsistente Testumgebung.
 
+        .. seealso::
+            * `pytest fixtures
+              <https://docs.pytest.org/en/stable/fixture.html>`_
+
     Test Suite
         ist eine Sammlung mehrerer Test Cases.
 

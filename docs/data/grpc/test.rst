@@ -1,0 +1,39 @@
+gRPC testen
+===========
+
+gRPC lässt sich automatisiert testen mit `pytest-grpc
+<https://pypi.org/project/pytest-grpc/>`_.
+
+#. Zunächst erstellen wir Für unser Beispiel :doc:`example` ein :term:`Test
+   Fixture <Test Fixture (Prüfvorrichtung)>` mit:
+
+   .. literalinclude:: tests/test_accounts.py
+      :language: python
+      :lines: 2,4-25
+
+   .. seealso::
+      * `pytest fixtures <https://docs.pytest.org/en/latest/fixture.html>`_
+
+#. Anschließend können wir Tests schreiben, z.B.:
+
+   .. literalinclude:: tests/test_accounts.py
+      :language: python
+      :lines: 28-38
+
+#. Auch die Authentifizierung lässt sich testen, z.B. mit:
+
+   .. literalinclude:: tests/test_accounts.py
+      :language: python
+      :lines: 1,3,39-93
+
+#. Anschließend können wir gegen einen realen gRPC-Server testen mit:
+
+   .. code-block:: console
+
+    $ pytest
+
+   oder direkt gegen den Python-Code:
+
+   .. code-block:: console
+
+    $ pytest --grpc-fake-server

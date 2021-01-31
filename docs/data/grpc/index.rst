@@ -112,3 +112,4 @@ die Kommunikation zwischen Clients und Servern an:
 
     install
     example
+    test
