@@ -4,8 +4,8 @@ gRPC testen
 gRPC lässt sich automatisiert testen mit `pytest-grpc
 <https://pypi.org/project/pytest-grpc/>`_.
 
-#. Zunächst erstellen wir Für unser Beispiel :doc:`example` ein :term:`Test
-   Fixture <Test Fixture (Prüfvorrichtung)>` mit:
+#. Zunächst erstellen wir für unser :doc:`example` ein :term:`Test Fixture <Test
+   Fixture (Prüfvorrichtung)>` mit:
 
    .. literalinclude:: tests/test_accounts.py
       :language: python
