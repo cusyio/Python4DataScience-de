@@ -1,8 +1,7 @@
 gRPC testen
 ===========
 
-gRPC lässt sich automatisiert testen mit `pytest-grpc
-<https://pypi.org/project/pytest-grpc/>`_.
+gRPC lässt sich automatisiert testen mit pytest-grpc.
 
 #. Zunächst erstellen wir für unser :doc:`example` ein :term:`Test Fixture <Test
    Fixture (Prüfvorrichtung)>` mit:
@@ -37,3 +36,9 @@ gRPC lässt sich automatisiert testen mit `pytest-grpc
    .. code-block:: console
 
     $ pytest --grpc-fake-server
+
+.. seealso::
+   * `PyPI <https://pypi.org/project/pytest-grpc/>`_
+   * `GitHub <https://github.com/kataev/pytest-grpc>`_
+   * `Beispiel
+     <https://github.com/kataev/pytest-grpc/blob/master/example/test_example.py>`_
