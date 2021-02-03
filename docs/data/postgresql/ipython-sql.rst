@@ -131,8 +131,7 @@ Meta-Befehle von ``psql`` lassen sich auch in ipython-sql verwenden:
    * `pgspecial <https://pypi.org/project/pgspecial/>`_
 
 .. warning::
-   Da ipython-sql ``--``-Optionen wie z.B. --persist```` verarbeitet, und
+   Da ipython-sql ``--``-Optionen wie z.B. ``--persist`` verarbeitet, und
    gleichzeitig ``--`` als SQL-Kommentar akzeptiert, muss der Parser einige
    Annahmen treffen: so wird z.B. ``--persist is great`` in der ersten Zeile als
    Argument und nicht als Kommentar verarbeitet.
-   als Kommentar verarbeitet wenn es in der ersten Zeile angegeben
