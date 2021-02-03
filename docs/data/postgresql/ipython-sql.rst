@@ -35,14 +35,14 @@ Erste Schritte
    .. code-block:: python
 
     In [3]: %%sql postgresql://
-       ....: REATE TABLE accounts (login, name, email)
+       ....: CREATE TABLE accounts (login, name, email)
        ....: INSERT INTO accounts VALUES ('veit', 'Veit Schiele', veit@example.org);
 
 #. Die Inhalte der Tabelle ``accounts`` könnt Ihr abfragen mit
 
    .. code-block:: python
 
-    In [2]: result = %sql select * from accounts
+    In [4]: result = %sql select * from accounts
 
 Konfiguration
 -------------
@@ -60,7 +60,7 @@ lassen:
 
 .. code-block:: python
 
-    In [4]: %config SqlMagic
+    In [5]: %config SqlMagic
     SqlMagic options
     --------------
     SqlMagic.autocommit=<Bool>
@@ -87,13 +87,13 @@ Wenn pandas installiert ist, kann die ``DataFrame``-Methode verwendet werden:
 
 .. code-block:: python
 
-    In [5]: result = %sql SELECT * FROM character WHERE speechcount > 25
+    In [6]: result = %sql SELECT * FROM character WHERE speechcount > 25
 
-    In [6]: dataframe = result.DataFrame()
+    In [7]: dataframe = result.DataFrame()
 
-    In [7]: %sql --persist dataframe
+    In [8]: %sql --persist dataframe
 
-    In [8]: %sql SELECT * FROM dataframe;
+    In [9]: %sql SELECT * FROM dataframe;
 
 ``--persist``
     Argument mit dem Namen eines ``DataFrame``-Objekts, erstellt aus diesem
