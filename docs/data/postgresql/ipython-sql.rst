@@ -87,7 +87,7 @@ Wenn pandas installiert ist, kann die ``DataFrame``-Methode verwendet werden:
 
 .. code-block:: python
 
-    In [6]: result = %sql SELECT * FROM character WHERE speechcount > 25
+    In [6]: result = %sql SELECT * FROM accounts
 
     In [7]: dataframe = result.DataFrame()
 
