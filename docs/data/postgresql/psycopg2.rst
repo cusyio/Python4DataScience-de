@@ -5,7 +5,7 @@ Psycopg
 C-Bibliothek für PostgreSQL `libpq
 <https://www.postgresql.org/docs/current/libpq.html>`_ basiert. Er bietet u.a.:
 
-* DB-API-2.0-rKkompatibilität
+* DB-API-2.0-Kompatibilität
 * Multithreading bei Thread Safety
 * `Connections pooling <http://initd.org/psycopg/docs/pool.html>`_
   um einen Cache von bestehenden Datenbankverbindungen für Anfragen verwenden
