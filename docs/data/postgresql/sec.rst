@@ -50,8 +50,8 @@ gespeichert werden:
 .. code-block:: postgresql
 
     CREATE ROLE myapp_users;
-    CREATE USER myapp_reader IN ROLE users PASSWORD '…';
-    CREATE USER myapp_writer IN ROLE users PASSWORD '…';
+    CREATE ROLE myapp_reader IN ROLE myapp_users LOGIN PASSWORD '…';
+    CREATE ROLE myapp_writer IN ROLE myapp_users LOGIN PASSWORD '…';
 
 Anschließend erhalten dann User mit der Rolle ``myapp_users`` zunächst
 ``CONNECT``-Rechte und dann ``myapp_reader`` Leserechte und ``myapp_writer``
