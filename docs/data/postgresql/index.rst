@@ -127,4 +127,5 @@ Cross Platform
     ipython-sql
     postgis/index
     sec
+    performance
     pgmonitor
