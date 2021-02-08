@@ -39,4 +39,5 @@ Im Wesentlichen zeige ich in diesem Tutorial einerseits, wie :doc:`Jupyter Noteb
     best-practices
     workflows/index
     git-big-picture
+    git-bisect
     glossary
