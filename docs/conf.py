@@ -90,7 +90,7 @@ html_theme_options = {
 html_sidebars = {"**": ["about.html", "searchbox.html", "navigation.html"]}
 
 # Change default HTML title
-html_title = "Jupyter Tutorial 0.7.0"
+html_title = "Jupyter Tutorial 0.8.0"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
