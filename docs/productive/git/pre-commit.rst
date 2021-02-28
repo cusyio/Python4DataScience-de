@@ -45,9 +45,9 @@ sein.
 Konfiguration
 -------------
 
-Nachdem Pre-Commit installiert ist, können mit der ``.pre-commit-
-config.yaml``-Datei im Root-Verzeichnis Eures Projekts Plugins für dieses
-Projekt konfiguriert werden.
+Nachdem Pre-Commit installiert ist, können mit der
+``.pre-commit-config.yaml``-Datei im Root-Verzeichnis Eures Projekts Plugins für
+dieses Projekt konfiguriert werden.
 
 .. code-block:: yaml
 
