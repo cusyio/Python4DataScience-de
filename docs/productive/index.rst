@@ -22,8 +22,9 @@ Es gibt diverse Werkzeuge, die Euch beim Erstellen von gemeinsam nutzbaren
 Produkten unterstützen. Dies können Werkzeuge einerseits für die Versionierung
 des :doc:`Quellcodes <git/index>` und der :doc:`Trainingsdaten <dvc/index>`
 sowie für die Reproduzierbarkeit der :doc:`Ausführungsumgebungen <envs/index>`,
-andererseits für das :doc:`testing/index`, :doc:`logging`, :doc:`Dokumentieren
-<documenting/index>` und :doc:`Erstellen von Paketen <packaging/index>` sein.
+andererseits für das :doc:`testing/index`, :doc:`logging/index`,
+:doc:`Dokumentieren <documenting/index>` und :doc:`Erstellen von Paketen
+<packaging/index>` sein.
 
 .. seealso::
 
@@ -52,4 +53,4 @@ andererseits für das :doc:`testing/index`, :doc:`logging`, :doc:`Dokumentieren
     quote/index
     envs/index
     testing/index
-    logging.ipynb
+    logging/index
