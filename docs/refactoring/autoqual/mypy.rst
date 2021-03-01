@@ -1,8 +1,13 @@
 Mypy
 ====
 
-Mit `Mypy <http://mypy-lang.org/>`_ könnt ihr eine statische Typüberprüfung
-vornehmen.
+Mit Mypy könnt ihr eine statische Typüberprüfung vornehmen.
+
+.. seealso::
+    * `Home <http://mypy-lang.org/>`_
+    * `GitHub <https://github.com/python/mypy>`_
+    * `Docs <https://mypy.readthedocs.io/>`_
+    * `PyPI <https://pypi.org/project/mypy/>`_
 
 Installation
 ------------
@@ -29,6 +34,3 @@ Dann könnt ihr es überprüfen, z.B. mit:
     .. code-block:: console
 
         $ pipenv run mypy --py2 myprogram.py
-
-.. seealso::
-    * `Mypy docs <https://mypy.readthedocs.io/>`_
