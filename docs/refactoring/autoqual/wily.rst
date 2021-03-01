@@ -2,8 +2,17 @@ Wily
 ====
 
 Wily ist ein Kommandozeilenwerkzeug zum Überprüfen der Komplexität von
-Python-Code in Tests und Anwendungen. Auch Python code in ``.ipynb``-Dateien
-wird automatisch erkannt.
+Python-Code in Tests und Anwendungen. Hierfür verwendet Wily folgende Metriken:
+
+`McCabe-Metrik <https://de.wikipedia.org/wiki/McCabe-Metrik>`_
+    auch zyklomatische Komplexität genannt, misst die Komplexität von Code durch
+    die Anzahl linear unabhängiger Pfade im Kontrollflussgraphen.
+`Halstead-Metrik <https://de.wikipedia.org/wiki/Halstead-Metrik>`_
+    statisch analysierendes Verfahren, das aus der Anzahl der Operatoren und
+    Operanden die Schwierigkeit des Programms, den Aufwand und die
+    Implementierungszeit berechnet.
+Wartbarkeitsindex (engl. Maintainability Index)
+    basiert auf der McCabe- und Halstead-Metrik
 
 .. seealso::
 
@@ -49,8 +58,8 @@ der verfügbaren Operatoren:
     # max revisions to archive, defaults to 50
     max_revisions = 20
 
-Für Jupyter Notebooks könnt Ihr ggf. angeben, dass diese nicht analysiert werden
-sollen mit
+Auch Python code in ``.ipynb``-Dateien wird üblicherweise automatisch erkannt.
+Ihr könnt dies jedoch ggf. unterbinden für ein Jupyter Notebooks mit
 
 .. code-block:: python
 
