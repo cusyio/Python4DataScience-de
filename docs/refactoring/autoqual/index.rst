@@ -32,7 +32,9 @@ Checker
    flake8
    manifest
    mypy
+   pytype
    wily
+   pyre
 
 Formatter
 ---------
