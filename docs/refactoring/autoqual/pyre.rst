@@ -1,5 +1,5 @@
-Strukturelle Zuverlässigkeitsanalyse mit PyRe
-=============================================
+PyRe
+====
 
 PyRe (Python Reliability) analysiert die strukturelle Zuverlässigkeit von
 Python-Code und fasst sie in einem Report zusammen. Aktuell werden jedoch nur

@@ -2,14 +2,12 @@ Refactoring
 ===========
 
 Unter Refactoring wird die Verbesserung des Quellcodes verstanden, wobei die
-Ergebnisse unverändert bleiben sollen. Dabei können die Ziele unterschiedlich
-sein: einmal kann der Code lesbarer, wartbarer und besser erweiterbar werden,
-zum anderen kann jedoch auch die Ausführgeschwindigkeit erhöht werden.
+Ergebnisse unverändert bleiben sollen. Dabei wird im wesentlichen zwischen zwei
+Zielen unterschieden:
 
 .. toctree::
-    :hidden:
     :titlesonly:
-    :maxdepth: 0
+    :maxdepth: 1
 
     autoqual/index
-    parallel/index
+    performance/index
