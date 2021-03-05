@@ -40,7 +40,7 @@ Python-Code in Tests und Anwendungen. Hierfür verwendet Wily folgende Metriken:
     Implementierungszeit berechnet.
 Wartbarkeitsindex (engl. Maintainability Index)
     basiert auf den McCabe- und Halstead-Metriken sowie der Anzahl der
-    Codezeilen:
+    Codezeilen [#]_:
 
     +--------------------------------+--------------------------------+
     | Index                          | Wartbarkeit                    |
