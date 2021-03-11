@@ -130,4 +130,4 @@ Antwort der :ref:`OSM-Nomination-API <Example-OSM-Nomination-API>`:
 .. _`Rx`: http://rx.codesimply.com/
 .. _`JSON-LD`: https://json-ld.org#
 .. _`JMESPath`: https://jmespath.org/
-.. _`validators`: https://json-schema.org/implementations.html#validators
+.. _`Validatoren`: https://json-schema.org/implementations.html#validators
