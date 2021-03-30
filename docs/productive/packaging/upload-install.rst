@@ -179,9 +179,16 @@ Schließlich könnt ihr nun euer Paket auf PyPI veröffentlichen:
     $ pipenv run twine upload -r pypi -s dist/*
 
 .. note::
-    Ihr könnt Releases von PyPI löschen, aber nicht unter derselben
-    Versionsnummer erneut hochladen! Seit also vor dem Löschen und Hochladen
-    vorsichtig: Releases können nicht einfach  ersetzt werden.
+    Ihr könnt Releases nicht einfach ersetzen da Ihr Pakete mit derselben
+    Versionsnummer nicht erneut hochladen könnt.
+
+.. note::
+   Entfernt nicht alte Versionen aus dem Python Package Index. Dies verursacht
+   nur Arbeit für jene, die diese Version weiter verwenden wollen und dann auf
+   alte Versionen auf GitHub ausweichen müssen. PyPI hat eine `yank
+   <https://pypi.org/help/#yanked>`_-Funktion, die Ihr stattdessen nutzen
+   könnt. Dies ignoriert eine bestimmte Version, wenn sie nicht explizit mit
+   ``==`` oder ``===`` explizit angegeben wurde.
 
 .. seealso::
     * `PyPI Release Checklist
