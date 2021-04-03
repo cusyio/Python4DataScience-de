@@ -78,7 +78,7 @@ vereinfacht das Erstellen und Veröffentlichen von Dokumentation nach jedem
 .. seealso::
    * `Christina Czeschik und Matthias Lindhorst: Weniger schlecht über IT
      schreiben
-     <https://www.oreilly.de/buecher/13079/9783960090632-weniger-schlecht-%C3%BCber-it-schreiben.html>`_
+     <https://oreilly.de/produkt/weniger-schlecht-ueber-it-schreiben/>`_
    * `Google developer documentation style guide
      <https://developers.google.com/style/>`_
    * `Google Technical Writing Courses for Engineers
