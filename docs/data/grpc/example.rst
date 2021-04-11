@@ -19,6 +19,14 @@ Reihe von Name-Wert-Paaren enthält, die *fields* genannt werden.
    :language: proto
    :lines: 1-6
 
+.. warning::
+    Beachtet bitte, dass Ihr üblicherweise **nicht** einfach ``uint32`` für
+    User- oder Group-IDs verwenden solltet, da diese viel zu einfach zu erraten
+    wären. Hierfür könnt Ihr z.B. eine `RFC 4122
+    <https://tools.ietf.org/html/rfc4122>`_-konforme Implementierung verwenden.
+    Eine entsprechende Protobuf-Konfiguration findet Ihr in
+    :download:`rfc4122.proto`.
+
 Nachdem Ihr Eure Datenstruktur definiert habt, könnt Ihr das
 Protocol-Buffer-Compiler-Protokoll ``protoc`` verwenden, um Deskriptoren in
 Eurer bevorzugten Sprache zu erzeugen. Diese bietet einfache Zugriffsfunktionen
