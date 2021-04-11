@@ -15,12 +15,6 @@ Schnittstelle und führt einen gRPC-Server aus, um Clientaufrufe zu verarbeiten.
 Auf der Clientseite verfügt der Client über einen Stub, der dieselben Methoden
 wie der Server bereitstellt.
 
-Im Gegensatz zu :doc:`../fastapi/index` kann die gRPC-API jedoch nicht einfach
-auf der Kommandozeile mit cURL getestet werden. Ggf. könnt Ihr jedoch `grpcurl
-<https://github.com/fullstorydev/grpcurl>`_ verwenden. Dies setzt jedoch voraus,
-dass der gRPC-Server das `GRPC Server Reflection Protocol
-<https://grpc.github.io/grpc/core/md_doc_server-reflection.html>`_ unterstützt.
-
 .. graphviz::
 
     digraph grpc_concept {
@@ -111,6 +105,18 @@ die Kommunikation zwischen Clients und Servern an:
    Payload-Nachrichten werden in einen Byte-Stream serialisiert, der in
    HTTP/2-Frames fragmentiert ist. ``Status`` und ``Trailing-Metadata`` werden
    als HTTP/2-Trailing-Headers gesendet.
+
+Im Gegensatz zu :doc:`../fastapi/index` kann die gRPC-API jedoch nicht einfach
+auf der Kommandozeile mit cURL getestet werden. Ggf. könnt Ihr jedoch `grpcurl
+<https://github.com/fullstorydev/grpcurl>`_ verwenden. Dies setzt jedoch voraus,
+dass der gRPC-Server das `GRPC Server Reflection Protocol
+<https://grpc.github.io/grpc/core/md_doc_server-reflection.html>`_ unterstützt.
+Üblicherweise sollte *Reflection* jedoch nur in der Entwicklungsphase zur
+Verfügung stehen. Dann könnt Ihr jedoch ``grpcurl`` aufrufen, z.B. mit:
+
+.. code-block:: console
+
+    $ grpcurl localhost:9111 list
 
 .. seealso::
     * `Home <https://grpc.io/>`_
