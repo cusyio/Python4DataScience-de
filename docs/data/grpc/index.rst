@@ -9,11 +9,17 @@ Messages. In gRPC kann eine Clientanwendung direkt eine Methode auf einer
 entfernten Serveranwendung aufrufen als wäre es ein lokales Objekt, sodass
 verteilte Anwendungen und Dienste einfacher erstellt werden können. Wie in
 vielen RPC-Systemen basiert gRPC auf der Idee, einen Service zu definieren und
-die Methoden anzugeben, die mit ihren Parametern und Rückgabetypen remote
+die Methoden anzugeben, die mit ihren Parametern und Rückgabetypen aus der Ferne
 aufgerufen werden können. Auf der Serverseite implementiert der Server diese
 Schnittstelle und führt einen gRPC-Server aus, um Clientaufrufe zu verarbeiten.
 Auf der Clientseite verfügt der Client über einen Stub, der dieselben Methoden
 wie der Server bereitstellt.
+
+Im Gegensatz zu :doc:`../fastapi/index` kann die gRPC-API jedoch nicht einfach
+auf der Kommandozeile mit cURL getestet werden. Ggf. könnt Ihr jedoch `grpcurl
+<https://github.com/fullstorydev/grpcurl>`_ verwenden. Dies setzt jedoch voraus,
+dass der gRPC-Server das `GRPC Server Reflection Protocol
+<https://grpc.github.io/grpc/core/md_doc_server-reflection.html>`_ unterstützt.
 
 .. graphviz::
 
