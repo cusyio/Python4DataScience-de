@@ -85,7 +85,7 @@ die Kommunikation zwischen Clients und Servern an:
    gestartet
 
    #. gefolgt von optionalen ``Initial-Metadata``
-   #. fefolgt von optionalen ``Payload Messages``.
+   #. gefolgt von optionalen ``Payload Messages``.
 
    Die Inhalte von ``Call Header`` und ``Initial Metadata`` werden als
    HTTP/2-Headers mit ``HPACK`` komprimiert.
