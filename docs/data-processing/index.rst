@@ -5,8 +5,8 @@ Einen Überblick über öffentliche Repositories mit Forschungsdaten erhaltet ih
 z.B. in :doc:`opendata`.
 
 Neben spezifischen Python-Bibliotheken zum Zugriff auf :ref:`entfernte
-Speichermedien </data/overview.rst#entfernte-speichermedien>` und
-:ref:`/data/overview.rst#geodaten` stellen wir Euch
+Speichermedien </data-processing/overview.rst#entfernte-speichermedien>` und
+:ref:`/data-processing/overview.rst#geodaten` stellen wir Euch
 :doc:`serialisation-formats/index` und drei Werkzeuge genauer vor:
 
 * :doc:`requests/index`
