@@ -6,7 +6,7 @@ Schnelleinstieg
 .. |Contributors| image:: https://img.shields.io/github/contributors/veit/jupyter-tutorial-de.svg
    :target: https://github.com/veit/jupyter-tutorial-de/graphs/contributors
 .. |License| image:: https://img.shields.io/github/license/veit/jupyter-tutorial-de.svg
-   :target: https://github.com/veit/jupyter-tutorial-de/blob/master/LICENSE
+   :target: https://github.com/veit/jupyter-tutorial-de/blob/main/LICENSE
 .. |Docs| image:: https://readthedocs.org/projects/jupyter-tutorial-de/badge/?version=latest
    :target: https://jupyter-tutorial.readthedocs.io/de/latest/
 .. |Pyup| image:: https://pyup.io/repos/github/veit/jupyter-tutorial-de/shield.svg
@@ -23,11 +23,20 @@ Installation
 
    .. code-block:: console
 
-    $ curl -O https://codeload.github.com/veit/jupyter-tutorial-de/zip/master
-    $ unzip master
-    Archive:  master
+    $ curl -O https://codeload.github.com/veit/jupyter-tutorial-de/zip/main
+    $ unzip main
+    Archive:  main
     …
-       creating: jupyter-tutorial-de-master/
+       creating: jupyter-tutorial-de-main/
+    …
+
+#. Installieren der Python-Pakete
+
+   .. code-block:: console
+
+    $ cd jupyter-tutorial-main
+    $ pipenv install
+    Creating a virtualenv for this project…
     …
 
 #. Installieren der `Jupyter Notebook Extensions
