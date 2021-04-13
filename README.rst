@@ -30,6 +30,23 @@ Installation
        creating: jupyter-tutorial-de-master/
     …
 
+#. Installieren der `Jupyter Notebook Extensions
+   <https://jupyter-contrib-nbextensions.readthedocs.io/>`_:
+
+   .. code-block:: console
+
+    $ pipenv run jupyter contrib nbextension install --user
+    jupyter contrib nbextension install --user
+    Installing jupyter_contrib_nbextensions nbextension files to jupyter data directory
+    …
+    Successfully installed jupyter-contrib-core-0.3.3 jupyter-contrib-nbextensions-0.5.1
+    jupyter-highlight-selected-word-0.2.0 jupyter-latex-envs-1.4.6
+    jupyter-nbextensions-configurator-0.4.1
+    …
+    $ pipenv run jupyter nbextension enable latex_envs --user --py
+    Enabling notebook extension latex_envs/latex_envs...
+          - Validating: OK
+
 #. HTML-Dokumentation erstellen:
 
    .. code-block:: console
