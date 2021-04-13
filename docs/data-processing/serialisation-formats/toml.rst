@@ -8,7 +8,7 @@ TOML
 | Unterstützung für     | \+    | TOML (Tom’s Obvious, Minimal Language) unterstützt die|
 | Datenstrukturen       |       | meisten Datenstrukturen, einschließlich Zeichenfolgen,|
 |                       |       | Ganzzahlen, Gleitkommazahlen und Datumsangaben, jedoch|
-|                       |       | keine Referenzen wie YAML.                            |
+|                       |       | keine Referenzen wie :doc:`yaml`.                     |
 +-----------------------+-------+-------------------------------------------------------+
 | Standardisation       | ++    | TOML ist ein formaler, stark typisierter Standard.    |
 +-----------------------+-------+-------------------------------------------------------+
