@@ -13,7 +13,7 @@ Struktur für die Daten zu definieren, die Sie in einer ``.proto``-Datei
 serialisieren möchten. Protocol-Buffers-Daten sind als *Nachrichten*
 strukturiert, wobei jede Nachricht ein kleiner logischer Datensatz ist, der eine
 Reihe von Name-Wert-Paaren enthält, die *fields* genannt werden.
-``accounts.proto`` ist ein einfaches Beispiel hierfür:
+:download:`accounts.proto` ist ein einfaches Beispiel hierfür:
 
 .. literalinclude:: accounts.proto
    :language: proto
