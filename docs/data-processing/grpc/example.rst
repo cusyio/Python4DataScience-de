@@ -63,18 +63,18 @@ Dies erzeugt zwei Dateien:
     ``AccountsServicer`` für die API-Definition des Services und eine Funktion
     ``add_AccountsServicer_to_server`` für den Server.
 
-Erweitern des Servers
----------------------
+Server erstellen
+----------------
 
-Hierfür erstellen wir die Datei :download:`accounts_server.py`:
+Hierfür schreiben wir die Datei :download:`accounts_server.py`:
 
 .. literalinclude:: accounts_server.py
    :language: python
 
-Erweitern des Clients
----------------------
+Client erstellen
+----------------
 
-Hierfür erstellen wir :download:`accounts_client.py`:
+Hierfür schreiben wir :download:`accounts_client.py`:
 
 .. literalinclude:: accounts_client.py
    :language: python
