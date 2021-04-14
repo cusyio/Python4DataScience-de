@@ -52,7 +52,7 @@ Generieren des gRPC-Codes
 .. code-block:: console
 
     $ pipenv install grpcio grpcio-tools
-    $ pipenv run python -m grpc_tools.protoc -I . --python_out=. --grpc_python_out=. person.proto
+    $ pipenv run python -m grpc_tools.protoc -I . --python_out=. --grpc_python_out=. accounts.proto
 
 Dies erzeugt zwei Dateien:
 
