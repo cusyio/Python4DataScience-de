@@ -94,12 +94,3 @@ Client und Server starten
 
     $ pipenv run python accounts_client.py
     Account created: tom
-    account {
-      account_id: 1
-      account_name: "veit"
-    }
-
-    account {
-      account_id: 2
-      account_name: "andy"
-    }
