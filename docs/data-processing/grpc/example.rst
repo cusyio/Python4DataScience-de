@@ -82,13 +82,13 @@ Hierfür erstellen wir :download:`accounts_client.py`:
 Client und Server ausführen
 ---------------------------
 
-#. Führt den Server aus:
+#. Starten des Server:
 
    .. code-block:: console
 
         $ pipenv run python accounts_server.py
 
-#. Führt den Client von einem anderen Terminal aus:
+#. Starten des Client von einem anderen Terminal aus:
 
    .. code-block:: console
 
