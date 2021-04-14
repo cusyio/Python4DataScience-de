@@ -52,7 +52,7 @@ Generieren des gRPC-Codes
 .. code-block:: console
 
     $ pipenv install grpcio grpcio-tools
-    $ pipenv run python -m grpc_tools.protoc -I . --python_out=. --grpc_python_out=. accounts.proto
+    $ pipenv run python -m grpc_tools.protoc --python_out=. --grpc_python_out=. accounts.proto
 
 Dies erzeugt zwei Dateien:
 
@@ -79,8 +79,8 @@ Hierfür erstellen wir :download:`accounts_client.py`:
 .. literalinclude:: accounts_client.py
    :language: python
 
-Client und Server ausführen
----------------------------
+Client und Server starten
+-------------------------
 
 #. Starten des Server:
 
