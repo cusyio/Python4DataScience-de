@@ -44,7 +44,7 @@ angegeben werden:
 
 .. literalinclude:: accounts.proto
    :language: proto
-   :lines: 8-
+   :lines: 8-23,32-34,36
 
 Generieren des gRPC-Codes
 -------------------------
@@ -57,23 +57,24 @@ Generieren des gRPC-Codes
 Dies erzeugt zwei Dateien:
 
 :download:`accounts_pb2.py`
-    die die generierten Anfrage- und Antwortklassen enthält.
+    enthält Klassen für die in ``accounts.proto`` definierten Messages.
 :download:`accounts_pb2_grpc.py`
-    die die generierten Client- und Server-Klassen enthält.
+    enthält die definierten Klassen ``AccountsStub`` für den Aufruf von RPCs,
+    ``AccountsServicer`` für die API-Definition des Services und eine Funktion
+    ``add_AccountsServicer_to_server`` für den Server.
 
-Den Server aktualisieren
-------------------------
+Erweitern des Servers
+---------------------
 
-Jetzt können wir unsere Anrede ``Salutation`` in :download:`accounts_server.py`
-definieren:
+Hierfür erstellen wir die Datei :download:`accounts_server.py`:
 
 .. literalinclude:: accounts_server.py
    :language: python
 
-Aktualisieren des Clients
--------------------------
+Erweitern des Clients
+---------------------
 
-Wir erstellen :download:`accounts_client.py` mit der Methode ``run``:
+Hierfür erstellen wir :download:`accounts_client.py`:
 
 .. literalinclude:: accounts_client.py
    :language: python
