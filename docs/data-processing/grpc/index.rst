@@ -1,21 +1,43 @@
 gRPC
 ====
 
-gRPC ist ein modernes Open-Source-RPC (High Performance Remote Procedure
-Call)-Framework. Standardmäßig verwendet gRPC
-:doc:`../serialisation-formats/protobuf` als Interface Definition Language (IDL)
-zur Beschreibung sowohl des Interfaces als auch der Struktur der Payload
-Messages. In gRPC kann eine Clientanwendung direkt eine Methode auf einer
-entfernten Serveranwendung aufrufen als wäre es ein lokales Objekt, sodass
-verteilte Anwendungen und Dienste einfacher erstellt werden können. Wie in
-vielen RPC-Systemen basiert gRPC auf der Idee, einen Service zu definieren und
-die Methoden anzugeben, die mit ihren Parametern und Rückgabetypen aus der Ferne
-aufgerufen werden können. Auf der Serverseite implementiert der Server diese
-Schnittstelle und führt einen gRPC-Server aus, um Clientaufrufe zu verarbeiten.
-Auf der Clientseite verfügt der Client über einen Stub, der dieselben Methoden
-wie der Server bereitstellt.
+gRPC ist ein modernes Open-Source-RPC (Remote Procedure Call)-Framework.
+Standardmäßig verwendet gRPC :doc:`../serialisation-formats/protobuf` als
+Interface Definition Language (IDL) zur Beschreibung sowohl des Interfaces als
+auch der Struktur der *Payload Messages*. In gRPC kann eine Clientanwendung
+direkt eine Methode auf einer entfernten Serveranwendung aufrufen als wäre es
+ein lokales Objekt, sodass verteilte Anwendungen und Dienste einfacher erstellt
+werden können. Wie in vielen RPC-Systemen basiert gRPC auf der Idee, einen
+Service zu definieren und die Methoden anzugeben, die mit ihren Parametern und
+Rückgabetypen aus der Ferne aufgerufen werden können. Der Server implementiert
+dieses Interface, um die Client-Aufrufe zu verarbeiten. Für den Client wurde
+ein sog. *Stub* generiert, der dieselben Methoden wie der Server bereitstellt.
 
-.. graphviz::
+Im folgenden die wesentlichen Design-Prinzipien von gRPC:
+
+* gRPC kann auf allen gängigen Entwicklungsplattformen und in vielen
+  verschiedenen Sprachen erstellt werden.
+* Es ist auf Geräten mit geringer CPU- und Speicherfähigkeiten funktionsfähig
+  sein, so neben Android [#]_- und iOS-Geräten auch auf MicroPython-Boards und
+  in Browsern [#]_ [#]_.
+* Es ist lizenziert unter Apache License 2.0 und nutzt offene Standards wie z.B.
+  HTTP/2 und Quick UDP Internet Connections (QUIC).
+* gRPC ist interoperabel und kann daher z.B. auch im LoRaWan (Long Range Wide
+  Area  Network) genutzt werden.
+* Die einzelnen Layer können unabhängig voneinander entwickelt werden. So kann
+  z.B. der Transport-Layer (OSI-Layer 4) unabhängig vom Application-Layer
+  (OSI-Layer 7) entwickelt werden.
+* gRPC unterstützt unterschiedliche Serialisierungsformate, u.a.
+  :doc:`../serialisation-formats/protobuf`,
+  :doc:`../serialisation-formats/json` [#]_, :doc:`../serialisation-formats/xml` und
+  Thrift)
+* Asynchrone und synchrone (blockierende) Verarbeitung werden in den meisten
+  Sprachen unterstützt.
+* Das Streaming von Nachrichten in einem einzelnen RPC-Aufruf wird unterstützt.
+* gRPC erlaubt Protokollerweiterungen für Sicherheit, Integritätsprüfung,
+  Lastausgleich, Failover etc.
+
+.. graphviz:
 
     digraph grpc_concept {
         rankdir="LR";
@@ -81,9 +103,7 @@ wie der Server bereitstellt.
 
 Ausgehend von einer Schnittstellendefinition in einer ``.proto``-Datei bietet
 gRPC Protocol-Compiler-Plugins, die clientseitige und serverseitige APIs
-generieren. Sowohl die synchrone als auch die asynchrone Kommunikation wird in
-den meisten Sprachen unterstützt. gRPC unterstützt auch das Streaming von
-Nachrichten in einem einzelnen RPC-Aufruf. Das `gRPC-Protokoll
+generieren.  Das `gRPC-Protokoll
 <https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md>`_ gibt abstrakt
 die Kommunikation zwischen Clients und Servern an:
 
@@ -122,6 +142,14 @@ Verfügung stehen. Dann könnt Ihr jedoch ``grpcurl`` aufrufen, z.B. mit:
     * `Home <https://grpc.io/>`_
     * `GitHub <https://github.com/grpc/grpc>`_
     * `gRPC Blog <https://grpc.io/blog/>`_
+
+----
+
+.. [#] * `gRPC in Android Java <https://grpc.io/docs/platforms/android/java/quickstart/>`_
+.. [#] * `gRPC-Web is Generally Available <https://grpc.io/blog/grpc-web-ga/>`_
+.. [#] * `gRPC-Web Client Runtime Library <https://www.npmjs.com/package/grpc-web>`_
+.. [#] * `gRPC + JSON <https://grpc.io/blog/grpc-with-json/>`_
+.. [#] * `gRPC with REST and Open APIs <https://grpc.io/blog/coreos/>`_
 
 .. toctree::
     :hidden:
