@@ -37,7 +37,7 @@ Im folgenden die wesentlichen Design-Prinzipien von gRPC:
 * gRPC erlaubt Protokollerweiterungen für Sicherheit, Integritätsprüfung,
   Lastausgleich, Failover etc.
 
-.. graphviz:
+.. graphviz::
 
     digraph grpc_concept {
         rankdir="LR";
