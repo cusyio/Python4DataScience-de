@@ -9,5 +9,5 @@ Zielen unterschieden:
     :titlesonly:
     :maxdepth: 1
 
-    autoqual/index
+    qa/index
     performance/index
