@@ -69,7 +69,7 @@ weitere Methode oder nur statische Methoden enthalten sind.
 Verschachtelter Code
 --------------------
 
-    Flat is better than nested.
+    *«Flat is better than nested.»*
 
 – Tim Peters, `Zen of Python <https://www.python.org/dev/peps/pep-0020/>`_
 
