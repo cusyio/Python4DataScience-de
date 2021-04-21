@@ -1,7 +1,7 @@
 Reproduzieren
 =============
 
-Um die Ergebnisse eines Projekts zu reproduzieren, clonen wir rufen
+Um die Ergebnisse eines Projekts zu reproduzieren, clonen wir den Code und rufen
 anschließend die mit DVC verwalteten Daten ab:
 
 .. code-block:: console
