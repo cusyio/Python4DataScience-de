@@ -45,3 +45,7 @@ Geodaten
 `RSGISLib <https://www.rsgislib.org/>`_
     oder *The Remote Sensing and GIS Software Library* ist eine Reihe von
     Fernerkundungswerkzeugen für die Rasterverarbeitung und -analyse.
+`pgeocode <https://pypi.org/project/pgeocode/>`_
+    wird für die Abfrage von GPS-Koordinaten und Gemeindenamen anhand von
+    Postleitzahlen, Entfernungen zwischen Postleitzahlen sowie allgemeine
+    Entfernungsabfragen verwendet.
