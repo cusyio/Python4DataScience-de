@@ -29,7 +29,7 @@ paralleler Programmierung in Python veranschaulicht.
     :titlesonly:
     :maxdepth: 0
 
-    introduction.ipynb
+    concurrency.ipynb
     threading-example.ipynb
     multiprocessing.ipynb
     threading-forking-combined.ipynb
