@@ -22,14 +22,14 @@ Pickle
 | Menschliche Lesbarkeit| +\-   | Pickle ist ein binäres Serialisierungsformat,         |
 |                       |       | das jedoch einfach mit Python gelesen werden kann.    |
 +-----------------------+-------+-------------------------------------------------------+
-| Geschwindigkeit       | ++    | Das Pickle-Format kann von Python meist schnell       |
-|                       |       | serialisiert und deserialisiert werden; s.a.          |
-|                       |       | `Don’t pickle your data`_                             |
+| Geschwindigkeit       | +\-   | Das Pickle-Format kann von Python meist schnell       |
+|                       |       | serialisiert und deserialisiert werden; siehe jedoch  |
+|                       |       | `Don’t pickle your data`_.                            |
 +-----------------------+-------+-------------------------------------------------------+
 | Dateigröße            | ++    | Kompaktes Binärformat, das jedoch noch weiter         |
 |                       |       | komprimiert werden kann, s. `Data Compression         |
 |                       |       | and Archiving                                         |
-|                       |       | <https://docs.python.org/3/library/archiving.html>`_  |
+|                       |       | <https://docs.python.org/3/library/archiving.html>`_. |
 +-----------------------+-------+-------------------------------------------------------+
 
 Beispiel
