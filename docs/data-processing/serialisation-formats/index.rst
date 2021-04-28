@@ -62,6 +62,7 @@ Dicts, Booleans und Nichts.
 
     csv
     json
+    pickle
     protobuf
     toml
     xml
