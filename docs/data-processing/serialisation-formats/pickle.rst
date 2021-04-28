@@ -12,17 +12,19 @@ Pickle
 |                       |       | Verweise nicht erneut serialisiertt werden. Auch      |
 |                       |       | rekursive Objekte sind möglich.                       |
 +-----------------------+-------+-------------------------------------------------------+
-| Standardisierung      | -\-   | Pickle ist definiert in den Python Enhancement        |
+| Standardisierung      | ++    | Pickle ist definiert in den Python Enhancement        |
 |                       |       | Proposals `307`_, `3154`_ und `574`_.                 |
 +-----------------------+-------+-------------------------------------------------------+
 | Schema IDL            | -\-   | Nein                                                  |
 +-----------------------+-------+-------------------------------------------------------+
 | Sprachunterstützung   | -\-   | Python-spezifisch                                     |
 +-----------------------+-------+-------------------------------------------------------+
-| Menschliche Lesbarkeit| -\-   | Pickle ist ein binäres Serialisierungsformat          |
+| Menschliche Lesbarkeit| +\-   | Pickle ist ein binäres Serialisierungsformat,         |
+|                       |       | das jedoch einfach mit Python gelesen werden kann.    |
 +-----------------------+-------+-------------------------------------------------------+
-| Geschwindigkeit       | ++    | Das Pickle-Format kann von Python sehr schnell        |
-|                       |       | serialisiert und deserialisiert werden.               |
+| Geschwindigkeit       | ++    | Das Pickle-Format kann von Python meist schnell       |
+|                       |       | serialisiert und deserialisiert werden; s.a.          |
+|                       |       | `Don’t pickle your data`_                             |
 +-----------------------+-------+-------------------------------------------------------+
 | Dateigröße            | ++    | Kompaktes Binärformat, das jedoch noch weiter         |
 |                       |       | komprimiert werden kann, s. `Data Compression         |
@@ -63,10 +65,10 @@ Beispiel
 
 .. seealso::
 
-    ```pickle`` – Python object serialization
+    `pickle` – Python object serialization
     <https://docs.python.org/3/library/pickle.html>`_
         Dokumentation des ``pickle``-Moduls
-    ```shelve`` – Python object persistence
+    `shelve` – Python object persistence
     <https://docs.python.org/3/library/shelve.html#module-shelve>`_
         Indizierte Datenbanken von ``pickle``-Objekten
     `Uwe Korn: The implications of pickling ML models
@@ -79,3 +81,5 @@ Beispiel
 .. _`307`: https://www.python.org/dev/peps/pep-0307
 .. _`3154`: https://www.python.org/dev/peps/pep-3154
 .. _`574`: https://www.python.org/dev/peps/pep-0574
+.. _`Don’t pickle your data`:
+   https://www.benfrederickson.com/dont-pickle-your-data/
