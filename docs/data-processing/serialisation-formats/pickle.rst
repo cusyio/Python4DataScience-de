@@ -65,10 +65,10 @@ Beispiel
 
 .. seealso::
 
-    `pickle` – Python object serialization
+    `pickle – Python object serialization
     <https://docs.python.org/3/library/pickle.html>`_
         Dokumentation des ``pickle``-Moduls
-    `shelve` – Python object persistence
+    `shelve – Python object persistence
     <https://docs.python.org/3/library/shelve.html#module-shelve>`_
         Indizierte Datenbanken von ``pickle``-Objekten
     `Uwe Korn: The implications of pickling ML models
