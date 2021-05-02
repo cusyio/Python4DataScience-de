@@ -41,9 +41,10 @@ Tools
 
 .. toctree::
    :titlesonly:
-   :maxdepth: 3
+   :maxdepth: 1
 
    hypothesis
    tox
    unittest2
    mock
+   coverage/index
