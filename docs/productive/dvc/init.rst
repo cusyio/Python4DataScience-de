@@ -80,7 +80,7 @@ werden muss:
     $ dvc add data/data.xml
 
 Dies fügt die Datei ``data/data.xml`` in ``data/.gitignore`` hinzu und
-schreibt die Metanangaben in ``data/data.xml.dvc``. Weitere Informationen
+schreibt die Meta-Angaben in ``data/data.xml.dvc``. Weitere Informationen
 zum Dateiformat der ``*.dvc``-Datei erhaltet ihr unter `DVC-File Format
 <https://dvc.org/doc/user-guide/dvc-file-format>`_.
 

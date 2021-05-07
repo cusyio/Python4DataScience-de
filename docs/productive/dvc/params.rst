@@ -36,7 +36,7 @@ Dies ergänzt die ``dvc.yaml``-Datei um:
       outs:
       - data/features
 
-Damit diese Phase wiederholt werden kann, werden die hd5-Hashwerte und
+Damit diese Phase wiederholt werden kann, werden die MD5-Hashwerte und
 Parameterwerte in der ``dvc.lock``-Datei gespeichert:
 
 .. code-block:: yaml
