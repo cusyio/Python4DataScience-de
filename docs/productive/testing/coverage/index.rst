@@ -28,7 +28,22 @@ Ihr könnt Euren üblichen Test-Runner zusammen mit Coverage ausführen
 
   .. code-block:: console
 
-    $ coverage run -m pytest arg1 arg2
+    $ pipenv install pytest-cov
+
+  oder für verteilte Tests
+
+  .. code-block:: console
+
+    $ pipenv install pytest-xdist
+
+  Anschließend könnt Ihr die Testabdeckung überprüfen mit
+
+  .. code-block:: console
+
+    $ pytest --cov=myproj tests/
+
+  .. seealso::
+     * `pytest-cov’s documentation <https://pytest-cov.readthedocs.io/>`_
 
 * … mit :doc:`../unittest`:
 
