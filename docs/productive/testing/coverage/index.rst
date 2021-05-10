@@ -22,7 +22,7 @@ Installation
 Nutzung
 -------
 
-Ihr könnt Euren üblichen Test-Runnser zusammen mit Coverage ausführen
+Ihr könnt Euren üblichen Test-Runner zusammen mit Coverage ausführen
 
 * … mit `pytest <https://docs.pytest.org/>`_:
 
