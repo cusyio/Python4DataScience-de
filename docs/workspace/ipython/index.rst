@@ -21,6 +21,7 @@ Ergänzungen für die Sprache. Darüberhinaus ist IPython eng mit dem
     start
     magics.ipynb
     shell.ipynb
+    unix-shell/index
     display.ipynb
     mypackage/foo.ipynb
     importing.ipynb
