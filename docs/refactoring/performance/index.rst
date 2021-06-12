@@ -21,7 +21,7 @@ Parallele Programmierung
 
 Anhand von drei Beispielen zu :doc:`Threading <threading-example>`,
 :doc:`Multiprocessing <multiprocessing>` und :doc:`Async
-<async-example>` werden die Regeln und Best Practices bei der Nutzung von
+<asyncio-example>` werden die Regeln und Best Practices bei der Nutzung von
 paralleler Programmierung in Python veranschaulicht.
 
 .. toctree::
@@ -33,7 +33,7 @@ paralleler Programmierung in Python veranschaulicht.
     threading-example.ipynb
     multiprocessing.ipynb
     threading-forking-combined.ipynb
-    async-example.ipynb
+    asyncio-example.ipynb
     parallelise-pandas
     ipyparallel/index
 
