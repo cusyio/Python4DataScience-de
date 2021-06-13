@@ -1,13 +1,13 @@
 FastAPI
 =======
 
-FastAPI ist ein Webframework zum Erstellen von APIs mit auf Python 3.6+
+FastAPI ist ein Web-Framework zum Erstellen von APIs mit auf Python 3.6+
 basierenden Type-Hints.
 
 Hauptmerkmale sind:
 
-* Sehr hohe Leistung dank `pydantic <https://pydantic-docs.helpmanual.io/>`_ für
-  den Datenteil und `Starlette <https://www.starlette.io/>`_ für den Webpart.
+* sehr hohe Leistung dank `pydantic <https://pydantic-docs.helpmanual.io/>`_ für
+  den Datenteil und `Starlette <https://www.starlette.io/>`_ für den Web-Teil
 * schnell und einfach zu codieren
 * Validierung für die meisten Python-Datentypen, einschließlich
 
