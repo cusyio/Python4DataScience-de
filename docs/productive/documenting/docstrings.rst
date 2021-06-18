@@ -2,7 +2,7 @@ Docstrings
 ==========
 
 Mit der Sphinx-Erweiterung `sphinx.ext.autodoc
-<http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`_ lassen
+<https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`_ lassen
 sich auch Docstrings in die Dokumentation übernehmen. Dabei lassen sich die
 folgenden drei Direktiven angeben:
 
@@ -53,7 +53,7 @@ Beispiele
 ---------
 
 Hier einige Beispiele aus der API-Dokumentation des `requests
-<http://docs.python-requests.org/en/master/>`_-Modul:
+<https://docs.python-requests.org/>`_-Modul:
 
 .. code-block:: rest
 
@@ -80,9 +80,9 @@ Hier einige Beispiele aus der API-Dokumentation des `requests
 
 Dies führt zu :doc:`docstrings-example`, generiert aus den folgenden Docstrings:
 
-* `requests.head <http://docs.python-requests.org/en/master/_modules/requests/api/#head>`_
-* `requests.RequestException <http://docs.python-requests.org/en/master/_modules/requests/exceptions/#RequestException>`_
-* `requests.Session <http://docs.python-requests.org/en/master/_modules/requests/sessions/#Session>`_
+* `requests.head <https://docs.python-requests.org/en/master/_modules/requests/api/#head>`_
+* `requests.RequestException <https://docs.python-requests.org/en/master/_modules/requests/exceptions/#RequestException>`_
+* `requests.Session <https://docs.python-requests.org/en/master/_modules/requests/sessions/#Session>`_
 
 .. autoclass:: Session
    :inherited-members:

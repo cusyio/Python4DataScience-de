@@ -29,7 +29,7 @@ hilfreich. Für das `cookiecutter-namespace-template
 
 |Downloads| |Updates| |Versions| |Contributors| |License| |Docs|
 
-.. |Downloads| image:: https://pepy.tech/badge/cookiecutter-namespace-template
+.. |Downloads| image:: https://static.pepy.tech/badge/cookiecutter-namespace-template
    :target: https://pepy.tech/project/cookiecutter-namespace-template
 .. |Updates| image:: https://pyup.io/repos/github/veit/cookiecutter-namespace-template/shield.svg
    :target: https://pyup.io/repos/github/veit/cookiecutter-namespace-template/
@@ -38,12 +38,12 @@ hilfreich. Für das `cookiecutter-namespace-template
 .. |Contributors| image:: https://img.shields.io/github/contributors/veit/cookiecutter-namespace-template.svg
    :target: https://github.com/veit/cookiecutter-namespace-template/graphs/contributors
 .. |License| image:: https://img.shields.io/github/license/veit/cookiecutter-namespace-template.svg
-   :target: https://github.com/veit/cookiecutter-namespace-template/blob/master/LICENSE
+   :target: https://github.com/veit/cookiecutter-namespace-template/blob/main/LICENSE
 .. |Docs| image:: https://readthedocs.org/projects/cookiecutter-namespace-template/badge/?version=latest
    :target: https://cookiecutter-namespace-template.readthedocs.io/en/latest/
 
 Für umfangreiche Dokuemtationen könnt Ihr z.B. `Sphinx
-<http://www.sphinx-doc.org/>`_ verwenden, ein Dokumentationswerkzeug, das
+<https://www.sphinx-doc.org/>`_ verwenden, ein Dokumentationswerkzeug, das
 :doc:`rest`, eine einfache Auszeichnungssprache, in HTML oder auch PDF,
 EPub und Manpages umwandelt. Auch das Jupyter-Tutorial ist mit Sphinx erstellt
 worden. Um einen ersten Eindruck von Sphinx zu erhalten, könnt Ihr Euch den
@@ -54,7 +54,7 @@ Ursprünglich wurde Sphinx für die Dokumentation von Python entwickelt und wird
 heute auch in fast allen Python-Projekten verwendet, u.a. für `NumPy und SciPy
 <https://docs.scipy.org/doc/>`_, `Matplotlib
 <https://matplotlib.org/users/index.html>`_, `Pandas
-<https://pandas.pydata.org/pandas-docs/>`_ und `SQLAlchemy
+<https://pandas.pydata.org/docs/>`_ und `SQLAlchemy
 <https://docs.sqlalchemy.org/>`_.
 
 Zur Verbreitung von Sphinx unter den Python-Entwicklern dürfte auch das Sphinx

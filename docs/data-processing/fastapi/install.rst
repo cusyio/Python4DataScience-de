@@ -52,7 +52,7 @@ Starlette kann die folgenden optionalen Abhängigkeiten verwenden:
 `python-multipart <https://andrew-d.github.io/python-multipart/>`_
     wenn Ihr das Parsen von Formularen mit ``request.form()`` unterstützen
     wollt.
-`itsdangerous <https://pythonhosted.org/itsdangerous/>`_
+`itsdangerous <https://itsdangerous.palletsprojects.com/>`_
     erforderlich für die Unterstützung von ``SessionMiddleware``.
 `pyyaml <https://pyyaml.org/wiki/PyYAMLDocumentation>`_
     für die Unterstützung von Starlette’s ``SchemaGenerator``.

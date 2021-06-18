@@ -18,4 +18,4 @@ Und wenn ihr mehr über Python-Bibliotheken erfahren wollt, könnt ihr
   <https://packaging.python.org/key_projects/#setuptools>`_ anschauen wie
   `flit <https://packaging.python.org/key_projects/#flit>`_,
   `hatch <https://github.com/ofek/hatch>`_ und
-  `poetry <https://github.com/sdispater/poetry>`_.
+  `poetry <https://github.com/python-poetry/poetry>`_.

@@ -11,7 +11,7 @@ Status
 .. |Commits| image::  https://raster.shields.io/github/commit-activity/y/veit/jupyter-tutorial
    :target: https://github.com/veit/jupyter-tutorial/commits
 .. |License| image:: https://img.shields.io/github/license/veit/jupyter-tutorial.svg
-   :target: https://github.com/veit/jupyter-tutorial/blob/master/LICENSE
+   :target: https://github.com/veit/jupyter-tutorial/blob/main/LICENSE
 .. |Docs| image:: https://readthedocs.org/projects/jupyter-tutorial/badge/?version=latest
    :target: https://jupyter-tutorial.readthedocs.io/de/latest/
 .. |Pyup| image:: https://pyup.io/repos/github/veit/jupyter-tutorial-de/shield.svg
@@ -53,17 +53,18 @@ Forschungsprojekts:
    :doc:`workspace/ipython/index`, :doc:`workspace/jupyter/index` mit
    :doc:`workspace/jupyter/nbextensions/index` und
    :doc:`workspace/jupyter/ipywidgets/index`.
-4. **Daten sammeln**, entweder durch eine :doc:`Rest-API <data/web-api>` oder
-   direkt von einer :doc:`HTML-Seite <data/html>`.
+4. **Daten sammeln**, entweder durch eine :doc:`Rest-API
+   <data-processing/requests/index>` oder direkt von einer :doc:`HTML-Seite
+   <data-processing/beautifulsoup>`.
 5. **Daten bereinigen** ist eine wiederkehrende Aufgabe, die u.a. redundante,
    inkonsistente oder falsch formatierte Daten entfernen oder modifizieren soll.
 6. **Erschließen der Daten –** :doc:`viz/index` umfasst expolorative Analysen und
    das Visualisieren von Daten.
 7. **Refactoring** umfasst das Parametrisieren, Validieren und
-   Performance-Optimierungen, u.a. durch :doc:`Parallelisierung
-   <refactoring/parallel/index>`.
+   Performance-Optimierungen, u.a. durch :doc:`Nebenläufigkeit
+   <refactoring/performance/concurrency>`.
 8. **Produkt erstellen** umfasst das :doc:`productive/testing/index`,
-   :doc:`productive/logging` und :doc:`productive/documenting/index` der
+   :doc:`productive/logging/index` und :doc:`productive/documenting/index` der
    Methoden und Funktionen sowie das :doc:`Erstellen von Paketen
    <productive/packaging/index>`.
 9. **Web-Anwendungen** können entweder aus Jupyter-Notebooks
@@ -105,7 +106,7 @@ die Kernfunktionen einmal genauer an:
 Interactive Computing Protocol
     Das Notebook kommuniziert mit Rechenkernel über das *Interactive Computing
     Protocol*, einem offenen Netzwerkprotokoll basierend auf JSON-Daten über
-    `ZMQ <http://zeromq.org/>`_ und `WebSockets
+    `ZMQ <https://zeromq.org/>`_ und `WebSockets
     <https://de.wikipedia.org/wiki/WebSocket>`_.
 :doc:`workspace/jupyter/kernels/index`
     Kernel sind Prozesse, die interaktiven Code in einer bestimmten

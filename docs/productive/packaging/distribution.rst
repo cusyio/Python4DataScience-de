@@ -33,7 +33,7 @@ In beiden Fällen werden doppelte Metadaten in Paket und Code vermieden.
 ---------------
 
 Das `packages`-Feld verwendet setuptools’s `find_packages()
-<https://setuptools.readthedocs.io/en/latest/setuptools.html#using-find-packages>`_
+<https://setuptools.readthedocs.io/en/latest/userguide/package_discovery.html#using-find-or-find-packages>`_
 um darunterliegende Pakete zu finden und das `package_dir
 <https://docs.python.org/3/distutils/setupscript.html#listing-whole-packages>`_-Feld
 beschreibt, wo das Root-Verzeichnis ist.
@@ -138,7 +138,7 @@ besser vor Patentverletzungen ist jedoch nicht kompatibel mit der GPL v2. Daher
 solltet ihr schauen, welche Lizenzen diejenigen Pakete haben, von denen ihr
 abhängt und zu denen ihr kompatibel sein solltet. Zur Analyse von Lizenzen könnt
 ihr `licensechecker
-<http://www.boyter.org/2018/03/licensechecker-command-line-application-identifies-software-license/>`_,
+<https://boyter.org/2018/03/licensechecker-command-line-application-identifies-software-license/>`_,
 verwenden, ein Kommandozeilenwerkzeug, das Installationsverzeichnisse nach
 Lizenzen durchsucht.
 

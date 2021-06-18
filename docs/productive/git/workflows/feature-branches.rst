@@ -6,7 +6,7 @@ Feature-Branches
 stark vereinfachte Alternative zu :doc:`git-flow` gedacht, wobei es neben dem
 ``master``-Branch nur verschiedene Feature-Branches geben sollte. Auch Atlassian
 empfiehlt eine `ähnliche Strategie
-<http://blogs.atlassian.com/2014/01/simple-git-workflow-simple/>`_, wobei sie
+<https://www.atlassian.com/blog/git/simple-git-workflow-is-simple>`_, wobei sie
 jedoch ein ``rebase`` der Feature-Branches vornehmen. Diese Strategien bieten
 dabei zwei Vorteile:
 

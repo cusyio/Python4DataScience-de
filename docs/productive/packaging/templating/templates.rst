@@ -16,16 +16,17 @@ Python
     Deployments (C-Extension-Support u.a. für `cffi
     <https://cffi.readthedocs.io/>`_ und `Cython <http://cython.org/>`_,
     Test-Unterstützung für `Tox <https://tox.readthedocs.io/>`_,
-    `Pytest <https://pytest.org/>`_, `Travis-CI <https://travis-ci.org/>`_,
+    `Pytest <https://docs.pytest.org/>`_, `Travis-CI <https://travis-ci.org/>`_,
     `Coveralls <https://github.com/coveralls-clients/coveralls-python>`_,
     `Codacy <https://github.com/codacy/python-codacy-coverage/>`_,
     und `Code Climate <https://github.com/codeclimate/python-test-reporter>`_,
     Dokumentation mit `Sphinx <http://www.sphinx-doc.org/>`_,
-    Packaging-Checks u.a. mit `Landscape <https://landscape.io/>`_,
+    Packaging-Checks u.a. mit `Landscape <https://landscape.io/index.html>`_,
     `scrutinizer <https://scrutinizer-ci.com/docs/guides/python/>`_,
-    `Isort <https://github.com/timothycrosley/isort>`_ etc.
-`cookiecutter-python-cli <https://github.com/xuanluong/cookiecutter-python-cli>`_
-    Template zum Erstellen einer Python-CLI-Anwendung mit `Click <http://click.pocoo.org/>`_
+    `Isort <https://github.com/PyCQA/isort>`_ etc.
+`cookiecutter-python-cli <https://github.com/seanluong/cookiecutter-python-cli>`_
+    Template zum Erstellen einer Python-CLI-Anwendung mit `Click
+    <https://click.palletsprojects.com/>`_
 `widget-cookiecutter <https://github.com/jupyter-widgets/widget-cookiecutter>`_
     Template zum Erstellen von Jupyter-Widgets
 

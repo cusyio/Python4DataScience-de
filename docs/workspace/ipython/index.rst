@@ -1,7 +1,7 @@
 IPython
 =======
 
-`IPython <http://ipython.org/>`_ oder *Interactive Python* war zunächst ein
+`IPython <https://ipython.org/>`_ oder *Interactive Python* war zunächst ein
 erweiterter Python-Interpreter, der nun zu einem umfangreichen Projekt geworden
 ist, das Tools für den gesamten Lebenszyklus der Forschungsdatenverarbeitung
 bereitstellen soll. So ist IPython heute nicht nur eine interaktive

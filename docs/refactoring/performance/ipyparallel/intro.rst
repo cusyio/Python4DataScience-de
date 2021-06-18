@@ -134,7 +134,7 @@ Starten
 
         $ pipenv run ipcluster start --engines=MPI
 
-    .. seealso:: :ipyparallel:doc:`process`
+    .. seealso:: :doc:`mpi`
 
 #. Starten des Jupyter Notebook und Laden der IPython-Parallel-Extension:
 

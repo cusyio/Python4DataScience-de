@@ -23,7 +23,7 @@ Erste Schritte
     In [1]: %load_ext sql
 
 #. Für die Verbindung zur Datenbank wird die `SQLAlchemy URL
-   <http://docs.sqlalchemy.org/en/latest/core/engines.html#database-urls>`_
+   <https://docs.sqlalchemy.org/en/14/core/engines.html#database-urls>`_
    verwendet:
 
    .. code-block:: python

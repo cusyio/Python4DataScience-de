@@ -1,11 +1,11 @@
 Git pre-commit Hooks
 ====================
 
-`pre-commit <http://pre-commit.com/>`_ ist ein Framework zum Verwalten und
+`pre-commit <https://pre-commit.com/>`_ ist ein Framework zum Verwalten und
 Pflegen mehrsprachiger pre-commit-Hooks.
 
 Eine wesentliche Aufgabe ist es, dem gesamten Entwicklungsteam dieselben Skripte
-zur Verfügung zu stellen. `pre-commit <http://pre-commit.com/>`_ von yelp
+zur Verfügung zu stellen. `pre-commit <https://pre-commit.com/>`_ von yelp
 verwaltet solche pre-commit-Hooks und verteilt sie auf verschiedene Projekte und
 Entwickler.
 

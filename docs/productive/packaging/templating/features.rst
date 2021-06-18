@@ -37,7 +37,7 @@ CookieCutter-Features
     {{cookiecutter.project_name}}/{{cookiecutter.namespace}}/{{cookiecutter.package_name}}/{{cookiecutter.project_slug}}.py
 
 * Die Verschachtelungstiefe ist unbegrenzt
-* Das Templating basiert auf `Jinja2 <http://jinja.pocoo.org/>`_
+* Das Templating basiert auf `Jinja <https://jinja.palletsprojects.com/>`_
 * Ihr könnt eure Template-Variablen einfach in einer ``cookiecutter.json``-Datei
   speichern, beispielsweise:
 

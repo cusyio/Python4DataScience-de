@@ -4,31 +4,31 @@ Extensions
 Built-in Extensions
 -------------------
 
-`sphinx.ext.autodoc <http://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`_
+`sphinx.ext.autodoc <https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`_
     Dokumentation aus Docstrings integrieren
-`sphinx.ext.autosummary <http://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html>`_
+`sphinx.ext.autosummary <https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html>`_
     generiert Zusammenfassungen von Funktionen, Methoden und Attributen
     aus Docstrings
-`sphinx.ext.autosectionlabel <http://www.sphinx-doc.org/en/master/usage/extensions/autosectionlabel.html>`_
+`sphinx.ext.autosectionlabel <https://www.sphinx-doc.org/en/master/usage/extensions/autosectionlabel.html>`_
     referenziert Abchnitt unter Verwendung des Titels
-`sphinx.ext.graphviz <http://www.sphinx-doc.org/en/master/usage/extensions/graphviz.html>`_
+`sphinx.ext.graphviz <https://www.sphinx-doc.org/en/master/usage/extensions/graphviz.html>`_
     Rendering von `Graphviz <https://www.graphviz.org/>`_-Graphen
-`sphinx.ext.ifconfig <http://www.sphinx-doc.org/en/master/usage/extensions/ifconfig.html>`_
+`sphinx.ext.ifconfig <https://www.sphinx-doc.org/en/master/usage/extensions/ifconfig.html>`_
     schließt Inhalte nur unter bestimmten Bedingungen ein
-`sphinx.ext.intersphinx <http://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html>`_
+`sphinx.ext.intersphinx <https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html>`_
     erlaubt die Verlinkung von anderen Projekt-Dokumentationen
-`sphinx.ext.mathjax <http://www.sphinx-doc.org/en/master/usage/extensions/math.html#module-sphinx.ext.mathjax>`_
+`sphinx.ext.mathjax <https://www.sphinx-doc.org/en/master/usage/extensions/math.html#module-sphinx.ext.mathjax>`_
     Rendering via JavaScript
-`sphinx.ext.napoleon <http://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html>`_
+`sphinx.ext.napoleon <https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html>`_
     Support für NumPy- und Google-Style Docstrings
-`sphinx.ext.todo <http://www.sphinx-doc.org/en/master/usage/extensions/todo.html>`_
+`sphinx.ext.todo <https://www.sphinx-doc.org/en/master/usage/extensions/todo.html>`_
     Unterstützung für ToDo-Items
-`sphinx.ext.viewcode <http://www.sphinx-doc.org/en/master/usage/extensions/viewcode.html>`_
+`sphinx.ext.viewcode <https://www.sphinx-doc.org/en/master/usage/extensions/viewcode.html>`_
     fügt Links zum Quellcode der Sphinx-Dokumentation hinzu
 
 .. seealso::
    Einen vollständigen Überblick erhaltet ihr unter `Sphinx Extensions
-   <http://www.sphinx-doc.org/en/master/usage/extensions/index.html>`_
+   <https://www.sphinx-doc.org/en/master/usage/extensions/index.html>`_
 
 Third-party Extensions
 ----------------------

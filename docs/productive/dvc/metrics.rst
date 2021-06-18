@@ -6,7 +6,7 @@ ist DVC auch ein Framework zum Erfassen und Vergleichen der Performance von
 Experimenten.
 
 `evaluate.py
-<https://github.com/veit/dvc-example/blob/master/src/evaluate.py>`_
+<https://github.com/veit/dvc-example/blob/main/src/evaluate.py>`_
 berechnet den AUC (**A** rea **U** nder the **C** urve, deutsch `Fläche unter
 der Kurve <https://de.wikipedia.org/wiki/Fl%C3%A4che_unter_der_Kurve>`_)-Wert.
 Dabei verwendet es den Testdatensatz, ließt die Features aus ``features/test.pkl``

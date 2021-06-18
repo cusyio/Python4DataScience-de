@@ -30,8 +30,8 @@ jeden Schritt der Pipeline in einer separaten ``.dvc``-Datei, die dann durch
 Git verwaltet werden kann.
 
 Diese ``.dvc``-Dateien erlauben jedoch praktische Tools zur Manipilation und
-Visualisierung von DAGs, siehe z.B. die :ref:`Visualisierung der DAGs
-<dvc-pipeline-show>`.
+Visualisierung von DAGs, siehe z.B. die :doc:`Visualisierung der DAGs
+<pipeline>`.
 
 Schließlich lassen sich mit :ref:`dvc remote <dvc-remote>` auch
 externe Abhängigkeiten angeben.

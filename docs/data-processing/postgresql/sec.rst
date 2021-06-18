@@ -7,7 +7,7 @@ Datenbank-Berechtigungen
 Das PostgreSQL-Login per Superuser ``postgres`` sollte immer nur über
 Unix-Domain-Sockets und über ``localhost`` erlaubt sein. Der Zugang mit
 `Peer-Authentifizierung
-<https://www.postgresql.org/docs/current/auth-methods.html#AUTH-PEER>`_ in der
+<https://www.postgresql.org/docs/current/auth-peer.html>`_ in der
 `pg_hba.conf
 <https://www.postgresql.org/docs/current/auth-pg-hba-conf.html>`_-Datei kann
 hingegen gewährt werden:
@@ -36,7 +36,7 @@ Passwörter sollten niemals im Klartext, also z.B. auch nicht in einer
 Passwörtern sollte dies immer mit `Salts
 <https://de.wikipedia.org/wiki/Salt_(Kryptologie)>`_ versehen sein. Für
 PostgreSQL gibt es hierfür die Erweiterung `pgcrypto
-<https://www.postgresql.org/docs/current/static/pgcrypto.html>`_, die
+<https://www.postgresql.org/docs/current/pgcrypto.html>`_, die
 einfach aktiviert werden kann mit
 
 .. code-block:: postgresql
@@ -134,8 +134,10 @@ dreißig Tagen mit:
     DELETE FROM diagnosis_key WHERE age(submission_timestamp) > 30;
 
 Das Löschen kann noch beschleunigt werden, wenn für jeden Tag mit der
-PostgreSQL-Erweiterung `pg_partman <https://t.co/3Q1FsU8uVg?amp=1>`_ eine eigene
-`Partition <https://www.cusy.io/de/blog/TablePartitioning>`_ erstellt wird.
+PostgreSQL-Erweiterung `pg_partman <https://github.com/pgpartman/pg_partman>`_
+eine eigene `Partition
+<https://github.com/pgpartman/pg_partman/blob/master/doc/pg_partman_howto_native.md>`_
+erstellt wird.
 
 .. seealso::
    * `Veil2  – Relational Security for Postgres

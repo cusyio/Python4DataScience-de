@@ -240,4 +240,4 @@ aussehen:
 
 .. seealso::
 
-   * `GitHub Actions <https://docs.github.com/en/free-pro-team@latest/actions>`_
+   * `GitHub Actions <https://docs.github.com/en/actions>`_

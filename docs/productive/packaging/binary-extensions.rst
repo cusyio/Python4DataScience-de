@@ -47,7 +47,7 @@ Systemzugriffe auf niedriger Ebene
     oder IO-gebunden sind.
 
 Nicht alle Erweiterungsmodule passen genau in die oben genannten Kategorien. So
-umfassen z.B. die in `NumPy <http://www.numpy.org/>`_ enthaltenen
+umfassen z.B. die in `NumPy <https://numpy.org/>`_ enthaltenen
 Erweiterungsmodule alle drei Anwendungsfälle:
 
 * Sie verschieben innere Schleifen aus Geschwindigkeitsgründen auf C,
@@ -67,8 +67,8 @@ durch :term:`wheel` kaum noch vorhanden. Einige Nachteile bleiben dennoch:
 * Die Installation aus den Sourcen bleibt weiterhin kompliziert.
 * Ggf. gibt es kein passendes :term:`wheel` für den verwendeten Build des
   CPython-Interpreters oder alternativen Interpretern wie `PyPy
-  <https://pypy.org/>`_, `IronPython <http://ironpython.net/>`_ oder `Jython
-  <http://www.jython.org/>`_.
+  <https://www.pypy.org/>`_, `IronPython <https://ironpython.net/>`_ oder `Jython
+  <https://www.jython.org/>`_.
 * Die Wartung und Pflege der Pakete ist aufwändiger da die Maintainer nicht nur
   mit Python sondern auch mit einer anderen Sprache und der CPython C-API
   vertraut sein müssen. Zudem erhöht sich die Komplexität, wenn neben der
@@ -95,7 +95,7 @@ sollten auch eine Reihe anderer Alternativen in Betracht gezogen werden:
   vermeiden, ein eigenes Accelerator-Modul zu erstellen.
 
 * Für lange laufende Anwendungen kann der JIT-kompilierte `PyPy
-  <https://pypi.python.org/>`_-Interpreter eine geeignete Alternative zum
+  <https://pypi.org/>`_-Interpreter eine geeignete Alternative zum
   Standard-CPython sein. Die Hauptschwierigkeit bei der Übernahme von PyPy
   besteht typischerweise in der Abhängigkeit von anderen Binary
   Extensions-Modulen. Während PyPy die CPython C API emuliert, verursachen
@@ -103,7 +103,7 @@ sollten auch eine Reihe anderer Alternativen in Betracht gezogen werden:
   Emulation legt oft Defekte in Extensions-Modulen offen, die CPython
   toleriert. (häufig bei Reference Counting Errors).
 
-* `Cython <http://cython.org/>`_ ist ein ausgereifter statischer Compiler, der
+* `Cython <https://cython.org/>`_ ist ein ausgereifter statischer Compiler, der
   den meisten Python-Code zu C-Extensions-Modulen kompilieren kann. Die
   anfängliche Kompilierung bietet einige Geschwindigkeitssteigerungen (durch
   Umgehung der CPython-Interpreter-Ebene), und Cythons optionale statische
@@ -213,10 +213,6 @@ ihr einen geeigneten Compiler zur Verfügung habt. Unter Windows wird Visual C
 zum Erstellen des offiziellen CPython-Interpreters verwendet und er sollte auch
 zum Erstellen kompatibler Binary Extensions verwendet werden:
 
-für Python 2.7
-    #. installiert `Microsoft Visual C++ Compiler for Python 2.7
-       <https://www.microsoft.com/en-gb/download/details.aspx?id=44266>`_
-    #. aktualisiert :term:`pip` und :term:`setuptools`
 für Python 3.4
     #. installiert `Microsoft Windows SDK for Windows 7 and .NET Framework 4
        <https://www.microsoft.com/en-gb/download/details.aspx?id=8279>`_

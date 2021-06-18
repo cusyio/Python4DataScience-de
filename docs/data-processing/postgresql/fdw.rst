@@ -27,12 +27,12 @@ Multicorn
 
     * `GitHub <sqlalchem://github.com/Kozea/Multicorn>`_
     * `PGXN <https://pgxn.org/dist/multicorn/>`_
-    * `Docs <http://multicorn.org/foreign-data-wrappers/#sqlalchemy-foreign-data-wrapper>`_
+    * `Docs <https://multicorn.org/foreign-data-wrappers/#sqlalchemy-foreign-data-wrapper>`_
 
 VirtDB
     Nativer Zugang zu VirtDB (SAP ERP, Oracle RDBMS)
 
-    * `GitHub <https://github.com/virtdb/virtdb-fdw>`_
+    * `GitHub <https://github.com/dbeck/virtdb-fdw>`_
 
 Spezifische SQL-Wrapper
 -----------------------
@@ -72,7 +72,7 @@ NoSQL-Database-Wrappers
 -----------------------
 
 Cassandra
-    FDW für `Cassandra <http://cassandra.apache.org/>`_
+    FDW für `Cassandra <https://cassandra.apache.org//>`_
 
     * `GitHub <https://github.com/rankactive/cassandra-fdw>`_
     * `rankactive <https://rankactive.com/resources/postgresql-cassandra-fdw>`_
@@ -101,7 +101,7 @@ CSV
     Offizielle Erweiterung für PostgreSQL 9.1
 
     * `Git <https://git.postgresql.org/gitweb/?p=postgresql.git;a=tree;f=contrib/file_fdw;hb=HEAD>`_
-    * `Docs <https://www.postgresql.org/docs/current/static/file-fdw.html>`_
+    * `Docs <https://www.postgresql.org/docs/current/file-fdw.html>`_
 
 JSON
     FDW für JSON-Dateien
@@ -119,7 +119,7 @@ Geo Wrappers
 ------------
 
 GDAL/OGR
-    FDW für den `GDAL/OGR <http://www.gdal.org/>`_-Treiber einschließlich
+    FDW für den `GDAL/OGR <https://gdal.org/>`_-Treiber einschließlich
     Datenbanken wie Oracle und SQLite sowie Dateiformate wie MapInfo, CSV,
     Excel, OpenOffice, OpenStreetMap PBF und XML.
 
@@ -148,12 +148,12 @@ ICAL
 IMAP
     FDW für das *Internet Message Access Protocol (IMAP)*
 
-    * `Docs <http://multicorn.org/foreign-data-wrappers/#idimap-foreign-data-wrapper>`_
+    * `Docs <https://multicorn.org/foreign-data-wrappers/#imap-foreign-data-wrapper>`_
 
 RSS
     FDQ für RSS-Feeds
 
-    * `Docs <http://multicorn.org/foreign-data-wrappers/#idrss-foreign-data-wrapper>`_
+    * `Docs <https://multicorn.org/foreign-data-wrappers/#rss-foreign-data-wrapper>`_
 
 .. seealso::
    * `PostgreSQL Wiki

@@ -118,7 +118,7 @@ Multithreading, Multiprocessing und asynchrone Kommunikation
 |                  | Locks sind in    | Prozesse in einem| ``asyncio`` benötigt jedoch    |
 |                  | nicht-trivialen  | einzelnen Thread | eine große Menge von           |
 |                  | Beispielen schwer| zu testen, bevor | Werkzeugen: `futures`_,        |
-|                  | zu verstehen.    | zu               | `Event loops`_ und nicht       |
+|                  | zu verstehen.    | zu               | `Event Loops`_ und nicht       |
 |                  | Bei komplexen    | Multiprocessing  | blockierende Versionen von fast|
 |                  | Anwendungen      | gewechselt wird. | allem.                         |
 |                  | sollten daher    |                  |                                |
@@ -158,5 +158,5 @@ Multithreading, Multiprocessing und asynchrone Kommunikation
 .. _`await`: https://docs.python.org/3/reference/expressions.html#await
 .. _`map`: https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.Pool.map
 .. _`imap_unordered`: https://docs.python.org/3/library/multiprocessing.html#multiprocessing.pool.Pool.imap_unordered
-.. _`futures`: https://docs.python.org/3/library/asyncio-task.html#future
-.. _`Event Loops`: https://docs.python.org/3/library/asyncio-eventloops.html
+.. _`futures`: https://docs.python.org/3/library/asyncio-task.html#awaitables
+.. _`Event Loops`: https://docs.python.org/3/library/asyncio-eventloop.html

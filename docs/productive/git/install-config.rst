@@ -150,7 +150,7 @@ Standardkonsolenfenster von Windows auswählen.
 .. note::
     Ein umfangreiches Beispiel einer `~/.gitconfig`-Datei findet Ihr in meinem
     `dotfiles <https://github.com/veit/dotfiles/>`_-Repository: `.gitconfig
-    <https://github.com/veit/dotfiles/blob/master/.gitconfig>`_.
+    <https://github.com/veit/dotfiles/blob/main/.gitconfig>`_.
 
 Die ``.gitignore``-Datei
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -206,5 +206,5 @@ Hierfür wird üblicherweise in der ``~/.gitconfig``-Datei folgendes angegeben:
 
 .. note::
     Hilfreiche Vorlagen findet Ihr in meinem `dotfiles
-    <https://github.com/veit/dotfiles/tree/master/gitignores>`_-Repository oder
+    <https://github.com/veit/dotfiles/tree/main/gitignores>`_-Repository oder
     auf der Website `gitignore.io <https://gitignore.io/>`_.

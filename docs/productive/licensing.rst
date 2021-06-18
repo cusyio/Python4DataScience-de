@@ -70,7 +70,7 @@ Lizenz unterstützt Euch die Website `Choose an open source license
 GitHub
 ------
 
-Auf `GitHub <http://github.com/>`_ könnt Ihr Euch eine Open Source-Lizenz in
+Auf `GitHub <https://github.com/>`_ könnt Ihr Euch eine Open Source-Lizenz in
 Eurem Repository erstellen lassen.
 
 #. Geht zur Hauptseite Eures Repository.
@@ -151,7 +151,7 @@ z.B. für GitLab in der ``.gitlab-ci.yml``-Datei mit:
 Alternativen
 ~~~~~~~~~~~~
 
-`SPDX <https://spdx.org/>`_
+`SPDX <https://spdx.dev/>`_
     SPDX definiert eine standardisierte Methode zum Austausch von Urheberrechts-
     und Lizenzinformationen zwischen Projekten und Personen
 `ClearlyDefined <https://clearlydefined.io/>`_

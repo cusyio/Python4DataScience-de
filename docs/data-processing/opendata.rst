@@ -10,7 +10,7 @@ z.B. in:
 * `Public APIs <https://github.com/public-apis/public-apis>`_
 * `Machine learning datasets <https://www.datasetlist.com/>`_
 * `Roboflow Computer Vision Datasets <https://public.roboflow.com/>`_
-* `DBpedia <https://wiki.dbpedia.org/>`_
+* `DBpedia <https://www.dbpedia.org/>`_
 * `World Health Data Platform/Global Health Observatory
   <https://www.who.int/data/gho/>`_
 * `UNICEF Data <https://data.unicef.org/>`_

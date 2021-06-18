@@ -56,15 +56,15 @@ Den folgenden reStructuredText könnt ihr euch als HTML anschauen unter
 
 .. seealso::
    * `reStructuredText Primer
-     <http://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_
+     <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_
    * `reStructuredText Quick Reference
-     <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_
+     <https://docutils.sourceforge.io/docs/user/rst/quickref.html>`_
 
 Direktiven
 ----------
 
 reStructuredText lässt sich durch sog. `Directives
-<http://docutils.sourceforge.net/docs/ref/rst/directives.html>`_ erweitern.
+<https://docutils.sourceforge.io/docs/ref/rst/directives.html>`_ erweitern.
 Hiervon macht Sphinx umfassend Gebrauch. Hier einige Beispiele:
 
 Inhaltsverzeichnis
@@ -121,11 +121,11 @@ Siehe auch
 
         .. seealso::
             `Sphinx Directives
-            <http://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html>`_
+            <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html>`_
 
     .. seealso::
        `Sphinx Directives
-       <http://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html>`_
+       <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html>`_
 
 Glossar
 

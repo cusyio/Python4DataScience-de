@@ -16,7 +16,7 @@ wichtiger Metriken zu erleichtern, darunter:
 Es kombiniert mehrere Open-Source-Softwarepakete, um eine robuste
 PostgreSQL-Überwachungsumgebung zu schaffen, einschließlich:
 
-`PostgreSQL Exporter <https://github.com/wrouesnel/postgres_exporter>`_
+`PostgreSQL Exporter <https://github.com/prometheus-community/postgres_exporter>`_
     Datenexport zu Prometheus, der das Sammeln von Metriken von jedem
     PostgreSQL-Server ≥ 9.1 unterstützt.
 `Prometheus <https://prometheus.io/>`_

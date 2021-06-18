@@ -31,7 +31,7 @@ Beispiel
 --------
 
 `pyproject.toml
-<https://github.com/veit/jupyter-tutorial/blob/master/pyproject.toml>`_
+<https://github.com/veit/jupyter-tutorial/blob/main/pyproject.toml>`_
 
 .. code-block:: toml
 

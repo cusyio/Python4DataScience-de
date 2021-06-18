@@ -4,7 +4,7 @@ Laden von Geodaten
 Nun Laden wir einige Geodaten in unsere Datenbank, damit wir uns mit den Tools
 und Prozessen zum Abrufen dieser Daten vertraut machen können.
 
-`Natural Earth <http://www.naturalearthdata.com/>`_ bietet eine großartige
+`Natural Earth <https://www.naturalearthdata.com/>`_ bietet eine großartige
 Quelle für Basisdaten für die ganze Welt in verschiedenen Maßstäben. Und sas
 Beste ist, dass diese Daten gemeinfrei sind:
 
@@ -82,7 +82,7 @@ Beste ist, dass diese Daten gemeinfrei sind:
         gibt den Pfad zur Eingabedatei an
 
       .. seealso::
-         * `ogr2ogr <http://www.gdal.org/ogr2ogr.html>`_
+         * `ogr2ogr <https://gdal.org/programs/ogr2ogr.html>`_
 
    #. Überprüfen des Imports mit ``ogrinfo``
 

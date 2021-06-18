@@ -12,8 +12,8 @@ Glossar
 
    conda
        Paketmanagement-Tool für die `Anaconda
-       <http://docs.continuum.io/anaconda/index.html>`_-Distribution von
-       `Continuum Analytics <http://continuum.io/downloads>`_. Sie ist speziell
+       <https://docs.continuum.io/anaconda/index.html>`_-Distribution von
+       `Continuum Analytics <https://www.anaconda.com/>`_. Sie ist speziell
        auf die wissenschaftliche Gemeinschaft ausgerichtet, insbesondere auf
        Windows, wo die Installation von binären Erweiterungen oft schwierig ist.
 
@@ -43,8 +43,8 @@ Glossar
        Ein :term:`Built Distribution`-Format, das von :term:`Setuptools`
        eingeführt wurde und nun durch :term:`Wheel` ersetzt wird. Weitere
        Informationen findet ihr unter `The Internal Structure of Python Eggs
-       <https://setuptools.readthedocs.io/en/latest/formats.html>`_ und `Python
-       Eggs <http://peak.telecommunity.com/DevCenter/PythonEggs>`_.
+       <https://setuptools.readthedocs.io/en/latest/deprecated/python_eggs.html>`_
+       und `Python Eggs <http://peak.telecommunity.com/DevCenter/PythonEggs>`_.
 
    Import Package
        Ein Python-Modul, das andere Module oder rekursiv andere Pakete enthalten
@@ -66,9 +66,9 @@ Glossar
    pip
        Ein Tool zum Installieren von Python-Paketen.
 
-       `Docs <https://pip.pypa.io/en/stable/>`_ |
+       `Docs <https://pip.pypa.io/>`_ |
        `GitHub <https://github.com/pypa/pip>`_ |
-       `PyPI <https://pypi.python.org/pypi/pip/>`_ |
+       `PyPI <https://pypi.org/project/pip/>`_ |
 
    Pipfile
        Anwendungsfreundliche, auf `TOML <https://github.com/toml-lang/toml>`_
@@ -94,8 +94,8 @@ Glossar
        in einer einzigen Toolchain.
 
        `Docs <https://docs.pipenv.org/>`_ |
-       `GitHub <https://github.com/kennethreitz/pipenv>`_ |
-       `PyPI <https://pypi.python.org/pypi/pipenv>`_ |
+       `GitHub <https://github.com/pypa/pipenv>`_ |
+       `PyPI <https://pypi.org/project/pipenv/>`_ |
 
 
    pypi.org
@@ -132,7 +132,7 @@ Glossar
    Spack
        Ein flexibler Paketmanager, der mehrere Versionen, Konfigurationen,
        Plattformen und Compiler unterstützt. Spack ist ähnlich wie der `Nix
-       <https://nixos.org/nix/>`_-Paketmanager, ermöglicht jedoch die Definition
+       <https://nixos.org/>`_-Paketmanager, ermöglicht jedoch die Definition
        virtueller Abhängigkeiten und bietet eine Syntax zur Parametrisierung. Die
        Pakete sind in Python geschrieben, um einen einfachen Austausch von
        Compilern, Bibliotheksversionen, Build-Optionen usw. zu ermöglichen. Es
@@ -141,10 +141,10 @@ Glossar
        Anwendungen auf Clustern und Supercomputern entwickelt.
 
        `Docs <https://spack.readthedocs.io/>`_ |
-       `GitHub <https://github.com/llnl/spack/>`_ |
+       `GitHub <https://github.com/spack/spack>`_ |
        `Slides <https://tgamblin.github.io/files/Gamblin-Spack-SC15-Talk.pdf>`_ |
        `The Spack package manager: bringing order to HPC software chaos
-       <http://ieeexplore.ieee.org/document/7832814/>`_ |
+       <https://ieeexplore.ieee.org/document/7832814>`_ |
 
    Virtuelle Umgebung
        Eine isolierte Python-Umgebung, die die Installation von Paketen für eine

@@ -69,7 +69,7 @@ Glossar
         Cassandra ist ein :doc:`nosql/column-oriented-db`, und wurde
         ursprünglich von Facebook entwickelt um Suchen im E-Mail-Engang zu
         optimieren. Heute wird es unter dem Dach der `Apache Software Foundation
-        <http://www.apache.org/>`_ weiterentwickelt.
+        <https://www.apache.org/>`_ weiterentwickelt.
 
         Das Datenmodell von Cassandra hat weder eine logische Struktur noch ein
         Schema. Für die Modellierung wird empfohlen *«First write your queries,
@@ -242,7 +242,7 @@ Glossar
 
     MongoDB
         MongoDB ist eine schemafrei :doc:`nosql/document-oriented-db`,
-        die Dokumente im `BSON <http://www.bsonspec.org/>`_-Format verwaltet.
+        die Dokumente im `BSON <https://bsonspec.org/>`_-Format verwaltet.
 
     MVCC – Multiversion Concurrency Control
         MVCC werden kontrolliert konkurrierende Zugriffe auf Datensätze (Lesen,
