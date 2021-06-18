@@ -83,8 +83,8 @@ vereinfacht das Erstellen und Veröffentlichen von Dokumentation nach jedem
      <https://developers.google.com/style/>`_
    * `Google Technical Writing Courses for Engineers
      <https://developers.google.com/tech-writing/overview>`_
-   * `Cusy-Design-System: Testen
-     <https://cusy-design-system.readthedocs.io/de/latest/content/testing.html>`_
+   * `Cusy-Design-System: Schreiben
+     <https://cusy-design-system.readthedocs.io/de/latest/writing/index.html>`_
 
 .. toctree::
     :hidden:
