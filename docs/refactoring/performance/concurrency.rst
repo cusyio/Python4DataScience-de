@@ -162,6 +162,16 @@ Multithreading, Multiprocessing und asynchrone Kommunikation
 |                  | Synchronisation. | Aufwände.        |                                |
 +------------------+------------------+------------------+--------------------------------+
 
+Resümee
+-------
+
+Es gibt nicht die eine ideale Implementierung von Nebenläufigkeit – jeder der
+im folgenden vorgestellten Ansätze hat spezifische Vor- und Nachteile. Bevor
+ihr euch also entscheidet, welchen Ansatz ihr verfolgen wollt, solltet ihr die
+Performance-Probleme genau analysieren und anschließend die jeweils passende
+Läsung wählen. In unseren Projekten verwenden wir dabei häufig mehrere
+Ansätze, je nachdem, für welchen Teil die Performance optimiert werden soll.
+
 .. _`Interprocess Communication (IPC)`: https://docs.python.org/3/library/ipc.html
 .. _`object pickling`: https://docs.python.org/3/library/pickle.html
 .. _`präemptiv`: https://de.wikipedia.org/wiki/Multitasking#Pr%C3%A4emptives_Multitasking
