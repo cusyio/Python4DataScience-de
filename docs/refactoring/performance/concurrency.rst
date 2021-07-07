@@ -63,6 +63,20 @@ erscheinen. Dennoch gibt jedoch bereits einige Lösungen:
   jedoch vorhandene C-Erweiterung wie NumPy emulieren muss, was wirklich
   ineffizient ist.
 
+Faster Cpython
+--------------
+
+Auf der PyCon US im Mai 2021 stellte Guido van Rossum mit `Faster CPython
+<https://github.com/faster-cpython>` ein Projekt vor, das die Geschwindigkeit
+von Python 3.11 verdoppeln soll. Die Zusammenarbeit mit den anderen
+Python-Kernentwicklern ist in `PEP 659 – Specializing Adaptive Interpreter
+<https://www.python.org/dev/peps/pep-0659/>`_ geregelt. Zudem gibt es einen
+offenen `Issue Tracker <https://github.com/faster-cpython/ideas/issues>`_ und
+diverse `Werkzeuge zum Sammeln von Bytecode-Statistiken
+<https://github.com/faster-cpython/tools>`_. Profitieren dürften vor allem
+CPU-intensiver Python-Code; auf bereits in C geschriebenen Code, I/O-lastige
+Prozesse und Multithreading-Code dürften hingegen kaum profitieren.
+
 Multithreading, Multiprocessing und asynchrone Kommunikation
 ------------------------------------------------------------
 
