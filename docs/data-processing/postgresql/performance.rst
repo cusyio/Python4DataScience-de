@@ -1,7 +1,7 @@
 PostgreSQL-Performance
 ======================
 
-Ihr solltet nicht mir :term:`MVCC – Multiversion Concurrency Control` beginnen,
+Ihr solltet nicht mit :term:`MVCC – Multiversion Concurrency Control` beginnen,
 wenn Ihr Eure PostgreSQL-Datenbank optimieren wollt: viele Verbesserungen können
 sehr viel einfacher vorgenommen werden da weder Transaktionslogs noch große
 Linux Kernel Page Sizes verantwortlich sein dürften. Üblicherweise beginnen wir
