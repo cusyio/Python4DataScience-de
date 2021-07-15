@@ -22,26 +22,28 @@ Status
 Zielgruppe
 ----------
 
-Die Nutzer von Jupyter-Notebooks sind vielfältig von Daten-Wissenschaftlern über
--Ingenieure und -Analysten bis hin zu System-Ingenieuren. Dabei sind ihre
-Fähigkeiten und Arbeitsabläufe sehr unterschiedlich. Eine der großen Stärken von
-Jupyter-Notebooks ist jedoch, dass sie eine enge Zusammenarbeit dieser
-unterschiedlichen Experten in funktionsübergreifenden Teams ermöglichen.
+Die Nutzung von Jupyter-Notebooks ist vielfältig und reicht von den
+Datenrwissenschaften über Data-Engineering und Datenanalyse bis hin zu
+System-Engineering. Dabei sind die Fähigkeiten und Arbeitsabläufe der einzelnen
+Zielgruppen sehr unterschiedlich. Eine der großen Stärken von Jupyter-Notebooks
+ist jedoch, dass sie eine enge Zusammenarbeit dieser unterschiedlichen
+Fachgruppen in funktionsübergreifenden Teams ermöglichen.
 
-* **Daten-Wissenschaftler** führen Experimente mit verschiedenen Koeffizienten
-  durch und fassen die Ergebnisse zusammen.
-* **Daten-Ingenieure** überprüfen die Qualität des Codes und machen ihn robuster,
-  effizienter und skalierbar.
-* **Daten-Analysten** führen systematische Untersuchungen der Daten durch, wobei
-  sie den von Dateningenieuren bereitgestellten Code verwenden.
-* **System-Ingenieure** erstellen das `Hub <https://jupyter.org/hub>`_, die
-  Kernel, Erweiterungen etc. und gewährleisten den möglichst reibungslosen
-  Betrieb dieser Infrastruktur.
+* In den **Datenwissenschaften** werden Experimente mit verschiedenen
+  Koeffizienten durchgeführt und die Ergebnisse zusammengefasst.
+* Im **Data-Engineering** wird die Qualität des Codes überprüft und der Code
+  robuster, effizienter und skalierbar gemacht.
+* In der **Datenanalyse** werden systematische Untersuchungen der Daten
+  durchgeführt, wobei vom Data-Engineering bereitgestellter Code verwendet wird.
+* Vom **System-Engineering** wird das `Hub <https://jupyter.org/hub>`_ die
+  Kernel, Erweiterungen etc. bereitgestellt und so der möglichst reibungslose
+  Betrieb dieser Infrastruktur gewährleistet.
 
-In diesem Tutorial wenden wir uns zunächst vor allem an System-Ingenieure,
-die eine Plattform auf Basis von Jupyter-Notebooks aufbauen und betreiben
-wollen. In der Folge erläutern wir dann, wie diese Plattform effektiv von
-Datenwissenschaftlern, -Ingenieuren und -Analysten genutzt werden kann.
+Im ersten Teil dieses Tutorial wenden wir uns zunächst an das
+System-Engineering, das eine Plattform auf Basis von Jupyter-Notebooks aufbauen
+und betreiben will. In der Folge erläutern wir dann, wie diese Plattform
+effektiv von den Fachgruppen in den Datenwissenschaften, im Data-Engineering und
+und in der Datenanalyse genutzt werden kann.
 
 Aufbau des Jupyter-Tutorial
 ---------------------------
