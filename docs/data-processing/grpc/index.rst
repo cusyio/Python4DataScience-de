@@ -127,12 +127,12 @@ die Kommunikation zwischen Clients und Servern an:
    als HTTP/2-Trailing-Headers gesendet.
 
 Im Gegensatz zu :doc:`../fastapi/index` kann die gRPC-API jedoch nicht einfach
-auf der Kommandozeile mit cURL getestet werden. Ggf. könnt Ihr jedoch `grpcurl
+auf der Kommandozeile mit cURL getestet werden. Ggf. könnt ihr jedoch `grpcurl
 <https://github.com/fullstorydev/grpcurl>`_ verwenden. Dies setzt jedoch voraus,
 dass der gRPC-Server das `GRPC Server Reflection Protocol
 <https://grpc.github.io/grpc/core/md_doc_server-reflection.html>`_ unterstützt.
 Üblicherweise sollte *Reflection* jedoch nur in der Entwicklungsphase zur
-Verfügung stehen. Dann könnt Ihr jedoch ``grpcurl`` aufrufen, z.B. mit:
+Verfügung stehen. Dann könnt ihr jedoch ``grpcurl`` aufrufen, z.B. mit:
 
 .. code-block:: console
 

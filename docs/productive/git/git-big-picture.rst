@@ -31,8 +31,8 @@ Ihr könnt ``git-big-picture`` einfach installieren mit:
 Git-Integration
 ---------------
 
-Ihr könnt das Tool einfach in Git integrieren indem Ihr das Skript
-``git-big-picture`` einfach ``$PATH`` hinzufügt. Anschließend könnt Ihr es
+Ihr könnt das Tool einfach in Git integrieren indem ihr das Skript
+``git-big-picture`` einfach ``$PATH`` hinzufügt. Anschließend könnt ihr es
 verwenden z.B. mit:
 
 .. code-block:: console
@@ -90,7 +90,7 @@ Viewer zu konfigurieren
 
     $ git config --global big-picture.viewer firefox
 
-erstellt den folgenden Abschnitt in Eurer ``~/.gitconfig``-Datei:
+erstellt den folgenden Abschnitt in eurer ``~/.gitconfig``-Datei:
 
 .. code-block:: ini
 
@@ -98,15 +98,15 @@ erstellt den folgenden Abschnitt in Eurer ``~/.gitconfig``-Datei:
         viewer = firefox
 
 .. note::
-  Bitte beachtet jedoch, dass Ihr dann keine  anderen Optionen mehr auswählen
-  könnt. So könnt Ihr nun den Graph nicht mehr als Graphviz ausgeben lassen:
+  Bitte beachtet jedoch, dass ihr dann keine  anderen Optionen mehr auswählen
+  könnt. So könnt ihr nun den Graph nicht mehr als Graphviz ausgeben lassen:
 
   .. code-block:: console
 
     $ git-big-picture -g
     fatal: Options '-g | --graphviz' and '-p | --processed' are incompatible with other output options.
 
-  In diesem Fall müsst Ihr dann die ``-V`` oder ``--no-viewer``-Option wählen:
+  In diesem Fall müsst ihr dann die ``-V`` oder ``--no-viewer``-Option wählen:
 
   .. code-block:: console
 

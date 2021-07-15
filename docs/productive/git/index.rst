@@ -1,7 +1,7 @@
 Code verwalten mit Git
 ======================
 
-Um eine bessere Kontrolle über Euren Quellcode zu erhalten, wird dieser
+Um eine bessere Kontrolle über euren Quellcode zu erhalten, wird dieser
 üblicherweise mit `Git <https://git-scm.com/>`_ verwaltet. Hier werde ich jedoch
 nur kurz die :doc:`wichtigsten Begriffe <glossary>` erläutern und eine kurze
 :doc:`Installations- und Konfigurationsanleitung <install-config>` geben.

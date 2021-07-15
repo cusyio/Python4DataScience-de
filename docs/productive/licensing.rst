@@ -1,7 +1,7 @@
 Lizenzieren
 ===========
 
-Damit andere Eure Software verwenden können, sollte sie eine Lizenz erhalten,
+Damit andere eure Software verwenden können, sollte sie eine Lizenz erhalten,
 die die Nutzungsbedingungen beschreibt. Andernfalls dürfte sie meist
 urheberrechtlich geschützt sein. Urheber sind diejenigen, die zur Software
 originär beigetragen haben. Wenn eine Software relizenziert werden soll, ist
@@ -9,7 +9,7 @@ die Zustimmung aller Urheber erforderlich.
 
 .. note::
    Dies stellt keine Rechtsberatung dar. Wendet Euch im Zweifelsfall bitte an
-   einen Anwalt oder die Rechtsabteilung Eures Unternehmens.
+   einen Anwalt oder die Rechtsabteilung eures Unternehmens.
 
 Proprietäre Softwarelizenzen
 ----------------------------
@@ -61,7 +61,7 @@ Nutzungsrechte wurde die Creative Commons Zero-Lizenz erstellt.
 Auswahl einer geeigneten Lizenz
 -------------------------------
 
-Übersichten über mögliche Lizenzen findet Ihr in `SPDX License List
+Übersichten über mögliche Lizenzen findet ihr in `SPDX License List
 <https://spdx.org/licenses/>`_ oder `OSI Open Source Licenses by Category
 <https://opensource.org/licenses/category>`_. Bei der Wahl einer geeigneten
 Lizenz unterstützt Euch die Website `Choose an open source license
@@ -70,35 +70,35 @@ Lizenz unterstützt Euch die Website `Choose an open source license
 GitHub
 ------
 
-Auf `GitHub <https://github.com/>`_ könnt Ihr Euch eine Open Source-Lizenz in
-Eurem Repository erstellen lassen.
+Auf `GitHub <https://github.com/>`_ könnt ihr Euch eine Open Source-Lizenz in
+eurem Repository erstellen lassen.
 
-#. Geht zur Hauptseite Eures Repository.
+#. Geht zur Hauptseite eures Repository.
 #. Klickt auf *Create new file* und gebt anschließend als Dateiname ``LICENSE``
    oder ``LICENSE.md`` ein.
-#. Anschließend könnt Ihr rechts neben dem Feld für den Dateinamen auf *Choose a
+#. Anschließend könnt ihr rechts neben dem Feld für den Dateinamen auf *Choose a
    license template* klicken.
-#. Nun könnt Ihr die für Euer Repository passende Open Source-Lizenz auswählen.
+#. Nun könnt ihr die für euer Repository passende Open Source-Lizenz auswählen.
 #. Ihr werdet nun zu zusätzlichen Angaben aufgefordert, sofern die gewählte
    Lizenz dies erfordert.
-#. Nachdem Ihr eine Commit-Message angegeben habt, z.B. ``Add license``, könnt
-   Ihr auf *Commit new file* klicken.
+#. Nachdem ihr eine Commit-Message angegeben habt, z.B. ``Add license``, könnt
+   ihr auf *Commit new file* klicken.
 
-Falls Ihr in Eurem Repository bereits eine ``/LICENSE``-Datei hinzugefügt habt,
+Falls ihr in eurem Repository bereits eine ``/LICENSE``-Datei hinzugefügt habt,
 verwendet GitHub `licensee <https://github.com/licensee/licensee>`_ um die Datei
 mit einer kurzen `Liste von Open-Source-Lizenzen
 <https://choosealicense.com/appendix/>`_ abzugleichen. Falls GitHub die Lizenz
-Eures Repository nicht erkennen kann, enthält es möglicherweise mehrere
-Lizenzen oder ist zu komplex. Überlegt Euch dann, ob Ihr die Lizenz vereinfachen
-könnt, z.B. indem Ihr Komplexität in die ``/README``-Datei auslagert.
+eures Repository nicht erkennen kann, enthält es möglicherweise mehrere
+Lizenzen oder ist zu komplex. Überlegt Euch dann, ob ihr die Lizenz vereinfachen
+könnt, z.B. indem ihr Komplexität in die ``/README``-Datei auslagert.
 
-Umgekehrt könnt Ihr auf GitHub auch nach Repositories mit bestimmten Lizenzen
+Umgekehrt könnt ihr auf GitHub auch nach Repositories mit bestimmten Lizenzen
 oder Lizenzfamilien suchen. Eine Übersicht über die Lizenz-Schlüsswlwörter
-erhaltet Ihr in `Searching GitHub by license type
+erhaltet ihr in `Searching GitHub by license type
 <https://help.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository#searching-github-by-license-type>`_.
 
-Schließlich könnt Ihr Euch von `Shields.io <https://shields.io/>`_ ein
-License-Badge generieren lassen, das Ihr z.B. auf Eurer ``README``-Datei
+Schließlich könnt ihr euch von `Shields.io <https://shields.io/>`_ ein
+License-Badge generieren lassen, das ihr z.B. auf eurer ``README``-Datei
 einbinden könnt, z.B.
 
 .. code-block:: rst
@@ -118,7 +118,7 @@ Standardformat für die Lizenzierung
 
 Wir empfehlen die Verwendung von ``SPDX-FileCopyrightText: [year] [copyright
 holder]``. Üblicherweise sollte die Angabe das gesamte Software-Produkt
-umfassen, Ihr könnt jedoch auch Elemente ausnehmen.
+umfassen, ihr könnt jedoch auch Elemente ausnehmen.
 
 Konformität überprüfen
 ----------------------
@@ -127,7 +127,7 @@ Konformität überprüfen
 Europe (FSFE) initiiert, um die Lizenzierung freier Software-Projekte zu
 erleichtern. Das `REUSE tool <https://git.fsfe.org/reuse/tool>`_ überprüft
 Lizenzen und unterstützt Euch bei der Einhaltung der Lizenzkonformität.
-Mit der `REUSE API <https://reuse.software/dev/#api>`_ könnt Ihr Euch auch
+Mit der `REUSE API <https://reuse.software/dev/#api>`_ könnt ihr Euch auch
 ein dynamisches Compliance-Badge generieren:
 
 .. figure:: reuse-compliant.png
@@ -136,7 +136,7 @@ ein dynamisches Compliance-Badge generieren:
 CI-Workflow
 ~~~~~~~~~~~
 
-Ihr könnt REUSE einfach in Euren Continuous Integration-Workflow integrieren,
+Ihr könnt REUSE einfach in euren Continuous Integration-Workflow integrieren,
 z.B. für GitLab in der ``.gitlab-ci.yml``-Datei mit:
 
 .. code-block:: yaml

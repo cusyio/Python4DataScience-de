@@ -1,13 +1,13 @@
 Dokumentieren
 =============
 
-Damit Euer Produkt sinnvoll genutzt werden kann, sind Dokumentationen sowohl für
+Damit euer Produkt sinnvoll genutzt werden kann, sind Dokumentationen sowohl für
 die Zielgruppen Daten-Wissenschaftler und Daten-Ingenieure als auch für
 System-Ingenieure erforderlich:
 
 * Daten-Wissenschaftler wollen dokumentiert sehen
 
-  * welche Probleme Euer Produkt löst und was die Hauptfunktionen und
+  * welche Probleme euer Produkt löst und was die Hauptfunktionen und
     Limitationen der Software sind (``README``)
   * wie das Produkt beispielhaft verwendet werden kann
   * welche Veränderungen in aktuelleren Software-Versionen gekommen sind
@@ -16,7 +16,7 @@ System-Ingenieure erforderlich:
 * Daten-Ingenieure wollen wissen, wie sie mit Fehlerbehebungen zur Verbesserung
   des Produkts beitragen können (``CONTRIBUTING``) und wie sie mit anderen
   kommunizieren (``CODE_OF_CONDUCT``) können
-* System-Ingenieure benötigen eine Installationsanleitung für Euer Produkt
+* System-Ingenieure benötigen eine Installationsanleitung für euer Produkt
   und der erforderlichen Abhängigkeiten
 
 Alle gemeinsam benötigen Informationen, wie das Produkt lizenziert ist
@@ -42,12 +42,12 @@ hilfreich. Für das `cookiecutter-namespace-template
 .. |Docs| image:: https://readthedocs.org/projects/cookiecutter-namespace-template/badge/?version=latest
    :target: https://cookiecutter-namespace-template.readthedocs.io/en/latest/
 
-Für umfangreiche Dokuemtationen könnt Ihr z.B. `Sphinx
+Für umfangreiche Dokuemtationen könnt ihr z.B. `Sphinx
 <https://www.sphinx-doc.org/>`_ verwenden, ein Dokumentationswerkzeug, das
 :doc:`rest`, eine einfache Auszeichnungssprache, in HTML oder auch PDF,
 EPub und Manpages umwandelt. Auch das Jupyter-Tutorial ist mit Sphinx erstellt
-worden. Um einen ersten Eindruck von Sphinx zu erhalten, könnt Ihr Euch den
-Quellcode dieser Seite anschauen indem Ihr am Fuss dieser Seite dem Link
+worden. Um einen ersten Eindruck von Sphinx zu erhalten, könnt ihr euch den
+Quellcode dieser Seite anschauen indem ihr am Fuss dieser Seite dem Link
 `Sources <../../_sources/productive/sphinx/index.rst.txt>`_ folgt.
 
 Ursprünglich wurde Sphinx für die Dokumentation von Python entwickelt und wird

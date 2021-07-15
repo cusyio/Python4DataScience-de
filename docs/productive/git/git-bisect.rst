@@ -4,8 +4,8 @@ Regressionen finden mit ``git bisect``
 ``git bisect`` ermöglicht Euch, den Git-Commit zu finden, der eine Regression
 eingeführt hat.
 
-#. Hierzu beginnt Ihr die Suche mit ``git bisect start``.
-   Anschließend könnt Ihr den Bereich mit ``git bisect bad [COMMIT]`` und ``git
+#. Hierzu beginnt ihr die Suche mit ``git bisect start``.
+   Anschließend könnt ihr den Bereich mit ``git bisect bad [COMMIT]`` und ``git
    bisect good [COMMIT]`` eingrenzen, in dem ein Fehler eingeführt wurde.
    Alternativ kann auch die Kurzform ``git bisect start [BAD COMMIT] [GOOD
    COMMIT]`` verwendet werden. ``git bisect`` checkt dann einen Commit in der
@@ -18,7 +18,7 @@ eingeführt hat.
     [2ec65f8b89ea003c27ff7723525a2ee335a2b393] x86: clean up using max_low_pfn on 32-bit
 
 #. Die Suche kann nun manuell oder automatisch mit einem Skript fortgesetzt
-   werden. Manuell könnt Ihr mit ``git bisect bad`` und ``git bisect good`` den
+   werden. Manuell könnt ihr mit ``git bisect bad`` und ``git bisect good`` den
    Bereich immer weiter eingrenzen, in dem ein Fehler eingeführt wurde. Wird
    dieser Commit gefunden, kann die Ausgabe z.B. folgendermaßen aussehen:
 
@@ -62,7 +62,7 @@ eingeführt hat.
      # * DOKUMENTATION *
 
    Die Überprüfung, ob mit einem Commit fehlerhafter Code eingeführt wurde, kann
-   auch automatisiert erfolgen. Ein Beispiel hierfür findet Ihr im Issue
+   auch automatisiert erfolgen. Ein Beispiel hierfür findet ihr im Issue
    `fetch_california_housing fails in CI on master
    <https://github.com/scikit-learn/scikit-learn/issues/14956>`_ von scikit-learn:
 
@@ -70,7 +70,7 @@ eingeführt hat.
 
     git bisect run pytest sklearn/utils/tests/test_multiclass.py -k test_unique_labels_non_specific
 
-#. Das scikit-learn-Issue zeigt auch, wie Ihr anderen die Ergebnisse Eurer
+#. Das scikit-learn-Issue zeigt auch, wie ihr anderen die Ergebnisse eurer
    Bisect-Suche mit ``$ git bisect log`` nachvollziehbar mitteilen könnt:
 
    .. code-block::
@@ -82,15 +82,15 @@ eingeführt hat.
     fbb2c7c70 | * good-fbb2c7c7007dc373c462e39ab273a183a8823d58 @ ENH Adds _MultimetricScorer for Optimized Scoring  (#14593)
     …
 
-   Mit ``$ git bisect log > bisect_log.txt`` könnt Ihr Eure Suche auch für
+   Mit ``$ git bisect log > bisect_log.txt`` könnt ihr eure Suche auch für
    andere reproduzierbar abspeichern:
 
    .. code-block:: console
 
     $ git bisect replay bisect_log.txt
 
-#. Schließlich könnt Ihr mit ``git bisect reset`` in den Branch zurückkehren,
-   in dem Ihr Euch vor der Bisect-Suche befunden habt:
+#. Schließlich könnt ihr mit ``git bisect reset`` in den Branch zurückkehren,
+   in dem ihr Euch vor der Bisect-Suche befunden habt:
 
    .. code-block:: console
 

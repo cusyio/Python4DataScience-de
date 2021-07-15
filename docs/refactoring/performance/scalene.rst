@@ -34,7 +34,7 @@ Verwendung
 
     $ pipenv run scalene test/testme.py
 
-Alle verfügbaren Optionen könnt Ihr Euch anzeigen lassen mit
+Alle verfügbaren Optionen könnt ihr euch anzeigen lassen mit
 
 .. code-block:: console
 

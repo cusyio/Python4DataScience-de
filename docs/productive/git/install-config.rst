@@ -23,15 +23,15 @@ Für iX-Distributionen sollte Git im Standard-Repository vorhanden sein.
 
   Es gibt verschiedene Möglichkeiten, Git auf einem Mac zu installieren. Am
   einfachsten ist es vermutlich, die Xcode Command Line Tools zu installieren.
-  Hierfür müsst Ihr nur ``git`` das erste Mal vom Terminal aufrufen:
+  Hierfür müsst ihr nur ``git`` das erste Mal vom Terminal aufrufen:
 
   .. code-block:: console
 
     $ git --version
 
-  ``git-completion`` könnt Ihr mit `Homebrew <https://brew.sh/>`_ installieren:
+  ``git-completion`` könnt ihr mit `Homebrew <https://brew.sh/>`_ installieren:
 
-  Anschließend müsst Ihr folgende Zeile in ``~/.bash_profile`` hinzufügen:
+  Anschließend müsst ihr folgende Zeile in ``~/.bash_profile`` hinzufügen:
 
   .. code-block:: bash
 
@@ -40,16 +40,16 @@ Für iX-Distributionen sollte Git im Standard-Repository vorhanden sein.
 * Für Windows:
 
   Ihr könnt einfach https://git-scm.com/download/win aufrufen um den Download
-  automatisch zu starten. Weitere Informationen findet Ihr unter
+  automatisch zu starten. Weitere Informationen findet ihr unter
   https://gitforwindows.org/.
 
 Konfiguration
 -------------
 
 ``$ git config --global user.name "[name]"``
-    legt den Namen fest, den mit Euren Commit-Transaktionen verknüpft wird.
+    legt den Namen fest, den mit euren Commit-Transaktionen verknüpft wird.
 ``$ git config --global user.email "[email address]"``
-    legt die E-Mail fest, die mit Euren Commit-Transaktionen verknüpft wird.
+    legt die E-Mail fest, die mit euren Commit-Transaktionen verknüpft wird.
 ``$ git config --global color.ui auto``
     aktiviert die Kolorierung der Befehlszeilenausgabe.
 
@@ -98,13 +98,13 @@ Anmeldedaten verwalten
 
 Seit der Git-Version 1.7.9 lassen sich die Zugangsdaten zu git-Repositories mit
 `gitcredentials <https://git-scm.com/docs/gitcredentials>`_ verwalten. Um diese
-zu nutzen, könnt Ihr z.B. folgendes angeben:
+zu nutzen, könnt ihr z.B. folgendes angeben:
 
 .. code-block:: console
 
     $ git config --global credential.helper Cache
 
-Hiermit wird Ihr Passwort für 15 Minuten im Cache-Speicher gehalten. Der Timeout
+Hiermit wird ihr Passwort für 15 Minuten im Cache-Speicher gehalten. Der Timeout
 kann ggf. erhöht werden, z.B. mit:
 
 .. code-block:: console
@@ -144,18 +144,18 @@ Für Windows steht `Git Credential Manager for Windows
 Verfügung. Für das Programm muss der `Installer
 <https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest>`_
 heruntergeladen werden. Nach dem Doppelklick führt er Euch durch die weitere
-Installation. Als Terminal-Emulator für Git Bash solltet Ihr das
+Installation. Als Terminal-Emulator für Git Bash solltet ihr das
 Standardkonsolenfenster von Windows auswählen.
 
 .. note::
-    Ein umfangreiches Beispiel einer `~/.gitconfig`-Datei findet Ihr in meinem
+    Ein umfangreiches Beispiel einer `~/.gitconfig`-Datei findet ihr in meinem
     `dotfiles <https://github.com/veit/dotfiles/>`_-Repository: `.gitconfig
     <https://github.com/veit/dotfiles/blob/main/.gitconfig>`_.
 
 Die ``.gitignore``-Datei
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-In der ``.gitignore``-Datei eines Repository könnt Ihr Dateien von der
+In der ``.gitignore``-Datei eines Repository könnt ihr Dateien von der
 Versionsverwaltung ausschließen. Eine typische ``.gitignore``-Datei kann z.B. so
 aussehen:
 
@@ -169,7 +169,7 @@ aussehen:
 Git-commit leerer Ordner
 ::::::::::::::::::::::::
 
-In obigem Beispiel seht Ihr, dass mit ``/logs/*`` keine Inhalte des
+In obigem Beispiel seht ihr, dass mit ``/logs/*`` keine Inhalte des
 ``logs``-Verzeichnis mit Git versioniert werden soll, in der Folgezeile jedoch
 eine Ausnahme definiert wird: ``!logs/.gitkeep`` erlaubt, dass die Datei
 ``.gitkeep`` mit Git verwaltet werden darf. Damit wird dann auch das
@@ -205,6 +205,6 @@ Hierfür wird üblicherweise in der ``~/.gitconfig``-Datei folgendes angegeben:
         …
 
 .. note::
-    Hilfreiche Vorlagen findet Ihr in meinem `dotfiles
+    Hilfreiche Vorlagen findet ihr in meinem `dotfiles
     <https://github.com/veit/dotfiles/tree/main/gitignores>`_-Repository oder
     auf der Website `gitignore.io <https://gitignore.io/>`_.

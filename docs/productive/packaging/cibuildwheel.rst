@@ -21,7 +21,7 @@ GitHub Actions
 --------------
 
 Um Linux-, macOS- und Windows-Wheels erstellen zu können, erstellt eine
-``.github/workflows/build_wheels.yml``-Datei in Eurem GitHub Repo:
+``.github/workflows/build_wheels.yml``-Datei in eurem GitHub Repo:
 
 .. code-block:: yaml
 
@@ -87,7 +87,7 @@ Gitlab CI
 ---------
 
 Um Linux-Wheels mit Gitlab CI zu bauen, erstellt eine  ``.gitlab-ci.yml``-Datei
-in Eurem Repository:
+in eurem Repository:
 
 .. code-block:: yaml
 

@@ -32,10 +32,10 @@ Pysa verwendet zwei Dateitypen für die Konfiguration:
     }
 
 * Dateien mit der Endung ``.pysa`` in einem Verzeichnis, das mit
-  ``taint_models_path`` in Eurer ``.pyre_configuration``-Datei konfiguriert
+  ``taint_models_path`` in eurer ``.pyre_configuration``-Datei konfiguriert
   wurde.
 
-Praktische Beispiele findet Ihr im `Pyre-Repository
+Praktische Beispiele findet ihr im `Pyre-Repository
 <https://github.com/facebook/pyre-check/tree/master/stubs/taint/core_privacy_security>`_.
 
 Verwendung
@@ -93,5 +93,5 @@ Verwendung
    ``jump 1``
     springt zum ersten Aufruf und zeigt den Quellcode an
 
-Weitere Kommandos erhaltet Ihr in `Commands
+Weitere Kommandos erhaltet ihr in `Commands
 <https://pyre-check.org/docs/static-analysis-post-processor#commands>`_.

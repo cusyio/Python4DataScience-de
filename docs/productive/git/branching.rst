@@ -15,7 +15,7 @@ Git-Verzweigungen
     ``-b``
         erstellt den angegebenen Zweig, wenn dieser nicht schon besteht.
 ``$ git merge [from name]``
-    verbindet den angegebenen mit dem aktuellen Zweig, in dem Ihr euch gerade
+    verbindet den angegebenen mit dem aktuellen Zweig, in dem ihr euch gerade
     befindet, z.B.:
 
     .. code-block:: console

@@ -14,13 +14,13 @@ Probleme im Code hinzuweisen, z.B. um die Formattierung zu überprüfen oder
 Debug-Anweisungen zu finden. Pre-Commit vereinfacht das projektübergreifende
 Teilen vom Pre-Commit-Hooks. Dabei ist auch die Sprache, in der z.B. ein Linter
 geschrieben wurde, wegabstrahiert – so ist ``scss-lint`` in Ruby geschrieben,
-Ihr könnt ihn jedoch mit Pre-Commit verwenden ohne Eurem Projekt ein Gemfile
+ihr könnt ihn jedoch mit Pre-Commit verwenden ohne eurem Projekt ein Gemfile
 hinzufügen zu müssen.
 
 Installation
 ------------
 
-Bevor Ihr Hooks ausführen könnt, muss der pre-commit-Paketmanager installiert
+Bevor ihr Hooks ausführen könnt, muss der pre-commit-Paketmanager installiert
 sein.
 
 … auf macOS:
@@ -29,7 +29,7 @@ sein.
 
     $ brew install pre-commit
 
-… in Eurem Python-Projekt:
+… in eurem Python-Projekt:
 
 .. code-block:: console
 
@@ -46,7 +46,7 @@ Konfiguration
 -------------
 
 Nachdem Pre-Commit installiert ist, können mit der
-``.pre-commit-config.yaml``-Datei im Root-Verzeichnis Eures Projekts Plugins für
+``.pre-commit-config.yaml``-Datei im Root-Verzeichnis eures Projekts Plugins für
 dieses Projekt konfiguriert werden.
 
 .. code-block:: yaml
@@ -79,7 +79,7 @@ Ihr könnt Euch diese Datei auch generieren lassen mit
         -   id: check-yaml
         -   id: check-added-large-files
 
-Wenn Ihr diesen pre-commit-Hook vor jedem commit ausführen möchtet, installiert
+Wenn ihr diesen pre-commit-Hook vor jedem commit ausführen möchtet, installiert
 diesen mit ``pre-commit install``. Sollen die Hooks manuell ausgeführt werden,
 kann dies mit ``pre-commit run --all-files`` geschehen. Einzelne Hooks können
 dann auch separat ausgeführt werden, z.B. ``pre-commit run
@@ -98,7 +98,7 @@ Kopie von ``node`` erstellt werden muss.
     Check for added large files..............................................Passed
     black....................................................................Passed
 
-Eine vollständige Liste der Konfigurationsoptionen erhaltet Ihr in `Adding pre-commit
+Eine vollständige Liste der Konfigurationsoptionen erhaltet ihr in `Adding pre-commit
 plugins to your project
 <https://pre-commit.com/#adding-pre-commit-plugins-to-your-project>`_.
 
@@ -111,7 +111,7 @@ Ihr könnt die Hooks auch automatisch aktualisieren mit:
 
     $ pipenv run pre-commit autoupdate
 
-Weitere Optionen findet Ihr unter `pre-commit autoupdate [options]
+Weitere Optionen findet ihr unter `pre-commit autoupdate [options]
 <https://pre-commit.com/#pre-commit-autoupdate>`_.
 
 Installieren der Git-Hook-Skripte
@@ -160,6 +160,6 @@ Beispiel für GitLab Actions
 
 .. seealso::
 
-    Weitere Informationen zur Feinabstimmung des Caching findet Ihr in `Good
+    Weitere Informationen zur Feinabstimmung des Caching findet ihr in `Good
     caching practices
     <https://docs.gitlab.com/ee/ci/caching/#good-caching-practices>`_.

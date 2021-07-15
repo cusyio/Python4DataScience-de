@@ -26,7 +26,7 @@
 ``$ git checkout [file]``
     ändert Dateien im Arbeitsverzeichnis in einen Zustand, der Git zuvor bekannt
     war. Standardmäßig checkt Git ``HEAD``, den letzten Commit des aktuell
-    ausgecheckten Zweigs, aus. Alternativ könnt Ihr auch einen bestimmte Zweig
+    ausgecheckten Zweigs, aus. Alternativ könnt ihr auch einen bestimmte Zweig
     oder SHA auswählen.
 ``$ git pull [remote]``
     ruft Änderungen aus dem Remote-Repository ab und führt den aktuellen Zweig

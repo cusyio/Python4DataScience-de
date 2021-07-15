@@ -1,9 +1,9 @@
 Code-Qualität und Komplexität überprüfen und verbessern
 =======================================================
 
-Bevor Ihr mit dem Refactoring beginnt, solltet Ihr die Komplexität Eures Codes
+Bevor ihr mit dem Refactoring beginnt, solltet ihr die Komplexität eures Codes
 messen. Im Folgenden möchte ich Euch einige Werkzeuge und Konzepte vorstellen,
-die die Konplexität Eures Codes überprüfen und die Wartung und Pflege von
+die die Konplexität eures Codes überprüfen und die Wartung und Pflege von
 Python-Paketen und anderem Quellcode vereinfachen. Häufig lässt sich zusammen
 mit :doc:`/productive/git/pre-commit` die Code-Qualität auch automatisiert
 überprüfen und verbessern.

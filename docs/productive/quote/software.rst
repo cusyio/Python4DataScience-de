@@ -15,7 +15,7 @@ Beispiele in absteigender Reputation auf:
 Die Situation bleibt für die Autor*innen von Software dennoch unbefriedigend,
 zumal wenn sie sich von den Autor*innen der Software-Beschreibung unterscheiden.
 Umgekehrt ist Forschungssoftware leider auch nicht immer gut geeignet um zitiert
-zu werden. So werden Kollegen Eure Software kaum direkt zitieren können, wenn Ihr
+zu werden. So werden Kollegen eure Software kaum direkt zitieren können, wenn ihr
 ihnen die Software als Anhang von E-Mails schickt. Auch ein Download-Link ist
 hier noch nicht wirklich zielführend. Aber wie können Autor*innen ihre Software
 zitierfähig bereitstellen?
@@ -27,15 +27,15 @@ ermöglicht die Archivierung von Software und die Bereitstellung eines DOI für
 diese Software. Im Folgenden werde ich am Beispiel des Jupyter-Tutorials zeigen,
 welche Schritte hierzu erforderlich sind:
 
-#. Wenn Ihr noch keinen `Accounnt für Zenodo <https://zenodo.org/signup/>`_
+#. Wenn ihr noch keinen `Accounnt für Zenodo <https://zenodo.org/signup/>`_
    habt, erstellt einen, bevorzugt mit GitHub.
 
-#. Nun wählt das Repository aus, das Ihr archivieren wollt:
+#. Nun wählt das Repository aus, das ihr archivieren wollt:
 
    .. figure:: zenodo-github.png
       :alt: Repositories für Zenodo aktivieren
 
-#. Überprüft, ob Zenodo einen Webhook in Eurem Repository für das
+#. Überprüft, ob Zenodo einen Webhook in eurem Repository für das
    *Releases*-Event erstellt hat:
 
    .. figure:: zenodo-webhook.png
@@ -51,7 +51,7 @@ welche Schritte hierzu erforderlich sind:
    .. figure:: zenodo-release.png
       :alt: Zenodo Release
 
-#. Schließlich könnt Ihr den Badge in der README-Datei Eurer Software einbinden:
+#. Schließlich könnt ihr den Badge in der README-Datei eurer Software einbinden:
 
    Markdown:
     .. code-block:: md
@@ -127,7 +127,7 @@ aktuell zwei Projekte für strukturierte Metadaten heraus:
         doi: 10.5281/zenodo.1234
         date-released: 2017-12-18
 
-    Ihr könnt einfach das obige Beispiel anpassen um Eure eigene
+    Ihr könnt einfach das obige Beispiel anpassen um eure eigene
     ``CITATION.cff``-Datei zu erzeugen oder die Website `cffinit
     <https://citation-file-format.github.io/cff-initializer-javascript/>`_
     verwenden.
@@ -143,7 +143,7 @@ aktuell zwei Projekte für strukturierte Metadaten heraus:
 
 Ihr solltet einen `Persistent Identifier (PID)
 <https://de.wikipedia.org/wiki/Persistent_Identifier>`_ bereitstellen um die
-langfristige Verfügbarkeit Eurer Software sicherzustellen. Sowohl das `Zenodo
+langfristige Verfügbarkeit eurer Software sicherzustellen. Sowohl das `Zenodo
 <https://zenodo.org/>`_- als auch das `figshare
 <https://figshare.com/>`_-Repository akzeptieren Quellcode einschließlich
 Binärdateien und stellen DOIs hierfür breit. Und auch mit `CiteAs

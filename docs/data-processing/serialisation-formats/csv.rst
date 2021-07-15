@@ -23,7 +23,7 @@ CSV
 |                       |       |                                                       |
 |                       |       | Auch wenn CSV das einzige hier besprochene Format ist,|
 |                       |       | das gut von Tabellenkalkulationen wie Excel           |
-|                       |       | unterstützt wird, solltet Ihr  strukturiertere        |
+|                       |       | unterstützt wird, solltet ihr strukturiertere         |
 |                       |       | Excel-Dateien direkt einlesen, z.B. mit pandas        |
 |                       |       | `read_excel`_.                                        |
 +-----------------------+-------+-------------------------------------------------------+

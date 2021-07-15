@@ -1,7 +1,7 @@
 Pytype
 ======
 
-Pytype ist ein statisches Analysewerkzeug, das Typen aus Eurem Python-Code
+Pytype ist ein statisches Analysewerkzeug, das Typen aus eurem Python-Code
 ableitet ohne dass Typanmerkungen notwendig sind. Es kann jedoch auch im Code
 stehende `Type Annotations <https://www.python.org/dev/peps/pep-0484>`_
 erzwingen. Obwohl Annotationen für Pytype optional sind, werden sie geprüft und
@@ -49,7 +49,7 @@ Anschließend kann die Installation überprüft werden mit
 Konfiguration
 -------------
 
-Für ein Python-Paket könnt Ihr Pytype einrichten indem Ihr eine
+Für ein Python-Paket könnt ihr Pytype einrichten indem ihr eine
 ``pytype.cfg``-Datei anlegt mit
 
 .. code-block:: console
@@ -73,7 +73,7 @@ Diese beginnt dann z.B. mit
     inputs =
         .
 
-Nun könnt Ihr die Konfigurationsdatei Euren Anforderungen entsprechend ampassen.
+Nun könnt ihr die Konfigurationsdatei euren Anforderungen entsprechend ampassen.
 
 Zusätzliche Skripte
 -------------------

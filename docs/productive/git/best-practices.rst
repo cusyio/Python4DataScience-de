@@ -3,7 +3,7 @@ Git Best Practices
 
 - Macht früh Commits!
 
-  Macht Euren ersten Commit nachdem ihr die initiale Installation
+  Macht euren ersten Commit nachdem ihr die initiale Installation
   fertiggestellt habt und noch bevor ihr erste Änderungen vornehmt. Für ein
   Cookiecutter-Template z.B. nach den folgenden Schritten:
 
@@ -72,7 +72,7 @@ Git Best Practices
 
 - Wählt einen Git-Workflow!
 
-  Wählt einen Workflow, der am besten zu Eurem Projekt passt. Projekte sind
+  Wählt einen Workflow, der am besten zu eurem Projekt passt. Projekte sind
   keineswegs identisch und ein Workflow, der zu einem Projekt passt, muss
   nicht zwingend auch in einem anderen Projekt passen. Auch kann sich initial
   ein anderer Workflow empfehlen als im weiteren Fortschritt des Projekts.
@@ -128,18 +128,18 @@ Git Best Practices
   - Bereinigt die Remote Tracking Branches mit ``git remote update --prune``.
   - Überprüft vergessene Arbeiten mit ``git stash list``.
 
-- Überprüft Eure Repositories regelmäßig auf unerwänschte Dateien!
+- Überprüft eure Repositories regelmäßig auf unerwänschte Dateien!
 
-  Mit `Gitleaks <https://github.com/zricethezav/gitleaks>`_ könnt Ihr Eure
+  Mit `Gitleaks <https://github.com/zricethezav/gitleaks>`_ könnt ihr eure
   Repositories regelmäßig auf ungewollt gespeicherte Zugangsdaten überprüfen.
 
   Und mit `Git Filter-Branch <https://git-scm.com/docs/git-filter-branch>`_,
   `BFG Repo-Cleaner <https://rtyley.github.io/bfg-repo-cleaner/>`_ oder
-  `git-filter-repo <https://github.com/newren/git-filter-repo>`_ könnt Ihr
-  unerwünschte Dateien, seien es Zugangsdaten oder große Binärdateien aus Eurer
+  `git-filter-repo <https://github.com/newren/git-filter-repo>`_ könnt ihr
+  unerwünschte Dateien, seien es Zugangsdaten oder große Binärdateien aus eurer
   Git-Historie entfernen.
 
-  Alternativ könnt Ihr auch auf der Kommandozeile die Daten löschen.
+  Alternativ könnt ihr auch auf der Kommandozeile die Daten löschen.
 
   – Löschen des letzten Commits
 
@@ -155,7 +155,7 @@ Git Best Practices
         $ git rebase -i sha origin
 
     ``-i``
-        interaktiver Modus, in dem Euer Standardeditor geöffnet wird und eine
+        interaktiver Modus, in dem euer Standardeditor geöffnet wird und eine
         Liste aller Commits nach dem zu entfernenden Commit mit dem Hash-Wert
         ``sha`` angezeigt wird, z.B.:
 
@@ -175,8 +175,8 @@ Git Best Practices
 
   – Ändern einer Commit-Nachricht
 
-    Dies lässt sich ebenfalls einfach mit ``rebase`` realisieren wobei Ihr in
-    Ihrem Editor nicht die Zeile löschen sondern in der Zeile ``pick`` durch
+    Dies lässt sich ebenfalls einfach mit ``rebase`` realisieren wobei ihr in
+    eurem Editor nicht die Zeile löschen sondern in der Zeile ``pick`` durch
     ``r`` (*reword*) ersetzen müsst.
 
   – Entfernen einer Datei aus der Historie

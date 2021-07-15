@@ -6,16 +6,16 @@ Produkt erstellen
 
 .. [#] Karl Popper in *Logik der Forschung*, 1935
 
-Damit auch andere Euren Code nutzen können, sollte er einige Bedingungen
+Damit auch andere euren Code nutzen können, sollte er einige Bedingungen
 erfüllen:
 
 * Ihr solltet Euch nicht stillschweigend auf bestimmte Ressourcen und Umgebungen
   verlassen
 * Erforderliche Software-Pakete und Hardware sollten in den Anforderungen
   angegeben werden
-* Pfadangaben werden in einem anderen Kontext nur innerhalb Eures Pakets oder in
+* Pfadangaben werden in einem anderen Kontext nur innerhalb eures Pakets oder in
   vorher generierten Verzeichnissen und Dateien funktionieren
-* Teilt keine Geheimnisse wie Zugangsdaten oder interne IP-Nummern in Eurem
+* Teilt keine Geheimnisse wie Zugangsdaten oder interne IP-Nummern in eurem
   veröffentlichten Produkt
 
 Es gibt diverse Werkzeuge, die Euch beim Erstellen von gemeinsam nutzbaren

@@ -58,5 +58,5 @@ Für ältere Python-Versionen kann sie installiert werden mit
    unter :doc:`/first-steps/install`.
 
 .. seealso::
-   Mit `responses <https://github.com/getsentry/responses>`_ könnt Ihr
+   Mit `responses <https://github.com/getsentry/responses>`_ könnt ihr
    Mock-Objekte für die :doc:`/data-processing/requests/index`-Bibliothek erstellen.

@@ -18,7 +18,7 @@ Anforderungen
 Optionale Anforderungen
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Für die Produktion benötigt Ihr außerdem einen `ASGI
+Für die Produktion benötigt ihr außerdem einen `ASGI
 <https://asgi.readthedocs.io/en/latest/>`_-Server wie `uvicorn
 <http://www.uvicorn.org/>`_:
 
@@ -44,13 +44,13 @@ Pydantic kann die folgenden optionalen Abhängigkeiten verwenden:
 Starlette kann die folgenden optionalen Abhängigkeiten verwenden:
 
 :doc:`requests <../requests/index>`
-    wenn Ihr den ``TestClient`` verwenden wollt.
+    wenn ihr den ``TestClient`` verwenden wollt.
 `aiofiles <https://github.com/Tinche/aiofiles>`_
-    wenn Ihr ``FileResponse`` oder ``StaticFiles`` verwenden wollt.
+    wenn ihr ``FileResponse`` oder ``StaticFiles`` verwenden wollt.
 `jinja2 <https://jinja.palletsprojects.com/>`_
-    wenn Ihr die Standard-Template-Konfiguration verwenden wollt.
+    wenn ihr die Standard-Template-Konfiguration verwenden wollt.
 `python-multipart <https://andrew-d.github.io/python-multipart/>`_
-    wenn Ihr das Parsen von Formularen mit ``request.form()`` unterstützen
+    wenn ihr das Parsen von Formularen mit ``request.form()`` unterstützen
     wollt.
 `itsdangerous <https://itsdangerous.palletsprojects.com/>`_
     erforderlich für die Unterstützung von ``SessionMiddleware``.
@@ -59,9 +59,9 @@ Starlette kann die folgenden optionalen Abhängigkeiten verwenden:
 `graphene <https://graphene-python.org/>`_
     für die Unterstützung von ``GraphQLApp``.
 `ujson <https://github.com/ultrajson/ultrajson>`__
-    wenn Ihr ``UJSONResponse`` verwenden wollt.
+    wenn ihr ``UJSONResponse`` verwenden wollt.
 `orjson <https://github.com/ijl/orjson>`_
-    wenn Ihr ``ORJSONResponse`` verwenden wollt.
+    wenn ihr ``ORJSONResponse`` verwenden wollt.
 
 Sie können installiert werden, z.B. mit:
 
@@ -69,7 +69,7 @@ Sie können installiert werden, z.B. mit:
 
     $ pipenv install fastapi[ujson]
 
-Alternativ könnt Ihr alle installieren mit:
+Alternativ könnt ihr alle installieren mit:
 
 .. code-block:: console
 

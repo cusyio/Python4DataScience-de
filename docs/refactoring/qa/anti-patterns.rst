@@ -74,13 +74,13 @@ Verschachtelter Code
 – Tim Peters, `Zen of Python <https://www.python.org/dev/peps/pep-0020/>`_
 
 Verschachtelter Code erschwert das Lesen und Verstehen. Ihr müsst die
-Bedingungen verstehen und merken, wenn Ihr durch die Zweige geht. Objektiv
+Bedingungen verstehen und merken, wenn ihr durch die Zweige geht. Objektiv
 erhöht sich die zyklomatische Komplexität bei steigender Anzahl der
 Code-Verzweigungen.
 
 Ihr könnt verschachtelte Methoden mit mehreren ineinandergesteckten
-``if``-Anweisungen reduzieren, indem Ihr Ebenen durch Methoden ersetzt, die ggf.
-``False`` zurückgeben. Anschließend könnt Ihr mit ``.count()`` überprüfen, ob
+``if``-Anweisungen reduzieren, indem ihr Ebenen durch Methoden ersetzt, die ggf.
+``False`` zurückgeben. Anschließend könnt ihr mit ``.count()`` überprüfen, ob
 die Anzahl der Fehler ``> 0`` ist.
 
 Eine andere Möglichkeit besteht in der Verwendung von *List Comprehensions*. So
@@ -103,7 +103,7 @@ ersetzt werden durch:
    Die `itertools <https://docs.python.org/3/library/itertools.html>`_ der
    Python-Standardbibliothek sind häufig ebenfalls gut geeignet, um die
    Verschachtelungstiefe zu reduzieren indem Funktionen zum Erstellen von
-   Iteratoren aus Datenstrukturen erstellt werden. Zudem könnt Ihr mit
+   Iteratoren aus Datenstrukturen erstellt werden. Zudem könnt ihr mit
    itertools auch Filtern, z.B. mit `filterfalse
    <https://docs.python.org/3/library/itertools.html#itertools.filterfalse>`_.
 

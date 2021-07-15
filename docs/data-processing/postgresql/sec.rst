@@ -90,7 +90,7 @@ id
 
 Die ``id`` sollte nicht als ``serial``, ``bigserial`` o.ä. realisiert werden.
 Hochzählende Zahlen könnten von Angreifern leicht erraten werden. Daher ist der
-UUIDv4-Datentyp deutlich besser geeignet. In PostgreSQL könnt Ihr UUIDv4
+UUIDv4-Datentyp deutlich besser geeignet. In PostgreSQL könnt ihr UUIDv4
 generieren mit der `uuid-ossp
 <https://www.postgresql.org/docs/current/uuid-ossp.html>`_-Erweiterung oder für
 PostgreSQL≥9.4 auch der `pgcrypto

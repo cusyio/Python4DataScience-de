@@ -14,7 +14,7 @@ Ergebnisse zu erzielen, müssen Code und Daten miteinander verbunden werden.
 
    Design: André Henze, Berlin
 
-Mit ``dvc run`` könnt Ihr einzelne Verarbeitungsstufen erstellen, wobei jede
+Mit ``dvc run`` könnt ihr einzelne Verarbeitungsstufen erstellen, wobei jede
 Stufe durch eine, mit Git verwaltete, Quellcode-Datei sowie weiteren
 Abhängigkeiten und Ausgabedaten beschrieben wird. Alle Stufen zusammen bilden
 dann die DVC-Pipeline.

@@ -9,7 +9,7 @@ XML
 | Datenstrukturen       |       | beliebige Kindelemente haben kann.                    |
 +-----------------------+-------+-------------------------------------------------------+
 | Standardisierung      | ++    | XML ist gut stadnardisiert, die Spezifikation findet  |
-|                       |       | Ihr unter https://www.w3.org/TR/xml/. XML unterstützt |
+|                       |       | ihr unter https://www.w3.org/TR/xml/. XML unterstützt |
 |                       |       | sowohl DOM-Parser als auch streaming SAX-Parser.      |
 +-----------------------+-------+-------------------------------------------------------+
 | Schema-IDL            | ++    | `XML schema`_, `RELAX NG`_                            |

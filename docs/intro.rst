@@ -125,5 +125,5 @@ Notebooks hinaus schnelle, flexible und umfassende Datenanalysen ermöglicht.
 Aktuell gehen wir jedoch noch nicht darauf ein, wie sie sich um *Streaming
 Pipelines* und *Domain Driven Data Stores* erweitern lässt.
 
-Die Beispiele des Jupyter-Tutorials könnt Ihr jedoch auch lokal erstellen und
+Die Beispiele des Jupyter-Tutorials könnt ihr jedoch auch lokal erstellen und
 ausführen.

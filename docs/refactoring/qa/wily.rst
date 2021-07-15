@@ -70,7 +70,7 @@ Wily kann einfach installiert werden mit
 
     $ pipenv install wily
 
-Anschließend könnt Ihr die Installation überprüfen mit
+Anschließend könnt ihr die Installation überprüfen mit
 
 .. code-block:: console
 
@@ -121,7 +121,7 @@ Verwendung
 #. Aufbau eines Caches mit den Statistiken des Projekts
 
    .. note::
-      Wily geht davon aus, dass Euer Projektordner ein :doc:`Git
+      Wily geht davon aus, dass euer Projektordner ein :doc:`Git
       <../../productive/git/index>`-Repository ist. Wily erstellt jedoch keinen
       Cache, wenn das Arbeitsverzeichnis verschmutzt ist.
 
@@ -171,7 +171,7 @@ Verwendung
 ~~~~~~~~~~~~~~~~~~~~~
 
 Ihr könnt Wily auch als :doc:`pre-commit Hook
-<../../productive/git/pre-commit>` verwenden. Hierzu müsstet Ihr in der
+<../../productive/git/pre-commit>` verwenden. Hierzu müsstet ihr in der
 ``pre-commit-config.yaml``-Konfigurationsdatei z.B. folgendes hinzufügen:
 
 .. code-block:: yaml

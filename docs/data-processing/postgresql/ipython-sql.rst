@@ -7,7 +7,7 @@ ipython-sql
 Installation
 ------------
 
-Ihr könnt ipython-sql einfach in Eurem Jupyter-Kernel installieren mit:
+Ihr könnt ipython-sql einfach in eurem Jupyter-Kernel installieren mit:
 
 .. code-block:: console
 
@@ -16,7 +16,7 @@ Ihr könnt ipython-sql einfach in Eurem Jupyter-Kernel installieren mit:
 Erste Schritte
 --------------
 
-#. Zunächst wird ipython-sql in Eurem Notebook aktiviert mit
+#. Zunächst wird ipython-sql in eurem Notebook aktiviert mit
 
    .. code-block:: python
 
@@ -30,7 +30,7 @@ Erste Schritte
 
     In [2]: %sql postgresql://
 
-#. Anschließend könnt Ihr eine Tabelle erstellen, z.B.:
+#. Anschließend könnt ihr eine Tabelle erstellen, z.B.:
 
    .. code-block:: python
 
@@ -38,7 +38,7 @@ Erste Schritte
        ....: CREATE TABLE accounts (login, name, email)
        ....: INSERT INTO accounts VALUES ('veit', 'Veit Schiele', veit@example.org);
 
-#. Die Inhalte der Tabelle ``accounts`` könnt Ihr abfragen mit
+#. Die Inhalte der Tabelle ``accounts`` könnt ihr abfragen mit
 
    .. code-block:: python
 
@@ -55,7 +55,7 @@ Begrenzung, mit ``Autolimit`` lässt sich  jedoch die Ergebnismenge limitieren.
    ``displaylimit`` begrenzt nur die Menge der angezeigten Ergebnisse, nicht
    jedoch den Speicherbedarf.
 
-Mit ``%config SqlMagic`` könnt Ihr Euch die aktuelle Konfiguration ausgeben
+Mit ``%config SqlMagic`` könnt ihr Euch die aktuelle Konfiguration ausgeben
 lassen:
 
 .. code-block:: python

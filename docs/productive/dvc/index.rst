@@ -71,7 +71,7 @@ Für macOS lässt sich DVC installieren mit:
 .. note::
     Bitte beachtet, dass das folgende Beispiel mit einer aktuellen DVC-Version
     erstellt wurde (1.0.0a9), die z.T. eine andere Syntax als frühere Versionen
-    verwendet. Dies könnt Ihr aktuell (8. Juni 2020) nur mit pip installieren::
+    verwendet. Dies könnt ihr aktuell (8. Juni 2020) nur mit pip installieren::
 
     .. code-block:: console
 

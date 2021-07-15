@@ -38,7 +38,7 @@ Startet den Server mit:
 3. Überprüfen
 -------------
 
-Öffnet Euren Browser unter http://127.0.0.1:8000/ und Ihr werdet folgendes
+Öffnet euren Browser unter http://127.0.0.1:8000/ und ihr werdet folgendes
 sehen:
 
 .. figure:: fastapi-example.png
@@ -94,7 +94,7 @@ zu erhalten:
 
 Der Server sollte die Datei automatisch neu laden, da wir dem unicorn-Befehl
 ``--reload`` hinzugefügt haben. Auch die interaktive API-Dokumentation zeigt nun
-den neuen Body mit ``PUT``. Wenn Ihr auf die Schaltfläche *Try it out* klickt
+den neuen Body mit ``PUT``. Wenn ihr auf die Schaltfläche *Try it out* klickt
 und einen Wert für den Parameter ``item_id`` angebt, wird beim Klick auf die
 *Execute*-Schaltfläche der Parameter vom Browser an das API übertragen und die
 Antwort auf dem Bildschirm angezeigt:

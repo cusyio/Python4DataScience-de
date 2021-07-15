@@ -10,7 +10,7 @@ wichtiger Metriken zu erleichtern, darunter:
 * Datenbankgröße
 * Replikationsverzögerung
 * Transaktionsumlauf
-* Zusätzlicher Speicherplatz, der von Ihren Tabellen und Indizes belegt wird
+* Zusätzlicher Speicherplatz, der von euren Tabellen und Indizes belegt wird
 * CPU, Speicher, I/O und Betriebszeit
 
 Es kombiniert mehrere Open-Source-Softwarepakete, um eine robuste

@@ -59,7 +59,7 @@ Third-party Extensions
     überwacht ein Sphinx-Repository und erstellt eine neue Dokumentation
     sobald Änderungen gemacht wurden
 `Sphinxcontrib-mermaid <https://github.com/mgaitan/sphinxcontrib-mermaid>`_
-    erlaubt, Mermaid- Grafiken in Ihre Dokumente einbetten.
+    erlaubt, Mermaid- Grafiken in eure Dokumente einzubetten.
 
 Eigene Extensions
 -----------------

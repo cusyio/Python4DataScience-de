@@ -2,9 +2,9 @@ Serialisierungsformate
 ======================
 
 Datenserialisierung konvertiert strukturierte Daten in ein Format, das geteilt
-und gespeichert werden kann. Bevor Ihr jedoch die Daten serialisiert, müsst Ihr
+und gespeichert werden kann. Bevor ihr jedoch die Daten serialisiert, müsst ihr
 Euch entscheiden, wie die Daten strukturiert werden sollen – flach oder
-verschachtelt. Der Unterschied zwischen den beiden Stilen seht Ihr an folgendem
+verschachtelt. Der Unterschied zwischen den beiden Stilen seht ihr an folgendem
 Beispiel:
 
 Flacher JSON-Stil:

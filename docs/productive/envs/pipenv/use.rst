@@ -26,7 +26,7 @@ Nachdem nun ``requests`` installiert ist, kann es verwendet werden.
 #. Als Ergebnis des Aufrufs solltet ihr den HTTP-Status-Code ``200`` erhalten.
 
 Die Verwendung von ``pipenv run`` stellt sicher, dass eure installierten Pakete
-für Ihr Skript verfügbar sind.
+für euer Skript verfügbar sind.
 
 Alternativ könnt ihr euch auch eine neue Shell mit ``pipenv shell`` erstellen,
 mit der auf alle installierten Pakete zugegriffen werden kann:

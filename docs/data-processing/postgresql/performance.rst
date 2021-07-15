@@ -2,10 +2,10 @@ PostgreSQL-Performance
 ======================
 
 Ihr solltet nicht mit :term:`MVCC – Multiversion Concurrency Control` beginnen,
-wenn Ihr Eure PostgreSQL-Datenbank optimieren wollt: viele Verbesserungen können
+wenn ihr eure PostgreSQL-Datenbank optimieren wollt: viele Verbesserungen können
 sehr viel einfacher vorgenommen werden da weder Transaktionslogs noch große
 Linux Kernel Page Sizes verantwortlich sein dürften. Üblicherweise beginnen wir
-mit zwei Metriken, die sehr gut die Performance Eurer Datenbanken anzeigen
+mit zwei Metriken, die sehr gut die Performance eurer Datenbanken anzeigen
 können:
 
 Cache- und Index-Trefferquote
@@ -28,7 +28,7 @@ Cache-Trefferquote (engl.: *cache hit ratio*)
           sum(heap_blks_hit) / nullif(sum(heap_blks_hit) + sum(heap_blks_read),0) AS ratio
         FROM pg_statio_user_tables;
 
-    Falls die Cache-Trefferquote zu gering sein sollte, könnt Ihr einfach den
+    Falls die Cache-Trefferquote zu gering sein sollte, könnt ihr einfach den
     Arbeitsspeicher erhöhen.
 
 Index-Trefferquote (engl.: *index hit ratio*)

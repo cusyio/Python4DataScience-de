@@ -38,7 +38,7 @@ Für ein Inventar können jedoch auch alternative Dateien angegeben werden, z.B.
 Linkziele ermitteln
 -------------------
 
-Um die in einem Inventar zur Verfügung stehenden Links zu ermitteln, könnt Ihr
+Um die in einem Inventar zur Verfügung stehenden Links zu ermitteln, könnt ihr
 z.B. folgendes eingeben:
 
 .. code-block:: console

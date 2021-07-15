@@ -36,6 +36,6 @@ Git-Glossar
         <https://docs.gitlab.com/ee/user/project/merge_requests/>`_.
 
     ``HEAD``
-        Der ``HEAD``-Zeiger repräsentiert Euer aktuelles Arbeitsverzeichnis und
+        Der ``HEAD``-Zeiger repräsentiert euer aktuelles Arbeitsverzeichnis und
         kann mit ``git checkout`` in verschiedene Zweige, Tags oder Commits
         verschoben werden

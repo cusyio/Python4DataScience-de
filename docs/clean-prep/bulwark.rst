@@ -54,7 +54,7 @@ z.B.:
 ``CustomCheck``
 ~~~~~~~~~~~~~~~
 
-Ihr könnt auch Eure eigenen benutzerdefinierten Funktionen erstellen, z.B.:
+Ihr könnt auch eure eigenen benutzerdefinierten Funktionen erstellen, z.B.:
 
 .. code-block:: python
 
@@ -80,7 +80,7 @@ Ihr könnt auch Eure eigenen benutzerdefinierten Funktionen erstellen, z.B.:
 ``MultiCheck``
 ~~~~~~~~~~~~~~
 
-Mit der integrierten ``MultiCheck``-Funktion könnt Ihr mehrere Tests
+Mit der integrierten ``MultiCheck``-Funktion könnt ihr mehrere Tests
 gleichzeitig ausführen und alle Fehler auf einmal sehen, z.B.:
 
 .. code-block:: python
@@ -99,5 +99,5 @@ gleichzeitig ausführen und alle Fehler auf einmal sehen, z.B.:
 
 .. note::
 
-    Wenn Ihr ``MultiCheck`` verwendet, müsst Ihr nicht auch noch ``CustomCheck``
-   aufrufen – Ihr könnt einfach die Funktion aufrufen.
+    Wenn ihr ``MultiCheck`` verwendet, müsst ihr nicht auch noch ``CustomCheck``
+   aufrufen – ihr könnt einfach die Funktion aufrufen.

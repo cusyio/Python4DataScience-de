@@ -31,12 +31,12 @@ Konfiguration
     known_first_party="jupyter-tutorial"
     known_third_party=["mpi4py", "numpy", "requests"]
 
-Um Pakete von Drittanbietern gegenüber Euren Projektimporten zu erkennen, könnt
-ihr entweder Euer Projekt zusammen mit ``isort`` installieren oder
+Um Pakete von Drittanbietern gegenüber euren Projektimporten zu erkennen, könnt
+ihr entweder euer Projekt zusammen mit ``isort`` installieren oder
 `seed-isort-config <https://github.com/asottile/seed-isort-config>`_ verwenden.
 
 .. note::
-    Mit isort 5 könnt Ihr Profile verwenden. Dies erleichtert die Konfiguration
+    Mit isort 5 könnt ihr Profile verwenden. Dies erleichtert die Konfiguration
     von isort, um auch zukünftig mit :doc:`black` zusammenzuspielen:
 
     .. code-block:: ini

@@ -104,7 +104,7 @@ Multithreading, Multiprocessing und asynchrone Kommunikation
 |                  | Einzeloperationen| anderer Overhead |                                |
 |                  | abhängen.        | nötig.           |                                |
 +------------------+------------------+------------------+--------------------------------+
-| Wechsel          | Threads wechseln | Sobald Ihr den   | asyncio wechselt `kooperativ`_,|
+| Wechsel          | Threads wechseln | Sobald ihr den   | asyncio wechselt `kooperativ`_,|
 |                  | `präemptiv`_,    | Prozess erhaltet,| d.h., es muss explizit `yield`_|
 |                  | d.h., es muss    | sollten deutliche| oder `await`_ angegeben werden |
 |                  | kein expliziter  | Fortschritte     | um einen Wechsel               |

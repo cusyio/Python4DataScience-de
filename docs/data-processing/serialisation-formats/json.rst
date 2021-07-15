@@ -15,7 +15,7 @@ JSON
 |                       |       | ``null``.                                             |
 |                       |       |                                                       |
 |                       |       | Bitte beachtet auch, dass die JSON keine Kommentare   |
-|                       |       | unterstützt und Ihr gegebenenfalls darum herumarbeiten|
+|                       |       | unterstützt und ihr gegebenenfalls darum herumarbeiten|
 |                       |       | müsst, z.B. mit einem ``__comment__``                 |
 |                       |       | Schlüssel/Wert-Paar.                                  |
 +-----------------------+-------+-------------------------------------------------------+

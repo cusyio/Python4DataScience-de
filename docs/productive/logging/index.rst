@@ -39,7 +39,7 @@ Welche Vorteile bietet ``logging`` nun gegenüber ``print``?
 
    * `loguru <https://github.com/Delgan/loguru>`_ macht das Protokollieren fast
      so einfach wie die Verwendung von ``print``-Anweisungen.
-   * `structlog <https://www.structlog.org/>`_ fügt Euren Log-Einträgen Struktur
+   * `structlog <https://www.structlog.org/>`_ fügt euren Log-Einträgen Struktur
      hinzu.
 
 .. toctree::
