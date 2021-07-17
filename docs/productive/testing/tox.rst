@@ -86,7 +86,6 @@ GitHub-Actions verfügbar: `github.com/actions/virtual-environments
 
    .. code-block:: yaml
 
-    ---
     name: CI
 
     on:
@@ -173,9 +172,9 @@ GitHub-Actions verfügbar: `github.com/actions/virtual-environments
          :target: https://github.com/YOU/YOUR_PROJECT/actions?workflow=CI
          :alt: CI Status
 
-#. Schließlich könnt ihr die Code-Abdeckung noch auf `Codecov
-   <https://about.codecov.io/>`_ veröffentlichen. Hierzu könnt ihr in eurer
-   :file:`ci.yml`-Datei :abbr:`z.B. (zum Beispiel)` folgendes hinzufügen:
+#. Die Code-Abdeckung könnt ihr auf `Codecov <https://about.codecov.io/>`_
+   veröffentlichen, indem ihr in eurer :file:`ci.yml`-Datei :abbr:`z.B. (zum
+   Beispiel)` folgendes hinzufügen:
 
    .. code-block:: yaml
 
@@ -185,6 +184,15 @@ GitHub-Actions verfügbar: `github.com/actions/virtual-environments
       uses: "codecov/codecov-action@v1"
       with:
         fail_ci_if_error: true
+
+#. Schließlich könnt ihr auch noch ein Badge für die Code-Abdeckung in eurer
+   :file:`README.rst`-Datei anzeigen, :abbr:`z.B. (zum Beispiel)` mit:
+
+   .. code-block::
+
+    .. image:: https://codecov.io/gh/YOU/YOUR_PROJECT/branch/main/graph/badge.svg
+       :target: https://codecov.io/gh/YOU/YOUR_PROJECT
+       :alt: Code Coverage Status (Codecov)
 
 .. seealso::
    * `Build & test Python
