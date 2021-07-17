@@ -55,8 +55,8 @@ Installation
     $ pipenv install tox
 
 .. note::
-   Falls ihr pipenv noch nicht installiert hab, findet ihr eine Anleitung hierzu
-   unter :doc:`/first-steps/install`.
+   Falls ihr pipenv noch nicht installiert habt, findet ihr eine Anleitung
+   hierzu unter :doc:`/first-steps/install`.
 
 .. seealso::
 
