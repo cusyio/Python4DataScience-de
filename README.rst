@@ -1,20 +1,26 @@
 Schnelleinstieg
 ===============
 
-|Contributors| |Commits| |License| |Docs| |Pyup| |DOI|
+.. badges::
 
-.. |Contributors| image:: https://img.shields.io/github/contributors/veit/jupyter-tutorial.svg
+Status
+------
+
+.. image:: https://img.shields.io/github/contributors/veit/jupyter-tutorial.svg
+   :alt: Contributors
    :target: https://github.com/veit/jupyter-tutorial/graphs/contributors
-.. |Commits| image::  https://raster.shields.io/github/commit-activity/y/veit/jupyter-tutorial
-   :target: https://github.com/veit/jupyter-tutorial/commits
-.. |License| image:: https://img.shields.io/github/license/veit/jupyter-tutorial.svg
-   :target: https://github.com/veit/jupyter-tutorial-de/blob/main/LICENSE
-.. |Docs| image:: https://readthedocs.org/projects/jupyter-tutorial-de/badge/?version=latest
+.. image:: https://img.shields.io/github/license/veit/jupyter-tutorial.svg
+   :alt: License
+   :target: https://github.com/veit/jupyter-tutorial/blob/master/LICENSE
+.. image:: https://readthedocs.org/projects/jupyter-tutorial-de/badge/?version=latest
+   :alt: Docs
    :target: https://jupyter-tutorial.readthedocs.io/de/latest/
-.. |Pyup| image:: https://pyup.io/repos/github/veit/jupyter-tutorial-de/shield.svg
-   :target: https://pyup.io/repos/github/veit/jupyter-tutorial-de/
-.. |DOI| image:: https://zenodo.org/badge/307380211.svg
-   :target: https://zenodo.org/badge/latestdoi/307380211
+.. image:: https://pyup.io/repos/github/veit/jupyter-tutorial/shield.svg
+   :alt: Pyup
+   :target: https://pyup.io/repos/github/veit/jupyter-tutorial/
+.. image:: https://zenodo.org/badge/doi/10.5281/zenodo.4147287.svg
+   :alt: DOI
+   :target: https://zenodo.org/badge/latestdoi/199994535
 
 .. first-steps::
 
