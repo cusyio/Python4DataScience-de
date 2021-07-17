@@ -139,7 +139,7 @@ GitHub-Actions verfügbar: `github.com/actions/virtual-environments
 #. `tox-gh-actions <https://pypi.org/project/tox-gh-actions/>`_ vereinfacht das
    Ausführen von tox in GitHub-Actions indem es als Umgebung für die Tests
    diejenige bereitstellt, die auch tox selbst verwendet. Hierfür müssen wir
-   jedoch noch unsere :file:`tox.ini`-Datei anpassen, :abbr:`z.B. (zumr
+   jedoch noch unsere :file:`tox.ini`-Datei anpassen, :abbr:`z.B. (zum
    Beispiel)`:
 
    .. code-block:: ini
