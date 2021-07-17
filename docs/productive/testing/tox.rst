@@ -47,6 +47,10 @@ durchlaufen:
         py27: commands succeeded
         ERROR:   py36: commands failed
 
+.. seealso::
+
+   * `Beispiele <https://tox.readthedocs.io/en/latest/examples.html>`_
+
 Installation
 ------------
 
@@ -58,7 +62,8 @@ Installation
    Falls ihr pipenv noch nicht installiert habt, findet ihr eine Anleitung
    hierzu unter :doc:`/first-steps/install`.
 
-.. seealso::
+Erweiterungen
+-------------
 
-   * `Beispiele <https://tox.readthedocs.io/en/latest/examples.html>`_
+.. seealso::
    * `Plugins <https://tox.readthedocs.io/en/latest/plugins.html>`_
