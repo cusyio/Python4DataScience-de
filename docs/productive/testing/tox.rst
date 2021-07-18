@@ -11,7 +11,7 @@ Konfigurationsdatei im ``INI``-Stil konfigurieren.
 Beispiel
 --------
 
-Erstellt eine ``tox.ini``-Datei:
+Erstellt eine ``tox.ini``-Datei, :abbr:`z.B. (zum Beispiel)`:
 
 .. code-block:: ini
 
@@ -39,7 +39,8 @@ durchlaufen:
    #. die Abhängigkeiten und Pakete installiert
    #. die Befehle aus ``commands`` ausgeführt
 
-#. Erstellen eines Reports mit den Ergebnissen aus jeder der Umgebungen, z.B.:
+#. Erstellen eines Reports mit den Ergebnissen aus jeder der Umgebungen,
+   :abbr:`z.B. (zum Beispiel)`:
 
    .. code-block:: text
 
