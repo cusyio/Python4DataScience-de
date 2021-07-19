@@ -29,6 +29,8 @@ Verwendung
 
     $ codecov -t <repository-upload-token>
 
+.. _together-with-github-actions:
+
 … zusammen mit GitHub Actions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
