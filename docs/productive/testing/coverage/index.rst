@@ -1,5 +1,5 @@
-Coverage.py
-===========
+Coverage
+========
 
 Ihr könnt Coverage-Reports erstellen mit `coverage.py
 <https://github.com/nedbat/coveragepy>`_.
@@ -62,5 +62,5 @@ Ihr könnt euren üblichen Test-Runner zusammen mit Coverage ausführen
     :titlesonly:
     :maxdepth: 0
 
-    opencoverage
     codecov
+    opencoverage

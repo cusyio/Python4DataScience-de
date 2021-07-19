@@ -164,8 +164,15 @@ GitHub-Actions verfügbar: `github.com/actions/virtual-environments
         Container ausgeführt werden, gehen hierbei die Vorteile der parallelen
         Ausführung verloren.
 
-#. Nun könnt ihr in eurer :file:`README.rst`-Datei noch ein Badge hinzufügen,
-   :abbr:`z.B. (zum Beispiel)` mit:
+   .. seealso::
+      * `Build & test Python
+        <https://docs.github.com/en/actions/guides/building-and-testing-python>`_
+      * `Workflow syntax
+        <https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions>`_
+
+#. Nun könnt ihr in eurer :file:`README.rst`-Datei noch ein Badge eures
+   :abbr:`CI (Continuous Integration)`-Status hinzufügen, :abbr:`z.B. (zum
+   Beispiel)` mit:
 
    .. code-block::
 
@@ -173,30 +180,10 @@ GitHub-Actions verfügbar: `github.com/actions/virtual-environments
          :target: https://github.com/YOU/YOUR_PROJECT/actions?workflow=CI
          :alt: CI Status
 
-#. Die Code-Abdeckung könnt ihr auf `Codecov <https://about.codecov.io/>`_
-   veröffentlichen, indem ihr in eurer :file:`ci.yml`-Datei :abbr:`z.B. (zum
-   Beispiel)` folgendes hinzufügen:
+#. Die Code-Abdeckung könnt ihr auf :doc:`coverage/codecov` veröffentlichen,
+   :abbr:`s.a. (siehe auch)` :ref:`Codecov und GitHub-Actions
+   <together-with-github-actions>`.
 
-   .. code-block:: yaml
-
-    - name: "Convert coverage"
-      run: "python -m coverage xml"
-    - name: "Upload coverage to Codecov"
-      uses: "codecov/codecov-action@v1"
-      with:
-        fail_ci_if_error: true
-
-#. Schließlich könnt ihr auch noch ein Badge für die Code-Abdeckung in eurer
-   :file:`README.rst`-Datei anzeigen, :abbr:`z.B. (zum Beispiel)` mit:
-
-   .. code-block::
-
-    .. image:: https://codecov.io/gh/YOU/YOUR_PROJECT/branch/main/graph/badge.svg
-       :target: https://codecov.io/gh/YOU/YOUR_PROJECT
-       :alt: Code Coverage Status (Codecov)
-
-.. seealso::
-   * `Build & test Python
-     <https://docs.github.com/en/actions/guides/building-and-testing-python>`_
-   * `Workflow syntax
-     <https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions>`_
+#. Ihr könnt auch noch ein Badge für die Code-Abdeckung in eurer
+   :file:`README.rst`-Datei anzeigen, :abbr:`s.a. (siehe auch)` :ref:`Codecov
+   Badge <codecov-badge>`.

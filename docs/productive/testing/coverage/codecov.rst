@@ -32,16 +32,18 @@ Verwendung
 … zusammen mit GitHub Actions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Eine minimale Konfiguration für öffentliche Repos:
+Die Code-Abdeckung könnt ihr veröffentlichen, indem ihr in eurer
+:file:`ci.yml`-Datei :abbr:`z.B. (zum Beispiel)` folgendes hinzufügt:
 
 .. code-block:: yaml
+   :emphasize-lines: 3-6
 
-    steps:
-      …
-      - name: "Upload coverage to Codecov"
-        uses: codecov/codecov-action@v1
-        with:
-          fail_ci_if_error: true
+    - name: "Convert coverage"
+      run: "python -m coverage xml"
+    - name: "Upload coverage to Codecov"
+      uses: "codecov/codecov-action@v1"
+      with:
+        fail_ci_if_error: true
 
 .. seealso::
    * `Codecov GitHub Action <https://github.com/codecov/codecov-action>`_
@@ -69,3 +71,17 @@ Codecov kann mit :doc:`../tox` eingerichtet werden:
     passenv = TOXENV CI TRAVIS TRAVIS_* CODECOV_*
     deps = codecov>=1.4.0
     commands = codecov -e TOXENV
+
+.. _codecov-badge:
+
+Badge
+-----
+
+Nun könnt ihr in eurer :file:`README.rst`-Datei noch ein Badge hinzufügen,
+:abbr:`z.B. (zum Beispiel)` mit:
+
+.. code-block::
+
+    .. image:: https://codecov.io/gh/YOU/YOUR_PROJECT/branch/main/graph/badge.svg
+       :target: https://codecov.io/gh/YOU/YOUR_PROJECT
+       :alt: Code Coverage Status (Codecov)
