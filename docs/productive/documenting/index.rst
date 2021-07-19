@@ -77,15 +77,19 @@ vereinfacht das Erstellen und Veröffentlichen von Dokumentation nach jedem
 *Commit*.
 
 .. seealso::
+   * `Eric Holscher: Why You Shouldn’t Use “Markdown” for Documentation
+     <https://ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/>`_
+   * `Tom Johnson: 10 reasons for moving away from DITA
+     <https://idratherbewriting.com/2015/01/28/10-reasons-for-moving-away-from-dita/>`_
+   * `Tom Johnson: Jekyll versus DITA
+     <https://idratherbewriting.com/2015/03/23/new-series-jekyll-versus-dita/>`_
    * `Christina Czeschik und Matthias Lindhorst: Weniger schlecht über IT
      schreiben
      <https://oreilly.de/produkt/weniger-schlecht-ueber-it-schreiben/>`_
-   * `Google developer documentation style guide
-     <https://developers.google.com/style/>`_
-   * `Google Technical Writing Courses for Engineers
-     <https://developers.google.com/tech-writing/overview>`_
    * `Cusy-Design-System: Schreiben
      <https://cusy-design-system.readthedocs.io/de/latest/writing/index.html>`_
+   * `Google Technical Writing Courses for Engineers
+     <https://developers.google.com/tech-writing/overview>`_
 
 .. toctree::
     :hidden:
