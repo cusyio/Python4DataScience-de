@@ -27,7 +27,7 @@ ermöglicht die Archivierung von Software und die Bereitstellung eines DOI für
 diese Software. Im Folgenden werde ich am Beispiel des Jupyter-Tutorials zeigen,
 welche Schritte hierzu erforderlich sind:
 
-#. Wenn ihr noch keinen `Accounnt für Zenodo <https://zenodo.org/signup/>`_
+#. Wenn ihr noch keinen `Account für Zenodo <https://zenodo.org/signup/>`_
    habt, erstellt einen, bevorzugt mit GitHub.
 
 #. Nun wählt das Repository aus, das ihr archivieren wollt:
