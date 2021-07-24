@@ -1,6 +1,9 @@
 Daten zitieren
 ==============
 
+DataCite Metadata Schema
+------------------------
+
 Die DataCite Metadata Working Group veröffentlichte 2019 die `DataCite Metadata
 Schema <https://doi.org/10.14454/7xq3-zf69>`_ zum Veröffentlichen und Zitieren
 von Forschungsdaten zusammen mit einer XSD (XML Schema Definition):
@@ -55,3 +58,77 @@ Ein einfaches Datacite-Beispiel kann folgendermaßen aussehen:
         </description>
       </descriptions>
     </resource>
+
+W3C-PROV
+--------
+
+Die `PROV-Dokumentenfamilie der W3C-Arbeitsgruppe
+<https://www.w3.org/TR/prov-overview/>`_ definiert verschiedene Aspekte, die
+erforderlich sind um Herkunftsinformationen interoperabel austauschen zu können.
+
+
+.. seealso::
+   * Luc Moreau, Paul Groth: `Provenance: An Introduction to PROV
+     <https://www.provbook.org/>`_
+   * `Provenance storage and distribution <https://openprovenance.org/store/>`_
+   * `ProvStore’s API documentation
+     <https://openprovenance.org/store/help/api/>`_
+
+Python prov
+~~~~~~~~~~~
+
+Mit `prov <https://prov.readthedocs.io/>`_ steht eine Python3-Bibliothek zur
+Verfügung, die den Im- und Export des `PROV-Datenmodells
+<https://www.w3.org/TR/prov-dm/>`_ in folgende Serialisierungsformate
+unterstützt:
+
+* `PROV-O (RDF) <https://www.w3.org/TR/2013/REC-prov-o-20130430/>`_
+* `PROV-XML <https://www.w3.org/TR/2013/NOTE-prov-xml-20130430/>`_
+* `PROV-JSON <https://www.w3.org/Submission/prov-json/>`_
+
+Zudem können mit :doc:`pyviz:matplotlib/networkx` `MultiDiGraph
+<https://networkx.org/documentation/stable/reference/classes/multidigraph.html>`_
+PROV-Dokumente erstellt werden und umgekehrt. Schließlich können PROV-Dokumente
+auch als Graphen in den Formaten PDF, PNG und SVG generiert werden.
+
+.. seealso::
+   * Dong Huynh: `A Short Tutorial for Prov Python
+     <https://trungdong.github.io/prov-python-short-tutorial.html>`_
+   * `PROV Tutorial.ipynb
+     <https://nbviewer.jupyter.org/github/trungdong/notebooks/blob/master/PROV%20Tutorial.ipynb>`_
+
+Git2PROV
+~~~~~~~~
+
+`Git2PROV <http://git2prov.org/>`_ generiert PROV-Daten aus den Informationen eines
+Git-Repository.
+
+Auf der Kommandozeile kann die Konvertierung einfach ausgeführt werden mit:
+
+.. code-block:: console
+
+    $ git2prov git_url [serialization]
+
+Zum Beispiel:
+
+.. code-block:: console
+
+    $ git2prov git@github.com:veit/jupyter-tutorial.git PROV-JSON
+
+Insgesamt stehen die folgenden Serialisierungsformate zur Verfügung:
+
+* ``PROV-N``
+* ``PROV-JSON``
+* ``PROV-O``
+* ``PROV-XML``
+
+Alternativ stellt Git2PROV auch einen Web-Server bereit mit:
+
+.. code-block:: console
+
+    $ git2prov-server [port]
+
+.. seealso::
+   * `Git2PROV: Exposing Version Control System Content as W3C PROV
+     <http://ceur-ws.org/Vol-1035/iswc2013_demo_32.pdf>`_
+   * `GitHub-Repository <https://github.com/IDLabResearch/Git2PROV>`_
