@@ -164,6 +164,9 @@ aktuell zwei Projekte für strukturierte Metadaten heraus:
        :alt: Popup auf der Zielseite eines GitHub-Repositorys mit der
              Möglichkeit, ADA- und BibTex-Formate zu exportieren.
 
+    Wenn ihr einen DOI mit Zenodo registriert, wird die ``CITATION.cff``-Datei
+    aus dem GitHub-Repository ebenfalls verwendet.
+
 Ihr solltet einen `Persistent Identifier (PID)
 <https://de.wikipedia.org/wiki/Persistent_Identifier>`_ bereitstellen um die
 langfristige Verfügbarkeit eurer Software sicherzustellen. Sowohl das `Zenodo
