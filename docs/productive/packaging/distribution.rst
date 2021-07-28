@@ -16,7 +16,7 @@ Paket-Index hochgeladen und mit :term:`Pip` installiert werden können.
 
 Eine minimale und dennoch funktionale ``setup.py`` findet ihr z.B. im `attrs
 <https://github.com/python-attrs/attrs/>`_-Paket: `setup.py
-</https://github.com/python-attrs/attrs/blob/0023e5b/setup.py>`_. Daran könnt
+<https://github.com/python-attrs/attrs/blob/0023e5b/setup.py>`_. Daran könnt
 ihr erkennen, dass das meiste *Boilerplate* ist und lediglich die Zeilen 10–37
 Metadaten für diese spezielle Paket sind. Die meisten anderen Metadaten sind in
 der `__init__
