@@ -114,18 +114,34 @@ aktuell zwei Projekte für strukturierte Metadaten heraus:
 
     .. code-block:: yaml
 
-        # YAML 1.2
-        ---
-        cff-version: 1.1.0
-        message: If you use this software, please cite it as below.
+        cff-version: "1.1.0"
+        message: "If you use this tutorial, please cite it as below."
         authors:
-          - family-names: Druskat
-            given-names: Stephan
-            orcid: https://orcid.org/0000-0003-4925-7248
-        title: "My Research Software"
-        version: 2.0.4
-        doi: 10.5281/zenodo.1234
-        date-released: 2017-12-18
+          -
+            family-names: Schiele
+            given-names: Veit
+            orcid: "https://orcid.org/https://orcid.org/0000-0002-2448-8958"
+        identifiers:
+          -
+            type: doi
+            value: "10.5281/zenodo.4147287"
+        keywords:
+          - "data-science"
+          - jupyter
+          - "jupyter-notebooks"
+          - "jupyter-kernels"
+          - ipython
+          - pandas
+          - spack
+          - pipenv
+          - ipywidgets
+          - "ipython-widget"
+          - dvc
+        title: "Jupyter tutorial"
+        version: "0.8.0"
+        date-released: 2020-10-08
+        license: "BSD-3-Clause"
+        repository-code: "https://github.com/veit/jupyter-tutorial"
 
     Ihr könnt einfach das obige Beispiel anpassen um eure eigene
     ``CITATION.cff``-Datei zu erzeugen oder die Website `cffinit
@@ -140,6 +156,13 @@ aktuell zwei Projekte für strukturierte Metadaten heraus:
       andere Dateiformate
     * `doi2cff <https://github.com/citation-file-format/doi2cff>`_ erstellt
       eine ``CITATION.cff``-Datei aus einem Zenodo DOI
+
+    Auch GitHub bietet einen Service um die Informationen aus ``CITATION.cff``
+    files im APA- and BibTex-Format zu kopieren.
+
+    .. figure:: github-cite.png
+       :alt: Popup auf der Zielseite eines GitHub-Repositorys mit der
+             Möglichkeit, ADA- und BibTex-Formate zu exportieren.
 
 Ihr solltet einen `Persistent Identifier (PID)
 <https://de.wikipedia.org/wiki/Persistent_Identifier>`_ bereitstellen um die
