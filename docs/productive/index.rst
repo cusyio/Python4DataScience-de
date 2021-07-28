@@ -50,7 +50,7 @@ andererseits für das :doc:`testing/index`, :doc:`logging/index`,
     packaging/index
     documenting/index
     licensing
-    quote/index
+    cite/index
     envs/index
     testing/index
     logging/index

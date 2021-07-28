@@ -1,5 +1,5 @@
-Zitieren von Software
-=====================
+Software zitieren
+=================
 
 James Howison
 und Julia Bullard führten in ihrem 2016 veröffentlichten Artikel `Software in
