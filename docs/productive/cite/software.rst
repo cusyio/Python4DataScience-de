@@ -165,6 +165,10 @@ aktuell zwei Projekte für strukturierte Metadaten heraus:
        :alt: Popup auf der Zielseite eines GitHub-Repositorys mit der
              Möglichkeit, ADA- und BibTex-Formate zu exportieren.
 
+    .. seealso::
+       * `GitHub Docs: About CITATION files
+         <https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/about-citation-files>`_
+
     Wenn ihr einen DOI mit Zenodo registriert, wird die ``CITATION.cff``-Datei
     aus dem GitHub-Repository ebenfalls verwendet. Auch `Zotero
     <https://www.zotero.org/>`_ interpretiert die CFF-Datei in
