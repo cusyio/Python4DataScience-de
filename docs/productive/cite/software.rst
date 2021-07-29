@@ -157,15 +157,20 @@ aktuell zwei Projekte für strukturierte Metadaten heraus:
     * `doi2cff <https://github.com/citation-file-format/doi2cff>`_ erstellt
       eine ``CITATION.cff``-Datei aus einem Zenodo DOI
 
-    Auch GitHub bietet einen Service um die Informationen aus ``CITATION.cff``
-    files im APA- and BibTex-Format zu kopieren.
+    Auch GitHub bietet einen Service um die Informationen aus der
+    ``CITATION.cff``-Datei eures GitHub-Repository im APA- und BibTex-Format zu
+    kopieren.
 
     .. figure:: github-cite.png
        :alt: Popup auf der Zielseite eines GitHub-Repositorys mit der
              Möglichkeit, ADA- und BibTex-Formate zu exportieren.
 
     Wenn ihr einen DOI mit Zenodo registriert, wird die ``CITATION.cff``-Datei
-    aus dem GitHub-Repository ebenfalls verwendet.
+    aus dem GitHub-Repository ebenfalls verwendet. Auch `Zotero
+    <https://www.zotero.org/>`_ interpretiert die CFF-Datei in
+    GitHub-Repositories; Zotero kann jedoch auch ohne CFF-Datei
+    Metainformationen des Repository, wie Unternehmen, Programmiersprache etc.,
+    übernehmen.
 
 Ihr solltet einen `Persistent Identifier (PID)
 <https://de.wikipedia.org/wiki/Persistent_Identifier>`_ bereitstellen um die
