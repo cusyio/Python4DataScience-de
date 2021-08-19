@@ -31,8 +31,8 @@ Zum Speichern von relationalen Daten, Python-Objekten und Geodaten stellen wir
 Euch :doc:`postgresql/index`, :doc:`postgresql/sqlalchemy` und
 :doc:`postgresql/postgis/index` vor.
 
-Als nächstes zeigen wir Euch, wie ihr mit :doc:`fastapi/index` oder
-:doc:`grpc/index` Daten bereitstellen könnt.
+Als nächstes zeigen wir euch, wie ihr die Daten über ein :doc:`apis/index`
+bereitstellen könnt.
 
 Mit :doc:`DVC <../productive/dvc/index>` stellen wir Euch ein Werkzeug vor, das
 Euch Datenprovenienz erlaubt, d.h. die Herkunft und den Entstehungsweg von Daten
@@ -54,6 +54,5 @@ Python-Pakete zum :doc:`Bereinigen und Validieren von Daten
     intake/index
     postgresql/index
     nosql/index
-    grpc/index
-    fastapi/index
+    apis/index
     glossary
