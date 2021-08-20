@@ -15,7 +15,7 @@ die Qualität eurer API überprüfen. Darüberhinaus könnt ihr auch eure eigene
 Regeln für Zally definieren, siehe `Rule Development Manual
 <https://github.com/zalando/zally/blob/master/documentation/rule-development.md>`_.
 
-.. see also::
+.. seealso::
    * `REST API Design – Resource Modeling
      <https://www.thoughtworks.com/insights/blog/rest-api-design-resource-modeling>`_
    * `Richardson Maturity Model – steps toward the glory of REST
