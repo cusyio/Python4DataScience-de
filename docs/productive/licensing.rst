@@ -11,6 +11,9 @@ die Zustimmung aller Urheber erforderlich.
    Dies stellt keine Rechtsberatung dar. Wendet Euch im Zweifelsfall bitte an
    einen Anwalt oder die Rechtsabteilung eures Unternehmens.
 
+.. seealso::
+   * `License compatibility <https://en.wikipedia.org/wiki/License_compatibility>`_
+
 Proprietäre Softwarelizenzen
 ----------------------------
 
