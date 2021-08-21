@@ -100,6 +100,10 @@ Interactive Computing Protocol
     Kernel sind Prozesse, die interaktiven Code in einer bestimmten
     Programmiersprache ausführen und die Ausgabe an den Benutzer zurückgeben.
 
+.. seealso::
+   * `Jupyter celebrates 20 years
+     <https://data.berkeley.edu/news/project-jupyter-celebrates-20-years-fernando-perez-reflects-how-it-started-open-sciences>`_
+
 Jupyter-Infrastruktur
 ---------------------
 
