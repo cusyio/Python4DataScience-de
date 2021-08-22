@@ -8,6 +8,12 @@ Modellierungs- und Simulationsumgebungen sind sehr heterogen. :doc:`Spack
 * Auflösen von Abhängigkeiten
 * Auflösen verschiedener Versionen von Abhängigkeiten
 
+.. seealso::
+   * `Docs <https://spack.readthedocs.io/>`_
+   * `Tutorial <https://spack-tutorial.readthedocs.io/>`_
+   * `Spack Encyclopedia <https://spack.github.io/spackpedia/>`_
+   * `GitHub <https://github.com/spack>`_
+
 Bisherige Systeme
 -----------------
 
