@@ -12,6 +12,12 @@ die Zustimmung aller Urheber erforderlich.
    einen Anwalt oder die Rechtsabteilung eures Unternehmens.
 
 .. seealso::
+   * `The Whys and Hows of Licensing Scientific Code
+     <https://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/>`_
+   * `A Quick Guide to Software Licensing for the Scientist-Programmer
+     <https://doi.org/10.1371/journal.pcbi.1002598>`_
+   * Karl Fogel: `Producing Open Source Software <https://producingoss.com/>`_
+   * `Choose an open source license <https://choosealicense.com/>`_
    * `License compatibility <https://en.wikipedia.org/wiki/License_compatibility>`_
 
 Proprietäre Softwarelizenzen
@@ -167,8 +173,3 @@ Alternativen
 `FOSSology <https://www.fossology.org/>`_
     Toolkit für die Einhaltung freier Software, das Informationen in einer
     Datenbank mit Lizenz-, Copyright- und Exportscanner
-
-.. seealso::
-   * `A Quick Guide to Software Licensing for the Scientist-Programmer
-     <https://doi.org/10.1371/journal.pcbi.1002598>`_
-   * Karl Fogel: `Producing Open Source Software <https://producingoss.com/>`_
