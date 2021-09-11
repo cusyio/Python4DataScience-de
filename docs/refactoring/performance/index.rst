@@ -36,6 +36,7 @@ paralleler Programmierung in Python veranschaulicht.
     asyncio-example.ipynb
     parallelise-pandas
     ipyparallel/index
+    dask.ipynb
 
 .. seealso::
     * `Faster CPython <https://faster-cpython.readthedocs.io/>`_
