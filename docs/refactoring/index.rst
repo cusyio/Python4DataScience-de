@@ -2,7 +2,7 @@ Refactoring
 ===========
 
 Unter Refactoring wird die Verbesserung des Quellcodes verstanden, wobei die
-Ergebnisse unverändert bleiben sollen. Dabei wird im wesentlichen zwischen zwei
+Ergebnisse unverändert bleiben sollen. Dabei wird im wesentlichen zwischen drei
 Zielen unterschieden:
 
 .. toctree::
@@ -10,6 +10,7 @@ Zielen unterschieden:
     :maxdepth: 1
 
     qa/index
+    parameterise/index
     performance/index
 
 .. seealso::
