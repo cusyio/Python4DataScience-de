@@ -24,6 +24,9 @@ PostgreSQL-Überwachungsumgebung zu schaffen, einschließlich:
 `Grafana <https://grafana.com/>`_
     visualisiert Daten in vielen verschiedenen Arten von Diagrammen und Graphen.
 
+.. seealso::
+   * `pgexporter <https://pgexporter.github.io/>`_
+
 Installation und Konfiguration
 ------------------------------
 
