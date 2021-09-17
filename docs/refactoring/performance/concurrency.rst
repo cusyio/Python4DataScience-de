@@ -170,7 +170,7 @@ Aufgabenplaner
 können Aufgaben in einem Cluster verteilen. Dabei haben sie unterschiedliche
 Schwerpunkte:
 
-* `ipyparallel` integriert sich einfach in ein
+* ``ipyparallel`` integriert sich einfach in ein
   :doc:`../../workspace/jupyter/hub/index`.
 * Dask imitiert Pandas, NumPy, Iteratoren, Toolz und PySpark bei der Verteilung
   ihrer Aufgaben.
@@ -179,7 +179,7 @@ Schwerpunkte:
 
   * `RLlib <https://docs.ray.io/en/latest/rllib.html>`_ skaliert insbesondere
     reinforcement Learning.
-  * Ein `backend for joblib <https://docs.ray.io/en/latest/joblib.html>`_
+  * Ein `Backend für Joblib <https://docs.ray.io/en/latest/joblib.html>`_
     unterstützt verteilte `scikit-learn
     <https://scikit-learn.org/stable/>`_-Programme.
   * `XGBoost-Ray <https://docs.ray.io/en/latest/xgboost-ray.html>`_ ist ein
