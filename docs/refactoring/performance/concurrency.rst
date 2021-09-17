@@ -163,6 +163,38 @@ Multithreading, Multiprocessing und asynchrone Kommunikation
 |                  | Synchronisation. | Aufwände.        |                                |
 +------------------+------------------+------------------+--------------------------------+
 
+Aufgabenplaner
+--------------
+
+:doc:`ipyparallel/index`, :doc:`dask` und `Ray <https://docs.ray.io/>`_
+können Aufgaben in einem Cluster verteilen. Dabei haben sie unterschiedliche
+Schwerpunkte:
+
+* `ipyparallel` integriert sich einfach in ein
+  :doc:`../../workspace/jupyter/hub/index`.
+* Dask imitiert Pandas, NumPy, Iteratoren, Toolz und PySpark bei der Verteilung
+  ihrer Aufgaben.
+* Ray bietet eine einfache, universelle API für den Aufbau verteilter
+  Anwendungen.
+
+  * `RLlib <https://docs.ray.io/en/latest/rllib.html>`_ skaliert insbesondere
+    reinforcement Learning.
+  * Ein `backend for joblib <https://docs.ray.io/en/latest/joblib.html>`_
+    unterstützt verteilte `scikit-learn
+    <https://scikit-learn.org/stable/>`_-Programme.
+  * `XGBoost-Ray <https://docs.ray.io/en/latest/xgboost-ray.html>`_ ist ein
+    Backend für verteiltes `XGBoost
+    <https://xgboost.readthedocs.io/en/latest/>`_.
+  * `LightGBM-Ray <https://docs.ray.io/en/latest/lightgbm-ray.html>`_ ist ein
+    Backend für verteiltes `LightGBM
+    <https://lightgbm.readthedocs.io/en/latest/>`_
+  * `Collective Communication Lib
+    <https://docs.ray.io/en/latest/ray-collective.html>`_ bietet eine Reihe von
+    nativen Collective-Primitiven für `Gloo
+    <https://github.com/facebookincubator/gloo>`_ und die `NVIDIA Collective
+    Communication Library (NCCL)
+    <https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/index.html>`_.
+
 Resümee
 -------
 
