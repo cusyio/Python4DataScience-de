@@ -9,21 +9,21 @@ Zielgruppe
 ----------
 
 Die Nutzung von Jupyter-Notebooks ist vielfältig und reicht von den
-Datenrwissenschaften über Data-Engineering und Datenanalyse bis hin zu
+Datenwissenschaften über Data-Engineering und Datenanalyse bis hin zu
 System-Engineering. Dabei sind die Fähigkeiten und Arbeitsabläufe der einzelnen
 Zielgruppen sehr unterschiedlich. Eine der großen Stärken von Jupyter-Notebooks
 ist jedoch, dass sie eine enge Zusammenarbeit dieser unterschiedlichen
 Fachgruppen in funktionsübergreifenden Teams ermöglichen.
 
-* In den **Datenwissenschaften** werden Experimente mit verschiedenen
-  Koeffizienten durchgeführt und die Ergebnisse zusammengefasst.
-* Im **Data-Engineering** wird die Qualität des Codes überprüft und der Code
-  robuster, effizienter und skalierbar gemacht.
-* In der **Datenanalyse** werden systematische Untersuchungen der Daten
-  durchgeführt, wobei vom Data-Engineering bereitgestellter Code verwendet wird.
-* Vom **System-Engineering** wird das `Hub <https://jupyter.org/hub>`_ die
-  Kernel, Erweiterungen etc. bereitgestellt und so der möglichst reibungslose
-  Betrieb dieser Infrastruktur gewährleistet.
+* **Data Scientists** erforschen Daten mit verschiedenen Parametern und fassen
+  die Ergebnisse zusammen.
+* **Data-Engineers** iüberprüfen die Qualität des Codes und machen den Code
+  robuster, effizienter und skalierbar.
+* **Data-Analysts** verwenden den von Data-Engineers bereitgestellten Code um
+  systematisch die Daten zu analysieren.
+* **System-Engineers** stellen die Forschungsplattform auf Basis des
+  :doc:`workspace/jupyter/hub/index` bereit, auf der die anderen Rollen ihre
+  Arbeit ausführen können.
 
 Im ersten Teil dieses Tutorial wenden wir uns zunächst an das
 System-Engineering, das eine Plattform auf Basis von Jupyter-Notebooks aufbauen
