@@ -1,3 +1,4 @@
+
 alabaster==0.7.12
 appnope==0.1.2
 attrs==21.2.0
@@ -11,10 +12,10 @@ decorator==5.0.9
 defusedxml==0.7.1
 docutils==0.17.1
 entrypoints==0.3
-furo==2021.8.31
+furo==2021.9.22
 idna==3.2
 imagesize==1.2.0
-ipython==7.27.0
+ipython==7.28.0
 ipython-genutils==0.2.0
 jedi==0.18.0
 Jinja2==3.0.1
