@@ -1,8 +1,8 @@
 Daten bereinigen und validieren
 ===============================
 
-Im Folgenden wollen wir Euch einen praktischen Überblick über Bibliotheken und
-Methoden zur `Datenbereinigung
+Im Folgenden wollen wir euch einen praktischen Überblick über verschiedene
+Bibliotheken und Methoden zur `Datenbereinigung
 <https://de.wikipedia.org/wiki/Datenbereinigung>`_ und -validierung mit Python
 geben. Dabei können wir aktuell nicht intensiv auf einzelne Bibliotheken und
 Werkzeuge eingehen sondern nur eine kurze Einführung geben.
@@ -25,6 +25,6 @@ Werkzeuge eingehen sondern nur eine kurze Einführung geben.
     dask-pipeline.ipynb
     voluptuous.ipynb
     engarde.ipynb
-    bulwark
+    bulwark.ipynb
     tdda.ipynb
     hypothesis.ipynb
