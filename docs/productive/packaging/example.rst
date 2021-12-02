@@ -2,8 +2,9 @@ Beispiel
 ========
 
 #. Notebooks sind gut geeignet um schnell voranzukommen, doch bei umfangreicher
-   werdendem Code empfiehlt sich, stabilen Code in Module auszulagern. Wenn ihr
-   z.B. in eurem Notebook geschrieben habt:
+   werdendem Code empfiehlt sich, stabilen Code in :doc:`Module
+   <python:tutorial/modules>` auszulagern. Wenn ihr z.B. in eurem Notebook
+   geschrieben habt:
 
    .. code-block:: python
 
