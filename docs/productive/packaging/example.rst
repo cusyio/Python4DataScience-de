@@ -1,37 +1,44 @@
 Beispiel
 ========
 
-#. Notebooks sind gut geeignet um schnell voranzukommen, doch bei umfangreicher
-   werdendem Code empfiehlt sich, stabilen Code in :doc:`Module
-   <python:tutorial/modules>` auszulagern. Wenn ihr z.B. in eurem Notebook
-   geschrieben habt:
+Notebooks sind gut geeignet um schnell voranzukommen, doch bei umfangreicher
+werdendem Code empfiehlt sich, stabilen Code in einzelne Dateien auszulagern.
+Solche Dateien werden :doc:`Module <python:tutorial/modules>` genannt. Wenn ihr
+z.B. in eurem Notebook geschrieben habt:
 
-   .. code-block:: python
+.. code-block:: python
 
+    filename = 'example.csv'
+    df = pd.read_csv(filename)
+
+so könnt ihr dies in ein Modul auslagern. Dabei wird für den Dateinamen der
+Modulname ``dataprep`` um den Suffix ``.py`` ergänzt.
+
+Innerhalb dieser Datei könnt ihr nun die Methode ``load_data``
+definieren:
+
+.. code-block:: python
+
+    def load_data(filename):
+        """Documentation"""
         df = pd.read_csv(filename)
-        df.drop( ...
-        df.query( ...
-        df.groupby( ...
+        return df
 
-   so könnt ihr das in eine Datei ``dataprep.py`` auslagern
+Das Modul kann dann wieder in das Notebook importiert werden:
 
-   .. code-block:: python
+.. code-block:: python
 
-        def load_and_preprocess_data(filename):
-           """Documentation"""
-           # Do stuff
-           # ...
-           return df
+    import dataprep
 
-   und dies kann wieder in das Notebook übernommen werden mit
+Anschließend könnt ihr die Methode ``load_data`` verwenden um z.B. die CSV-Datei
+``example.csv`` zu lesen:
 
-   .. code-block:: python
+.. code-block:: python
 
-        import dataprep
-        df = dataprep.load_and_preprocess_data(filename)
+    dataprep.load_data(filename)
 
-   Wenn ihr das Python-Skript ändert, kann die aktualiserte Variante automatisch
-   übernommen werden mit :mod:`IPython.extensions.autoreload`:
+Wenn ihr das Modul ändert, kann die aktualiserte Variante automatisch
+übernommen werden mit :mod:`IPython.extensions.autoreload`:
 
    .. code-block:: python
 
