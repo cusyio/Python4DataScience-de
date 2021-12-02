@@ -1,5 +1,5 @@
-Beispiel
-========
+Module
+======
 
 Notebooks sind gut geeignet um schnell voranzukommen, doch bei umfangreicher
 werdendem Code empfiehlt sich, stabilen Code in einzelne Dateien auszulagern.
