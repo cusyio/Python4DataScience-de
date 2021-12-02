@@ -17,12 +17,9 @@ Modulname ``dataprep`` um den Suffix ``.py`` ergänzt.
 Innerhalb dieser Datei könnt ihr nun die Methode ``load_data``
 definieren:
 
-.. code-block:: python
-
-    def load_data(filename):
-        """Documentation"""
-        df = pd.read_csv(filename)
-        return df
+.. literalinclude:: dataprep.py
+   :language: python
+   :linenos:
 
 Das Modul kann dann wieder in das Notebook importiert werden:
 
