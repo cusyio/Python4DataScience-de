@@ -109,7 +109,7 @@ distribution
 Diese Datei wird nicht mehr benötigt, zumindest nicht für die Paketierung.
 ``wheel`` sammelt heutzutage alle erforderlichen Lizenzdateien automatisch und
 ``setuptools`` kann mit dem ``options``-Keyword-Argument universelle
-``whell``-Pakete bauen, z.B. ``attrs-19.3.0-py2.py3-none-any.whl``.
+``wheel``-Pakete bauen, z.B. ``attrs-19.3.0-py2.py3-none-any.whl``.
 
 ``pyproject.toml``
 ~~~~~~~~~~~~~~~~~~
