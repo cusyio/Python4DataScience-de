@@ -128,23 +128,7 @@ sollte die Datei so oder so ähnlich aussehen:
 ``LICENSE``
 ~~~~~~~~~~~
 
-Einen Überblick über freie und Open-Source-Software-Lizenzen erhaltet ihr in
-`Comparison of free and open-source software licenses
-<https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses>`_.
-
-Wenn ihr z.B. eine möglichst große Verbreitung eures Pakets erreichen wollt,
-sind MIT- oder die BSD-Varianten eine gute Wahl. Die Apache-Lizenz schützt euch
-besser vor Patentverletzungen ist jedoch nicht kompatibel mit der GPL v2. Daher
-solltet ihr schauen, welche Lizenzen diejenigen Pakete haben, von denen ihr
-abhängt und zu denen ihr kompatibel sein solltet. Zur Analyse von Lizenzen könnt
-ihr `licensechecker
-<https://boyter.org/2018/03/licensechecker-command-line-application-identifies-software-license/>`_,
-verwenden, ein Kommandozeilenwerkzeug, das Installationsverzeichnisse nach
-Lizenzen durchsucht.
-
-Darüberhinaus kann es auch sinnvoll sein, ein Package unter mehreren Lizenzen
-zu veröffentlichen. Ein Beispiel hierfür ist `cryptography/LICENSE
-<https://github.com/pyca/cryptography/blob/adf234e/LICENSE>`_.
+Ausführliche Informationen hierzu findet ihr im Abschnitt :doc:`../licensing`.
 
 ``README.rst``
 ~~~~~~~~~~~~~~

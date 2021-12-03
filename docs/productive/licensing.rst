@@ -5,11 +5,12 @@ Damit andere eure Software verwenden können, sollte sie eine Lizenz erhalten,
 die die Nutzungsbedingungen beschreibt. Andernfalls dürfte sie meist
 urheberrechtlich geschützt sein. Urheber sind diejenigen, die zur Software
 originär beigetragen haben. Wenn eine Software relizenziert werden soll, ist
-die Zustimmung aller Urheber erforderlich.
+die Zustimmung aller Personen erforderlich, die Urheberschaft beanspruchen
+können.
 
 .. note::
-   Dies stellt keine Rechtsberatung dar. Wendet Euch im Zweifelsfall bitte an
-   einen Anwalt oder die Rechtsabteilung eures Unternehmens.
+   Dies stellt keine Rechtsberatung dar. Wendet euch im Zweifelsfall bitte an
+   eine Rechtsvertretung oder die Rechtsabteilung eures Unternehmens.
 
 .. seealso::
    * `The Whys and Hows of Licensing Scientific Code
@@ -17,8 +18,6 @@ die Zustimmung aller Urheber erforderlich.
    * `A Quick Guide to Software Licensing for the Scientist-Programmer
      <https://doi.org/10.1371/journal.pcbi.1002598>`_
    * Karl Fogel: `Producing Open Source Software <https://producingoss.com/>`_
-   * `Choose an open source license <https://choosealicense.com/>`_
-   * `License compatibility <https://en.wikipedia.org/wiki/License_compatibility>`_
 
 Proprietäre Softwarelizenzen
 ----------------------------
@@ -74,7 +73,24 @@ Auswahl einer geeigneten Lizenz
 <https://spdx.org/licenses/>`_ oder `OSI Open Source Licenses by Category
 <https://opensource.org/licenses/category>`_. Bei der Wahl einer geeigneten
 Lizenz unterstützt Euch die Website `Choose an open source license
-<https://choosealicense.com/>`_.
+<https://choosealicense.com/>`_ und `Comparison of free and open-source
+software licenses
+<https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses>`_.
+
+Wenn ihr z.B. eine möglichst große Verbreitung eures Pakets erreichen wollt,
+sind MIT- oder die BSD-Varianten eine gute Wahl. Die Apache-Lizenz schützt euch
+besser vor Patentverletzungen ist jedoch nicht kompatibel mit der GPL v2. Daher
+solltet ihr schauen, welche Lizenzen diejenigen Pakete haben, von denen ihr
+abhängt und zu denen ihr kompatibel sein solltet. Zur Analyse von Lizenzen könnt
+`License compatibility <https://en.wikipedia.org/wiki/License_compatibility>`_
+anschauen und den `licensechecker
+<https://boyter.org/2018/03/licensechecker-command-line-application-identifies-software-license/>`_,
+verwenden, ein Kommandozeilenwerkzeug, das Installationsverzeichnisse nach
+Lizenzen durchsucht.
+
+Darüberhinaus kann es auch sinnvoll sein, ein Package unter mehreren Lizenzen
+zu veröffentlichen. Ein Beispiel hierfür ist `cryptography/LICENSE
+<https://github.com/pyca/cryptography/blob/adf234e/LICENSE>`_.
 
 GitHub
 ------
@@ -125,14 +141,23 @@ einbinden könnt, z.B.
 Standardformat für die Lizenzierung
 -----------------------------------
 
-Wir empfehlen die Verwendung von ``SPDX-FileCopyrightText: [year] [copyright
-holder]``. Üblicherweise sollte die Angabe das gesamte Software-Produkt
-umfassen, ihr könnt jedoch auch Elemente ausnehmen.
+`SPDX <https://spdx.dev/>`_ steht für *Software Package Data Exchange* und
+definiert eine standardisierte Methode zum Austausch von Urheberrechts- und
+Lizenzinformationen zwischen Projekten und Personen. Die passenden
+SPDX-Identifier könnt ihr aus der `SPDX License List
+<https://spdx.org/licenses/>`_ auswählen und dann in den Kopf eurer
+Lizenzdateien  eintragen:
+
+.. code-block::
+
+    # SPDX-FileCopyrightText: [year] [copyright holder] <[email address]>
+    #
+    # SPDX-License-Identifier: [identifier]
 
 Konformität überprüfen
 ----------------------
 
-`REUSE <https://reuse.software/>`_ wurde von der  Free Software Foundation
+`REUSE <https://reuse.software/>`_ wurde von der Free Software Foundation
 Europe (FSFE) initiiert, um die Lizenzierung freier Software-Projekte zu
 erleichtern. Das `REUSE tool <https://git.fsfe.org/reuse/tool>`_ überprüft
 Lizenzen und unterstützt Euch bei der Einhaltung der Lizenzkonformität.
@@ -160,9 +185,6 @@ z.B. für GitLab in der ``.gitlab-ci.yml``-Datei mit:
 Alternativen
 ~~~~~~~~~~~~
 
-`SPDX <https://spdx.dev/>`_
-    SPDX definiert eine standardisierte Methode zum Austausch von Urheberrechts-
-    und Lizenzinformationen zwischen Projekten und Personen
 `ClearlyDefined <https://clearlydefined.io/>`_
     Es sammelt und zeigt Informationen über die Lizenzierungs- und
     Urheberrechtssituation eines Software-Projekts an
