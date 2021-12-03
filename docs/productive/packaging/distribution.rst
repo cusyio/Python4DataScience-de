@@ -35,7 +35,7 @@ In beiden Fällen werden doppelte Metadaten in Paket und Code vermieden.
 Das `packages`-Feld verwendet setuptools’s `find_packages()
 <https://setuptools.readthedocs.io/en/latest/userguide/package_discovery.html#using-find-or-find-packages>`_
 um darunterliegende Pakete zu finden und das `package_dir
-<https://docs.python.org/3/distutils/setupscript.html#listing-whole-packages>`_-Feld
+<https://docs.python.org/3/distutils/setupscript.html#listing-whole-packages>`_-Dictionary
 beschreibt, wo das Root-Verzeichnis ist.
 
 .. note::
