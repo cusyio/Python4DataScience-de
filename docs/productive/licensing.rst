@@ -164,7 +164,7 @@ Lizenzen und unterstützt Euch bei der Einhaltung der Lizenzkonformität.
 Mit der `REUSE API <https://reuse.software/dev/#api>`_ könnt ihr Euch auch
 ein dynamisches Compliance-Badge generieren:
 
-.. figure:: reuse-compliant.png
+.. figure:: reuse-compliant.svg
    :alt: REUSE-compliant Badge
 
 CI-Workflow
