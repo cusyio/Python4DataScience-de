@@ -1,7 +1,7 @@
 Coverage
 ========
 
-Ihr könnt Coverage-Reports erstellen mit `coverage.py
+Ihr könnt einen Report für die Testabdeckung  erstellen mit `Coverage.py
 <https://github.com/nedbat/coveragepy>`_.
 
 .. seealso::
