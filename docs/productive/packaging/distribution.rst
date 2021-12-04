@@ -4,39 +4,40 @@ Distribution Package erstellen
 :term:`Distribution Packages <Distribution Package>` sind Archive, die in einen
 Paket-Index hochgeladen und mit :term:`Pip` installiert werden können.
 
-.. note::
-    Beachtet bitte, dass es immer noch viele Anleitungen gibt, die einen Schritt
-    zum Aufruf der ``setup.py`` enthalten, z.B. ``python setup.py sdist``. Dies
-    wird jedoch heutzutage von Teilen der `Python Packaging Authority (PyPA)
-    <https://github.com/pypa/>`_ als `Anti-Pattern
-    <https://twitter.com/pganssle/status/1152695229105000453>`_ angesehen.
+Struktur
+--------
+
+Ein minimales Distribution Package kann z.B. so aussehen:
+
+.. code-block:: console
+
+    dataprep
+    ├── dataprep
+    │   ├── __init__.py
+    │   └── loaders.py
+    └── setup.py
 
 ``setup.py``
 ------------
 
-Eine minimale und dennoch funktionale ``setup.py`` findet ihr z.B. im `attrs
-<https://github.com/python-attrs/attrs/>`_-Paket: `setup.py
-<https://github.com/python-attrs/attrs/blob/0023e5b/setup.py>`_. Daran könnt
-ihr erkennen, dass das meiste *Boilerplate* ist und lediglich die Zeilen 10–37
-Metadaten für dieses spezielle Paket sind. Die meisten anderen Metadaten sind in
-der `__init__
-<https://github.com/python-attrs/attrs/blob/master/src/attr/__init__.py>`_
-gespeichert und werden mit regulären Ausdrücken erschlossen. Alternativ können
-diese Daten auch in ein separates Modul ausgelagert und mit Python analysiert
-werden, wie dies z.B. in `cryptography
-<https://github.com/pyca/cryptography/blob/e575e3d/setup.py#L37-L39>`_
-erfolgt.
+Eine minimale und dennoch funktionale :download:`dataprep/setup.py` sieht dann
+z.B. so aus:
 
-In beiden Fällen werden doppelte Metadaten in Paket und Code vermieden.
+.. literalinclude:: dataprep/setup.py
+   :language: python
+   :lines: 1-12,31-
+   :linenos:
 
-``src``-Package
----------------
+``dataprep``-Package
+--------------------
 
-Das `packages`-Feld verwendet setuptools’s `find_packages()
+``packages`` verweist auf das ``dataprep``-Paket. Habt ihr mehrere Pakete,
+könnt ihr mit `package_dir
+<https://docs.python.org/3/distutils/setupscript.html#listing-whole-packages>`_
+ein übergeordnetes Verzeichnis, z.B. ``src`` angeben und dann mit setuptools’s
+`find_packages()
 <https://setuptools.readthedocs.io/en/latest/userguide/package_discovery.html#using-find-or-find-packages>`_
-um darunterliegende Pakete zu finden und das `package_dir
-<https://docs.python.org/3/distutils/setupscript.html#listing-whole-packages>`_-Dictionary
-beschreibt, wo das Root-Verzeichnis ist.
+alle Pakete in diesem Verzeichnis finden.
 
 .. note::
     ``find_packages()`` ohne ``src/``-Verzeichnis würde alle Verzeichnisse mit
@@ -58,9 +59,17 @@ Für ``version`` gibt es verschiedene Möglichkeiten, die in `PEP 0440
 ``classifiers``
 ---------------
 
-`classifiers <https://pypi.org/classifiers/>`_ haben eine nützliche
-Zusatzfunktion: PyPI lehnt unbekannte *Classifiers* ab, sodass damit auch ein
-versehentlicher Upload vermieden werden kann.
+Mit `classifiers <https://pypi.org/classifiers/>`_ können auf dem
+:term:`Python Package Index (PyPI)` passende Filter erstellt werden:
+
+.. literalinclude:: dataprep/setup.py
+   :language: python
+   :lines: 13-29
+   :lineno-start: 13
+
+Außerdem haben eine nützliche Zusatzfunktion: PyPI lehnt unbekannte
+*Classifiers* ab, sodass damit auch ein versehentlicher Upload vermieden werden
+kann.
 
 .. seealso::
     `Add invalid classifier for non open source license to avoid upload to…
@@ -69,9 +78,17 @@ versehentlicher Upload vermieden werden kann.
 Abhängigkeiten
 --------------
 
-Versionsnummern von Abhängigkeiten sollten üblicherweise nicht in der
-``setup.py`` festgeschrieben werden sondern in der `requirements.txt
-<https://pip.pypa.io/en/latest/user_guide/#requirements-files>`_-Datei.
+Abhängigkeiten werden mit ``install_requires`` angegeben:
+
+.. literalinclude:: dataprep/setup.py
+   :language: python
+   :lines: 31
+   :lineno-start: 31
+
+.. note::
+   Versionsnummern von Abhängigkeiten sollten üblicherweise nicht in der
+    ``setup.py`` festgeschrieben werden sondern in der `requirements.txt
+    <https://pip.pypa.io/en/latest/user_guide/#requirements-files>`_-Datei.
 
 .. seealso::
     `setup.py vs requirements.txt
@@ -85,8 +102,10 @@ Andere Dateien
 
 Die Datei enthält alle Dateien und Verzeichnisse, die nicht bereits mit
 ``packages`` oder ``py_module`` erfasst werden. Sie kann z.B. so aussehen:
-`attrs/MANIFEST.in
-<https://github.com/python-attrs/attrs/blob/a9a32a2/MANIFEST.in>`_.
+:download:`dataprep/MANIFEST.in`:
+
+.. literalinclude:: dataprep/MANIFEST.in
+   :linenos:
 
 Weitere Anweisungen in `Manifest.in` findet ihr in `Creating a source
 distribution
@@ -154,19 +173,22 @@ Wechselt in das Verzeichnis, in dem sich die ``setup.py``-Datei befindet.
 
 .. code-block:: console
 
+    $ pipenv install build
+    $ cd /path/to/your/distribution_package
     $ rm -rf build dist
-    $ pipenv run python3 -m pep517.build .
+    $ pipenv run python3 -m build .
 
-Die erste Zeile stellt sicher, dass ein sauberes Build ohne Artefakte
+Die dritte Zeile stellt sicher, dass ein sauberes Build ohne Artefakte
 früherer Builds erstellt wird. Die zweite Zeile baut ein ``sdist``-Archiv unter
 Linux/Mac als gezippte Tar-Datei (``.tar.gz``) und unter Windows eine ZIP-Datei
 sowie ein ``bdist_wheel``-Archiv  mit ``.whl`` im ``dist``-Verzeichnis.
 
-Dieser Befehl sollte also die folgenden beiden Dateien erzeugen::
+Dieser Befehl sollte für unser Distribution Package die folgenden beiden Dateien
+erzeugen::
 
     dist/
-      example-0.0.1-py3-none-any.whl
-      example-0.0.1.tar.gz
+      dataprep-0.1.0-py3-none-any.whl
+      dataprep-0.1.0.tar.gz
 
 ``py3``
     Python-Version, mit der das Paket gebaut wurde
@@ -183,45 +205,50 @@ Die Referenz für die Dateinamen findet ihr in `File name convention
     <https://docs.python.org/2/distutils/sourcedist.html#creating-a-source-distribution>`_.
     und `PEP 376 <https://www.python.org/dev/peps/pep-0376/>`_.
 
-.. note::
-    Die Verwendung von `pep517.build <https://www.python.org/dev/peps/pep-0517/>`_
-    zum Erstellen von Paketen ist aktuell (Oktober 2019) noch `etwas umstritten
-    <https://discuss.python.org/t/building-distributions-and-drawing-the-platypus/2062>`_.
-    Es scheint Konsens zu sein, dass diese Funktionalität entweder in Pip oder in Twine
-    zusammengeführt werden sollte. Derzeit scheint der oben genannte Weg jedoch der
-    sauberste zu sein, ein Paket zu erstellen. Ich werde diesen Artikel
-    aktualisieren, sobald sich eine andere Lösung durchsetzt.
-
 Testen
 ------
 
 .. code-block:: console
 
     $ pipenv --rm
-    $ pipenv install dist/attrs-19.3.0.tar.gz
+    $ pipenv install dist/dataprep-0.1.0-py3-none-any.whl
+    Processing ./dist/dataprep-0.1.0-py3-none-any.whl
+    Collecting pandas
+      Using cached pandas-1.3.4-cp39-cp39-macosx_10_9_x86_64.whl (11.6 MB)
     …
-    Successfully built attrs
-    Installing collected packages: attrs
-    Successfully installed attrs-19.3.0
-    $ pipenv run python
-    …
-    >>> import attr; attr.__version__
-    '19.3.0'
+    Successfully installed dataprep-0.1.0 numpy-1.21.4 pandas-1.3.4 python-dateutil-2.8.2 pytz-2021.3 six-1.16.0
 
-oder
+Anschließend könnt ihr das Wheel überprüfen mit:
 
 .. code-block:: console
 
-    $ pipenv --rm
-    $ pipenv install dist/attrs-19.3.0-py2.py3-none-any.whl
+    $ pipenv install check-wheel-contents
+    $ pipenv run check-wheel-contents dist/*.whl
+    dist/dataprep-0.1.0-py3-none-any.whl: OK
+
+Alternativ könnt ihr das Paket auch installieren:
+
+.. code-block:: console
+
+    $ pipenv install dist/dataprep-0.1.0-py3-none-any.whl
+    Processing ./dist/dataprep-0.1-py3-none-any.whl
+    Collecting pandas
     …
-    Successfully built attrs
-    Installing collected packages: attrs
-    Successfully installed attrs-19.3.0
-    $ pipenv run python
-    …
-    >>> import attr; attr.__version__
-    '19.3.0'
+    Installing collected packages: numpy, pytz, six, python-dateutil, pandas, dataprep
+    Successfully installed dataprep-0.1 numpy-1.21.4 pandas-1.3.4 python-dateutil-2.8.2 pytz-2021.3 six-1.16.0
+
+Anschließend könnt ihr Python aufrufen und euer loaders-Modul importieren:
+
+.. code-block:: python
+
+    from dataprep import loaders
+
+.. note::
+    Beachtet bitte, dass es immer noch viele Anleitungen gibt, die einen Schritt
+    zum Aufruf der ``setup.py`` enthalten, z.B. ``python setup.py sdist``. Dies
+    wird jedoch heutzutage von Teilen der `Python Packaging Authority (PyPA)
+    <https://github.com/pypa/>`_ als `Anti-Pattern
+    <https://twitter.com/pganssle/status/1152695229105000453>`_ angesehen.
 
 .. seealso::
    * `PyPI Release Checklist
