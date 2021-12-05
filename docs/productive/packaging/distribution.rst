@@ -12,10 +12,11 @@ Ein minimales Distribution Package kann z.B. so aussehen:
 .. code-block:: console
 
     dataprep
-    ├── dataprep
-    │   ├── __init__.py
-    │   └── loaders.py
-    └── setup.py
+    ├── setup.py
+    └── src
+        └── dataprep
+            ├── __init__.py
+            └── loaders.py
 
 ``setup.py``
 ------------
@@ -25,17 +26,16 @@ z.B. so aus:
 
 .. literalinclude:: dataprep/setup.py
    :language: python
-   :lines: 1-12,31-
+   :lines: 1-14,33-
    :linenos:
 
-``dataprep``-Package
---------------------
+``src``-Package
+---------------
 
-``packages`` verweist auf das ``dataprep``-Paket. Habt ihr mehrere Pakete,
-könnt ihr mit `package_dir
+`package_dir
 <https://docs.python.org/3/distutils/setupscript.html#listing-whole-packages>`_
-ein übergeordnetes Verzeichnis, z.B. ``src`` angeben und dann mit setuptools’s
-`find_packages()
+verweist auf das Verzeichnis ``src``, in dem sich ein oder mehrere Pakete
+befinden können. Anschließend könnt ihr mit setuptools’s `find_packages()
 <https://setuptools.readthedocs.io/en/latest/userguide/package_discovery.html#using-find-or-find-packages>`_
 alle Pakete in diesem Verzeichnis finden.
 
@@ -64,8 +64,8 @@ Mit `classifiers <https://pypi.org/classifiers/>`_ können auf dem
 
 .. literalinclude:: dataprep/setup.py
    :language: python
-   :lines: 13-29
-   :lineno-start: 13
+   :lines: 15-31
+   :lineno-start: 15
 
 Außerdem haben eine nützliche Zusatzfunktion: PyPI lehnt unbekannte
 *Classifiers* ab, sodass damit auch ein versehentlicher Upload vermieden werden
@@ -82,8 +82,8 @@ Abhängigkeiten werden mit ``install_requires`` angegeben:
 
 .. literalinclude:: dataprep/setup.py
    :language: python
-   :lines: 31
-   :lineno-start: 31
+   :lines: 32
+   :lineno-start: 32
 
 .. note::
    Versionsnummern von Abhängigkeiten sollten üblicherweise nicht in der
