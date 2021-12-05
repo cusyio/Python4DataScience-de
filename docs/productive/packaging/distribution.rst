@@ -135,9 +135,12 @@ Diese Datei wird nicht mehr benötigt, zumindest nicht für die Paketierung.
 ~~~~~~~~~~~~~~~~~~
 
 `PEP 517 <https://www.python.org/dev/peps/pep-0517/>`_ und `PEP 518
-<https://www.python.org/dev/peps/pep-0518/>`_ brachten Plugable Build-Backends,
-isolierte Builds und ``pyproject.toml``. Da wir ``setuptools`` verwenden,
-sollte die Datei so oder so ähnlich aussehen:
+<https://www.python.org/dev/peps/pep-0518/>`_ brachten erweiterbare
+Build-Backends, isolierte Builds und `pyproject.toml
+<https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/>`_. Die
+Datei verwendet das
+:doc:`../../data-processing/serialisation-formats/toml`-Format und da wir
+``setuptools`` verwenden, sollte die Datei so oder so ähnlich aussehen:
 
 .. literalinclude:: dataprep/pyproject.toml
    :language: toml
