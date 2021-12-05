@@ -189,12 +189,23 @@ erzeugen::
       dataprep-0.1.0-py3-none-any.whl
       dataprep-0.1.0.tar.gz
 
+``dataprep``
+    ist der normalisierte Paketname
+``0.1.0``
+    ist die Version des Distrubitionspakets
 ``py3``
-    Python-Version, mit der das Paket gebaut wurde
+    gibt die Python-Version und ggf. die C-`ABI
+    <https://de.wikipedia.org/wiki/Bin%C3%A4rschnittstelle>` an
 ``none``
     nicht OS-spezifisch
 ``any``
-    geeignet für jede Prozessorarchitektur
+    gibt die Plattform an, für die das Distributionspaket gebaut wurde.
+
+    ``any``
+        eignet sich für jede Prozessorarchitektur
+    ``macosx_10_9_x86_64``
+        eignet sich für MacOS-Version 10.9 mit x86-Befehlssatz auf einer
+        64-Bit-Architektur
 
 Die Referenz für die Dateinamen findet ihr in `File name convention
 <https://www.python.org/dev/peps/pep-0427/#file-name-convention>`_.
