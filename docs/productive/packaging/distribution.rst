@@ -26,7 +26,7 @@ z.B. so aus:
 
 .. literalinclude:: dataprep/setup.py
    :language: python
-   :lines: 1-14,33-
+   :lines: 1,3-15,34-
    :linenos:
 
 ``src``-Package
@@ -64,8 +64,8 @@ Mit `classifiers <https://pypi.org/classifiers/>`_ können auf dem
 
 .. literalinclude:: dataprep/setup.py
    :language: python
-   :lines: 15-31
-   :lineno-start: 15
+   :lines: 16-32
+   :lineno-start: 16
 
 Außerdem haben eine nützliche Zusatzfunktion: PyPI lehnt unbekannte
 *Classifiers* ab, sodass damit auch ein versehentlicher Upload vermieden werden
@@ -82,8 +82,8 @@ Abhängigkeiten werden mit ``install_requires`` angegeben:
 
 .. literalinclude:: dataprep/setup.py
    :language: python
-   :lines: 32
-   :lineno-start: 32
+   :lines: 33
+   :lineno-start: 33
 
 .. note::
    Versionsnummern von Abhängigkeiten sollten üblicherweise nicht in der
@@ -139,11 +139,10 @@ Diese Datei wird nicht mehr benötigt, zumindest nicht für die Paketierung.
 isolierte Builds und ``pyproject.toml``. Da wir ``setuptools`` verwenden,
 sollte die Datei so oder so ähnlich aussehen:
 
-.. code-block:: toml
-
-    [build-system]
-    requires = ["setuptools>=40.6.0", "wheel"]
-    build-backend = "setuptools.build_meta"
+.. literalinclude:: dataprep/pyproject.toml
+   :language: toml
+   :lines: 1-4,6-
+   :linenos:
 
 ``LICENSE``
 ~~~~~~~~~~~

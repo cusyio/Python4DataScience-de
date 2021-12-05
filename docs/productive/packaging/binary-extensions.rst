@@ -183,24 +183,87 @@ verwenden um das Interface als importierbares Python-Modul verfügbar zu machen.
 Implementierung
 ---------------
 
-Der `CPython Extending and Embedding guide
-<https://docs.python.org/3/extending/>`_ enthält eine Einführung in das
-Schreiben eigener Extension-Module in C: `Extending Python with C or C++
-<https://docs.python.org/3/extending/extending.html>`_. Beachtet jedoch bitte,
-dass diese Einführung nur  die grundlegenden Tools zum Erstellen von
-Erweiterungen beshreibt, die im Rahmen von CPython bereitgestellt werden.
-Third-Party-Tools wie `Cython <http://cython.org/>`_, `cffi
-<https://cffi.readthedocs.io/>`_, `SWIG <http://www.swig.org/>`_ und `Numba
-<https://numba.pydata.org/>`_ bieten sowohl einfachere als auch ausgeklügeltere
-Ansätze zum Erstellen von C- und C ++ - Erweiterungen für Python.
+Wir wollen nun unser ``dataprep``-Paket erweitern und einigen C-Code
+integrieren. Hierfür verwenden wir `Cython <https://cython.org/>`_, um den
+Python-Code aus :download:`dataprep/src/dataprep/cymean.pyx` in optimierten
+C-Code während des Build-Prozesses zu übersetzen. Cython-Dateien haben den
+Suffix ``pyx`` und können sowohl Python- also auch C-Code enthalten.
+
+Da Cython selbst ein Python-Paket ist, kann es einfach in der
+:download:`dataprep/pyproject.toml`-Datei in die Liste der Abhängigkeiten
+aufgenommen werden. Die Setuptools nutzen Datei, um auch Nicht-Python-Dateien
+in ein Paket aufzunehmen. Mit der ``graft``-Direktive  werden alle Dateien
+aus dem ``src/``-Verzeichnis eingeschlossen.
+
+Nun können wir in :download:`dataprep/setup.py` unser externes Modul angeben
+mit:
+
+.. literalinclude:: dataprep/setup.py
+   :language: python
+   :lines: 2-5,34-
+
+Nun könnt ihr den Build-Prozess mit dem Befehl ``pyproject-build`` ausführen und
+überprüfen, ob die Cython-Datei auch wie erwartet im Paket landet:
+
+.. code-block:: console
+
+    $ pipenv run pyproject-build ../dataprep
+    * Creating venv isolated environment...
+    * Installing packages in isolated environment... (cython, setuptools>=40.6.0, wheel)
+    * Getting dependencies for sdist...
+    Compiling src/dataprep/cymean.pyx because it changed.
+    [1/1] Cythonizing src/dataprep/cymean.pyx
+    …
+    copying src/dataprep/cymean.c -> dataprep-0.1.0/src/dataprep
+    copying src/dataprep/cymean.pyx -> dataprep-0.1.0/src/dataprep
+    …
+    running build_ext
+    building 'dataprep.cymean' extension
+    …
+    Successfully built dataprep-0.1.0.tar.gz and dataprep-0.1.0-cp39-cp39-macosx_10_9_x86_64.whl
+
+Schließlich können wir unser Paket überprüfen mit ``check-wheel-contents``:
+
+.. code-block:: console
+
+    $ pipenv run check-wheel-contents dataprep/dist/*.whl
+    dataprep/dist/dataprep-0.1.0-cp39-cp39-macosx_10_9_x86_64.whl: OK
+
+Alternativ könnt ihr auch unser ``dataprep``-Paket installieren und ``mean``
+verwenden:
+
+.. code-block:: console
+
+    $ pipenv run python -m pip install dataprep/dist/dataprep-0.1.0-cp39-cp39-macosx_10_9_x86_64.whl
+    $ pipenv run python
+
+.. code-block:: python
+
+    >>> from dataprep.mean import mean
+    >>> from random import randint
+    >>> nums = [randint(1, 1_000_000) for _ in range(1_000_000)]
+    >>> mean(nums)
+    500097.867198
 
 .. seealso::
-    `Python Packaging User Guide: Binary Extensions
-    <https://packaging.python.org/guides/packaging-binary-extensions/>`_
-    behandelt nicht nur verschiedene verfügbare Tools, die die Erstellung von
-    Binary Extensions vereinfachen, sondern erläutert auch die verschiedenen
-    Gründe, warum das Erstellen eines Extension Module wünschenswert sein
-    könnte.
+   Der `CPython Extending and Embedding guide
+   <https://docs.python.org/3/extending/>`_ enthält eine Einführung in das
+   Schreiben eigener Extension-Module in C: `Extending Python with C or C++
+   <https://docs.python.org/3/extending/extending.html>`_. Beachtet jedoch
+   bitte, dass diese Einführung nur die grundlegenden Tools zum Erstellen von
+   Erweiterungen beshreibt, die im Rahmen von CPython bereitgestellt werden.
+   Third-Party-Tools wie `Cython <http://cython.org/>`_, `cffi
+   <https://cffi.readthedocs.io/>`_, `SWIG <http://www.swig.org/>`_ und `Numba
+   <https://numba.pydata.org/>`_ bieten sowohl einfachere als auch
+   ausgeklügeltere Ansätze zum Erstellen von C- und C ++- Erweiterungen für
+   Python.
+
+   `Python Packaging User Guide: Binary Extensions
+   <https://packaging.python.org/guides/packaging-binary-extensions/>`_
+   behandelt nicht nur verschiedene verfügbare Tools, die die Erstellung von
+   Binary Extensions vereinfachen, sondern erläutert auch die verschiedenen
+   Gründe, warum das Erstellen eines Extension Module wünschenswert sein
+   könnte.
 
 Erstellen von Binary Extensions
 -------------------------------
