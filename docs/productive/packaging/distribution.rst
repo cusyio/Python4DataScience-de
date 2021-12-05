@@ -147,6 +147,17 @@ Datei verwendet das
    :lines: 1-4,6-
    :linenos:
 
+``build-system``
+    definiert einen Abschnitt, der das Build-System beschreibt
+``requires``
+    definiert eine Liste von Abhängigkeiten, die installiert sein müssen, damit
+    das Build-System funktioniert. Ein Setuptools-Build-System benötigt
+    ``setuptools`` und ``wheel``.
+``build-backend``
+    identifiziert den Einstiegspunkt für das Build-Backend-Objekt als
+    gepunkteten Pfad. Das Setuptools-Backend-Objekt ist unter
+    ``setuptools.build_meta`` verfügbar.
+
 ``LICENSE``
 ~~~~~~~~~~~
 
