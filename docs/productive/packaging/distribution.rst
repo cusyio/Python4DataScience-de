@@ -192,28 +192,31 @@ erzeugen::
       dataprep-0.1.0-py3-none-any.whl
       dataprep-0.1.0.tar.gz
 
-``dataprep``
-    ist der normalisierte Paketname
-``0.1.0``
-    ist die Version des Distrubitionspakets
-``py3``
-    gibt die Python-Version und ggf. die C-`ABI
-    <https://de.wikipedia.org/wiki/Bin%C3%A4rschnittstelle>` an
-``none``
-    nicht OS-spezifisch
-``any``
-    gibt die Plattform an, für die das Distributionspaket gebaut wurde.
+``sdist``
+    mit ``dataprep-0.1.0.tar.gz`` wurden die Quelldateien (engl. *sources*) in
+    einem Distributionspaket bereitgestellt.
+``wheel``
+    ist ein binäres Distributionsformat mit dem Suffix ``.whl``, wobei sich der
+    Dateiname folgendermaßen zusammensetzt:
 
-    ``any``
-        eignet sich für jede Prozessorarchitektur
-    ``macosx_10_9_x86_64``
-        eignet sich für MacOS-Version 10.9 mit x86-Befehlssatz auf einer
-        64-Bit-Architektur
-
-Die Referenz für die Dateinamen findet ihr in `File name convention
-<https://www.python.org/dev/peps/pep-0427/#file-name-convention>`_.
+    ``dataprep``
+        ist der normalisierte Paketname
+    ``0.1.0``
+        ist die Version des Distrubitionspakets
+    ``py3``
+        gibt die Python-Version und ggf. die C-`ABI
+        <https://de.wikipedia.org/wiki/Bin%C3%A4rschnittstelle>` an
+    ``none``, ``macosx_10_9``
+        gibt an, ob das *Wheel*-Paket für jedes oder nur spezifische OS geeignet
+        ist
+    ``any``,  ``x86_64``
+        ``any`` eignet sich für jede Prozessorarchitektur, ``x86_64`` hingegen
+            nur für Chips mit dem x86-Befehlssatz und einer 64-Bit-Architektur
 
 .. seealso::
+    Die Referenz für die Dateinamen findet ihr in `File name convention
+    <https://www.python.org/dev/peps/pep-0427/#file-name-convention>`_.
+
     Weitere Infos zu ``sdist`` erhaltet ihr in `Creating a Source Distribution
     <https://docs.python.org/2/distutils/sourcedist.html#creating-a-source-distribution>`_.
     und `PEP 376 <https://www.python.org/dev/peps/pep-0376/>`_.
