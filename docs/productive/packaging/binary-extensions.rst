@@ -241,9 +241,12 @@ verwenden:
 
     >>> from dataprep.mean import mean
     >>> from random import randint
-    >>> nums = [randint(1, 1_000_000) for _ in range(1_000_000)]
+    >>> nums = [randint(1, 1_000) for _ in range(1_000_000)]
     >>> mean(nums)
-    500097.867198
+    500.296087
+
+Dabei wurde mit der ``random.randint``-Funktion eine Liste von einer Million
+Zufallszahlen mit Werten zwischen 1 und 1000 erstellt.
 
 .. seealso::
    Der `CPython Extending and Embedding guide
