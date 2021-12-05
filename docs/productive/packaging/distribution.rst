@@ -26,7 +26,7 @@ z.B. so aus:
 
 .. literalinclude:: dataprep/setup.py
    :language: python
-   :lines: 1,3-15,34-
+   :lines: 3-6,10-13,16-22,42-
    :linenos:
 
 ``src``-Package
@@ -64,7 +64,7 @@ Mit `classifiers <https://pypi.org/classifiers/>`_ können auf dem
 
 .. literalinclude:: dataprep/setup.py
    :language: python
-   :lines: 16-32
+   :lines: 23-39
    :lineno-start: 16
 
 Außerdem haben eine nützliche Zusatzfunktion: PyPI lehnt unbekannte
@@ -82,7 +82,7 @@ Abhängigkeiten werden mit ``install_requires`` angegeben:
 
 .. literalinclude:: dataprep/setup.py
    :language: python
-   :lines: 33
+   :lines: 40
    :lineno-start: 33
 
 .. note::
@@ -166,11 +166,17 @@ Ausführliche Informationen hierzu findet ihr im Abschnitt :doc:`../licensing`.
 ``README.rst``
 ~~~~~~~~~~~~~~
 
-Diese Datei teilt potentiellen Nutzern mit, worauf sie bei der Verwendung des
-Pakets achten müssen. Schreibt das Dokument in `ReStructuredText (ReST)
-<https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html#rst-primer>`_,
-sodass ihr es später problemlos mit ``.. include:: ../../README.rst`` in die
-Sphinx-Dokumentation übernehmen könnt.
+Diese Datei teilt denjenigen, die sich für das Paket interessieren, in kurzer
+Form mit, wie sie es nutzen können. Wenn ihr das Dokument in
+:doc:`../documenting/rest` schreibt, könnt ihr die Inhalte auch als ausführliche
+Beschreibung in euer Paket übernehmen:
+
+.. literalinclude:: dataprep/setup.py
+   :language: python
+   :lines: 1,5-10,14-15,42
+
+Zudem könnt ihr sie dann auch in eure :doc:`Sphinx-Dokumentation
+<../documenting/start>` mit ``.. include:: ../../README.rst`` übernehmen.
 
 ``CHANGELOG.rst``
 ~~~~~~~~~~~~~~~~~
