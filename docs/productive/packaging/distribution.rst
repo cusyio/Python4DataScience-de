@@ -175,7 +175,7 @@ Wechselt in das Verzeichnis, in dem sich die ``setup.py``-Datei befindet.
     $ pipenv install build
     $ cd /path/to/your/distribution_package
     $ rm -rf build dist
-    $ pipenv run python3 -m build .
+    $ pipenv run pyproject-build .
 
 Die dritte Zeile stellt sicher, dass ein sauberes Build ohne Artefakte
 früherer Builds erstellt wird. Die zweite Zeile baut ein ``sdist``-Archiv unter
