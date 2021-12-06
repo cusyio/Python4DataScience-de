@@ -200,7 +200,7 @@ mit:
 
 .. literalinclude:: dataprep/setup.py
    :language: python
-   :lines: 2-5,34-
+   :lines: 4-6,10,41-
 
 Nun könnt ihr den Build-Prozess mit dem Befehl ``pyproject-build`` ausführen und
 überprüfen, ob die Cython-Datei auch wie erwartet im Paket landet:
