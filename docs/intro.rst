@@ -51,7 +51,7 @@ Forschungsprojekts:
 7. **Refactoring** umfasst das Parametrisieren, Validieren und
    Performance-Optimierungen, u.a. durch :doc:`Nebenläufigkeit
    <refactoring/performance/concurrency>`.
-8. **Produkt erstellen** umfasst das :doc:`productive/testing/index`,
+8. **Produkt erstellen** umfasst das :doc:`productive/testing`,
    :doc:`productive/logging/index` und :doc:`productive/documenting/index` der
    Methoden und Funktionen sowie das :doc:`Erstellen von Paketen
    <productive/packaging/index>`.
