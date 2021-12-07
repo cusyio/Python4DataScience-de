@@ -44,3 +44,7 @@ Refactoring
 
    anti-patterns
    rope.ipynb
+
+.. seealso::
+   * `Martin Fowler: Refactoring
+     <https://www.mitp.de/IT-WEB/Software-Entwicklung/Refactoring.html>`_
