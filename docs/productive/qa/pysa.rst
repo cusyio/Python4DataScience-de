@@ -94,4 +94,4 @@ Verwendung
     springt zum ersten Aufruf und zeigt den Quellcode an
 
 Weitere Kommandos erhaltet ihr in `Commands
-<https://pyre-check.org/docs/static-analysis-post-processor#commands>`_.
+<https://pyre-check.org/docs/static-analysis-post-processor/#commands>`_.

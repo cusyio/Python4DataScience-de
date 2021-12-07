@@ -22,8 +22,8 @@ Installation
     $ flake8 path/to/your/code
 
 
-``flake8`` kann für :doc:`python-basics://test/tox` konfiguriert werden in der
-``tox.ini``-Dateie eines Pakets, z.B.:
+``flake8`` kann für :doc:`python-basics:/test/tox` konfiguriert werden in der
+``tox.ini``-Datei eines Pakets, z.B.:
 
 .. code-block:: ini
 

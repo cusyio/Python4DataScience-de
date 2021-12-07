@@ -46,10 +46,11 @@ andererseits für das :doc:`testing`, :doc:`logging/index`, :doc:`Dokumentieren
 
     git/index
     dvc/index
+    envs/index
     packaging/index
     documenting/index
     licensing
     cite/index
-    envs/index
     testing
     logging/index
+    qa/index

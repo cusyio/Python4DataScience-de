@@ -9,7 +9,6 @@ Zielen unterschieden:
     :titlesonly:
     :maxdepth: 1
 
-    qa/index
     parameterise/index
     performance/index
 
