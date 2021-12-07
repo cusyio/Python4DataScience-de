@@ -21,8 +21,9 @@ und neue Verwendungsmöglichkeiten ermöglichen.
     data-processing/index
     clean-prep/index
     viz/index
+    parameterise/index
     testing/index
-    refactoring/index
+    performance/index
     productive/index
     web/index
     genindex
