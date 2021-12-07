@@ -45,7 +45,5 @@ Tools
    :maxdepth: 1
 
    hypothesis
-   tox
-   unittest2
    mock
    coverage/index
