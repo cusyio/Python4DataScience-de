@@ -14,7 +14,7 @@ oder :doc:`scalene` genutzt werden.
     :maxdepth: 0
 
     ipython-profiler.ipynb
-    scalene
+    scalene.ipynb
 
 Parallele Programmierung
 ------------------------
