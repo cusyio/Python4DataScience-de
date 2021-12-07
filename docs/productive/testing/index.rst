@@ -46,4 +46,3 @@ Tools
 
    hypothesis
    mock
-   coverage/index
