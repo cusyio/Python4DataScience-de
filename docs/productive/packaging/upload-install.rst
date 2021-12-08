@@ -48,7 +48,6 @@ Nun könnt ihr eure *Distribution Packages* erstellen mit:
     $ cd /path/to/your/distribution_package
     $ rm -rf build dist
     $ pipenv run pyproject-build .
-    $ rm -rf build dist
 
 Nach der Installation von Twine könnt ihr alle Archive unter ``/dist`` auf den
 Python Package Index hochladen mit:
