@@ -26,8 +26,8 @@ z.B. so aus:
 
 .. literalinclude:: dataprep/setup.py
    :language: python
-   :lines: 3-6,10-13,16-22,42-
-   :linenos:
+   :lines: 2,4-5,9-12,15-21,41-
+   :lineno-start: 16
 
 ``src``-Package
 ---------------
@@ -64,7 +64,7 @@ Mit `classifiers <https://pypi.org/classifiers/>`_ können auf dem
 
 .. literalinclude:: dataprep/setup.py
    :language: python
-   :lines: 23-39
+   :lines: 22-38
    :lineno-start: 16
 
 Außerdem haben eine nützliche Zusatzfunktion: PyPI lehnt unbekannte
@@ -173,7 +173,7 @@ Beschreibung in euer Paket übernehmen:
 
 .. literalinclude:: dataprep/setup.py
    :language: python
-   :lines: 1,5-10,14-15,42
+   :lines: 1,4-9,13-14,41
 
 Zudem könnt ihr sie dann auch in eure :doc:`Sphinx-Dokumentation
 <../documenting/start>` mit ``.. include:: ../../README.rst`` übernehmen.

@@ -1,5 +1,4 @@
 import codecs
-
 from setuptools import find_packages, setup
 from Cython.Build import cythonize
 
