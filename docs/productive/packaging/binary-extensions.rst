@@ -16,11 +16,11 @@ Kategorien unterteilen:
 Accelerator-Module
     Diese Module sind eigenständig und werden nur erstellt, um schneller zu
     laufen als der entsprechende reine Python-Code. Im Idealfall haben die
-    Beschleunigermodule immer ein Python-Äquivalent, das als Fallback verwendet
+    Accelerator-Module immer ein Python-Äquivalent, das als Fallback verwendet
     werden kann, wenn die beschleunigte Version auf einem bestimmten System
     nicht verfügbar ist.
 
-    Die CPython-Standardbibliothek verwendet viele Beschleunigermodule.
+    Die CPython-Standardbibliothek verwendet viele Accelerator-Module.
 
 Wrapper-Module
     Diese Module werden erstellt, um vorhandene C-Interfaces in Python verfügbar
