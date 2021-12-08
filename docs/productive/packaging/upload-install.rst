@@ -33,14 +33,13 @@ müsst ihr jedoch zunächst twine installieren mit:
 
 .. code-block:: console
 
-    $ pipenv update pip pep517 twine
+    $ pipenv update pip build twine
     …
     All dependencies are now up-to-date!
 
 .. note::
    Führt diesen Befehl vor jedem Release aus um sicherzustellen, dass alle
-   Release-Tools auf dem neuesten Stand sind. Die restlichen Build-Tools werden
-   von pep517 automatisch in der isolierten Build-Umgebung installiert.
+   Release-Tools auf dem neuesten Stand sind.
 
 Nun könnt ihr eure *Distribution Packages* erstellen mit:
 
