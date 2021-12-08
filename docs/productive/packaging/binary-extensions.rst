@@ -157,7 +157,7 @@ können den Wartungsaufwand im Vergleich zu Wrapper-Modulen deutlich reduzieren.
 
 * Das ``ctypes``-Modul der Standardbibliothek ist zwar nützlich um Zugriff auf
   C-Schnittstellen zu erhalten, wenn die Header-Informationen jedoch nicht
-  verfügbar sind, es leidet jedoch daran, dass es nur auf der C ABI-Ebene
+  verfügbar sind, leidet es jedoch daran, dass es nur auf der C ABI-Ebene
   arbeitet und somit keine automatische Konsistenzprüfung zwischen der
   exportierten Schnittstelle und dem Python-Code macht. Im Gegensatz dazu
   können die obigen Alternativen alle auf der C-API arbeiten und
