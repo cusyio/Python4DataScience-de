@@ -141,11 +141,11 @@ können den Wartungsaufwand im Vergleich zu Wrapper-Modulen deutlich reduzieren.
   Wrapping der API immer noch von Hand erfolgen muss, ist es keine gute Wahl beim
   Wrapping großer APIs.
 
-* `cffi <https://cffi.readthedocs.io/>`_ ist das Projekt einiger `PyPy
-  <https://pypy.org/>`_-Entwickler, um Entwicklern, die sowohl Python als auch C
-  bereits kennen, die Möglichkeit zu geben, ihre C-Module für Python-Anwendungen
-  verfügbar zu machen. Es macht das Wrapping eines C-Moduls basierend auf seinen
-  Header-Dateien relativ einfach, auch wenn man sich mit C selbst nicht auskennt.
+* `cffi <https://cffi.readthedocs.io/>`_ ist das Projekt einiger Personen aus
+  dem `PyPy <https://pypy.org/>`_-Entwicklungsteam, um C-Module einfacher für
+  Python-Anwendungen verfügbar zu machen. Es macht das Wrapping eines C-Moduls
+  basierend auf seinen  Header-Dateien relativ einfach, auch wenn man sich mit C
+  selbst nicht auskennt.
 
   Einer der Hauptvorteile von cffi besteht darin, dass es mit dem PyPy-JIT
   kompatibel ist, sodass CFFI-Wrapper-Module vollständig von den
