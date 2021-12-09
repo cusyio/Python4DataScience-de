@@ -27,7 +27,7 @@ z.B. so aus:
 .. literalinclude:: dataprep/setup.py
    :language: python
    :lines: 2,4-5,9-12,15-21,41-
-   :lineno-start: 16
+   :lineno-start: 1
 
 ``src``-Package
 ---------------
