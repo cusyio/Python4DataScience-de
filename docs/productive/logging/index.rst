@@ -47,4 +47,4 @@ Welche Vorteile bietet ``logging`` nun gegenüber ``print``?
     :titlesonly:
     :maxdepth: 0
 
-    config.ipynb
+    examples.ipynb
