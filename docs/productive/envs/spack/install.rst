@@ -25,7 +25,7 @@ Anforderungen
 
 … for Debian/Ubuntu:
 
-  .. code-block:: console
+.. code-block:: console
 
     $ sudo apt install build-essential patch tar gzip bzip2 git gnupg2
 
@@ -36,10 +36,10 @@ Anforderungen
     $ brew install libc++ make bash gzip bzip2 git gnupg
     $ brew link gnupg
 
-  Anschließend wird die Shell konfiguriert indem z.B. für die Bash folgendes in
-  die Bash-Konfiguration eingetragen wird:
+Anschließend wird die Shell konfiguriert indem z.B. für die Bash folgendes in
+die Bash-Konfiguration eingetragen wird:
 
-  .. code-block:: console
+.. code-block:: console
 
     $ source /usr/local/opt/modules/init/bash
 
