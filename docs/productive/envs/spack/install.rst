@@ -163,11 +163,13 @@ Ihr könnt ihn jedoch mit ``spack compiler find`` hinzufügen:
 
 .. code-block:: console
 
-    $ spack compiler find /Users/veit/spack/opt/spack/darwin-bigsur-cannonlake/apple-clang-13.0.0/gcc-11.2.0-azhiay4ugfrs634hqlez7u3f2li3wvzd
-    ==> Added 1 new compiler to /Users/veit/.spack/darwin/compilers.yaml
-        gcc@11.2.0
-    ==> Compilers are defined in the following files:
-        /Users/veit/.spack/darwin/compilers.yaml
+    $ spack compilers
+    ==> Available compilers
+    -- apple-clang bigsur-x86_64 ------------------------------------
+    apple-clang@13.0.0
+
+    -- gcc bigsur-x86_64 --------------------------------------------
+    gcc@11.2.0
 
 Wenn ihr die Standard- und Site-Einstellungen überschreiben möchtet, könnt ihr
 :file:`${HOME}/.spack/packages.yaml` ändern:
