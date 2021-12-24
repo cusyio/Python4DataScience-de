@@ -105,6 +105,22 @@ Paket angeben:
    unter Linux oder ``otool`` unter macOS. Ansonsten baut Spack sie aus den
    Quellen und mit einem C++ Compiler.
 
+
+Bootstrap store
+---------------
+
+Alle Werkzeuge, die Spack benötigt, werden in einem separaten Speicher
+installiert, der sich im Verzeichnis :file:`${HOME}/.spack` befindet. Die dort
+installierte Software kann abgefragt werden mit:
+
+.. code-block:: console
+
+    $ spack find --bootstrap
+    ==> Showing internal bootstrap store at "/Users/veit/.spack/bootstrap/store"
+    ==> 2 installed packages
+    -- darwin-catalina-x86_64 / apple-clang@12.0.0 ------------------
+    clingo-bootstrap@spack  python@3.9
+
 Compiler-Konfiguration
 ----------------------
 
