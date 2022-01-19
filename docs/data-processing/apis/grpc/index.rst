@@ -2,7 +2,7 @@ gRPC
 ====
 
 gRPC ist ein modernes Open-Source-RPC (Remote Procedure Call)-Framework.
-Standardmäßig verwendet gRPC :doc:`../serialisation-formats/protobuf` als
+Standardmäßig verwendet gRPC :doc:`../../serialisation-formats/protobuf` als
 Interface Definition Language (IDL) zur Beschreibung sowohl des Interfaces als
 auch der Struktur der *Payload Messages*. In gRPC kann eine Clientanwendung
 direkt eine Methode auf einer entfernten Serveranwendung aufrufen als wäre es
