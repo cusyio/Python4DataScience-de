@@ -5,7 +5,7 @@ Protocol Buffers (Protobuf)
 ---------
 
 +-----------------------+-------+-------------------------------------------------------+
-| Unterstützung für     | \+    | Protobuf erlaubt Euch Datenstrukturen in              |
+| Unterstützung für     | \+    | Protobuf erlaubt euch Datenstrukturen in              |
 | Datenstrukturen       |       | ``*.proto``-Dateien zu definieren. Dabei unterstützt  |
 |                       |       | Protobuf viele primitive Datentypen, die zu           |
 |                       |       | verschachtelten Datentypen kombiniert werden können.  |
