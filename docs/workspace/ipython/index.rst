@@ -19,6 +19,7 @@ Ergänzungen für die Sprache. Darüberhinaus ist IPython eng mit dem
     :maxdepth: 0
 
     start
+    examples.ipynb
     magics.ipynb
     shell.ipynb
     unix-shell/index
