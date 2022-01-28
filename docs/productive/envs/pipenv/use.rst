@@ -34,8 +34,8 @@ mit der auf alle installierten Pakete zugegriffen werden kann:
 .. code-block:: console
 
     $ pipenv shell
-    Launching subshell in virtual environment…
-    bash-4.3.30$  . /Users/veit/.local/share/virtualenvs/myproject-9TTuTZjx/bin/activate
+    Launching subshell in virtual environment...
+     . /srv/jupyter/.local/share/virtualenvs/myproject-CZKj6mqJ/bin/activate
 
 Optionen
 --------

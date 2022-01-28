@@ -66,12 +66,8 @@ versehentlich systemweite Pakete überschrieben werden:
 .. code-block:: console
 
     $ python3 -m pip install --user pipenv
-      Downloading pipenv-2018.7.1-py3-none-any.whl (5.0MB): 5.0MB downloaded
-    Requirement already satisfied (use --upgrade to upgrade): virtualenv in /usr/lib/python3/dist-packages (from pipenv)
-    Installing collected packages: pipenv, certifi, pip, setuptools, virtualenv-clone
     …
-    Successfully installed pipenv certifi pip setuptools virtualenv-clone
-    Cleaning up...
+    Successfully installed distlib-0.3.4 filelock-3.4.2 pipenv-2022.1.8 platformdirs-2.4.1 virtualenv-20.13.0 virtualenv-clone-0.5.7
 
 .. note::
 
@@ -95,7 +91,7 @@ versehentlich systemweite Pakete überschrieben werden:
 
      .. code-block:: console
 
-        C:\Users\veit\AppData\Roaming\Python36\Scripts
+        C:\Users\veit\AppData\Roaming\Python38\Scripts
 
      Um dauerhaft zur Verfügung zu stehen, kann dieser Pfad unter ``PATH``
      im Control Panel eingetragen werden.
@@ -120,7 +116,8 @@ virtuellen Umgebungen:
     $ pipenv install requests
     Creating a virtualenv for this project..
     …
-    Virtualenv location: /Users/veit/.local/share/virtualenvs/myproject-9TTuTZjx
+    Virtualenv location: /srv/jupyter/.local/share/virtualenvs/myproject-CZKj6mqJ
     Creating a Pipfile for this project...
     Installing requests...
+    Adding requests to Pipfile's [packages]...
     …
