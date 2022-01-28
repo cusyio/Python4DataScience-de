@@ -17,7 +17,7 @@ Nachdem nun ``requests`` installiert ist, kann es verwendet werden.
 
     print(response.status_code)
 
-#. Anschließen kann das Skript ausgeführt werden mit:
+#. Anschließend kann das Skript ausgeführt werden mit:
 
 .. code-block:: console
 
