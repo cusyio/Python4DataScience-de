@@ -37,7 +37,7 @@ sein.
    .. code-block:: console
 
     $ pip --version
-    pip 10.0.1
+    pip 21.3.1
 
    #. Falls Pip noch nicht installiert ist, könnt ihr es installieren (lassen)
 
