@@ -15,7 +15,7 @@ sein.
    .. code-block:: console
 
     $ python --version
-    Python 3.6.3
+    Python 3.8.12
 
    .. note::
         In iPython oder einem Jupyter Notebook könnt ihr die Version
@@ -24,8 +24,8 @@ sein.
         .. code-block:: ipython
 
             In [1]: import sys
-                    !{sys.executable} --version
-            Python 3.6.3
+                    sys.version_info
+            sys.version_info(major=3, minor=8, micro=12, releaselevel='final', serial=0)
 
    .. note::
         Falls ihr das System-Python eurer Linux-Distribution verwendet, solltet
