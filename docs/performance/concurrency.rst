@@ -145,7 +145,7 @@ Multithreading, Multiprocessing und asynchrone Kommunikation
 |                  |                  | aufwändiger.     |                                |
 +------------------+------------------+------------------+--------------------------------+
 | Performance      | Multithreading   | Die Prozesse     | Der Aufruf einer reinen        |
-|                  | führt bei        | können auf       | Python-Funktion erheugt mehr   |
+|                  | führt bei        | können auf       | Python-Funktion erzeugt mehr   |
 |                  | IO-lastigen      | mehrere CPUs     | Overhead als die erneute       |
 |                  | Aufgaben zu den  | verteilt werden  | Anfrage eines ``generator``    |
 |                  | besten           | und sollten daher| oder ``awaitable`` – d.h.,     |
