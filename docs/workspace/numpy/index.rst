@@ -24,6 +24,15 @@ wesentlichen Funktionsumfang von NumPy geben:
 * Eine C-API für die Verbindung von NumPy mit Bibliotheken, die in C, C++ oder
   FORTRAN geschrieben sind.
 
+.. note::
+
+    Dieser Avschnitt führt euch in die Grundlagen der Verwendung von
+    NumPy-Arrays ein und sollte ausreichen, um dem Rest des Tutorials zu folgen.
+    Für viele datenanalytische Anwendungen ist es zwar nicht notwendig, ein
+    tiefes Verständnis von NumPy zu haben, aber die Beherrschung der
+    array-orientierten Programmierung und Denkweise ist ein wichtiger Schritt
+    auf dem Weg zum Data-Scientist.
+
 .. seealso::
     * `Home
       <https://numpy.org/>`_
