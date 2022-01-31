@@ -51,4 +51,5 @@ wesentlichen Funktionsumfang von NumPy geben:
     intro.ipynb
     ndarray.ipynb
     dtype.ipynb
+    arithmetic.ipynb
     indexing-slicing.ipynb
