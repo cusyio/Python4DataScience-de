@@ -54,4 +54,4 @@ wesentlichen Funktionsumfang von NumPy geben:
     arithmetic.ipynb
     indexing-slicing.ipynb
     transpose.ipynb
-    ufunc.ipynb
+    vectorisation.ipynb
