@@ -14,3 +14,4 @@ von :doc:`ipython/index`, :doc:`jupyter/index` mit
     ipython/index
     jupyter/index
     numpy/index
+    pandas/index
