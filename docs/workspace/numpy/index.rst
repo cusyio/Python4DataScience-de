@@ -55,4 +55,4 @@ wesentlichen Funktionsumfang von NumPy geben:
     indexing-slicing.ipynb
     transpose.ipynb
     bool.ipynb
-    sort.ipynb
+    unique.ipynb
