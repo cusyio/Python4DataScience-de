@@ -20,7 +20,7 @@ pandas
 
     data-structures.ipynb
     indexing.ipynb
-    transpose.ipynb
+    dropping.ipynb
     arithmetic.ipynb
     sorting-ranking.ipynb
     statistics.ipynb
