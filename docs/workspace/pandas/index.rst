@@ -22,7 +22,7 @@ pandas
     indexing.ipynb
     dropping.ipynb
     arithmetic.ipynb
-    sorting-ranking.ipynb
+    select-filter.ipynb
     statistics.ipynb
     unique.ipynb
     vectorisation.ipynb
