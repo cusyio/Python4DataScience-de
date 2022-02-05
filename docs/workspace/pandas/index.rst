@@ -21,7 +21,6 @@ pandas
     data-structures.ipynb
     indexing.ipynb
     dropping.ipynb
-    arithmetic.ipynb
     select-filter.ipynb
     arithmetic.ipynb
     unique.ipynb
