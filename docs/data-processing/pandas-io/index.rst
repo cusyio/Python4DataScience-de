@@ -91,3 +91,10 @@ bedeutet, dass ihr nicht unbedingt angeben müsst, welche Spalten numerisch,
 integer, boolesch oder string sind. Bei anderen Datenformaten wie HDF5, ORC und
 Parquet sind die Datentypinformationen hingegen bereits in das Format
 eingebettet.
+
+.. toctree::
+    :hidden:
+    :titlesonly:
+    :maxdepth: 0
+
+    csv-example.ipynb
