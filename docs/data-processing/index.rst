@@ -9,15 +9,12 @@ Speichermedien </data-processing/overview.rst#entfernte-speichermedien>` und
 :ref:`/data-processing/overview.rst#geodaten` stellen wir Euch
 :doc:`serialisation-formats/index` und drei Werkzeuge genauer vor:
 
+* :doc:`pandas-io/index`
 * :doc:`requests/index`
 * :doc:`beautifulsoup`
 * :doc:`intake/index`
 
 .. seealso::
-    `pandas I/O API <https://pandas.pydata.org/docs/user_guide/io.html>`_
-        Die pandas I/O API ist eine Sammlung von ``reader``-Funktionen, die ein
-        pandas-Objekt zurückgeben. Meist stehen auch entsprechende
-        ``write``-Methoden zur Verfügung.
     `Scrapy <https://scrapy.org/>`_
         Framework zum Extrahieren von Daten aus Websites als JSON-, CSV- oder
         XML-Dateien.
@@ -49,6 +46,7 @@ Python-Pakete zum :doc:`Bereinigen und Validieren von Daten
 
     opendata
     serialisation-formats/index
+    pandas-io/index
     requests/index
     beautifulsoup
     intake/index
