@@ -98,3 +98,4 @@ eingebettet.
     :maxdepth: 0
 
     csv-example.ipynb
+    excel-example.ipynb
