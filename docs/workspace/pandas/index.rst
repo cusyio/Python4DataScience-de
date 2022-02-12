@@ -19,6 +19,7 @@ pandas
     :maxdepth: 0
 
     data-structures.ipynb
+    python-data-structures.ipynb
     indexing.ipynb
     dropping.ipynb
     select-filter.ipynb
