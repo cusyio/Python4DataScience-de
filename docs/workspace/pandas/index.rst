@@ -24,6 +24,6 @@ pandas
     dropping.ipynb
     select-filter.ipynb
     arithmetic.ipynb
-    sorting-ranking.ipynb
     descriptive-statistics.ipynb
+    sorting-ranking.ipynb
     vectorisation.ipynb
