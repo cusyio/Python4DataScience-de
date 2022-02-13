@@ -59,12 +59,15 @@ DataFrame-Objekt, darunter
         pandas-Objekt zurückgeben. Meist stehen auch entsprechende
         ``write``-Methoden zur Verfügung.
 
-Zunächst werde ich einen Überblick über diese Funktionen geben, die dazu gedacht
-sind, Textdaten in einen DataFrame zu konvertieren. Dabei lassen sich die
-optionalen Argumente für diese Funktionen in folgende Kategorien einteilen:
+Zunächst werde ich einen Überblick über einige dieser Funktionen geben, die dazu
+gedacht sind, Text- und Exceldaten in einen pandas-DataFrame zu konvertieren:
+:doc:`csv <serialisation-formats/csv/example>`,
+:doc:`JSON <serialisation-formats/json/example>` und
+:doc:`serialisation-formats/excel`. Dabei lassen sich die optionalen Argumente für
+diese Funktionen in folgende Kategorien einteilen:
 
 Indizierung
-    Kann eine oder mehrere Spalten als den zurückgegebenen DataFrame behandeln,
+    Können eine oder mehrere Spalten den zurückgegebenen DataFrame erschließen,
     und ob die Spaltennamen aus der Datei, den von euch angegebenen Argumenten
     oder gar nicht abgerufen werden sollen.
 Typinferenz und Datenkonvertierung
