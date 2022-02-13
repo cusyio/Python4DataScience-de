@@ -60,8 +60,9 @@ Dicts, Booleans und Nichts.
     :titlesonly:
     :maxdepth: 0
 
-    csv
-    json
+    csv/index
+    json/index
+    excel.ipynb
     pickle
     protobuf
     toml

@@ -45,8 +45,8 @@ Python-Pakete zum :doc:`Bereinigen und Validieren von Daten
     :maxdepth: 0
 
     opendata
+    pandas-io
     serialisation-formats/index
-    pandas-io/index
     requests/index
     beautifulsoup
     intake/index

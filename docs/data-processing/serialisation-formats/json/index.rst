@@ -131,3 +131,10 @@ Antwort der :ref:`OSM-Nomination-API <Example-OSM-Nomination-API>`:
 .. _`JSON-LD`: https://json-ld.org#
 .. _`JMESPath`: https://jmespath.org/
 .. _`Validatoren`: https://json-schema.org/implementations.html#validators
+
+.. toctree::
+    :hidden:
+    :titlesonly:
+    :maxdepth: 0
+
+    example.ipynb

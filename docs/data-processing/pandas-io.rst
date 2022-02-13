@@ -97,6 +97,5 @@ eingebettet.
     :titlesonly:
     :maxdepth: 0
 
-    csv-example.ipynb
     json-example.ipynb
     excel-example.ipynb
