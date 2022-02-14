@@ -26,7 +26,7 @@ wesentlichen Funktionsumfang von NumPy geben:
 
 .. note::
 
-    Dieser Avschnitt führt euch in die Grundlagen der Verwendung von
+    Dieser Abschnitt führt euch in die Grundlagen der Verwendung von
     NumPy-Arrays ein und sollte ausreichen, um dem Rest des Tutorials zu folgen.
     Für viele datenanalytische Anwendungen ist es zwar nicht notwendig, ein
     tiefes Verständnis von NumPy zu haben, aber die Beherrschung der
