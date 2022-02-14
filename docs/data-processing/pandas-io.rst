@@ -61,7 +61,7 @@ DataFrame-Objekt, darunter
 
 Zunächst werde ich einen Überblick über einige dieser Funktionen geben, die dazu
 gedacht sind, Text- und Exceldaten in einen pandas-DataFrame zu konvertieren:
-:doc:`csv <serialisation-formats/csv/example>`,
+:doc:`CSV <serialisation-formats/csv/example>`,
 :doc:`JSON <serialisation-formats/json/example>` und
 :doc:`serialisation-formats/excel`. Dabei lassen sich die optionalen Argumente für
 diese Funktionen in folgende Kategorien einteilen:
