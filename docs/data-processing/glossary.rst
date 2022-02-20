@@ -205,33 +205,9 @@ Glossar
 
         Je nach Art des Zugriffs gibt es unterschiedliche Lock-Verfahren:
 
-        Optimistic Concurrency
-            Optimistic Concurrency, auch Optimistisches Locking geht davon aus,
-            dass wenige schreibende Zugriffe auf der Datenbank stattfinden und
-            lesende Zugriffe keine Sperre auslösen. Bei Änderungen wird dann
-            zunächst geprüft, ob der Zeitstempel seit dem Lesen der Daten
-            unverändert geblieben ist.
-        Pessimistic Locking
-            Pessimistic Locking geht von vielen Schreibzugriffen auf die
-            Datenbank aus. Daher sperren auch lesende Zugriffe die Daten werden
-            erst wieder freigegeben, wenn die Änderungen gespeichert sind.
-        Two-phase locking (2PL)
-            Das Zwei-Phasen-Sperrprotokoll unterscheidet zwei Phasen von
-            Transaktionen:
-
-            #. Die Wachstumsphase, in welcher Sperren nur gesetzt, aber nicht
-               freigegeben werden dürfen.
-            #. Die Schrumpfungsphase, in welcher Sperren nur freigegeben, aber
-               nicht angefordert werden dürfen.
-
-            Das Zwei-Phasen-Sperrprotokoll kennt dabei drei Sperrzustände:
-
-            SLOCK, Shared Lock oder Read-Lock
-                wird bei lesendem Zugriff auf Daten gesetzt
-            XLOCK, Exclusive Lock oder Write-Lock
-                wird bei schreibendem Zugriff auf Daten gesetzt
-            UNLOCK
-                hebt die Sperren SLOCK und XLOCK auf.
+        * :term:`Optimistic concurrency`
+        * :term:`Pessimistic locking`
+        * :term:`Two-phase locking (2PL)`
 
     MapReduce
         MapReduce ist ein von Google Inc. 2004 eingeführtes Framework, das für
@@ -253,9 +229,21 @@ Glossar
         Basistechnologie entwickelt, die es ermöglicht, konkurrierende Zugriffe
         auch ohne das :term:`Locking` von Datensätzen zu koordinieren.
 
+    Optimistic Concurrency
+        Optimistic Concurrency, auch Optimistisches Locking ist eine Form
+        des :term:`Locking`, die davon ausgeht, dass wenige schreibende
+        Zugriffe auf der Datenbank stattfinden und lesende Zugriffe keine
+        Sperre auslösen. Bei Änderungen wird dann zunächst geprüft, ob der
+        Zeitstempel seit dem Lesen der Daten unverändert geblieben ist.
+
     Paxos
         Paxos ist eine Familie von Protokollen zur Herstellung von Konsens in
         einem Netzwerk unzuverlässiger oder fehlbarer Prozessoren.
+
+    Pessimistic Locking
+        Pessimistic :term:`Locking` geht von vielen Schreibzugriffen auf die
+        Datenbank aus. Daher sperren auch lesende Zugriffe die Daten werden
+        erst wieder freigegeben, wenn die Änderungen gespeichert sind.
 
     Property-Graph-Modell (PGM)
         Knoten und Kanten bestehen aus Objekten mit darin eingebetteten
@@ -283,6 +271,24 @@ Glossar
         gesprochen. Ist dies nicht der Fall, sind die Daten inkonsistent. In SQL
         kann die semantische Integrität mit ``TRIGGER`` und ``CONSTRAINT``
         überprüft werden.
+
+    Two-phase locking (2PL)
+        Das Zwei-Phasen-Sperrprotokoll unterscheidet zwei Phasen von
+        Transaktionen:
+
+        #. Die Wachstumsphase, in welcher Sperren nur gesetzt, aber nicht
+           freigegeben werden dürfen.
+        #. Die Schrumpfungsphase, in welcher Sperren nur freigegeben, aber
+           nicht angefordert werden dürfen.
+
+        Das Zwei-Phasen-Sperrprotokoll kennt dabei drei Sperrzustände:
+
+        SLOCK, Shared Lock oder Read-Lock
+            wird bei lesendem Zugriff auf Daten gesetzt
+        XLOCK, Exclusive Lock oder Write-Lock
+            wird bei schreibendem Zugriff auf Daten gesetzt
+        UNLOCK
+                hebt die Sperren SLOCK und XLOCK auf.
 
     Vektoruhr
         Eine Vektoruhr ist eine Softwarekomponente zum Zuweisen von eindeutigen
