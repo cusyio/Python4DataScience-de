@@ -44,7 +44,7 @@ angegeben werden:
 
 .. literalinclude:: accounts.proto
    :language: proto
-   :lines: 8-23,32-34,36
+   :lines: 8-27
 
 Generieren des gRPC-Codes
 -------------------------
