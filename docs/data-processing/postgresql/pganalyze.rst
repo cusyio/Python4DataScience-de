@@ -137,4 +137,3 @@ damit die Konfiugration wirksam wird:
 .. code-block:: console
 
     $ systemctl restart pganalyze-collector
-
