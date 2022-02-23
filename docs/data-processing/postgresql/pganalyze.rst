@@ -1,7 +1,7 @@
 pganalyze
 =========
 
-`pganalyze <https://pganalyze.com/>`_ analysiert die Abragepläne (Query Plans)
+`pganalyze <https://pganalyze.com/>`_ analysiert die Abfagepläne (Query Plans)
 von PostgreSQL. Aktuell sammelt er Informationen über
 
 * Schema mit Tabellen (Spalten, Constraints, Trigger-Definitionen) und Indizees
