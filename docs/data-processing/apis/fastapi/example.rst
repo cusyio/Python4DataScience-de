@@ -42,7 +42,6 @@ Startet den Server mit:
 sehen:
 
 .. figure:: fastapi-example.png
-
    :alt: FastAPI root
 
 Ihr erhaltet auch eine interaktive API-Dokumentation, die vom `Swagger UI
@@ -50,7 +49,6 @@ Ihr erhaltet auch eine interaktive API-Dokumentation, die vom `Swagger UI
 bereitgestellt wird:
 
 .. figure:: fastapi-docs-example.png
-
    :alt: FastAPI swagger docs
 
 Ihr erhaltet auch eine alternative automatische Dokumentation von `ReDoc
