@@ -65,17 +65,13 @@ Beispiel
 
 .. seealso::
 
-    `pickle – Python object serialization
-    <https://docs.python.org/3/library/pickle.html>`_
+    `pickle – Python object serialization <https://docs.python.org/3/library/pickle.html>`_
         Dokumentation des ``pickle``-Moduls
-    `shelve – Python object persistence
-    <https://docs.python.org/3/library/shelve.html#module-shelve>`_
+    `shelve – Python object persistence <https://docs.python.org/3/library/shelve.html#module-shelve>`_
         Indizierte Datenbanken von ``pickle``-Objekten
-    `Uwe Korn: The implications of pickling ML models
-    <https://uwekorn.com/2021/04/26/implications-of-pickling-ml-models.html>`_
+    `Uwe Korn: The implications of pickling ML models <https://uwekorn.com/2021/04/26/implications-of-pickling-ml-models.html>`_
         Alternativen zu ``pickle`` für ML-Modelle
-    `Ned Batchelder: Pickle’s nine flaws
-    <https://nedbatchelder.com/blog/202006/pickles_nine_flaws.html>`_
+    `Ned Batchelder: Pickle’s nine flaws <https://nedbatchelder.com/blog/202006/pickles_nine_flaws.html>`_
         Nachteile von ``pickle`` und Alternativen
 
 .. _`307`: https://www.python.org/dev/peps/pep-0307
