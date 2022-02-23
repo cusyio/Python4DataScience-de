@@ -55,7 +55,6 @@ Ihr erhaltet auch eine alternative automatische Dokumentation von `ReDoc
 <https://github.com/Redocly/redoc>`_ unter http://127.0.0.1:8000/redoc:
 
 .. figure:: fastapi-redoc-example.png
-
    :alt: FastAPI ReDoc documentation
 
 4. Aktualisierungen
