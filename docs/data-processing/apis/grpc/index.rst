@@ -155,6 +155,5 @@ Verfügung stehen. Dann könnt ihr jedoch ``grpcurl`` aufrufen, z.B. mit:
     :titlesonly:
     :maxdepth: 0
 
-    install
     example
     test
