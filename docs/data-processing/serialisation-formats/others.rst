@@ -30,7 +30,7 @@ Andere Formate
 
 `JSON5 <https://github.com/json5/json5>`_
     Eine Obermenge von JSON durch Einfügen von Zeichenfolgen mit mehreren Zeilen
-   Escape-Zeichen, Hexadezimalzahlen, Kommentaren usw.
+    Escape-Zeichen, Hexadezimalzahlen, Kommentaren usw.
 
     .. seealso::
 
