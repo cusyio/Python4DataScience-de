@@ -184,26 +184,20 @@ Git Best Practices
 
     .. code-block:: console
 
-        $ git filter-branch -f --force --index-filter 'git rm -rf --cached \
-            --ignore-unmatch path/somefile' --prune-empty --tag-name-filter cat \
-            -- --all
-        $ rm -rf .git/refs/original/
-        $ git reflog expire --expire=now --all
-        $ git gc --prune=now
-        $ git gc --aggressive --prune=now
-        $ git push origin <branch> --force
+        $ git filter-repo --invert-paths --path path/somefile
+        $ git push --no-verify --mirror
+
+    .. note::
+       Informiert die Team-Mitglieder, dass sie erneut einen Klon des Repository
+       erstellen sollten.
 
   * Entfernen einer Zeichenkette aus der Historie
 
     .. code-block:: console
 
-        $ git filter-branch --force --tree-filter "[ -f <path>/<file> ] && \
-            sed -i 's/<secret password>//g' <path>/<file> || /bin/true" -- --all
-        …
-
-    .. note::
-        Bei macOS muss ``/usr/bin/true`` statt des ``/bin/true`` bei Linux
-        verwendet werden.
+        $ git filter-repo --message-callback '
+              return re.sub(b"^git-svn-id:.*\n", b"", message, flags=re.MULTILINE)
+              '
 
   .. seealso::
     * `git-reflog <https://git-scm.com/docs/git-reflog>`_
