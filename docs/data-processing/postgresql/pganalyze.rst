@@ -9,8 +9,8 @@ von PostgreSQL. Aktuell sammelt er Informationen über
 * Betriebssystem (OS, RAM, Storage)
 
    .. seealso::
-   * `GitHub <https://github.com/pganalyze/collector>`_
-   * `Dokumentation <https://pganalyze.com/docs>`_
+      * `GitHub <https://github.com/pganalyze/collector>`_
+      * `Dokumentation <https://pganalyze.com/docs>`_
 
 Installation
 ------------
