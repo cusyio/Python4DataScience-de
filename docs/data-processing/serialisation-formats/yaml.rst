@@ -26,7 +26,7 @@ YAML
 |                       |       | werden.                                               |
 +-----------------------+-------+-------------------------------------------------------+
 | File size             | +-    | YAML liegt im mittleren Bereich ähnlich wie           |
-|                       |       | :doc:`json` und :doc:`toml`.                          |
+|                       |       | :doc:`json/index` und :doc:`toml`.                    |
 +-----------------------+-------+-------------------------------------------------------+
 
 Beispiel
