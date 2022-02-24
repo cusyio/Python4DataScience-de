@@ -66,9 +66,9 @@ Glossar
    pip
        Ein Tool zum Installieren von Python-Paketen.
 
-       `Docs <https://pip.pypa.io/>`_ |
-       `GitHub <https://github.com/pypa/pip>`_ |
-       `PyPI <https://pypi.org/project/pip/>`_ |
+       `Docs <https://pip.pypa.io/>`__ |
+       `GitHub <https://github.com/pypa/pip>`__ |
+       `PyPI <https://pypi.org/project/pip/>`__ |
 
    Pipfile
        Anwendungsfreundliche, auf `TOML <https://github.com/toml-lang/toml>`_
@@ -77,7 +77,7 @@ Glossar
        Dabei kann unterschieden werden zwischen zwei verschiedenen Gruppen von
        Paketen: ``[packages]`` und ``[dev-packages]``.
 
-       `GitHub <https://github.com/pypa/pipfile>`_
+       `GitHub <https://github.com/pypa/pipfile>`__
 
    Pipfile.lock
        Maschinenlesbare Datei auf Basis von `JSON
@@ -93,9 +93,9 @@ Glossar
        :term:`pipfile`, :term:`pip` und :term:`virtualenv <Virtuelle Umgebung>`
        in einer einzigen Toolchain.
 
-       `Docs <https://docs.pipenv.org/>`_ |
-       `GitHub <https://github.com/pypa/pipenv>`_ |
-       `PyPI <https://pypi.org/project/pipenv/>`_ |
+       `Docs <https://docs.pipenv.org/>`__ |
+       `GitHub <https://github.com/pypa/pipenv>`__ |
+       `PyPI <https://pypi.org/project/pipenv/>`__ |
 
 
    pypi.org
@@ -140,9 +140,9 @@ Glossar
        System existieren. Spack wurde für den raschen Aufbau wissenschaftlicher
        Anwendungen auf Clustern und Supercomputern entwickelt.
 
-       `Docs <https://spack.readthedocs.io/>`_ |
-       `GitHub <https://github.com/spack/spack>`_ |
-       `Slides <https://tgamblin.github.io/files/Gamblin-Spack-SC15-Talk.pdf>`_ |
+       `Docs <https://spack.readthedocs.io/>`__ |
+       `GitHub <https://github.com/spack/spack>`__ |
+       `Slides <https://tgamblin.github.io/files/Gamblin-Spack-SC15-Talk.pdf>`__ |
        `The Spack package manager: bringing order to HPC software chaos
        <https://ieeexplore.ieee.org/document/7832814>`_ |
 
@@ -168,8 +168,8 @@ Glossar
        und Linux auf PyPI bereitgestellt werden. Dies hat für die Benutzer des
        Pakets den Vorteil, bei der Installation nicht kompilieren zu müssen.
 
-       `Home <https://pythonwheels.com/>`_ |
-       `Docs <https://wheel.readthedocs.io/>`_ |
+       `Home <https://pythonwheels.com/>`__ |
+       `Docs <https://wheel.readthedocs.io/>`__ |
        `PEP <https://www.python.org/dev/peps/pep-0427/>`_ |
-       `GitHub <https://github.com/pypa/wheel>`_ |
-       `PyPI <https://pypi.org/project/wheel/>`_ |
+       `GitHub <https://github.com/pypa/wheel>`__ |
+       `PyPI <https://pypi.org/project/wheel/>`__ |
