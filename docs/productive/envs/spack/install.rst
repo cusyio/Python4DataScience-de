@@ -175,6 +175,7 @@ Wenn ihr die Standard- und Site-Einstellungen überschreiben möchtet, könnt ih
 :file:`${HOME}/.spack/packages.yaml` ändern:
 
 .. code-block:: yaml
+
     packages:
       all:
         compiler: [gcc@11.2.0]
