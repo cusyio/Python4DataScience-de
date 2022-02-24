@@ -1,7 +1,7 @@
 gRPC-Beispiel
 =============
 
-Standardmäßig verwendet gRPC :doc:`../serialisation-formats/protobuf` zur
+Standardmäßig verwendet gRPC :doc:`../../serialisation-formats/protobuf` zur
 Serialisierung von Daten, obwohl sie auch mit anderen Datenformaten wie JSON
 funktionieren.
 

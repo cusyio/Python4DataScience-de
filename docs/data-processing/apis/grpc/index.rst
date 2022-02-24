@@ -2,16 +2,17 @@ gRPC
 ====
 
 gRPC ist ein modernes Open-Source-RPC (Remote Procedure Call)-Framework.
-Standardmäßig verwendet gRPC :doc:`../../serialisation-formats/protobuf` als
-Interface Definition Language (IDL) zur Beschreibung sowohl des Interfaces als
-auch der Struktur der *Payload Messages*. In gRPC kann eine Clientanwendung
-direkt eine Methode auf einer entfernten Serveranwendung aufrufen als wäre es
-ein lokales Objekt, sodass verteilte Anwendungen und Dienste einfacher erstellt
-werden können. Wie in vielen RPC-Systemen basiert gRPC auf der Idee, einen
-Service zu definieren und die Methoden anzugeben, die mit ihren Parametern und
-Rückgabetypen aus der Ferne aufgerufen werden können. Der Server implementiert
-dieses Interface, um die Client-Aufrufe zu verarbeiten. Für den Client wurde
-ein sog. *Stub* generiert, der dieselben Methoden wie der Server bereitstellt.
+Standardmäßig verwendet gRPC
+:doc:`/data-processing/serialisation-formats/protobuf` als Interface Definition
+Language (IDL) zur Beschreibung sowohl des Interfaces als auch der Struktur der
+*Payload Messages*. In gRPC kann eine Clientanwendung direkt eine Methode auf
+einer entfernten Serveranwendung aufrufen als wäre es ein lokales Objekt, sodass
+verteilte Anwendungen und Dienste einfacher erstellt werden können. Wie in
+vielen RPC-Systemen basiert gRPC auf der Idee, einen Service zu definieren und
+die Methoden anzugeben, die mit ihren Parametern und Rückgabetypen aus der Ferne
+aufgerufen werden können. Der Server implementiert dieses Interface, um die
+Client-Aufrufe zu verarbeiten. Für den Client wurde ein sog. *Stub* generiert,
+der dieselben Methoden wie der Server bereitstellt.
 
 Im folgenden die wesentlichen Design-Prinzipien von gRPC:
 
@@ -28,9 +29,9 @@ Im folgenden die wesentlichen Design-Prinzipien von gRPC:
   z.B. der Transport-Layer (OSI-Layer 4) unabhängig vom Application-Layer
   (OSI-Layer 7) entwickelt werden.
 * gRPC unterstützt unterschiedliche Serialisierungsformate, u.a.
-  :doc:`../serialisation-formats/protobuf`,
-  :doc:`../serialisation-formats/json` [#]_, :doc:`../serialisation-formats/xml` und
-  Thrift)
+  :doc:`/data-processing/serialisation-formats/protobuf`,
+  :doc:`/data-processing/serialisation-formats/json/index` [#]_,
+  :doc:`/data-processing/serialisation-formats/xml` und Thrift)
 * Asynchrone und synchrone (blockierende) Verarbeitung werden in den meisten
   Sprachen unterstützt.
 * Das Streaming von Nachrichten in einem einzelnen RPC-Aufruf wird unterstützt.
@@ -126,10 +127,10 @@ die Kommunikation zwischen Clients und Servern an:
    HTTP/2-Frames fragmentiert ist. ``Status`` und ``Trailing-Metadata`` werden
    als HTTP/2-Trailing-Headers gesendet.
 
-Im Gegensatz zu :doc:`../fastapi/index` kann die gRPC-API jedoch nicht einfach
-auf der Kommandozeile mit cURL getestet werden. Ggf. könnt ihr jedoch `grpcurl
-<https://github.com/fullstorydev/grpcurl>`_ verwenden. Dies setzt jedoch voraus,
-dass der gRPC-Server das `GRPC Server Reflection Protocol
+Im Gegensatz zu :doc:`/data-processing/apis/fastapi/index` kann die gRPC-API
+jedoch nicht einfach auf der Kommandozeile mit cURL getestet werden. Ggf. könnt
+ihr jedoch `grpcurl <https://github.com/fullstorydev/grpcurl>`_ verwenden. Dies
+setzt jedoch voraus, dass der gRPC-Server das `GRPC Server Reflection Protocol
 <https://grpc.github.io/grpc/core/md_doc_server-reflection.html>`_ unterstützt.
 Üblicherweise sollte *Reflection* jedoch nur in der Entwicklungsphase zur
 Verfügung stehen. Dann könnt ihr jedoch ``grpcurl`` aufrufen, z.B. mit:
