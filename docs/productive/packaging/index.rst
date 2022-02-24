@@ -3,9 +3,8 @@ Pakete erstellen
 
 #. Notebooks sind gut geeignet um schnell voranzukommen, doch bei umfangreicher
    werdendem Code empfiehlt sich, stabilen Code in Pakete auszulagern.
-#. Ihr könnt :ref:`pytest <../../testing/ipytest.ipynb>` nicht nur
-   innerhalb eurer Notebooks zum Testen verwenden, sondern auch innerhalb eurer
-   Pakete.
+#. Ihr könnt :ref:`pytest </testing/ipytest.ipynb>` nicht nur innerhalb eurer
+   Notebooks zum Testen verwenden, sondern auch innerhalb eurer Pakete.
 
    .. seealso::
       :doc:`python-basics:test/pytest`
