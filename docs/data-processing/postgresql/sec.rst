@@ -101,7 +101,7 @@ PostgreSQL≥9.4 auch der `pgcrypto
     CREATE EXTENSION "uuid-ossp";
     CREATE TABLE diagnosis_key (
       id uuid primary key default uuid_generate_v4() NOT NULL,
-      …
+      ...
     );
 
 oder
@@ -111,7 +111,7 @@ oder
     CREATE EXTENSION "pgcrypto";
     CREATE TABLE diagnosis_key (
       id uuid primary key default gen_random_uuid() NOT NULL,
-      …
+      ...
     );
 
 Zeitstempel

@@ -23,7 +23,7 @@ Sphinx-Konfigurationsdatei ``docs/conf.py`` angegeben:
 
     extensions = [
         'sphinx.ext.autodoc',
-        …
+        ...
     ]
 
 Wenn euer Paket und die zugehörige Dokumentation Teil des gleichen Repository
@@ -39,7 +39,7 @@ den relativen Pfad zum Paket angibt, also:
 Wen ihr eure Sphinx-Dokumentation in einer virtuellen Umgebung installiert
 habt, könnt ihr dort auch euer Paket installieren mit:
 
-.. code-block:: python
+.. code-block:: console
 
     $ pipenv install my.package
 
@@ -64,17 +64,17 @@ Hier einige Beispiele aus der API-Dokumentation des `requests
     …
     Main Interface
     --------------
-    …
+    ...
     .. autofunction:: head
-    …
+    ...
     Exceptions
     ----------
 
     .. autoexception:: requests.RequestException
-    …
+    ...
     Request Sessions
     ----------------
-    …
+    ...
     .. autoclass:: Session
        :inherited-members:
 

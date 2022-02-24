@@ -72,7 +72,7 @@ lassen:
     SqlMagic.autopandas=<Bool>
         Current: False
         Return Pandas DataFrames instead of regular result sets
-    …
+    ...
 
 .. note::
    Wenn ``autopandas`` auf ``True`` gesetzt wurde, wird ``displaylimit`` nicht

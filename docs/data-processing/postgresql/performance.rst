@@ -51,7 +51,7 @@ Index-Trefferquote (engl.: *index hit ratio*)
          account               | 11                          |          5409
          activity              | 69                          |         58276
          application           | 93                          |          5345
-         …
+         ...
 
     Üblicherweise sollten bei uns nicht mehr als 10.000 Datensätze in einer
     Tabelle und der Prozentsatz des verwendeten Index größer als 90% sein.
@@ -118,7 +118,7 @@ sind und welche das System am stärksten belasten:
     ------------------+-------------------+------------------------------------------------------------
      295.761165833319 | 10.1374053278061  | SELECT id FROM account WHERE email LIKE ?
      219.138564283326 | 80.24530822355305 | SELECT * FROM account WHERE user_id = ? AND current = True
-    …
+    ...
 
 Üblich sollten Antwortzeiten von ~1ms und in wenigen Fällen ~4–5ms sein. Um mit
 der Performance-Optimierung zu beginnen, wägen wir meist zwischen der Gesamtzeit

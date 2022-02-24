@@ -32,7 +32,7 @@ Installation
 
    .. code-block:: postgresql
 
-    PGPASSWORD=…  psql -h localhost -d mydb -U pganalyze
+    PGPASSWORD=...  psql -h localhost -d mydb -U pganalyze
 
 #. Aktivieren der ``pg_stat_statements``:
 
