@@ -1,7 +1,7 @@
 Git Best Practices
 ==================
 
-- Macht früh Commits!
+* Macht früh Commits!
 
   Macht euren ersten Commit nachdem ihr die initiale Installation
   fertiggestellt habt und noch bevor ihr erste Änderungen vornehmt. Für ein
@@ -47,13 +47,13 @@ Git Best Practices
   Auch eine ``README.rst``-Datei sollte in jedem Repository vorhanden sein, in
   der das Deployment und der grundsätzliche Aufbau des Codes beschrieben wird.
 
-- Macht oft Commits!
+* Macht oft Commits!
 
   Dies erleichtert euch:
 
-  - die Eingrenzung von Fehlern
-  - das Verständnis für den Code
-  - die zukünftige Wartung und Pflege.
+  * die Eingrenzung von Fehlern
+  * das Verständnis für den Code
+  * die zukünftige Wartung und Pflege.
 
   Falls ihr doch einmal mehrere Änderungen an einer Datei durchgeführt habt,
   könnt ihr diese auch später noch in mehrere Commits aufteilen mit:
@@ -62,7 +62,7 @@ Git Best Practices
 
     $ git add -p my-changed-file.py
 
-- Ändert nicht die veröffentlichte Historie!
+* Ändert nicht die veröffentlichte Historie!
 
   Auch wenn ihr zu einem späteren Zeitpunkt herausfindet, dass ein Commit, der
   mit ``git push`` bereits veröffentlicht wurde, einen oder mehrere Fehler
@@ -70,14 +70,14 @@ Git Best Practices
   machen. Vielmehr solltest Du durch weitere Commits den oder die aufgetretenen
   Fehler zu beheben.
 
-- Wählt einen Git-Workflow!
+* Wählt einen Git-Workflow!
 
   Wählt einen Workflow, der am besten zu eurem Projekt passt. Projekte sind
   keineswegs identisch und ein Workflow, der zu einem Projekt passt, muss
   nicht zwingend auch in einem anderen Projekt passen. Auch kann sich initial
   ein anderer Workflow empfehlen als im weiteren Fortschritt des Projekts.
 
-- Macht sinnvolle Commits!
+* Macht sinnvolle Commits!
 
   Mit dem Erstellen aufschlussreicher und beschreibender Commit-Nachrichten
   erleichtert ihr die Arbeit im Team ungemein. Sie ermöglichen anderen, eure
@@ -113,22 +113,22 @@ Git Best Practices
   Weitere gute Hinweise findet ihr in `A Note About Git Commit Messages
   <https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>`_.
 
-- Wartet euer Repository regelmäßig!
+* Wartet euer Repository regelmäßig!
 
   Folgende Wartungsarbeiten solltet ihr regelmäßig durchführen:
 
-  - Validiert das Repo mit ``git fsck``.
-  - Komprimiert das Repo mit ``git gc`` bzw. ``git gc --aggressive``.
+  * Validiert das Repo mit ``git fsck``.
+  * Komprimiert das Repo mit ``git gc`` bzw. ``git gc --aggressive``.
 
     .. seealso::
         * `git gc <https://git-scm.com/docs/git-gc>`_
         * `Git Interna - Wartung und Datenwiederherstellung
           <https://git-scm.com/book/de/v2/Git-Interna-Wartung-und-Datenwiederherstellung>`_
 
-  - Bereinigt die Remote Tracking Branches mit ``git remote update --prune``.
-  - Überprüft vergessene Arbeiten mit ``git stash list``.
+  * Bereinigt die Remote Tracking Branches mit ``git remote update --prune``.
+  * Überprüft vergessene Arbeiten mit ``git stash list``.
 
-- Überprüft eure Repositories regelmäßig auf unerwänschte Dateien!
+* Überprüft eure Repositories regelmäßig auf unerwänschte Dateien!
 
   Mit `Gitleaks <https://github.com/zricethezav/gitleaks>`_ könnt ihr eure
   Repositories regelmäßig auf ungewollt gespeicherte Zugangsdaten überprüfen.
@@ -139,14 +139,14 @@ Git Best Practices
 
   Alternativ könnt ihr auch auf der Kommandozeile die Daten löschen.
 
-  – Löschen des letzten Commits
+  * Löschen des letzten Commits
 
     .. code-block:: console
 
         $ git reset HEAD^ --hard
         $ git push origin -f
 
-  – Löschen anderer Commits
+  * Löschen anderer Commits
 
     .. code-block:: console
 
@@ -171,13 +171,13 @@ Git Best Practices
 
             $ git push origin HEAD:master -f
 
-  – Ändern einer Commit-Nachricht
+  * Ändern einer Commit-Nachricht
 
     Dies lässt sich ebenfalls einfach mit ``rebase`` realisieren wobei ihr in
     eurem Editor nicht die Zeile löschen sondern in der Zeile ``pick`` durch
     ``r`` (*reword*) ersetzen müsst.
 
-  – Entfernen einer Datei aus der Historie
+  * Entfernen einer Datei aus der Historie
 
     Eine Datei kann vollständig aus Git-Historie des aktuellen Branches entfernt
     werden mit:
@@ -193,7 +193,7 @@ Git Best Practices
         $ git gc --aggressive --prune=now
         $ git push origin <branch> --force
 
-  – Entfernen einer Zeichenkette aus der Historie
+  * Entfernen einer Zeichenkette aus der Historie
 
     .. code-block:: console
 
