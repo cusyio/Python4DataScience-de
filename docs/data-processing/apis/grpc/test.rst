@@ -72,9 +72,10 @@ von Netzwerkprotokollen. Im Folgenden zeigen wir Euch, wie ihr den `gRPC
 <https://gitlab.com/wireshark/wireshark/-/wikis/gRPC>`_- und den `Protobuf
 <https://gitlab.com/wireshark/wireshark/-/wikis/Protobuf>`_-Dissectors verwenden
 könnt. Sie erleichtern Euch das Zerlegen (Dekodieren) von gRPC-Nachrichten, die
-im :doc:`Protobuf <../serialisation-formats/protobuf>`- oder
-:doc:`../serialisation-formats/json`-Format serialisiert sind. Zudem könnt ihr
-damit das Server-, Client- und bidirektionales gRPC-Streaming analysieren.
+im :doc:`Protobuf </data-processing/serialisation-formats/protobuf>`- oder
+:doc:`/data-processing/serialisation-formats/json/index`-Format serialisiert
+sind. Zudem könnt ihr damit das Server-, Client- und bidirektionales
+gRPC-Streaming analysieren.
 
 .. note::
     Üblicherweise kann Wireshark nur gRPC-Messages im Klartext analysieren. Für

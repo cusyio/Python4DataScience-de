@@ -9,10 +9,10 @@ Speichermedien </data-processing/overview.rst#entfernte-speichermedien>` und
 :ref:`/data-processing/overview.rst#geodaten` stellen wir Euch
 :doc:`serialisation-formats/index` und drei Werkzeuge genauer vor:
 
-* :doc:`pandas-io/index`
-* :doc:`requests/index`
-* :doc:`beautifulsoup`
-* :doc:`intake/index`
+* :doc:`/data-processing/pandas-io`
+* :doc:`/data-processing/requests/index`
+* :doc:`/data-processing/beautifulsoup`
+* :doc:`/data-processing/intake/index`
 
 .. seealso::
     `Scrapy <https://scrapy.org/>`_
