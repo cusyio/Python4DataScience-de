@@ -35,7 +35,7 @@ CSV
 | Geschwindigkeit       | \+    | CSV kann sehr schnell serialisiert und deserialisiert |
 |                       |       | werden.                                               |
 +-----------------------+-------+-------------------------------------------------------+
-| Dateigröße            | ++    | Nur :doc:`protobuf` sollte kompakter sein.            |
+| Dateigröße            | ++    | Nur :doc:`../protobuf` sollte kompakter sein.         |
 +-----------------------+-------+-------------------------------------------------------+
 
 Beispiel
