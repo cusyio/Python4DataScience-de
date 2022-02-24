@@ -67,8 +67,8 @@ durch :term:`wheel` kaum noch vorhanden. Einige Nachteile bleiben dennoch:
 * Die Installation aus den Sourcen bleibt weiterhin kompliziert.
 * Ggf. gibt es kein passendes :term:`wheel` für den verwendeten Build des
   CPython-Interpreters oder alternativen Interpretern wie `PyPy
-  <https://www.pypy.org/>`_, `IronPython <https://ironpython.net/>`_ oder `Jython
-  <https://www.jython.org/>`_.
+  <https://www.pypy.org/>`__, `IronPython <https://ironpython.net/>`_ oder
+  `Jython <https://www.jython.org/>`_.
 * Die Wartung und Pflege der Pakete ist aufwändiger da die Maintainer nicht nur
   mit Python sondern auch mit einer anderen Sprache und der CPython C-API
   vertraut sein müssen. Zudem erhöht sich die Komplexität, wenn neben der
@@ -103,7 +103,7 @@ sollten auch eine Reihe anderer Alternativen in Betracht gezogen werden:
   Emulation legt oft Defekte in Extensions-Modulen offen, die CPython
   toleriert. (häufig bei Reference Counting Errors).
 
-* `Cython <https://cython.org/>`_ ist ein ausgereifter statischer Compiler, der
+* `Cython <https://cython.org/>`__ ist ein ausgereifter statischer Compiler, der
   den meisten Python-Code zu C-Extensions-Modulen kompilieren kann. Die
   anfängliche Kompilierung bietet einige Geschwindigkeitssteigerungen (durch
   Umgehung der CPython-Interpreter-Ebene), und Cythons optionale statische
@@ -114,7 +114,7 @@ sollten auch eine Reihe anderer Alternativen in Betracht gezogen werden:
   Die Verwendung von Cython hat jedoch den Nachteil, die Komplexität der
   Verteilung der resultierenden Anwendung zu erhöhen.
 
-* `Numba <http://numba.pydata.org/>`_ ist ein neueres Tool, das die `LLVM
+* `Numba <http://numba.pydata.org/>`__ ist ein neueres Tool, das die `LLVM
   Compiler-Infrastruktur <https://llvm.org/>`_ nutzt, um während der Laufzeit
   selektiv Teile einer Python-Anwendung auf nativen Maschinencode zu
   kompilieren. Es erfordert, dass LLVM auf dem System verfügbar ist, auf dem der
@@ -136,13 +136,13 @@ Betracht gezogen werden sollten.
 Die unten beschriebenen Ansätze vereinfachen nicht die Distribution, aber sie
 können den Wartungsaufwand im Vergleich zu Wrapper-Modulen deutlich reduzieren.
 
-* `Cython <http://cython.org/>`_ eignet sich nicht nur zum Erstellen von
+* `Cython <http://cython.org/>`__ eignet sich nicht nur zum Erstellen von
   Accelerator-Modulen, sondern auch zum Erstellen von Wrapper-Modulen. Da das
   Wrapping der API immer noch von Hand erfolgen muss, ist es keine gute Wahl beim
   Wrapping großer APIs.
 
 * `cffi <https://cffi.readthedocs.io/>`_ ist das Projekt einiger Personen aus
-  dem `PyPy <https://pypy.org/>`_-Entwicklungsteam, um C-Module einfacher für
+  dem `PyPy <https://pypy.org/>`__-Entwicklungsteam, um C-Module einfacher für
   Python-Anwendungen verfügbar zu machen. Es macht das Wrapping eines C-Moduls
   basierend auf seinen  Header-Dateien relativ einfach, auch wenn man sich mit C
   selbst nicht auskennt.
@@ -184,7 +184,7 @@ Implementierung
 ---------------
 
 Wir wollen nun unser ``dataprep``-Paket erweitern und einigen C-Code
-integrieren. Hierfür verwenden wir `Cython <https://cython.org/>`_, um den
+integrieren. Hierfür verwenden wir `Cython <https://cython.org/>`__, um den
 Python-Code aus :download:`dataprep/src/dataprep/cymean.pyx` in optimierten
 C-Code während des Build-Prozesses zu übersetzen. Cython-Dateien haben den
 Suffix ``pyx`` und können sowohl Python- also auch C-Code enthalten.
@@ -255,9 +255,9 @@ Zufallszahlen mit Werten zwischen 1 und 1000 erstellt.
    <https://docs.python.org/3/extending/extending.html>`_. Beachtet jedoch
    bitte, dass diese Einführung nur die grundlegenden Tools zum Erstellen von
    Erweiterungen beshreibt, die im Rahmen von CPython bereitgestellt werden.
-   Third-Party-Tools wie `Cython <http://cython.org/>`_, `cffi
+   Third-Party-Tools wie `Cython <http://cython.org/>`__, `cffi
    <https://cffi.readthedocs.io/>`_, `SWIG <http://www.swig.org/>`_ und `Numba
-   <https://numba.pydata.org/>`_ bieten sowohl einfachere als auch
+   <https://numba.pydata.org/>`__ bieten sowohl einfachere als auch
    ausgeklügeltere Ansätze zum Erstellen von C- und C ++- Erweiterungen für
    Python.
 
