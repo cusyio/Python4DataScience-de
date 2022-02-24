@@ -94,7 +94,7 @@ Git Best Practices
   Informationen hierzu findet ihr in der Git-Dokumentation: `git-blame
   <https://git-scm.com/docs/git-blame>`_.
 
-  GitLab interpretiert bestimmte Commit-Nachrichten auch als Links interpretieren, z.B.:
+  GitLab interpretiert bestimmte Commit-Nachrichten auch als Links, z.B.:
 
   .. code-block:: console
 
