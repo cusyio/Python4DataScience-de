@@ -65,13 +65,14 @@ JSON
 |                       |       | und zu deserialisieren sind.                          |
 +-----------------------+-------+-------------------------------------------------------+
 | Dateigröße            | +-    | Die Dateigröße von JSON liegt im Mittelfeld, ähnlich  |
-|                       |       | :doc:`yaml` und :doc:`toml`.                          |
+|                       |       | :doc:`../yaml` und :doc:`../toml`.                    |
 +-----------------------+-------+-------------------------------------------------------+
 
 Beispiel
 --------
 
-Antwort der :ref:`OSM-Nomination-API <Example-OSM-Nomination-API>`:
+Antwort der :ref:`OSM-Nomination-API
+</data-processing/requests/requests.ipynb#Beispiel-OSM-Nomination-API>`:
 
 .. code-block:: javascript
 
