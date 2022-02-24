@@ -133,9 +133,7 @@ Git Best Practices
   Mit `Gitleaks <https://github.com/zricethezav/gitleaks>`_ könnt ihr eure
   Repositories regelmäßig auf ungewollt gespeicherte Zugangsdaten überprüfen.
 
-  Und mit `Git Filter-Branch <https://git-scm.com/docs/git-filter-branch>`_,
-  `BFG Repo-Cleaner <https://rtyley.github.io/bfg-repo-cleaner/>`_ oder
-  `git-filter-repo <https://github.com/newren/git-filter-repo>`_ könnt ihr
+  Mit `git-filter-repo <https://github.com/newren/git-filter-repo>`_ könnt ihr
   unerwünschte Dateien, seien es Zugangsdaten oder große Binärdateien aus eurer
   Git-Historie entfernen.
 
