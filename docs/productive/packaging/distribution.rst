@@ -109,7 +109,7 @@ Die Datei enthält alle Dateien und Verzeichnisse, die nicht bereits mit
 
 Weitere Anweisungen in `Manifest.in` findet ihr in `Creating a source
 distribution
-<https://docs.python.org/3/distutils/commandref.html?highlight=manifest#creating-a-source-distribution-the-sdist-command>`_.
+<https://docs.python.org/3/distutils/commandref.html?highlight=manifest#creating-a-source-distribution-the-sdist-command>`__.
 
 .. note::
     Häufig wird die Aktualisierung der ``Manifest.in``-Datei vergessen. Um dies
@@ -235,7 +235,7 @@ erzeugen::
     <https://www.python.org/dev/peps/pep-0427/#file-name-convention>`_.
 
     Weitere Infos zu ``sdist`` erhaltet ihr in `Creating a Source Distribution
-    <https://docs.python.org/2/distutils/sourcedist.html#creating-a-source-distribution>`_.
+    <https://docs.python.org/2/distutils/sourcedist.html#creating-a-source-distribution>`__.
     und `PEP 376 <https://www.python.org/dev/peps/pep-0376/>`_.
 
 Testen
