@@ -14,9 +14,9 @@ cuDF ist eine GPU-DataFrame-Bibliothek, die eine `Pandas-ähnliche API
 
 .. seealso::
 
-    * `Docs <https://docs.rapids.ai/api/cudf/stable/>`_
-    * `GitHub <https://github.com/rapidsai/cudf>`_
-    * `PyPI <https://pypi.org/project/cudf/>`_
+    * `Docs <https://docs.rapids.ai/api/cudf/stable/>`__
+    * `GitHub <https://github.com/rapidsai/cudf>`__
+    * `PyPI <https://pypi.org/project/cudf/>`__
     * `Beispiel Notebooks
       <https://github.com/rapidsai-community/notebooks-contrib>`_
 
@@ -35,8 +35,8 @@ Die Einschränkungen beziehen sich auf ``pd.read_json``, das nur für
 
 .. seealso::
 
-    * `Docs <https://modin.readthedocs.io/en/latest/>`_
-    * `GitHub <https://github.com/modin-project/modin>`_
+    * `Docs <https://modin.readthedocs.io/en/latest/>`__
+    * `GitHub <https://github.com/modin-project/modin>`__
 
 Dask
 ----
@@ -48,7 +48,7 @@ geringfügige Änderungen gibt.
 
 .. seealso::
 
-    * `Home <https://docs.dask.org/en/latest/dataframe.html>`_
-    * `API docs <https://docs.dask.org/en/latest/dataframe-api.html>`_
+    * `Home <https://docs.dask.org/en/latest/dataframe.html>`__
+    * `API docs <https://docs.dask.org/en/latest/dataframe-api.html>`__
     * `Example notebook <https://examples.dask.org/dataframe.html>`_
-    * `Tutorial <https://tutorial.dask.org/04_dataframe.html>`_
+    * `Tutorial <https://tutorial.dask.org/04_dataframe.html>`__
