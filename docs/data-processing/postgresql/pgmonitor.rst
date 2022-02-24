@@ -34,8 +34,8 @@ Installations- und Konfigurationsanleitungen für die verschiedenen Pakete werde
 bereitgestellt:
 
 #. `PostgreSQL Exporter
-   <https://access.crunchydata.com/documentation/pgmonitor/latest/exporter>`_
+   <https://access.crunchydata.com/documentation/pgmonitor/latest/exporter>`__
 #. `Prometheus
-   <https://access.crunchydata.com/documentation/pgmonitor/latest/prometheus>`_
+   <https://access.crunchydata.com/documentation/pgmonitor/latest/prometheus>`__
 #. `Grafana
-   <https://access.crunchydata.com/documentation/pgmonitor/latest/grafana>`_
+   <https://access.crunchydata.com/documentation/pgmonitor/latest/grafana>`__
