@@ -31,7 +31,7 @@ Im folgenden die wesentlichen Design-Prinzipien von gRPC:
 * gRPC unterstützt unterschiedliche Serialisierungsformate, u.a.
   :doc:`/data-processing/serialisation-formats/protobuf`,
   :doc:`/data-processing/serialisation-formats/json/index` [#]_,
-  :doc:`/data-processing/serialisation-formats/xml` und Thrift)
+  :doc:`/data-processing/serialisation-formats/xml-html/index` und Thrift)
 * Asynchrone und synchrone (blockierende) Verarbeitung werden in den meisten
   Sprachen unterstützt.
 * Das Streaming von Nachrichten in einem einzelnen RPC-Aufruf wird unterstützt.

@@ -43,7 +43,7 @@ Forschungsprojekts:
    :doc:`workspace/jupyter/ipywidgets/index`.
 4. **Daten sammeln**, entweder durch eine :doc:`Rest-API
    <data-processing/requests/index>` oder direkt von einer :doc:`HTML-Seite
-   <data-processing/beautifulsoup>`.
+   <data-processing/serialisation-formats/xml-html/beautifulsoup>`.
 5. **Daten bereinigen** ist eine wiederkehrende Aufgabe, die u.a. redundante,
    inkonsistente oder falsch formatierte Daten entfernen oder modifizieren soll.
 6. **Erschließen der Daten –** :doc:`viz/index` umfasst expolorative Analysen und

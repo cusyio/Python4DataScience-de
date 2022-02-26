@@ -66,6 +66,6 @@ Dicts, Booleans und Nichts.
     pickle
     protobuf
     toml
-    xml
+    xml-html/index
     yaml
     others

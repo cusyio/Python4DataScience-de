@@ -24,7 +24,7 @@ TOML
 | Speed                 | +-    | TOML kann mit mittlerer Geschwindigkeit verarbeitet   |
 |                       |       | werden.                                               |
 +-----------------------+-------+-------------------------------------------------------+
-| File size             | \-    | Nur :doc:`xml` ist weniger kompakt.                   |
+| File size             | \-    | Nur :doc:`xml-html/index` ist weniger kompakt.        |
 +-----------------------+-------+-------------------------------------------------------+
 
 Beispiel

@@ -11,7 +11,7 @@ Speichermedien </data-processing/overview.rst#entfernte-speichermedien>` und
 
 * :doc:`/data-processing/pandas-io`
 * :doc:`/data-processing/requests/index`
-* :doc:`/data-processing/beautifulsoup`
+* :doc:`/data-processing/serialisation-formats/xml-html/beautifulsoup`
 * :doc:`/data-processing/intake/index`
 
 .. seealso::
@@ -49,7 +49,6 @@ Python-Pakete zum :doc:`Bereinigen und Validieren von Daten
     pandas-io
     serialisation-formats/index
     requests/index
-    beautifulsoup
     intake/index
     postgresql/index
     nosql/index
