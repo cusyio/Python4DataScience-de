@@ -4,10 +4,10 @@ Daten lesen, speichern und bereitstellen
 Einen Überblick über öffentliche Repositories mit Forschungsdaten erhaltet ihr
 z.B. in :doc:`opendata`.
 
-Neben spezifischen Python-Bibliotheken zum Zugriff auf :ref:`entfernte
-Speichermedien </data-processing/overview.rst#entfernte-speichermedien>` und
-:ref:`/data-processing/overview.rst#geodaten` stellen wir Euch
-:doc:`serialisation-formats/index` und drei Werkzeuge genauer vor:
+Neben spezifischen Python-Bibliotheken zum Zugriff auf
+:doc:`/data-processing/remote-file-systems` und :doc:`/data-processing/geodata`
+stellen wir Euch :doc:`serialisation-formats/index` und drei Werkzeuge genauer
+vor:
 
 * :doc:`/data-processing/pandas-io`
 * :doc:`/data-processing/requests/index`
@@ -44,7 +44,8 @@ Python-Pakete zum :doc:`Bereinigen und Validieren von Daten
     :maxdepth: 0
 
     opendata
-    overview
+    remote-file-systems
+    geodata
     pandas-io
     serialisation-formats/index
     requests/index
