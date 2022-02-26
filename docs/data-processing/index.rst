@@ -44,12 +44,12 @@ Python-Pakete zum :doc:`Bereinigen und Validieren von Daten
     :maxdepth: 0
 
     opendata
-    remote-file-systems
-    geodata
     pandas-io
     serialisation-formats/index
-    requests/index
     intake/index
+    requests/index
+    remote-file-systems
+    geodata
     postgresql/index
     nosql/index
     apis/index
