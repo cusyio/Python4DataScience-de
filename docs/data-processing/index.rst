@@ -11,7 +11,6 @@ Speichermedien </data-processing/overview.rst#entfernte-speichermedien>` und
 
 * :doc:`/data-processing/pandas-io`
 * :doc:`/data-processing/requests/index`
-* :doc:`/data-processing/serialisation-formats/xml-html/beautifulsoup`
 * :doc:`/data-processing/intake/index`
 
 .. seealso::
