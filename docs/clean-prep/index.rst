@@ -17,13 +17,13 @@ Lösungen gegenüber großen, universellen Systemen wie `Great Expectations
     :titlesonly:
     :maxdepth: 0
 
-    deduplicate.ipynb
-    string-matching.ipynb
     nulls.ipynb
-    scikit-learn-reprocessing.ipynb
-    dask-pipeline.ipynb
-    voluptuous.ipynb
+    string-matching.ipynb
+    deduplicate.ipynb
     engarde.ipynb
     bulwark.ipynb
-    tdda.ipynb
     hypothesis.ipynb
+    tdda.ipynb
+    voluptuous.ipynb
+    scikit-learn-reprocessing.ipynb
+    dask-pipeline.ipynb
