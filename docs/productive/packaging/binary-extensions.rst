@@ -163,6 +163,11 @@ können den Wartungsaufwand im Vergleich zu Wrapper-Modulen deutlich reduzieren.
   können die obigen Alternativen alle auf der C-API arbeiten und
   C-Header-Dateien verwenden, um die Konsistenz zu gewährleisten.
 
+* `pythoncapi_compat <https://github.com/python/pythoncapi_compat>`_ kann
+  verwendet werden, um eine C-Erweiterung zu schreiben, die mehrere
+  Python-Versionen mit einer einzigen Codebasis unterstützt. Es besteht aus der
+  Header-Datei ``pythoncapi_compat.h`` und dem Skript ``upgrade_pythoncapi.py``.
+
 … für den Systemzugriff auf niedriger Ebene
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
