@@ -31,3 +31,4 @@ pandas
     string-manipulation.ipynb
     hierarchical-indexing.ipynb
     group-operations.ipynb
+    data-aggregation.ipynb
