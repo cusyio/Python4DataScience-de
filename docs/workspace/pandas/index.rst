@@ -33,3 +33,4 @@ pandas
     group-operations.ipynb
     aggregation.ipynb
     apply.ipynb
+    reshaping-pivoting.ipynb
