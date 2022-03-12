@@ -12,6 +12,13 @@ auch mehrere kleine, spezialisierte Bibliotheken wie
 Lösungen gegenüber großen, universellen Systemen wie `Great Expectations
 <https://greatexpectations.io/>`_.
 
+.. seealso::
+   * `pandera <https://pandera.readthedocs.io/en/stable/>`_
+   * `pandas-validation <https://pandas-validation.readthedocs.io/en/latest/>`_
+   * `PandasSchema <https://multimeric.github.io/PandasSchema/>`_
+   * `Opulent-Pandas <https://github.com/danielvdende/opulent-pandas>`_
+   * `signpost <https://github.com/ilsedippenaar/signpost>`_
+
 .. toctree::
     :hidden:
     :titlesonly:
