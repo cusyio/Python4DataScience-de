@@ -19,14 +19,6 @@ Installation
 Verwendung
 ----------
 
-shot-scraper kann auf zweierleis Art verwendet werden:
-
-#... note::
-   Die zweite Zeile installiert den benötigten Browser.
-
-Verwendung
-----------
-
 shot-scraper kann auf zweierleis Art verwendet werden
 
 #. …für einzelne Screenshots auf der Kommandozeile:
