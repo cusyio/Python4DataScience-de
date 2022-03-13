@@ -101,3 +101,4 @@ vereinfacht das Erstellen und Veröffentlichen von Dokumentation nach jedem
     docstrings
     intersphinx
     extensions
+    shot-scraper
