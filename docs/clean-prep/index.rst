@@ -10,7 +10,8 @@ auch mehrere kleine, spezialisierte Bibliotheken wie
 :doc:`voluptuous <voluptuous>`, :doc:`bulwark <bulwark>`, :doc:`tdda <tdda>` und
 :doc:`hypothesis <hypothesis>`. Wir bevorzugen diese leichtgewichtigeren
 Lösungen gegenüber großen, universellen Systemen wie `Great Expectations
-<https://greatexpectations.io/>`_.
+<https://greatexpectations.io/>`_ oder `MobyDQ
+<https://ubisoft.github.io/mobydq/>`_.
 
 Überblick
 ---------
