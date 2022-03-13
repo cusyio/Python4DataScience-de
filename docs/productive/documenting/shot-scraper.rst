@@ -57,8 +57,8 @@ shot-scraper kann auf zweierleis Art verwendet werden
         <https://github.com/simonw/shot-scraper/blob/main/README.md>`_-Datei
         findet ihr eine vollständige Übersicht über die möglichen Optionen.
       * Im shot-scraper-demo-Repository findet ihr eine deutlich umfangreichere
-        `shot.yaml
-        <https://github.com/simonw/shot-scraper-demo/blob/main/.github/workflows/shots.yml>`-Datei.
+        `shots.yaml
+        <https://github.com/simonw/shot-scraper-demo/blob/main/.github/workflows/shots.yml>`_-Datei.
 
 GitHub-Actions
 --------------
