@@ -148,9 +148,9 @@ Installation. Als Terminal-Emulator für Git Bash solltet ihr das
 Standardkonsolenfenster von Windows auswählen.
 
 .. note::
-    Ein umfangreiches Beispiel einer `~/.gitconfig`-Datei findet ihr in meinem
+    Ein umfangreiches Beispiel einer `Konfigurationsdatei findet ihr in meinem
     `dotfiles <https://github.com/veit/dotfiles/>`__-Repository: `.gitconfig
-    <https://github.com/veit/dotfiles/blob/main/.gitconfig>`_.
+    <https://github.com/veit/dotfiles/blob/main/.config/git/config>`_.
 
 Die ``.gitignore``-Datei
 ~~~~~~~~~~~~~~~~~~~~~~~~
