@@ -25,7 +25,7 @@ An einem Projekt mitarbeiten
    Historie vom entfernten Repository herunter
 
    ``--depth``
-       gibt die Anzahl der Commits an, die heruntergeladen werden sollen
+        gibt die Anzahl der Commits an, die heruntergeladen werden sollen
 
     ``-b``
         gibt den Namen des entfernten Zweigs an, der heruntergeladen werden soll
