@@ -21,10 +21,10 @@ An einem Projekt mitarbeiten
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ``$ git clone [project_url]``
-   lädt ein Projekt mit allen Zweigen (engl.: branches) und der gesamten
-   Historie vom entfernten Repository herunter
+    lädt ein Projekt mit allen Zweigen (engl.: branches) und der gesamten
+    Historie vom entfernten Repository herunter
 
-   ``--depth``
+    ``--depth``
         gibt die Anzahl der Commits an, die heruntergeladen werden sollen
 
     ``-b``
