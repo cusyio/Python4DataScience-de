@@ -155,7 +155,7 @@ Git Best Practices
     ``-i``
         interaktiver Modus, in dem euer Standardeditor geöffnet wird und eine
         Liste aller Commits nach dem zu entfernenden Commit mit dem Hash-Wert
-        ``sha`` angezeigt wird, z.B.:
+        :samp:`{SHA}` angezeigt wird, z.B.:
 
         .. code-block:: console
 
