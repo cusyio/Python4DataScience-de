@@ -5,15 +5,22 @@
 einigen Filtern um sich nur die interessanten Bereiche anzeigen zu lassen, z.B.
 nur die Hierarchie von Tags und Branches.
 
-Beispiel
---------
+Beispiele
+---------
 
-Hier ist ein Beispiel des Jupyter-Tutorial mit Merges aber ohne Tags:
+.. code-block:: console
 
-.. image:: git-big-picture7r6bxfcw.svg
-   :alt: Git-Graph mit Merges aber ohne Tags
-   :width: 171 px
-   :height: 1374 px
+   git big-picture -o git-big-picture.svg
+
+.. image:: git-big-picture.svg
+   :alt: Git-Graph mit Merges und Tags
+
+.. code-block:: console
+
+   $ git big-picture -ao git-big-picture_all.svg
+
+.. image:: git-big-picture_all.svg
+   :alt: Git-Graph mit Merges, Tags und Commits
 
 Installation
 ------------
