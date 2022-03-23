@@ -76,6 +76,9 @@ Um die Erstellung von Dokumentationen weiter zu vereinfachen, wurde
 vereinfacht das Erstellen und Veröffentlichen von Dokumentation nach jedem
 *Commit*.
 
+Für die Projektdokumentation kann die Visualisierung von Git Feature Branches
+und Tags mit :doc:`../git/git-big-picture` hilfreich sein.
+
 .. seealso::
    * `Eric Holscher: Why You Shouldn’t Use “Markdown” for Documentation
      <https://ericholscher.com/blog/2016/mar/15/dont-use-markdown-for-technical-docs/>`_
