@@ -110,8 +110,9 @@ Git Best Practices
   Dabei sollte es zu jedem Commit mindestens ein Ticket geben, das
   ausführlichere Hinweise zu den Änderungen geben sollte.
 
-  Weitere gute Hinweise findet ihr in `A Note About Git Commit Messages
-  <https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>`_.
+  .. note::
+    * `A Note About Git Commit Messages
+      <https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>`_
 
 * Wartet euer Repository regelmäßig!
 
