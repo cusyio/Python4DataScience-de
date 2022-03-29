@@ -94,6 +94,19 @@ Git Best Practices
   Informationen hierzu findet ihr in der Git-Dokumentation: `git-blame
   <https://git-scm.com/docs/git-blame>`_.
 
+  Wenn ihr Gitmojis in euren Commit-Nachrichten verwendet, könnt ihr später
+  leicht die Absicht des Commits erkennen.
+
+  .. note::
+
+    * `gitmoji.dev <https://gitmoji.dev/>`_
+    * `github.com/carloscuesta/gitmoji
+      <https://github.com/carloscuesta/gitmoji>`_
+    * `github.com/carloscuesta/gitmoji-cli
+      <https://github.com/carloscuesta/gitmoji-cli>`_
+    * `Visual Studio Code Extension
+      <https://marketplace.visualstudio.com/items?itemName=seatonjiang.gitmoji-vscode>`_
+
   GitLab interpretiert bestimmte Commit-Nachrichten auch als Links, z.B.:
 
   .. code-block:: console
