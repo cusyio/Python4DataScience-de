@@ -131,12 +131,12 @@ einbinden könnt, z.B.
     |License|
 
     .. |License| image:: https://img.shields.io/github/license/veit/jupyter-tutorial.svg
-       :target: https://github.com/veit/jupyter-tutorial/blob/master/LICENSE
+       :target: https://github.com/veit/jupyter-tutorial/blob/main/LICENSE
 
 |License|
 
 .. |License| image:: https://img.shields.io/github/license/veit/jupyter-tutorial.svg
-   :target: https://github.com/veit/jupyter-tutorial/blob/master/LICENSE
+   :target: https://github.com/veit/jupyter-tutorial/blob/main/LICENSE
 
 Standardformat für die Lizenzierung
 -----------------------------------

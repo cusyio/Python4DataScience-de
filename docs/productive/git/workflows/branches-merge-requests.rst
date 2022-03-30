@@ -8,8 +8,8 @@ Merge requests unterstützen einen Workflow bei regelmäßigen Deployments.
 =================================
 
 Beim Erstellen eines Branches erzeugt ihr eine neue Umgebung, in der ihr
-neues ausprobieren könnt. Dies wirkt sich nicht auf den ``master``-Branch
-aus. Und ihr könnt euch sicher sein, dass der Branch nicht mit dem ``master``
+neues ausprobieren könnt. Dies wirkt sich nicht auf den ``main``-Branch
+aus. Und ihr könnt euch sicher sein, dass der Branch nicht mit dem ``main``
 zusammengeführt wird, bevor er nicht von einer Person überprüft wurde, mit
 der ihr zusammenarbeitet.
 
@@ -18,7 +18,7 @@ der ihr zusammenarbeitet.
    also z.B. ``refactor-user-model`` oder ``user-content-cache``.
 
 .. note::
-   Achtet darauf, dass der ``master``-Branch immer nur Code enthält, der auch
+   Achtet darauf, dass der ``main``-Branch immer nur Code enthält, der auch
    für ein Deployment geeignet ist.
 
 2. Hinzufügen von Commits
@@ -81,7 +81,7 @@ werden können.
 ========
 
 Wenn  auch das Deployment eurer Änderungen erfolgreich war, können eure
-Änderungen mit dem ``master``-Branch zusammengeführt werden.
+Änderungen mit dem ``main``-Branch zusammengeführt werden.
 
 .. note::
     Durch das Einfügen bestimmter Schlüsselwörter im Text eures Merge Request

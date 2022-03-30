@@ -42,7 +42,7 @@ Git Best Practices
     $ git add .gitignore
     $ git commit -m 'Initial commit'
     $ git remote add origin ssh://git@github.com:veit/cusy.example.git
-    $ git push -u origin master
+    $ git push -u origin main
 
   Auch eine ``README.rst``-Datei sollte in jedem Repository vorhanden sein, in
   der das Deployment und der grundsätzliche Aufbau des Codes beschrieben wird.
@@ -183,7 +183,7 @@ Git Best Practices
 
         .. code-block:: console
 
-            $ git push origin HEAD:master -f
+            $ git push origin HEAD:main -f
 
   * Ändern einer Commit-Nachricht
 

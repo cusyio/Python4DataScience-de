@@ -20,7 +20,7 @@ Git-Verzweigungen
 
     .. code-block:: console
 
-        $ git checkout master
+        $ git checkout main
         $ git merge hotfix
         Updating f42c576..3a0874c
         Fast forward
@@ -35,7 +35,7 @@ Git-Verzweigungen
 
         .. code-block:: console
 
-            $ git checkout master
+            $ git checkout main
             $ git merge #42
             Merge made by recursive.
              setup.py |    1 +

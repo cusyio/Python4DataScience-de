@@ -16,8 +16,8 @@ Arbeitsbereiche
 ``git push``
     verschiebt Dateien aus dem Bühnenbereich in das Repository.
 
-    ``git push -u origin master``
+    ``git push -u origin main``
         ``-u`` legt die Upstream-Referenz für jeden Zweig fest, deren Argumente
         anschließend in ``git pull`` o.ä. nicht mehr explizit festgelegt werden
-        müssen. In unserem Beispiel wird ``master`` im entfernten Repository
+        müssen. In unserem Beispiel wird ``main`` im entfernten Repository
         referenziert.

@@ -4,14 +4,14 @@ Feature-Branches
 
 `GitHub Flow <https://guides.github.com/introduction/flow/index.html>`_ war als
 stark vereinfachte Alternative zu :doc:`git-flow` gedacht, wobei es neben dem
-``master``-Branch nur verschiedene Feature-Branches geben sollte. Auch Atlassian
+``main``-Branch nur verschiedene Feature-Branches geben sollte. Auch Atlassian
 empfiehlt eine `ähnliche Strategie
 <https://www.atlassian.com/blog/git/simple-git-workflow-is-simple>`_, wobei sie
 jedoch ein ``rebase`` der Feature-Branches vornehmen. Diese Strategien bieten
 dabei zwei Vorteile:
 
 * Das Code-Inventory bleibt relativ klein da die Feature-Branches üblicherweise
-  schnell in den ``master`` übernommen werden.
+  schnell in den ``main`` übernommen werden.
 * Die Workflows entsprechen den üblichen Methoden von *Continuous Delivery*.
 
 Diese Workflows können jedoch nicht beantworten, wie Deployments in

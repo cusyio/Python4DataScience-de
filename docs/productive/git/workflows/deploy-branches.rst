@@ -17,7 +17,7 @@ Angenommen, ihr verfügt über eine ``test``-, ``stage``- und ``prod``-Umgebung,
 dann wird zunächst ein *Merge Request* für den ``test``-Branch gestellt. Wenn
 die Tests bestanden werden, können die Änderungen auch in den ``stage``-Branch
 übernommen werden. Wenn die QA beschließt, dass der Code produktionsreif ist,
-kann er in den ``master``-Branch übernommen werden. Dieser Vorgang kann sich
+kann er in den ``main``-Branch übernommen werden. Dieser Vorgang kann sich
 mehrfach wiederholen, bis z.B. der Zeitpunkt für das *Going Life* dieser
 Änderungen gekommen ist und ein ``prod``-Branch erstellt werden kann.
 
@@ -27,10 +27,10 @@ Release-Branches
 Wenn Software an Kunden geliefert werden soll, empfehlen sich Release-Branches.
 In diesem Fall sollte jeder Branch eine *Minor Version*, also z.B. ``2.7`` oder
 ``3.4`` enthalten. Üblicherweise werden diese Branches so spät wie möglich aus
-dem ``master``-Branch erzeugt. Dadurch wird bei Bugfixes die Anzahl der Merges,
+dem ``main``-Branch erzeugt. Dadurch wird bei Bugfixes die Anzahl der Merges,
 die auf mehrere Branches verteilt werden müssen, reduziert. Nachdem ein neuer
 Release-Branch erstellt wurde, erhält dieser nur noch Bugfixes. Meist werden
-diese zunächst in den ``master`` übernommen und anschließend von dort mit
+diese zunächst in den ``main`` übernommen und anschließend von dort mit
 `git cherry-pick <https://git-scm.com/docs/git-cherry-pick>`_ in den
 Release-Branch übernommen. Dieser *upstream first*-Ansatz wird z.B. von `Google
 <https://www.chromium.org/chromium-os/chromiumos-design-docs/upstream-first>`_

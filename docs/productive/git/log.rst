@@ -32,9 +32,9 @@ Git Log
 ``$ git log - path/to/foo.py``
     filtert die Commit-Historie nach bestimmten Dateien.
 
-``$ git log master..feature``
+``$ git log main..feature``
     filtert nach unterschiedlichen Commits in verschiedenen Zweigen (Branches),
-    in unserem Fall zwischen den Branches ``master`` und ``feature``.
+    in unserem Fall zwischen den Branches ``main`` und ``feature``.
 
 ``$ git log --oneline --graph --decorate``
     anzeigen des Verlaufsdiagramms mit Referenzen, ein Commit pro Zeile.
