@@ -50,5 +50,6 @@ geworden.
     combining-merging.ipynb
     group-operations.ipynb
     aggregation.ipynb
+    convert-dtypes.ipynb
     apply.ipynb
     reshaping-pivoting.ipynb
