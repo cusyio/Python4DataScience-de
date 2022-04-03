@@ -64,6 +64,9 @@ Third-party Extensions
     erzeugt `OpenGraph <https://ogp.me>`_-Metadaten
 `sphinx-design <>https://github.com/executablebooks/sphinx-design`_
     ermöglicht das einfache Erstellen von Responsive-Design-Web-Komponenten.
+`sphinx-favicon <https://github.com/tcmetzger/sphinx-favicon>`_
+    erleichtert das Hinzufügen eigener Favicons für unterschiedliche Browser und
+    Geräte.
 
 Eigene Extensions
 -----------------
