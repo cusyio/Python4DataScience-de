@@ -51,6 +51,9 @@ Third-party Extensions
     Docstrings
 `Sphinx-autodoc-typehints <https://github.com/agronholm/sphinx-autodoc-typehints>`_
     Type hints-Support für die Sphinx autodoc-Extension
+`sphinx-click <https://github.com/click-contrib/sphinx-click>`_
+    extrahiert automatisch Dokumentation für `Click
+    <https://click.palletsprojects.com/>`_-basierte Anwendungen.
 `sphinx-git <sphinx-git>`_
     `git <https://git-scm.com/>`_-Changelog for Sphinx
 `sphinx-intl <https://pypi.python.org/pypi/sphinx-intl>`_
