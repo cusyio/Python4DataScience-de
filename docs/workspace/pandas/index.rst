@@ -1,24 +1,27 @@
 pandas
 ======
 
-`pandas <https://pandas.pydata.org/>`_ ist eine Python-Bibliothek, die für die
-Verarbeitung von Datensätzen verwendet wird. Sie verfügt über Funktionen zum
-Analysieren, Bereinigen, Manipulieren und Visualisieren von Daten. Mit pandas
-können wir große Datenmengen analysieren und Schlussfolgerungen auf der
-Grundlage statistischer Theorien ziehen. So können wir mit pandas zum Beispiel
-überprüfen, ob es Korrelationen zwischen zwei oder mehreren Spalten gibt,
-welches die Durchschnitts-, Maximal- und Minimalwerte sind. Weitere
-Möglichkeiten von pandas sind:
+`pandas <https://pandas.pydata.org/>`_ ist eine Python-Bibliothek zur
+Datenanalyse, die in den letzten Jahren sehr populär geworden ist. Auf der
+Website, wird pandas so beschrieben:
 
-* schnelle und effiziente Bearbeitung und Analyse von Daten
-* das Einfügen und Löschen von Spalten in Tabellen und höherdimensionale Objekte
-* das Zusammenführen und verbinden von Datensätzen
-* das Verdichten und vereinfachen von Daten und die Darstellung in Pivottabellen
-* leistungsstarke Gruppierungsfunktionen zur Durchführung von
-  Split-apply-combine-Operationen
+    »pandas ist ein schnelles, leistungsfähiges, flexibles und einfach zu
+    bedienendes Open-Source-Tool zur Datenanalyse und -manipulation, das auf der
+    Programmiersprache Python aufbaut.«
 
-Damit ist pandas zu einer der bedeutendsten Bibliotheken für Data-Science
-geworden.
+Genauer ist pandas ein In-Memory-Analysewerkzeug, das SQL-ähnliche Konstrukte,
+sowie statistische und analytische Werkzeuge bietet. Dabei baut pandas auf
+`Cython <https://cython.org/>`_ und :doc:`../numpy/index` auf, wodurch es
+weniger speicherntensiv und schneller ist als reiner Python-Code. Meist wird
+pandas genutzt um
+
+* :doc:`/data-processing/serialisation-formats/excel` zu ersetzen
+* einen `ETL-Prozess <https://de.wikipedia.org/wiki/ETL-Prozess>`_ zu
+  realisieren
+* :doc:`/data-processing/serialisation-formats/csv/index`- oder
+  :doc:`/data-processing/serialisation-formats/json/index`-Daten zu
+  verarbeiten
+* maschinelles Lernen vorzubereiten
 
 .. seealso::
     * `Home
