@@ -19,10 +19,10 @@ Authentifizierung
 `FastAPI Security <https://github.com/jacobsvante/fastapi-security>`_
     Authentifizierung und Autorisierung
 `FastAPI simple security <https://github.com/mrtolkien/fastapi_simple_security>`_
-    Auf API-Schlüsseln basierendes Sicherheitspaket, das fokusiert ist auf die
-    enfache Nutzung
+    Auf API-Schlüsseln basierendes Sicherheitspaket, das fokussiert ist auf die
+    einfache Nutzung
 `FastAPI Users <https://github.com/fastapi-users/fastapi-users>`_
-    Fügt schnell ein anpassungsfühiges Registrierungs- und
+    Fügt schnell ein anpassungsfähiges Registrierungs- und
     Authentifizierungssystem hinzu
 
 ORMs
@@ -35,7 +35,7 @@ ORMs
     Einfache Möglichkeit, eine REST-API auf der Grundlage von `PeeWee
     <https://github.com/coleifer/peewee>`_-Modellen zu erstellen
 `GINO <https://github.com/python-gino/gino>`_
-    leichtgewichtiger asynchroner ORM, der auf SQLAlchemy Core für Python
+    Leichtgewichtiger asynchroner ORM, der auf SQLAlchemy Core für Python
     :doc:`asyncio </performance/asyncio-example>` aufbaut und PostgreSQL mit
     `asyncpg <https://github.com/MagicStack/asyncpg>`_, und MySQL mit `aiomysql
     <https://github.com/aio-libs/aiomysql>`_ unterstützt (→ `Beispiel
@@ -45,14 +45,14 @@ ORMs
     <https://github.com/encode/databases>`_ und `TypeSystem
     <https://github.com/encode/typesystem>`_ aufbaut  
 `ormar <https://github.com/collerek/ormar/>`_
-    asynchroner Mini-ORM, mit dem ihr nur ein Set von Modellen pflegen und ggf.
+    Asynchroner Mini-ORM, mit dem ihr nur ein Set von Modellen pflegen und ggf.
     mit :doc:`/data-processing/postgresql/alembic` migrieren müsst (→ `Beispiel
     <https://collerek.github.io/ormar/fastapi/>`__); zudem wird er unterstützt
     von `fastapi-users <https://github.com/fastapi-users/fastapi-users>`_,
     `fastapi-crudrouter <https://github.com/awtkns/fastapi-crudrouter>`_ und
     `fastapi-pagination <https://github.com/uriyyo/fastapi-pagination>`_.
 `Piccolo <https://github.com/piccolo-orm/piccolo>`_
-    Schneller, benutzerfreundlicher ORM und Query Builder, das Asyncio
+    Schneller, benutzerfreundlicher ORM und Query Builder, der Asyncio
     unterstützt (→ `Beispiele
     <https://github.com/piccolo-orm/piccolo_examples>`__)
 `Prisma Client Python <https://github.com/RobertCraigie/prisma-client-py>`_
@@ -61,7 +61,7 @@ ORMs
     MySQL, SQLite, MongoDB und SQL Server (→ `Beispiel
     <https://github.com/RobertCraigie/prisma-client-py/tree/main/examples/fastapi-basic>`__)
 `Tortoise ORM <https://github.com/tortoise/tortoise-orm>`_
-    Einfach zu bedienender asyncio ORM, inspiriert von Django (→ `Beispiele
+    Einfach zu bedienender Asyncio-ORM, inspiriert von Django (→ `Beispiele
     <https://tortoise.github.io/examples/fastapi.html>`__); `Aerich
     <https://github.com/tortoise/aerich>`_ ist ein Datenbankmigrationswerkzeug
     für Tortoise ORM
@@ -93,13 +93,13 @@ ODMs
     Python Object-Document Mapper für die Arbeit mit MongoDB
 `ODMantic <https://github.com/art049/odmantic/>`_
     Asynchroner ODM (Object Document Mapper) für MongoDB basierend auf
-    Python-Typ-Hints und `pydantic <https://pydantic-docs.helpmanual.io/>`__
+    Python-Type-Hints und `pydantic <https://pydantic-docs.helpmanual.io/>`__
 
 Code-Generatoren
 ----------------
 
 `fastapi-code-generator <https://github.com/koxudaxi/fastapi-code-generator>`_
-    Code-Generator erstellt eine FastAPI-Anwendung aus einer openapi-Datei,
+    Code-Generator erstellt eine FastAPI-Anwendung aus einer OpenAPI-Datei,
     wobei `datamodel-code-generator
     <https://github.com/koxudaxi/datamodel-code-generator>`_ zum Generieren des
     pydantic-Modells verwendet wird
@@ -117,8 +117,8 @@ Caching
 `FastAPI Cache <https://github.com/comeuplater/fastapi_cache>`_
     Leichtgewichtiges Cache-System
 `fastapi-cache <https://github.com/long2ice/fastapi-cache>`_
-    Caching von Fastapi-Antworten und Funktionsergebnissen, mit Backends, die
-    `redis`, `memcache` und `dynamodb` unterstützen.
+    Caching von FastAPI-Antworten und Funktionsergebnissen, mit Backends, die
+    `redis`, `memcache` und `dynamodb` unterstützen
 
 E-Mail
 ~~~~~~
@@ -172,7 +172,7 @@ Websockets
 ~~~~~~~~~~
 
 `fastapi-socketio <https://github.com/pyropy/fastapi-socketio>`_
-    Einfache Integration von `socket.io in <https://socket.io/>`_ eure
+    Einfache Integration von `socket.io in <https://socket.io/>`_ in eure
     FastAPI-Anwendung
 `FastAPI Websocket Pub/Sub <https://github.com/permitio/fastapi_websocket_pubsub>`_
     Schneller und dauerhafter Pub/Sub-Kanal über Websockets
@@ -183,14 +183,14 @@ Andere Tools
 ------------
 
 `Pydantic-SQLAlchemy <https://github.com/tiangolo/pydantic-sqlalchemy>`_
-    Erzeugen von Pydantic-Modelle aus SQLAlchemy-Modellen
+    Erzeugen von Pydantic-Modellen aus SQLAlchemy-Modellen
 `Fastapi Camelcase <https://github.com/nf1s/fastapi-camelcase>`_
-    Bereitstellung einer Klasse von Request- und Response-Bodies für fastapi
+    Bereitstellung einer Klasse von Request- und Response-Bodies für FastAPI
 `fastapi_profiler <https://github.com/sunhailin-Leo/fastapi_profiler>`_
-    FastAPI Middleware basierend auf `pyinstrument
+    FastAPI-Middleware basierend auf `pyinstrument
     <https://github.com/joerick/pyinstrument>`_ zur Leistungsüberprüfung
 `fastapi-versioning <https://github.com/DeanWay/fastapi-versioning>`_
-    Api-Versionierung für Fastapi-Webanwendungen
+    API-Versionierung für FastAPI-Webanwendungen
 `Jupter Notebook REST API <https://github.com/Invictify/Jupter-Notebook-REST-API>`_
     Jupyter-Notebooks als REST-API-Endpunkt ausführen
 `manage-fastapi <https://github.com/ycd/manage-fastapi>`_
