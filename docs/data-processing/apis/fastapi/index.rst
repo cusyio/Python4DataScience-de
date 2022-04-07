@@ -37,3 +37,4 @@ Hauptmerkmale sind:
 
     install
     example
+    extensions
