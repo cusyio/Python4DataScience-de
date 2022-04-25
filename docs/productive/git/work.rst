@@ -53,8 +53,10 @@ An einem Projekt arbeiten
 ``$ git commit -m 'Commit message'``
     einen neuen Commit mit den hinzugefügten Änderungen machen.
 ``git commit --dry-run --short``
-    ``--dry-run`` zeigt, was committet werden würde.
-    ``--short`` zeigt den Status im Kurzformat an.
+
+    * ``--dry-run`` zeigt, was committet werden würde.
+    * ``--short`` zeigt den Status im Kurzformat an.
+
 ``$ git reset [file]``
     zurückkehren zur aktuellen Datei aus dem Bühnenbereich.
 ``$ git rm [file]``
