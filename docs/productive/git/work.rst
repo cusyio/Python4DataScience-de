@@ -62,6 +62,13 @@ An einem Projekt arbeiten
 ``$ git stash``
     verschieben der aktuellen Änderungen aus dem Arbeitsbereich in das Versteck
     (engl.: stash).
+
+    Um eure versteckten Änderungen möglichst gut unterscheiden zu können,
+    empfehlen sich die folgenden beiden Optionen:
+
+    * ``git stash -p`` erlaubt euch, partielle Änderungen zu verstecken.
+    * ``git stash save MESSAGE`` fügt den Änderungen eine Nachricht hinzu.
+
 ``$ git stash pop``
     übernehmen der Änderungen aus dem Versteck in den Arbeitsbereich und leeren
     des Verstecks.
