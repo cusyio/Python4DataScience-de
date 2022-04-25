@@ -68,11 +68,19 @@ An einem Projekt arbeiten
     Um eure versteckten Änderungen möglichst gut unterscheiden zu können,
     empfehlen sich die folgenden beiden Optionen:
 
-    * ``git stash -p`` erlaubt euch, Änderungen partiell zu verstecken.
-    * ``git stash save MESSAGE`` fügt den Änderungen eine Nachricht hinzu.
+    ``git stash -p``
+        erlaubt euch, Änderungen partiell zu verstecken.
+    ``git stash save MESSAGE``
+        fügt den Änderungen eine Nachricht hinzu.
+    ``git stash -u UNTRACKED_FILE``
+        versteckt unversionierte Dateien.
+    ``$ git stash list``
+        listet die versteckten Änderungen auf.
+    ``$ git stash show``
+        zeigt die Änderungen in den versteckten Dateien an.
+    ``$ git stash pop``
+        übernimmt Änderungen aus dem Versteck in den Arbeitsbereich und leert
+        das Versteck.
 
-``$ git stash pop``
-    übernehmen der Änderungen aus dem Versteck in den Arbeitsbereich und leeren
-    des Verstecks.
 ``$ git stash drop``
     leeren eines spezifischen Verstecks.
