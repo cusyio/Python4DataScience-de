@@ -109,7 +109,7 @@ kann ggf. erhöht werden, z.B. mit:
 
 .. code-block:: console
 
-    $ git config credential.helper 'cache --timeout=3600'
+    $ git config --global credential.helper 'cache --timeout=3600'
 
 macOS
 :::::
