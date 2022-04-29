@@ -304,3 +304,23 @@ Hierfür wird üblicherweise in der ``~/.gitconfig``-Datei folgendes angegeben:
     Hilfreiche Vorlagen findet ihr in meinem `dotfiles
     <https://github.com/veit/dotfiles/tree/main/gitignores>`__-Repository oder
     auf der Website `gitignore.io <https://gitignore.io/>`_.
+
+Ignorieren einer Datei aus dem Repository
+:::::::::::::::::::::::::::::::::::::::::
+
+Wenn ihr eine Datei ignorieren wollen, die in der Vergangenheit bereits dem Repository hinzugefügt
+wurde, müsst ihr die Datei aus eurem Repository löschen und dann eine
+``.gitignore``-Regel für sie hinzufügen. Die Verwendung der Option ``--cached`` bei ``git rm``
+bedeutet, dass die Datei aus dem Repository gelöscht wird, aber als ignorierte Datei in eurem
+Arbeitsverzeichnis verbleibt.
+
+.. code-block:: console
+
+    $ echo *.log >> .gitignore
+    $ git rm --cached *.log
+    rm 'instance.log'
+    $ git commit -m "Remove log files"
+
+.. note::
+    Ihr könnt die Option ``--cached`` weglassen, wenn ihr die Datei sowohl aus dem Repository als
+    auch aus Ihrem lokalen Dateisystem löschen wollt.
