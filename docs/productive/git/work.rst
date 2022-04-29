@@ -38,24 +38,30 @@ An einem Projekt arbeiten
     neuen, geänderten und bereits zum Commit vorgemerkten Dateien.
 ``$ git add [file]``
     fügt eine Datei dem Bühnenbereich hinzu.
-``$ git add -p [file]``
-    fügt Teile einer Datei dem Bühnenbereich hinzu.
-``$ git add -e [file]``
-    die zu übernehmenden Änderungen können im Standardeditor bearbeitet werden.
+
+    ``-p``
+        fügt Teile einer Datei dem Bühnenbereich hinzu.
+    ``-e``
+        die zu übernehmenden Änderungen können im Standardeditor bearbeitet
+        werden.
+
 ``$ git diff [file]``
     zeigt Unterschiede zwischen Arbeits- und Bühnenbereich.
-``$ git diff --staged [file]``
-    zeigt Unterschiede zwischen Bühnenbereich und Repository an.
-``$ git diff --word-diff``
-    zeigt die geänderten Wörter an.
+
+    ``--staged``
+        zeigt Unterschiede zwischen Bühnenbereich und Repository an.
+    ``--word-diff``
+        zeigt die geänderten Wörter an.
+
 ``$ git checkout -- [file]``
     unwiderruflich Änderungen im Arbeitsbereich verwerfen.
-``$ git commit -m 'Commit message'``
+``$ git commit``
     einen neuen Commit mit den hinzugefügten Änderungen machen.
-``git commit --dry-run --short``
 
-    * ``--dry-run`` zeigt, was committet werden würde.
-    * ``--short`` zeigt den Status im Kurzformat an.
+    ``-m 'Commit message'``
+        direkt in der Kommandozeile eine Commit-Message schreiben.
+    ``--dry-run --short``
+        zeigt, was committet werden würde mit dem Status im Kurzformat.
 
 ``$ git reset [file]``
     zurückkehren zur aktuellen Datei aus dem Bühnenbereich.
@@ -63,23 +69,23 @@ An einem Projekt arbeiten
     entfernen einer Datei aus dem Arbeits- und Bühnenbereich.
 ``$ git stash``
     verschieben der aktuellen Änderungen aus dem Arbeitsbereich in das Versteck
-    (engl.: stash).
+    (engl.: *stash*).
 
     Um eure versteckten Änderungen möglichst gut unterscheiden zu können,
     empfehlen sich die folgenden beiden Optionen:
 
-    ``git stash -p``
+    ``-p``
         erlaubt euch, Änderungen partiell zu verstecken.
-    ``git stash save MESSAGE``
+    ``save MESSAGE``
         fügt den Änderungen eine Nachricht hinzu.
-    ``git stash -u UNTRACKED_FILE``
+    ``-u UNTRACKED_FILE``
         versteckt unversionierte Dateien.
-    ``$ git stash list``
+    ``list``
         listet die versteckten Änderungen auf.
-    ``$ git stash show``
+    ``show``
         zeigt die Änderungen in den versteckten Dateien an.
-    ``$ git stash pop``
+    ``pop``
         übernimmt Änderungen aus dem Versteck in den Arbeitsbereich und leert
         das Versteck.
-    ``$ git stash drop``
+    ``drop``
         leeren eines spezifischen Verstecks.
