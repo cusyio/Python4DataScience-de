@@ -324,3 +324,31 @@ Arbeitsverzeichnis verbleibt.
 .. note::
     Ihr könnt die Option ``--cached`` weglassen, wenn ihr die Datei sowohl aus dem Repository als
     auch aus Ihrem lokalen Dateisystem löschen wollt.
+
+Commit einer ignorierten Datei
+::::::::::::::::::::::::::::::
+
+Es ist möglich, den Commit einer ignorierten Datei an das Repository mit der Option ``-f`` (oder
+``--force``) bei ``git add`` zu erzwingen:
+
+.. code-block:: console
+
+    $ cat data/.gitignore
+    *
+    $ git add -f data/iris.csv
+    $ git commit -m "Force add iris.csv"
+
+Ihr könnt dies in Erwägung ziehen, wenn ihr ein allgemeines Muster (wie ``*``) definiert habt, aber
+eine bestimmte Datei übertragen wollt. Eine bessere Lösung ist meist jedoch, eine Ausnahme von
+der allgemeinen Regel zu definieren:
+
+.. code-block:: console
+
+    $ echo '!iris.csv' >> data/.gitignore
+    $ cat data/.gitignore
+    *
+    !iris.csv
+    $ git add data/iris.csv
+    $ git commit -m "Add iris.csv"
+
+Dieser Ansatz dürfte für euer Team offensichtlicher und weniger verwirrend sein.
