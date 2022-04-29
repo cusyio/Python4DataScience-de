@@ -7,10 +7,10 @@ Die Arbeit an einem Projekt beginnen
 Ein eigenes Projekt starten
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``$ git init [my_project]``
+:samp:`$ git init {MY_PROJECT}`
     erstellt ein neues, lokales Git-Repository
 
-    ``[my_project]``
+    :samp:`{MY_PROJECT}`
         wenn der Projektname angegeben wird, erzeugt Git ein neues Verzeichnis
         und initialisiert es
 
@@ -20,7 +20,7 @@ Ein eigenes Projekt starten
 An einem Projekt mitarbeiten
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``$ git clone [project_url]``
+:samp:`$ git clone {PROJECT_URL}`
     lädt ein Projekt mit allen Zweigen (engl.: branches) und der gesamten
     Historie vom entfernten Repository herunter
 
@@ -36,7 +36,7 @@ An einem Projekt arbeiten
 ``$ git status``
     zeigt den Status des aktuellen Zweiges im Arbeitsverzeichnisses an mit
     neuen, geänderten und bereits zum Commit vorgemerkten Dateien.
-``$ git add [file]``
+:samp:`$ git add {FILE}`
     fügt eine Datei dem Bühnenbereich hinzu.
 
     ``-p``
@@ -45,7 +45,7 @@ An einem Projekt arbeiten
         die zu übernehmenden Änderungen können im Standardeditor bearbeitet
         werden.
 
-``$ git diff [file]``
+:samp:`$ git diff {FILE}`
     zeigt Unterschiede zwischen Arbeits- und Bühnenbereich.
 
     ``--staged``
@@ -53,19 +53,19 @@ An einem Projekt arbeiten
     ``--word-diff``
         zeigt die geänderten Wörter an.
 
-``$ git checkout -- [file]``
+:samp:`$ git checkout -- {FILE}`
     unwiderruflich Änderungen im Arbeitsbereich verwerfen.
 ``$ git commit``
     einen neuen Commit mit den hinzugefügten Änderungen machen.
 
-    ``-m 'Commit message'``
+    :samp:`-m '{COMMIT_MESSAGE}'`
         direkt in der Kommandozeile eine Commit-Message schreiben.
     ``--dry-run --short``
         zeigt, was committet werden würde mit dem Status im Kurzformat.
 
-``$ git reset [file]``
+:samp:`$ git reset {FILE}`
     zurückkehren zur aktuellen Datei aus dem Bühnenbereich.
-``$ git rm [file]``
+:samp:`$ git rm {FILE}`
     entfernen einer Datei aus dem Arbeits- und Bühnenbereich.
 ``$ git stash``
     verschieben der aktuellen Änderungen aus dem Arbeitsbereich in das Versteck
@@ -135,9 +135,9 @@ An einem Projekt arbeiten
 
             stash@{0} (6565fdd1cc7dff9e0e6a575e3e20402e3881a82e) gelöscht
 
-    ``save MESSAGE``
+    :samp:`save {MESSAGE}`
         fügt den Änderungen eine Nachricht hinzu.
-    ``-u UNTRACKED_FILE``
+    :samp:`-u {UNTRACKED_FILE}`
         versteckt unversionierte Dateien.
     ``list``
         listet die versteckten Änderungen auf.
