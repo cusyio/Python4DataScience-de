@@ -128,6 +128,25 @@ An einem Projekt arbeiten
         | ``y``         | Diese Änderung verstecken                     |
         +---------------+-----------------------------------------------+
 
+    ``branch``
+        erstellt aus versteckten Dateien einen Zweig, :abbr:`z.B. (zum
+        Beispiel)`:
+
+        .. code-block:: console
+
+            $ git stash branch stash-example stash@{0}
+            Auf Branch stash-example
+            Zum Commit vorgemerkte Änderungen:
+              (benutzen Sie "git restore --staged <Datei>..." zum Entfernen aus der Staging-Area)
+                neue Datei:     docs/productive/git/work.rst
+
+            Änderungen, die nicht zum Commit vorgemerkt sind:
+              (benutzen Sie "git add <Datei>...", um die Änderungen zum Commit vorzumerken)
+              (benutzen Sie "git restore <Datei>...", um die Änderungen im Arbeitsverzeichnis zu verwerfen)
+                geändert:       docs/productive/git/index.rst
+
+            stash@{0} (6565fdd1cc7dff9e0e6a575e3e20402e3881a82e) gelöscht
+
     ``save MESSAGE``
         fügt den Änderungen eine Nachricht hinzu.
     ``-u UNTRACKED_FILE``
