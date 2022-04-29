@@ -81,6 +81,5 @@ An einem Projekt arbeiten
     ``$ git stash pop``
         übernimmt Änderungen aus dem Versteck in den Arbeitsbereich und leert
         das Versteck.
-
-``$ git stash drop``
-    leeren eines spezifischen Verstecks.
+    ``$ git stash drop``
+        leeren eines spezifischen Verstecks.
