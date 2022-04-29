@@ -74,38 +74,26 @@ An einem Projekt arbeiten
     Um eure versteckten Änderungen möglichst gut unterscheiden zu können,
     empfehlen sich die folgenden beiden Optionen:
 
-    ``-p``
-        erlaubt euch, Änderungen partiell zu verstecken.
+    ``-p`` oder ``--patch``
+        erlaubt euch, Änderungen partiell zu verstecken, :abbr:`z.B. (zum
+        Beispiel)`:
 
-        ``-p`` oder ``--patch``
-            zeigt die Unterschiede detailliert an, :abbr:`z.B. (zum Beispiel)`:
+        .. code-block:: console
 
-            .. code-block:: console
-
-                $ git show -p
-                diff --git a/docs/productive/git/work.rst b/docs/productive/git/work.rst
-                index cff338e..1988ab2 100644
-                --- a/docs/productive/git/work.rst
-                +++ b/docs/productive/git/work.rst
-                @@ -83,7 +83,16 @@ An einem Projekt arbeiten
-                     ``list``
-                         listet die versteckten Änderungen auf.
-                     ``show``
-                -        zeigt die Änderungen in den versteckten Dateien an.
-                +        zeigt die Änderungen in den versteckten Dateien an, :abbr:`z.B. (zum
-                +        Beispiel)`
-                +
-                +        .. code-block:: console
-                +
-                +            $ git show
-                +             index.rst | 1 +
-                +             work.rst | 3 +++
-                +             2 files changed, 4 insertions(+)
-                +
-                     ``pop``
-                         übernimmt Änderungen aus dem Versteck in den Arbeitsbereich und leert
-                         das Versteck, :abbr:`z.B. (zum Beispiel)`
-                (1/1) Stash this hunk [y,n,q,a,d,e,?]? y
+            $ git stash -p
+            diff --git a/docs/productive/git/work.rst b/docs/productive/git/work.rst
+            index cff338e..1988ab2 100644
+            --- a/docs/productive/git/work.rst
+            +++ b/docs/productive/git/work.rst
+            @@ -83,7 +83,16 @@ An einem Projekt arbeiten
+                 ``list``
+                     listet die versteckten Änderungen auf.
+                 ``show``
+            -        zeigt die Änderungen in den versteckten Dateien an.
+            +        zeigt die Änderungen in den versteckten Dateien an, :abbr:`z.B. (zum
+            +        Beispiel)`
+            …
+            (1/1) Stash this hunk [y,n,q,a,d,e,?]? y
 
         Mit ``?`` erhaltet ihr eine vollständige Liste der Optionen. Die
         gebräuchlichsten sind:
