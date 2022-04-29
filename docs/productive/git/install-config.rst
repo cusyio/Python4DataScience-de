@@ -352,3 +352,22 @@ der allgemeinen Regel zu definieren:
     $ git commit -m "Add iris.csv"
 
 Dieser Ansatz dürfte für euer Team offensichtlicher und weniger verwirrend sein.
+
+Fehlersuche in ``.gitignore``-Dateien
+:::::::::::::::::::::::::::::::::::::
+
+Bei komplizierten ``.gitignore``-Mustern oder bei Mustern, die über mehrere ``.gitignore``-Dateien
+verteilt sind, kann es schwierig sein, herauszufinden, warum eine bestimmte Datei ignoriert wird.
+Ihr könnt den Befehl ``git check-ignore`` mit der Option ``-v`` (oder ``--verbose``) verwenden, um
+festzustellen, welches Muster die Ursache für das Ignorieren einer bestimmten Datei ist:
+
+.. code-block:: console
+
+    $ git check-ignore -v data/iris.csv
+    data/.gitignore:2:!iris.csv	data/iris.csv
+
+Die Ausgabe zeigt :samp:`{FILE_CONTAINING_THE_PATTERN}:{LINE_NUMBER_OF_THE_PATTERN}:{PATTERN}
+{FILE_NAME}`
+
+Ihr könnt mehrere Dateinamen an ``git check-ignore`` übergeben, wenn ihr möchtet, und die Namen
+selbst müssen nicht einmal den Dateien entsprechen, die in eurem Repository existieren.
