@@ -166,6 +166,102 @@ aussehen:
     /tmp
     *.swp
 
+Dabei verwendet Git `Globbing <https://linux.die.net/man/7/glob>`_-Muster,
+:abbr:`u.a. (unter anderem)`:
+
++-------------------------------+-------------------------------+-------------------------------+ 
+| Muster                        | Beispiel                      | Erläuterung                   |
++===============================+===============================+===============================+ 
+| .. code-block:: console       | ``logs/instance.log``,        | Ihr könnt zwei Sternchen      |
+|                               | ``logs/instance/error.log``,  | voranstellen um Verzeichnisse |
+|     **/logs                   | ``prod/logs/instance.log``    | an einer beliebigen Stelle im |
+|                               |                               | zu finden.                    |
++-------------------------------+-------------------------------+-------------------------------+ 
+| .. code-block:: console       | ``logs/instance.log``,        | Ihr könnt zwei Sternchen      |
+|                               | ``prod/logs/instance.log``    | voranstellen um Dateien anhand|
+|     **/logs/instance.log      | aber nicht                    | ihres Namens in einem         |
+|                               | ``logs/prod/instance.log``    | übergeordneten Verzeichnis zu |
+|                               |                               | finden.                       |
++-------------------------------+-------------------------------+-------------------------------+ 
+| .. code-block:: console       | ``instance.log``,             | Ein Sternchen ist ein         |
+|                               | ``error.log``,                | Platzhalter für null oder     |
+|     *.log                     | ``logs/instance.log``         | mehr Zeichen.                 |
++-------------------------------+-------------------------------+-------------------------------+ 
+| .. code-block:: console       | ``/logs/instance.log``,       | Ein vor ein Muster gestelltes |
+|                               | ``/logs/error.log``,          | Anführungszeichen ignoriert   |
+|     /logs                     | nicht jedoch                  | dieses. Wenn eine Datei mit   |
+|     !/logs/.gitkeep           | ``/logs/.gitkeep`` oder       | einem Muster übereinstimmt,   |
+|                               | ``/instance.log``             | aber auch mit einem           |
+|                               |                               | negierenden, das später       |
+|                               |                               | definiert ist, wird sie nicht |
+|                               |                               | ignoriert.                    |
++-------------------------------+-------------------------------+-------------------------------+ 
+| .. code-block:: console       | ``/instance.log``,            | Mit dem vorangestellten       |
+|                               | nicht jedoch                  | Schrägstrich passt das Muster |
+|     /instance.log             | ``logs/instance.log``         | nur zu Dateien im             |
+|                               |                               | Stammverzeichnis des          |
+|                               |                               | Repository.                   |
++-------------------------------+-------------------------------+-------------------------------+ 
+| .. code-block:: console       | ``instance.log``,             | Üblicherweise passen die      |
+|                               | ``logs/instance.log``         | Muster zu Dateien in jedem    |
+|     instance.log              |                               | Verzeichnis.                  |
++-------------------------------+-------------------------------+-------------------------------+ 
+| .. code-block:: console       | ``instance0.log``,            | Ein Fragezeichen passt genau  |
+|                               | ``instance1.log``,            | zu einem Zeichen.             |
+|     instance?.log             | aber nicht                    |                               |
+|                               | ``instance.log`` oder         |                               |
+|                               | ``instance10.log``            |                               |
++-------------------------------+-------------------------------+-------------------------------+ 
+| .. code-block:: console       | ``instance0.log``,            | Eckige Klammern können        |
+|                               | ``instance1.log``,            | verwendet werden um ein       |
+|     instance[0-9].log         | aber nicht                    | einzelnes Zeichen aus einem   |
+|                               | ``instance.log`` oder         | bestimmten Bereich zu finden. |
+|                               | ``instance10.log``            |                               |
++-------------------------------+-------------------------------+-------------------------------+ 
+| .. code-block:: console       | ``instance0.log``,            | Eckige Klammern passen        |
+|                               | ``instance1.log``,            | auf ein einzelnes Zeichen     |
+|     instance[01].log          | aber nicht                    | aus einer bestimmten Menge.   |
+|                               | ``instance2.log`` oder        |                               |
+|                               | ``instance01.log``            |                               |
++-------------------------------+-------------------------------+-------------------------------+ 
+| .. code-block:: console       | ``instance2.log``,            | Ein Ausrufezeichen kann       |
+|                               | aber nicht                    | verwendet werden um ein       |
+|     instance[!01].log         | ``instance0.log``,            | beliebiges Zeichen aus einer  |
+|                               | ``instance1.log`` oder        | angegebenen Menge zu finden.  |
+|                               | ``instance01.log``            |                               |
++-------------------------------+-------------------------------+-------------------------------+ 
+| .. code-block:: console       | ``logs``                      | Wenn kein Schrägstrich        |
+|                               | ``logs/instance.log``         | anhängt, passt das Muster     |
+|     logs                      | ``prod/logs/instance.log``    | sowohl auf Dateien als auch   |
+|                               |                               | auf den Inhalt von            |
+|                               |                               | Verzeichnissen mit diesem     |
+|                               |                               | Namen.                        |
++-------------------------------+-------------------------------+-------------------------------+ 
+| .. code-block:: console       | ``logs/instance.log``,        | Das Anhängen eines            |
+|                               | ``logs/prod/instance.log``,   | Schrägstrichs zeigt an, dass  |
+|     logs/                     | ``prod/logs/instance.log``    | das Muster ein Verzeichnis    |
+|                               |                               | ist. Der gesamte Inhalt jedes |
+|                               |                               | Verzeichnisses im Repository, |
+|                               |                               | das diesem Namen entspricht – |
+|                               |                               | einschließlich all seiner     |
+|                               |                               | Dateien und Unterverzeichnisse|
+|                               |                               | – wird ignoriert.             |
++-------------------------------+-------------------------------+-------------------------------+ 
+| .. code-block:: console       |``var/instance.log``,          | Zwei Sternchen passen zu null |
+|                               |``var/logs/instance.log``,     | oder mehr Verzeichnissen.     |
+|     var/**/instance.log       |``var/logs/instance/error.log``|                               |
++-------------------------------+-------------------------------+-------------------------------+ 
+| .. code-block:: console       | ``logs/instance/error.log``,  | Wildcards können auch in      |
+|                               | ``logs/instance1/error.log``  | Verzeichnisnamen verwendet    |
+|     logs/instance*/error.log  |                               | werden.                       |
++-------------------------------+-------------------------------+-------------------------------+ 
+| .. code-block:: console       | ``logs/instance.log``,        | Muster, die eine Datei in     |
+|                               | nicht jedoch                  | einem bestimmten Verzeichnis  |
+|     logs/instance.log         | ``var/logs/instance.log``     | angeben, sind relativ zum     |
+|                               | oder                          | Stammverzeichnis des          |
+|                               | ``instance.log``              | Repository.                   |
++-------------------------------+-------------------------------+-------------------------------+ 
+
 Git-commit leerer Ordner
 ::::::::::::::::::::::::
 
