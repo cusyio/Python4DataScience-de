@@ -164,4 +164,9 @@ An einem Projekt arbeiten
             $ git stash pop stash@{2}
 
     ``drop``
-        leeren eines spezifischen Verstecks.
+        leeren eines spezifischen Verstecks, :abbr:`z.B. (zum Beispiel)`:
+
+        .. code-block:: console
+
+            $ git stash drop stash@{0}
+            stash@{0} (defcf56541b74a1ccfc59bc0a821adf0b39eaaba) gelöscht
