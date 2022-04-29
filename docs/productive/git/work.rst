@@ -161,7 +161,7 @@ An einem Projekt arbeiten
 
         .. code-block:: console
 
-            ``git stash pop stash@{2}``
+            $ git stash pop stash@{2}``
 
     ``drop``
         leeren eines spezifischen Verstecks.
