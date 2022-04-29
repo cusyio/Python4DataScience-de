@@ -86,6 +86,11 @@ An einem Projekt arbeiten
         zeigt die Änderungen in den versteckten Dateien an.
     ``pop``
         übernimmt Änderungen aus dem Versteck in den Arbeitsbereich und leert
-        das Versteck.
+        das Versteck, :abbr:`z.B. (zum Beispiel)`
+
+        .. code-block:: console
+
+            ``git stash pop stash@{2}``
+
     ``drop``
         leeren eines spezifischen Verstecks.
