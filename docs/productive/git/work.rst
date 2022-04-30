@@ -75,6 +75,27 @@ An einem Projekt arbeiten
     Standardmäßig führt ``git diff`` den Vergleich gegen ``HEAD`` aus. Wenn ihr im obigen Beispiel
     ``git diff HEAD docs/productive/git/work.rst`` verwendet, hat das denselben Effekt.
 
+    git diff können Git-Referenzen auf Commits an diff übergeben werden. Neben ``HEAD`` sind einige
+    weitere Beispiele für Referenzen Tags und Zweignamen, :abbr:`z.B. (zum Beispiel)` :samp:`git
+    diff {MAIN}..{FEATURE_BRANCH}`. Der Punktoperator in diesem Beispiel zeigt an, dass die
+    ``diff``-Eingabe die Spitzen der beiden Zweige sind. Der gleiche Effekt tritt ein, wenn die
+    Punkte weggelassen werden und ein Leerzeichen zwischen den Zweigen verwendet wird. Zusätzlich
+    gibt es einen Operator mit drei Punkten: :samp:`git diff {MAIN}...{FEATURE_BRANCH}`, der ein
+    Diff initiiert, bei dem der erste Eingabeparammeter :samp:`{MAIN}` so geändert wird, dass die
+    Referenz der gemeinsame Vorfahre von :samp:`MAIN` und :samp:`FEATURE` ist.
+
+    Jeder Commit in Git hat eine Commit-ID,
+    die ihr erhalten könnt, wenn ihr ``git log`` ausführt. Anschließnd könnt ihr diese Commit-ID
+    auch an ``git diff`` übergeben:
+
+    .. code-block:: console
+
+        $ git log --pretty=oneline 
+        af1a395a08221ffa83b46f562b6823cf044a108c (HEAD -> main, origin/main, origin/HEAD) :memo: Add some git diff examples
+        d650de52306b63b93e92bba4f15be95eddfea425 :memo: Add „Debug .gitignore files“ to git docs
+        …
+        $ git diff af1a395a08221ffa83b46f562b6823cf044a108c d650de52306b63b93e92bba4f15be95eddfea425
+
     ``--staged``, ``--cached``
         zeigt Unterschiede zwischen Bühnenbereich und Repository an.
     ``--word-diff``
