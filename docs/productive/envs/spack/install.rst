@@ -21,21 +21,21 @@ Anforderungen
 
 * Signieren und Verifizieren von Build-Caches
 
-  * ``gnupg2``
+  * ``gnupg2`` für ``gpg``-Subcommand
 
-… for Debian/Ubuntu:
+.. tab:: Debian/Ubuntu
 
-.. code-block:: console
+   .. code-block:: console
 
-    $ sudo apt install build-essential patch tar gzip bzip2 git gnupg2
+      $ sudo apt install build-essential patch tar gzip bzip2 git gnupg2
 
-… oder für macOS:
+.. tab:: macOS
 
-.. code-block:: console
+   .. code-block:: console
 
-    $ xcode-select --install
-    $ brew install make bash gzip bzip2 git gnupg
-    $ brew link gnupg
+      $ xcode-select --install
+      $ brew install make bash gzip bzip2 git gnupg
+      $ brew link gnupg
 
 Anschließend wird die Shell konfiguriert indem z.B. für die Bash folgendes in
 die Bash-Konfiguration eingetragen wird:
@@ -43,8 +43,6 @@ die Bash-Konfiguration eingetragen wird:
 .. code-block:: console
 
     $ source /usr/local/opt/modules/init/bash
-
-* ``gnupg2`` für ``gpg``-Subcommand
 
 Installation
 ------------

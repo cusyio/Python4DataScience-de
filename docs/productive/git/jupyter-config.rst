@@ -21,17 +21,19 @@ schon die Standardeinstellungen gut gewählt.
 Installation
 ------------
 
-``jq`` für Debian/Ubuntu kann installiert werden mit:
+``jq`` kann installiert werden mit:
 
-.. code-block:: console
+.. tab:: Debian/Ubuntu
 
-    $ sudo apt install jq
+   .. code-block:: console
 
-oder für macOS mit:
+      $ sudo apt install jq
 
-.. code-block:: console
+.. tab:: macOS
 
-    $ brew install jq
+   .. code-block:: console
+
+      $ brew install jq
 
 Beispiel
 --------

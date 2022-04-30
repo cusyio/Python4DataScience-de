@@ -53,29 +53,32 @@ Kommando dann so aus:
 
     $ pipenv install dvc[ssh]
 
-Alternativ kann DVC auch über das Paketmanagement von Ubuntu/Debian installiert
-werden mit:
+Alternativ kann DVC auch über andere Paketmanager installiert werden:
 
-.. code-block:: console
+.. tab:: Debian/Ubuntu
 
-    $ sudo wget https://dvc.org/deb/dvc.list -O /etc/apt/sources.list.d/dvc.list
-    $ sudo apt update
-    $ sudo apt install dvc
+   .. code-block:: console
 
-Für macOS lässt sich DVC installieren mit:
+      $ sudo wget https://dvc.org/deb/dvc.list -O /etc/apt/sources.list.d/dvc.list
+      $ sudo apt update
+      $ sudo apt install dvc
 
-.. code-block:: console
+.. tab:: macOS
 
-    $ brew install iterative/homebrew-dvc/dvc
+   .. code-block:: console
+
+      $ brew install iterative/homebrew-dvc/dvc
 
 .. note::
-    Bitte beachtet, dass das folgende Beispiel mit einer aktuellen DVC-Version
-    erstellt wurde (1.0.0a9), die z.T. eine andere Syntax als frühere Versionen
-    verwendet. Dies könnt ihr aktuell (8. Juni 2020) nur mit pip installieren::
 
-    .. code-block:: console
+   Bitte beachtet, dass das folgende Beispiel mit einer aktuellen DVC-Version
+   erstellt wurde (1.0.0a9), die :abbr:`z.T. (zum Teil)` eine andere Syntax als
+   frühere Versionen verwendet. Dies könnt ihr aktuell (8. Juni 2020) nur mit
+   pip installieren:
 
-        $ pipenv install dvc[all]==1.0.0a9
+   .. code-block:: console
+
+      $ pipenv install dvc[all]==1.0.0a9
 
 .. toctree::
     :hidden:

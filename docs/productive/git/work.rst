@@ -101,18 +101,31 @@ An einem Projekt arbeiten
     ``--word-diff``
         zeigt die geänderten Wörter an.
 
-    Git diff kann mit dem Zusatzprogramm ``pdftohtml`` auch auf PDFs angewendet werden. Es kann
-    für Debian/Ubuntu installiert werden mit ``sudo apt install poppler-utils``, für MacOS mit
-    ``brew install pdftohtml``. Anschließend wird der globalen Git-Konfiguration ``~/.gitconfig``
-    folgender Abschnitt hinzugefügt:
+    Git diff kann mit dem Zusatzprogramm ``pdftohtml`` auch auf PDFs angewendet
+    werden. Es kann installiert werden mit
+
+    .. tab:: Debian/Ubuntu
+
+       .. code-block:: console
+
+          sudo apt install poppler-utils
+
+    .. tab:: macOS
+
+       .. code-block:: console
+
+          brew install pdftohtml
+
+    Anschließend wird der globalen Git-Konfiguration ``~/.gitconfig`` folgender
+    Abschnitt hinzugefügt:
 
     .. code-block:: ini
 
         [diff "pdfconv"]
         textconv=pdftohtml -stdout
 
-    Schließlich wird in der globalen ``~/.gitattributes``-Datei unser ``pdfconf``-Filter mit
-    PDF-Dateien verknüpft wird:
+    Schließlich wird in der globalen ``~/.gitattributes``-Datei unser
+    ``pdfconf``-Filter mit PDF-Dateien verknüpft wird:
 
     .. code-block:: ini
 
@@ -121,12 +134,13 @@ An einem Projekt arbeiten
     Nun wird beim Aufruf von ``git diff`` die PDF-Datei zunächst konvertiert und dann ein Diff über
     der Ausgabe des Konverters durchgeführt.
 
-    Die gleiche Vorgehensweise kann auch angewandt werden, um nützliche Diffs von anderen
-    Binärdateien zu erhalten, :abbr:`z.B. (zum Beispiel)` ``*.zip``, ``*.jar`` und andere Archive
-    mit ``unzip`` oder für Änderungen in den Metainformationen von Bildern mit ``exiv2``. Zudem
-    gibt es Konvertierungswerkzeuge für die Umwandlung von ``*.odf``, ``.doc`` und anderen
-    Dokumentenformaten in einfachen Text. Für Binärdateien, für die es keinen Konverter gibt,
-    reichen oft auch Strings aus.
+    Die gleiche Vorgehensweise kann auch angewandt werden, um nützliche Diffs
+    von anderen Binärdateien zu erhalten, :abbr:`z.B. (zum Beispiel)` ``*.zip``,
+    ``*.jar`` und andere Archive mit ``unzip`` oder für Änderungen in den
+    Metainformationen von Bildern mit ``exiv2``. Zudem gibt es
+    Konvertierungswerkzeuge für die Umwandlung von ``*.odf``, ``.doc`` und
+    anderen Dokumentenformaten in einfachen Text. Für Binärdateien, für die es
+    keinen Konverter gibt, reichen oft auch Strings aus.
 
 :samp:`$ git checkout -- {FILE}`
     unwiderruflich Änderungen im Arbeitsbereich verwerfen.

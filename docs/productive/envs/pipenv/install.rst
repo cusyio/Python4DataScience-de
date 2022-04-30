@@ -39,19 +39,19 @@ sein.
     $ pip --version
     pip 21.3.1
 
-   #. Falls Pip noch nicht installiert ist, könnt ihr es installieren (lassen)
+   #. Falls Pip noch nicht installiert ist, könnt ihr es installieren mit:
 
-      * für Python 2 mit:
+      .. tab:: Python 3
 
-        .. code-block:: console
-
-            $ sudo apt install python-pip
-
-      * für Python 3 mit:
-
-        .. code-block:: console
+         .. code-block:: console
 
             $ sudo apt install python3-venv python3-pip
+
+      .. tab:: Python 2
+
+         .. code-block:: console
+
+            $ sudo apt install python-pip
 
 Pipenv installieren
 -------------------
@@ -74,30 +74,41 @@ versehentlich systemweite Pakete überschrieben werden:
    Wenn pipenv nach der Installation nicht in der Shell verfügbar ist, muss
    ggf. das ``USER_BASE/bin``-Verzeichnis in ``PATH`` angegeben werden.
 
-   * Unter Linux und MacOS lässt sich ``USER_BASE`` ermitteln mit::
+   .. tab:: Linux/macOS
 
-        $ python3 -m site --user-base
-        /Users/veit/.local
+      ``USER_BASE`` lässt sich ermitteln mit:
 
-     Anschließend muss noch das ``bin``-Verzeichnis angehängt und zu ``PATH``
-     hinzugefügt werden. Alternativ kann ``PATH`` dauerhaft gesetzt werden, indem
-     ``~/.profile`` oder ``~/.bash_profile`` geändert werden, in meinem Fall also::
+      .. code-block:: console
 
-        export PATH=/Users/veit/.local/bin:$PATH
+         $ python3 -m site --user-base
+         /Users/veit/.local
 
-   * Unter Windows kann das Verzeichnis ermittelt werden mit
-     ``py -m site --user-site`` und anschließend ``site-packages`` durch
-     ``Scripts`` ersetzt werden. Dies ergibt dann z.B.:
+      Anschließend muss noch das ``bin``-Verzeichnis angehängt und zu ``PATH``
+      hinzugefügt werden. Alternativ kann ``PATH`` dauerhaft gesetzt werden,
+      indem ``~/.profile`` oder ``~/.bash_profile`` geändert werden, in meinem
+      Fall also:
 
-     .. code-block:: console
+      .. code-block:: console
 
-        C:\Users\veit\AppData\Roaming\Python38\Scripts
+         export PATH=/Users/veit/.local/bin:$PATH
 
-     Um dauerhaft zur Verfügung zu stehen, kann dieser Pfad unter ``PATH``
-     im Control Panel eingetragen werden.
+   .. tab:: Windows
 
-Weitere Informationen zur nutzerspezifischen Installation findet ihr in `User
-Installs <https://pip.readthedocs.io/en/latest/user_guide.html#user-installs>`_.
+      Das Verzeichnis kann ermittelt werden mit ``py -m site --user-site`` und
+      anschließend ``site-packages`` durch ``Scripts`` ersetzt werden. Dies
+      ergibt dann :abbr:`z.B. (zum Beispiel)`:
+
+      .. code-block:: console
+
+          C:\Users\veit\AppData\Roaming\Python38\Scripts
+
+      Um dauerhaft zur Verfügung zu stehen, kann dieser Pfad unter ``PATH``
+      im Control Panel eingetragen werden.
+
+.. seealso::
+   Weitere Informationen zur nutzerspezifischen Installation findet ihr in `User
+   Installs
+   <https://pip.readthedocs.io/en/latest/user_guide.html#user-installs>`_.
 
 Virtuelle Umgebungen erstellen
 ------------------------------

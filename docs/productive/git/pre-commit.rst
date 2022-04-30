@@ -20,22 +20,21 @@ hinzufügen zu müssen.
 Installation
 ------------
 
-Bevor ihr Hooks ausführen könnt, muss der pre-commit-Paketmanager installiert
-sein.
+Bevor ihr Hooks ausführen könnt, muss ``pre-commit`` installiert sein.
 
-… auf macOS:
+.. tab:: macOS
 
-.. code-block:: console
+   .. code-block:: console
 
-    $ brew install pre-commit
+      $ brew install pre-commit
 
-… in eurem Python-Projekt:
+.. tab:: Python
 
-.. code-block:: console
+   .. code-block:: console
 
-    $ pipenv install pre-commit
+      $ pipenv install pre-commit
 
-Überprüfen der Installation z.B. mit
+Überprüfen der Installation :abbr:`z.B. (zum Beispiel)` mit
 
 .. code-block:: console
 

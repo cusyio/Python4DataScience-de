@@ -199,8 +199,9 @@ Wechselt in das Verzeichnis, in dem sich die ``setup.py``-Datei befindet.
 
 Die dritte Zeile stellt sicher, dass ein sauberes Build ohne Artefakte
 früherer Builds erstellt wird. Die zweite Zeile baut ein ``sdist``-Archiv unter
-Linux/Mac als gezippte Tar-Datei (``.tar.gz``) und unter Windows eine ZIP-Datei
-sowie ein ``bdist_wheel``-Archiv  mit ``.whl`` im ``dist``-Verzeichnis.
+Linux/macOS als gezippte Tar-Datei (``.tar.gz``) und unter Windows eine
+ZIP-Datei sowie ein ``bdist_wheel``-Archiv  mit ``.whl`` im
+``dist``-Verzeichnis.
 
 Dieser Befehl sollte für unser Distribution Package die folgenden beiden Dateien
 erzeugen::
