@@ -38,6 +38,8 @@ Git-Tagging
         To https://github.com/veit/jupyter-tutorial.git
          * [new tag]         0.6.1 -> 0.6.1
 
+:samp:`git checkout tags/{TAG} -b {BRANCH}`
+    wechselt zur getaggten Version.
 ``git tag [-d name]``
     löschen eines Tag, z.B.:
 
