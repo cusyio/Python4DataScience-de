@@ -14,5 +14,4 @@ interagieren, siehe `Werte an und von der Shell übergeben <../shell.ipynb>`_.
     create-delete.ipynb
     pipes-filters.ipynb
     grep-find.ipynb
-    regex.ipynb
     shell-variables.ipynb
