@@ -42,7 +42,6 @@ pandas genutzt um
     python-data-structures.ipynb
     indexing.ipynb
     transforming.ipynb
-    dropping.ipynb
     select-filter.ipynb
     arithmetic.ipynb
     descriptive-statistics.ipynb
