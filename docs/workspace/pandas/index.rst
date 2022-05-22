@@ -43,11 +43,11 @@ pandas genutzt um
     indexing.ipynb
     select-filter.ipynb
     transforming.ipynb
+    string-manipulation.ipynb
     arithmetic.ipynb
     descriptive-statistics.ipynb
     sorting-ranking.ipynb
     discretisation.ipynb
-    string-manipulation.ipynb
     date-time.ipynb
     combining-merging.ipynb
     group-operations.ipynb
