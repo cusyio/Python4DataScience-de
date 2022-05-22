@@ -50,7 +50,6 @@ pandas genutzt um
     discretisation.ipynb
     string-manipulation.ipynb
     date-time.ipynb
-    hierarchical-indexing.ipynb
     combining-merging.ipynb
     group-operations.ipynb
     aggregation.ipynb
