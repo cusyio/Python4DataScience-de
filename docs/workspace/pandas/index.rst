@@ -55,4 +55,4 @@ pandas genutzt um
     aggregation.ipynb
     convert-dtypes.ipynb
     apply.ipynb
-    reshaping-pivoting.ipynb
+    pivoting-crosstab.ipynb
