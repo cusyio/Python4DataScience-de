@@ -52,6 +52,6 @@ pandas genutzt um
     combining-merging.ipynb
     group-operations.ipynb
     aggregation.ipynb
-    convert-dtypes.ipynb
     apply.ipynb
     pivoting-crosstab.ipynb
+    convert-dtypes.ipynb
