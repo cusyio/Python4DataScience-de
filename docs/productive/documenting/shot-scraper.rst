@@ -65,7 +65,8 @@ GitHub-Actions
 
 shot-scraper lässt sich einfach in GitHub Actions einbinden. Im
 shot-scraper-demo-Repository findet sich auch eine examplarische `shots.yml
-<https://github.com/simonw/shot-scraper-demo/blob/main/.github/workflows/shots.yml>`_. Einmal am Tag werden zwei Screenshots erzeugt und zurück in das
-Repository übertragen. Beachtet jedoch, dass das Speichern von Bilddateien, die
-sich häufig ändern, die Revisionshistory sehr unleserlich machen können. Daher
-solltet ihr shot-scraper mit Bedacht zusammen mit GitHub Actions verwenden.
+<https://github.com/simonw/shot-scraper-demo/blob/main/.github/workflows/shots.yml>`_.
+Einmal am Tag werden zwei Screenshots erzeugt und zurück in das Repository
+übertragen. Beachtet jedoch, dass das Speichern von Bilddateien, die sich häufig
+ändern, die Revisionshistorie sehr unleserlich machen können. Daher solltet ihr
+shot-scraper mit Bedacht zusammen mit GitHub Actions verwenden.
