@@ -147,6 +147,33 @@ Git Best Practices
   Mit `Gitleaks <https://github.com/zricethezav/gitleaks>`_ könnt ihr eure
   Repositories regelmäßig auf ungewollt gespeicherte Zugangsdaten überprüfen.
 
+  Ihr könnt Gitleaks auch automatisch als GitLab-Action ausführen. Hierzu müsst
+  ihr die `Secret-Detection.gitlab-ci.yml
+  <https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Jobs/Secret-Detection.gitlab-ci.yml>`_-Vorlage
+  :abbr:`z.B. (zum Beispiel)` in eine Stufe namens ``secrets-detection`` in
+  eurer ``.gitlab-ci.yml``-Datei einbinden:
+
+  .. code-block:: yaml
+
+     stages:
+       - secrets-detection
+
+     gitleaks:
+       stage: secrets-detection
+       include:
+         - template: Security/Secret-Detection.gitlab-ci.yml
+
+  Die Vorlage erstellt *Secret Detection*-Aufträge in eurer CI/CD-Pipeline und
+  durchsucht den Quellcode eures Projekts nach *Secrets*. Die Ergebnisse werden
+  als `Secret Detection Report Artefakt
+  <https://docs.gitlab.com/ee/ci/yaml/artifacts_reports.html#artifactsreportssecret_detection>`_
+  gespeichert, den ihr später herunterladen und analysieren könnt.
+
+  .. seealso::
+
+     * `GitLab Secret Detection
+       <https://docs.gitlab.com/ee/user/application_security/secret_detection/>`_
+
   Mit `git-filter-repo <https://github.com/newren/git-filter-repo>`_ könnt ihr
   unerwünschte Dateien, seien es Zugangsdaten oder große Binärdateien aus eurer
   Git-Historie entfernen.
