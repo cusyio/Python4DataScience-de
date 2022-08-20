@@ -52,7 +52,7 @@ Forschungsprojekts:
    Performance-Optimierungen, u.a. durch :doc:`Nebenläufigkeit
    <performance/concurrency>`.
 8. **Produkt erstellen** umfasst das :doc:`productive/testing`,
-   :doc:`productive/logging/index` und :doc:`productive/documenting/index` der
+   :doc:`productive/logging/index` und :doc:`productive/documenting` der
    Methoden und Funktionen sowie das :doc:`Erstellen von Paketen
    <productive/packaging/index>`.
 9. **Web-Anwendungen** können entweder aus Jupyter-Notebooks

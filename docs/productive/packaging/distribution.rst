@@ -168,15 +168,16 @@ Ausführliche Informationen hierzu findet ihr im Abschnitt :doc:`../licensing`.
 
 Diese Datei teilt denjenigen, die sich für das Paket interessieren, in kurzer
 Form mit, wie sie es nutzen können. Wenn ihr das Dokument in
-:doc:`../documenting/rest` schreibt, könnt ihr die Inhalte auch als ausführliche
-Beschreibung in euer Paket übernehmen:
+:doc:`python-basics:document/rest` schreibt, könnt ihr die Inhalte auch als
+ausführliche Beschreibung in euer Paket übernehmen:
 
 .. literalinclude:: dataprep/setup.py
    :language: python
    :lines: 1,4-9,13-14,41
 
 Zudem könnt ihr sie dann auch in eure :doc:`Sphinx-Dokumentation
-<../documenting/start>` mit ``.. include:: ../../README.rst`` übernehmen.
+<python-basics:document/start>` mit ``.. include:: ../../README.rst``
+übernehmen.
 
 ``CHANGELOG.rst``
 ~~~~~~~~~~~~~~~~~
