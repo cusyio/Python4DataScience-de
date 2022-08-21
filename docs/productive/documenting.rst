@@ -26,3 +26,5 @@ erhalten können.
 
 .. seealso::
    * :doc:`python-basics:document/index`
+   * `Read the Docs for Science
+     <https://docs.readthedocs.io/en/latest/science.html>`_
