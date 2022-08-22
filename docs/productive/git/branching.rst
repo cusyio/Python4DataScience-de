@@ -16,7 +16,7 @@ Git-Verzweigungen
         erstellt den angegebenen Zweig, wenn dieser nicht schon besteht.
 ``$ git merge [from name]``
     verbindet den angegebenen mit dem aktuellen Zweig, in dem ihr euch gerade
-    befindet, z.B.:
+    befindet, :abbr:`z.B. (zum Beispiel)`:
 
     .. code-block:: console
 
@@ -31,7 +31,8 @@ Git-Verzweigungen
         besagt, dass der neue Commit direkt auf den ursprünglichen Commit folgte
         und somit der Zeiger (*branch pointer*) nur weitergeführt werden musste.
 
-        In anderen Fällen kann die Ausgabe z.B. so aussehen:
+        In anderen Fällen kann die Ausgabe :abbr:`z.B. (zum Beispiel)` so
+        aussehen:
 
         .. code-block:: console
 
@@ -48,7 +49,8 @@ Git-Verzweigungen
 Merge-Konflikte
 ---------------
 
-Gelegentlich stößt Git beim Zusammenführen jedoch auf Probleme, z.B.:
+Gelegentlich stößt Git beim Zusammenführen jedoch auf Probleme, :abbr:`z.B.
+(zum Beispiel)`:
 
     .. code-block:: console
 
