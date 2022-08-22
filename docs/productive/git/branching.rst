@@ -9,11 +9,24 @@ Git-Verzweigungen
 
 ``$ git branch [branch_name]``
     erstellt auf Basis des aktuellen ``HEAD`` einen neuen Zweig.
-``$ git checkout [-b] [branch_name]``
-    ändert das Arbeitsverzeichnis in den angegebenen Zweig.
 
-    ``-b``
-        erstellt den angegebenen Zweig, wenn dieser nicht schon besteht.
+``$ git switch [-c] [branch_name]``
+    wechselt zwischen Zweigen.
+
+    ``-c``
+        erstellt einen neuen Zweig.
+
+    .. note::
+
+        In Git < 2.23 steht euch ``git switch`` noch nicht zur Verfügung. In
+        diesem Fall müsst ihr noch ``git checkout`` verwenden:
+
+        ``$ git checkout [-b] [branch_name]``
+            ändert das Arbeitsverzeichnis in den angegebenen Zweig.
+
+            ``-b``
+                erstellt den angegebenen Zweig, wenn dieser nicht schon besteht.
+
 ``$ git merge [from name]``
     verbindet den angegebenen mit dem aktuellen Zweig, in dem ihr euch gerade
     befindet, :abbr:`z.B. (zum Beispiel)`:

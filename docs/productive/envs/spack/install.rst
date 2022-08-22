@@ -53,7 +53,7 @@ Installation
     Cloning into 'spack'...
     ...
     $ cd spack
-    $ git checkout releases/v0.17
+    $ git switch releases/v0.17
 
 Shell konfigurieren
 -------------------

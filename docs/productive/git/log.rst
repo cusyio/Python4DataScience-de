@@ -48,5 +48,5 @@ Git Log
     Commits auflisten, die in ``ref`` vorhanden sind und nicht mit dem aktuellen
     Zweig zusammengeführt werden.
 ``$ git reflog``
-    Vorgänge (z.B. ``checkout``, ``commit``) auflisten, die im lokalen
-    Repository ausgeführt wurden.
+    Vorgänge (z.B. ``switch``, ``commit``) auflisten, die im lokalen Repository
+    ausgeführt wurden.

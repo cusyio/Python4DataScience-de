@@ -37,5 +37,5 @@ Git-Glossar
 
     ``HEAD``
         Der ``HEAD``-Zeiger repräsentiert euer aktuelles Arbeitsverzeichnis und
-        kann mit ``git checkout`` in verschiedene Zweige, Tags oder Commits
+        kann mit ``git switch`` in verschiedene Zweige, Tags oder Commits
         verschoben werden

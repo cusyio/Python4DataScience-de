@@ -145,7 +145,7 @@ An einem Projekt arbeiten
     anderen Dokumentenformaten in einfachen Text. Für Binärdateien, für die es
     keinen Konverter gibt, reichen oft auch Strings aus.
 
-:samp:`$ git checkout -- {FILE}`
+:samp:`$ git restore {FILE}`
     unwiderruflich Änderungen im Arbeitsbereich verwerfen.
 ``$ git commit``
     einen neuen Commit mit den hinzugefügten Änderungen machen.

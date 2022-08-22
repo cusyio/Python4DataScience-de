@@ -23,7 +23,7 @@
     alle bereitgestellten Änderungen mit dem Inhalt des vorherigen Commits
     kombiniert. Wenn nichts bereitgestellt ist, wird nur die vorherige
     Commit-Nachricht neu geschrieben.
-``$ git checkout [file]``
+``$ git restore [file]``
     ändert Dateien im Arbeitsverzeichnis in einen Zustand, der Git zuvor bekannt
     war. Standardmäßig checkt Git ``HEAD``, den letzten Commit des aktuell
     ausgecheckten Zweigs, aus. Alternativ könnt ihr auch einen bestimmte Zweig
