@@ -134,8 +134,8 @@ An einem Projekt arbeiten
 
         *.pdf diff=pdfconv
 
-    Nun wird beim Aufruf von ``git diff`` die PDF-Datei zunächst konvertiert und dann ein Diff über
-    der Ausgabe des Konverters durchgeführt.
+    Nun wird beim Aufruf von ``git diff`` die PDF-Datei zunächst konvertiert und
+    dann ein Diff über der Ausgabe des Konverters durchgeführt.
 
     Die gleiche Vorgehensweise kann auch angewandt werden, um nützliche Diffs
     von anderen Binärdateien zu erhalten, :abbr:`z.B. (zum Beispiel)` ``*.zip``,
