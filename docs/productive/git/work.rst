@@ -193,19 +193,19 @@ An einem Projekt arbeiten
         +---------------+-----------------------------------------------+
         | Befehl        | Beschreibung                                  |
         +===============+===============================================+
-        | ``/``         | sucht nach einer Änderung mit einem regulären |
-        |               | Ausdruck                                      |
+        | ``y``         | Diese Änderung verstecken                     |
+        +---------------+-----------------------------------------------+
+        | ``n``         | Diese Änderung nicht in das Versteck          |
+        |               | übernehmen                                    |
+        +---------------+-----------------------------------------------+
+        | ``q``         | Nur die bereits ausgewählten Änderungen werden|
+        |               | in das Versteck übernommen                    |
+        +---------------+-----------------------------------------------+
+        | ``a``         | Diese und alle folgenden Änderungen übernehmen|
+        +---------------+-----------------------------------------------+
+        | ``e``         | Diese Änderung manuell editieren              |
         +---------------+-----------------------------------------------+
         | ``?``         | Hilfe                                         |
-        +---------------+-----------------------------------------------+
-        | ``n``         | Diese Änderung nicht übernehmen               |
-        +---------------+-----------------------------------------------+
-        | ``q``         | Alle bereits ausgewählten Änderungen werden   |
-        |               | gespeichert                                   |
-        +---------------+-----------------------------------------------+
-        | ``s``         | Diese Änderungen aufteilen                    |
-        +---------------+-----------------------------------------------+
-        | ``y``         | Diese Änderung verstecken                     |
         +---------------+-----------------------------------------------+
 
     ``branch``
