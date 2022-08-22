@@ -28,6 +28,14 @@
     war. Standardmäßig checkt Git ``HEAD``, den letzten Commit des aktuell
     ausgecheckten Zweigs, aus. Alternativ könnt ihr auch einen bestimmte Zweig
     oder SHA auswählen.
+
+    .. note::
+
+        In Git < 2.23 steht euch ``git restore`` noch nicht zur Verfügung. In
+        diesem Fall müsst ihr noch ``git checkout`` verwenden:
+
+        ``$ git checkout [file]``
+
 ``$ git pull [remote]``
     ruft Änderungen aus dem Remote-Repository ab und führt den aktuellen Zweig
     mit dem Upstream zusammen.
