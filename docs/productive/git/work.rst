@@ -61,32 +61,35 @@ An einem Projekt arbeiten
         -    zeigt Unterschiede zwischen Arbeits- und Bühnenbereich.
         +    zeigt Unterschiede zwischen Arbeits- und Bühnenbereich, :abbr:`z.B. (zum Beispiel)`.
 
-         ``--staged``
-             zeigt Unterschiede zwischen Bühnenbereich und Repository an.
+    ``index e2a5ea6..fd84434 100644`` zeigt einige interne Git-Metadaten an, die
+    ihr vermutlich nie benötigen werdet. Die Zahlen entsprechen den
+    Hash-Kennungen der Git-Objektversionen.
 
-    ``index e2a5ea6..fd84434 100644`` zeigt einige interne Git-Metadaten an, die ihr vermutlich nie
-    benötigen werdet. Die Zahlen entsprechen den Hash-Kennungen der Git-Objektversionen.
+    Die übrige Ausgabe ist eine Liste von :abbr:`sog. (sogenannten)` *diff
+    chunks*, deren Header von ``@@``-Symbolen eingeschlossen ist. Er gibt eine
+    Zusammenfassung der in der Datei vorgenommenen Änderungen. In unserem
+    Beispiel wurden 7 Zeilen ab Zeile 46 extrahiert und 7 Zeilen ab Zeile 46
+    hinzugefügt.
 
-    Die übrige Ausgabe ist eine Liste von :abbr:`sog. (sogenannten)` *diff chunks*, deren Header
-    von ``@@``-Symbolen eingeschlossen ist. Er gibt eine Zusammenfassung der in der Datei
-    vorgenommenen Änderungen. In unserem Beispiel wurden 7 Zeilen ab Zeile 46 extrahiert und 7
-    Zeilen ab Zeile 46 hinzugefügt.
+    Standardmäßig führt ``git diff`` den Vergleich gegen ``HEAD`` aus. Wenn ihr
+    im obigen Beispiel ``git diff HEAD docs/productive/git/work.rst`` verwendet,
+    hat das denselben Effekt.
 
-    Standardmäßig führt ``git diff`` den Vergleich gegen ``HEAD`` aus. Wenn ihr im obigen Beispiel
-    ``git diff HEAD docs/productive/git/work.rst`` verwendet, hat das denselben Effekt.
+    Mit ``git diff`` können Git-Referenzen auf Commits an ``diff`` übergeben
+    werden. Neben ``HEAD`` sind einige weitere Beispiele für Referenzen Tags und
+    Zweignamen, :abbr:`z.B. (zum Beispiel)` :samp:`git
+    diff {MAIN}..{FEATURE_BRANCH}`. Der Punkt-Operator in diesem Beispiel zeigt
+    an, dass die ``diff``-Eingabe die Spitzen der beiden Zweige sind. Der
+    gleiche Effekt tritt ein, wenn die Punkte weggelassen werden und ein
+    Leerzeichen zwischen den Zweigen verwendet wird. Zusätzlich gibt es einen
+    Operator mit drei Punkten: :samp:`git diff {MAIN}...{FEATURE_BRANCH}`, der
+    ein Diff initiiert, bei dem der erste Eingabeparammeter :samp:`{MAIN}` so
+    geändert wird, dass die Referenz der gemeinsame Vorfahre von :samp:`MAIN`
+    und :samp:`FEATURE` ist.
 
-    git diff können Git-Referenzen auf Commits an diff übergeben werden. Neben ``HEAD`` sind einige
-    weitere Beispiele für Referenzen Tags und Zweignamen, :abbr:`z.B. (zum Beispiel)` :samp:`git
-    diff {MAIN}..{FEATURE_BRANCH}`. Der Punktoperator in diesem Beispiel zeigt an, dass die
-    ``diff``-Eingabe die Spitzen der beiden Zweige sind. Der gleiche Effekt tritt ein, wenn die
-    Punkte weggelassen werden und ein Leerzeichen zwischen den Zweigen verwendet wird. Zusätzlich
-    gibt es einen Operator mit drei Punkten: :samp:`git diff {MAIN}...{FEATURE_BRANCH}`, der ein
-    Diff initiiert, bei dem der erste Eingabeparammeter :samp:`{MAIN}` so geändert wird, dass die
-    Referenz der gemeinsame Vorfahre von :samp:`MAIN` und :samp:`FEATURE` ist.
-
-    Jeder Commit in Git hat eine Commit-ID,
-    die ihr erhalten könnt, wenn ihr ``git log`` ausführt. Anschließnd könnt ihr diese Commit-ID
-    auch an ``git diff`` übergeben:
+    Jeder Commit in Git hat eine Commit-ID, die ihr erhalten könnt, wenn ihr
+    ``git log`` ausführt. Anschließnd könnt ihr diese Commit-ID auch an ``git
+    diff`` übergeben:
 
     .. code-block:: console
 
