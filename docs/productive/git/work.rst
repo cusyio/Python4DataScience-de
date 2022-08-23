@@ -111,13 +111,13 @@ An einem Projekt arbeiten
 
        .. code-block:: console
 
-          sudo apt install poppler-utils
+          $ sudo apt install poppler-utils
 
     .. tab:: macOS
 
        .. code-block:: console
 
-          brew install pdftohtml
+          $ brew install pdftohtml
 
     Anschließend wird der globalen Git-Konfiguration ``~/.gitconfig`` folgender
     Abschnitt hinzugefügt:
@@ -136,6 +136,44 @@ An einem Projekt arbeiten
 
     Nun wird beim Aufruf von ``git diff`` die PDF-Datei zunächst konvertiert und
     dann ein Diff über der Ausgabe des Konverters durchgeführt.
+
+    Auch Unterschiede in Word-Dokumenten lassen sich anzeigen. Hierfür kann
+    `Pandoc <https://pandoc.org/>`_ verwendet werden, das einfach installiert
+    werden kann mit
+
+    .. tab:: Windows
+
+       Herunterladen und Installieren der ``.msi``-Datei von `GitHub
+       <https://github.com/jgm/pandoc/releases/tag/2.19.2>`_.
+
+    .. tab:: Debian/Ubuntu
+
+       .. code-block:: console
+
+          $ brew install pandoc
+ 
+    .. tab:: macOS
+
+       .. code-block:: console
+
+          $ brew install pandoc
+
+    Anschließend wird in ``.gitattributes`` die Dateiendung ``.docx`` auf eine
+    alternative ``diff``-Konfigurationen abgebildet:
+
+    .. code-block:: ini
+
+       *.docx diff=word
+
+    Schließlich kann in der ``.gitconfig``-Datei der folgende Abschnitt
+    eingefügt werden:
+
+    .. code-block:: ini
+
+       [diff "word"]
+           textconv=pandoc --to=markdown
+           binary=true
+           prompt=false
 
     Die gleiche Vorgehensweise kann auch angewandt werden, um nützliche Diffs
     von anderen Binärdateien zu erhalten, :abbr:`z.B. (zum Beispiel)` ``*.zip``,
