@@ -63,6 +63,10 @@ Bezeichnungen eine andere Bedeutung, wie :abbr:`z.B. (zum Beispiel)` ``revert``
 in SVN oder CVS. Zudem bietet Git viel Funktionalität, die zum Erlernen jedoch
 einige Zeit benötigt.
 
+.. image:: git.png
+   :alt: xkcd comic
+   :target: https://xkcd.com/1597
+
 Zum Weiterlesen
 ---------------
 
