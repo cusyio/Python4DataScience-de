@@ -2,11 +2,60 @@ Code verwalten mit Git
 ======================
 
 Um eine bessere Kontrolle über euren Quellcode zu erhalten, wird dieser
-üblicherweise mit `Git <https://git-scm.com/>`_ verwaltet. Hier werde ich jedoch
-nur kurz die :doc:`wichtigsten Begriffe <glossary>` erläutern und eine kurze
-:doc:`Installations- und Konfigurationsanleitung <install-config>` geben.
-Allgemeine Einführungen in Git sind an anderer Stelle schon hinreichend
-vorhanden.
+üblicherweise mit `Git <https://git-scm.com/>`_ verwaltet. `Git
+<https://github.com/git/git>`__ ist ein ausgereiftes und sehr aktiv gepflegtes
+Open-Source-Projekt, das 2005 ursprügnlich von Linus Torvalds, dem Initiator des
+Linux-Betriebssystem-Kernels, entwickelt wurde. Git lässt sich gut mit vielen
+Betriebssystemen und :abbr:`IDEs (Integrierte Entwciklungsumgebungen)`
+kombinieren.
+
+Mit seiner verteilten Architektur ist Git ein Beispiel für ein :abbr:`DVCS
+(Distributed Version Control System)` – einem verteilten Versionskontrollsystem.
+Somit muss sich nicht mehr die gesamte Versionshistorie an einem einzigen Ort
+befinden, wie dies bei früher beliebten Versionskontrollsystemen wie CVS oder
+Subversion (SVN) üblich war. In Git kann jedes lokale Repository spezifische
+Änderungen enthalten.
+
+Git kann jedoch nicht nur verteilt genutzt werden, sondern ist auch performant,
+sicher und flexibel.
+
+Performance
+-----------
+
+Git ist im Vergleich zu vielen anderen Versionsverwaltungssystemen sehr schnell
+bei Commits von Änderungen, Beim Verzweigen und Zusammenführen und dem Vergleich
+mit früheren Versionen. Dies ist auch erforderlich, wenn wir uns das
+`Linux-Kernel-Repository <https://github.com/torvalds/linux>`_ mit über einer
+Millionen Commits anschaut. Dabei orientiert sich Git nicht an Dateinamen,
+sondern konzentriert sich auf inhaltliche Änderungen, sodass Dateien effizient umbenannt, aufgeteilt und neu angeordnet werden können. Dies erreicht Git durch
+die Speicherung von Deltas für die inhaltlichen Unterschiede, Metadaten der
+Dateien und Komprimierung.
+
+Das verteilte Versionsverwaltungssystem sorgt darüberhinaus dafür, dass
+:abbr:`z.B. (zum Beispiel)` für die Implementierung einer neuen Funktion
+**kein** Netzwerkzugriff auf einen entfernten Server erforderlich ist und daraus
+folgende Verzögerungen ausbleiben. Auch könnt ihr lokal an einer früheren
+Version eine Fehlerkorrektur durchführen. Später können mit einem einzigen
+Befehl beide Änderungen an einen zentralen Server übermittelt werden.
+
+Sicherheit
+----------
+
+Die Integrität des verwalteten Quellcodes hatte hohe Priorität bei der
+Konzipierung von Git. So werden die Beziehungen zwischen Dateien und Commits
+durch einen Hashing-Algorithmus (SHA1) geschützt, sodass versehentliche oder
+vorsätzliche Änderungen erschwert und der tatsächliche Verlauf sichergestellt
+werden.
+
+Flexibilität
+------------
+
+Git erlaubt nicht nur sehr flexible :doc:`Arbeitsabläufe <workflows/index>`
+sondern ist auch für große wie kleine Projekte auf verschiedenen Plattformen
+geeignet.
+
+Zum Weiterlesen
+---------------
 
 .. seealso::
 
@@ -19,10 +68,6 @@ vorhanden.
     * `git-tips <https://github.com/git-tips/tips>`_
     * `Pro Git book <https://git-scm.com/book>`_
     * `Git reference <https://git-scm.com/docs>`_
-
-Im Wesentlichen zeige ich in diesem Tutorial einerseits, wie :doc:`Jupyter Notebooks
-<first-steps>` sinnvoll mit Git verwaltet lassen, und andererseits
-:doc:`Best Practices <best-practices>` und typische :doc:`workflows/index`.
 
 .. toctree::
     :hidden:
