@@ -110,6 +110,27 @@ Zweige löschen
 
     ``-D`` statt ``-d`` erzwingt die Löschung.
 
-.. seealso::
-    * `Git Branching - Branches auf einen Blick
-      <https://git-scm.com/book/de/v2/Git-Branching-Branches-auf-einen-Blick>`_
+Entfernte Zweige
+----------------
+
+Bisher haben diese Beispiele alle lokale Verzweigungen gezeigt. Der Befehl ``git
+branch`` funktioniert jedoch auch mit entfernten Zweigen. Um mit entfernten
+Zweigen arbeiten zu können, muss zunächst ein entferntes Repository konfiguriert
+und zur lokalen Repository-Konfiguration hinzugefügt werden:
+
+.. code-block:: console
+
+    $ git remote add [new_repo] https://ce.cusy.io/veit/new-repo.git
+
+Nun kann der Zweig auch im entfernten Repository hinzugefügt werden:
+
+.. code-block:: console
+
+    $ git push [new_repo] [branch_name]
+
+Mit ``git branch -d`` löscht ihr die Zweige nur lokal. Um sie auch auf dem
+entfernten Server zu löschen, könnt ihr folgendes eingeben:
+
+.. code-block:: console
+
+    $ git push origin --delete [branch_name]
