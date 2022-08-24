@@ -66,16 +66,16 @@ Gebräuchliche Befehle
         besagt, dass der neue Commit direkt auf den ursprünglichen Commit folgte
         und somit der Zeiger (*branch pointer*) nur weitergeführt werden musste.
 
-        In anderen Fällen kann die Ausgabe :abbr:`z.B. (zum Beispiel)` so
-        aussehen:
+    In anderen Fällen kann die Ausgabe :abbr:`z.B. (zum Beispiel)` so
+    aussehen:
 
-        .. code-block:: console
+    .. code-block:: console
 
-            $ git switch main
-            $ git merge '#42'
-            Merge made by recursive.
-             setup.py |    1 +
-             1 files changed, 1 insertions(+), 0 deletions(-)
+        $ git switch main
+        $ git merge '#42'
+        Merge made by recursive.
+         setup.py |    1 +
+         1 files changed, 1 insertions(+), 0 deletions(-)
 
     ``recursive``
         ist eine Merge-Strategie, die verwendet wird, sofern die Zusammenführung
