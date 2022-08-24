@@ -1,6 +1,28 @@
 Git-Verzweigungen
 =================
 
+Verzweigen ist eine Funktion, die in den meisten modernen
+Versionskontrollsystemen verfügbar ist. In anderen VCS-Systemen kann das
+Verzweigen eine teure Operation sein, die sowohl Zeit als auch Speicherplatz
+kostet; in Git sind Verzweigungen jedoch Verweise auf einen Schnappschuss eurer
+Änderungen. Wenn ihr eine neue Funktion hinzufügen oder einen Fehler beheben
+wollt, legt ihr einen neuen Zweig an, um eure Änderungen darin zu kapseln.
+Dadurch könnt ihr euch auf diese Aufgabe konzentrieren ohne zunächst
+gleichzeitige Änderungen im Hauptzweig berücksichtigen zu müssen. Umgekehrt hält
+es auch den Hauptzweig frei von fragwürdigem Code. Git-Zweige wurden daher ein
+fester Bestandteil des täglichen Arbeitsablaufs.
+
+Ihr könnt euch Verzweigungen auch als ein neues Arbeitsverzeichnis mit neuen
+Staging-Bereich und Projektverlauf vorstellen wobei eure Commits zunächst in der
+Historie für den aktuellen Zweig aufgezeichnet  werden.
+
+.. seealso::
+    * `Git Branching - Branches auf einen Blick
+      <https://git-scm.com/book/de/v2/Git-Branching-Branches-auf-einen-Blick>`_
+
+Gebräuchliche Befehle
+---------------------
+
 ``$ git branch [-a]``
     zeigt alle lokalen Verzweigungen in einem Repository an.
 
@@ -79,8 +101,8 @@ Gelegentlich stößt Git beim Zusammenführen jedoch auf Probleme, :abbr:`z.B.
         * `Git Tools - Fortgeschrittenes Merging
           <https://git-scm.com/book/de/v2/Git-Tools-Fortgeschrittenes-Merging>`_
 
-Verzweigungen (Branches)
-------------------------
+Zweige löschen
+--------------
 
 ``$ git branch -d [name]``
     löscht den ausgewählten Zweig, wenn er bereits in einen anderen überführt
