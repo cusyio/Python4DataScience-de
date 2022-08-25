@@ -10,8 +10,8 @@ Atlassian empfiehlt eine `ähnliche Strategie
 jedoch ein ``rebase`` der Feature-Branches vornehmen. Diese Strategien bieten
 dabei zwei Vorteile:
 
-* Das Code-Inventory bleibt relativ klein da die Feature-Branches üblicherweise
-  schnell in den ``main`` übernommen werden.
+* Das zu verwaltende Code-Inventar bleibt relativ klein da die Feature-Branches
+  üblicherweise schnell in den ``main`` übernommen werden.
 * Die Workflows entsprechen den üblichen Methoden von *Continuous Delivery*.
 
 Diese Workflows können jedoch nicht beantworten, wie Deployments in
@@ -22,5 +22,5 @@ beschrieben.
 .. seealso::
    * `Feature Driven Development
      <https://de.wikipedia.org/wiki/Feature_Driven_Development>`_
-   * `Feature Branches
+   * Martin Fowler: `Feature Branch
      <https://martinfowler.com/bliki/FeatureBranch.html>`_
