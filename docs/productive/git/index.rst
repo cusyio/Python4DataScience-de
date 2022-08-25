@@ -91,10 +91,10 @@ Zum Weiterlesen
     tools
     working-areas
     work
-    branching
+    branch
     log
-    tagging
-    reverting
+    tag
+    revert
     best-practices
     workflows/index
     git-big-picture
