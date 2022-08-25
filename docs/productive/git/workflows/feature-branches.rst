@@ -2,10 +2,10 @@
 Feature-Branches
 ================
 
-`GitHub Flow <https://guides.github.com/introduction/flow/index.html>`_ war als
-stark vereinfachte Alternative zu :doc:`git-flow` gedacht, wobei es neben dem
-``main``-Branch nur verschiedene Feature-Branches geben sollte. Auch Atlassian
-empfiehlt eine `ähnliche Strategie
+`GitHub Flow <https://docs.github.com/en/get-started/quickstart/github-flow>`_
+war als stark vereinfachte Alternative zu :doc:`git-flow` gedacht, wobei es
+neben dem ``main``-Branch nur verschiedene Feature-Branches geben sollte. Auch
+Atlassian empfiehlt eine `ähnliche Strategie
 <https://www.atlassian.com/blog/git/simple-git-workflow-is-simple>`_, wobei sie
 jedoch ein ``rebase`` der Feature-Branches vornehmen. Diese Strategien bieten
 dabei zwei Vorteile:
