@@ -94,9 +94,10 @@ Zum Weiterlesen
     branch
     log
     tag
+    rebase
     revert
     best-practices
     workflows/index
     git-big-picture
-    git-bisect
+    bisect
     glossary

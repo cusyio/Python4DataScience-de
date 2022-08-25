@@ -87,19 +87,30 @@ Merge-Konflikte
 Gelegentlich stößt Git beim Zusammenführen jedoch auf Probleme, :abbr:`z.B.
 (zum Beispiel)`:
 
-    .. code-block:: console
+.. code-block:: console
 
-        $ git merge '#17'
-        Auto-merging setup.py
-        CONFLICT (content): Merge conflict in setup.py
-        Automatic merge failed; fix conflicts and then commit the result.
+    $ git merge '#17'
+    automatischer Merge von setup.py
+    KONFLIKT (Inhalt): Merge-Konflikt in setup.py
+    Automatischer Merge fehlgeschlagen; beheben Sie die Konflikte und committen Sie dann das Ergebnis.
 
-    .. seealso::
+Die Historie kann dann :abbr:`z.B. (zum Beispiel)` so aussehen:
 
-        * `Git Branching - Einfaches Branching und Merging
-          <https://git-scm.com/book/de/v2/Git-Branching-Einfaches-Branching-und-Merging>`_
-        * `Git Tools - Fortgeschrittenes Merging
-          <https://git-scm.com/book/de/v2/Git-Tools-Fortgeschrittenes-Merging>`_
+.. code-block:: console
+
+    *   49770a2 (HEAD -> main) Fix merge conflict with #17
+    |\
+    | * 9412467 (#37) Feature #17
+    * | 46ab1a2 Hotfix directly in main
+    |/
+    * 0c65f04 Initial commit
+
+.. seealso::
+
+    * `Git Branching - Einfaches Branching und Merging
+      <https://git-scm.com/book/de/v2/Git-Branching-Einfaches-Branching-und-Merging>`_
+    * `Git Tools - Fortgeschrittenes Merging
+      <https://git-scm.com/book/de/v2/Git-Tools-Fortgeschrittenes-Merging>`_
 
 Zweige löschen
 --------------
