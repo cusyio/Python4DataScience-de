@@ -100,7 +100,7 @@ Die Historie kann dann :abbr:`z.B. (zum Beispiel)` so aussehen:
 
     *   49770a2 (HEAD -> main) Fix merge conflict with #17
     |\
-    | * 9412467 (#37) Feature #17
+    | * 9412467 (#17) Feature #17
     * | 46ab1a2 Hotfix directly in main
     |/
     * 0c65f04 Initial commit
