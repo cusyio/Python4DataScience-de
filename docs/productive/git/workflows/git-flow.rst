@@ -475,12 +475,18 @@ neuen Versionsnummer getaggt werden.
 
 .. code-block:: console
 
-    $ git flow hotfix start '#37'
-    Zu neuem Branch 'hotfix/#37' gewechselt
-    …
     $ git flow hotfix finish '#37'
-    Zu Zweig »main« gewechselt
-    …
+    Zu Zweig »develop« gewechselt
+    Merge made by the 'recursive' strategy.
+     …
+    Branch hotfix/#37 entfernt (war ca0814e).
+
+    Summary of actions:
+    - Hotfix branch 'hotfix/#37' has been merged into 'main'
+    - The hotfix was tagged '0.2.0'
+    - Hotfix tag '0.2.0' has been back-merged into 'develop'
+    - Hotfix branch 'hotfix/#37' has been locally deleted
+    - You are now on branch 'develop'
 
 … oder
 
