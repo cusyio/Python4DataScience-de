@@ -212,7 +212,7 @@ jedoch nicht aus dem ``main``-Branch erstellt sondern aus dem
     develop10;
     develop1 -> develop2 -> develop3 -> develop4 -> develop5 -> develop6 -> develop7 -> develop8 -> develop9 -> develop10;
 
-    node  [group="feature #17", fillcolor="#FB3DB5"];
+    node  [group="17-some-feature", fillcolor="#FB3DB5"];
     feature101;
     feature102;
     feature103;
@@ -226,7 +226,7 @@ jedoch nicht aus dem ``main``-Branch erstellt sondern aus dem
         feature114 -> feature115 -> feature116;
     }
 
-    node  [group="feature #42", fillcolor="#FB3DB5"];
+    node  [group="42-other-feature", fillcolor="#FB3DB5"];
     feature201;
     feature202;
     feature203;
@@ -267,29 +267,29 @@ Ihr könnt solche Feature-Branches erstellen mit ``git flow``
 
 .. code-block:: console
 
-    $ git flow feature start '#17'
-    Zu neuem Branch 'feature/#17' gewechselt
+    $ git flow feature start 17-some-feature
+    Zu neuem Branch 'feature/17-some-feature' gewechselt
 
     Summary of actions:
-    - A new branch 'feature/#17' was created, based on 'develop'
-    - You are now on branch 'feature/#17'
+    - A new branch 'feature/17-some-feature' was created, based on 'develop'
+    - You are now on branch 'feature/17-some-feature'
     …
 
 … oder mit
 
 .. code-block:: console
 
-    $ git switch -c feature/#17
-    Zu neuem Branch 'feature/#17' gewechselt
+    $ git switch -c feature/17-some-feature
+    Zu neuem Branch 'feature/17-some-feature' gewechselt
 
 Umgekehrt könnt ihr euren Feature-Branch abschließen mit
 
 .. code-block:: console
 
-    $ git flow feature finish #17
+    $ git flow feature finish 17-some-feature
     Zu Zweig »develop« gewechselt
     Bereits aktuell.
-    Branch feature/#17 entfernt (war 653e88a).
+    Branch feature/17-some-feature entfernt (war 653e88a).
     …
 
 … oder mit
@@ -297,9 +297,9 @@ Umgekehrt könnt ihr euren Feature-Branch abschließen mit
 .. code-block:: console
 
     $ git witch develop
-    $ git merge feature/#17
-    $ git branch -d feature/#17
-    Branch feature/#17 entfernt (war 11a9417).
+    $ git merge feature/17-some-feature
+    $ git branch -d feature/17-some-feature
+    Branch feature/17-some-feature entfernt (war 11a9417).
 
 Release-Branches
 ~~~~~~~~~~~~~~~~
@@ -401,7 +401,7 @@ dürfte.
     develop10;
     develop1 -> develop2 -> develop3 -> develop4 -> develop5 -> develop6 -> develop7 -> develop8 -> develop9 -> develop10;
 
-    node  [group="feature #17", fillcolor="#FB3DB5"];
+    node  [group="17-some-feature", fillcolor="#FB3DB5"];
     feature101;
     feature102;
     feature103;
@@ -415,7 +415,7 @@ dürfte.
         feature114 -> feature115 -> feature116;
     }
 
-    node  [group="feature #42", fillcolor="#FB3DB5"];
+    node  [group="42-other-feature", fillcolor="#FB3DB5"];
     feature201;
     feature202;
     feature203;
@@ -564,7 +564,7 @@ neuen Versionsnummer getaggt werden.
     develop1 -> develop2 -> develop3 -> develop4 -> develop5 -> develop6 -> develop7 -> develop8 -> develop9 -> develop10;
     develop10 -> developend [color="#b0b0b0", style=dashed, arrowhead=none ];
 
-    node  [group="feature #17", fillcolor="#FB3DB5"];
+    node  [group="17-some-feature", fillcolor="#FB3DB5"];
     feature101;
     feature102;
     feature103;
@@ -578,7 +578,7 @@ neuen Versionsnummer getaggt werden.
         feature114 -> feature115 -> feature116;
     }
 
-    node  [group="feature #42", fillcolor="#FB3DB5"];
+    node  [group="42-other-feature", fillcolor="#FB3DB5"];
     feature201;
     feature202;
     feature203;
