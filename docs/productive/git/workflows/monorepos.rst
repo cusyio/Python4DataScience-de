@@ -131,6 +131,10 @@ werdet ihr damit jedoch wahrscheinlich keinen großen Unterschied feststellen.
 Git LFS
 ~~~~~~~
 
-Git LFS ist eine Erweiterung, die Pointer auf große Dateien in eurem Repository
-speichert, anstatt die Dateien selbst; diese werden auf einem entfernten Server
-gespeichert, wodurch die Zeit, die für das Klonen eures Projektarchivs benötigt wird, drastisch verkürzt wird.
+`Git LFS <https://git-lfs.github.com/>`_ ist eine Erweiterung, die Pointer auf
+große Dateien in eurem Repository speichert, anstatt die Dateien selbst; diese
+werden auf einem entfernten Server gespeichert, wodurch die Zeit für das Klonen
+eures Projektarchivs drastisch verkürzt wird. Git LFS greift dabei auf die
+nativen Push-, Pull-, Checkout- und Fetch-Operationen von Git zu, um die Objekte
+zu übertragen und zu ersetzen, :abbr:`d.h. (das heißt)`, dass ihr mit großen
+Dateien in eurem Repository wie gewohnt arbeiten könnt.
