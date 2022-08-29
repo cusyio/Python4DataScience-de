@@ -11,7 +11,7 @@ Argument erleichtert dann auch die `kontinuierliche Integration
 <https://de.wikipedia.org/wiki/Kontinuierliche_Integration>`_ mit anderen
 Komponenten.
 
-Die Kapselung der Entwicklung einzelner Feautres in einem Branch ermöglicht
+Die Kapselung der Entwicklung einzelner Features in einem Branch ermöglicht
 zudem die Verwendung von `Merge- oder Pull-Requests
 <https://de.wikipedia.org/wiki/Pull_Request>`_ um Änderungen mit anderen im Team
 diskuttieren zu können und anderen die Möglichkeit zu geben, ein Feature
