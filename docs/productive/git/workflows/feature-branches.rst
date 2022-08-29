@@ -1,7 +1,7 @@
-Feature-Branch-Workflow
-=======================
+Feature-Branch-Workflows
+========================
 
-Die Grundidee hinter dem Feature-Branch-Workflow ist, dass die Entwcklung
+Die Grundidee hinter den Feature-Branch-Workflows ist, dass die Entwcklung
 einzelner Features jeweils in einem dedizierten Branch und nicht im
 ``main``-Branch stattfinden sollte. Diese Kapselung erleichtert in einem
 Entwicklungsteam die Arbeit, da Veränderungen im ``main``-Branch nicht stören
@@ -11,29 +11,45 @@ Argument erleichtert dann auch die `kontinuierliche Integration
 <https://de.wikipedia.org/wiki/Kontinuierliche_Integration>`_ mit anderen
 Komponenten.
 
-Die Kapselung der Entwicklung einzelner Features in einem Branch ermöglicht
-zudem die Verwendung von `Merge- oder Pull-Requests
-<https://de.wikipedia.org/wiki/Pull_Request>`_ um Änderungen mit anderen im Team
-diskuttieren zu können und anderen die Möglichkeit zu geben, ein Feature
-freizugeben, bevor es in das offizielle Projekt integriert wird. Wenn ihr in
-eurer Feature-Entwicklung auf Probleme stoßt, könnt ihr Merge- oder
-Pull-Requests jedoch auch nutzen um um mit anderen im Team Ideen zu erörtern.
-
-Git-Feature-Branches bieten dabei zwei Vorteile:
-
-* Das zu verwaltende Code-Inventar bleibt relativ klein da die Feature-Branches
-  üblicherweise schnell in den ``main`` übernommen werden können.
-* Die Workflows entsprechen den üblichen Methoden kontinuierlicher Integration.
-
-Sie können jedoch nicht beantworten, wie Deployments in unterschiedliche
-Umgebungen oder die Aufteilung in verschiedene Releases erfolgen sollen.
-Mögliche Antworten hierfür werden in :doc:`deploy-branches` beschrieben.
-
 .. seealso::
    * `Feature Driven Development
      <https://de.wikipedia.org/wiki/Feature_Driven_Development>`_
    * Martin Fowler: `Feature Branch
      <https://martinfowler.com/bliki/FeatureBranch.html>`_
+
+Merge- oder Pull-Requests
+-------------------------
+
+Die Kapselung der Entwicklung einzelner Features in einem Branch ermöglicht
+zudem die Verwendung von :abbr:`sog. (sogenannten)` Merge- oder Pull-Requests
+um Änderungen mit anderen im Team diskutieren zu können und ihnen die
+Möglichkeit zu geben, ein Feature freizugeben, bevor es in das offizielle
+Projekt integriert wird. Wenn ihr in eurer Feature-Entwicklung auf Probleme
+stoßt, könnt ihr Merge- oder Pull-Requests jedoch auch nutzen um mit anderen im
+Team Lösungsmöglichkeiten zu erörtern. Merge- oder Pull-Requests werden von
+Web-basierten Diensten wie `GitHub <https://github.com/>`_, `GitLab
+<https://about.gitlab.com/>`_ und `Atlassian <https://bitbucket.org/>`_ zum
+Review und Kommentieren der Änderungen bereitgestellt. Mit :samp:`@{ID}` in
+euren Kommentaren könnt ihr auch bestimmte Personen aus dem Projektteam direkt
+nach Feedback fragen. Sofern ihr automatisiert testet, könnt ihr hier auch die
+Testergebnisse sehen; :abbr:`evtl. (eventuell)` entspricht ja der Coding Style
+nicht euren Projektrichtlinien, oder die Testabdeckung ist ungenügend. In den
+Merge- oder Pull-Requests werden solche Diskussionen gefördert und dokumentiert
+ohne dass sie als unmittelbar als Commits im Repository erscheinen.
+
+.. warning::
+   Merge- oder Pull-Requests sind kein Bestandteil von Git selbst, sondern des
+   jeweiligen Web-basierten Dienstes. Sie sind auch nicht standardisiert, sodass
+   sie beim Wechsel auf einen anderen Dienst nur mühsam übernommen werden
+   können.
+
+.. seealso::
+   * `About pull requests
+     <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests>`_
+   * `Making a Pull Request
+     <https://www.atlassian.com/git/tutorials/making-a-pull-request>`_
+   * `Merge requests
+     <https://docs.gitlab.com/ee/user/project/merge_requests/>`_
 
 GitHub Flow
 -----------
@@ -166,3 +182,10 @@ Die Vorteile von Feature-Branches-Workflows sind vor allem
   unabhängig arbeiten kann.
 * Gleichzeitig wird die Zusammenarbeit im Team einger über Merge- oder
   Pull-Requests.
+* Das zu verwaltende Code-Inventar bleibt relativ klein da die Feature-Branches
+  üblicherweise schnell in den ``main`` übernommen werden können.
+* Die Workflows entsprechen den üblichen Methoden kontinuierlicher Integration.
+
+Sie können jedoch nicht beantworten, wie Deployments in unterschiedliche
+Umgebungen oder die Aufteilung in verschiedene Releases erfolgen sollen.
+Mögliche Antworten hierfür werden in :doc:`deploy-branches` beschrieben.
