@@ -475,17 +475,17 @@ neuen Versionsnummer getaggt werden.
 
 .. code-block:: console
 
-    $ git flow hotfix finish '#37'
+    $ git flow hotfix finish 37-some-bug
     Zu Zweig »develop« gewechselt
     Merge made by the 'recursive' strategy.
      …
-    Branch hotfix/#37 entfernt (war ca0814e).
+    Branch hotfix/37-some-bug entfernt (war ca0814e).
 
     Summary of actions:
-    - Hotfix branch 'hotfix/#37' has been merged into 'main'
+    - Hotfix branch 'hotfix/37-sombe-bug' has been merged into 'main'
     - The hotfix was tagged '0.2.0'
     - Hotfix tag '0.2.0' has been back-merged into 'develop'
-    - Hotfix branch 'hotfix/#37' has been locally deleted
+    - Hotfix branch 'hotfix/37-some-bug' has been locally deleted
     - You are now on branch 'develop'
 
 … oder
@@ -497,11 +497,11 @@ neuen Versionsnummer getaggt werden.
     …
     $ git switch main 
     Zu Zweig »main« gewechselt
-    $ git merge hotfix/#37
+    $ git merge hotfix/37-some-bug
     $ git tag -a 0.2.0
     $ git switch develop
-    $ git merge hotfix/#37
-    $ git branch -d hotfix/#37
+    $ git merge hotfix/37-some-bug
+    $ git branch -d hotfix/37-some-bug
 
 .. graphviz::
 
@@ -539,10 +539,10 @@ neuen Versionsnummer getaggt werden.
     main1 -> main2 -> main3 -> main4;
     main4 -> mainend [color="#b0b0b0", style=dashed, arrowhead=none ];
 
-    node  [group="hotfixes", fillcolor="#FD5965"];
+    node  [group="hotfix", fillcolor="#FD5965"];
     hotfix1;
 
-    node  [group="releases", fillcolor="#52C322"];
+    node  [group="release", fillcolor="#52C322"];
     release1;
     release2;
     release3;
