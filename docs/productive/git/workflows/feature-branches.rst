@@ -94,14 +94,14 @@ Lebenszyklus eines Git-Feature-Branches könnte dann so aussehen:
 
 #. Zusammenführen
 
-   Sobald euer Pull-Request akzeptiert wird, müsst ihr zunächst sicherstellen,
-   dass euer lokaler ``main``-Branch mit dem Upstream-``main``-Branch
-   synchronisiert ist. Dann könnt ihr den Feature-Branch in den ``main``-Branch
-   mergen und schließlich den aktualisierten ``main``-Branch zurück in den
-   Upstream-``main``-Branch pushen. Dies wird jedoch nicht selten zu einem
-   Merge-Commit führen. Dennoch hat dieser Workflow den Vorteil, dass klar
-   zwischen der Feature-Entwicklung und dem Zusammenführen unterschieden werden
-   kann.
+   Sobald euer Merge- oder Pull-Request akzeptiert wird, müsst ihr zunächst
+   sicherstellen, dass euer lokaler ``main``-Branch mit dem
+   Upstream-``main``-Branch synchronisiert ist; erst dann könnt ihr den
+   Feature-Branch in den ``main``-Branch mergen und schließlich den
+   aktualisierten ``main``-Branch zurück in den Upstream-``main``-Branch pushen.
+   Dies wird jedoch nicht selten zu einem Merge-Commit führen. Dennoch hat
+   dieser Workflow den Vorteil, dass klar zwischen der Feature-Entwicklung und
+   dem Zusammenführen unterschieden werden kann.
 
 Simple-Git-Workflow
 -------------------
