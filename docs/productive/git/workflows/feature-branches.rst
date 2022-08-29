@@ -26,7 +26,7 @@ Git-Feature-Branches bieten dabei zwei Vorteile:
 * Die Workflows entsprechen den üblichen Methoden kontinuierlicher Integration.
 
 Sie können jedoch nicht beantworten, wie Deployments in unterschiedliche
-Umgebungen oder die Aufteilung in verschiedene Releases erfolgen Sollen.
+Umgebungen oder die Aufteilung in verschiedene Releases erfolgen sollen.
 Mögliche Antworten hierfür werden in :doc:`deploy-branches` beschrieben.
 
 .. seealso::
