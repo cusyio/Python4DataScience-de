@@ -70,9 +70,9 @@ Lebenszyklus eines Git-Feature-Branches könnte dann so aussehen:
       $ git add [somefile]
       $ git commit
 
-#. Pushen des Feautre-Branches mit den Änderungen.
+#. Pushen des Feature-Branches mit den Änderungen.
 
-   Durch das Pushen des Feautre-Branches mit Deinen Änderungen erstellt Ihr
+   Durch das Pushen des Feature-Branches mit Deinen Änderungen erstellt Ihr
    nicht nur eine Sicherungskopie eurer Änderungen, sondern ihr ermöglicht auch
    anderen im Team, sich die Änderungen anzuschauen.
 
