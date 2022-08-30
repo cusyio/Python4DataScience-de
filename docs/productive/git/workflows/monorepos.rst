@@ -104,7 +104,7 @@ Dateien nach vordefinierten Mustern herauszufiltern, zu ändern oder zu
 Es ist ein sehr leistungsfähiges Werkzeug, sobald ihr herausgefunden habt, wo
 euer Projektarchiv *schwer* ist. Es gibt auch Hilfsskripte, um große Objekte zu
 identifizieren: :samp:`git filter-branch --tree-filter 'rm -rf
-{/PATH/TO/BIG/ASSETS}`.
+{/PATH/TO/BIG/ASSETS}'`.
 
 .. warning::
    ``git filter-branch`` schreibt allerdings die gesamte Historie eures Projekts
