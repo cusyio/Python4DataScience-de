@@ -41,6 +41,12 @@ Historie des gewünschten Ordners extrahiert:
     Proceeding with filter-branch...
     Ref 'refs/heads/main' was rewritten
 
+.. warning::
+   ``git-filter-branch`` kann die Historie jedoch auch fehlerhaft umschreiben. 
+   Stattdessen sollte besser `git filter-repo
+   <https://github.com/newren/git-filter-repo/>`_ verwendet werden, :abbr:`s.a.
+   (siehe auch)` `filter-branch <https://git-scm.com/docs/git-filter-branch>`_.
+
 Anstatt nur einen Zweig, in diesem Fall ``main``, zu überschreiben, könnt ihr
 auch mehrere Zweige und sogar Tags überschreiben. Natürlich kann nicht jeder
 Tag in der neuen Historie erfolgreich umgeschrieben werden: der getaggte Commit
