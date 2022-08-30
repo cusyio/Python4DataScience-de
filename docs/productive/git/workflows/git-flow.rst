@@ -495,8 +495,6 @@ neuen Versionsnummer getaggt werden.
     $ git switch main 
     Zu Zweig »main« gewechselt
     …
-    $ git switch main 
-    Zu Zweig »main« gewechselt
     $ git merge hotfix/37-some-bug
     $ git tag -a 0.2.0
     $ git switch develop
