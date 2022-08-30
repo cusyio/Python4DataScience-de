@@ -138,3 +138,34 @@ eures Projektarchivs drastisch verkürzt wird. Git LFS greift dabei auf die
 nativen Push-, Pull-, Checkout- und Fetch-Operationen von Git zu, um die Objekte
 zu übertragen und zu ersetzen, :abbr:`d.h. (das heißt)`, dass ihr mit großen
 Dateien in eurem Repository wie gewohnt arbeiten könnt.
+
+Git file system monitor (FSMonitor)
+-----------------------------------
+
+``git status`` und ``git add`` sind langsam, weil sie den gesamten Arbeitsbaum
+nach Änderungen durchsuchen müssen. Mit der Funktion ``git fsmonitor--daemon``,
+die ab Git-Version 2.36 zur Verfügung steht, wwerden diese Befehle beschleunigt,
+indem der Umfang der Suche reduziert wird:
+
+.. code-block::
+
+    $ time git status
+    Auf Branch master
+    Ihr Branch ist auf demselben Stand wie 'origin/master'.
+    real    0m1,969s
+    user    0m0,237s
+    sys     0m1,257s
+    $ git config core.fsmonitor true
+    $ git config core.untrackedcache true
+    $ time git status
+    Auf Branch master
+    Ihr Branch ist auf demselben Stand wie 'origin/master'.
+    real    0m0,415s
+    user    0m0,171s
+    sys     0m0,675s
+    $ git fsmonitor--daemon status
+    fsmonitor-daemon beobachtet '/srv/jupyter/linux'
+
+.. seealso::
+   * `Improve Git monorepo performance with a file system monitor
+     <https://github.blog/2022-06-29-improve-git-monorepo-performance-with-a-file-system-monitor/>`_
