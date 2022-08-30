@@ -24,3 +24,4 @@ Im Folgenden behandeln wir einige dieser Git-Workflows.
    deploy-branches
    monorepos
    split-repos
+   ci
