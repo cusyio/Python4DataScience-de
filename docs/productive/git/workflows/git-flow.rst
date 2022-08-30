@@ -296,7 +296,7 @@ Umgekehrt könnt ihr euren Feature-Branch abschließen mit
 
 .. code-block:: console
 
-    $ git witch develop
+    $ git switch develop
     $ git merge feature/17-some-feature
     $ git branch -d feature/17-some-feature
     Branch feature/17-some-feature entfernt (war 11a9417).
