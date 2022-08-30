@@ -469,7 +469,7 @@ sind Release-Branches und Feature-Branches ähnlich, basieren jedoch auf dem
 ``main``- statt auf dem ``develop``-Branch. Damit ist er der einzige Branch, der
 direkt vom ``main``-Branch geforkt werden sollte. Sobald der Hotfix
 abgeschlossen wurde, sollte er sowohl in den ``main``- als auch in den
-``develop``-Branch und :abbr:`ggf. /gegebenenfalls)` in den aktuellen
+``develop``-Branch und :abbr:`ggf. (gegebenenfalls)` in den aktuellen
 ``release``-Branch gemergt werden. Der ``main``-Branch sollte außerdem mit einer
 neuen Versionsnummer getaggt werden.
 
