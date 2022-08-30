@@ -83,7 +83,7 @@ Lebenszyklus eines Git-Feature-Branches könnte dann so aussehen:
 
    .. code-block:: console
 
-      $ git add [somefile]
+      $ git add SOMEFILE
       $ git commit
 
 #. Pushen des Feature-Branches mit den Änderungen.
