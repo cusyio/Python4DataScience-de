@@ -1,9 +1,8 @@
-===============================
 Deployment und Release Branches
 ===============================
 
 Deployment-Branches
-===================
+-------------------
 
 Deployment-Branches empfehlen sich, wenn ihr :abbr:`z.B. (zum Beispiel)` den
 Release-Zeitpunkt nicht selbst bestimmen könnt, wie bei einer iOS-Anwendung, die
