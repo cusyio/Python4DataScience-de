@@ -29,7 +29,7 @@ folgendes:
 
 #. Im Hauptzweig wird ein Fehler in einer Funktion festgestellt, die früher
    einmal fehlerfrei funktionierte.
-#. iDurch die *saubere Historie* des Hauptzweigs sollte :doc:`log` schnell
+#. Durch die *saubere Historie* des Hauptzweigs sollte :doc:`log` schnell
    Rückschlüsse ermöglichen.
 #. Sollte :doc:`log` nicht zum gewünschten ERgebnis führen, hilft vermutlich
    :doc:`git bisect <bisect>` weiter. Dabei hilft ``git bisect`` die saubere
