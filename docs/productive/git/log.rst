@@ -50,3 +50,7 @@ Git Log
 ``$ git reflog``
     Vorgänge (z.B. ``switch``, ``commit``) auflisten, die im lokalen Repository
     ausgeführt wurden.
+
+.. seealso::
+   * `Git’s Database Internals III: File History Queries
+     <https://github.blog/2022-08-31-gits-database-internals-iii-file-history-queries/>`_
