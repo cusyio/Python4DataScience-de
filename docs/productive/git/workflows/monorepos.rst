@@ -78,7 +78,7 @@ ziemlich hoch ist, kann es immer noch mühsam sein, sie zu klonen. Dennoch könn
 wir lange Historien nicht immer vermeiden, wenn sie aus rechtlichen oder
 regulatorischen Gründen beibehalten werden müssen.
 
-Die Lösung für einen schnellen CLone eines solchen Repositories  besteht darin,
+Die Lösung für einen schnellen Clone eines solchen Repositories  besteht darin,
 nur die jüngsten Revisionen zu kopieren. Mit der *Shallow*-Option von ``git
 clone`` könnt ihr nur die letzten :samp:`{N}` Commits der Historie abrufen,
 :abbr:`z.B. (zum Beispiel)` :samp:`git clone --depth {N} {REMOTE-URL}`.
