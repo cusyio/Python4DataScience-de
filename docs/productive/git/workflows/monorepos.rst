@@ -121,7 +121,7 @@ identifizieren: :samp:`git filter-branch --tree-filter 'rm -rf
 
 Ihr könnt den Umfang der geklonten Historie auch begrenzen, indem ihr einen
 einzelnen Zweig klont, etwa mit :samp:`git clone {REMOTE-URL} --branch
-{BRANCH-NAME} --single-branch {FOLDER}`
+{BRANCH-NAME} --single-branch {FOLDER}`.
 
 Dies kann nützlich sein, wenn ihr mit langlaufenden und abweichenden Zweigen
 arbeitet, oder wenn ihr viele Zweige habt und nur mit einigen davon arbeiten
