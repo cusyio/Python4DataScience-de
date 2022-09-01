@@ -2,8 +2,8 @@
 Git-Workflows
 =============
 
-Hierbei wird win Git-Workflow als Empfehlung zur Verwendung von Git verstanden,
-die eine konsistente und effiziente Arbeitsweise ermöglichen soll. Da Git das
+Hierbei wird Git-Workflow als Empfehlung zur Verwendung von Git verstanden, die
+eine konsistente und effiziente Arbeitsweise ermöglichen soll. Da Git das
 Verzweigen und Zusammenführen im Vergleich zu älteren Versionierungssystemen wie
 SVN deutlich vereinfacht, ermöglicht dies eine Vielzahl von unterschiedlichen
 Workflows und es gibt nicht den einen idealen Prozess für die beste Interaktion
