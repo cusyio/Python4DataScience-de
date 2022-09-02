@@ -36,7 +36,7 @@ gesamte Historie gepusht wurde. In vielen Fällen wird jedoch zusätzlich der fo
 Cache des Repos auf Build-Servern
 ---------------------------------
 
-Dies beschleunigt auch das Klonen, da nur die Repos nur aktualisiert werden
+Dies beschleunigt auch das Klonen, da die Repos nur aktualisiert werden
 müssen.
 
 .. note::
