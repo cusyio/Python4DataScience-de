@@ -49,7 +49,7 @@ Wählt die Trigger mit Bedacht
 -----------------------------
 
 Es versteht sich fast von selbst, dass es eine gute Idee ist, CI auf all euren
-aktiven Zweigen laufen zu lassen. Aber es ist meistk eine gute Idee, alle Builds
+aktiven Zweigen laufen zu lassen. Aber es ist meist keine gute Idee, alle Builds
 auf allen Zweigen gegen alle Commits laufen zu lassen.
 
 Üblicherweise geben wir allen im Entwicklungsteam die Möglichkeit, ihre
