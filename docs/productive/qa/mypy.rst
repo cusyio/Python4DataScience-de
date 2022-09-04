@@ -8,6 +8,8 @@ Mit Mypy könnt ihr eine statische Typüberprüfung vornehmen.
     * `GitHub <https://github.com/python/mypy>`_
     * `Docs <https://mypy.readthedocs.io/>`_
     * `PyPI <https://pypi.org/project/mypy/>`_
+    * `Using Mypy in production at Spring
+      <https://notes.crmarsh.com/using-mypy-in-production-at-spring>`_
 
 Installation
 ------------
