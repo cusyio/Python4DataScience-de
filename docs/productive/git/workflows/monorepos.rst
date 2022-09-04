@@ -41,16 +41,16 @@ eine große Anzahl an Commits
     durchlaufen, also :abbr:`z.B. (zum Beispiel)` ``git log`` oder
     ``git blame``, langsam werden.
 
-eine große Anzahl von Refs
+eine große Anzahl von Git-Referenzen
     Eine große Anzahl von Branches und Tags verlangsamen Git ebenfalls.
-    Mit ``git ls-remote`` könnt ihr euch die *Refs* eines Repository anzeigen
-    lassen und mit ``git gc`` werden lose *Refs* in einer einzigen Datei
-    zusammengefasst.
+    Mit ``git ls-remote`` könnt ihr euch die Referenzen eines Repository
+    anzeigen lassen und mit ``git gc`` werden lose Referenzen in einer einzigen
+    Datei zusammengefasst.
 
     Jede Operation, die den Commit-Verlauf eines Repositories durchlaufen und
-    die einzelnen *Refs* berücksichtigen muss, wie :abbr:`z.B. (zum Beispiel)`
-    bei ``git branch --contains <commit>``, werden bei einem Repo mit vielen
-    *Refs* langsam.
+    die einzelnen Referenzen berücksichtigen muss, wie :abbr:`z.B. (zum
+    Beispiel)` bei ``git branch --contains <commit>``, werden bei einem Repo mit
+    vielen Referenzen langsam.
 
 eine große Anzahl an versionierten Dateien
     Der Index des Directory Cache (``.git/index``) wird von Git verwendet um
