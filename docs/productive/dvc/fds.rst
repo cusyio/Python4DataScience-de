@@ -38,7 +38,7 @@ wird zu:
     $ fds add .
     $ fds save -m "Initial commit"
 
-FastDS kürzt Git- und DVC-Befehle ab, um Eingabefehler zu minimieren. und sich
+FastDS kürzt Git- und DVC-Befehle ab, um Eingabefehler zu minimieren und sich
 wiederholende Aufgaben zu automatisieren:
 
 ``init``
