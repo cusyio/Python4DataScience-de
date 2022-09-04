@@ -90,3 +90,4 @@ Alternativ kann DVC auch über andere Paketmanager installiert werden:
     dag
     reproduce
     integration
+    fds
