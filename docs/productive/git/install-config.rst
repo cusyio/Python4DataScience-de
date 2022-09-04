@@ -113,41 +113,39 @@ kann ggf. erhöht werden, z.B. mit:
 
     $ git config --global credential.helper 'cache --timeout=3600'
 
-macOS
-:::::
+.. tab:: macOS
 
-Unter macOS lässt sich mit `osxkeychain` die Schlüsselbundverwaltung
-(*Keychain*) nutzen um die Zugangsdaten zu speichern. `osxkeychain` setzt Git in
-der Version 1.7.10 oder neuer voraus und kann im selben Verzeichnis wie Git
-installiert werden mit:
+    Unter macOS lässt sich mit `osxkeychain` die Schlüsselbundverwaltung
+    (*Keychain*) nutzen um die Zugangsdaten zu speichern. `osxkeychain` setzt
+    Git in der Version 1.7.10 oder neuer voraus und kann im selben Verzeichnis
+    wie Git installiert werden mit:
 
-.. code-block:: console
+    .. code-block:: console
 
-    $ git credential-osxkeychain
-    git: 'credential-osxkeychain' is not a git command. See 'git --help'.
-    $ curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain
-    $ chmod u+x git-credential-osxkeychain
-    $ sudo mv git-credential-osxkeychain /usr/bin/
-    Password:
-    git config --global credential.helper osxkeychain
+        $ git credential-osxkeychain
+        git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+        $ curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain
+        $ chmod u+x git-credential-osxkeychain
+        $ sudo mv git-credential-osxkeychain /usr/bin/
+        Password:
+        git config --global credential.helper osxkeychain
 
-Dies trägt folgendes in die ~/.gitconfig ein:
+    Dies trägt folgendes in die ~/.gitconfig ein:
 
-.. code-block:: ini
+    .. code-block:: ini
 
-    [credential]
-        helper = osxkeychain
+        [credential]
+            helper = osxkeychain
 
-Windows
-:::::::
+.. tab:: Windows
 
-Für Windows steht `Git Credential Manager for Windows
-<https://github.com/Microsoft/Git-Credential-Manager-for-Windows>`_ zur
-Verfügung. Für das Programm muss der `Installer
-<https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest>`_
-heruntergeladen werden. Nach dem Doppelklick führt er Euch durch die weitere
-Installation. Als Terminal-Emulator für Git Bash solltet ihr das
-Standardkonsolenfenster von Windows auswählen.
+    Für Windows steht `Git Credential Manager for Windows
+    <https://github.com/Microsoft/Git-Credential-Manager-for-Windows>`_ zur
+    Verfügung. Für das Programm muss der `Installer
+    <https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest>`_
+    heruntergeladen werden. Nach dem Doppelklick führt er Euch durch die
+    weitere Installation. Als Terminal-Emulator für Git Bash solltet ihr das
+    Standardkonsolenfenster von Windows auswählen.
 
 .. note::
     Ein umfangreiches Beispiel einer `Konfigurationsdatei findet ihr in meinem
