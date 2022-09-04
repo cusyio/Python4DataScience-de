@@ -146,7 +146,7 @@ definiert eine standardisierte Methode zum Austausch von Urheberrechts- und
 Lizenzinformationen zwischen Projekten und Personen. Die passenden
 SPDX-Identifier könnt ihr aus der `SPDX License List
 <https://spdx.org/licenses/>`_ auswählen und dann in den Kopf eurer
-Lizenzdateien  eintragen:
+Lizenzdateien eintragen:
 
 .. code-block::
 
@@ -157,12 +157,12 @@ Lizenzdateien  eintragen:
 Konformität überprüfen
 ----------------------
 
-`REUSE <https://reuse.software/>`_ wurde von der Free Software Foundation
-Europe (FSFE) initiiert, um die Lizenzierung freier Software-Projekte zu
-erleichtern. Das `REUSE tool <https://git.fsfe.org/reuse/tool>`_ überprüft
-Lizenzen und unterstützt Euch bei der Einhaltung der Lizenzkonformität.
-Mit der `REUSE API <https://reuse.software/dev/#api>`_ könnt ihr Euch auch
-ein dynamisches Compliance-Badge generieren:
+`REUSE <https://reuse.software/>`_ wurde von der Free Software Foundation Europe
+(FSFE) initiiert, um die Lizenzierung freier Software-Projekte zu erleichtern.
+Das `REUSE tool <https://git.fsfe.org/reuse/tool>`_ überprüft Lizenzen und
+unterstützt euch bei der Einhaltung der Lizenzkonformität. Mit der `REUSE API
+<https://reuse.software/dev/#api>`_ könnt ihr euch auch ein dynamisches
+Compliance-Badge generieren:
 
 .. figure:: reuse-compliant.svg
    :alt: REUSE-compliant Badge
