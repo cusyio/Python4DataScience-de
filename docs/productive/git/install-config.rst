@@ -152,6 +152,10 @@ kann ggf. erhöht werden, z.B. mit:
     `dotfiles <https://github.com/veit/dotfiles/>`__-Repository: `.gitconfig
     <https://github.com/veit/dotfiles/blob/main/.config/git/config>`_.
 
+.. seealso::
+    * `Git Credential Manager: authentication for everyone
+      <https://github.blog/2022-04-07-git-credential-manager-authentication-for-everyone/>`_
+
 Die ``.gitignore``-Datei
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
