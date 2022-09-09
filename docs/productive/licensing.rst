@@ -146,7 +146,7 @@ zu veröffentlichen. Ein Beispiel hierfür ist `cryptography/LICENSE
 GitHub
 ------
 
-Auf `GitHub <https://github.com/>`_ könnt ihr Euch eine Open Source-Lizenz in
+Auf `GitHub <https://github.com/>`_ könnt ihr euch eine Open Source-Lizenz in
 eurem Repository erstellen lassen.
 
 #. Geht zur Hauptseite eures Repository.
@@ -174,8 +174,8 @@ erhaltet ihr in `Searching GitHub by license type
 <https://help.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository#searching-github-by-license-type>`_.
 
 Schließlich könnt ihr euch von `Shields.io <https://shields.io/>`_ ein
-License-Badge generieren lassen, das ihr z.B. auf eurer ``README``-Datei
-einbinden könnt, z.B.
+License-Badge generieren lassen, das ihr :abbr:`z.B. (zum Beispiel) auf eurer
+``README``-Datei einbinden könnt:
 
 .. code-block:: rst
 
