@@ -25,8 +25,8 @@ Proprietäre Softwarelizenzen
 Proprietäre Softwarelizenzen sind selten standardisiert; sie können kommerziell,
 Shareware oder Freeware sein.
 
-Freie und Open-Source Software-Lizenzen
----------------------------------------
+Freie und Open-Source Softwarelizenzen
+--------------------------------------
 
 Sie werden von der `Free Software Foundation (FSF)
 <https://www.fsf.org/de/?set_language=de>`_ und der `Open Source Initiative
