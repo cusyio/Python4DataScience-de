@@ -116,8 +116,8 @@ Auswahl geeigneter Lizenzen
 
 Übersichten über mögliche Lizenzen findet ihr in `SPDX License List
 <https://spdx.org/licenses/>`_ oder `OSI Open Source Licenses by Category
-<https://opensource.org/licenses/category>`_. Bei der Wahl einer geeigneten
-Lizenz unterstützt Euch die Website `Choose an open source license
+<https://opensource.org/licenses/category>`_. Bei der Wahl geeigneter
+Lizenzen unterstützt euch die Website `Choose an open source license
 <https://choosealicense.com/>`_ und `Comparison of free and open-source
 software licenses
 <https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses>`_.
