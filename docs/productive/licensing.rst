@@ -246,3 +246,29 @@ Alternativen
 `FOSSology <https://www.fossology.org/>`_
     Toolkit für die Einhaltung freier Software, das Informationen in einer
     Datenbank mit Lizenz-, Copyright- und Exportscanner speichert.
+
+Python-Paket-Metadaten
+----------------------
+
+In Python-Paketen gibt es noch weitere Felder, in denen Lizenzinformationen
+gespeichert werden, wie die `Core metadata specifications
+<https://packaging.python.org/en/latest/specifications/core-metadata/>`_, die
+zudem limitiert sind. Dies führt nicht nur zu Problemen für die Autoren, die
+richtige Lizenz angeben zu können, sondern auch zu Problemen beim Re-Paketieren
+für diverse Linux-Distributionen.
+
+Aktuell werden zwar einige häufige Fälle abgedeckt und die Lizenzklassifizierung
+kann auch erweitert werden, es gibt jedoch einige beliebte Klassifizierungen wie
+:samp:`License :: OSI Approved :: BSD License`, die abgeschafft werden. Damit
+ist dann jedoch die Abwärtskompatibilität nicht mehr gewährleistet und die
+Pakete müssen relizensiert werden. Immerhin habt ihr mit `trove-classifiers
+<https://github.com/pypa/trove-classifiers>`_ auch eine Möglichkeit, eure
+Trove-Klassifizierungen zu überprüfen.
+
+.. seealso::
+   * `PEP 639 – Improving License Clarity with Better Package Metadata
+     <https://peps.python.org/pep-0639/>`_
+   * `PEP 621 – Storing project metadata in pyproject.toml
+     <https://peps.python.org/pep-0621/>`_
+   * `PEP 643 – Metadata for Package Source Distributions
+     <https://peps.python.org/pep-0643/>`_
