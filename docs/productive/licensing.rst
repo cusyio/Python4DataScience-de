@@ -66,8 +66,8 @@ Bei gemeinfreien oder Public Domain-Lizenzen gehen die Urheberrechte an die
 Allgemeinheit über. Zur Kennzeichnung der Freigabe weitest möglicher
 Nutzungsrechte wurde die Creative Commons Zero-Lizenz erstellt.
 
-Auswahl einer geeigneten Lizenz
--------------------------------
+Auswahl geeigneter Lizenzen
+---------------------------
 
 Übersichten über mögliche Lizenzen findet ihr in `SPDX License List
 <https://spdx.org/licenses/>`_ oder `OSI Open Source Licenses by Category
