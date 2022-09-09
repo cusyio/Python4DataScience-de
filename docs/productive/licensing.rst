@@ -246,7 +246,3 @@ Alternativen
 `FOSSology <https://www.fossology.org/>`_
     Toolkit für die Einhaltung freier Software, das Informationen in einer
     Datenbank mit Lizenz-, Copyright- und Exportscanner
-
-.. seealso::
-    * `Python License tracker
-      <https://wagenrace.github.io/python_dep_frontend/>`_
