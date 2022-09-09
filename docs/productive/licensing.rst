@@ -238,11 +238,11 @@ Alternativen
 
 `ClearlyDefined <https://clearlydefined.io/>`_
     Es sammelt und zeigt Informationen über die Lizenzierungs- und
-    Urheberrechtssituation eines Software-Projekts an
+    Urheberrechtssituation eines Software-Projekts an.
 `OpenChain <https://www.openchainproject.org/>`_
     Es empfiehlt REUSE als eine Komponente, um die Klarheit der Lizenz- und
     Urheberrechtssituation zu verbessern, stellt jedoch höhere Anforderungen, um
     eine vollständige Konformität zu erreichen.
 `FOSSology <https://www.fossology.org/>`_
     Toolkit für die Einhaltung freier Software, das Informationen in einer
-    Datenbank mit Lizenz-, Copyright- und Exportscanner
+    Datenbank mit Lizenz-, Copyright- und Exportscanner speichert.
