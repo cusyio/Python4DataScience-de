@@ -77,13 +77,19 @@ Lizenz unterstützt Euch die Website `Choose an open source license
 software licenses
 <https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses>`_.
 
-Wenn ihr z.B. eine möglichst große Verbreitung eures Pakets erreichen wollt,
-sind MIT- oder die BSD-Varianten eine gute Wahl. Die Apache-Lizenz schützt euch
-besser vor Patentverletzungen ist jedoch nicht kompatibel mit der GPL v2. Daher
-solltet ihr schauen, welche Lizenzen diejenigen Pakete haben, von denen ihr
-abhängt und zu denen ihr kompatibel sein solltet. Zur Analyse von Lizenzen könnt
-`License compatibility <https://en.wikipedia.org/wiki/License_compatibility>`_
-anschauen und den `licensechecker
+Wenn ihr :abbr:`z.B. (zum Beispiel)` eine möglichst große Verbreitung eures
+Pakets erreichen wollt, sind MIT- oder die BSD-Varianten eine gute Wahl. Die
+Apache-Lizenz schützt euch besser vor Patentverletzungen ist jedoch nicht
+kompatibel mit der GPL v2.
+
+Abhängigkeiten überprüfen
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Daher solltet ihr schauen, welche Lizenzen diejenigen
+Pakete haben, von denen ihr abhängt und zu denen ihr kompatibel sein solltet.
+Zur Analyse von Lizenzen könnt ihr euch `License compatibility
+<https://en.wikipedia.org/wiki/License_compatibility>`_ anschauen und den
+`licensechecker
 <https://boyter.org/2018/03/licensechecker-command-line-application-identifies-software-license/>`_,
 verwenden, ein Kommandozeilenwerkzeug, das Installationsverzeichnisse nach
 Lizenzen durchsucht.
