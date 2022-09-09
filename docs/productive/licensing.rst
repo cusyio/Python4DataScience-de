@@ -66,6 +66,51 @@ Bei gemeinfreien oder Public Domain-Lizenzen gehen die Urheberrechte an die
 Allgemeinheit über. Zur Kennzeichnung der Freigabe weitest möglicher
 Nutzungsrechte wurde die Creative Commons Zero-Lizenz erstellt.
 
+Nicht-Software-Lizenzen
+-----------------------
+
+Open-Source-Software-Lizenzen können auch für Werke verwendet werden, die nicht
+Software sind. Oft sind sie auch die beste Wahl, insbesondere wenn die
+betreffenden Werke als Quelltext bearbeitet und versioniert werden.
+
+Daten, Medien, etc.
+~~~~~~~~~~~~~~~~~~~
+
+`CC0-1.0 <>https://creativecommons.org/publicdomain/zero/1.0/deed.de`_,
+`CC-BY-4.0 <https://creativecommons.org/licenses/by/4.0/deed.de>`_ und
+`CC-BY-SA-4.0 <https://creativecommons.org/licenses/by-sa/4.0/deed.de>`_ sind
+offene Lizenzen, die für Nicht-Software-Material verwendet werden, von
+Datensätzen bis zu Videos.
+
+Dokumentation
+~~~~~~~~~~~~~
+
+Jede Open-Source-Softwarelizenz oder offene Lizenz für Medien gilt auch für
+Software-Dokumentation. Wenn ihr unterschiedliche Lizenzen für eure Software und
+deren Dokumentation verwendet, solltet ihr darauf achten, dass die
+Quellcode-Beispiele in der Dokumentation auch unter der Software-Lizenz
+lizenziert sind.
+
+Schriftarten
+~~~~~~~~~~~~
+
+Die `SIL Open Font License 1.1 <https://opensource.org/licenses/OFL-1.1>`_ sorgt
+dafür, dass Schriftarten offen sind und in anderen Werken frei verwendet werden
+können.
+
+Hardware
+~~~~~~~~
+
+Entwürfe für `Open-Source-Hardware <https://www.oshwa.org/definition/>`_ werden
+von den CERN Open Hardware Lizenzen abgedeckt:
+
+`CERN-OHL-P-2.0 <https://ohwr.org/cern_ohl_p_v2.txt>`_
+    permissiv
+`CERN-OHL-W-2.0 <https://ohwr.org/cern_ohl_w_v2.txt>`_
+    schwach reziprok
+`CERN-OHL-S-2.0 <https://ohwr.org/cern_ohl_s_v2.txt>`_
+    stark reziprok
+
 Auswahl geeigneter Lizenzen
 ---------------------------
 
