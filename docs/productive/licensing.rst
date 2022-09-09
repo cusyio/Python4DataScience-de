@@ -1,12 +1,12 @@
 Lizenzieren
 ===========
 
-Damit andere eure Software verwenden können, sollte sie eine Lizenz erhalten,
-die die Nutzungsbedingungen beschreibt. Andernfalls dürfte sie meist
-urheberrechtlich geschützt sein. Urheber sind diejenigen, die zur Software
-originär beigetragen haben. Wenn eine Software relizenziert werden soll, ist
-die Zustimmung aller Personen erforderlich, die Urheberschaft beanspruchen
-können.
+Damit andere eure Software verwenden können, sollte sie eine oder mehrere
+Lizenzen erhalten, die die Nutzungsbedingungen beschreiben. Andernfalls dürfte
+sie meist urheberrechtlich geschützt sein. Urheber sind diejenigen, die zur
+Software originär beigetragen haben. Wenn eine Software relizenziert werden
+soll, ist die Zustimmung aller Personen erforderlich, die Urheberschaft
+beanspruchen können.
 
 .. note::
    Dies stellt keine Rechtsberatung dar. Wendet euch im Zweifelsfall bitte an
