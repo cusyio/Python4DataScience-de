@@ -110,9 +110,24 @@ es speziell für freie Dokumentationen folgende Lizenzen.
 Schriftarten
 ~~~~~~~~~~~~
 
-Die `SIL Open Font License 1.1 <https://opensource.org/licenses/OFL-1.1>`_ sorgt
-dafür, dass Schriftarten offen sind und in anderen Werken frei verwendet werden
-können.
+`SIL Open Font License 1.1 <https://opensource.org/licenses/OFL-1.1>`_
+    Schriftlizenz, die in anderen Werken frei verwendet werden kann.
+`GNU General Public License 3 <https://www.gnu.org/licenses/gpl-3.0>`_
+    Sie kann auch für Schriften verwendet werden, sie darf jedoch nur mit der
+    `Schriftausnahme <https://www.gnu.org/licenses/gpl-faq.html#FontException>`_
+    in Dokumente eingebunden werden.
+
+    .. seealso::
+       * `Font Licensing <https://www.fsf.org/blogs/licensing/20050425novalis>`_
+
+`LaTeX ec fonts <https://dante.ctan.org/tex-archive/fonts/ec/src/copyrite.txt>`_
+    Freie *European Computer Modern- und Text Companion*-Schriften, die
+    üblicherweise mit Latex verwendet werden.
+`Arphic Public License <https://spdx.org/licenses/Arphic-1999>`_
+    Freie Lizenz mit Copyleft.
+`IPA Font license <https://spdx.org/licenses/IPA.html>`_
+    Freie Lizenz mit Copyleft, deren abgeleitete Werte jedoch nicht den Namen
+    des Originals verwenden oder beinhalten dürfen.
 
 Hardware
 ~~~~~~~~
