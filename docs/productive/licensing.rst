@@ -95,6 +95,9 @@ Daten/Datenbanken veröffentlicht:
     Die PDDL stellt die Daten in den öffentlichen Bereich und verzichtet auf
     alle Rechte.
 
+Bei der Verwendung des `Community Data License Agreement – Permissive, Version 2.0 <https://cdla.dev/permissive-2-0/>`_ müssen die Urheberrechtshinweise
+beibehalten werden.
+
 Eine weitere mögliche Lizenz für künstlerische Werke ist die `Free Art License
 1.3 <https://artlibre.org/licence/lal/en/>`_.
 
