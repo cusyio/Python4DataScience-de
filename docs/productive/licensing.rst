@@ -82,9 +82,21 @@ Daten, Medien, etc.
 offene Lizenzen, die für Nicht-Software-Material verwendet werden, von
 Datensätzen bis zu Videos. Sie sind jedoch `nicht für Software empfohlen
 <https://creativecommons.org/faq/#can-i-apply-a-creative-commons-license-to-software>`_.
-Weitere mögliche Lizenzen sind die `Free Art License 1.3
-<https://artlibre.org/licence/lal/en/>`_ und die `Open Database License
-<https://opendatacommons.org/licenses/odbl/1-0/>`_.
+
+Die `Open Knowledge Foundation <https://okfn.org>`_ hat ebenfalls eine Reihe von
+`Open Data Commons <https://opendatacommons.org>`_-Lizenzen für
+Daten/Datenbanken veröffentlicht:
+
+`Open Data Commons Open Database License (ODbL) v1.0 <https://opendatacommons.org/licenses/odbl/1-0/>`_
+    Namensnennung und Weitergabe unter gleichen Bedingungen.
+`Open Data Commons Attribution License (ODC-By) v1.0 <https://opendatacommons.org/licenses/by/1-0/>`_
+    Namensnennung.
+`Open Data Commons Public Domain Dedication and License (PDDL) v1.0 <https://opendatacommons.org/licenses/pddl/1-0/>`_
+    Die PDDL stellt die Daten in den öffentlichen Bereich und verzichtet auf
+    alle Rechte.
+
+Eine weitere mögliche Lizenz für künstlerische Werke ist die `Free Art License
+1.3 <https://artlibre.org/licence/lal/en/>`_.
 
 Dokumentation
 ~~~~~~~~~~~~~
