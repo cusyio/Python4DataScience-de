@@ -95,6 +95,14 @@ Daten/Datenbanken veröffentlicht:
     Die PDDL stellt die Daten in den öffentlichen Bereich und verzichtet auf
     alle Rechte.
 
+`GovData <https://www.govdata.de>`_ hat die *Datenlizenz Deutschland* in zwei
+Varianten vorgelegt:
+
+* `Datenlizenz Deutschland – Namensnennung – Version 2.0
+  <https://www.govdata.de/dl-de/by-2-0>`_
+* `Datenlizenz Deutschland – Zero – Version 2.0
+  <https://www.govdata.de/dl-de/zero-2-0>`_
+
 Bei der Verwendung des `Community Data License Agreement – Permissive, Version 2.0 <https://cdla.dev/permissive-2-0/>`_ müssen die Urheberrechtshinweise
 beibehalten werden.
 
