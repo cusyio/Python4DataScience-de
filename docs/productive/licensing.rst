@@ -93,7 +93,19 @@ Jede Open-Source-Softwarelizenz oder offene Lizenz für Medien gilt auch für
 Software-Dokumentation. Wenn ihr unterschiedliche Lizenzen für eure Software und
 deren Dokumentation verwendet, solltet ihr darauf achten, dass die
 Quellcode-Beispiele in der Dokumentation auch unter der Software-Lizenz
-lizenziert sind.
+lizenziert sind. Neben den oben bereits genannten Creative Commons-Lizenzen gibt
+es speziell für freie Dokumentationen folgende Lizenzen.
+
+`GNU Free Documentation License (FDL) <https://www.gnu.org/licenses/fdl-1.3.txt>`_
+    Copyleft-Lizenz für Dokumentationen, die für alle GNU-Handbücher verwendet
+    werden soll. Ihre Anwendbarkeit ist auf textuelle Werke (Bücher) beschränkt.
+`FreeBSD Documentation License <https://www.freebsd.org/copyright/freebsd-doc-license/>`_
+    Freizügige Dokumentationslizenz mit Copyleft, die mit der GNU FDL vereinbar
+    ist.
+`Open Publication License, Version 1.0 <https://opencontent.org/openpub/>`_
+    freie Dokumentationslizenz mit Copyleft, sofern keine der Lizenzoptionen
+    aus Abschnitt VI der Lizenz wahrgenommen werden. In jedem Fall ist sie mit
+    der GNU FDL unvereinbar.
 
 Schriftarten
 ~~~~~~~~~~~~
