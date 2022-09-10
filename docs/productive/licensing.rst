@@ -239,8 +239,8 @@ Lizenzdateien eintragen:
 Konformität überprüfen
 ----------------------
 
-`REUSE <https://reuse.software/de/>`_ wurde von der :abbr:`FSF (Free Software
-Foundation Europe)`_ initiiert, um die Lizenzierung freier Software-Projekte zu
+`REUSE <https://reuse.software/de/>`_ wurde von der :abbr:`FSFE (Free Software
+Foundation Europe)` initiiert, um die Lizenzierung freier Software-Projekte zu
 erleichtern. Das `REUSE tool <https://git.fsfe.org/reuse/tool>`_ überprüft
 Lizenzen und unterstützt euch bei der Einhaltung der Lizenzkonformität. Mit der
 `REUSE API <https://reuse.software/dev/#api>`_ könnt ihr euch auch ein
