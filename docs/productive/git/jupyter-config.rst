@@ -106,6 +106,12 @@ Einrichten
         smudge = cat
         required = true
 
+      ``clean``
+          wird beim Hinzufügen von Änderungen in den Bühnenbereich angewendet.
+      ``smudge``
+          wird beim Zurücksetzen des Arbeitsbereichs durch Änderungen aus dem
+          Bühnenbereich angewendet.
+
    #. Anschließend müsst ihr in ``~/.gitattributes`` nur noch folgendes angeben:
 
       .. code-block:: ini
