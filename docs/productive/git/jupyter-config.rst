@@ -112,9 +112,6 @@ Einrichten
 
          *.ipynb filter=nbstrip_jq
 
-      .. warning::
-         Wenn ihr ``git rebase`` durchführen wollt, solltet ihr vorher die Zeile
-         deaktivieren.
 
 #. Wenn ihr anschließend mit ``git add`` euer Notebbok in den Bühnenbereich
    übernehmt, wird der ``nbstrip_jq``-Filter angewendet.
@@ -123,6 +120,11 @@ Einrichten
       ``git diff`` zeigt euch jedoch keine Änderungen zwischen Arbeits- und
       Bühnenbereich an. Lediglich mit ``git diff --staged`` könnt ihr erkennen,
       dass nur die gefilterten Änderungen übernommen wurden.
+
+   .. warning::
+      ``clean`` und ``smudge``-Filter spielen oft nicht gut mit ``git rebase``
+      über solche gefilterten Commits hinweg zusammen. Dann solltet ihr vor dem
+      Rebase diese Filter deaktivieren.
 
 #. Und es gibt noch ein weiteres Problem: Wenn ein solches Notebook erneut
    ausgeführt wird, zeigt zwar ``git diff`` keine Änderungen an, ``git status``
