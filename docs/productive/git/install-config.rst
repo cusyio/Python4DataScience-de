@@ -253,6 +253,7 @@ Dabei verwendet Git `Globbing <https://linux.die.net/man/7/glob>`_-Muster,
 +-------------------------------+-------------------------------+-------------------------------+ 
 | .. code-block:: console       |``var/instance.log``,          | Zwei Sternchen passen zu null |
 |                               |``var/logs/instance.log``,     | oder mehr Verzeichnissen.     |
+|                               |nicht jedoch                   |                               |
 |     var/**/instance.log       |``var/logs/instance/error.log``|                               |
 +-------------------------------+-------------------------------+-------------------------------+ 
 | .. code-block:: console       | ``logs/instance/error.log``,  | Wildcards können auch in      |
