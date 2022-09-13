@@ -31,7 +31,7 @@ folgendes:
    einmal fehlerfrei funktionierte.
 #. Durch die *saubere Historie* des Hauptzweigs sollte :doc:`log` schnell
    Rückschlüsse ermöglichen.
-#. Sollte :doc:`log` nicht zum gewünschten ERgebnis führen, hilft vermutlich
+#. Sollte :doc:`log` nicht zum gewünschten Ergebnis führen, hilft vermutlich
    :doc:`git bisect <bisect>` weiter. Dabei hilft ``git bisect`` die saubere
    Git-Historie bei der Suche nach der Regression.
 
