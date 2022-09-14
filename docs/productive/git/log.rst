@@ -29,7 +29,7 @@ Git Log
 ``$ git log -G"ba*"``
     filtert Commits nach regulären Ausdrücken im Quellcode.
 
-``$ git log - path/to/foo.py``
+``$ git log -- path/to/foo.py``
     filtert die Commit-Historie nach bestimmten Dateien.
 
 ``$ git log main..feature``
