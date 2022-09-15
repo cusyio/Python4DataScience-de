@@ -96,6 +96,7 @@ Zum Weiterlesen
     tag
     rebase
     revert
+    cherry-pick
     best-practices
     workflows/index
     git-big-picture

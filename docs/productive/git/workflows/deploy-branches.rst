@@ -21,6 +21,8 @@ werden. Dieser Vorgang kann sich mehrfach wiederholen, bis :abbr:`z.B. (zum
 Beispiel)` der Zeitpunkt für das *Going Life* dieser Änderungen gekommen ist und
 ein ``prod``-Branch erstellt werden kann.
 
+.. _release-branches:
+
 Release-Branches
 ----------------
 
