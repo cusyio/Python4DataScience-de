@@ -3,7 +3,16 @@ Git Cherry-Pick
 
 ``git cherry-pick`` ermöglicht euch, beliebige Git-Commits anhand ihres
 Hash-Wertes dem aktuellen ``HEAD`` anzuhängen. Beim Cherry-Picking wird ein
-Commit aus einem Branch ausgewählt und auf einen anderen angewendet.
+Commit aus einem Branch ausgewählt und auf einen anderen angewendet, :abbr:`z.B.
+(zum Beispiel)`:
+
+.. code-block:: console
+
+   $ git checkout 3.10
+   $ git cherry-pick 61de025
+   [3.10 b600967] Fix bug #17
+    Date: Thu Sep 15 11:17:35 2022 +0200
+    1 file changed, 9 insertions(+)
 
 ``git cherry-pick`` kann auch hilfreich sein, um Änderungen rückgängig zu
 machen, wenn beispielsweise ein Commit versehentlich für den falschen Branch
