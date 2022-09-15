@@ -14,8 +14,19 @@ Commit aus einem Branch ausgewählt und auf einen anderen angewendet, :abbr:`z.B
     Date: Thu Sep 15 11:17:35 2022 +0200
     1 file changed, 9 insertions(+)
 
-``git cherry-pick`` kann auch hilfreich sein, um Änderungen rückgängig zu
-machen, wenn beispielsweise ein Commit versehentlich für den falschen Branch
+Dabei kann ``git cherry-pick`` mit verschiedenen Optionen eingesetzt werden:
+
+``-edit``
+    übernimmt nicht die bestehende Commit-Nachricht sondern ermöglicht euch,
+    eine eigene Commit-Nachricht für diesen Cherry-Pick zu erstellen.
+``--no-commit``
+    erstellt keinen neuen Commit sondern verschiebt die Inhalte des Commits in
+    das Arbeitsverzeichnis.
+``--signoff``
+    fügt am Ende der Commit-Nachricht eine Signaturzeile hinzu.
+
+``git cherry-pick`` kann hilfreich sein, um Änderungen rückgängig zu machen,
+wenn beispielsweise ein Commit versehentlich für den falschen Branch
 durchgeführt wurde, könnt ihr zu dem Branch wechseln, in dem die Änderung
 eigentlich vorgenommen weerden sollte, und den Commit dann per Cherry-Pick auf
 diesen Branch übertragen.
