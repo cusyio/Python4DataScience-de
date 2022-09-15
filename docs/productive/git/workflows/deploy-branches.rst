@@ -10,16 +10,16 @@ die App-Store-Validierung bestehen muss, oder wenn euch nur ein bestimmtes
 Zeitfenster für die Bereitstellung zur Verfügung steht. In diesen Fällen
 empfiehlt sich ein *Production*-Branch, der den bereitgestellten Code
 widerspiegelt. Ein solcher Arbeitsablauf verhindert dann zusätzliche
-Arbeitsaufwände bei :doc:`../rebase`, :doc:`../tag` und Git merge.
+Arbeitsaufwände bei :doc:`../rebase` und :doc:`../tag`.
 
-Angenommen, ihr verfügt über eine ``test``-, ``stage``- und ``prod``-Umgebung,
-dann wird zunächst ein Merge- oder Pull-Request für den ``test``-Branch
-gestellt. Sofern alle Tests bestanden wurden, können die Änderungen auch in den
-``stage``-Branch übernommen werden. Wenn die Qualitätssicherung beschließt, dass
-der Code produktionsreif ist, kann er auch in den ``main``-Branch übernommen
-werden. Dieser Vorgang kann sich mehrfach wiederholen, bis :abbr:`z.B. (zum
-Beispiel)` der Zeitpunkt für das *Going Life* dieser Änderungen gekommen ist und
-ein ``prod``-Branch erstellt werden kann.
+Angenommen, ihr verfügt über eine ``development``-, ``staging``- und
+``production``-Umgebung, dann wird zunächst ein Merge- oder Pull-Request für
+eine Feature-Entwicklung beim ``staging``-Branch gestellt. Sofern die
+Qualitätsprüfung dort bestanden wurde, können die Änderungen und der Code
+produktionsreif ist, können die Änderungen in den ``main``-Branch übernommen
+werden. Dieser Vorgang kann sich für neue Features mehrfach wiederholen, bis
+:abbr:`z.B. (zum Beispiel)` der Zeitpunkt für das *Going Life* dieser Änderungen
+gekommen ist und ein Deployment-Branch erstellt werden kann.
 
 .. _release-branches:
 
