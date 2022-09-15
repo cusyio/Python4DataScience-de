@@ -16,14 +16,15 @@ Commit aus einem Branch ausgewählt und auf einen anderen angewendet, :abbr:`z.B
 
 Dabei kann ``git cherry-pick`` mit verschiedenen Optionen eingesetzt werden:
 
-``-edit``
+``--edit``, ``-e``
     übernimmt nicht die bestehende Commit-Nachricht sondern ermöglicht euch,
     eine eigene Commit-Nachricht für diesen Cherry-Pick zu erstellen.
-``--no-commit``
+``--no-commit``, ``-n``
     erstellt keinen neuen Commit sondern verschiebt die Inhalte des Commits in
     das Arbeitsverzeichnis.
-``--signoff``
-    fügt am Ende der Commit-Nachricht eine Signaturzeile hinzu.
+``--signoff``, ``-s``
+    fügt am Ende der Commit-Nachricht eine Signaturzeile mit ``Signed-off-by``
+    hinzu.
 
 ``git cherry-pick`` kann hilfreich sein, um Änderungen rückgängig zu machen,
 wenn beispielsweise ein Commit versehentlich für den falschen Branch
