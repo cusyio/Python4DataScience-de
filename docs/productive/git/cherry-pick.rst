@@ -26,6 +26,9 @@ Dabei kann ``git cherry-pick`` mit verschiedenen Optionen eingesetzt werden:
     fügt am Ende der Commit-Nachricht eine Signaturzeile mit ``Signed-off-by``
     hinzu.
 
+``git cherry-pick`` akzeptiert auch Optionen zum Beheben von Merge-Konflikten,
+darunter ``--abort``, ``--continue`` und ``--quit``.
+
 ``git cherry-pick`` kann hilfreich sein, um Änderungen rückgängig zu machen,
 wenn beispielsweise ein Commit versehentlich für den falschen Branch
 durchgeführt wurde, könnt ihr zu dem Branch wechseln, in dem die Änderung
