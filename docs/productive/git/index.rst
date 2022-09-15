@@ -91,15 +91,15 @@ Zum Weiterlesen
     tools
     working-areas
     work
-    branch
     log
     tag
+    branch
     rebase
-    revert
+    bisect
     cherry-pick
+    revert
     best-practices
     workflows/index
     git-big-picture
-    bisect
     advanced
     glossary
