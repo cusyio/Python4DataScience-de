@@ -33,9 +33,9 @@ Version* erhalten, also :abbr:`z.B. (zum Beispiel)` ``2.7`` oder ``3.10``.
 erzeugt um bei Bugfixes die Anzahl der Merges, die auf mehrere Branches verteilt
 werden müssen, zu reduzieren. Nachdem ein neuer Release-Branch erstellt wurde,
 erhält dieser nur noch Bugfixes. Meist werden diese zunächst in den
-``main``-Branch übernommen und kommen anschließend von dort mit `git
-cherry-pick <https://git-scm.com/docs/git-cherry-pick>`_ in den Release-Branch.
-Dieser *upstream first*-Ansatz wird :abbr:`u.a. (unter anderem)` von `Google
+``main``-Branch übernommen und kommen anschließend von dort mit
+:doc:`../cherry-pick` in den Release-Branch. Dieser *upstream first*-Ansatz wird
+:abbr:`u.a. (unter anderem)` von `Google
 <https://www.chromium.org/chromium-os/chromiumos-design-docs/upstream-first>`_
 und `Red Hat
 <https://www.redhat.com/en/blog/a-community-for-using-openstack-with-red-hat-rdo>`_
