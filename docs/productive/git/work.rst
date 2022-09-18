@@ -184,7 +184,17 @@ An einem Projekt arbeiten
     keinen Konverter gibt, reichen oft auch Strings aus.
 
 :samp:`$ git restore {FILE}`
-    unwiderruflich Änderungen im Arbeitsbereich verwerfen.
+    ändert Dateien im Arbeitsverzeichnis in einen Zustand, der Git zuvor bekannt
+    war. Standardmäßig checkt Git ``HEAD``, den letzten Commit des aktuellen
+    Zweigs, aus.
+
+    .. note::
+
+        In Git < 2.23 steht euch ``git restore`` noch nicht zur Verfügung. In
+        diesem Fall müsst ihr noch ``git checkout`` verwenden:
+
+        ``$ git checkout [file]``
+
 ``$ git commit``
     einen neuen Commit mit den hinzugefügten Änderungen machen.
 
@@ -193,8 +203,8 @@ An einem Projekt arbeiten
     ``--dry-run --short``
         zeigt, was committet werden würde mit dem Status im Kurzformat.
 
-:samp:`$ git reset {FILE}`
-    zurückkehren zur aktuellen Datei aus dem Bühnenbereich.
+``$ git reset [--hard|--soft] [target-reference]``
+    setzt die Historie auf einen früheren Commit zurück.
 :samp:`$ git rm {FILE}`
     entfernen einer Datei aus dem Arbeits- und Bühnenbereich.
 ``$ git stash``
