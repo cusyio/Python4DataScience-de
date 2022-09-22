@@ -94,12 +94,12 @@ Zum Weiterlesen
     log
     tag
     branch
+    workflows/index
     rebase
     bisect
     cherry-pick
     revert
     best-practices
-    workflows/index
     git-big-picture
     advanced
     glossary
