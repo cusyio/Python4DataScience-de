@@ -274,8 +274,10 @@ dynamisches Compliance-Badge generieren:
 .. figure:: reuse-compliant.svg
    :alt: REUSE-compliant Badge
 
-CI-Workflow
-~~~~~~~~~~~
+.. _gitlab-ci-workflow:
+
+GitLab-CI-Workflow
+~~~~~~~~~~~~~~~~~~
 
 Ihr könnt REUSE einfach in euren Continuous Integration-Workflow integrieren,
 z.B. für GitLab in der ``.gitlab-ci.yml``-Datei mit:

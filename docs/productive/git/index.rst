@@ -94,6 +94,7 @@ Zum Weiterlesen
     log
     tag
     branch
+    gitlab/index
     workflows/index
     rebase
     bisect
