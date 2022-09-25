@@ -94,8 +94,8 @@ Reihenfolge ausgeführt werden:
 #. Eine ``build``-*Stage* mit einem *Job* namens ``compile``.
 #. Eine ``test``-*Stage* mit zwei parallelen *Jobs* namens ``unit-test`` und
    ``lint``.
-#. Eine ``staging``-*Stage* mit einem Job* namens ``deploy-to-stage``.
-#. Eine ``production``-*Stage* mit einem Job* namens ``deploy-to-prod``.
+#. Eine ``staging``-*Stage* mit einem *Job* namens ``deploy-to-stage``.
+#. Eine ``production``-*Stage* mit einem *Job* namens ``deploy-to-prod``.
 
 Die zugehörige ``.gitlab-ci.yml``-Datei könnte dann so aussehen:
 
