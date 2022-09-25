@@ -34,7 +34,7 @@ Entwickler*innen
     Produktion, es sei denn, etwas wurde ausdrücklich eingeschränkt, :abbr:`z.B.
     (zum Beispiel)` durch den Schutz von Zweigen.
 Maintainer
-    können zu Master pushen und den Code in die ``production``-Umgebung
+    können zu ``main`` pushen und den Code in die ``production``-Umgebung
     überführen.
 Eigentümer*innen
     administrieren im Wesentlichen die Gruppen und Workflows. Sie können Zugang
