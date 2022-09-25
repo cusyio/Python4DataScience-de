@@ -193,7 +193,7 @@ An einem Projekt arbeiten
         In Git < 2.23 steht euch ``git restore`` noch nicht zur Verfügung. In
         diesem Fall müsst ihr noch ``git checkout`` verwenden:
 
-        ``$ git checkout [file]``
+        :samp:`$ git checkout {FILE}`
 
 ``$ git commit``
     einen neuen Commit mit den hinzugefügten Änderungen machen.
