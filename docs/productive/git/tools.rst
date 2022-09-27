@@ -6,12 +6,12 @@ Es gibt mehrere Probleme, um Jupyter Notebooks mit Git zu verwalten:
 * Die Metadaten von Zellen der Jupyter Notebooks ändern sich auch, wenn keine
   inhaltlichen Änderungen an den Zellen vorgenommen wurden. Damit werden
   Git-Diffs unnötig kompliziert.
-* Die Zeilen, die Git bei :doc:`merge`-Konflikten in die ``*.ipynb``-Dateien
-  schreibt, führen dazu, dass die Notebooks nicht mehr gültiges JSON sind und
-  von Jupyter deswegen nicht geöffnet werden kann: ihr erhaltet dann beim Öffnen
-  die Fehlermeldung *Error loading notebook*.
+* Die Zeilen, die Git bei :ref:`Merge-Konflikten <merge-conflicts>` in die
+  ``*.ipynb``-Dateien schreibt, führen dazu, dass die Notebooks nicht mehr
+  gültiges JSON sind und von Jupyter deswegen nicht geöffnet werden kann: ihr
+  erhaltet dann beim Öffnen die Fehlermeldung *Error loading notebook*.
 
-  Konflikte treten besonders häufig in Notizbüchern auf, da Jupyter bei jeder
+  Konflikte treten besonders häufig in Notebooks auf, da Jupyter bei jeder
   Ausführung eines Notizbuchs Folgendes ändert:
 
   * Jede Zelle enthält eine Nummer, die angibt, in welcher Reihenfolge sie
@@ -38,10 +38,44 @@ Es gibt mehrere Probleme, um Jupyter Notebooks mit Git zu verwalten:
 ----------
 
 `nbdev2 <https://nbdev.fast.ai>`_ bietet eine Reihe von Git-Hooks, die saubere
-Git-Diffs bereitstellen, die meisten Git-Konflikte automatisch lösen und
+Git-Diffs bereitstellen, die die meisten Git-Konflikte automatisch lösen und
 sicherstellen, dass alle verbleibenden Konflikte vollständig innerhalb der
-Standard-Jupyter-Notebook-Umgebung aufgelöst werden können. Um loszulegen, folgt
-den Anweisungen in `Git-Friendly Jupyter
+Standard-Jupyter-Notebook-Umgebung aufgelöst werden können:
+
+* Ein neuer ``git merge``-Treiber bietet *notebook-native* Konfliktmarkierungen,
+  die dazu führen, dass Notebooks direkt in Jupyter geöffnet werden können, auch
+  wenn es Git-Konflikte gibt. Lokale und entfernte Änderung werden jeweils als
+  separate Zellen im Notizbuch angezeigt, so dass ihr die Version, die ihr nicht
+  behalten möchtet, einfach löschen oder die beiden Zellen nach Bedarf
+  kombinieren könnt.
+
+  .. seealso::
+     `nbdev.merge docs <https://nbdev.fast.ai/api/merge.html>`_
+
+* Git-Merges lokal zu lösen ist äußerst hilfreich, aber wir müssen sie auch
+  Remote lösen. Wenn :abbr:`z.B. (zum Beispiel)` eine Pull-Anfrage (PR)
+  eingereicht wird und dann jemand anderes dasselbe Notebook überträgt, bevor
+  der Merge Request zusammengeführt wird, könnte dieser einen Konflikt
+  hervorrufen:
+
+  .. code-block:: javascript
+
+        "outputs": [
+         {
+     <<<<<< HEAD
+          "execution_count": 8,
+     ======
+          "execution_count": 5,
+     >>>>>> 83e94d58314ea43ccd136e6d53b8989ccf9aab1b
+          "metadata": {},
+
+  Der *save hook* von nbdev2 entfernt automatisch alle unnötigen Metadaten
+  (einschließlich :samp:`execution_count`) und nicht-deterministischen
+  Zellausgaben; :abbr:`d.h. (das heißt)`, dass es keine sinnlosen Konflikte wie
+  den obigen gibt, da diese Informationen gar nicht erst in den Commits
+  gespeichert werden.
+
+Um loszulegen, folgt den Anweisungen in `Git-Friendly Jupyter
 <https://nbdev.fast.ai/tutorials/git_friendly_jupyter.html>`_.
 
 ``nbdime``

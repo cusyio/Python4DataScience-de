@@ -81,6 +81,8 @@ Gebräuchliche Befehle
         ist eine Merge-Strategie, die verwendet wird, sofern die Zusammenführung
         nur zu ``HEAD`` erfolgt.
 
+.. _merge-conflicts:
+
 Merge-Konflikte
 ---------------
 
