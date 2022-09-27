@@ -53,10 +53,10 @@ Standard-Jupyter-Notebook-Umgebung aufgelöst werden können:
      `nbdev.merge docs <https://nbdev.fast.ai/api/merge.html>`_
 
 * Git-Merges lokal zu lösen ist äußerst hilfreich, aber wir müssen sie auch
-  Remote lösen. Wenn :abbr:`z.B. (zum Beispiel)` eine Pull-Anfrage (PR)
-  eingereicht wird und dann jemand anderes dasselbe Notebook überträgt, bevor
-  der Merge Request zusammengeführt wird, könnte dieser einen Konflikt
-  hervorrufen:
+  Remote lösen. Wenn :abbr:`z.B. (zum Beispiel)` ein :doc:`Merge-Request
+  <gitlab/merge-requests.>` eingereicht wird und dann jemand anderes dasselbe
+  Notebook überträgt, bevor der Merge-Request zusammengeführt wird, könnte
+  dieser einen Konflikt hervorrufen:
 
   .. code-block:: javascript
 
