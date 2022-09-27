@@ -78,8 +78,27 @@ Standard-Jupyter-Notebook-Umgebung aufgelöst werden können:
 Um loszulegen, folgt den Anweisungen in `Git-Friendly Jupyter
 <https://nbdev.fast.ai/tutorials/git_friendly_jupyter.html>`_.
 
+Andere Git-Tools für Notebooks
+------------------------------
+
+ReviewNB
+~~~~~~~~
+
+`ReviewNB <https://www.reviewnb.com>`_ löst das Problem,
+:doc:`gitlab/merge-requests` mit Notebooks durchzuführen. Die Code-Review-GUI
+von GitLab funktioniert nur bei zeilenbasierten Dateiformaten, wie :abbr:`z.B.
+(zum Beispiel)` Python-Skripten. Meistens bevorzuge ich jedoch, die
+Quelltext-Notebooks zu prüfen, weil:
+
+* ich die Dokumentation und die Tests überprüfen möchte, nicht nur die
+  Implementierung
+* ich die Änderungen an den Zellausgaben sehen möchte, wie Diagrammen und
+  Tabellen, nicht nur den Code.
+
+Für diesen Zweck ist ReviewNB perfekt.
+
 ``nbdime``
-----------
+~~~~~~~~~~
 
 `nbdime <https://nbdime.readthedocs.io/>`_ ist ein GUI für `nbformat
 <https://nbformat.readthedocs.io/>`_-Diffs und ersetzt `nbdiff
@@ -90,7 +109,7 @@ von Diffs, sondern verhindert auch, dass unnötige Änderungen eingecheckt werde
 .. _nbstripout_label:
 
 ``nbstripout``
---------------
+~~~~~~~~~~~~~~
 
 `nbstripout <https://github.com/kynan/nbstripout>`_ automatisiert *Clear all
 outputs*. Es nutzt auch `nbformat <https://nbformat.readthedocs.io/>`_ und ein
