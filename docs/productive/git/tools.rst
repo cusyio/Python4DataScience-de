@@ -1,6 +1,16 @@
 Git-Tools für Notebooks
 =======================
 
+``nbdev2``
+----------
+
+`nbdev2 <https://nbdev.fast.ai>`_ bietet eine Reihe von Git-Hooks, die saubere
+Git-Diffs bereitstellen, die meisten Git-Konflikte automatisch lösen und
+sicherstellen, dass alle verbleibenden Konflikte vollständig innerhalb der
+Standard-Jupyter-Notebook-Umgebung aufgelöst werden können. Um loszulegen, folgt
+den Anweisungen in `Git-Friendly Jupyter
+<https://nbdev.fast.ai/tutorials/git_friendly_jupyter.html>`_.
+
 ``nbdime``
 ----------
 
