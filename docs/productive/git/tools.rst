@@ -16,7 +16,9 @@ von Diffs, sondern verhindert auch, dass unnötige Änderungen eingecheckt werde
 --------------
 
 `nbstripout <https://github.com/kynan/nbstripout>`_ automatisiert *Clear all
-outputs*. Es nutzt `nbformat <https://nbformat.readthedocs.io/>`_ und ein paar
-Automagien um ``git config`` einzurichten. Meines Erachtens hat es jedoch zwei
-Nachteile: es beschränkt sich auf den problematischen Metadaten-Abschnitt und
-es ist langsam.
+outputs*. Es nutzt auch `nbformat <https://nbformat.readthedocs.io/>`_ und ein
+paar Automagien um ``git config`` einzurichten. Meines Erachtens hat es jedoch
+zwei Nachteile:
+
+* es beschränkt sich auf den problematischen Metadaten-Abschnitt
+* es ist langsam.
