@@ -102,9 +102,10 @@ Für diesen Zweck ist ReviewNB perfekt.
 
 `nbdime <https://nbdime.readthedocs.io/>`_ ist ein GUI für `nbformat
 <https://nbformat.readthedocs.io/>`_-Diffs und ersetzt `nbdiff
-<https://github.com/tarmstrong/nbdiff>`_. Es versucht *Content-Aware*-Diffing
-sowie das Merging von Notebooks, beschränkt sich nicht nur auf die Darstellung
-von Diffs, sondern verhindert auch, dass unnötige Änderungen eingecheckt werden.
+<https://github.com/tarmstrong/nbdiff>`_. Es versucht lokal
+*Content-Aware*-Diffing sowie das Merging von Notebooks, beschränkt sich nicht
+nur auf die Darstellung von Diffs, sondern verhindert auch, dass unnötige
+Änderungen eingecheckt werden. Es ist jedoch nicht kompatibel mit ``nbdev2``.
 
 .. _nbstripout_label:
 
