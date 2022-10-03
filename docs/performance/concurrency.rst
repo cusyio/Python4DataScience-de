@@ -54,29 +54,7 @@ ersetzen sollte, stieß jedoch auch noch auf ein weiteres Problem: Die Python
 C-API legt sehr viele Implementierungsdetails offen. Damit würden
 Leistungsverbesserungen jedoch schnell zu inkompatiblen Änderungen führen, die
 dann vor allem bei einer so beliebten Sprache wie Python inakzeptabel
-erscheinen. Dennoch gibt jedoch bereits einige Lösungen:
-
-* `Numba <http://numba.pydata.org/>`_ ist ein JIT-Compiler, der vor allem
-  wissenschaftlichen Python- und NumPy-Code in schnellen Maschinencode
-  übersetzt.
-* `PyPy <https://www.pypy.org/>`_ mit einem universelleren JIT-Compiler, der
-  jedoch vorhandene C-Erweiterung wie NumPy emulieren muss, was wirklich
-  ineffizient ist.
-
-Faster Cpython
---------------
-
-Auf der PyCon US im Mai 2021 stellte Guido van Rossum mit `Faster CPython
-<https://github.com/faster-cpython>`_ ein Projekt vor, das die Geschwindigkeit
-von Python 3.11 verdoppeln soll. Die Zusammenarbeit mit den anderen
-Python-Kernentwicklern ist in `PEP 659 – Specializing Adaptive Interpreter
-<https://www.python.org/dev/peps/pep-0659/>`_ geregelt. Zudem gibt es einen
-offenen `Issue Tracker <https://github.com/faster-cpython/ideas/issues>`_ und
-diverse `Werkzeuge zum Sammeln von Bytecode-Statistiken
-<https://github.com/faster-cpython/tools>`_. Von den Änderungen profitieren
-dürfte vor allem CPU-intensiver Python-Code; bereits in C geschriebener
-Code, I/O-lastige Prozesse und Multithreading-Code dürften hingegen kaum
-profitieren.
+erscheinen.
 
 Multithreading, Multiprocessing und asynchrone Kommunikation
 ------------------------------------------------------------
