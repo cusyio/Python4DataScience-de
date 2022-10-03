@@ -25,7 +25,7 @@ oder :doc:`scalene` genutzt werden.
       (loop-invariant-global-usage)
     * R8203: Try-except-Blöcke haben einen erheblichen Overhead; vermeidet
       daher deren Verwendung innerhalb einer Schleife (loop-try-except-usage)
-    * W8204: Looped-Slicing von Bytes-Objekten ist ineffizientr; Verwendet
+    * W8204: Looped-Slicing von Bytes-Objekten ist ineffizient; Verwendet
       stattdessen ``memoryview()`` (memoryview-over-bytes)
     * W8205: Der direkte Import des Namens ``%s`` ist in dieser Schleife
       effizienter (dotted-import-in-loop)
