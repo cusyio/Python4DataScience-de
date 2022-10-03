@@ -61,14 +61,34 @@ I/O-lastige Prozesse und Multithreading-Code dürften hingegen kaum profitieren.
 .. seealso::
     * `Faster CPython <https://faster-cpython.readthedocs.io/>`__
 
+Spezielle Datenstrukturen
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:doc:`../workspace/numpy/index`
+    für :doc:`Vektorisierungen mit NumPy <../workspace/numpy/vectorisation>`.
+:doc:`../workspace/pandas/index`
+    für SQL-ähnliche Gruppierung und Aggregation.
+`scipy.spatial <https://docs.scipy.org/doc/scipy/reference/spatial.html>`_
+    für räumliche Abfragen wie Entfernungen, nächstgelegene Nachbarn :abbr:`usw.
+    (und so weiter)`
+`scipy.sparse <https://docs.scipy.org/doc/scipy/reference/sparse.html>`_
+    `dünnbesetzte Matrizen <https://de.wikipedia.org/wiki/Dünnbesetzte_Matrix>`_
+    für 2-dimensionale strukturierte Daten.
+`Sparse <https://sparse.pydata.org/en/stable/>`_
+    für N-diemensional strukturierte Daten.
+`scipy.sparse.csgraph <https://docs.scipy.org/doc/scipy/reference/sparse.csgraph.html>`_
+    für graphenähnliche Probleme, :abbr:`z.B. (zum Beispiel)` die Suche nach
+    kürzesten Wegen.
+`Xarray <https://docs.xarray.dev/en/stable/>`_
+    für die Gruppierung über mehrere Dimensionen hinweg.
+
 Cython
 ~~~~~~
 
 Bei intensiven numerischen Operationen kann Python sehr langsam sein, auch wenn
-ihr alle Anti-Patterns vermieden und :doc:`Vektorisierungen mit NumPy
-<../workspace/numpy/vectorisation>` genutzt habt. Dann kann das Übersetzen von
-Code in `Cython <https://cython.org>`_ hilfreich sein. Ein Beispiel hierfür
-findet ihr in
+ihr alle Anti-Patterns vermieden und Vektorisierungen mit NumPy genutzt habt.
+Dann kann das Übersetzen von Code in `Cython <https://cython.org>`_ hilfreich
+sein. Ein Beispiel hierfür findet ihr in
 :ref:`/workspace/pandas/apply.ipynb#optimieren-von-apply-mit-cython`. Leider
 muss der Code jedoch häufig umstrukturiert werden und nimmt dadurch an
 Komplexität zu. Auch werden explizite Type Annotations umständlich.
