@@ -39,3 +39,27 @@ folgendes:
     Die veröffentlichte Historie sollte nur in sehr seltenen Ausnahmefällen
     geändert werden, da die alten Commits durch neue ersetzt und es so aussehen
     würde, als wäre dieser Teil der Projektgeschichte plötzlich verschwunden.
+
+Rebase abhängiger Zweige mit ``–update-refs``
+---------------------------------------------
+
+Wenn ihr an einem großen Feature arbeiten, ist es oft hilfreich, die Arbeit auf
+mehrere Zweige zu verteilen, die aufeinander aufbauen.
+
+Diese Zweige können jedoch umständlich zu verwalten sein, wenn ihr den Verlauf
+in einem früheren Zweig überschreiben müsst. Da jeder Zweig von den vorherigen
+Zweigen abhängt, führt das Umschreiben von Commits in einem Zweig dazu, dass die
+nachfolgenden Zweige nicht mehr mit der Historie verbunden sind.
+
+Git 2.38 wird mit einer neuen ``--update-refs``-Option für ``git rebase``
+ausgeliefert, die solche Aktualisierungen für euch durchführt , ohne dass ihr
+jeden einzelnen Zweig manuell aktualisieren müsst und ohne dass die
+nachfolgenden Zweige ihre Historie verlieren.
+
+Wenn ihr diese Option bei jedem Rebase verwenden möchtet, könnt ihr ``git config
+--global rebase.updateRefs true`` ausführen, damit sich Git so verhält, als ob
+die Option ``--update-refs`` immer angegeben ist.
+
+.. seealso::
+   `rebase: add --update-refs option
+   <https://lore.kernel.org/git/3ec2cc922f971af4e4a558188cf139cc0c0150d6.1657631226.git.gitgitgadget@gmail.com/>`_
