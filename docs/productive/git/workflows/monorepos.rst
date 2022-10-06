@@ -184,28 +184,45 @@ Scalar
 ``scalar``, ein Repository-Management-Tool für große Repositories von `Microsoft
 <https://devblogs.microsoft.com/devops/introducing-scalar/>`_, ist seit Version
 2.38 Teil der Git-Kerninstallation. Um es zu verwenden, könnt ihr entweder ein
-neues Repository mit ``scalar clone`` klonen:
+neues Repository mit :samp:`scalar clone {/path/to/repo}` klonen oder ``scalar``
+auf einen bestehenden Klon mit :samp:`scalar register {/path/to/repo}` anwenden.
 
-.. code-block:: console
+Weitere Optionen von ``scalar clone`` sind:
 
-    $ scalar clone /path/to/repo
+``-b``, :samp:`--branch {BRANCH}`
+    Branch, der nach dem Klonen ausgecheckt werden soll.
+``--full-clone``
+    Vollständiges Arbeitsverzeichnis beim Klonen erstellen.
+``--single-branch``
+    Lade nur Metadaten des Branches herunter, der ausgecheckt wird.
 
-oder die von ``scalar`` empfohlene Konfiguration auf einen bestehenden Klon
-anwenden:
+Mit ``scalar list`` könnt ihr sehen, welche Repositories derzeit von Scalar
+verfolgt werden und mit :samp:`scalar unregister {/path/to/repo}` wird das
+Repository aus dieser Liste entfernt.
 
-.. code-block:: console
+Standardmäßig ist die `Sparse-Checkout
+<https://git-scm.com/docs/git-sparse-checkout>`_-Funktion aktiviert und es
+werden nur die Dateien im Stammverzeichnis des Git-Repositorys angezeigt.
+Verwendet ``git sparse-checkout set``, um die Menge der Verzeichnisse zu
+erweitern, die ihr sehen möchtet, oder ``git sparse-checkout disable``, um alle
+Dateien anzuzeigen. Wenn ihr nicht wisst, welche Verzeichnisse im Repository
+verfügbar sind, könnt ihr ``git ls-tree -d --name-only HEAD`` ausführen, um die
+Verzeichnisse im Stammverzeichnis zu ermitteln, oder :samp:`git ls-tree -d
+--name-only HEAD {/path/to/repo}`, um die Verzeichnisse in
+:samp:`{/path/to/repo}` zu ermitteln.
 
-    $ cd /path/to/repo
-    $ scalar register
+Um Sparse-Checkout nachträglich zu aktivieren, führt ``git sparse-checkout init
+--cone`` aus. Dadurch werden eure Sparse-Checkout-Patterns so initialisiert,
+dass sie nur mit den Dateien im Stammverzeichnis übereinstimmen.
 
-Aktuell sind folgende Funktionen für ``scalar`` verfügbar:
+Aktuell sind neben ``sparse-checkout`` noch die folgende Funktionen für
+``scalar`` verfügbar:
 
 * :ref:`FSMonitor <fsmonitor>`
 * `multi-pack-index (MIDX) <https://git-scm.com/docs/multi-pack-index>`_
 * `commit-graph <https://git-scm.com/docs/git-commit-graph>`_
 * `Git maintenance <https://git-scm.com/docs/git-maintenance>`_
 * Partielles Klonen mit :ref:`git-clone-depth` und :ref:`git-filter-branch`
-* `Sparse-Checkout <https://git-scm.com/docs/git-sparse-checkout>`_
 
 Die Konfiguration von ``scalar`` wird aktualisiert, wenn neue Funktionen in Git
 eingeführt werden. Um sicherzustellen, dass ihr immer die neueste Konfiguration
