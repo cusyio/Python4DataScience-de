@@ -175,8 +175,8 @@ indem der Umfang der Suche reduziert wird:
 .. seealso::
    * `Improve Git monorepo performance with a file system monitor
      <https://github.blog/2022-06-29-improve-git-monorepo-performance-with-a-file-system-monitor/>`_
-    * `Scaling monorepo maintenance
-      <https://github.blog/2021-04-29-scaling-monorepo-maintenance/>`_
+   * `Scaling monorepo maintenance
+     <https://github.blog/2021-04-29-scaling-monorepo-maintenance/>`_
 
 Scalar
 ------
