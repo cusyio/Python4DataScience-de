@@ -213,3 +213,6 @@ verwendet, solltet ihr ``scalar reconfigure /path/to/repo`` nach einer neuen
 Git-Version ausführen, um die Konfiguration eures Repositorys zu aktualisieren
 oder ``scalar reconfigure -a``, um alle eure mit Scalar registrierten
 Repositories auf einmal zu aktualisieren.
+
+.. seealso::
+   * `Git - scalar Documentation <https://git-scm.com/docs/scalar>`_
