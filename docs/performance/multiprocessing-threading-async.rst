@@ -1,18 +1,5 @@
-Einführung in die Nebenläufigkeit
-=================================
-
-Bei der Entwicklung von Code kann es häufig zu Kompromissen zwischen
-verschiedenen Implementierungen kommen. Zu Beginn der Entwicklung eines
-Algorithmus ist es jedoch meist kontraproduktiv, sich um die Effizienz des Codes
-zu kümmern.
-
-    »Wir sollten kleine Effizienzsteigerungen in sagen wir etwa 97 % der Zeit,
-    vergessen: Vorzeitige Optimierung ist die Wurzel allen Übels. Dennoch
-    sollten wir unsere Chancen in diesen kritischen 3 % nicht verpassen.«[#]_
-
-.. [#] Donald Knuth, Begründer des `Literate programming
-       <http://www.literateprogramming.com/>`_, in Computer Programming as an
-       Art (1974)
+Einführung in Multithreading, Multiprocessing und async
+=======================================================
 
 Martelli’s Modell der Skalierbarkeit
 ------------------------------------
@@ -27,9 +14,9 @@ Martelli’s Modell der Skalierbarkeit
 | >8           | Verteilte Verarbeitung                 |
 +--------------+----------------------------------------+
 
-Martelli’s Beobachtung: Im Laufe der Zeit wird die zweite Kategorie immer
-unbedeutender: Einzelne Kerne werden immer leistungsfähiger und große Datensätze
-immer größer.
+Martelli’s Beobachtung war, dass im Laufe der Zeit die zweite Kategorie immer
+unbedeutender wird, da einzelne Kerne werden immer leistungsfähiger und große
+Datensätze immer größer werden.
 
 Global Interpreter Lock (GIL)
 -----------------------------
@@ -42,25 +29,22 @@ Anwendungen führt die Verwendung von Threading jedoch zu einer Verlangsamung.
 Dementsprechend ist Multi-Processing für uns spannend um mehr CPU-Zyklen zu
 erhalten.
 
-*Literate Programming* und *Martelli’s Modell der Skalierbarkeit* bestimmten die
-Design-Entscheidungen zur Performance von Python über lange Zeit. An dieser
-Einschätzung hat sich bis heute wenig geändert: Entgegen der intuitiven
-Erwartungen führen mehr CPUs und Threads in Python zunächst zu weniger
-effizienten Anwendungen. Dennoch wünschen sich laut der Umfrage von 2020 zu den
-gewünschten Python-Features 20% Performance-Verbesserungen und 15% bessere
-Nebenläufigkeit und Parallelisierung. Das `Gilectomy
-<https://pythoncapi.readthedocs.io/gilectomy.html>`_-Projekt, das das GIL
-ersetzen sollte, stieß jedoch auch noch auf ein weiteres Problem: Die Python
-C-API legt sehr viele Implementierungsdetails offen. Damit würden
+`Literate programming <http://www.literateprogramming.com/>`_ und *Martelli’s
+Modell der Skalierbarkeit* bestimmten die Design-Entscheidungen zur Performance
+von Python über lange Zeit. An dieser Einschätzung hat sich bis heute wenig
+geändert: Entgegen der intuitiven Erwartungen führen mehr CPUs und Threads in
+Python zunächst zu weniger effizienten Anwendungen. Dennoch wünschen sich laut
+der Umfrage von 2020 zu den gewünschten Python-Features 20%
+Performance-Verbesserungen und 15% bessere Nebenläufigkeit und Parallelisierung.
+Das `Gilectomy <https://pythoncapi.readthedocs.io/gilectomy.html>`_-Projekt, das
+das GIL ersetzen sollte, stieß jedoch auch noch auf ein weiteres Problem: Die
+Python C-API legt sehr viele Implementierungsdetails offen. Damit würden
 Leistungsverbesserungen jedoch schnell zu inkompatiblen Änderungen führen, die
 dann vor allem bei einer so beliebten Sprache wie Python inakzeptabel
 erscheinen.
 
-Multithreading, Multiprocessing und asynchrone Kommunikation
-------------------------------------------------------------
-
 Überblick
-~~~~~~~~~
+---------
 
 +------------------+------------------+------------------+--------------------------------+
 | Kriterium        | Multithreading   | Multiprocessing  | asyncio                        |
@@ -140,38 +124,6 @@ Multithreading, Multiprocessing und asynchrone Kommunikation
 |                  | Aufwänden für die| ggf. zusätzliche |                                |
 |                  | Synchronisation. | Aufwände.        |                                |
 +------------------+------------------+------------------+--------------------------------+
-
-Aufgabenplaner
---------------
-
-:doc:`ipyparallel/index`, :doc:`dask` und `Ray <https://docs.ray.io/>`_
-können Aufgaben in einem Cluster verteilen. Dabei haben sie unterschiedliche
-Schwerpunkte:
-
-* ``ipyparallel`` integriert sich einfach in ein
-  :doc:`../../workspace/jupyter/hub/index`.
-* Dask imitiert Pandas, NumPy, Iteratoren, Toolz und PySpark bei der Verteilung
-  ihrer Aufgaben.
-* Ray bietet eine einfache, universelle API für den Aufbau verteilter
-  Anwendungen.
-
-  * `RLlib <https://docs.ray.io/en/latest/rllib.html>`_ skaliert insbesondere
-    reinforcement Learning.
-  * Ein `Backend für Joblib <https://docs.ray.io/en/latest/joblib.html>`_
-    unterstützt verteilte `scikit-learn
-    <https://scikit-learn.org/stable/>`_-Programme.
-  * `XGBoost-Ray <https://docs.ray.io/en/latest/xgboost-ray.html>`_ ist ein
-    Backend für verteiltes `XGBoost
-    <https://xgboost.readthedocs.io/en/latest/>`_.
-  * `LightGBM-Ray <https://docs.ray.io/en/latest/lightgbm-ray.html>`_ ist ein
-    Backend für verteiltes `LightGBM
-    <https://lightgbm.readthedocs.io/en/latest/>`_
-  * `Collective Communication Lib
-    <https://docs.ray.io/en/latest/ray-collective.html>`_ bietet eine Reihe von
-    nativen Collective-Primitiven für `Gloo
-    <https://github.com/facebookincubator/gloo>`_ und die `NVIDIA Collective
-    Communication Library (NCCL)
-    <https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/index.html>`_.
 
 Resümee
 -------
