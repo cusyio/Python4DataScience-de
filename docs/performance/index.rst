@@ -205,6 +205,9 @@ wissenschaftlichen Python- und NumPy-Code in schnellen Maschinencode
 .. literalinclude:: nb_kmeans.py
     :lines: 1-23
 
+Numba benötigt allerdings `LLVM <https://de.wikipedia.org/wiki/LLVM>`_ und
+einige Python-Konstrukte werden nicht unterstützt.
+
 6. Aufgabenplaner
 -----------------
 
