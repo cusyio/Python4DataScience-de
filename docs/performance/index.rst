@@ -183,7 +183,8 @@ Bei intensiven numerischen Operationen kann Python sehr langsam sein, auch wenn
 ihr alle Anti-Patterns vermieden und Vektorisierungen mit NumPy genutzt habt.
 Dann kann das Übersetzen von Code in `Cython <https://cython.org>`_ hilfreich
 sein.  Leider muss der Code jedoch häufig umstrukturiert werden und nimmt
-dadurch an Komplexität zu. Auch werden explizite Type Annotations umständlich.
+dadurch an Komplexität zu. Auch werden explizite Type Annotations und das
+Bereitstellen des Codes umständlicher.
 
 Unser Beispiel könnte dann so aussehen:
 
