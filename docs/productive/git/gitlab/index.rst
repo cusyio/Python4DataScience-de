@@ -21,6 +21,10 @@ Marketplace erweitert werden kann. Das bedeutet aber nicht, dass GitLab nicht
 integriert werden kann, :abbr:`z.B. (zum Beispiel)` mit Asana, Jira, Microsoft
 Teams, Slack etc.
 
+.. seealso::
+    `Visual Studio Code: GitLab Workflow
+    <https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow>`_
+
 .. toctree::
    :hidden:
 
