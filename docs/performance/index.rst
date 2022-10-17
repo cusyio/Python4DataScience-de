@@ -19,8 +19,8 @@ zu kümmern.
        <http://www.literateprogramming.com/>`_, in Computer Programming as an
        Art (1974)
 
-1. Performance-Messungen
-------------------------
+Performance-Messungen
+---------------------
 
 Wenn ihr erst einmal mit eurem Code gearbeitet habt, kann es nützlich sein, die
 Effizienz genauer zu untersuchen. Hierfür kann der :doc:`ipython-profiler` oder
@@ -43,8 +43,8 @@ Effizienz genauer zu untersuchen. Hierfür kann der :doc:`ipython-profiler` oder
     ipython-profiler.ipynb
     scalene.ipynb
 
-2. Anti-Patterns finden
------------------------
+Anti-Patterns finden
+--------------------
 
 Anschließend könnt ihr mit :doc:`perflint` euren Code durchsuchen nach den
 häufigsten Performance-Anti-Patterns in Python.
@@ -59,8 +59,8 @@ häufigsten Performance-Anti-Patterns in Python.
 .. seealso::
    * `Effective Python <https://effectivepython.com>`_
 
-3. Vektorisierungen mit NumPy
------------------------------
+Vektorisierungen mit NumPy
+--------------------------
 
 :doc:`../workspace/numpy/index` verlagert sich wiederholte Operationen in eine
 statisch typisierte kompilierte Schicht, um so  die schnelle Entwicklungszeit von
@@ -112,8 +112,8 @@ verwendet, erfordert es jedoch auch eine andere Denkweise beim Schreiben von
 Code. Schließlich können die Batch-Operationen auch zu übermäßigem
 Speicherverbrauch führen.
 
-4. Spezielle Datenstrukturen
-----------------------------
+Spezielle Datenstrukturen
+-------------------------
 
 :doc:`../workspace/pandas/index`
     für SQL-ähnliche :doc:`../workspace/pandas/group-operations` und
@@ -152,8 +152,8 @@ Speicherverbrauch führen.
 
     parallelise-pandas
 
-5. Compiler wählen
-------------------
+Compiler wählen
+---------------
 
 Faster Cpython
 ~~~~~~~~~~~~~~
@@ -208,8 +208,8 @@ wissenschaftlichen Python- und NumPy-Code in schnellen Maschinencode
 Numba benötigt allerdings `LLVM <https://de.wikipedia.org/wiki/LLVM>`_ und
 einige Python-Konstrukte werden nicht unterstützt.
 
-6. Aufgabenplaner
------------------
+Aufgabenplaner
+--------------
 
 :doc:`ipyparallel/index`, :doc:`dask` und `Ray <https://docs.ray.io/>`_
 können Aufgaben in einem Cluster verteilen. Dabei haben sie unterschiedliche
@@ -253,8 +253,8 @@ Unser Beispiel könnte mit Dask so aussehen:
     ipyparallel/index
     dask.ipynb
 
-7. Multithreading, Multiprocessing und Async
---------------------------------------------
+Multithreading, Multiprocessing und Async
+-----------------------------------------
 
 Nach einem kurzen :doc:`Überblick <multiprocessing-threading-async>`
 werden anhand von drei Beispielen zu :doc:`Threading <threading-example>`,
