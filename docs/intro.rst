@@ -49,8 +49,7 @@ Forschungsprojekts:
 6. **Erschließen der Daten –** :doc:`viz/index` umfasst expolorative Analysen und
    das Visualisieren von Daten.
 7. **Refactoring** umfasst das Parametrisieren, Validieren und
-   Performance-Optimierungen, u.a. durch :doc:`Nebenläufigkeit
-   <performance/concurrency>`.
+   :doc:`Performance-Optimierungen <performance/index>`.
 8. **Produkt erstellen** umfasst das :doc:`productive/testing`,
    :doc:`productive/logging/index` und :doc:`productive/documenting` der
    Methoden und Funktionen sowie das :doc:`Erstellen von Paketen
