@@ -15,9 +15,10 @@ Pakete erstellen
 
    Es gibt auch Werkzeuge, die automatisch Coding-Styles anwenden wie z.B.
    `PEP 8 <https://www.python.org/dev/peps/pep-0008/>`_ für Python. Mit
-   :doc:`nbextensions/code_prettify/README_autopep8` könnt ihr dies nicht nur
-   auf eure Notebooks anwenden, sondern z.B. mit `black
-   <https://black.readthedocs.io/en/stable/>`_ auch auf eure Python-Pakete.
+   :doc:`jupyter-contrib-nbextensions:nbextensions/code_prettify/README_autopep8`
+   könnt ihr dies nicht nur auf eure Notebooks anwenden, sondern :abbr:`z.B.
+   (zum Beispiel)` mit `black <https://black.readthedocs.io/en/stable/>`_ auch
+   auf eure Python-Pakete.
 
    Für andere Sprachen findet ihr Übersichten in `Awesome-Linters
    <https://awesome-linters.hugomartins.io/>`_ und `awesome-code-formatters
