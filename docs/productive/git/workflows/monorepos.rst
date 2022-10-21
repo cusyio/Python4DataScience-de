@@ -120,6 +120,8 @@ identifizieren: :samp:`git filter-branch --tree-filter 'rm -rf
    * `How to tear apart a repository: the Git way
      <https://www.atlassian.com/blog/git/tear-apart-repository-git-way?>`_
 
+.. _git-clone-branch:
+
 ``git clone --branch``
 ~~~~~~~~~~~~~~~~~~~~~~
 

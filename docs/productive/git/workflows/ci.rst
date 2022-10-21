@@ -26,12 +26,25 @@ Jedes Mal, wenn ein Build ausgeführt wird, klont euer Build-Server euer
 Projektarchiv in das aktuelle Arbeitsverzeichnis. Dabei klont Git üblicherweise
 die gesamte Historie des Repos, wodurch dieser Vorgang mit der Zeit immer länger
 dauert. Es sei denn, ihr verwendet :abbr:`sog. (sogenannte)` Shallow-Clones, bei
-denen nur der aktuelle Snapshot des Repos heruntergezogen wird. Das verkürzt die
-Build-Zeit vor allem bei Repositories mit einer langen Geschichte.
+denen mit :ref:`git-clone-depth` nur der aktuelle Snapshot des Repos und mit
+:ref:`git-clone-branch` nur der relevante Zweig heruntergezogen wird. Das
+verkürzt die Build-Zeit vor allem bei Repositories mit einer langen Geschichte
+und vielen Zweigen.
 
 Dabei kann Git seit Version 1.9 einfache Änderungen an Dateien, wie :abbr:`z.B.
 (zum Beispiel)` das Aktualisieren einer Versionsnummer, vornehmen, ohne dass die
-gesamte Historie gepusht wurde. In vielen Fällen wird jedoch zusätzlich der folgende Tipp erforderlich sein.
+gesamte Historie gepusht wurde.
+
+.. warning::
+    In einem shallow clone kann ``git fetch`` dazu führen, dass ein fast
+    vollständiger Commit-Verlauf heruntergeladen wird. Auch andere
+    Git-Operationen können zu unerwarteten Ergebnissen führen und die
+    vermeintlichen Vorteile von Shallow-Clones zunichte machen, sodass wir
+    empfehlen, Shallow-Clones nur für Builds zu verwenden und das Repository
+    sofort danach wieder zu löschen.
+
+Wollt ihr die Repositories jedoch weiterverwenden, kann der folgende Tipp
+hilfreich sein.
 
 Cache des Repos auf Build-Servern
 ---------------------------------
