@@ -211,6 +211,9 @@ Verzeichnisse im Stammverzeichnis zu ermitteln, oder :samp:`git ls-tree -d
 --name-only HEAD {/path/to/repo}`, um die Verzeichnisse in
 :samp:`{/path/to/repo}` zu ermitteln.
 
+.. seealso::
+   `git ls-tree <https://git-scm.com/docs/git-ls-tree>`_
+
 Um Sparse-Checkout nachträglich zu aktivieren, führt ``git sparse-checkout init
 --cone`` aus. Dadurch werden eure Sparse-Checkout-Patterns so initialisiert,
 dass sie nur mit den Dateien im Stammverzeichnis übereinstimmen.
