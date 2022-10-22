@@ -160,11 +160,11 @@ Glossar
 
    Wheel
        Distributionsformat, das mit `PEP 427
-       <https://www.python.org/dev/peps/pep-0427/>`_ eingeführt wurde. Es soll das
-       :term:`Egg`-Format ersetzen und wird von aktuellen
+       <https://www.python.org/dev/peps/pep-0427/>`_ eingeführt wurde. Es soll
+       das :term:`Egg`-Format ersetzen und wird von aktuellen
        :term:`Pip`-Installationen unterstützt.
 
-       C-Erweiterungen können als plattformspezifische Wheels für Windows, Mac OS
+       C-Erweiterungen können als plattformspezifische Wheels für Windows, macOS
        und Linux auf PyPI bereitgestellt werden. Dies hat für die Benutzer des
        Pakets den Vorteil, bei der Installation nicht kompilieren zu müssen.
 
