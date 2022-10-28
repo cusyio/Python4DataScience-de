@@ -17,7 +17,7 @@ Fachgruppen in funktionsübergreifenden Teams ermöglichen.
 
 * **Data Scientists** erforschen Daten mit verschiedenen Parametern und fassen
   die Ergebnisse zusammen.
-* **Data-Engineers** iüberprüfen die Qualität des Codes und machen den Code
+* **Data-Engineers** überprüfen die Qualität des Codes und machen den Code
   robuster, effizienter und skalierbar.
 * **Data-Analysts** verwenden den von Data-Engineers bereitgestellten Code um
   systematisch die Daten zu analysieren.
