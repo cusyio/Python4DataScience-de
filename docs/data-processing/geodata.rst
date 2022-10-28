@@ -7,11 +7,11 @@ Geodaten
     bietet eine Low-Level-, aber leistungsfähigere API zum Lesen und Schreiben
     hunderter Datenformate.
 `satpy <https://satpy.readthedocs.io/>`_
-    Einfach zu verwendende API für Satellitenbildformate von Sensoren wie
+    Einfach zu verwendende API für Satelitenbildformate von Sensoren wie
     `MODIS <https://modis.gsfc.nasa.gov/data/>`_, `Sentinel-2
     <https://sentinel.esa.int/web/sentinel/missions/sentinel-2>`_ etc.
 `sentinelsat <https://github.com/sentinelsat/sentinelsat>`_
-    Suchen und Herunterladen von Copernicus Sentinel-Satellitenbildern über
+    Suchen und Herunterladen von Copernicus Sentinel-Satelitenbildern über
     Befehlszeile oder Python.
 `fiona <https://fiona.readthedocs.io/en/latest/>`_
    liest und schreibt ``*shp``- und ``*json``-Daten und viele weitere Formate.
@@ -22,7 +22,7 @@ Geodaten
     Sammlung von Python-Skripten zum Herunterladen und Mosaizieren von
     MODIS-Daten.
 `Arcpy <https://pro.arcgis.com/de/pro-app/latest/arcpy/get-started/what-is-arcpy-.htm>`_
-    wird von Esri ArcGIS verwendet um geographische Daten zu analysieren,
+    wird von Esri ArcGIS verwendet, um geographische Daten zu analysieren,
     zu konvertieren und zu verwalten sowie Karten automatisiert zu erstellen.
 `RSGISLib <https://www.rsgislib.org/>`_
     oder *The Remote Sensing and GIS Software Library* ist eine Reihe von
