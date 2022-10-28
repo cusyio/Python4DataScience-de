@@ -71,8 +71,8 @@ kaum ein Werkzeug finden, das all diese Aufgaben abdeckt und selbst für einzeln
 Aufgaben sind häufig mehrere Werkzeuge notwendig. Daher suchen wir auf einer
 abstrakteren Ebene allgemeinere Muster für Tools und Sprachen, mit denen Daten
 analysiert und visualisiert sowie ein Projekt dokumentiert und präsentiert
-werden kann. Genau dies wir mit dem `Project Jupyter <https://jupyter.org/>`_
-angestrebt.
+werden kann. Genau dies streben wir mit dem `Project Jupyter <https://jupyter.org/>`_
+an.
 
 Das Projekt Jupyter startete 2014 mit dem Ziel, ein konsistentes Set von
 Open-Source-Tools für wissenschaftliche Forschung, reproduzierbare Workflows,
