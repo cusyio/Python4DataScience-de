@@ -34,8 +34,8 @@ Mit :doc:`DVC <../productive/dvc/index>` stellen wir euch ein Werkzeug vor, das
 euch Datenprovenienz erlaubt. Damit vollzieht ihr die Herkunft und den 
 Entstehungsweg von Daten nach.
 
-Schließlich lernt ihr im nächsten Kapitel einige Good Practices und hilfreiche
-Python-Pakete zum :doc:`Bereinigen und Validieren von Daten
+Im Anschluß lernt ihr im nächsten Kapitel noch einige Good Practices und 
+hilfreiche Python-Pakete zum :doc:`Bereinigen und Validieren von Daten
 <../clean-prep/index>` kennen.
 
 .. toctree::
