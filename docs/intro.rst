@@ -90,7 +90,7 @@ die Kernfunktionen einmal genauer an:
 `Jupyter Notebook Format <https://nbformat.readthedocs.io/>`_
     Jupyter Notebooks sind ein offenes, auf JSON basierendes Dokumentenformat
     mit vollständigen Aufzeichnungen der Sitzungen des Benutzers und des
-    enthalten Code.
+    enthaltenen Codes.
 Interactive Computing Protocol
     Das Notebook kommuniziert mit Rechenkernel über das *Interactive Computing
     Protocol*, einem offenen Netzwerkprotokoll basierend auf JSON-Daten über
