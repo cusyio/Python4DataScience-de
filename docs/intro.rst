@@ -46,7 +46,7 @@ Forschungsprojekts:
    <data-processing/serialisation-formats/xml-html/beautifulsoup>`.
 5. **Daten bereinigen** ist eine wiederkehrende Aufgabe, die u.a. redundante,
    inkonsistente oder falsch formatierte Daten entfernen oder modifizieren soll.
-6. **Erschließen der Daten –** :doc:`viz/index` umfasst expolorative Analysen und
+6. **Erschließen der Daten –** :doc:`viz/index` umfasst explorative Analysen und
    das Visualisieren von Daten.
 7. **Refactoring** umfasst das Parametrisieren, Validieren und
    :doc:`Performance-Optimierungen <performance/index>`.
