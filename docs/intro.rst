@@ -92,12 +92,12 @@ die Kernfunktionen einmal genauer an:
     mit vollständigen Aufzeichnungen der Sitzungen des Benutzers und des
     enthaltenen Codes.
 Interactive Computing Protocol
-    Das Notebook kommuniziert mit Rechenkernel über das *Interactive Computing
+    Das Notebook kommuniziert mit einem Rechenkernel über das *Interactive Computing
     Protocol*, einem offenen Netzwerkprotokoll basierend auf JSON-Daten über
     `ZMQ <https://zeromq.org/>`_ und `WebSockets
     <https://de.wikipedia.org/wiki/WebSocket>`_.
 :doc:`workspace/jupyter/kernels/index`
-    Kernel sind Prozesse, die interaktiven Code in einer bestimmten
+    Rechenkernel sind Prozesse, die interaktiven Code in einer bestimmten
     Programmiersprache ausführen und die Ausgabe an den Benutzer zurückgeben.
 
 .. seealso::
