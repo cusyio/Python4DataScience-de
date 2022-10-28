@@ -19,7 +19,7 @@ Fachgruppen in funktionsübergreifenden Teams ermöglichen.
   die Ergebnisse zusammen.
 * **Data-Engineers** überprüfen die Qualität des Codes und machen den Code
   robuster, effizienter und skalierbar.
-* **Data-Analysts** verwenden den von Data-Engineers bereitgestellten Code um
+* **Data-Analysts** verwenden den von Data-Engineers bereitgestellten Code, um
   systematisch die Daten zu analysieren.
 * **System-Engineers** stellen die Forschungsplattform auf Basis des
   :doc:`workspace/jupyter/hub/index` bereit, auf der die anderen Rollen ihre
