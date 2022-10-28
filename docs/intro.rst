@@ -53,7 +53,7 @@ Forschungsprojekts:
 8. **Produkt erstellen** umfasst :doc:`productive/testing`,
    :doc:`productive/logging/index` und :doc:`productive/documenting` der
    Methoden und Funktionen. Das :doc:`Erstellen von Bibliotheken und Paketen
-   <productive/packaging>` findet ihr in unsrem our :doc:`Python Basics
+   <productive/packaging>` findet ihr in unserem our :doc:`Python Basics
    Tutorial <python-basics:libs/index>`.
 9. **Web-Anwendungen** können entweder aus Jupyter-Notebooks
    :doc:`web/dashboards/index` generieren oder umfassendere
