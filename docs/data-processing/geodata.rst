@@ -22,7 +22,7 @@ Geodaten
     Sammlung von Python-Skripten zum Herunterladen und Mosaizieren von
     MODIS-Daten.
 `Arcpy <https://pro.arcgis.com/de/pro-app/latest/arcpy/get-started/what-is-arcpy-.htm>`_
-    wird von Esri ArcGIS verwendet um geographische Daten zu analysieren,
+    wird von Esri ArcGIS verwendet, um geographische Daten zu analysieren,
     zu konvertieren und zu verwalten sowie Karten automatisiert zu erstellen.
 `RSGISLib <https://www.rsgislib.org/>`_
     oder *The Remote Sensing and GIS Software Library* ist eine Reihe von

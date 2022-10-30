@@ -1,12 +1,12 @@
 Daten lesen, speichern und bereitstellen
 ========================================
 
-Einen Überblick über öffentliche Repositories mit Forschungsdaten erhaltet ihr
+Einen Überblick zu öffentlichen Repositories mit Forschungsdaten erhaltet ihr
 z.B. in :doc:`opendata`.
 
 Neben spezifischen Python-Bibliotheken zum Zugriff auf
 :doc:`/data-processing/remote-file-systems` und :doc:`/data-processing/geodata`
-stellen wir Euch :doc:`serialisation-formats/index` und drei Werkzeuge genauer
+stellen wir euch :doc:`serialisation-formats/index` und drei Werkzeuge genauer
 vor:
 
 * :doc:`/data-processing/pandas-io`
@@ -24,18 +24,18 @@ vor:
         Übersicht zu Web Scraping mit Python
 
 Zum Speichern von relationalen Daten, Python-Objekten und Geodaten stellen wir
-Euch :doc:`postgresql/index`, :doc:`postgresql/sqlalchemy` und
+euch :doc:`postgresql/index`, :doc:`postgresql/sqlalchemy` und
 :doc:`postgresql/postgis/index` vor.
 
 Als nächstes zeigen wir euch, wie ihr die Daten über ein :doc:`apis/index`
-bereitstellen könnt.
+bereitstellt.
 
-Mit :doc:`DVC <../productive/dvc/index>` stellen wir Euch ein Werkzeug vor, das
-Euch Datenprovenienz erlaubt, d.h. die Herkunft und den Entstehungsweg von Daten
-nachvollziehen zu können.
+Mit :doc:`DVC <../productive/dvc/index>` stellen wir euch ein Werkzeug vor, das
+euch Datenprovenienz erlaubt. Damit vollzieht ihr die Herkunft und den 
+Entstehungsweg von Daten nach.
 
-Schließlich lernt ihr im nächsten Kapitel einige Good Practices und hilfreiche
-Python-Pakete zum :doc:`Bereinigen und Validieren von Daten
+Im Anschluß lernt ihr im nächsten Kapitel noch einige Good Practices und 
+hilfreiche Python-Pakete zum :doc:`Bereinigen und Validieren von Daten
 <../clean-prep/index>` kennen.
 
 .. toctree::
