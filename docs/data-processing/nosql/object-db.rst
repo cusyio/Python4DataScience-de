@@ -14,7 +14,7 @@ Natürliche Modellierung und Repräsentation von Problemen
     zusammengefasst, wodurch die Programme übersichtlicher, lesbarer und
     verständlicher werden.
 Modular und wiederverwendbar
-    Programmteile  lassen sich einfach und flexibel wiederverwenden.
+    Programmteile lassen sich einfach und flexibel wiederverwenden.
 Erweiterbar
     Programme lassen sich einfach erweitern und an geänderte Anforderungen
     anpassen.
