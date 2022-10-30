@@ -7,11 +7,11 @@ Geodaten
     bietet eine Low-Level-, aber leistungsfähigere API zum Lesen und Schreiben
     hunderter Datenformate.
 `satpy <https://satpy.readthedocs.io/>`_
-    Einfach zu verwendende API für Satelitenbildformate von Sensoren wie
+    Einfach zu verwendende API für Satellitenbildformate von Sensoren wie
     `MODIS <https://modis.gsfc.nasa.gov/data/>`_, `Sentinel-2
     <https://sentinel.esa.int/web/sentinel/missions/sentinel-2>`_ etc.
 `sentinelsat <https://github.com/sentinelsat/sentinelsat>`_
-    Suchen und Herunterladen von Copernicus Sentinel-Satelitenbildern über
+    Suchen und Herunterladen von Copernicus Sentinel-Satellitenbildern über
     Befehlszeile oder Python.
 `fiona <https://fiona.readthedocs.io/en/latest/>`_
    liest und schreibt ``*shp``- und ``*json``-Daten und viele weitere Formate.
