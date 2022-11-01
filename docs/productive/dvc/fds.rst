@@ -48,7 +48,7 @@ wiederholende Aufgaben zu automatisieren:
 ``add``
     fügt Dateien dem Git- oder DVC-Repository hinzu.
 ``commit``
-    übrgibt Änderungen an das Git- oder DVC-Repository.
+    übergibt Änderungen an das Git- oder DVC-Repository.
 ``clone``
     klont das Git-Repository und holt Daten vom entfernten DVC-Repository.
 ``push``
