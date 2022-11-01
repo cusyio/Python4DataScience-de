@@ -44,7 +44,7 @@ Nutzungseinschränkungen der Software verhindern. Die bekannteste Copyleft-Lizen
 ist die GNU General Public License (GPL). Dabei wird das Copyleft der GPL als
 sehr stark, das der Mozilla Public License hingegen als sehr schwach angesehen.
 
-Da die Lizenzgeber nicht selbst an ih eigenes Copyleft gebunden sind, können sie
+Da die Lizenzgeber nicht selbst an ihr eigenes Copyleft gebunden sind, können sie
 neue Versionen auch unter proprietärer Lizenz veröffentlichen oder Dritten dies
 erlauben (Mehrfachlizenzierung).
 
@@ -180,15 +180,15 @@ software licenses
 
 Wenn ihr :abbr:`z.B. (zum Beispiel)` eine möglichst große Verbreitung eures
 Pakets erreichen wollt, sind MIT- oder die BSD-Varianten eine gute Wahl. Die
-Apache-Lizenz schützt euch besser vor Patentverletzungen ist jedoch nicht
+Apache-Lizenz schützt euch besser vor Patentverletzungen, ist jedoch nicht
 kompatibel mit der GPL v2.
 
 Abhängigkeiten überprüfen
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Daher solltet ihr schauen, welche Lizenzen diejenigen
-Pakete haben, von denen ihr abhängt und zu denen ihr kompatibel sein solltet.
-Zur Analyse von Lizenzen könnt ihr euch `License compatibility
+Daher solltet ihr schauen, welche Lizenzen diejenigen Pakete haben, von denen
+ihr abhängt und zu denen ihr kompatibel sein solltet. Zur Analyse von Lizenzen
+könnt ihr euch `License compatibility
 <https://en.wikipedia.org/wiki/License_compatibility>`_ anschauen und den
 `licensechecker
 <https://boyter.org/2018/03/licensechecker-command-line-application-identifies-software-license/>`_,
@@ -225,7 +225,7 @@ Lizenzen oder ist zu komplex. Überlegt Euch dann, ob ihr die Lizenz vereinfache
 könnt, z.B. indem ihr Komplexität in die ``/README``-Datei auslagert.
 
 Umgekehrt könnt ihr auf GitHub auch nach Repositories mit bestimmten Lizenzen
-oder Lizenzfamilien suchen. Eine Übersicht über die Lizenz-Schlüsswlwörter
+oder Lizenzfamilien suchen. Eine Übersicht über die Lizenz-Schlüsselwörter
 erhaltet ihr in `Searching GitHub by license type
 <https://help.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository#searching-github-by-license-type>`_.
 
