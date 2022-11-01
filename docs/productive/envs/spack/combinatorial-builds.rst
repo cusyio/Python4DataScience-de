@@ -154,7 +154,7 @@ Spack bietet eine ``spec``-Syntax zum Beschreiben benutzerdefinierter DAGs:
     $ spack install mpileaks ^mvapich@1.9
     $ spack install mpileaks ^openmpi@1.4
 
-* Alternativ kann Spack auch selbst das passende Build wählen sofern nur das
+* Alternativ kann Spack auch selbst das passende Build wählen, sofern nur das
   MPI 2-Interface implementiert wird:
 
   .. code-block:: console
@@ -227,9 +227,9 @@ Spack bietet eine ``spec``-Syntax zum Beschreiben benutzerdefinierter DAGs:
 
         depends_on("mpc", when="@4.5:")
 
-* DAGs sind nicht immer vollständig bevor sie konkretisiert werden.
-  Konkretisierungen füllen die fehlenden Konfigurationsdetails aus wenn ihr sie
-  nicht explizit benennt:
+* DAGs sind nicht immer vollständig, bevor sie konkretisiert werden.
+  Konkretisierungen füllen die fehlenden Konfigurationsdetails aus, wenn ihr 
+  sie nicht explizit benennt:
 
   #. Normalisierung
 
