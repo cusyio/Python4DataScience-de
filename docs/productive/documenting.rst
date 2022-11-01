@@ -2,7 +2,7 @@ Dokumentieren
 =============
 
 Damit euer Produkt sinnvoll genutzt werden kann, sind Dokumentationen sowohl für
-die Zielgruppen in den Daten-Wissenschaften und im Data-Engineering auch im
+die Zielgruppen in den Daten-Wissenschaften und im Data-Engineering, als auch im
 System-Engineering erforderlich:
 
 * Die Zielgruppe in den Daten-Wissenschaften wollen dokumentiert sehen
@@ -18,7 +18,7 @@ System-Engineering erforderlich:
   (``CONTRIBUTING``) und wie sie mit anderen kommunizieren
   (``CODE_OF_CONDUCT``) können
 * Die Zielgruppe im System-Engineering benötigt eine Installationsanleitung
-  für euer Produkt  und für die erforderlichen Abhängigkeiten
+  für euer Produkt und für die erforderlichen Abhängigkeiten
 
 Alle gemeinsam benötigen Informationen, wie das Produkt lizenziert ist
 (``LICENSE``-Datei oder ``LICENSES``-Ordner) und wie sie bei Bedarf Hilfe
