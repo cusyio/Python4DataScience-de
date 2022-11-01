@@ -17,9 +17,9 @@ Fachgruppen in funktionsübergreifenden Teams ermöglichen.
 
 * **Data Scientists** erforschen Daten mit verschiedenen Parametern und fassen
   die Ergebnisse zusammen.
-* **Data-Engineers** iüberprüfen die Qualität des Codes und machen den Code
+* **Data-Engineers** überprüfen die Qualität des Codes und machen den Code
   robuster, effizienter und skalierbar.
-* **Data-Analysts** verwenden den von Data-Engineers bereitgestellten Code um
+* **Data-Analysts** verwenden den von Data-Engineers bereitgestellten Code, um
   systematisch die Daten zu analysieren.
 * **System-Engineers** stellen die Forschungsplattform auf Basis des
   :doc:`workspace/jupyter/hub/index` bereit, auf der die anderen Rollen ihre
@@ -46,14 +46,14 @@ Forschungsprojekts:
    <data-processing/serialisation-formats/xml-html/beautifulsoup>`.
 5. **Daten bereinigen** ist eine wiederkehrende Aufgabe, die u.a. redundante,
    inkonsistente oder falsch formatierte Daten entfernen oder modifizieren soll.
-6. **Erschließen der Daten –** :doc:`viz/index` umfasst expolorative Analysen und
+6. **Erschließen der Daten –** :doc:`viz/index` umfasst explorative Analysen und
    das Visualisieren von Daten.
 7. **Refactoring** umfasst das Parametrisieren, Validieren und
    :doc:`Performance-Optimierungen <performance/index>`.
 8. **Produkt erstellen** umfasst :doc:`productive/testing`,
    :doc:`productive/logging/index` und :doc:`productive/documenting` der
    Methoden und Funktionen. Das :doc:`Erstellen von Bibliotheken und Paketen
-   <productive/packaging>` findet ihr in unsrem our :doc:`Python Basics
+   <productive/packaging>` findet ihr in unserem our :doc:`Python Basics
    Tutorial <python-basics:libs/index>`.
 9. **Web-Anwendungen** können entweder aus Jupyter-Notebooks
    :doc:`web/dashboards/index` generieren oder umfassendere
@@ -67,12 +67,12 @@ Warum Jupyter?
 --------------
 
 Wie können nun diese vielfältigen Aufgaben vereinfacht werden? Es wird sich
-kaum ein Werkzeug finden, das all diese Aufgaben abdeckt und selbst für einzelne
-Aufgaben sind häufig mehrere Werkzeuge notwendig. Daher suchen wir auf einer
-abstrakteren Ebene allgemeinere Muster für Tools und Sprachen, mit denen Daten
-analysiert und visualisiert sowie ein Projekt dokumentiert und präsentiert
-werden kann. Genau dies wir mit dem `Project Jupyter <https://jupyter.org/>`_
-angestrebt.
+kaum ein Werkzeug finden, das all diese Aufgaben abdeckt und selbst für
+einzelne Aufgaben sind häufig mehrere Werkzeuge notwendig. Daher suchen wir
+auf einer abstrakteren Ebene allgemeinere Muster für Tools und Sprachen, mit
+denen Daten analysiert und visualisiert sowie ein Projekt dokumentiert und
+präsentiert werden kann. Genau dies streben wir mit dem
+`Project Jupyter <https://jupyter.org/>`_ an.
 
 Das Projekt Jupyter startete 2014 mit dem Ziel, ein konsistentes Set von
 Open-Source-Tools für wissenschaftliche Forschung, reproduzierbare Workflows,
@@ -90,14 +90,14 @@ die Kernfunktionen einmal genauer an:
 `Jupyter Notebook Format <https://nbformat.readthedocs.io/>`_
     Jupyter Notebooks sind ein offenes, auf JSON basierendes Dokumentenformat
     mit vollständigen Aufzeichnungen der Sitzungen des Benutzers und des
-    enthalten Code.
+    enthaltenen Codes.
 Interactive Computing Protocol
-    Das Notebook kommuniziert mit Rechenkernel über das *Interactive Computing
+    Das Notebook kommuniziert mit einem Rechenkernel über das *Interactive Computing
     Protocol*, einem offenen Netzwerkprotokoll basierend auf JSON-Daten über
     `ZMQ <https://zeromq.org/>`_ und `WebSockets
     <https://de.wikipedia.org/wiki/WebSocket>`_.
 :doc:`workspace/jupyter/kernels/index`
-    Kernel sind Prozesse, die interaktiven Code in einer bestimmten
+    Rechenkernel sind Prozesse, die interaktiven Code in einer bestimmten
     Programmiersprache ausführen und die Ausgabe an den Benutzer zurückgeben.
 
 .. seealso::

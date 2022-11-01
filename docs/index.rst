@@ -8,7 +8,7 @@ De-facto-Standard für schnelles Prototyping und explorative Analysen. Sie
 beflügeln nicht nur Experimente und Innovationen enorm, sie machen auch den
 gesamten Forschungsprozess schneller und zuverlässiger. Zudem entstehen viele
 zusätzliche Komponenten, die die ursprünglichen Grenzen ihrer Nutzung erweitern
-und neue Verwendungsmöglichkeiten ermöglichen.
+und neue Verwendungsmöglichkeiten eröffnen.
 
 .. toctree::
     :hidden:
