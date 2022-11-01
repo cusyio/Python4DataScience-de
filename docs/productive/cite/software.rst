@@ -1,10 +1,10 @@
 Software zitieren
 =================
 
-James Howison
-und Julia Bullard führten in ihrem 2016 veröffentlichten Artikel `Software in
-the scientific literature <https://doi.org/10.1002/asi.23538>`_ folgende
-Beispiele in absteigender Reputation auf:
+James Howison und Julia Bullard führten in ihrem 2016 veröffentlichten
+Artikel `Software in the scientific literature 
+<https://doi.org/10.1002/asi.23538>`_ folgende Beispiele in absteigender 
+Reputation auf:
 
 #. zitieren von Veröffentlichungen, die die jeweilige Software beschreiben
 #. zitieren von Bedienungsanleitungen
@@ -181,7 +181,7 @@ aktuell zwei Projekte für strukturierte Metadaten heraus:
     übernehmen.
 
 Ihr solltet einen `Persistent Identifier (PID)
-<https://de.wikipedia.org/wiki/Persistent_Identifier>`_ bereitstellen um die
+<https://de.wikipedia.org/wiki/Persistent_Identifier>`_ bereitstellen, um die
 langfristige Verfügbarkeit eurer Software sicherzustellen. Sowohl das `Zenodo
 <https://zenodo.org/>`_- als auch das `figshare
 <https://figshare.com/>`_-Repository akzeptieren Quellcode einschließlich
