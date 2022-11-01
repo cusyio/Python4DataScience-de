@@ -5,9 +5,10 @@ Code und Daten verbinden
 ------------------------
 
 Befehle wie ``dvc add``, ``dvc push`` und ``dvc pull`` können unabhängig von
-Änderungen im Git-Repository vorgenommen werden und bieten daher nur die Basis
-um große Datenmengen und Modelle zu verwalten. Um tatsächlich reproduzierbare
-Ergebnisse zu erzielen, müssen Code und Daten miteinander verbunden werden.
+Änderungen im Git-Repository vorgenommen werden und bieten daher nur die
+Basis, um große Datenmengen und Modelle zu verwalten. Um tatsächlich
+reproduzierbare Ergebnisse zu erzielen, müssen Code und Daten miteinander
+verbunden werden.
 
 .. figure:: combine-git-dvc.png
    :alt: Git und DVC verbinden
@@ -34,8 +35,8 @@ die erste Stufe die Daten in Trainings- und Testdaten aufteilen:
 
     Wenn zum Reproduzieren der Ergebnisse beim nächsten Mal ``dvc repo``
     aufgerufen wird, überprüft DVC diese Abhängigkeiten und entscheidet, ob
-    diese auf dem aktuellen Stand sond oder erneut ausgeführt werden müssen um
-    aktuellere Ergebnisse zu erhalten.
+    diese auf dem aktuellen Stand sind oder erneut ausgeführt werden müssen, 
+    um aktuellere Ergebnisse zu erhalten.
 
 ``-o``
     gibt die Ausgabedatei oder das Ausgabeverzeichnis an.
