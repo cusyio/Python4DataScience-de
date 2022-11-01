@@ -35,7 +35,7 @@ Environments, ``spack.yaml`` und ``spack.lock``
 
 #. Überprüfen der Aktivierung:
 
-   Wenn ihr eine Umgebung aktiviern habt, wird euch nur das angezeigt, was sich
+   Wenn ihr eine Umgebung aktiviert habt, wird euch nur das angezeigt, was sich
    in der aktuellen Umgebung befindet. Das sollte unmittelbar nach der
    Aktivierung nichts sein:
 
@@ -127,9 +127,10 @@ Dort befinden sich die beiden Dateien ``spack.yaml`` und ``spack.lock``.
         …
 
 ``spack.lock``
-    Mit ``spack install`` werden die Specs konkretisiert, in ``spack.lock`` geschrieben und  installiert.
-    Im Gegensatz zu ``spack.yaml`` ist ``spack.lock`` im ``json``-Format geschrieben und enthält die
-    notwendigen Informationen um reproduzierbare Builds der Umgebung erstellen zu können:
+    Mit ``spack install`` werden die Specs konkretisiert, in ``spack.lock`` 
+    geschrieben und  installiert. Im Gegensatz zu ``spack.yaml`` ist 
+    ``spack.lock`` im ``json``-Format geschrieben und enthält die notwendigen 
+    Informationen, um reproduzierbare Builds der Umgebung erstellen zu können:
 
     .. code-block:: javascript
 
@@ -188,8 +189,8 @@ Dort befinden sich die beiden Dateien ``spack.yaml`` und ``spack.lock``.
 Installation zusätzlicher Pakete
 --------------------------------
 
-Zusätzliche Pakete können in der virtuellen Umgebung installiert werden mit
-``spack add`` und ``spack install``. Für `Matplotlib <https://matplotlib.org/>`_
+Zusätzliche Pakete können in der virtuellen Umgebung mit ``spack add`` und 
+``spack install`` installiert werden. Für `Matplotlib <https://matplotlib.org/>`_
 sieht dies z.B. folgendermaßen aus:
 
 .. code-block:: console
@@ -286,7 +287,8 @@ Umgebung anschauen:
       config: {}
       upstreams: {}
 
-Mit ``spack config edit`` kann die Konfigurationsdatei ``spack.yaml`` editiert werden.
+Mit ``spack config edit`` kann die Konfigurationsdatei ``spack.yaml`` editiert
+werden.
 
 .. note::
    Wenn in der Umgebung bereits Pakete installiert sind, sollten mit ``spack
