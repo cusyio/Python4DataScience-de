@@ -156,21 +156,18 @@ Ihr könnt ihn jedoch mit ``spack compiler find`` hinzufügen:
 
 .. code-block:: console
 
-    spack compiler find /Users/veit/spack/opt/spack/darwin-bigsur-cannonlake/apple-clang-13.0.0/gcc-11.2.0-azhiay4ugfrs634hqlez7u3f2li3wvzd
-    ==> Added 1 new compiler to /Users/veit/.spack/darwin/compilers.yaml
-        gcc@11.2.0
+    $ spack compiler find /srv/jupyter/spack/opt/spack/linux-ubuntu22.04-sandybridge/gcc-11.3.0/gcc-12.2.0-gbaw464qxjuz6i3uud42cd5mb4xujxia/
+    ==> Added 1 new compiler to /srv/jupyter/.spack/linux/compilers.yaml
+        gcc@12.2.0
     ==> Compilers are defined in the following files:
-        /Users/veit/.spack/darwin/compilers.yaml
+        /srv/jupyter/.spack/linux/compilers.yaml
 
 .. code-block:: console
 
     $ spack compilers
     ==> Available compilers
-    -- apple-clang bigsur-x86_64 ------------------------------------
-    apple-clang@13.0.0
-
-    -- gcc bigsur-x86_64 --------------------------------------------
-    gcc@11.2.0
+    -- gcc ubuntu22.04-x86_64 ---------------------------------------
+    gcc@12.2.0  gcc@11.3.0
 
 Wenn ihr die Standard- und Site-Einstellungen überschreiben möchtet, könnt ihr
 :file:`${HOME}/.spack/packages.yaml` ändern:
@@ -179,7 +176,7 @@ Wenn ihr die Standard- und Site-Einstellungen überschreiben möchtet, könnt ih
 
     packages:
       all:
-        compiler: [gcc@11.2.0]
+        compiler: [gcc@12.2.0]
 
 GPG Signing
 -----------
