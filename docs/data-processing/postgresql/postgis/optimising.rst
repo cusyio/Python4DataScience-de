@@ -5,10 +5,10 @@ In der Standardinstallation ist PostgreSQL sehr zurückhaltend konfiguriert um
 auf möglichst vielen Systemen lauffähig zu sein. GIS-Datenbankobjekte sind
 jedoch im Vergleich zu Textdaten groß. Daher sollte PostgreSQL so konfiguriert
 werden, dass sie mit diesen Objekten besser funktioniert. Hierfür konfigurieren
-wir die Datei ``/etc/postgresql/9.3/main/postgresql.conf`` folgendermaßen:
+wir die Datei ``/etc/postgresql/12/main/postgresql.conf`` folgendermaßen:
 
 #. ``shared_buffer`` sollte auf ca. 75% des gesamten Arbeitsspeichers geändert
-   werden, jedoch 128 kB nie unterschreiten:
+   werden, jedoch ``128kB`` nie unterschreiten:
 
    .. code-block::
 
@@ -25,12 +25,6 @@ wir die Datei ``/etc/postgresql/9.3/main/postgresql.conf`` folgendermaßen:
    .. code-block::
 
     maintenance_work_mem = 128MB
-
-#. ``checkpoint_segments`` sollte auf ``6`` gesetzt werden:
-
-   .. code-block::
-
-    checkpoint_segments = 6
 
 #. Schließlich sollte noch ``random_page_cost`` auf ``2.0`` gesetzt werden.
 
