@@ -5,7 +5,7 @@ In der Standardinstallation ist PostgreSQL sehr zurückhaltend konfiguriert um
 auf möglichst vielen Systemen lauffähig zu sein. GIS-Datenbankobjekte sind
 jedoch im Vergleich zu Textdaten groß. Daher sollte PostgreSQL so konfiguriert
 werden, dass sie mit diesen Objekten besser funktioniert. Hierfür konfigurieren
-wir die Datei ``/etc/postgresql/12/main/postgresql.conf`` folgendermaßen:
+wir die Datei ``/etc/postgresql/14/main/postgresql.conf`` folgendermaßen:
 
 #. ``shared_buffer`` sollte auf ca. 75% des gesamten Arbeitsspeichers geändert
    werden, jedoch ``128kB`` nie unterschreiten:
