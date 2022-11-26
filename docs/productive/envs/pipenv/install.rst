@@ -14,8 +14,8 @@ sein.
 
    .. code-block:: console
 
-    $ python --version
-    Python 3.8.12
+    $ python3 --version
+    Python 3.10.6
 
    .. note::
         In iPython oder einem Jupyter Notebook könnt ihr die Version
@@ -25,7 +25,7 @@ sein.
 
             In [1]: import sys
                     sys.version_info
-            sys.version_info(major=3, minor=8, micro=12, releaselevel='final', serial=0)
+            sys.version_info(major=3, minor=10, micro=6, releaselevel='final', serial=0)
 
    .. note::
         Falls ihr das System-Python eurer Linux-Distribution verwendet, solltet
@@ -37,7 +37,7 @@ sein.
    .. code-block:: console
 
     $ pip --version
-    pip 21.3.1
+    pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)
 
    #. Falls Pip noch nicht installiert ist, könnt ihr es installieren mit:
 
@@ -81,7 +81,7 @@ versehentlich systemweite Pakete überschrieben werden:
       .. code-block:: console
 
          $ python3 -m site --user-base
-         /Users/veit/.local
+         /srv/jupyter/.local
 
       Anschließend muss noch das ``bin``-Verzeichnis angehängt und zu ``PATH``
       hinzugefügt werden. Alternativ kann ``PATH`` dauerhaft gesetzt werden,
@@ -90,7 +90,7 @@ versehentlich systemweite Pakete überschrieben werden:
 
       .. code-block:: console
 
-         export PATH=/Users/veit/.local/bin:$PATH
+         export PATH=/srv/jupyter/.local/bin:$PATH
 
    .. tab:: Windows
 
@@ -125,10 +125,9 @@ virtuellen Umgebungen:
     $ cd !$
     cd myproject
     $ pipenv install requests
-    Creating a virtualenv for this project..
+    Creating a virtualenv for this project...
     …
     Virtualenv location: /srv/jupyter/.local/share/virtualenvs/myproject-CZKj6mqJ
-    Creating a Pipfile for this project...
     Installing requests...
     Adding requests to Pipfile's [packages]...
     …
