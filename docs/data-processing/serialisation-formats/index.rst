@@ -37,7 +37,7 @@ Verschachtelter JSON-Stil:
     excel.ipynb
     xml-html/index
     yaml/index
-    toml
+    toml/index
     pickle/index
     protobuf
     others

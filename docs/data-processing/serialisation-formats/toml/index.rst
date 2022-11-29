@@ -8,7 +8,7 @@ TOML
 | Unterstützung für     | \+    | TOML (Tom’s Obvious, Minimal Language) unterstützt die|
 | Datenstrukturen       |       | meisten Datenstrukturen, einschließlich Zeichenfolgen,|
 |                       |       | Ganzzahlen, Gleitkommazahlen und Datumsangaben, jedoch|
-|                       |       | keine Referenzen wie :doc:`yaml`.                     |
+|                       |       | keine Referenzen wie :doc:`../yaml/index`.            |
 +-----------------------+-------+-------------------------------------------------------+
 | Standardisation       | ++    | TOML ist ein formaler, stark typisierter Standard.    |
 +-----------------------+-------+-------------------------------------------------------+
@@ -24,7 +24,7 @@ TOML
 | Speed                 | +-    | TOML kann mit mittlerer Geschwindigkeit verarbeitet   |
 |                       |       | werden.                                               |
 +-----------------------+-------+-------------------------------------------------------+
-| File size             | \-    | Nur :doc:`xml-html/index` ist weniger kompakt.        |
+| File size             | \-    | Nur :doc:`../xml-html/index` ist weniger kompakt.     |
 +-----------------------+-------+-------------------------------------------------------+
 
 Beispiel
@@ -75,3 +75,10 @@ Beispiel
       <https://github.com/madmurphy/libconfini/wiki/An-INI-critique-of-TOML>`_
 
 .. _`JSON Schema Everywhere`: https://json-schema-everywhere.github.io/toml
+
+.. toctree::
+    :hidden:
+    :titlesonly:
+    :maxdepth: 0
+
+    example.ipynb
