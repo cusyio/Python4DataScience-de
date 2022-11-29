@@ -26,39 +26,8 @@ YAML
 |                       |       | werden.                                               |
 +-----------------------+-------+-------------------------------------------------------+
 | File size             | +-    | YAML liegt im mittleren Bereich ähnlich wie           |
-|                       |       | :doc:`json/index` und :doc:`toml`.                    |
+|                       |       | :doc:`../json/index` und :doc:`../toml`.              |
 +-----------------------+-------+-------------------------------------------------------+
-
-Beispiel
---------
-
-`CITATION.cff <https://citation-file-format.github.io/>`_
-
-.. code-block:: yaml
-
-    # YAML 1.2
-    ---
-    cff-version: 1.1.0
-    message: If you use this software, please cite it as below.
-    authors:
-      - family-names: Druskat
-        given-names: Stephan
-        orcid: https://orcid.org/0000-0003-4925-7248
-    title: "My Research Software"
-    version: 2.0.4
-    doi: 10.5281/zenodo.1234
-    date-released: 2017-12-18
-
-Ihr könnt euch YAML-Dateien als Python-:doc:`python-basics:types/dicts` ausgeben
-lassen mit:
-
-.. code-block:: python
-
-    import yaml
-
-    with open('CITATION.cff', 'r') as file:
-        cite = yaml.safe_load(file)
-        print(cite)
 
 .. seealso::
 
@@ -70,3 +39,10 @@ lassen mit:
 
 .. _`Kwalify`: http://www.kuwata-lab.com/kwalify/
 .. _`Rx`: http://rx.codesimply.com/
+
+.. toctree::
+    :hidden:
+    :titlesonly:
+    :maxdepth: 0
+
+    example.ipynb
