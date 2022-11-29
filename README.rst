@@ -112,6 +112,8 @@ Installation
 
    Das PDF findet ihr anschließend in ``docs/_build/latex/jupytertutorial.pdf``.
 
+.. _follow-us:
+
 Folge uns
 ---------
 

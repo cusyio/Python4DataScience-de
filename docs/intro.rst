@@ -1,10 +1,6 @@
 Einführung
 ==========
 
-.. include:: ../README.rst
-   :start-after: badges
-   :end-before: first-steps
-
 Zielgruppe
 ----------
 
