@@ -51,6 +51,19 @@ Beispiel
     known_first_party="jupyter-tutorial"
     known_third_party=["mpi4py", "numpy", "requests"]
 
+.. tab:: Python < 3.11
+
+    Ihr benötigt das Python-Paket `toml
+    <https://pypi.org/project/toml/>`_, um TOML-Dateien in
+    Python-:doc:`python-basics:types/dicts` umwandeln zu können. Anschließend
+    könnt ihr TOML-Dateien laden, :abbr:`z.B. (zum Beispiel)` mit:
+
+.. code-block:: python
+
+    import toml
+
+    config = toml.load('pyproject.toml')
+
 .. seealso::
 
     * `Home <https://toml.io/>`_
