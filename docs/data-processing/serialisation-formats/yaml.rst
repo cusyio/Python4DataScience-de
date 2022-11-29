@@ -49,6 +49,17 @@ Beispiel
     doi: 10.5281/zenodo.1234
     date-released: 2017-12-18
 
+Ihr könnt euch YAML-Dateien als Python-:doc:`python-basics:types/dicts` ausgeben
+lassen mit:
+
+.. code-block:: python
+
+    import yaml
+
+    with open('CITATION.cff', 'r') as file:
+        cite = yaml.safe_load(file)
+        print(cite)
+
 .. seealso::
 
     * `Home <https://yaml.org/>`_
