@@ -46,7 +46,8 @@ An einem Projekt arbeiten
         werden.
 
 :samp:`$ git diff {FILE}`
-    zeigt Unterschiede zwischen Arbeits- und Bühnenbereich, :abbr:`z.B. (zum Beispiel)`.
+    zeigt Unterschiede zwischen Arbeits- und Bühnenbereich, :abbr:`z.B. (zum
+    Beispiel)`.
 
     .. code-block:: console
 
