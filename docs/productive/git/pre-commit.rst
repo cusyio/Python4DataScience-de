@@ -22,6 +22,18 @@ Installation
 
 Bevor ihr Hooks ausführen könnt, muss ``pre-commit`` installiert sein.
 
+.. tab:: Windows
+
+   .. code-block:: console
+
+      $ pipenv install pre-commit
+
+   Zusätzlich müssen noch die `Microsoft Build Tools für C++
+   <https://visualstudio.microsoft.com/de/visual-cpp-build-tools/>`_
+   heruntergeladen und ausgeführt werden damit anschließend die
+   *Desktopentwicklung mit C++* ausgewählt und mit den Standardoptionen
+   installiert werden kann.
+
 .. tab:: macOS
 
    .. code-block:: console
