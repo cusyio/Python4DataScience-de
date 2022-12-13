@@ -85,12 +85,12 @@ Zum Weiterlesen
 .. toctree::
     :hidden:
 
+    working-areas
+    work
     install-config
     pre-commit
     jupyter-config
     tools
-    working-areas
-    work
     log
     tag
     branch

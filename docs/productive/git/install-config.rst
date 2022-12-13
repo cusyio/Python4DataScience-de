@@ -95,8 +95,90 @@ in ``git diff``:
         # Highlight whitespace errors in git diff:
         whitespace = tabwidth=4,tab-in-indent,cr-at-eol,trailing-space
 
+``git diff``
+~~~~~~~~~~~~
+
+Git diff kann mit dem Zusatzprogramm ``pdftohtml`` auch auf PDFs angewendet
+werden. Es kann installiert werden mit
+
+.. tab:: Debian/Ubuntu
+
+   .. code-block:: console
+
+      $ sudo apt install poppler-utils
+
+.. tab:: macOS
+
+   .. code-block:: console
+
+      $ brew install pdftohtml
+
+Anschließend wird der globalen Git-Konfiguration ``~/.gitconfig`` folgender
+Abschnitt hinzugefügt:
+
+.. code-block:: ini
+
+    [diff "pdfconv"]
+    textconv=pdftohtml -stdout
+
+Schließlich wird in der globalen ``~/.gitattributes``-Datei unser
+``pdfconf``-Filter mit PDF-Dateien verknüpft wird:
+
+.. code-block:: ini
+
+    *.pdf diff=pdfconv
+
+Nun wird beim Aufruf von ``git diff`` die PDF-Datei zunächst konvertiert und
+dann ein Diff über der Ausgabe des Konverters durchgeführt.
+
+Auch Unterschiede in Word-Dokumenten lassen sich anzeigen. Hierfür kann `Pandoc
+<https://pandoc.org/>`_ verwendet werden, das einfach installiert werden kann
+mit
+
+.. tab:: Windows
+
+   Herunterladen und Installieren der ``.msi``-Datei von `GitHub
+   <https://github.com/jgm/pandoc/releases/tag/2.19.2>`_.
+
+.. tab:: Debian/Ubuntu
+
+   .. code-block:: console
+
+      $ sudo apt install pandoc
+
+.. tab:: macOS
+
+   .. code-block:: console
+
+      $ brew install pandoc
+
+Anschließend wird in ``.gitattributes`` die Dateiendung ``.docx`` auf eine
+alternative ``diff``-Konfigurationen abgebildet:
+
+.. code-block:: ini
+
+   *.docx diff=word
+
+Schließlich kann in der ``.gitconfig``-Datei der folgende Abschnitt eingefügt
+werden:
+
+.. code-block:: ini
+
+   [diff "word"]
+       textconv=pandoc --to=markdown
+       binary=true
+       prompt=false
+
+Die gleiche Vorgehensweise kann auch angewandt werden, um nützliche Diffs von
+anderen Binärdateien zu erhalten, :abbr:`z.B. (zum Beispiel)` ``*.zip``,
+``*.jar`` und andere Archive mit ``unzip`` oder für Änderungen in den
+Metainformationen von Bildern mit ``exiv2``. Zudem gibt es
+Konvertierungswerkzeuge für die Umwandlung von ``*.odf``, ``.doc`` und anderen
+Dokumentenformaten in einfachen Text. Für Binärdateien, für die es keinen
+Konverter gibt, reichen oft auch Strings aus.
+
 Anmeldedaten verwalten
-::::::::::::::::::::::
+~~~~~~~~~~~~~~~~~~~~~~
 
 Seit der Git-Version 1.7.9 lassen sich die Zugangsdaten zu git-Repositories mit
 `gitcredentials <https://git-scm.com/docs/gitcredentials>`_ verwalten. Um diese
@@ -361,18 +443,22 @@ Dieser Ansatz dürfte für euer Team offensichtlicher und weniger verwirrend sei
 Fehlersuche in ``.gitignore``-Dateien
 :::::::::::::::::::::::::::::::::::::
 
-Bei komplizierten ``.gitignore``-Mustern oder bei Mustern, die über mehrere ``.gitignore``-Dateien
-verteilt sind, kann es schwierig sein, herauszufinden, warum eine bestimmte Datei ignoriert wird.
-Ihr könnt den Befehl ``git check-ignore`` mit der Option ``-v`` (oder ``--verbose``) verwenden, um
-festzustellen, welches Muster die Ursache für das Ignorieren einer bestimmten Datei ist:
+Bei komplizierten ``.gitignore``-Mustern oder bei Mustern, die über mehrere
+``.gitignore``-Dateien verteilt sind, kann es schwierig sein, herauszufinden,
+warum eine bestimmte Datei ignoriert wird. Ihr könnt den Befehl ``git
+check-ignore`` mit der Option ``-v`` (oder ``--verbose``) verwenden, um
+festzustellen, welches Muster die Ursache für das Ignorieren einer bestimmten
+Datei ist:
 
 .. code-block:: console
 
     $ git check-ignore -v data/iris.csv
     data/.gitignore:2:!iris.csv	data/iris.csv
 
-Die Ausgabe zeigt :samp:`{FILE_CONTAINING_THE_PATTERN}:{LINE_NUMBER_OF_THE_PATTERN}:{PATTERN}
+Die Ausgabe zeigt
+:samp:`{FILE_CONTAINING_THE_PATTERN}:{LINE_NUMBER_OF_THE_PATTERN}:{PATTERN}
 {FILE_NAME}`
 
-Ihr könnt mehrere Dateinamen an ``git check-ignore`` übergeben, wenn ihr möchtet, und die Namen
-selbst müssen nicht einmal den Dateien entsprechen, die in eurem Repository existieren.
+Ihr könnt mehrere Dateinamen an ``git check-ignore`` übergeben, wenn ihr
+möchtet, und die Namen selbst müssen nicht einmal den Dateien entsprechen, die
+in eurem Repository existieren.
