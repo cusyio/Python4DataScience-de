@@ -154,7 +154,7 @@ Dort befinden sich die beiden Dateien ``spack.yaml`` und ``spack.lock``.
                   "features": [
                     "aes",
                     "avx",
-                    …
+                    ...
                   ]
                 }
               }
