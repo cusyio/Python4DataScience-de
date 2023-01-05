@@ -195,6 +195,15 @@ kann ggf. erhöht werden, z.B. mit:
 
     $ git config --global credential.helper 'cache --timeout=3600'
 
+.. tab:: Windows
+
+    Für Windows steht `Git Credential Manager (GCM)
+    <https://github.com/GitCredentialManager/git-credential-manager>`_ zur
+    Verfügung. Er ist ingegriert in `Git for Windows
+    <https://git-scm.com/download/win>`_ und wird standardmäßig mitinstalliert.
+    Es git jedoch auch ein eigenständiges Installationsprogramm in `Releases
+    <https://github.com/GitCredentialManager/git-credential-manager/releases/>`_.
+
 .. tab:: macOS
 
     Unter macOS lässt sich mit `osxkeychain` die Schlüsselbundverwaltung
@@ -218,15 +227,6 @@ kann ggf. erhöht werden, z.B. mit:
 
         [credential]
             helper = osxkeychain
-
-.. tab:: Windows
-
-    Für Windows steht `Git Credential Manager (GCM)
-    <https://github.com/GitCredentialManager/git-credential-manager>`_ zur
-    Verfügung. Er ist ingegriert in `Git for Windows
-    <https://git-scm.com/download/win>`_ und wird standardmäßig mitinstalliert.
-    Es git jedoch auch ein eigenständiges Installationsprogramm in `Releases
-    <https://github.com/GitCredentialManager/git-credential-manager/releases/>`_.
 
 .. note::
     Ein umfangreiches Beispiel einer `Konfigurationsdatei findet ihr in meinem
