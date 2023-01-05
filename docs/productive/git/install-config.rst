@@ -221,13 +221,12 @@ kann ggf. erhöht werden, z.B. mit:
 
 .. tab:: Windows
 
-    Für Windows steht `Git Credential Manager for Windows
-    <https://github.com/Microsoft/Git-Credential-Manager-for-Windows>`_ zur
-    Verfügung. Für das Programm muss der `Installer
-    <https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest>`_
-    heruntergeladen werden. Nach dem Doppelklick führt er Euch durch die
-    weitere Installation. Als Terminal-Emulator für Git Bash solltet ihr das
-    Standardkonsolenfenster von Windows auswählen.
+    Für Windows steht `Git Credential Manager (GCM)
+    <https://github.com/GitCredentialManager/git-credential-manager>`_ zur
+    Verfügung. Er ist ingegriert in `Git for Windows
+    <https://git-scm.com/download/win>`_ und wird standardmäßig mitinstalliert.
+    Es git jedoch auch ein eigenständiges Installationsprogramm in `Releases
+    <https://github.com/GitCredentialManager/git-credential-manager/releases/>`_.
 
 .. note::
     Ein umfangreiches Beispiel einer `Konfigurationsdatei findet ihr in meinem
