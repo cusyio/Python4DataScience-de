@@ -20,19 +20,23 @@ hinzufügen zu müssen.
 Installation
 ------------
 
-Bevor ihr Hooks ausführen könnt, muss ``pre-commit`` installiert sein.
+Bevor ihr die Hooks ausführen könnt, muss das pre-commit Framework installiert
+werden:
 
 .. tab:: Windows
 
-   .. code-block:: console
-
-      $ pipenv install pre-commit
-
-   Zusätzlich müssen noch die `Microsoft Build Tools für C++
+   Bevor das pre-commit Framework mit Pipenv installiert werden kann, müssen
+   zunächst noch die `Microsoft Build Tools für C++
    <https://visualstudio.microsoft.com/de/visual-cpp-build-tools/>`_
    heruntergeladen und ausgeführt werden damit anschließend die
    *Desktopentwicklung mit C++* ausgewählt und mit den Standardoptionen
    installiert werden kann.
+
+   Erst dann kann das pre-commit Framework installiert werden mit:
+
+   .. code-block:: console
+
+      $ pipenv install pre-commit
 
 .. tab:: macOS
 
@@ -51,7 +55,7 @@ Bevor ihr Hooks ausführen könnt, muss ``pre-commit`` installiert sein.
 .. code-block:: console
 
     $ pipenv run pre-commit -V
-    pre-commit 2.6.0
+    pre-commit 2.21.0
 
 Konfiguration
 -------------
@@ -63,18 +67,19 @@ dieses Projekt konfiguriert werden.
 .. code-block:: yaml
 
     repos:
-    -   repo: https://github.com/pre-commit/pre-commit-hooks
-        rev: v2.5.0
+      - repo: https://github.com/pre-commit/pre-commit-hooks
+        rev: v3.2.0
         hooks:
-        -   id: check-yaml
-        -   id: end-of-file-fixer
         -   id: trailing-whitespace
-    -   repo: https://github.com/psf/black
-        rev: 19.10b0
-        hooks:
-        -   id: black
+        -   id: end-of-file-fixer
+        -   id: check-yaml
+        -   id: check-added-large-files
+        -   id: check-json
+            types: [file]  # override `types: [json]`
+            files: \.(json|ipynb)$
 
-Ihr könnt Euch diese Datei auch generieren lassen mit
+Ihr könnt Euch eine initiale ``.pre-commit-config.yaml``-Datei auch generieren
+lassen mit
 
 .. code-block:: console
 
@@ -83,22 +88,27 @@ Ihr könnt Euch diese Datei auch generieren lassen mit
     # See https://pre-commit.com/hooks.html for more hooks
     repos:
     -   repo: https://github.com/pre-commit/pre-commit-hooks
-        rev: v2.4.0
+        rev: v3.2.0
         hooks:
         -   id: trailing-whitespace
         -   id: end-of-file-fixer
         -   id: check-yaml
         -   id: check-added-large-files
 
-Wenn ihr diesen pre-commit-Hook vor jedem commit ausführen möchtet, installiert
-diesen mit ``pre-commit install``. Sollen die Hooks manuell ausgeführt werden,
-kann dies mit ``pre-commit run --all-files`` geschehen. Einzelne Hooks können
-dann auch separat ausgeführt werden, z.B. ``pre-commit run
-trailing-whitespace``.
+:samp:`pre-commit install`
+    installiert die pre-commit-Hooks, sodass sie vor jedem ``git commit``
+    ausgeführt werden
+:samp:`pre-commit run --all-files`
+    führt alle pre-commit-Hooks unabhängig von ``git commit`` aus
+:samp:`pre-commit run {HOOK}`
+    führt einzelne pre-commit-Hooks aus, :abbr:`z.B. (zum Beispiel)`
+    :samp:`pre-commit run trailing-whitespace`
 
-Beim ersten Aufruf eines pre-commit-Hooks wird dieser zunächst heruntergeladen
-und anschließend installiert. Dies kann einige Zeit benötigen, z.B. wenn eine
-Kopie von ``node`` erstellt werden muss.
+.. note::
+    Beim ersten Aufruf eines pre-commit-Hooks wird dieser zunächst
+    heruntergeladen und anschließend installiert. Dies kann einige Zeit
+    benötigen, :abbr:`z.B. (zum Beispiel)` wenn eine Kopie von ``node`` erstellt
+    werden muss.
 
 .. code-block:: console
 
@@ -107,7 +117,6 @@ Kopie von ``node`` erstellt werden muss.
     Fix End of Files.........................................................Passed
     Check Yaml...............................................................Passed
     Check for added large files..............................................Passed
-    black....................................................................Passed
 
 Eine vollständige Liste der Konfigurationsoptionen erhaltet ihr in `Adding pre-commit
 plugins to your project
@@ -136,29 +145,42 @@ Skripte in unserem Projekt installiert:
     $ pre-commit install
     pre-commit installed at .git/hooks/pre-commit
 
-Verwenden in CI
----------------
+Verwenden für CI
+----------------
 
-Pre-Commit kann auch für Continuous Integration verwendet werden.
+Pre-Commit kann auch für kontinuierliche Integration (:abbr:`CI (Continuous
+Integration)`) verwendet werden.
 
 .. _gh-action-pre-commit-example:
 
-Beispiel für GitHub Actions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Beispiele für GitHub Actions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: yaml
+`pre-commit ci <https://pre-commit.ci>`_
+    Service, der eurem GitHub-Repository die *pre-commit ci*-App in eurem
+    Repository unter
+    :samp:`https://github.com/{PROFILE}/{REPOSITORY}/installations` hinzufügt.
 
-    - name: set PY
-      run: echo "::set-env name=PY::$(python -VV | sha256sum | cut -d' ' -f1)"
-    - uses: actions/cache@v1
-      with:
-        path: ~/.cache/pre-commit
-        key: pre-commit|${{ env.PY }}|${{ hashFiles('.pre-commit-config.yaml') }}
+    Neben der automatischen Änderung von Pull-Requests führt die App auch
+    `autoupdate <https://pre-commit.com/#pre-commit-autoupdate>`_ aus, um eure
+    Konfiguration aktuell zu halten.
 
-.. seealso::
+    Weitere Installationen könnt ihr hinzufügen unter `Install pre-commit ci
+    <https://github.com/apps/pre-commit-ci/installations/new>`_.
 
-    * `pre-commit/action <https://github.com/pre-commit/action>`_
-    * `pre-commit ci <https://pre-commit.ci/>`_
+:samp:`.github/workflows/ci.yml`
+    Alternative Konfiguration als GitHub-Workflow, :abbr:`z.B. (zum Beispiel)`:
+
+    .. code-block:: yaml
+
+        - uses: actions/cache@v3
+          with:
+            path: ~/.cache/pre-commit
+            key: pre-commit|${{ env.pythonLocation }}|${{ hashFiles('.pre-commit-config.yaml') }}
+
+    .. seealso::
+
+        * `pre-commit/action <https://github.com/pre-commit/action>`_
 
 Beispiel für GitLab Actions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
