@@ -88,7 +88,7 @@ Zum Weiterlesen
     working-areas
     work
     install-config
-    pre-commit
+    hooks
     jupyter-config
     tools
     log

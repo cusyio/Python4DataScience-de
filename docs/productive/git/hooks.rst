@@ -1,5 +1,45 @@
-Git pre-commit Hooks
-====================
+Git Hooks
+=========
+
+Git-Hooks sind Skripte, die bei bestimmten Ereignissen in einem Git-Repository
+automatisch ausgeführt werden. Sie können sich entweder in lokalen oder
+serverseitigen Repositories befinden. So können Git-Repositories individuell
+angepasst und benutzerdefinierte Aktionen ausgelöst werden.
+
+Git_Hooks befinden sich im Verzeichnis :file:`.git/hooks/`. Beim Anlegen eines
+Repository werden dort auch bereits einige Beispielskripte angelegt:
+
+.. code-block:: console
+
+    .git/hooks/
+    ├── applypatch-msg.sample
+    ├── commit-msg.sample
+    ├── fsmonitor-watchman.sample
+    ├── post-update.sample
+    ├── pre-applypatch.sample
+    ├── pre-commit.sample
+    ├── pre-merge-commit.sample
+    ├── prepare-commit-msg.sample
+    ├── pre-push.sample
+    ├── pre-rebase.sample
+    ├── pre-receive.sample
+    └── update.sample
+
+Damit die Skripte ausgeführt werden, muss lediglich der Suffix ``.sample``
+entfernt werden und :abbr:`ggf. (gegebenenfalls)` die Dateiberechtigung
+ausführbar sein, :abbr:`z.B. (zum Beispiel)` mit :samp:`chmod +x
+.git/{prepare-commit-msg}`.
+
+Die integrierten Skripte sind Shell- und Perl-Skripte, es können jedoch
+beliebige Skriptsprachen verwenden werden. Die Shebang-Zeile (:samp:`#!/bin/sh`)
+bestimmt, wie die Datei interpretiert werden soll.
+
+Sie können jedoch nicht nicht in das serverseitige Repository kopiert werden.
+
+.. _pre-commit-framework:
+
+pre-commit-Framework
+--------------------
 
 `pre-commit <https://pre-commit.com/>`_ ist ein Framework zum Verwalten und
 Pflegen mehrsprachiger pre-commit-Hooks.
@@ -10,12 +50,12 @@ verwaltet solche pre-commit-Hooks und verteilt sie auf verschiedene Projekte und
 Entwickler.
 
 Git pre-commit Hooks werden meist verwendet um vor Code Reviews automatisch auf
-Probleme im Code hinzuweisen, z.B. um die Formattierung zu überprüfen oder
-Debug-Anweisungen zu finden. Pre-Commit vereinfacht das projektübergreifende
-Teilen vom Pre-Commit-Hooks. Dabei ist auch die Sprache, in der z.B. ein Linter
-geschrieben wurde, wegabstrahiert – so ist ``scss-lint`` in Ruby geschrieben,
-ihr könnt ihn jedoch mit Pre-Commit verwenden ohne eurem Projekt ein Gemfile
-hinzufügen zu müssen.
+Probleme im Code hinzuweisen, :abbr:`z.B. (zum Beispiel)` um die Formattierung
+zu überprüfen oder Debug-Anweisungen zu finden. Pre-Commit vereinfacht das
+projektübergreifende Teilen vom Pre-Commit-Hooks. Dabei ist auch die Sprache, in
+der :abbr:`z.B. (zum Beispiel)` ein Linter geschrieben wurde, wegabstrahiert –
+so ist ``scss-lint`` in Ruby geschrieben, ihr könnt ihn jedoch mit Pre-Commit
+verwenden ohne eurem Projekt ein Gemfile hinzufügen zu müssen.
 
 Installation
 ------------
