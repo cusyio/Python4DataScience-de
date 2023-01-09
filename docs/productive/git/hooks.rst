@@ -6,7 +6,7 @@ automatisch ausgeführt werden. Sie können sich entweder in lokalen oder
 serverseitigen Repositories befinden. So können Git-Repositories individuell
 angepasst und benutzerdefinierte Aktionen ausgelöst werden.
 
-Git_Hooks befinden sich im Verzeichnis :file:`.git/hooks/`. Beim Anlegen eines
+Git Hooks befinden sich im Verzeichnis :file:`.git/hooks/`. Beim Anlegen eines
 Repository werden dort auch bereits einige Beispielskripte angelegt:
 
 .. code-block:: console
