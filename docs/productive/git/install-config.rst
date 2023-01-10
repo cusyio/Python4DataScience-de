@@ -111,7 +111,7 @@ und `pandas <https://pandas.pydata.org>`_:
 
     $ pipenv install openpyxl pandas
 
-Anschließend können wir in file:`exceltocsv.py`
+Anschließend können wir in :file:`exceltocsv.py`
 :doc:`pandas:reference/api/pandas.DataFrame.to_csv` zum Konvertieren der
 Excel-Dateien verwenden:
 
