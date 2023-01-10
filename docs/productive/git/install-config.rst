@@ -124,8 +124,8 @@ Abschnitt hinzugefügt:
 .. code-block:: ini
 
     [diff "excel"]
-    textconv=python3 /PATH/TO/exceltocsv.py
-    binary=true
+        textconv=python3 /PATH/TO/exceltocsv.py
+        binary=true
 
 Schließlich wird in der globalen ``~/.gitattributes``-Datei unser
 ``excel``-Konverter mit :file:`*.xlsx`-Dateien verknüpft:
@@ -157,7 +157,7 @@ Abschnitt hinzugefügt:
 .. code-block:: ini
 
     [diff "pdf"]
-    textconv=pdftohtml -stdout
+        textconv=pdftohtml -stdout
 
 Schließlich wird in der globalen ``~/.gitattributes``-Datei unser
 ``pdf``-Konverter mit :file:`*.pdf`-Dateien verknüpft:
@@ -199,9 +199,9 @@ Abschnitt hinzugefügt:
 .. code-block:: ini
 
    [diff "word"]
-       textconv=pandoc --to=markdown
-       binary=true
-       prompt=false
+           textconv=pandoc --to=markdown
+           binary=true
+           prompt=false
 
 Schließlich wird in der globalen ``~/.gitattributes``-Datei unser
 ``word``-Konverter mit :file:`*.docx`-Dateien verknüpft:
