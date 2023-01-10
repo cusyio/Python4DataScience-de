@@ -1,7 +1,7 @@
 Änderungen zurücknehmen
 =======================
 
-``$ git reset [--hard|--soft] [target-reference]``
+:samp:`$ git reset [--hard|--soft] [{TARGET-REFERENCE}]`
     setzt die Historie auf einen früheren Commit zurück, :abbr:`z.B. (zum
     Beispiel)`:
 
@@ -60,19 +60,19 @@
         werden da Git üblicherweise alle verwaisten Commits nach 30 Tagen
         löscht.
 
-``$ git revert [commit sha]``
+:samp:`$ git revert [{COMMIT SHA}]`
     erstellt einen neuen Commit und nimmt die Änderungen des angegebenen Commits
     zurück, sodass die Änderungen invertiert werden.
-``$ git fetch [remote]``
+:samp:`$ git fetch [{REMOTE}]`
     übernimmt die Änderungen von Remote, aktualisiert jedoch nicht die Zweige.
-``$ git fetch --prune [remote]``
+:samp:`$ git fetch --prune [{REMOTE}]`
     Remote-Refs werden entfernt wenn sie im Remote-Repository entfernt wurden.
-``$ git commit --amend``
+:samp:`$ git commit --amend`
     aktualisiert und ersetzt den letzten Commit durch einen neuen Commit, der
     alle bereitgestellten Änderungen mit dem Inhalt des vorherigen Commits
     kombiniert. Wenn nichts bereitgestellt ist, wird nur die vorherige
     Commit-Nachricht neu geschrieben.
-``$ git restore [file]``
+:samp:`$ git restore [{FILE}]`
     ändert Dateien im Arbeitsverzeichnis in einen Zustand, der Git zuvor bekannt
     war. Standardmäßig checkt Git ``HEAD`` den letzten Commit des aktuellen
     Zweigs aus.
@@ -82,15 +82,16 @@
         In Git < 2.23 steht euch ``git restore`` noch nicht zur Verfügung. In
         diesem Fall müsst ihr noch ``git checkout`` verwenden:
 
-        ``$ git checkout [file]``
+       :samp:`$ git checkout [{FILE}]`
 
-``$ git pull [remote]``
+:samp:`$ git pull [{REMOTE}]`
     ruft Änderungen aus dem Remote-Repository ab und führt den aktuellen Zweig
     mit dem Upstream zusammen.
-``$ git push [--tags] [remote]``
+:samp:`$ git push [--tags] [{REMOTE}]`
     überträgt lokale Änderungen nach Remote.
 
     Mit ``--tags`` können gleichzeitig Tags übertragen werden.
-``$ git push -u [remote] [branch]``
+
+:samp:``$ git push -u [{REMOTE}] [{BRANCH}]``
     überträgt den lokalen Zweig in das Remote-Repository wobei die Kopie als
     Upstream festgelegt wird.
