@@ -98,8 +98,46 @@ in ``git diff``:
 ``git diff``
 ~~~~~~~~~~~~
 
-Git diff kann mit dem Zusatzprogramm ``pdftohtml`` auch auf PDFs angewendet
-werden. Es kann installiert werden mit
+Git diff lässt sich konfigurieren, sodass es auch bei Binärdateien sinnvolle
+Diffs anzeigen kann.
+
+…für Excel-Dateien
+::::::::::::::::::
+
+Hierfür benötigen wir `openpyxl <https://openpyxl.readthedocs.io/en/stable/>`_
+und `pandas <https://pandas.pydata.org>`_:
+
+.. code-block:: console
+
+    $ pipenv install openpyxl pandas
+
+Anschließend können wir in file:`exceltocsv.py`
+:doc:`pandas:reference/api/pandas.DataFrame.to_csv` zum Konvertieren der
+Excel-Dateien verwenden:
+
+.. literalinclude:: exceltocsv.py
+    :language: python
+
+Anschließend wird der globalen Git-Konfiguration ``~/.gitconfig`` folgender
+Abschnitt hinzugefügt:
+
+.. code-block:: ini
+
+    [diff "excel"]
+    textconv=python3 /PATH/TO/exceltocsv.py
+    binary=true
+
+Schließlich wird in der globalen ``~/.gitattributes``-Datei unser
+``excel``-Konverter mit :file:`*.xlsx`-Dateien verknüpft:
+
+.. code-block:: ini
+
+    *.xlsx diff=excel
+
+…für PDF-Dateien
+::::::::::::::::
+
+Hierfür wird zusätzlich ``pdftohtml`` benötigt. Es kann installiert werden mit
 
 .. tab:: Debian/Ubuntu
 
@@ -118,18 +156,21 @@ Abschnitt hinzugefügt:
 
 .. code-block:: ini
 
-    [diff "pdfconv"]
+    [diff "pdf"]
     textconv=pdftohtml -stdout
 
 Schließlich wird in der globalen ``~/.gitattributes``-Datei unser
-``pdfconf``-Filter mit PDF-Dateien verknüpft wird:
+``pdf``-Konverter mit :file:`*.pdf`-Dateien verknüpft:
 
 .. code-block:: ini
 
-    *.pdf diff=pdfconv
+    *.pdf diff=pdf
 
 Nun wird beim Aufruf von ``git diff`` die PDF-Datei zunächst konvertiert und
-dann ein Diff über der Ausgabe des Konverters durchgeführt.
+dann ein Diff über den Ausgaben des Konverters durchgeführt.
+
+…für Word-Dokumente
+:::::::::::::::::::
 
 Auch Unterschiede in Word-Dokumenten lassen sich anzeigen. Hierfür kann `Pandoc
 <https://pandoc.org/>`_ verwendet werden, das einfach installiert werden kann
@@ -152,15 +193,8 @@ mit
 
       $ brew install pandoc
 
-Anschließend wird in ``.gitattributes`` die Dateiendung ``.docx`` auf eine
-alternative ``diff``-Konfigurationen abgebildet:
-
-.. code-block:: ini
-
-   *.docx diff=word
-
-Schließlich kann in der ``.gitconfig``-Datei der folgende Abschnitt eingefügt
-werden:
+Anschließend wird der globalen Git-Konfiguration ``~/.gitconfig`` folgender
+Abschnitt hinzugefügt:
 
 .. code-block:: ini
 
@@ -168,6 +202,13 @@ werden:
        textconv=pandoc --to=markdown
        binary=true
        prompt=false
+
+Schließlich wird in der globalen ``~/.gitattributes``-Datei unser
+``word``-Konverter mit :file:`*.docx`-Dateien verknüpft:
+
+.. code-block:: ini
+
+   *.docx diff=word
 
 Die gleiche Vorgehensweise kann auch angewandt werden, um nützliche Diffs von
 anderen Binärdateien zu erhalten, :abbr:`z.B. (zum Beispiel)` ``*.zip``,
