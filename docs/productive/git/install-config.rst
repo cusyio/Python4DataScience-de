@@ -49,7 +49,7 @@ Konfiguration
 -------------
 
 ``$ git config --global user.name "[name]"``
-    legt den Namen fest, den mit euren Commit-Transaktionen verknüpft wird.
+    legt den Namen fest, der mit euren Commit-Transaktionen verknüpft wird.
 ``$ git config --global user.email "[email address]"``
     legt die E-Mail fest, die mit euren Commit-Transaktionen verknüpft wird.
 ``$ git config --global color.ui auto``
