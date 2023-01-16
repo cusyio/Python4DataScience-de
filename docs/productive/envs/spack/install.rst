@@ -53,7 +53,7 @@ Installation
     Cloning into 'spack'...
     ...
     $ cd spack
-    $ git switch releases/v0.17
+    $ git switch releases/v0.19
 
 Shell konfigurieren
 -------------------
@@ -87,22 +87,22 @@ Paket angeben:
 .. code-block:: console
 
     $ spack spec zlib
+    ==> Bootstrapping clingo from pre-built binaries
+    ==> Fetching https://mirror.spack.io/bootstrap/github-actions/v0.4/build_cache/linux-centos7-x86_64-gcc-10.2.1-clingo-bootstrap-spack-idkenmhnscjlu5gjqhpcqa4h7o2a7aow.spec.json
+    ==> Fetching https://mirror.spack.io/bootstrap/github-actions/v0.4/build_cache/linux-centos7-x86_64/gcc-10.2.1/clingo-bootstrap-spack/linux-centos7-x86_64-gcc-10.2.1-clingo-bootstrap-spack-idkenmhnscjlu5gjqhpcqa4h7o2a7aow.spack
+    ==> Installing "clingo-bootstrap@spack%gcc@10.2.1~docs~ipo+python+static_libstdcpp build_type=Release arch=linux-centos7-x86_64" from a buildcache
     Input spec
     --------------------------------
     zlib
 
     Concretized
     --------------------------------
-    ==> Bootstrapping clingo from pre-built binaries
-    ==> Fetching https://mirror.spack.io/bootstrap/github-actions/v0.1/build_cache/darwin-catalina-x86_64/apple-clang-12.0.0/clingo-bootstrap-spack/darwin-catalina-x86_64-apple-clang-12.0.0-clingo-bootstrap-spack-omsvlh5v6fi2saw5qyqvzsbvqpvrf5yw.spack
-    ==> Installing "clingo-bootstrap@spack%apple-clang@12.0.0~docs~ipo+python build_type=Release arch=darwin-catalina-x86_64" from a buildcache
-    zlib@1.2.11%apple-clang@13.0.0+optimize+pic+shared arch=darwin-bigsur-cannonlake
+    zlib@1.2.13%gcc@11.3.0+optimize+pic+shared build_system=makefile arch=linux-ubuntu22.04-sandybridge
 
 .. note::
    Um von vorgefertigten Binärdateien zu booten, benötigt Spack ``patchelf``
    unter Linux oder ``otool`` unter macOS. Ansonsten baut Spack sie aus den
    Quellen und mit einem C++ Compiler.
-
 
 Bootstrap store
 ---------------
@@ -114,27 +114,29 @@ installierte Software kann abgefragt werden mit:
 .. code-block:: console
 
     $ spack find --bootstrap
-    ==> Showing internal bootstrap store at "/Users/veit/.spack/bootstrap/store"
-    ==> 2 installed packages
-    -- darwin-catalina-x86_64 / apple-clang@12.0.0 ------------------
-    clingo-bootstrap@spack  python@3.9
+    ==> Warning: `spack find --bootstrap` is deprecated and will be removed in v0.19.
+      Use `spack --bootstrap find` instead.
+    ==> Showing internal bootstrap store at "/srv/jupyter/.spack/bootstrap/store"
+    -- linux-centos7-x86_64 / gcc@10.2.1 ----------------------------
+    bison@3.0.4  clingo-bootstrap@spack  python@3.10
+    ==> 3 installed packages
 
 Compiler-Konfiguration
 ----------------------
 
 .. code-block:: console
 
-    $ $ spack compilers
+    $ spack compilers
     ==> Available compilers
-    -- apple-clang bigsur-x86_64 ------------------------------------
-    apple-clang@13.0.0
+    -- gcc ubuntu22.04-x86_64 ---------------------------------------
+    gcc@11.3.0
 
 Baut euren eigenen Compiler
 ---------------------------
 
 .. code-block:: console
 
-    $ spack install gcc@11.2.0
+    $ spack install gcc
     ...
     ==> gcc: Successfully installed gcc-11.2.0-azhiay4ugfrs634hqlez7u3f2li3wvzd
       Fetch: 12.09s.  Build: 2h 8m 13.92s.  Total: 2h 8m 26.01s.
@@ -153,21 +155,18 @@ Ihr könnt ihn jedoch mit ``spack compiler find`` hinzufügen:
 
 .. code-block:: console
 
-    spack compiler find /Users/veit/spack/opt/spack/darwin-bigsur-cannonlake/apple-clang-13.0.0/gcc-11.2.0-azhiay4ugfrs634hqlez7u3f2li3wvzd
-    ==> Added 1 new compiler to /Users/veit/.spack/darwin/compilers.yaml
-        gcc@11.2.0
+    $ spack compiler find /srv/jupyter/spack/opt/spack/linux-ubuntu22.04-sandybridge/gcc-11.3.0/gcc-12.2.0-gbaw464qxjuz6i3uud42cd5mb4xujxia/
+    ==> Added 1 new compiler to /srv/jupyter/.spack/linux/compilers.yaml
+        gcc@12.2.0
     ==> Compilers are defined in the following files:
-        /Users/veit/.spack/darwin/compilers.yaml
+        /srv/jupyter/.spack/linux/compilers.yaml
 
 .. code-block:: console
 
     $ spack compilers
     ==> Available compilers
-    -- apple-clang bigsur-x86_64 ------------------------------------
-    apple-clang@13.0.0
-
-    -- gcc bigsur-x86_64 --------------------------------------------
-    gcc@11.2.0
+    -- gcc ubuntu22.04-x86_64 ---------------------------------------
+    gcc@12.2.0  gcc@11.3.0
 
 Wenn ihr die Standard- und Site-Einstellungen überschreiben möchtet, könnt ihr
 :file:`${HOME}/.spack/packages.yaml` ändern:
@@ -176,7 +175,7 @@ Wenn ihr die Standard- und Site-Einstellungen überschreiben möchtet, könnt ih
 
     packages:
       all:
-        compiler: [gcc@11.2.0]
+        compiler: [gcc@12.2.0]
 
 GPG Signing
 -----------

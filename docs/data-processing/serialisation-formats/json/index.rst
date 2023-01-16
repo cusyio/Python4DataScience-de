@@ -65,7 +65,7 @@ JSON
 |                       |       | und zu deserialisieren sind.                          |
 +-----------------------+-------+-------------------------------------------------------+
 | Dateigröße            | +-    | Die Dateigröße von JSON liegt im Mittelfeld, ähnlich  |
-|                       |       | :doc:`../yaml` und :doc:`../toml`.                    |
+|                       |       | :doc:`../yaml/index` und :doc:`../toml/index`.        |
 +-----------------------+-------+-------------------------------------------------------+
 
 Beispiel

@@ -95,8 +95,131 @@ in ``git diff``:
         # Highlight whitespace errors in git diff:
         whitespace = tabwidth=4,tab-in-indent,cr-at-eol,trailing-space
 
+``git diff``
+~~~~~~~~~~~~
+
+Git diff lässt sich konfigurieren, sodass es auch bei Binärdateien sinnvolle
+Diffs anzeigen kann.
+
+…für Excel-Dateien
+::::::::::::::::::
+
+Hierfür benötigen wir `openpyxl <https://openpyxl.readthedocs.io/en/stable/>`_
+und `pandas <https://pandas.pydata.org>`_:
+
+.. code-block:: console
+
+    $ pipenv install openpyxl pandas
+
+Anschließend können wir in :file:`exceltocsv.py`
+:doc:`pandas:reference/api/pandas.DataFrame.to_csv` zum Konvertieren der
+Excel-Dateien verwenden:
+
+.. literalinclude:: exceltocsv.py
+    :language: python
+
+Anschließend wird der globalen Git-Konfiguration ``~/.gitconfig`` folgender
+Abschnitt hinzugefügt:
+
+.. code-block:: ini
+
+    [diff "excel"]
+        textconv=python3 /PATH/TO/exceltocsv.py
+        binary=true
+
+Schließlich wird in der globalen ``~/.gitattributes``-Datei unser
+``excel``-Konverter mit :file:`*.xlsx`-Dateien verknüpft:
+
+.. code-block:: ini
+
+    *.xlsx diff=excel
+
+…für PDF-Dateien
+::::::::::::::::
+
+Hierfür wird zusätzlich ``pdftohtml`` benötigt. Es kann installiert werden mit
+
+.. tab:: Debian/Ubuntu
+
+   .. code-block:: console
+
+      $ sudo apt install poppler-utils
+
+.. tab:: macOS
+
+   .. code-block:: console
+
+      $ brew install pdftohtml
+
+Anschließend wird der globalen Git-Konfiguration ``~/.gitconfig`` folgender
+Abschnitt hinzugefügt:
+
+.. code-block:: ini
+
+    [diff "pdf"]
+        textconv=pdftohtml -stdout
+
+Schließlich wird in der globalen ``~/.gitattributes``-Datei unser
+``pdf``-Konverter mit :file:`*.pdf`-Dateien verknüpft:
+
+.. code-block:: ini
+
+    *.pdf diff=pdf
+
+Nun wird beim Aufruf von ``git diff`` die PDF-Datei zunächst konvertiert und
+dann ein Diff über den Ausgaben des Konverters durchgeführt.
+
+…für Word-Dokumente
+:::::::::::::::::::
+
+Auch Unterschiede in Word-Dokumenten lassen sich anzeigen. Hierfür kann `Pandoc
+<https://pandoc.org/>`_ verwendet werden, das einfach installiert werden kann
+mit
+
+.. tab:: Windows
+
+   Herunterladen und Installieren der ``.msi``-Datei von `GitHub
+   <https://github.com/jgm/pandoc/releases/tag/2.19.2>`_.
+
+.. tab:: Debian/Ubuntu
+
+   .. code-block:: console
+
+      $ sudo apt install pandoc
+
+.. tab:: macOS
+
+   .. code-block:: console
+
+      $ brew install pandoc
+
+Anschließend wird der globalen Git-Konfiguration ``~/.gitconfig`` folgender
+Abschnitt hinzugefügt:
+
+.. code-block:: ini
+
+   [diff "word"]
+           textconv=pandoc --to=markdown
+           binary=true
+           prompt=false
+
+Schließlich wird in der globalen ``~/.gitattributes``-Datei unser
+``word``-Konverter mit :file:`*.docx`-Dateien verknüpft:
+
+.. code-block:: ini
+
+   *.docx diff=word
+
+Die gleiche Vorgehensweise kann auch angewandt werden, um nützliche Diffs von
+anderen Binärdateien zu erhalten, :abbr:`z.B. (zum Beispiel)` ``*.zip``,
+``*.jar`` und andere Archive mit ``unzip`` oder für Änderungen in den
+Metainformationen von Bildern mit ``exiv2``. Zudem gibt es
+Konvertierungswerkzeuge für die Umwandlung von ``*.odf``, ``.doc`` und anderen
+Dokumentenformaten in einfachen Text. Für Binärdateien, für die es keinen
+Konverter gibt, reichen oft auch Strings aus.
+
 Anmeldedaten verwalten
-::::::::::::::::::::::
+~~~~~~~~~~~~~~~~~~~~~~
 
 Seit der Git-Version 1.7.9 lassen sich die Zugangsdaten zu git-Repositories mit
 `gitcredentials <https://git-scm.com/docs/gitcredentials>`_ verwalten. Um diese
@@ -112,6 +235,15 @@ kann ggf. erhöht werden, z.B. mit:
 .. code-block:: console
 
     $ git config --global credential.helper 'cache --timeout=3600'
+
+.. tab:: Windows
+
+    Für Windows steht `Git Credential Manager (GCM)
+    <https://github.com/GitCredentialManager/git-credential-manager>`_ zur
+    Verfügung. Er ist ingegriert in `Git for Windows
+    <https://git-scm.com/download/win>`_ und wird standardmäßig mitinstalliert.
+    Es git jedoch auch ein eigenständiges Installationsprogramm in `Releases
+    <https://github.com/GitCredentialManager/git-credential-manager/releases/>`_.
 
 .. tab:: macOS
 
@@ -136,16 +268,6 @@ kann ggf. erhöht werden, z.B. mit:
 
         [credential]
             helper = osxkeychain
-
-.. tab:: Windows
-
-    Für Windows steht `Git Credential Manager for Windows
-    <https://github.com/Microsoft/Git-Credential-Manager-for-Windows>`_ zur
-    Verfügung. Für das Programm muss der `Installer
-    <https://github.com/Microsoft/Git-Credential-Manager-for-Windows/releases/latest>`_
-    heruntergeladen werden. Nach dem Doppelklick führt er Euch durch die
-    weitere Installation. Als Terminal-Emulator für Git Bash solltet ihr das
-    Standardkonsolenfenster von Windows auswählen.
 
 .. note::
     Ein umfangreiches Beispiel einer `Konfigurationsdatei findet ihr in meinem
@@ -361,18 +483,22 @@ Dieser Ansatz dürfte für euer Team offensichtlicher und weniger verwirrend sei
 Fehlersuche in ``.gitignore``-Dateien
 :::::::::::::::::::::::::::::::::::::
 
-Bei komplizierten ``.gitignore``-Mustern oder bei Mustern, die über mehrere ``.gitignore``-Dateien
-verteilt sind, kann es schwierig sein, herauszufinden, warum eine bestimmte Datei ignoriert wird.
-Ihr könnt den Befehl ``git check-ignore`` mit der Option ``-v`` (oder ``--verbose``) verwenden, um
-festzustellen, welches Muster die Ursache für das Ignorieren einer bestimmten Datei ist:
+Bei komplizierten ``.gitignore``-Mustern oder bei Mustern, die über mehrere
+``.gitignore``-Dateien verteilt sind, kann es schwierig sein, herauszufinden,
+warum eine bestimmte Datei ignoriert wird. Ihr könnt den Befehl ``git
+check-ignore`` mit der Option ``-v`` (oder ``--verbose``) verwenden, um
+festzustellen, welches Muster die Ursache für das Ignorieren einer bestimmten
+Datei ist:
 
 .. code-block:: console
 
     $ git check-ignore -v data/iris.csv
     data/.gitignore:2:!iris.csv	data/iris.csv
 
-Die Ausgabe zeigt :samp:`{FILE_CONTAINING_THE_PATTERN}:{LINE_NUMBER_OF_THE_PATTERN}:{PATTERN}
+Die Ausgabe zeigt
+:samp:`{FILE_CONTAINING_THE_PATTERN}:{LINE_NUMBER_OF_THE_PATTERN}:{PATTERN}
 {FILE_NAME}`
 
-Ihr könnt mehrere Dateinamen an ``git check-ignore`` übergeben, wenn ihr möchtet, und die Namen
-selbst müssen nicht einmal den Dateien entsprechen, die in eurem Repository existieren.
+Ihr könnt mehrere Dateinamen an ``git check-ignore`` übergeben, wenn ihr
+möchtet, und die Namen selbst müssen nicht einmal den Dateien entsprechen, die
+in eurem Repository existieren.

@@ -4,54 +4,61 @@ pandas IO tools
 pandas verfügt über eine Reihe von Funktionen zum Lesen von Tabellendaten als
 DataFrame-Objekt, darunter
 
-+--------------------+----------------------------------------------------------+
-| Funktion           | Beschreibung                                             |
-+====================+==========================================================+
-| ``read_csv``       | Laden von durch Trennzeichen getrennte Daten aus einer   |
-|                    | Datei, einer URL oder einem dateiähnlichen Objekt;       |
-|                    | standardmäßig wird ein Komma als Trennzeichen verwendet  |
-+--------------------+----------------------------------------------------------+
-| ``read_fwf``       | Lesen von Daten im Spaltenformat mit fester Breite (d.h. | 
-|                    | ohne Begrenzungszeichen)                                 |
-+--------------------+----------------------------------------------------------+
-| ``read_clipboard`` | Version von ``read_csv``, die Daten aus der              |
-|                    | Zwischenablage liest; nützlich für die Konvertierung von |
-|                    | Tabellen aus Webseiten                                   |
-+--------------------+----------------------------------------------------------+
-| ``read_excel``     | Einlesen von Tabellendaten aus einer Excel XLS- oder     |
-|                    | XLSX-Datei                                               |
-+--------------------+----------------------------------------------------------+
-| ``read_hdf``       | Lesen von HDF5-Dateien, die von Pandas geschrieben wurden|
-+--------------------+----------------------------------------------------------+
-| ``read_html``      | Liest alle Tabellen aus dem angegebenen HTML-Dokument    |
-+--------------------+----------------------------------------------------------+
-| ``read_json``      | Lesen von Daten aus einer JSON (JavaScript Object        |
-|                    | Notation) String-Darstellung                             |
-+--------------------+----------------------------------------------------------+
-| ``read_feather``   | Lesen des Feather-Binärdateiformats                      |
-+--------------------+----------------------------------------------------------+
-| ``read_orc``       | Einlesen des Apache ORC-Binärdateiformats                |
-+--------------------+----------------------------------------------------------+
-| ``read_parquet``   | Lesen des Apache Parquet-Binärdateiformats               |
-+--------------------+----------------------------------------------------------+
-| ``read_pickle``    | Lesen eines beliebigen Objekts, das im                   |
-|                    | Python-Pickle-Format gespeichert ist                     |
-+--------------------+----------------------------------------------------------+
-| ``read_sas``       | Lesen eines SAS-Datensatzes, der in einem der            |
-|                    | benutzerdefinierten Speicherformate des SAS-Systems      |
-|                    | gespeichert ist                                          |
-+--------------------+----------------------------------------------------------+
-| ``read_spss``      | Liest eine von SPSS erstellte Datendatei                 |
-+--------------------+----------------------------------------------------------+
-| ``read_sql``       | Lesen der Ergebnisse einer SQL-Abfrage (mit SQLAlchemy)  |
-|                    | als pandas DataFrame                                     |
-+--------------------+----------------------------------------------------------+
-| ``read_sql_table`` | Lesen einer ganzen SQL-Tabelle (mit SQLAlchemy) als      |
-|                    | pandas DataFrame (entspricht einer Abfrage, die alles in |
-|                    | dieser Tabelle mit ``read_sql`` auswählt)                |
-+--------------------+----------------------------------------------------------+
-| ``read_stata``     | Lesen eines Datensatzes aus dem Stata-Dateiformat        |
-+--------------------+----------------------------------------------------------+
++----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| Funktion                                           | Beschreibung                                                                                     |
++====================================================+==================================================================================================+
+| :doc:`pandas:reference/api/pandas.read_csv`        | lädt :doc:`serialisation-formats/csv/index`-Daten aus                                            |
+|                                                    | einer Datei, einer URL oder einem dateiähnlichen Objekt;                                         |
+|                                                    | üblicherweise wird ein Komma als Trennzeichen verwendet                                          |
++----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| :doc:`pandas:reference/api/pandas.read_fwf`        | liest :abbr:`fwf (fixed-width files)`, also Daten im                                             |
+|                                                    | Spaltenformat mit fester Breite                                                                  |
++----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| :doc:`pandas:reference/api/pandas.read_clipboard`  | liest Daten aus der Zwischenablage und übergibt sie an                                           |
+|                                                    | ``read_csv``; :abbr:`u.a. (unter anderem)` nützlich für                                          |
+|                                                    | die Konvertierung von Tabellen aus Webseiten                                                     |
++----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| :doc:`pandas:reference/api/pandas.read_excel`      | liest Tabellendaten aus einer                                                                    |
+|                                                    | :doc:`serialisation-formats/excel` XLS- oder XLSX-Datei                                          |
++----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| :doc:`pandas:reference/api/pandas.read_hdf`        | liest :abbr:`HDF5 (Hierarchical Data Format)`-Dateien                                            |
++----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| :doc:`pandas:reference/api/pandas.read_html`       | liest alle Tabellen aus dem angegebenen                                                          |
+|                                                    | :ref:`/data-processing/serialisation-formats/xml-html/xml-html-examples.ipynb#html`-Dokument     |
++----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| :doc:`pandas:reference/api/pandas.read_json`       | liest Daten aus einer                                                                            |
+|                                                    | :doc:`serialisation-formats/json/index`-Datei                                                    |
++----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| :doc:`pandas:reference/api/pandas.read_feather`    | liest das                                                                                        |
+|                                                    | `Feather <https://arrow.apache.org/docs/python/feather.html>`_-Binärdateiformat                  |
++----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| :doc:`pandas:reference/api/pandas.read_orc`        | liest Apache :abbr:`ORC (Optimized Row Columnar)`-Binärdaten                                     |
++----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| :doc:`pandas:reference/api/pandas.read_parquet`    | liest das `Apache                                                                                |
+|                                                    | Parquet <https://parquet.apache.org>`_-Binärdateiformat                                          |
++----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| :doc:`pandas:reference/api/pandas.read_pickle`     | liest ein beliebiges Objekt, das im                                                              |
+|                                                    | Python-:doc:`serialisation-formats/pickle/index`-Format                                          |
+|                                                    | gespeichert ist                                                                                  |
++----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| :doc:`pandas:reference/api/pandas.read_sas`        | liest einen                                                                                      |
+|                                                    | :abbr:`SAS (Statistical Analysis System)`-Datensatz                                              |
++----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| :doc:`pandas:reference/api/pandas.read_spss`       | liest eine von `SPSS                                                                             |
+|                                                    | <https://de.wikipedia.org/wiki/SPSS>`_ erstellte                                                 |
+|                                                    | Datendatei                                                                                       |
++----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| :doc:`pandas:reference/api/pandas.read_sql`        | liest die Ergebnisse einer SQL-Abfrage (mit                                                      |
+|                                                    | :doc:`postgresql/sqlalchemy`) als pandas DataFrame                                               |
++----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| :doc:`pandas:reference/api/pandas.read_sql_table`  | liest eine ganze SQL-Tabelle (mit                                                                |
+|                                                    | :doc:`postgresql/sqlalchemy`) als pandas DataFrame                                               |
+|                                                    | (entspricht einer Abfrage, die alles in dieser Tabelle                                           |
+|                                                    | mit ``read_sql`` auswählt)                                                                       |
++----------------------------------------------------+--------------------------------------------------------------------------------------------------+
+| :doc:`pandas:reference/api/pandas.read_stata`      | liest einen Datensatz aus dem                                                                    |
+|                                                    | `Stata <https://www.stata.com>`_-Dateiformat                                                     |
++----------------------------------------------------+--------------------------------------------------------------------------------------------------+
 
 .. seealso::
     `pandas I/O API <https://pandas.pydata.org/docs/user_guide/io.html>`_

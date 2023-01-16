@@ -61,7 +61,8 @@ Beste ist, dass diese Daten gemeinfrei sind:
 
         $ ogr2ogr -f PostgreSQL PG:dbname=postgis_db -progress \
             -nlt PROMOTE_TO_MULTI \
-            /home/veit/nedata/ne_110m_admin_0_countries.shp
+            /srv/jupyter/nedata/ne_110m_admin_0_countries.shp
+        0...10...20...30...40...50...60...70...80...90...100 - done.
 
       ``-f PostgreSQL``
         gibt an, dass das Ziel eine PostgreSQL-Datenbank ist

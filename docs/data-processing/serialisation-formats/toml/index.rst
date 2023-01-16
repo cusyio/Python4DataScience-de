@@ -8,7 +8,7 @@ TOML
 | Unterstützung für     | \+    | TOML (Tom’s Obvious, Minimal Language) unterstützt die|
 | Datenstrukturen       |       | meisten Datenstrukturen, einschließlich Zeichenfolgen,|
 |                       |       | Ganzzahlen, Gleitkommazahlen und Datumsangaben, jedoch|
-|                       |       | keine Referenzen wie :doc:`yaml`.                     |
+|                       |       | keine Referenzen wie :doc:`../yaml/index`.            |
 +-----------------------+-------+-------------------------------------------------------+
 | Standardisation       | ++    | TOML ist ein formaler, stark typisierter Standard.    |
 +-----------------------+-------+-------------------------------------------------------+
@@ -24,7 +24,7 @@ TOML
 | Speed                 | +-    | TOML kann mit mittlerer Geschwindigkeit verarbeitet   |
 |                       |       | werden.                                               |
 +-----------------------+-------+-------------------------------------------------------+
-| File size             | \-    | Nur :doc:`xml-html/index` ist weniger kompakt.        |
+| File size             | \-    | Nur :doc:`../xml-html/index` ist weniger kompakt.     |
 +-----------------------+-------+-------------------------------------------------------+
 
 Beispiel
@@ -51,6 +51,19 @@ Beispiel
     known_first_party="jupyter-tutorial"
     known_third_party=["mpi4py", "numpy", "requests"]
 
+.. tab:: Python < 3.11
+
+    Ihr benötigt das Python-Paket `toml
+    <https://pypi.org/project/toml/>`_, um TOML-Dateien in
+    Python-:doc:`python-basics:types/dicts` umwandeln zu können. Anschließend
+    könnt ihr TOML-Dateien laden, :abbr:`z.B. (zum Beispiel)` mit:
+
+.. code-block:: python
+
+    import toml
+
+    config = toml.load('pyproject.toml')
+
 .. seealso::
 
     * `Home <https://toml.io/>`_
@@ -62,3 +75,10 @@ Beispiel
       <https://github.com/madmurphy/libconfini/wiki/An-INI-critique-of-TOML>`_
 
 .. _`JSON Schema Everywhere`: https://json-schema-everywhere.github.io/toml
+
+.. toctree::
+    :hidden:
+    :titlesonly:
+    :maxdepth: 0
+
+    example.ipynb
