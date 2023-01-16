@@ -24,7 +24,7 @@ Der nächste Schritt besteht darin, die unerwünschten Historien aus jedem der
 beiden Repos herauszufiltern. Hierzu müssen wir uns jedoch nicht für jeden
 Commit den Verzeichnispfad anschauen, sondern können die
 ``filter-branch``-Option ``-subdirectory-filter`` verwenden um die Historie
-umzuschrieben und diejenigen Commits zu behalten, die tatsächlich den Inhalt
+umzuschreiben und diejenigen Commits zu behalten, die tatsächlich den Inhalt
 eines bestimmten Unterordners betreffen:
 
 .. note::
