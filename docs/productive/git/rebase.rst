@@ -43,7 +43,7 @@ folgendes:
 Rebase abhängiger Zweige mit ``–update-refs``
 ---------------------------------------------
 
-Wenn ihr an einem großen Feature arbeiten, ist es oft hilfreich, die Arbeit auf
+Wenn ihr an einem großen Feature arbeitet, ist es oft hilfreich, die Arbeit auf
 mehrere Zweige zu verteilen, die aufeinander aufbauen.
 
 Diese Zweige können jedoch umständlich zu verwalten sein, wenn ihr den Verlauf
