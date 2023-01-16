@@ -400,7 +400,7 @@ eine Ausnahme definiert wird: ``!logs/.gitkeep`` erlaubt, dass die Datei
 ist erforderlich, da leere Ordner nicht mit Git verwaltet werden können.
 
 Eine andere Möglichkeit besteht darin, in einem leeren Ordner eine
-``.gitignore``-Datei mit folgendem Inahlt zu erstellen:
+``.gitignore``-Datei mit folgendem Inhalt zu erstellen:
 
 .. code-block:: ini
 
