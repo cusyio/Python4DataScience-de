@@ -7,7 +7,7 @@ Base-64-codierte Blobs für Bilder und andere Binärdaten sein, die üblicherwei
 nicht in eine Versionsverwaltung übernommen werden sollen. Diese können zwar
 manuell entfernt werden mit :menuselection:`Cell --> All Output --> Clear`, ihr
 müsst diese Schritte jedoch vor jedem ``git add`` ausführen, und es löst auch
-eine zweite Ursache für das Rauschen in ``git diff`` nicht, nämlich dasjeinige
+eine zweite Ursache für das Rauschen in ``git diff`` nicht, nämlich dasjenige
 in den `Metadaten
 <https://nbformat.readthedocs.io/en/latest/format_description.html#metadata>`_.
 
