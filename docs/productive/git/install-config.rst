@@ -301,7 +301,7 @@ Dabei verwendet Git `Globbing <https://linux.die.net/man/7/glob>`_-Muster,
 | .. code-block:: console       | ``logs/instance.log``,        | Ihr könnt zwei Sternchen      |
 |                               | ``logs/instance/error.log``,  | voranstellen um Verzeichnisse |
 |     **/logs                   | ``prod/logs/instance.log``    | an einer beliebigen Stelle im |
-|                               |                               | zu finden.                    |
+|                               |                               | Verzeichnisbaum zu finden.    |
 +-------------------------------+-------------------------------+-------------------------------+ 
 | .. code-block:: console       | ``logs/instance.log``,        | Ihr könnt zwei Sternchen      |
 |                               | ``prod/logs/instance.log``    | voranstellen um Dateien anhand|
