@@ -58,7 +58,7 @@ Konfiguration
 Die ``~/.gitconfig``-Datei
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Mit den oben angegebenen Befehle kann z.B. folgende Datei erstellt werden:
+Mit den oben angegebenen Befehlen kann z.B. folgende Datei erstellt werden:
 
 .. code-block:: ini
 
