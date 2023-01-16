@@ -27,7 +27,7 @@ Vor- und Nachteile
 Ein Vorteil von Monorepos kann sein, dass die Aufwände um zu bestimmen, welche
 Versionen des einen Projekts mit welchen Versionen des anderen Projekts
 kompatibel sind, deutlich verringert sein könnten. Dies ist zumindest immer
-dan der Fall, wenn alle Projekte eines Repository von nur einem Entwicklerteam
+dann der Fall, wenn alle Projekte eines Repository von nur einem Entwicklerteam
 bearbeitet werden. Dann empfiehlt sich, mit jedem *Merge* wieder eine lauffähige
 Version zu erhalten auch wenn die API zwischen den beiden Projekten geändert
 wurde.
