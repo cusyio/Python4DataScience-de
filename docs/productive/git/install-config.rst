@@ -393,7 +393,7 @@ Git-commit leerer Ordner
 ::::::::::::::::::::::::
 
 In obigem Beispiel seht ihr, dass mit ``/logs/*`` keine Inhalte des
-``logs``-Verzeichnis mit Git versioniert werden soll, in der Folgezeile jedoch
+``logs``-Verzeichnis mit Git versioniert werden sollen, in der Folgezeile jedoch
 eine Ausnahme definiert wird: ``!logs/.gitkeep`` erlaubt, dass die Datei
 ``.gitkeep`` mit Git verwaltet werden darf. Damit wird dann auch das
 ``logs``-Verzeichnis in das Git-Repository übernommen. Diese Hilfskonstruktion
