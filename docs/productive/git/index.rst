@@ -57,7 +57,7 @@ geeignet.
 Kritikpunkte
 ------------
 
-Eine häufige Kritik an Git ist, dass es schwer erlenrnbar sei: entweder sind
+Eine häufige Kritik an Git ist, dass es schwer erlernbar sei: entweder sind
 große Teile der Git-Terminologie neu oder in anderen Systemen haben
 Bezeichnungen eine andere Bedeutung, wie :abbr:`z.B. (zum Beispiel)` ``revert``
 in SVN oder CVS. Zudem bietet Git viel Funktionalität, die zum Erlernen jedoch
