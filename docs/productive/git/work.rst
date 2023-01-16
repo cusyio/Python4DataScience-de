@@ -27,7 +27,7 @@ An einem Projekt mitarbeiten
     ``--depth``
         gibt die Anzahl der Commits an, die heruntergeladen werden sollen
 
-    ``-b``
+    ``-b`` (Langform: ``--branch``)
         gibt den Namen des entfernten Zweigs an, der heruntergeladen werden soll
 
 An einem Projekt arbeiten
