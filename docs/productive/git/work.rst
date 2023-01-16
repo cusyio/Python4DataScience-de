@@ -89,7 +89,7 @@ An einem Projekt arbeiten
     und :samp:`FEATURE` ist.
 
     Jeder Commit in Git hat eine Commit-ID, die ihr erhalten könnt, wenn ihr
-    ``git log`` ausführt. Anschließnd könnt ihr diese Commit-ID auch an ``git
+    ``git log`` ausführt. Anschließend könnt ihr diese Commit-ID auch an ``git
     diff`` übergeben:
 
     .. code-block:: console
