@@ -21,7 +21,7 @@ An einem Projekt mitarbeiten
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :samp:`$ git clone {PROJECT_URL}`
-    lädt ein Projekt mit allen Zweigen (engl.: branches) und der gesamten
+    lädt ein Projekt mit allen Zweigen (engl.: *branches*) und der gesamten
     Historie vom entfernten Repository herunter
 
     ``--depth``
