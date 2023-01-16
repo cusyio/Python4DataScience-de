@@ -435,7 +435,7 @@ Hierfür wird üblicherweise in der ``~/.gitconfig``-Datei folgendes angegeben:
 Ignorieren einer Datei aus dem Repository
 :::::::::::::::::::::::::::::::::::::::::
 
-Wenn ihr eine Datei ignorieren wollen, die in der Vergangenheit bereits dem Repository hinzugefügt
+Wenn ihr eine Datei ignorieren wollt, die in der Vergangenheit bereits dem Repository hinzugefügt
 wurde, müsst ihr die Datei aus eurem Repository löschen und dann eine
 ``.gitignore``-Regel für sie hinzufügen. Die Verwendung der Option ``--cached`` bei ``git rm``
 bedeutet, dass die Datei aus dem Repository gelöscht wird, aber als ignorierte Datei in eurem
