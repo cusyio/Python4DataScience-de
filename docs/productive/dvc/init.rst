@@ -41,14 +41,14 @@ eingebunden werden kann:
 ``-d``, ``--default``
     Standardwert für den entfernten Speicherplatz
 ``local``
-    Name des entfernten Speicherplatz
+    Name des entfernten Speicherplatzes
 ``/var/dvc-storage``
     URL des entfernten Speicherplatzes
 
     Daneben werden noch weitere Protokolle unterstützt, die dem Pfad
     vorangestellt werden, u.a. ``ssh:``, ``hdfs:``, ``https:``.
 
-Es kann also einfach noch ein weterer entfernter Datenspeicher hinzugefügt
+Es kann also einfach noch ein weiterer entfernter Datenspeicher hinzugefügt
 werden, z.B. mit:
 
 .. code-block:: console
@@ -85,7 +85,7 @@ zum Dateiformat der ``*.dvc``-Datei erhaltet ihr unter `DVC-File Format
 <https://dvc.org/doc/user-guide/dvc-file-format>`_.
 
 Um nun verschiedene Versionen eurer Projektdaten mit Git verwalten zu können,
-müsst ihr jedoch nur die CVS-Datei hinzufügen:
+müsst ihr jedoch nur die DVC-Datei hinzufügen:
 
 .. code-block:: console
 
@@ -124,7 +124,7 @@ Dies lädt die Datei aus der `dataset-registry
 Arbeitsverzeichnis, fügt sie ``.gitignore`` hinzu und erstellt
 ``data.xml.dvc``.
 
-Mit ``dvc update`` können wir diese Datenquellen aktualisieren bevor wir eine
+Mit ``dvc update`` können wir diese Datenquellen aktualisieren, bevor wir eine
 Pipeline reproduzieren, die von diesen Datenquellen abhängt, z.B.:
 
 .. code-block:: console

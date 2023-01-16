@@ -4,7 +4,7 @@ Spack-Installation
 Anforderungen
 -------------
 
-* Interpreter for Spack:
+* Interpreter für Spack:
 
 * Software erstellen
 
@@ -37,7 +37,7 @@ Anforderungen
       $ brew install make bash gzip bzip2 git gnupg
       $ brew link gnupg
 
-Anschließend wird die Shell konfiguriert indem z.B. für die Bash folgendes in
+Anschließend wird die Shell konfiguriert, indem z.B. für die Bash folgendes in
 die Bash-Konfiguration eingetragen wird:
 
 .. code-block:: console
@@ -81,7 +81,7 @@ pre-built binaries you can simply specify a package:
 
 Spack benutzt `clingo <https://potassco.org/clingo/>`_ um optimale Versionen und
 Varianten von Abhängigkeiten bei der Installation von Paketen aufzulösen. Um
-lingo aus vorgefertigten Binärdateien zu installieren, könnt ihr einfach ein
+clingo aus vorgefertigten Binärdateien zu installieren, könnt ihr einfach ein
 Paket angeben:
 
 .. code-block:: console
@@ -193,15 +193,15 @@ in den Schlüsselbund importiert.
 Schlüsseln vertrauen
 ~~~~~~~~~~~~~~~~~~~~
 
-Zusätzliche Schlüssel können dem Schlüsselring hinzugefügt werden mit
-``spack gpg trust <keyfile>``. Sobald ein Schlüssel vertrauenswürdig ist,
+Zusätzliche Schlüssel können mit ``spack gpg trust <keyfile>`` dem 
+Schlüsselring hinzugefügt werden. Sobald ein Schlüssel vertrauenswürdig ist,
 können Pakete, die vom Besitzer dieses Schlüssels signiert wurden, installiert
 werden.
 
 Schlüssel erstellen
 ~~~~~~~~~~~~~~~~~~~
 
-Ihr könnt auch eigene Schlüssel erstellen um eure eigenen Pakete signieren
+Ihr könnt auch eigene Schlüssel erstellen, um eure eigenen Pakete signieren
 zu können mit
 
 .. code-block:: console

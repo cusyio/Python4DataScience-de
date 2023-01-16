@@ -84,8 +84,8 @@ Chemie
 * `Wiley Interdisciplinary Reviews: Computational Molecular Science
   <https://onlinelibrary.wiley.com/journal/17590884>`_
 
-Geistes-und Sozialwissenschaften
---------------------------------
+Geistes- und Sozialwissenschaften
+---------------------------------
 
 * `Digital Humanities Quarterly
   <http://www.digitalhumanities.org/dhq/>`_
