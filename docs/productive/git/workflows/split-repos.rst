@@ -71,7 +71,7 @@ gelöscht werden. Sobald ihr alle Verweise gelöscht habt, könnt ihr eine
 Garbage-Collection für das Reflog starten, um diese alten Objekte endgültig zu
 entfernen.
 
-Das Einzige, was jetzt noch zu tun ist, ist die Anpassung de Remotes des neuen
+Das Einzige, was jetzt noch zu tun ist, ist die Anpassung des Remotes des neuen
 Repos, da es die lokale Kopie des Jupyter-Tutorial-Repos als ihre
 Ursprungs-Remote haben werden.
 
