@@ -119,7 +119,7 @@ Einrichten
          *.ipynb filter=nbstrip_jq
 
 
-#. Wenn ihr anschließend mit ``git add`` euer Notebbok in den Bühnenbereich
+#. Wenn ihr anschließend mit ``git add`` euer Notebook in den Bühnenbereich
    übernehmt, wird der ``nbstrip_jq``-Filter angewendet.
 
    .. note::
@@ -135,7 +135,7 @@ Einrichten
 #. Und es gibt noch ein weiteres Problem: Wenn ein solches Notebook erneut
    ausgeführt wird, zeigt zwar ``git diff`` keine Änderungen an, ``git status``
    jedoch schon. Daher sollte in der ``~/.bashrc``-Datei folgendes eingetragen
-   um schnell das jeweilige Arbeitsverzeichnis reinigen zu können:
+   sein um schnell das jeweilige Arbeitsverzeichnis reinigen zu können:
 
    .. code-block:: bash
 
