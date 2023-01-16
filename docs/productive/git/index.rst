@@ -23,10 +23,10 @@ Performance
 -----------
 
 Git ist im Vergleich zu vielen anderen Versionsverwaltungssystemen sehr schnell
-bei Commits von Änderungen, Beim Verzweigen und Zusammenführen und dem Vergleich
+bei Commits von Änderungen, beim Verzweigen und Zusammenführen und dem Vergleich
 mit früheren Versionen. Dies ist auch erforderlich, wenn wir uns das
 `Linux-Kernel-Repository <https://github.com/torvalds/linux>`_ mit über einer
-Millionen Commits anschaut. Dabei orientiert sich Git nicht an Dateinamen,
+Millionen Commits anschauen. Dabei orientiert sich Git nicht an Dateinamen,
 sondern konzentriert sich auf inhaltliche Änderungen, sodass Dateien effizient umbenannt, aufgeteilt und neu angeordnet werden können. Dies erreicht Git durch
 die Speicherung von Deltas für die inhaltlichen Unterschiede, Metadaten der
 Dateien und Komprimierung.
