@@ -50,7 +50,7 @@ verwaltet solche pre-commit-Hooks und verteilt sie auf verschiedene Projekte und
 Entwickler.
 
 Git pre-commit Hooks werden meist verwendet um vor Code Reviews automatisch auf
-Probleme im Code hinzuweisen, :abbr:`z.B. (zum Beispiel)` um die Formattierung
+Probleme im Code hinzuweisen, :abbr:`z.B. (zum Beispiel)` um die Formatierung
 zu überprüfen oder Debug-Anweisungen zu finden. Pre-Commit vereinfacht das
 projektübergreifende Teilen vom Pre-Commit-Hooks. Dabei ist auch die Sprache, in
 der :abbr:`z.B. (zum Beispiel)` ein Linter geschrieben wurde, wegabstrahiert –
