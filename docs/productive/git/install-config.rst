@@ -416,7 +416,7 @@ Eine andere Möglichkeit besteht darin, in einem leeren Ordner eine
 ``excludesfile``
 ::::::::::::::::
 
-Ih könnt jedoch auch zentral für alle Git-Repositories Dateien ausschließen.
+Ihr könnt jedoch auch zentral für alle Git-Repositories Dateien ausschließen.
 Hierfür wird üblicherweise in der ``~/.gitconfig``-Datei folgendes angegeben:
 
 .. code-block:: ini
