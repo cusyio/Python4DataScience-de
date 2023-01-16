@@ -4,9 +4,9 @@ Code verwalten mit Git
 Um eine bessere Kontrolle über euren Quellcode zu erhalten, wird dieser
 üblicherweise mit `Git <https://git-scm.com/>`_ verwaltet. `Git
 <https://github.com/git/git>`__ ist ein ausgereiftes und sehr aktiv gepflegtes
-Open-Source-Projekt, das 2005 ursprügnlich von Linus Torvalds, dem Initiator des
+Open-Source-Projekt, das 2005 ursprünglich von Linus Torvalds, dem Initiator des
 Linux-Betriebssystem-Kernels, entwickelt wurde. Git lässt sich gut mit vielen
-Betriebssystemen und :abbr:`IDEs (Integrierte Entwciklungsumgebungen)`
+Betriebssystemen und :abbr:`IDEs (Integrierte Entwicklungsumgebungen)`
 kombinieren.
 
 Mit seiner verteilten Architektur ist Git ein Beispiel für ein :abbr:`DVCS
