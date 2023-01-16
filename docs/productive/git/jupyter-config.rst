@@ -15,7 +15,7 @@ Um nun systematisch vergleichbare Versionen von Notebooks in der
 Versionsverwaltung zu erhalten, können wir `jq
 <https://stedolan.github.io/jq/>`_ verwenden, einen leichtgewichtigen
 JSON-Prozessor. Zwar benötigt man einige Zeit um ``jq`` einzurichten da es
-eine eigene eine eigene Abfrage-/Filtersprache mitbringt, aber meist sind
+eine eigene Abfrage-/Filtersprache mitbringt, aber meist sind
 schon die Standardeinstellungen gut gewählt.
 
 Installation
