@@ -152,7 +152,7 @@ Git file system monitor (FSMonitor)
 
 ``git status`` und ``git add`` sind langsam, weil sie den gesamten Arbeitsbaum
 nach Änderungen durchsuchen müssen. Mit der Funktion ``git fsmonitor--daemon``,
-die ab Git-Version 2.36 zur Verfügung steht, wwerden diese Befehle beschleunigt,
+die ab Git-Version 2.36 zur Verfügung steht, werden diese Befehle beschleunigt,
 indem der Umfang der Suche reduziert wird:
 
 .. code-block::
