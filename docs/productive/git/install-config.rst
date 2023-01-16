@@ -450,7 +450,7 @@ Arbeitsverzeichnis verbleibt.
 
 .. note::
     Ihr könnt die Option ``--cached`` weglassen, wenn ihr die Datei sowohl aus dem Repository als
-    auch aus Ihrem lokalen Dateisystem löschen wollt.
+    auch aus eurem lokalen Dateisystem löschen wollt.
 
 Commit einer ignorierten Datei
 ::::::::::::::::::::::::::::::
