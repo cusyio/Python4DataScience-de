@@ -1,7 +1,7 @@
 Feature-Branch-Workflows
 ========================
 
-Die Grundidee hinter den Feature-Branch-Workflows ist, dass die Entwcklung
+Die Grundidee hinter den Feature-Branch-Workflows ist, dass die Entwicklung
 einzelner Features jeweils in einem dedizierten Branch und nicht im
 ``main``-Branch stattfinden sollte. Diese Kapselung erleichtert in einem
 Entwicklungsteam die Arbeit, da Veränderungen im ``main``-Branch nicht stören
