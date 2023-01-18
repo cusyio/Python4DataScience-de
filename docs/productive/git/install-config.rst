@@ -49,7 +49,7 @@ Konfiguration
 -------------
 
 ``$ git config --global user.name "[name]"``
-    legt den Namen fest, den mit euren Commit-Transaktionen verknüpft wird.
+    legt den Namen fest, der mit euren Commit-Transaktionen verknüpft wird.
 ``$ git config --global user.email "[email address]"``
     legt die E-Mail fest, die mit euren Commit-Transaktionen verknüpft wird.
 ``$ git config --global color.ui auto``
@@ -58,7 +58,7 @@ Konfiguration
 Die ``~/.gitconfig``-Datei
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Mit den oben angegebenen Befehle kann z.B. folgende Datei erstellt werden:
+Mit den oben angegebenen Befehlen kann z.B. folgende Datei erstellt werden:
 
 .. code-block:: ini
 
@@ -301,7 +301,7 @@ Dabei verwendet Git `Globbing <https://linux.die.net/man/7/glob>`_-Muster,
 | .. code-block:: console       | ``logs/instance.log``,        | Ihr könnt zwei Sternchen      |
 |                               | ``logs/instance/error.log``,  | voranstellen um Verzeichnisse |
 |     **/logs                   | ``prod/logs/instance.log``    | an einer beliebigen Stelle im |
-|                               |                               | zu finden.                    |
+|                               |                               | Verzeichnisbaum zu finden.    |
 +-------------------------------+-------------------------------+-------------------------------+ 
 | .. code-block:: console       | ``logs/instance.log``,        | Ihr könnt zwei Sternchen      |
 |                               | ``prod/logs/instance.log``    | voranstellen um Dateien anhand|
@@ -393,14 +393,14 @@ Git-commit leerer Ordner
 ::::::::::::::::::::::::
 
 In obigem Beispiel seht ihr, dass mit ``/logs/*`` keine Inhalte des
-``logs``-Verzeichnis mit Git versioniert werden soll, in der Folgezeile jedoch
+``logs``-Verzeichnis mit Git versioniert werden sollen, in der Folgezeile jedoch
 eine Ausnahme definiert wird: ``!logs/.gitkeep`` erlaubt, dass die Datei
 ``.gitkeep`` mit Git verwaltet werden darf. Damit wird dann auch das
 ``logs``-Verzeichnis in das Git-Repository übernommen. Diese Hilfskonstruktion
 ist erforderlich, da leere Ordner nicht mit Git verwaltet werden können.
 
 Eine andere Möglichkeit besteht darin, in einem leeren Ordner eine
-``.gitignore``-Datei mit folgendem Inahlt zu erstellen:
+``.gitignore``-Datei mit folgendem Inhalt zu erstellen:
 
 .. code-block:: ini
 
@@ -416,7 +416,7 @@ Eine andere Möglichkeit besteht darin, in einem leeren Ordner eine
 ``excludesfile``
 ::::::::::::::::
 
-Ih könnt jedoch auch zentral für alle Git-Repositories Dateien ausschließen.
+Ihr könnt jedoch auch zentral für alle Git-Repositories Dateien ausschließen.
 Hierfür wird üblicherweise in der ``~/.gitconfig``-Datei folgendes angegeben:
 
 .. code-block:: ini
@@ -435,7 +435,7 @@ Hierfür wird üblicherweise in der ``~/.gitconfig``-Datei folgendes angegeben:
 Ignorieren einer Datei aus dem Repository
 :::::::::::::::::::::::::::::::::::::::::
 
-Wenn ihr eine Datei ignorieren wollen, die in der Vergangenheit bereits dem Repository hinzugefügt
+Wenn ihr eine Datei ignorieren wollt, die in der Vergangenheit bereits dem Repository hinzugefügt
 wurde, müsst ihr die Datei aus eurem Repository löschen und dann eine
 ``.gitignore``-Regel für sie hinzufügen. Die Verwendung der Option ``--cached`` bei ``git rm``
 bedeutet, dass die Datei aus dem Repository gelöscht wird, aber als ignorierte Datei in eurem
@@ -450,7 +450,7 @@ Arbeitsverzeichnis verbleibt.
 
 .. note::
     Ihr könnt die Option ``--cached`` weglassen, wenn ihr die Datei sowohl aus dem Repository als
-    auch aus Ihrem lokalen Dateisystem löschen wollt.
+    auch aus eurem lokalen Dateisystem löschen wollt.
 
 Commit einer ignorierten Datei
 ::::::::::::::::::::::::::::::

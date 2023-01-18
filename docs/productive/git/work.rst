@@ -21,13 +21,13 @@ An einem Projekt mitarbeiten
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :samp:`$ git clone {PROJECT_URL}`
-    lädt ein Projekt mit allen Zweigen (engl.: branches) und der gesamten
+    lädt ein Projekt mit allen Zweigen (engl.: *branches*) und der gesamten
     Historie vom entfernten Repository herunter
 
     ``--depth``
         gibt die Anzahl der Commits an, die heruntergeladen werden sollen
 
-    ``-b``
+    ``-b`` (Langform: ``--branch``)
         gibt den Namen des entfernten Zweigs an, der heruntergeladen werden soll
 
 An einem Projekt arbeiten
@@ -89,7 +89,7 @@ An einem Projekt arbeiten
     und :samp:`FEATURE` ist.
 
     Jeder Commit in Git hat eine Commit-ID, die ihr erhalten könnt, wenn ihr
-    ``git log`` ausführt. Anschließnd könnt ihr diese Commit-ID auch an ``git
+    ``git log`` ausführt. Anschließend könnt ihr diese Commit-ID auch an ``git
     diff`` übergeben:
 
     .. code-block:: console

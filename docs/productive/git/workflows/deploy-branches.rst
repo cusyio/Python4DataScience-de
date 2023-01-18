@@ -17,7 +17,7 @@ Arbeitsaufwände bei :doc:`../rebase` und :doc:`../tag`.
 Angenommen, ihr verfügt über eine ``development``-, ``staging``- und
 ``production``-Umgebung, dann wird zunächst ein Merge- oder Pull-Request für
 eine Feature-Entwicklung beim ``staging``-Branch gestellt. Sofern die
-Qualitätsprüfung dort bestanden wurde, können die Änderungen und der Code
+Qualitätsprüfung dort bestanden wurde und der Code
 produktionsreif ist, können die Änderungen in den ``main``-Branch übernommen
 werden. Dieser Vorgang kann sich für neue Features mehrfach wiederholen, bis
 :abbr:`z.B. (zum Beispiel)` der Zeitpunkt für das *Going Life* dieser Änderungen

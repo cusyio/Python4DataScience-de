@@ -24,7 +24,7 @@ Der nächste Schritt besteht darin, die unerwünschten Historien aus jedem der
 beiden Repos herauszufiltern. Hierzu müssen wir uns jedoch nicht für jeden
 Commit den Verzeichnispfad anschauen, sondern können die
 ``filter-branch``-Option ``-subdirectory-filter`` verwenden um die Historie
-umzuschrieben und diejenigen Commits zu behalten, die tatsächlich den Inhalt
+umzuschreiben und diejenigen Commits zu behalten, die tatsächlich den Inhalt
 eines bestimmten Unterordners betreffen:
 
 .. note::
@@ -71,7 +71,7 @@ gelöscht werden. Sobald ihr alle Verweise gelöscht habt, könnt ihr eine
 Garbage-Collection für das Reflog starten, um diese alten Objekte endgültig zu
 entfernen.
 
-Das Einzige, was jetzt noch zu tun ist, ist die Anpassung de Remotes des neuen
+Das Einzige, was jetzt noch zu tun ist, ist die Anpassung des Remotes des neuen
 Repos, da es die lokale Kopie des Jupyter-Tutorial-Repos als ihre
 Ursprungs-Remote haben werden.
 

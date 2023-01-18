@@ -4,9 +4,9 @@ Code verwalten mit Git
 Um eine bessere Kontrolle über euren Quellcode zu erhalten, wird dieser
 üblicherweise mit `Git <https://git-scm.com/>`_ verwaltet. `Git
 <https://github.com/git/git>`__ ist ein ausgereiftes und sehr aktiv gepflegtes
-Open-Source-Projekt, das 2005 ursprügnlich von Linus Torvalds, dem Initiator des
+Open-Source-Projekt, das 2005 ursprünglich von Linus Torvalds, dem Initiator des
 Linux-Betriebssystem-Kernels, entwickelt wurde. Git lässt sich gut mit vielen
-Betriebssystemen und :abbr:`IDEs (Integrierte Entwciklungsumgebungen)`
+Betriebssystemen und :abbr:`IDEs (Integrierte Entwicklungsumgebungen)`
 kombinieren.
 
 Mit seiner verteilten Architektur ist Git ein Beispiel für ein :abbr:`DVCS
@@ -23,10 +23,10 @@ Performance
 -----------
 
 Git ist im Vergleich zu vielen anderen Versionsverwaltungssystemen sehr schnell
-bei Commits von Änderungen, Beim Verzweigen und Zusammenführen und dem Vergleich
+bei Commits von Änderungen, beim Verzweigen und Zusammenführen und dem Vergleich
 mit früheren Versionen. Dies ist auch erforderlich, wenn wir uns das
 `Linux-Kernel-Repository <https://github.com/torvalds/linux>`_ mit über einer
-Millionen Commits anschaut. Dabei orientiert sich Git nicht an Dateinamen,
+Millionen Commits anschauen. Dabei orientiert sich Git nicht an Dateinamen,
 sondern konzentriert sich auf inhaltliche Änderungen, sodass Dateien effizient umbenannt, aufgeteilt und neu angeordnet werden können. Dies erreicht Git durch
 die Speicherung von Deltas für die inhaltlichen Unterschiede, Metadaten der
 Dateien und Komprimierung.
@@ -57,7 +57,7 @@ geeignet.
 Kritikpunkte
 ------------
 
-Eine häufige Kritik an Git ist, dass es schwer erlenrnbar sei: entweder sind
+Eine häufige Kritik an Git ist, dass es schwer erlernbar sei: entweder sind
 große Teile der Git-Terminologie neu oder in anderen Systemen haben
 Bezeichnungen eine andere Bedeutung, wie :abbr:`z.B. (zum Beispiel)` ``revert``
 in SVN oder CVS. Zudem bietet Git viel Funktionalität, die zum Erlernen jedoch

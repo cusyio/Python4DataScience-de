@@ -1,7 +1,7 @@
 Feature-Branch-Workflows
 ========================
 
-Die Grundidee hinter den Feature-Branch-Workflows ist, dass die Entwcklung
+Die Grundidee hinter den Feature-Branch-Workflows ist, dass die Entwicklung
 einzelner Features jeweils in einem dedizierten Branch und nicht im
 ``main``-Branch stattfinden sollte. Diese Kapselung erleichtert in einem
 Entwicklungsteam die Arbeit, da Veränderungen im ``main``-Branch nicht stören
@@ -159,7 +159,7 @@ dem Zusammenführen mit einem Fast-Forward-Merge an die Spitze des ``main``-Bran
    Nach diesem Push könnt ihr als Reaktion auf Feedback den entfernten Zweig
    immer wieder aktualisieren.
 
-#. Nachdem die Überprüfung abgeschlossen solltet ihr , eine letzte Bereinigung
+#. Nachdem die Überprüfung abgeschlossen solltet ihr eine letzte Bereinigung
    der Commit-Historie des Feature-Zweiges vornehmen, um unnötige Commits zu
    entfernen, die keine relevanten Informationen liefern.
 
@@ -180,7 +180,7 @@ Die Vorteile von Feature-Branches-Workflows sind vor allem
 
 * Features werden in einzelnen Branches isoliert, sodass jedes Teammitglied
   unabhängig arbeiten kann.
-* Gleichzeitig wird die Zusammenarbeit im Team einger über Merge- oder
+* Gleichzeitig wird die Zusammenarbeit im Team enger über Merge- oder
   Pull-Requests.
 * Das zu verwaltende Code-Inventar bleibt relativ klein da die Feature-Branches
   üblicherweise schnell in den ``main`` übernommen werden können.

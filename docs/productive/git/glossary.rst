@@ -30,7 +30,7 @@ Git-Glossar
         Kopie eines Repository auf GitLab, die einem anderen Nutzer gehört
 
     Merge request
-        Ort zum Vergleichen und Diskuttieren der in einem Branch eingeführten
+        Ort zum Vergleichen und Diskutieren der in einem Branch eingeführten
         Änderungen mit Bewertungen, Kommentaren, Tests etc.; siehe auch
         `Merge requests
         <https://docs.gitlab.com/ee/user/project/merge_requests/>`_.

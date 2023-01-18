@@ -142,7 +142,7 @@ Git Best Practices
   * Bereinigt die Remote Tracking Branches mit ``git remote update --prune``.
   * Überprüft vergessene Arbeiten mit ``git stash list``.
 
-* Überprüft eure Repositories regelmäßig auf unerwänschte Dateien!
+* Überprüft eure Repositories regelmäßig auf unerwünschte Dateien!
 
   Mit `Gitleaks <https://github.com/zricethezav/gitleaks>`_ könnt ihr eure
   Repositories regelmäßig auf ungewollt gespeicherte Zugangsdaten überprüfen.

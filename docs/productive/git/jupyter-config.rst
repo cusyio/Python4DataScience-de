@@ -7,7 +7,7 @@ Base-64-codierte Blobs für Bilder und andere Binärdaten sein, die üblicherwei
 nicht in eine Versionsverwaltung übernommen werden sollen. Diese können zwar
 manuell entfernt werden mit :menuselection:`Cell --> All Output --> Clear`, ihr
 müsst diese Schritte jedoch vor jedem ``git add`` ausführen, und es löst auch
-eine zweite Ursache für das Rauschen in ``git diff`` nicht, nämlich dasjeinige
+eine zweite Ursache für das Rauschen in ``git diff`` nicht, nämlich dasjenige
 in den `Metadaten
 <https://nbformat.readthedocs.io/en/latest/format_description.html#metadata>`_.
 
@@ -15,7 +15,7 @@ Um nun systematisch vergleichbare Versionen von Notebooks in der
 Versionsverwaltung zu erhalten, können wir `jq
 <https://stedolan.github.io/jq/>`_ verwenden, einen leichtgewichtigen
 JSON-Prozessor. Zwar benötigt man einige Zeit um ``jq`` einzurichten da es
-eine eigene eine eigene Abfrage-/Filtersprache mitbringt, aber meist sind
+eine eigene Abfrage-/Filtersprache mitbringt, aber meist sind
 schon die Standardeinstellungen gut gewählt.
 
 Installation
@@ -119,7 +119,7 @@ Einrichten
          *.ipynb filter=nbstrip_jq
 
 
-#. Wenn ihr anschließend mit ``git add`` euer Notebbok in den Bühnenbereich
+#. Wenn ihr anschließend mit ``git add`` euer Notebook in den Bühnenbereich
    übernehmt, wird der ``nbstrip_jq``-Filter angewendet.
 
    .. note::
@@ -135,7 +135,7 @@ Einrichten
 #. Und es gibt noch ein weiteres Problem: Wenn ein solches Notebook erneut
    ausgeführt wird, zeigt zwar ``git diff`` keine Änderungen an, ``git status``
    jedoch schon. Daher sollte in der ``~/.bashrc``-Datei folgendes eingetragen
-   um schnell das jeweilige Arbeitsverzeichnis reinigen zu können:
+   sein um schnell das jeweilige Arbeitsverzeichnis reinigen zu können:
 
    .. code-block:: bash
 
