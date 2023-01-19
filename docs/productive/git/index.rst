@@ -101,6 +101,7 @@ Zum Weiterlesen
     cherry-pick
     revert
     best-practices
+    vs-code
     git-big-picture
     advanced
     glossary
