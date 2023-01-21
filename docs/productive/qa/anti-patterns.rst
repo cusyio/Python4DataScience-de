@@ -112,7 +112,7 @@ Query-Tools für komplexe Dicts
 
 `JMESPath <https://jmespath.org/>`_, `glom <https://github.com/mahmoud/glom>`_,
 `asq <https://asq.readthedocs.io/en/latest/>`_ und `flupy
-<https://flupy.readthedocs.io/en/latest/>`_ können die Abfrage von Dicsts in
+<https://flupy.readthedocs.io/en/latest/>`_ können die Abfrage von Dicts in
 Python deutlich vereinfachen.
 
 Code reduzieren mit ``dataclasses`` und ``attrs``
