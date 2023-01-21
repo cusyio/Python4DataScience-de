@@ -8,7 +8,7 @@ erzwingen. Obwohl Annotationen für Pytype optional sind, werden sie geprüft un
 angewendet, sofern sie vorhanden sind. Die von Pytype erzeugten Typ-Annotationen
 werden in eigenständigen ``.pyi``-Dateien gespeichert, die mit `merge-pyi
 <https://github.com/google/pytype/tree/master/pytype/tools/merge_pyi>`_ wieder
-in den Python eingebunden werden können. Schließlich markiert es häufige Fehler
+in den Python-Code eingebunden werden können. Schließlich markiert es häufige Fehler
 wie falsch geschriebene Attributnamen oder Funktionsaufrufe und vieles mehr,
 auch über Dateigrenzen hinweg.
 
