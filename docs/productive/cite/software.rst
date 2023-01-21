@@ -185,9 +185,9 @@ Ihr solltet einen `Persistent Identifier (PID)
 langfristige Verfügbarkeit eurer Software sicherzustellen. Sowohl das `Zenodo
 <https://zenodo.org/>`_- als auch das `figshare
 <https://figshare.com/>`_-Repository akzeptieren Quellcode einschließlich
-Binärdateien und stellen DOIs hierfür breit. Und auch mit `CiteAs
-<https://citeas.org/>`_ lassen sich Zitierinformationen für Software
-abrufen.
+Binärdateien und stellen DOIs hierfür breit. Gleiches gilt für `CiteAs
+<https://citeas.org/>`_, mit dem sich Zitierinformationen für Software
+abrufen lassen.
 
 .. seealso::
    * `Should I cite? <https://mr-c.github.io/shouldacite/index.html>`_
