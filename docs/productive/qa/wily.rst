@@ -99,8 +99,8 @@ der verfügbaren Operatoren:
     # max revisions to archive, defaults to 50
     max_revisions = 20
 
-Auch Python code in ``.ipynb``-Dateien wird üblicherweise automatisch erkannt.
-Ihr könnt dies jedoch ggf. unterbinden für ein Jupyter Notebooks mit
+Auch Python-Code in ``.ipynb``-Dateien wird üblicherweise automatisch erkannt.
+Ihr könnt dies jedoch ggf. unterbinden für ein Jupyter Notebook mit
 
 .. code-block:: python
 

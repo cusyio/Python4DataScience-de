@@ -104,7 +104,7 @@ ersetzt werden durch:
    Python-Standardbibliothek sind häufig ebenfalls gut geeignet, um die
    Verschachtelungstiefe zu reduzieren indem Funktionen zum Erstellen von
    Iteratoren aus Datenstrukturen erstellt werden. Zudem könnt ihr mit
-   itertools auch Filtern, z.B. mit `filterfalse
+   itertools auch filtern, z.B. mit `filterfalse
    <https://docs.python.org/3/library/itertools.html#itertools.filterfalse>`_.
 
 Query-Tools für komplexe Dicts
@@ -112,7 +112,7 @@ Query-Tools für komplexe Dicts
 
 `JMESPath <https://jmespath.org/>`_, `glom <https://github.com/mahmoud/glom>`_,
 `asq <https://asq.readthedocs.io/en/latest/>`_ und `flupy
-<https://flupy.readthedocs.io/en/latest/>`_ können die Abfrage von Dicsts in
+<https://flupy.readthedocs.io/en/latest/>`_ können die Abfrage von Dicts in
 Python deutlich vereinfachen.
 
 Code reduzieren mit ``dataclasses`` und ``attrs``

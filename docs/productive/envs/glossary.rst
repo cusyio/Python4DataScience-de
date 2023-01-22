@@ -74,8 +74,8 @@ Glossar
        Anwendungsfreundliche, auf `TOML <https://github.com/toml-lang/toml>`_
        basierende Alternative zur ``requirements.txt``-Datei von pip.
 
-       Dabei kann unterschieden werden zwischen zwei verschiedenen Gruppen von
-       Paketen: ``[packages]`` und ``[dev-packages]``.
+       Dabei wird zwischen zwei verschiedenen Gruppen von Paketen unterschieden:
+       ``[packages]`` und ``[dev-packages]``.
 
        `GitHub <https://github.com/pypa/pipfile>`__
 

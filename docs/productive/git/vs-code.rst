@@ -46,7 +46,7 @@ andernfalls werdet ihr aufgefordert, Änderungen auszuwählen. :abbr:`Ggf.
     ihr diesen Commit zurücknehmen mit :menuselection:`Git: Undo Last Commit` in
     der :menuselection:`Command Palette` (:kbd:`⇧ ⌘ P`).
 
-Das Sorce-Control-Icon in der Aktivitätsleiste auf der linken Seite zeigt euch
+Das Source-Control-Icon in der Aktivitätsleiste auf der linken Seite zeigt euch
 an, wieviele Änderungen ihr in eurem Repository gemacht habt. Wenn ihr das Icon
 auswählt, erhaltet ihr einen detaillierteren Überblick über eure Änderungen. Bei
 der Auswahl einer einzelnen Datei werden euch dann die zeilenweisen
