@@ -31,10 +31,10 @@ Als nächstes zeigen wir euch, wie ihr die Daten über ein :doc:`apis/index`
 bereitstellt.
 
 Mit :doc:`DVC <../productive/dvc/index>` stellen wir euch ein Werkzeug vor, das
-euch Datenprovenienz erlaubt. Damit vollzieht ihr die Herkunft und den 
+euch Datenprovenienz erlaubt. Damit vollzieht ihr die Herkunft und den
 Entstehungsweg von Daten nach.
 
-Im Anschluß lernt ihr im nächsten Kapitel noch einige Good Practices und 
+Im Anschluß lernt ihr im nächsten Kapitel noch einige Good Practices und
 hilfreiche Python-Pakete zum :doc:`Bereinigen und Validieren von Daten
 <../clean-prep/index>` kennen.
 

@@ -35,7 +35,7 @@ die erste Stufe die Daten in Trainings- und Testdaten aufteilen:
 
     Wenn zum Reproduzieren der Ergebnisse beim nächsten Mal ``dvc repo``
     aufgerufen wird, überprüft DVC diese Abhängigkeiten und entscheidet, ob
-    diese auf dem aktuellen Stand sind oder erneut ausgeführt werden müssen, 
+    diese auf dem aktuellen Stand sind oder erneut ausgeführt werden müssen,
     um aktuellere Ergebnisse zu erhalten.
 
 ``-o``

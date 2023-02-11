@@ -2,8 +2,8 @@ Software zitieren
 =================
 
 James Howison und Julia Bullard führten in ihrem 2016 veröffentlichten
-Artikel `Software in the scientific literature 
-<https://doi.org/10.1002/asi.23538>`_ folgende Beispiele in absteigender 
+Artikel `Software in the scientific literature
+<https://doi.org/10.1002/asi.23538>`_ folgende Beispiele in absteigender
 Reputation auf:
 
 #. zitieren von Veröffentlichungen, die die jeweilige Software beschreiben

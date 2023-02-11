@@ -33,7 +33,7 @@ Diese ``.dvc``-Dateien erlauben jedoch praktische Tools zur Manipulation und
 Visualisierung von DAGs, siehe z.B. die :doc:`Visualisierung der DAGs
 <pipeline>`.
 
-Schließlich lassen sich mit :ref:`dvc remote <dvc-remote>` auch externe 
+Schließlich lassen sich mit :ref:`dvc remote <dvc-remote>` auch externe
 Abhängigkeiten angeben.
 
 .. seealso::

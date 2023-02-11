@@ -123,9 +123,9 @@ Dort befinden sich die beiden Dateien ``spack.yaml`` und ``spack.lock``.
         specs: [python@3.11.0, …]
 
 ``spack.lock``
-    Mit ``spack install`` werden die Specs konkretisiert, in ``spack.lock`` 
-    geschrieben und  installiert. Im Gegensatz zu ``spack.yaml`` ist 
-    ``spack.lock`` im ``json``-Format geschrieben und enthält die notwendigen 
+    Mit ``spack install`` werden die Specs konkretisiert, in ``spack.lock``
+    geschrieben und  installiert. Im Gegensatz zu ``spack.yaml`` ist
+    ``spack.lock`` im ``json``-Format geschrieben und enthält die notwendigen
     Informationen, um reproduzierbare Builds der Umgebung erstellen zu können:
 
     .. code-block:: javascript
@@ -166,7 +166,7 @@ Dort befinden sich die beiden Dateien ``spack.yaml`` und ``spack.lock``.
 Installation zusätzlicher Pakete
 --------------------------------
 
-Zusätzliche Pakete können in der virtuellen Umgebung mit ``spack add`` und 
+Zusätzliche Pakete können in der virtuellen Umgebung mit ``spack add`` und
 ``spack install`` installiert werden. Für `Matplotlib <https://matplotlib.org/>`_
 sieht dies z.B. folgendermaßen aus:
 
@@ -188,7 +188,7 @@ sieht dies z.B. folgendermaßen aus:
    Falls von diesem Spack-Environment bereits ein :doc:`Pipenv-Environment
    <../pipenv/env>` abgeleitet wurde, muss dieses neu gebaut werden um das
    zusätzliche Spack-Paket zu erhalten:
-   
+
    .. code-block:: console
 
     $ pipenv install --python=/srv/jupyter/spack/var/spack/environments/python-311/.spack-env/view/bin/python
@@ -248,7 +248,7 @@ Umgebung anschauen:
 
 .. code-block:: console
 
-    $ spack config get 
+    $ spack config get
     # This is a Spack Environment file.
     #
     # It describes a set of packages to be installed, along with

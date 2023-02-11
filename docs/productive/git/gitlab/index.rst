@@ -10,7 +10,7 @@ Snippets. Die GitLab Community Edition (CE) wird als Open-Source-Software unter
 der MIT-Lizenz entwickelt und kann On-Premises, also in den eigenen
 Räumlichkeiten, installiert werden.
 
-Die GitLab CI Tools ermöglichen automatisierte Builds und Deployments ohne dass 
+Die GitLab CI Tools ermöglichen automatisierte Builds und Deployments ohne dass
 externe Integrationen erforderlich wären. Wenn bereits eine PaaS-Lösung wie
 `Kubernetes <https://de.wikipedia.org/wiki/Kubernetes>`_ verwendet wird, können
 mit GitLab-CI/CD Apps automatisch bereitgestellt, getestet und skaliert werden.

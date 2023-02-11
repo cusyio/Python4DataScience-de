@@ -228,7 +228,7 @@ Spack bietet eine ``spec``-Syntax zum Beschreiben benutzerdefinierter DAGs:
         depends_on("mpc", when="@4.5:")
 
 * DAGs sind nicht immer vollständig, bevor sie konkretisiert werden.
-  Konkretisierungen füllen die fehlenden Konfigurationsdetails aus, wenn ihr 
+  Konkretisierungen füllen die fehlenden Konfigurationsdetails aus, wenn ihr
   sie nicht explizit benennt:
 
   #. Normalisierung

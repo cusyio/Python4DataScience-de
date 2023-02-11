@@ -1,7 +1,7 @@
 ================
 Jupyter-Tutorial
 ================
- 
+
 `Jupyter-Notebooks <https://jupyter-notebook.readthedocs.io/>`_ erfreuen sich
 in den Datenwissenschaften wachsender Beliebtheit und wurden zum
 De-facto-Standard für schnelles Prototyping und explorative Analysen. Sie

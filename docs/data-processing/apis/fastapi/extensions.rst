@@ -127,7 +127,7 @@ ORMs
 `ORM <https://github.com/encode/orm>`_
     async ORM, der auf SQLAlchemy Core, `Databases
     <https://github.com/encode/databases>`_ und `TypeSystem
-    <https://github.com/encode/typesystem>`_ aufbaut  
+    <https://github.com/encode/typesystem>`_ aufbaut
 
     .. image:: https://raster.shields.io/github/stars/encode/orm
        :alt: Stars

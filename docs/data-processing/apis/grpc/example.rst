@@ -17,7 +17,7 @@ Reihe von Name-Wert-Paaren enthält, die *fields* genannt werden.
 
 .. literalinclude:: accounts.proto
    :language: proto
-   :lines: 1-6
+   :lines: 1-7
 
 .. warning::
     Beachtet bitte, dass ihr üblicherweise **nicht** einfach ``uint32`` für
@@ -44,7 +44,7 @@ angegeben werden:
 
 .. literalinclude:: accounts.proto
    :language: proto
-   :lines: 8-27
+   :lines: 8-
 
 Generieren des gRPC-Codes
 -------------------------

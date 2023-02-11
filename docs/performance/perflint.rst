@@ -34,7 +34,7 @@ R8203: ``loop-try-except-usage``
 
 W8204: ``memoryview-over-bytes``
     Das Slicing von Byte-Objekten in Schleifen ist ineffizient, da eine Kopie
-    der Daten erstellt wird. Verwendet stattdessen ``memoryview()``. 
+    der Daten erstellt wird. Verwendet stattdessen ``memoryview()``.
 
     .. seealso::
         * `Zero-copy interactions

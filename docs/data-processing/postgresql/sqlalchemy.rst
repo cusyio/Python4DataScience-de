@@ -138,7 +138,7 @@ Erweiterungen
 -------------
 
 `SQLAlchemy-Continuum <https://sqlalchemy-continuum.readthedocs.io/en/latest/>`_
-    Versionierungs- und Revisionserweiterung für SQLAlchemy 
+    Versionierungs- und Revisionserweiterung für SQLAlchemy
 `SQLAlchemy-Utc <https://github.com/spoqa/sqlalchemy-utc>`_
     SQLAlchemy-Typ zum Speichern von `datetime.datetime`-Werten
 `SQLAlchemy-Utils <https://sqlalchemy-utils.readthedocs.io/en/latest/>`_

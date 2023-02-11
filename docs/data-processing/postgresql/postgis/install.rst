@@ -42,7 +42,7 @@ Anschließend könnt ihr PostGIS aktivieren.
    .. code-block:: console
 
         postgis_db=# SELECT PostGIS_version();
-                postgis_version            
+                postgis_version
     ---------------------------------------
      3.2 USE_GEOS=1 USE_PROJ=1 USE_STATS=1
     (1 row)

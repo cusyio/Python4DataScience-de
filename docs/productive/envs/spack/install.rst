@@ -193,7 +193,7 @@ in den Schlüsselbund importiert.
 Schlüsseln vertrauen
 ~~~~~~~~~~~~~~~~~~~~
 
-Zusätzliche Schlüssel können mit ``spack gpg trust <keyfile>`` dem 
+Zusätzliche Schlüssel können mit ``spack gpg trust <keyfile>`` dem
 Schlüsselring hinzugefügt werden. Sobald ein Schlüssel vertrauenswürdig ist,
 können Pakete, die vom Besitzer dieses Schlüssels signiert wurden, installiert
 werden.

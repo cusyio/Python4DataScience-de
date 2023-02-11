@@ -3,7 +3,7 @@ Visual Studio Code
 
 `Visual Studio Code <https://code.visualstudio.com/>`_ kann eine bereits
 vorhandene :doc:`Git-Installation <install-config>` nutzen um die entsprechenden
-Funktionalitäten zur Verfügung stellen zu können. 
+Funktionalitäten zur Verfügung stellen zu können.
 
 Klonen
 ------
@@ -51,7 +51,7 @@ an, wieviele Änderungen ihr in eurem Repository gemacht habt. Wenn ihr das Icon
 auswählt, erhaltet ihr einen detaillierteren Überblick über eure Änderungen. Bei
 der Auswahl einer einzelnen Datei werden euch dann die zeilenweisen
 Textänderungen angezeigt. Ihr könnt auch den Editor auf der rechten Seite nutzen
-um weitere Änderungen vorzunehmen. 
+um weitere Änderungen vorzunehmen.
 
 Zweige und Tags
 ---------------

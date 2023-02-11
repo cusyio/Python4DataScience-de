@@ -18,7 +18,7 @@ Continuous Integration
 
     Wenn die Überprüfungen wie erwartet funktionieren, könnt ihr einen
     :doc:`Merge Request <merge-requests>` stellen; schlagen die Überprüfungen
-    fehl, könnt ihr die Änderungen :abbr:`ggf. (gegebenenfalls)` zurücknehmen. 
+    fehl, könnt ihr die Änderungen :abbr:`ggf. (gegebenenfalls)` zurücknehmen.
 
     .. seealso::
        * `Kontinuierliche Integration

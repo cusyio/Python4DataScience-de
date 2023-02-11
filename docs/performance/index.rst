@@ -138,7 +138,7 @@ Schleifen zu vermeiden.
 Mit NumPy können wir auf einige Schleifen verzichten:
 
 .. literalinclude:: np_kmeans.py
-    :lines: 1-7
+    :lines: 1-8
 
 Die Vorteile von NumPy sind, dass der Python-Overhead nur je Array und nicht je
 Array-Element auftritt. Da NumPy eine spezifische Sprache für Array-Operationen
@@ -156,7 +156,7 @@ Spezielle Datenstrukturen
     So könnt ihr auch die Schleife in der Methode ``compute_centers`` umgehen:
 
     .. literalinclude:: pd_kmeans.py
-        :lines: 2-3, 11-14
+        :lines: 2-4, 11-15
 
 `scipy.spatial <https://docs.scipy.org/doc/scipy/reference/spatial.html>`_
     für räumliche Abfragen wie Entfernungen, nächstgelegene Nachbarn,  k-Means
@@ -166,7 +166,7 @@ Spezielle Datenstrukturen
     werden:
 
     .. literalinclude:: sp_kmeans.py
-        :lines: 3-8
+        :lines: 4-10
 
 `scipy.sparse <https://docs.scipy.org/doc/scipy/reference/sparse.html>`_
     `dünnbesetzte Matrizen <https://de.wikipedia.org/wiki/Dünnbesetzte_Matrix>`_
@@ -222,7 +222,7 @@ Bereitstellen des Codes umständlicher.
 
 Unser Beispiel könnte dann so aussehen:
 
-.. literalinclude:: cy_kmeans.py
+.. literalinclude:: cy_kmeans.pyx
     :lines: 1-28
 
 .. seealso::
@@ -237,7 +237,7 @@ wissenschaftlichen Python- und NumPy-Code in schnellen Maschinencode
 übersetzt, :abbr:`z.B. (zum Beispiel)`:
 
 .. literalinclude:: nb_kmeans.py
-    :lines: 1-23
+    :lines: 1-25
 
 Numba benötigt allerdings `LLVM <https://de.wikipedia.org/wiki/LLVM>`_ und
 einige Python-Konstrukte werden nicht unterstützt.
@@ -277,7 +277,7 @@ Schwerpunkte:
 Unser Beispiel könnte mit Dask so aussehen:
 
 .. literalinclude:: ds_kmeans.py
-    :lines: 1-28
+    :lines: 1-32
 
 .. toctree::
     :hidden:

@@ -2,7 +2,7 @@ Repos aufteilen
 ===============
 
 Hier beschreibe ich, wie ihr ein Git-Repository aufteilen könnt, ohne die
-jeweils zugehörige Historie zu verlieren. 
+jeweils zugehörige Historie zu verlieren.
 
 Szenario und Ziele
 ------------------
@@ -42,7 +42,7 @@ Historie des gewünschten Ordners extrahiert:
     Ref 'refs/heads/main' was rewritten
 
 .. warning::
-   ``git-filter-branch`` kann die Historie jedoch auch fehlerhaft umschreiben. 
+   ``git-filter-branch`` kann die Historie jedoch auch fehlerhaft umschreiben.
    Stattdessen sollte besser `git filter-repo
    <https://github.com/newren/git-filter-repo/>`_ verwendet werden, :abbr:`s.a.
    (siehe auch)` `filter-branch <https://git-scm.com/docs/git-filter-branch>`_.

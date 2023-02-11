@@ -94,7 +94,7 @@ An einem Projekt arbeiten
 
     .. code-block:: console
 
-        $ git log --pretty=oneline 
+        $ git log --pretty=oneline
         af1a395a08221ffa83b46f562b6823cf044a108c (HEAD -> main, origin/main, origin/HEAD) :memo: Add some git diff examples
         d650de52306b63b93e92bba4f15be95eddfea425 :memo: Add „Debug .gitignore files“ to git docs
         …

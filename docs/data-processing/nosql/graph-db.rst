@@ -43,7 +43,7 @@ lassen in
 
   Der Graph wird nicht nach einem bestimmten Schema durchlaufen, sondern
   der nächste Knoten wird zufällig ausgewählt. Dadurch kann vor allem bei
-  großen Graphen wesentlich schneller ein Suchergebnis präsentiert werden, 
+  großen Graphen wesentlich schneller ein Suchergebnis präsentiert werden,
   dieses ist jedoch nicht immer das beste.
 
 Datenbanksysteme

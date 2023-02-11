@@ -64,7 +64,7 @@ W3C-PROV
 
 Die `PROV-Dokumentenfamilie der W3C-Arbeitsgruppe
 <https://www.w3.org/TR/prov-overview/>`_ definiert verschiedene Aspekte, die
-erforderlich sind, um Herkunftsinformationen interoperabel austauschen zu 
+erforderlich sind, um Herkunftsinformationen interoperabel austauschen zu
 können.
 
 

@@ -492,7 +492,7 @@ neuen Versionsnummer getaggt werden.
 
 .. code-block:: console
 
-    $ git switch main 
+    $ git switch main
     Zu Zweig »main« gewechselt
     …
     $ git merge hotfix/37-some-bug
