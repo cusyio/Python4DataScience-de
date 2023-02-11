@@ -158,8 +158,8 @@ lassen mit
     Check Yaml...............................................................Passed
     Check for added large files..............................................Passed
 
-Eine vollständige Liste der Konfigurationsoptionen erhaltet ihr in `Adding pre-commit
-plugins to your project
+Eine vollständige Liste der Konfigurationsoptionen erhaltet ihr in `Adding
+pre-commit plugins to your project
 <https://pre-commit.com/#adding-pre-commit-plugins-to-your-project>`_.
 
 Ihr könnt auch eigene Hooks schreiben, siehe `Creating new hooks
