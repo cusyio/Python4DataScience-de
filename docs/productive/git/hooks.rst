@@ -185,6 +185,9 @@ Skripte in unserem Projekt installiert:
     $ pre-commit install
     pre-commit installed at .git/hooks/pre-commit
 
+Wollt ihr die Git-Hook-Skripte wieder deinstallieren, könnt ihr dies mit
+``pre-commit uninstall``.
+
 Verwenden für CI
 ----------------
 
