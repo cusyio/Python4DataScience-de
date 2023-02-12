@@ -43,8 +43,9 @@ pre-commit-Skripte
     ``text-unicode-replacement-char``
         verhindert Dateien, die UTF-8-Unicode-Replacement-Character enthalten
 
-Viele Linter und Formatierer werden in eigenen Repositories bereitgestellt,
-:abbr:`u.a. (unter anderem)`:
+Linter und Formatierer
+    Sie werden in eigenen Repositories bereitgestellt, :abbr:`u.a. (unter
+    anderem)`:
 
     `autopep8 <https://github.com/pre-commit/mirrors-autopep8>`_
         stellt `autopep8 <https://github.com/hhatto/autopep8>`__ für das
