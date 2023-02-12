@@ -5,7 +5,7 @@ Bevor ihr mit dem Refactoring beginnt, solltet ihr die Komplexität eures Codes
 messen. Im Folgenden möchte ich euch einige Werkzeuge und Konzepte vorstellen,
 die die Komplexität eures Codes überprüfen und die Wartung und Pflege von
 Python-Paketen und anderem Quellcode vereinfachen. Häufig lässt sich zusammen
-mit dem :ref:`pre-commit-framework` die Code-Qualität auch automatisiert
+mit dem :doc:`../git/hooks/pre-commit` die Code-Qualität auch automatisiert
 überprüfen und verbessern.
 
 .. seealso::

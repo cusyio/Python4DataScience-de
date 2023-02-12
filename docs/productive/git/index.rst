@@ -88,7 +88,7 @@ Zum Weiterlesen
     working-areas
     work
     install-config
-    hooks
+    hooks/index
     jupyter-config
     tools
     log

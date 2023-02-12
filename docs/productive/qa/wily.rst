@@ -170,21 +170,21 @@ Verwendung
 … als pre-commit Hook
 ~~~~~~~~~~~~~~~~~~~~~
 
-Ihr könnt Wily auch als :ref:`pre-commit-framework` verwenden. Hierzu müsstet
+Ihr könnt Wily auch als :doc:`../git/hooks/pre-commit` verwenden. Hierzu müsstet
 ihr in der ``pre-commit-config.yaml``-Konfigurationsdatei :abbr:`z.B. (zum
 Beispiel)` folgendes hinzufügen:
 
 .. code-block:: yaml
 
     repos:
-    -   repo: local
-        hooks:
-        -   id: wily
-            name: wily
-            entry: wily diff
-            verbose: true
-            language: python
-            additional_dependencies: [wily]
+    - repo: local
+      hooks:
+      - id: wily
+        name: wily
+        entry: wily diff
+        verbose: true
+        language: python
+        additional_dependencies: [wily]
 
 … in einer CI/CD-Pipeline
 ~~~~~~~~~~~~~~~~~~~~~~~~~
