@@ -113,7 +113,7 @@ Python Code Quality Authority
     ``nbqa-isort``
         führt ``isort`` auf einem Jupyter-Notebook aus
     ``nbqa-mypy``
-        führt ``mypy``` auf einem Jupyter-Notebook aus
+        führt ``mypy`` auf einem Jupyter-Notebook aus
     ``nbqa-pylint``
         führt ``pylint`` auf einem Jupyter-Notebook aus
     ``nbqa-pyupgrade``
