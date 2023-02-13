@@ -68,7 +68,7 @@ werden:
         Die lokale Revision, die an die entfernte Revision gepusht wurde
     ``$PRE_COMMIT_REMOTE_NAME``
         Die lokale Revision, die an die entfernte Revision gepusht wurde,
-        :abbr:`z.B. (zum Beispiel`) :samp:`origin`
+        :abbr:`z.B. (zum Beispiel)` :samp:`origin`
     ``$PRE_COMMIT_REMOTE_URL``
         Die URL des entfernten Repository, zu dem gepusht wurde,
         :abbr:`z.B. (zum Beispiel)`
