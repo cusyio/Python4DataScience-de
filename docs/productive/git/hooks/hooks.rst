@@ -58,7 +58,7 @@ Linter und Formatierer
     `csslint <https://github.com/pre-commit/mirrors-csslint>`_
         stellt `csslint <https://github.com/CSSLint/csslint>`__ bereit
     `scss-lint <https://github.com/pre-commit/mirrors-scss-lint>`_
-        stellt `scss-lint <https://github.com/sds/scss-lint>` bereit
+        stellt `scss-lint <https://github.com/sds/scss-lint>`__ bereit
     `eslint <https://github.com/pre-commit/mirrors-eslint>`_
         stellt `eslint <https://github.com/eslint/eslint>`__ bereit
     `fixmyjs <https://github.com/pre-commit/mirrors-fixmyjs>`_
