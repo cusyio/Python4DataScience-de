@@ -38,13 +38,19 @@ werden:
 
       $ pipenv install pre-commit
 
+.. tab:: Debian/Ubuntu
+
+   .. code-block:: console
+
+      $ apt install pre-commit
+
 .. tab:: macOS
 
    .. code-block:: console
 
       $ brew install pre-commit
 
-.. tab:: Python
+.. tab:: Andere
 
    .. code-block:: console
 
