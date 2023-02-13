@@ -106,13 +106,13 @@ werden:
     Der ``prepare-commit-msg``-Hook wird mit ``stages: [prepare-commit-msg]``
     konfiguriert, wobei der Name einer Datei übergeben wird, die die anfängliche
     Commit-Nachricht enthält, :abbr:`z.B. (zum Beispiel)` von :samp:`git commit
-    -m "{COMMIT-MASSAGE}"` um daraus eine dynamische Vorlage zu erstellen, die
+    -m "{COMMIT-MESSAGE}"` um daraus eine dynamische Vorlage zu erstellen, die
     im Editor angezeigt wird. Schließlich sollte der Hook noch überprüfen, ob
     kein Editor gestartet wird mit ``GIT_EDITOR=:``.
 
 ``post-checkout``
     Der `post-checkout <https://git-scm.com/docs/githooks#_post_checkout>`_-Hook
-    wird aufgerufen, wenn ``gitr checkout`` oder ``git switch`` ausgeführt wird.
+    wird aufgerufen, wenn ``git checkout`` oder ``git switch`` ausgeführt wird.
 
     Der ``post-checkout``-Hook kann :abbr:`z.B. (zum Beispiel)` verwendet
     werden für
