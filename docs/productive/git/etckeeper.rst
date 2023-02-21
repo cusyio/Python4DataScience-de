@@ -27,7 +27,7 @@ Konfiguration
 
 #. Die Konfiguration von etckeeper erfolgt in der ``etckeeper.conf``-Datei:
 
-   .. code-block:: console
+   .. code-block:: bash
 
     $ sudo vi /etc/etckeeper/etckeeper.conf
     # The VCS to use.
@@ -39,7 +39,7 @@ Konfiguration
 
 #. Außerdem sollten die folgenden beiden automatischen Commits vermieden werden:
 
-   .. code-block:: console
+   .. code-block:: bash
 
     # Uncomment to avoid etckeeper committing existing changes
     # to /etc automatically once per day.
@@ -78,7 +78,7 @@ eingerichtet. Dieser protokolliert in der Datei :file:`/etc/.etckeeper` die
 ``chmod``- und ``chgrp``-Angaben für alle Dateien die nicht den Standardrechten
 entsprechen:
 
-.. code-block::
+.. code-block:: bash
 
     maybe chmod 0755 '.'
     maybe chmod 0700 './.etckeeper'
