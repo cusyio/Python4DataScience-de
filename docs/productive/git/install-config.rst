@@ -45,6 +45,8 @@ Für iX-Distributionen sollte Git im Standard-Repository vorhanden sein.
    .. seealso::
       * `git for windows <https://gitforwindows.org/>`_
 
+.. _git-config:
+
 Konfiguration
 -------------
 
