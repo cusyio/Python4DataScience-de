@@ -247,6 +247,33 @@ kann ggf. erhöht werden, z.B. mit:
     Es git jedoch auch ein eigenständiges Installationsprogramm in `Releases
     <https://github.com/GitCredentialManager/git-credential-manager/releases/>`_.
 
+    Er wird konfiguriert mit
+
+    .. code-block:: console
+
+        $ git credential-manager configure
+        Configuring component 'Git Credential Manager'...
+        Configuring component 'Azure Repos provider'...
+
+    Dies trägt den ``[credential]``-Abschnitt in eure ``~.gitconfig``-Datei ein:
+
+    .. code-block:: ini
+
+        [credential]
+            helper =
+            helper = C:/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
+
+    Nun öffnet sich Beim Clonen eines Repository ein Fenster des *Git Credential Manager
+    und fodert euch zur Eingabe eurer Zugangsdaten auf.
+
+    Zudem wird die ``~/.gitconfig``-Datei ergänzt, :abbr:`z.B. (zum Beispiel)` um die
+    folgenden beiden Zeilen:
+
+    .. code-block:: ini
+
+        [credential "https://ce.cusy.io"]
+            provider = generic
+
 .. tab:: macOS
 
     Unter macOS lässt sich mit `osxkeychain` die Schlüsselbundverwaltung
