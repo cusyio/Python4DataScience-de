@@ -263,7 +263,7 @@ kann ggf. erhöht werden, z.B. mit:
             helper =
             helper = C:/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
 
-    Nun öffnet sich Beim Clonen eines Repository ein Fenster des *Git Credential Manager
+    Nun öffnet sich beim Clonen eines Repository ein Fenster des *Git Credential Manager*
     und fodert euch zur Eingabe eurer Zugangsdaten auf.
 
     Zudem wird die ``~/.gitconfig``-Datei ergänzt, :abbr:`z.B. (zum Beispiel)` um die
