@@ -23,16 +23,16 @@ Historie für den aktuellen Zweig aufgezeichnet  werden.
 Gebräuchliche Befehle
 ---------------------
 
-``$ git branch [-a]``
+:samp:`$ git branch [-a]`
     zeigt alle lokalen Verzweigungen in einem Repository an.
 
     ``-a``
         zeigt auch alle entfernten Verzweigungen an.
 
-``$ git branch [branch_name]``
+:samp:`$ git branch [{BRANCHNAME}]`
     erstellt auf Basis des aktuellen ``HEAD`` einen neuen Zweig.
 
-``$ git switch [-c] [branch_name]``
+:samp:`$ git switch [-c] [{BRANCHNAME}]`
     wechselt zwischen Zweigen.
 
     ``-c``
@@ -43,13 +43,13 @@ Gebräuchliche Befehle
         In Git < 2.23 steht euch ``git switch`` noch nicht zur Verfügung. In
         diesem Fall müsst ihr noch ``git checkout`` verwenden:
 
-        ``$ git checkout [-b] [branch_name]``
+        :samp:`$ git checkout [-b] [{BRANCHNAME}]`
             ändert das Arbeitsverzeichnis in den angegebenen Zweig.
 
             ``-b``
                 erstellt den angegebenen Zweig, wenn dieser nicht schon besteht.
 
-``$ git merge [from name]``
+:samp:`$ git merge [{FROMBRANCHNAME}]`
     verbindet den angegebenen mit dem aktuellen Zweig, in dem ihr euch gerade
     befindet, :abbr:`z.B. (zum Beispiel)`:
 
@@ -117,7 +117,7 @@ Die Historie kann dann :abbr:`z.B. (zum Beispiel)` so aussehen:
 Zweige löschen
 --------------
 
-``$ git branch -d [name]``
+:samp:`$ git branch -d [{BRANCHNAME}]`
     löscht den ausgewählten Zweig, wenn er bereits in einen anderen überführt
     wurde.
 
@@ -131,19 +131,13 @@ branch`` funktioniert jedoch auch mit entfernten Zweigen. Um mit entfernten
 Zweigen arbeiten zu können, muss zunächst ein entferntes Repository konfiguriert
 und zur lokalen Repository-Konfiguration hinzugefügt werden:
 
-.. code-block:: console
-
-    $ git remote add [new_repo] https://ce.cusy.io/veit/new-repo.git
+:samp:`$ git remote add [{NEWREPO}] https://ce.cusy.io/veit/{NEWREPO}.git`
 
 Nun kann der Zweig auch im entfernten Repository hinzugefügt werden:
 
-.. code-block:: console
-
-    $ git push [new_repo] [branch_name]
+:samp:`$ git push [{NEWREPO}] [{BRANCHNAME}]`
 
 Mit ``git branch -d`` löscht ihr die Zweige nur lokal. Um sie auch auf dem
 entfernten Server zu löschen, könnt ihr folgendes eingeben:
 
-.. code-block:: console
-
-    $ git push origin --delete [branch_name]
+:samp:`$ git push origin --delete [{BRANCHNAME}]`
