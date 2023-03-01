@@ -157,7 +157,7 @@ der ``main``-Zweig auch auf dem entfernten Server verfügbar:
 
 .. code-block:: console
 
-   $ git push --set-upstream origin main
+   $ git push origin main
 
 Der aktuelle Zustand eures Repository kann nun :abbr:`z.B. (zum Beispiel)` so
 aussehen:
