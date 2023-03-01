@@ -141,3 +141,58 @@ Mit ``git branch -d`` löscht ihr die Zweige nur lokal. Um sie auch auf dem
 entfernten Server zu löschen, könnt ihr folgendes eingeben:
 
 :samp:`$ git push origin --delete [{BRANCH_NAME}]`
+
+Zweige umbenennen
+-----------------
+
+Ihr könnt Zweige umbenennen, :abbr:`z.B. (zum Beispiel)` mit
+
+.. code-block:: console
+
+   $ git branch --move master main
+
+Dies ändert euren lokalen ``master``-Zweig in ``main``. Damit andere den neuen
+Zweig sehen können, müsst ihr ihn auf den entfernten Server pushen. Dadurch wird
+der ``main``-Zweig auch auf dem entfernten Server verfügbar:
+
+.. code-block:: console
+
+   $ git push --set-upstream origin main
+
+Der aktuelle Zustand eures Repository kann nun :abbr:`z.B. (zum Beispiel)` so
+aussehen:
+
+.. code-block:: console
+
+   $ git branch -a
+   * main
+     remotes/origin/HEAD -> origin/master
+     remotes/origin/main
+     remotes/origin/master
+
+* Euer lokaler ``master``-Zweig ist verschwunden, da er durch den ``main``-Zweig
+  ersetzt wurde.
+* Der ``main``-Zweig ist auch auf dem entfernten Rechner vorhanden.
+* Auch der ``master``-Zweig ist jedoch auch noch auf dem entfernten Server
+  vorhanden. Vermutlich werden also andere weiterhin den a``master``-Zweig für
+  ihre Arbeit verwenden, bis ihr die folgenden Änderungen vorgenommen habt:
+
+  * Für alle Projekte, die von diesem Projekt abhängen, muss der Code und/oder
+    die Konfiguration aktualisiert werden.
+  * Die Konfigurationsdateien des test-runner müssen :abbr:`ggf.
+    (gegebenenfalls)` aktualisiert werden.
+  * Build- und Release-Skripte müssen angepasst werden.
+  * Die Einstellungen auf eurem Repository-Server wie der Standardzweig des
+    Repository, Zusammenführungsregeln und anderes müssen angepasst werden.
+  * Verweise auf den alten Zweig in der Dokumentation müssen aktualisiert
+    werden.
+  * Alle Pull- oder Merge-Requests, die auf den ``master``-Zweig abzielen,
+    sollten geschlossen werden.
+
+Nachdem ihr all diese Aufgaben erledigt habt und sicher seid, dass der
+``main``-Zweig genauso funktioniert wie der ``master``-Zweig, könnt ihr den
+``master``-Zweig löschen:
+
+.. code-block:: console
+
+   $ git push origin --delete master
