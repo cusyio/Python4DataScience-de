@@ -131,7 +131,7 @@ branch`` funktioniert jedoch auch mit entfernten Zweigen. Um mit entfernten
 Zweigen arbeiten zu können, muss zunächst ein entferntes Repository konfiguriert
 und zur lokalen Repository-Konfiguration hinzugefügt werden:
 
-+:samp:`$ git remote add origin https://ce.cusy.io/veit/{NEWREPO}.git`
+:samp:`$ git remote add origin https://ce.cusy.io/veit/{NEWREPO}.git`
 
 Nun kann der Zweig auch im entfernten Repository hinzugefügt werden:
 
