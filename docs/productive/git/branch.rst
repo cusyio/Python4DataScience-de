@@ -29,10 +29,10 @@ Gebräuchliche Befehle
     ``-a``
         zeigt auch alle entfernten Verzweigungen an.
 
-:samp:`$ git branch [{BRANCHNAME}]`
+:samp:`$ git branch [{BRANCH_NAME}]`
     erstellt auf Basis des aktuellen ``HEAD`` einen neuen Zweig.
 
-:samp:`$ git switch [-c] [{BRANCHNAME}]`
+:samp:`$ git switch [-c] [{BRANCH_NAME}]`
     wechselt zwischen Zweigen.
 
     ``-c``
@@ -43,13 +43,13 @@ Gebräuchliche Befehle
         In Git < 2.23 steht euch ``git switch`` noch nicht zur Verfügung. In
         diesem Fall müsst ihr noch ``git checkout`` verwenden:
 
-        :samp:`$ git checkout [-b] [{BRANCHNAME}]`
+        :samp:`$ git checkout [-b] [{BRANCH_NAME}]`
             ändert das Arbeitsverzeichnis in den angegebenen Zweig.
 
             ``-b``
                 erstellt den angegebenen Zweig, wenn dieser nicht schon besteht.
 
-:samp:`$ git merge [{FROMBRANCHNAME}]`
+:samp:`$ git merge [{FROM_BRANCH_NAME}]`
     verbindet den angegebenen mit dem aktuellen Zweig, in dem ihr euch gerade
     befindet, :abbr:`z.B. (zum Beispiel)`:
 
@@ -117,7 +117,7 @@ Die Historie kann dann :abbr:`z.B. (zum Beispiel)` so aussehen:
 Zweige löschen
 --------------
 
-:samp:`$ git branch -d [{BRANCHNAME}]`
+:samp:`$ git branch -d [{BRANCH_NAME}]`
     löscht den ausgewählten Zweig, wenn er bereits in einen anderen überführt
     wurde.
 
@@ -135,9 +135,9 @@ und zur lokalen Repository-Konfiguration hinzugefügt werden:
 
 Nun kann der Zweig auch im entfernten Repository hinzugefügt werden:
 
-:samp:`$ git push [{NEWREPO}] [{BRANCHNAME}]`
+:samp:`$ git push origin [{BRANCH_NAME}]`
 
 Mit ``git branch -d`` löscht ihr die Zweige nur lokal. Um sie auch auf dem
 entfernten Server zu löschen, könnt ihr folgendes eingeben:
 
-:samp:`$ git push origin --delete [{BRANCHNAME}]`
+:samp:`$ git push origin --delete [{BRANCH_NAME}]`
