@@ -174,7 +174,7 @@ aussehen:
   ersetzt wurde.
 * Der ``main``-Zweig ist auch auf dem entfernten Rechner vorhanden.
 * Auch der ``master``-Zweig ist jedoch auch noch auf dem entfernten Server
-  vorhanden. Vermutlich werden also andere weiterhin den a``master``-Zweig für
+  vorhanden. Vermutlich werden also andere weiterhin den ``master``-Zweig für
   ihre Arbeit verwenden, bis ihr die folgenden Änderungen vorgenommen habt:
 
   * Für alle Projekte, die von diesem Projekt abhängen, muss der Code und/oder
