@@ -196,3 +196,10 @@ Nachdem ihr all diese Aufgaben erledigt habt und sicher seid, dass der
 .. code-block:: console
 
    $ git push origin --delete master
+
+Team-Mitgliedeer können ihre lokal noch vorhandenen Referenzen auf den
+``master``-Zweig löschen mit
+
+.. code-block:: console
+
+   $ git fetch origin --prune
