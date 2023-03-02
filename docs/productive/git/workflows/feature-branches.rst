@@ -169,7 +169,7 @@ dem Zusammenführen mit einem Fast-Forward-Merge an die Spitze des ``main``-Bran
 
    .. code-block:: console
 
-      $ git checkout main
+      $ git switch main
       $ git pull origin main
       $ git merge --no-ff 17-some-feature
 
