@@ -81,7 +81,7 @@ wollen:
 
 .. code-block::
 
-   $ git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch opt/viz' --prune-empty
+   $ git filter-branch --index-filter 'git rm -r --cached --ignore-unmatch docs/viz' --prune-empty
     …
     Proceeding with filter-branch...
     Ref 'refs/heads/main' was rewritten
