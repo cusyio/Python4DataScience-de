@@ -36,8 +36,7 @@ betreffen, verwenden wir `git-filter-repo
     $ cd pyviz-tutorial
     $ python3 ../git-filter-repo --path docs/viz
 
-Das Einzige, was jetzt noch zu tun ist, ist die Anpassung der Remote-URL, da die
-lokale Kopie des Jupyter-Tutorial-Repos noch die ursprüngliche URL haben wird:
+Das Einzige, was jetzt noch zu tun ist, ist die Anpassung der Remote-URL:
 
 .. code-block:: console
 
