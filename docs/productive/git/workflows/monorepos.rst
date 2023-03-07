@@ -169,6 +169,21 @@ Probleme oder Unannehmlichkeiten bereiten könnten, :abbr:`z.B. (zum Beispiel)`:
 
     [1]  9fe7b8048891965e476aac0410e08e050fd21354 (refs/heads/main:docs/workspace/pandas/descriptive-statistics.ipynb)
 
+Installation
+~~~~~~~~~~~~
+
+.. tab:: Windows, Linux
+
+   #. Ruft die `Releases <https://github.com/github/git-sizer/releases>`_-Seite
+      auf und ladet die ZIP-Datei herunter, die eurer Plattform entspricht.
+   #. Entpackt die Datei.
+   #. Verschiebt die ausführbare Datei (:file:`git-sizer` oder
+      :file:`git-sizer.exe`) in euren ``PATH``.
+
+.. tab:: macOS
+
+   $ brew install git-sizer
+
 .. _fsmonitor:
 
 Git file system monitor (FSMonitor)
