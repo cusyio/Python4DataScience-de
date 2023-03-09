@@ -21,15 +21,29 @@ Beispiele für GitHub Actions
     Weitere Installationen könnt ihr hinzufügen unter `Install pre-commit ci
     <https://github.com/apps/pre-commit-ci/installations/new>`_.
 
-:samp:`.github/workflows/ci.yml`
+:samp:`.github/workflows/pre-commit.yml`
     Alternative Konfiguration als GitHub-Workflow, :abbr:`z.B. (zum Beispiel)`:
 
     .. code-block:: yaml
 
-        - uses: actions/cache@v3
-          with:
-            path: ~/.cache/pre-commit
-            key: pre-commit|${{ env.pythonLocation }}|${{ hashFiles('.pre-commit-config.yaml') }}
+        name: pre-commit
+
+        on:
+          pull_request:
+          push:
+            branches: [main]
+
+        jobs:
+          pre-commit:
+            runs-on: ubuntu-latest
+            steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-python@v3
+            - uses: actions/cache@v3
+              with:
+                path: ~/.cache/pre-commit
+                key: pre-commit|${{ env.pythonLocation }}|${{ hashFiles('.pre-commit-config.yaml') }}
+            - uses: pre-commit/action@v3.0.0
 
     .. seealso::
 
