@@ -92,6 +92,6 @@
 
     Mit ``--tags`` können gleichzeitig Tags übertragen werden.
 
-:samp:``$ git push -u [{REMOTE}] [{BRANCH}]``
+:samp:`$ git push -u [{REMOTE}] [{BRANCH}]`
     überträgt den lokalen Zweig in das Remote-Repository wobei die Kopie als
     Upstream festgelegt wird.
