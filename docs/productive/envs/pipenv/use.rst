@@ -81,7 +81,7 @@ Optionen
 
 ``--pypi-mirror``
     gibt einen PyPI-Mirror an. Der Standard ist der
-    :term:`Python Package Index (PyPI)`.
+    :term:`Python Package Index` (:term:`PyPI`).
 
     Ihr könnt jedoch auch eure eigenen Mirror angeben:
 
@@ -257,9 +257,9 @@ hinzu. ``pipenv install`` kennt die folgenden Optionen:
 ``sdist`` vs. ``wheel``
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Pip kann sowohl Pakete als :term:`Source Distribution (sdist)` oder
-:term:`Wheel` installieren. Wenn beide auf PyPI vorhanden sind, wird pip ein
-kompatibles :term:`Wheel` bevorzugen.
+Pip kann sowohl Pakete als :term:`Source Distribution` (:term:`sdist`) oder
+:term:`wheel` installieren. Wenn beide auf PyPI vorhanden sind, wird pip ein
+kompatibles :term:`wheel` bevorzugen.
 
 .. note::
    Abhängigkeiten von Wheels werden jedoch nicht erfasst von ``$ pipenv lock``.
