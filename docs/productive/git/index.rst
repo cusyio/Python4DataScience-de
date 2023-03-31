@@ -101,7 +101,7 @@ Zum Weiterlesen
     cherry-pick
     revert
     best-practices
-    vs-code
+    vs-code/index
     git-big-picture
     etckeeper
     advanced

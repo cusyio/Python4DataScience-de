@@ -2,8 +2,8 @@ Visual Studio Code
 ==================
 
 `Visual Studio Code <https://code.visualstudio.com/>`_ kann eine bereits
-vorhandene :doc:`Git-Installation <install-config>` nutzen um die entsprechenden
-Funktionalitäten zur Verfügung stellen zu können.
+vorhandene :doc:`Git-Installation <../install-config>` nutzen um die
+entsprechenden Funktionalitäten zur Verfügung stellen zu können.
 
 Klonen
 ------
@@ -88,3 +88,9 @@ Erweiterungen
   <https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory>`_
 * `Git Lens
   <https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens>`_
+* :doc:`gitlab-vscode-extension`
+
+.. toctree::
+    :hidden:
+
+    gitlab-vscode-extension
