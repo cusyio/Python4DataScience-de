@@ -19,6 +19,9 @@ haben.
         erstellt hat sowie das Datum. Zudem haben annotierte Tags, ähnlich wie
         Commits Nachrichten. Ihr könnt solche Tags erstellen, :abbr:`z.B. (zum
         Beispiel)` mit :samp:`git tag -a {v3.9.16} -m '{Python 3.9.16}'`.
+        Anshließend könnt ihr euch diese zusätzlichen Metadaten :abbr:`z.B. (zum
+        Beispiel)` anzeigen lassen mit :samp:`git show {v3.9.16}'.
+
     Leichtgewichtige Tags
         Leichtgewichtige Tags können :abbr:`z.B. (zum Beispiel)` mit :samp:`git
         tag {v3.9.16}` ohne die Optionen :samp:`-a`, :samp:`-s` oder :samp:`-m`
