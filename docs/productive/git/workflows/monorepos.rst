@@ -145,6 +145,52 @@ nativen Push-, Pull-, Checkout- und Fetch-Operationen von Git zu, um die Objekte
 zu übertragen und zu ersetzen, :abbr:`d.h. (das heißt)`, dass ihr mit großen
 Dateien in eurem Repository wie gewohnt arbeiten könnt.
 
+Ihr könnt Git LFS installieren mit
+
+.. tab:: Debian/Ubuntu
+
+   .. code-block:: console
+
+      $ sudo apt install git-lfs
+
+.. tab:: macOS
+
+   .. code-block:: console
+
+      $ brew install git-lfs
+
+.. tab:: Windows
+
+   `git for windows <https://gitforwindows.org/>`_
+ 
+Anschließend könnt ihr Git LFS in eurem Repository installieren mit
+
+.. code-block:: console
+
+   $ git lfs install
+   Updated Git hooks.
+   Git LFS initialized.
+
+Um nun Git LFS auf bestimmte Dateitypen anzuwenden, könnt ihr :abbr:`z.B. (zum
+Beispiel)` folgendes angeben:
+
+.. code-block:: console
+
+   $ git lfs track "*.pdf"
+   Tracking "*.pdf"
+
+Dies erstellt in eurer :file:`.gitattributes`-Datei folgende Zeile:
+
+.. code-block::
+
+   *.pdf filter=lfs diff=lfs merge=lfs -text
+
+Schließlich sollter ihr die :file:`.gitattributes`-Datei mit Git verwalten:
+
+.. code-block:: console
+
+   $ git add .gitattributes
+
 git-sizer
 ---------
 
