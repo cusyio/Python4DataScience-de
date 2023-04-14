@@ -20,7 +20,7 @@ haben.
         Commits Nachrichten. Ihr könnt solche Tags erstellen, :abbr:`z.B. (zum
         Beispiel)` mit :samp:`git tag -a {v3.9.16} -m '{Python 3.9.16}'`.
         Anshließend könnt ihr euch diese zusätzlichen Metadaten :abbr:`z.B. (zum
-        Beispiel)` anzeigen lassen mit :samp:`git show {v3.9.16}'.
+        Beispiel)` anzeigen lassen mit :samp:`git show {v3.9.16}`.
 
     Leichtgewichtige Tags
         Leichtgewichtige Tags können :abbr:`z.B. (zum Beispiel)` mit :samp:`git
