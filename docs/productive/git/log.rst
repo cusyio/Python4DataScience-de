@@ -12,7 +12,7 @@ Git Log
 
     Auch relative Angaben wie ``1 week ago`` oder ``yesterday`` sind zulässig.
 
-:samp:`$ git log --author = "{VEIT}"`
+:samp:`$ git log --author="{VEIT}"`
     filtert die Commit-Historie nach Autor*innen.
 
     Es kann auch nach mehreren Autor*innen gleichzeitig gesucht werden,
