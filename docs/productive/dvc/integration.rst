@@ -10,6 +10,15 @@ Um DVC-Dateien in Vim als YAML zu erkennen, solltet ihr Folgendes in
     " DVC
     autocmd! BufNewFile,BufRead Dvcfile,*.dvc setfiletype yaml
 
+Visual Studio Code
+------------------
+
+Für `Visual Studio Code <https://code.visualstudio.com>`_ gibt es eine
+Erweiterung für `DVC
+<https://marketplace.visualstudio.com/items?itemName=Iterative.dvc>`_, die aus
+dem `Visual Studio Marketplace <https://marketplace.visualstudio.com>`_
+heruntergeladen werden kann.
+
 IntelliJ IDEs
 -------------
 
