@@ -63,8 +63,6 @@
 :samp:`$ git revert [{COMMIT SHA}]`
     erstellt einen neuen Commit und nimmt die Änderungen des angegebenen Commits
     zurück, sodass die Änderungen invertiert werden.
-:samp:`$ git fetch [{REMOTE}]`
-    übernimmt die Änderungen von Remote, aktualisiert jedoch nicht die Zweige.
 :samp:`$ git fetch --prune [{REMOTE}]`
     Remote-Refs werden entfernt wenn sie im Remote-Repository entfernt wurden.
 :samp:`$ git commit --amend`
@@ -83,15 +81,3 @@
         diesem Fall müsst ihr noch ``git checkout`` verwenden:
 
        :samp:`$ git checkout [{FILE}]`
-
-:samp:`$ git pull [{REMOTE}]`
-    ruft Änderungen aus dem Remote-Repository ab und führt den aktuellen Zweig
-    mit dem Upstream zusammen.
-:samp:`$ git push [--tags] [{REMOTE}]`
-    überträgt lokale Änderungen nach Remote.
-
-    Mit ``--tags`` können gleichzeitig Tags übertragen werden.
-
-:samp:`$ git push -u [{REMOTE}] [{BRANCH}]`
-    überträgt den lokalen Zweig in das Remote-Repository wobei die Kopie als
-    Upstream festgelegt wird.
