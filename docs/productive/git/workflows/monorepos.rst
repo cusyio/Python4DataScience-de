@@ -163,7 +163,7 @@ Ihr könnt Git LFS installieren mit
 
    Git LFS lässt sich mit `git for windows <https://gitforwindows.org/>`_
    mitinstallieren.
- 
+
 Anschließend könnt ihr Git LFS in eurem Repository installieren mit
 
 .. code-block:: console
