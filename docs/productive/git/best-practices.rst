@@ -112,7 +112,7 @@ Git Best Practices
 
   .. code-block:: console
 
-    $ git commit -m "Awesome commit message (Fixes #21 and Closes group/otherproject#22)"
+    $ git commit -m "Awesome commit message (Fix #21 and close group/otherproject#22)"
 
   * zu Issues: ``#123``
 
