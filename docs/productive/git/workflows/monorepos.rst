@@ -161,7 +161,8 @@ Ihr könnt Git LFS installieren mit
 
 .. tab:: Windows
 
-   `git for windows <https://gitforwindows.org/>`_
+   Git LFS lässt sich mit `git for windows <https://gitforwindows.org/>`_
+   mitinstallieren.
  
 Anschließend könnt ihr Git LFS in eurem Repository installieren mit
 
