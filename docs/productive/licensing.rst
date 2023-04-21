@@ -213,8 +213,8 @@ eurem Repository erstellen lassen.
 #. Nun könnt ihr die für euer Repository passende Open Source-Lizenz auswählen.
 #. Ihr werdet nun zu zusätzlichen Angaben aufgefordert, sofern die gewählte
    Lizenz dies erfordert.
-#. Nachdem ihr eine Commit-Message angegeben habt, z.B. ``Add license``, könnt
-   ihr auf *Commit new file* klicken.
+#. Nachdem ihr eine Commit-Message angegeben habt, :abbr:`z.B. (zum Beispiel)`
+   ``Add license``, könnt ihr auf *Commit new file* klicken.
 
 Falls ihr in eurem Repository bereits eine ``/LICENSE``-Datei hinzugefügt habt,
 verwendet GitHub `licensee <https://github.com/licensee/licensee>`_ um die Datei
@@ -222,7 +222,8 @@ mit einer kurzen `Liste von Open-Source-Lizenzen
 <https://choosealicense.com/appendix/>`_ abzugleichen. Falls GitHub die Lizenz
 eures Repository nicht erkennen kann, enthält es möglicherweise mehrere
 Lizenzen oder ist zu komplex. Überlegt Euch dann, ob ihr die Lizenz vereinfachen
-könnt, z.B. indem ihr Komplexität in die ``/README``-Datei auslagert.
+könnt, :abbr:`z.B. (zum Beispiel)` indem ihr Komplexität in die
+``/README``-Datei auslagert.
 
 Umgekehrt könnt ihr auf GitHub auch nach Repositories mit bestimmten Lizenzen
 oder Lizenzfamilien suchen. Eine Übersicht über die Lizenz-Schlüsselwörter
@@ -230,7 +231,7 @@ erhaltet ihr in `Searching GitHub by license type
 <https://help.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository#searching-github-by-license-type>`_.
 
 Schließlich könnt ihr euch von `Shields.io <https://shields.io/>`_ ein
-License-Badge generieren lassen, das ihr :abbr:`z.B. (zum Beispiel) auf eurer
+License-Badge generieren lassen, das ihr :abbr:`z.B. (zum Beispiel)` auf eurer
 ``README``-Datei einbinden könnt:
 
 .. code-block:: rst
@@ -280,7 +281,7 @@ GitLab-CI-Workflow
 ~~~~~~~~~~~~~~~~~~
 
 Ihr könnt REUSE einfach in euren Continuous Integration-Workflow integrieren,
-z.B. für GitLab in der ``.gitlab-ci.yml``-Datei mit:
+:abbr:`z.B. (zum Beispiel)` für GitLab in der ``.gitlab-ci.yml``-Datei mit:
 
 .. code-block:: yaml
 
