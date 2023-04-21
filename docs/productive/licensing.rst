@@ -298,13 +298,32 @@ Alternativen
 `ClearlyDefined <https://clearlydefined.io/>`_
     Es sammelt und zeigt Informationen über die Lizenzierungs- und
     Urheberrechtssituation eines Software-Projekts an.
-`OpenChain <https://www.openchainproject.org/>`_
+:ref:`open_chain`
     Es empfiehlt REUSE als eine Komponente, um die Klarheit der Lizenz- und
     Urheberrechtssituation zu verbessern, stellt jedoch höhere Anforderungen, um
     eine vollständige Konformität zu erreichen.
 `FOSSology <https://www.fossology.org/>`_
     Toolkit für die Einhaltung freier Software, das Informationen in einer
     Datenbank mit Lizenz-, Copyright- und Exportscanner speichert.
+
+.. _open_chain:
+
+ISO/IEC 5230/OpenChain
+----------------------
+
+`ISO/IEC 5230 <https://de.wikipedia.org/wiki/ISO/IEC_5230>`_ basiert auf der
+`OpenChain Specification 2.1
+<https://github.com/OpenChain-Project/License-Compliance-Specification/raw/master/2.1/de/OpenChain-2.1_original_de.pdf>`_
+und ist ein internationaler Standard zu Software-Lieferketten, vereinfachter
+Beschaffung und Open-Source-Lizenz-Compliance.
+
+.. seealso::
+
+   * `OpenChain project <https://www.openchainproject.org>`_
+   * `OpenChain Self Certification
+     <https://certification.openchainproject.org>`_
+   * `Reference-Material
+     <https://github.com/OpenChain-Project/Reference-Material>`_
 
 Python-Paket-Metadaten
 ----------------------
