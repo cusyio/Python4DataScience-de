@@ -195,13 +195,13 @@ Faster Cpython
 Auf der PyCon US im Mai 2021 stellte Guido van Rossum mit `Faster CPython
 <https://github.com/faster-cpython>`_ ein Projekt vor, das die Geschwindigkeit
 von Python 3.11 verdoppeln soll. Die Zusammenarbeit mit den anderen
-Python-Kernentwicklern ist in `PEP 659 – Specializing Adaptive Interpreter
-<https://peps.python.org/pep-0659/>`_ geregelt. Zudem gibt es einen offenen
-`Issue Tracker <https://github.com/faster-cpython/ideas/issues>`_ und diverse
-`Werkzeuge zum Sammeln von Bytecode-Statistiken
-<https://github.com/faster-cpython/tools>`_. Von den Änderungen profitieren
-dürfte vor allem CPU-intensiver Python-Code; bereits in C geschriebener Code,
-I/O-lastige Prozesse und Multithreading-Code dürften hingegen kaum profitieren.
+Python-Kernentwicklern ist in :pep:`PEP 659 – Specializing Adaptive Interpreter
+<659>` geregelt. Zudem gibt es einen offenen `Issue Tracker
+<https://github.com/faster-cpython/ideas/issues>`_ und diverse `Werkzeuge zum
+Sammeln von Bytecode-Statistiken <https://github.com/faster-cpython/tools>`_.
+Von den Änderungen profitieren dürfte vor allem CPU-intensiver Python-Code;
+bereits in C geschriebener Code, I/O-lastige Prozesse und Multithreading-Code
+dürften hingegen kaum profitieren.
 
 .. seealso::
     * `Faster CPython <https://faster-cpython.readthedocs.io/>`__

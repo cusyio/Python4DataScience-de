@@ -127,7 +127,7 @@ werden kann. Einige Beispiele sind ``collection.namedtuple``,
 Datenklassen ersparen Euch das Schreiben und Verwalten dieser Methoden.
 
 .. seealso::
-   * [PEP 557 – Datenklassen](https://www.python.org/dev/peps/pep-0557/)
+   * :pep:`557` – Data Classes
 
 `attrs <https://www.attrs.org/en/stable/>`_ ist ein Python-Paket, das es schon
 viel länger als ``dataclasses`` gibt, umfangreicher ist und auch mit älteren

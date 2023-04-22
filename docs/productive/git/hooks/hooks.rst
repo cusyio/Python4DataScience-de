@@ -87,8 +87,7 @@ Python Code Quality Authority
         statisches Analysewerkzeug zur Überprüfung der Einhaltung von
         Python-Docstring-Konventionen.
     `docformatter <https://github.com/PyCQA/docformatter>`_
-        formatiert docstrings gemäß `PEP 257
-        <https://peps.python.org/pep-0257/>`_
+        formatiert docstrings gemäß :pep:`257`
     `pylint <https://github.com/PyCQA/pylint>`_
         Python-Linter
     `doc8 <https://github.com/PyCQA/doc8>`_

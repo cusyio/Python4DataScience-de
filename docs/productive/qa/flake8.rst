@@ -2,9 +2,9 @@
 ==========
 
 `flake8 <https://pypi.org/project/flake8/>`_ stellt sicher, dass euer Code
-größtenteils `PEP 8 <https://www.python.org/dev/peps/pep-0008/>`_ folgt. Eine
-automatische Formatierung, z.B. mit :doc:`black`, ist jedoch noch komfortabler.
-Zudem prüft ``flake8`` auf nicht verwendete Importe.
+größtenteils :pep:`8` folgt. Eine automatische Formatierung, :abbr:`z.B. (zum
+Beispiel)` mit :doc:`black`, ist jedoch noch komfortabler. Zudem prüft
+``flake8`` auf nicht verwendete Importe.
 
 Installation
 ------------

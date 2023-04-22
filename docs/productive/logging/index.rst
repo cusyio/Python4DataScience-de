@@ -3,9 +3,8 @@ Logging
 
 Das `logging
 <https://docs.python.org/3/library/logging.html#module-logging>`_-Modul ist Teil
-der Python-Standardbibliothek. Es ist beschrieben in `PEP 0282
-<https://www.python.org/dev/peps/pep-0282>`_. Eine erste Einführung in das Modul
-erhaltet ihr in `Basic Logging Tutorial
+der Python-Standardbibliothek. Es ist beschrieben in :pep:`0282`. Eine erste
+Einführung in das Modul erhaltet ihr in `Basic Logging Tutorial
 <https://docs.python.org/3/howto/logging.html#logging-basic-tutorial>`_.
 
 Logging erfüllt üblicherweise zwei verschiedene Zwecke:

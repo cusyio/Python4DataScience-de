@@ -125,9 +125,8 @@ Optionen
 ``check``
 ---------
 
-``pipenv check`` prüft auf Sicherheitslücken und auf `PEP 508
-<https://www.python.org/dev/peps/pep-0508/>`_-Marker im Pipfile. Hierzu
-verwendet es `safety <https://github.com/pyupio/safety>`_.
+``pipenv check`` prüft auf Sicherheitslücken und auf :pep:`508`-Marker im
+Pipfile. Hierzu verwendet es `safety <https://github.com/pyupio/safety>`_.
 
 Beispiel:
 
