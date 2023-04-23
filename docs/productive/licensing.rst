@@ -246,6 +246,8 @@ License-Badge generieren lassen, das ihr :abbr:`z.B. (zum Beispiel)` auf eurer
 .. |License| image:: https://img.shields.io/github/license/veit/jupyter-tutorial.svg
    :target: https://github.com/veit/jupyter-tutorial/blob/main/LICENSE
 
+.. _standard_format_licensing:
+
 Standardformat für die Lizenzierung
 -----------------------------------
 
@@ -261,6 +263,8 @@ Lizenzdateien eintragen:
     # SPDX-FileCopyrightText: [year] [copyright holder] <[email address]>
     #
     # SPDX-License-Identifier: [identifier]
+
+.. _check_conformity:
 
 Konformität überprüfen
 ----------------------

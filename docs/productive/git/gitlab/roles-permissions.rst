@@ -40,6 +40,8 @@ Eigentümer*innen
     administrieren im Wesentlichen die Gruppen und Workflows. Sie können Zugang
     zu Gruppen gewähren und dürfen löschen.
 
+.. _protected_branches:
+
 Geschützte Zweige
 -----------------
 

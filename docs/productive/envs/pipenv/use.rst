@@ -122,6 +122,8 @@ Optionen
     Weitere Optionen findet ihr unter `pipenv
     <https://docs.pipenv.org/#pipenv>`_.
 
+.. _pipenv_check:
+
 ``check``
 ---------
 
@@ -352,6 +354,8 @@ z.B.:
    geschrieben, sodass keine Credentials in der Versionsverwaltung gespeichert
    werden müssen.
 
+.. _pipenv_lock:
+
 ``lock``
 --------
 
@@ -436,6 +440,8 @@ aus dem ``Pipfile``. ``uninstall`` unterstützt alle Parameter von `install
 ``--all-dev``
     entfernt alle Entwicklungspakete aus der virtuellen Umgebung und entfernt
     sie aus ``Pipfile``.
+
+.. _pipenv_update:
 
 ``update``
 ----------

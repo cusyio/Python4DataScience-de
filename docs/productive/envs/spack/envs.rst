@@ -122,6 +122,8 @@ Dort befinden sich die beiden Dateien ``spack.yaml`` und ``spack.lock``.
 
         specs: [python@3.11.0, …]
 
+.. _spack_lock:
+
 ``spack.lock``
     Mit ``spack install`` werden die Specs konkretisiert, in ``spack.lock``
     geschrieben und  installiert. Im Gegensatz zu ``spack.yaml`` ist
