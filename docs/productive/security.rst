@@ -4,7 +4,8 @@ Sicherheit
 In den vorherigen Kapiteln haben wir schon einige Hinweise gegeben, die einen
 sichereren Betrieb ermöglichen. Hier wollen wir die einzelnen Elemente nun
 nochmal zusammenfassen und erweitern. Dabei orientieren wir uns an der `OpenSSF
-Scorecard <https://securityscorecards.dev/>`_.
+Scorecard <https://securityscorecards.dev/>`_. Alternativ könnt ihr euch auch an
+:ref:`open_chain` orientieren.
 
 Schwachstellen überprüfen
 -------------------------
@@ -291,3 +292,22 @@ verhindern. Ihr könnt dieses Risiko verringern durch
 * automatisierte Werkzeuge, die euch benachrichtigen, wenn Abhängigkeiten in
   eurem Projekt veraltet sind
 * Anwendungen, die Abhängigkeiten festhalten, schnell aktualisieren.
+
+.. _open_chain:
+
+ISO/IEC 5230/OpenChain
+----------------------
+
+`ISO/IEC 5230 <https://de.wikipedia.org/wiki/ISO/IEC_5230>`_ basiert auf der
+`OpenChain Specification 2.1
+<https://github.com/OpenChain-Project/License-Compliance-Specification/raw/master/2.1/de/OpenChain-2.1_original_de.pdf>`_
+und ist ein internationaler Standard zu Software-Lieferketten, vereinfachter
+Beschaffung und Open-Source-Lizenz-Compliance.
+
+.. seealso::
+
+   * `OpenChain project <https://www.openchainproject.org>`_
+   * `OpenChain Self Certification
+     <https://certification.openchainproject.org>`_
+   * `Reference-Material
+     <https://github.com/OpenChain-Project/Reference-Material>`_
