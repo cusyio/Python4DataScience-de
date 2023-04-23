@@ -242,7 +242,7 @@ Werden Code-Reviews durchgeführt?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Risiko: Hoch
-(unbeabsichtigte Schwachstellen oder mögliche Einschleusung von bösartigem Code)
+
 Mit Code-Reviews lassen sich unbeabsichtigte Schwachstellen oder das mögliche
 Einschleusen von bösartigem Code erkennen. :abbr:`Ggf. (Gegebenenfalls)` können
 so Angriffe aufgespürt werden, bei denen das Konto eines Teammitglieds
