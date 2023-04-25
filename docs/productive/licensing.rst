@@ -78,9 +78,9 @@ betreffenden Werke als Quelltext bearbeitet und versioniert werden.
 Daten, Medien, etc.
 ~~~~~~~~~~~~~~~~~~~
 
-`CC0-1.0 <https://creativecommons.org/publicdomain/zero/1.0/deed.de>`_,
-`CC-BY-4.0 <https://creativecommons.org/licenses/by/4.0/deed.de>`_ und
-`CC-BY-SA-4.0 <https://creativecommons.org/licenses/by-sa/4.0/deed.de>`_ sind
+`CC0 1.0 <https://creativecommons.org/publicdomain/zero/1.0/deed.de>`_,
+`CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/deed.de>`_ und
+`CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0/deed.de>`_ sind
 offene Lizenzen, die für Nicht-Software-Material verwendet werden, von
 Datensätzen bis zu Videos. Sie sind jedoch `nicht für Software empfohlen
 <https://creativecommons.org/faq/#can-i-apply-a-creative-commons-license-to-software>`_.
