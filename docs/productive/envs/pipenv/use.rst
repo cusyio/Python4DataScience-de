@@ -173,9 +173,10 @@ Beispiel:
     hardened for production use and should be used only as a development aid.
 
 .. note::
-   ``pipenv`` bettet hierfür einen API-Clientschlüssel von ``pyup.io`` ein,
-    anstatt eine vollständige Kopie der CC-BY-NC-SA lizenzierten Datenbank
-    aufzunehmen.
+   :term:`Pipenv` bettet hierfür einen API-Clientschlüssel von `pyup.io
+   <https://pyup.io>`_ ein, anstatt eine vollständige Kopie der `CC BY-NC-SA 3.0
+   <https://creativecommons.org/licenses/by-nc-sa/3.0/de/>`_ lizenzierten
+   Datenbank aufzunehmen.
 
 Um nun die vollständige Datenbank zu installieren könnt ihr
 diese auschecken mit:
