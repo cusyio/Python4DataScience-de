@@ -19,4 +19,3 @@ Umgebungen reproduzieren.
 
     spack/index
     pipenv/index
-    devpi
