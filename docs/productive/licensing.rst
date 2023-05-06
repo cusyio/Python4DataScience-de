@@ -305,15 +305,15 @@ Alternativen
     von Open-Source-Software (und anderer Software von Drittanbietern) zu
     ermitteln.
 `ClearlyDefined <https://clearlydefined.io/>`_
-    Es sammelt und zeigt Informationen über die Lizenzierungs- und
+    sammelt und zeigt Informationen über die Lizenzierungs- und
     Urheberrechtssituation eines Software-Projekts an.
 :ref:`open_chain`
-    Es empfiehlt REUSE als eine Komponente, um die Klarheit der Lizenz- und
+    empfiehlt REUSE als eine Komponente, um die Klarheit der Lizenz- und
     Urheberrechtssituation zu verbessern, stellt jedoch höhere Anforderungen, um
     eine vollständige Konformität zu erreichen.
 `FOSSology <https://www.fossology.org/>`_
-    Toolkit für die Einhaltung freier Software, das Informationen in einer
-    Datenbank mit Lizenz-, Copyright- und Exportscanner speichert.
+    ist ein Toolkit für die Einhaltung freier Software, das Informationen in
+    einer Datenbank mit Lizenz-, Copyright- und Exportscanner speichert.
 
 Python-Paket-Metadaten
 ----------------------
