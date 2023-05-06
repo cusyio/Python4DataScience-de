@@ -44,9 +44,9 @@ Nutzungseinschränkungen der Software verhindern. Die bekannteste Copyleft-Lizen
 ist die GNU General Public License (GPL). Dabei wird das Copyleft der GPL als
 sehr stark, das der Mozilla Public License hingegen als sehr schwach angesehen.
 
-Da die Lizenzgeber nicht selbst an ihr eigenes Copyleft gebunden sind, können sie
-neue Versionen auch unter proprietärer Lizenz veröffentlichen oder Dritten dies
-erlauben (Mehrfachlizenzierung).
+Da die Lizenzgeber nicht selbst an ihr eigenes Copyleft gebunden sind, können
+sie neue Versionen auch unter proprietärer Lizenz veröffentlichen oder Dritten
+dies erlauben (Mehrfachlizenzierung).
 
 Durch Copyleft-Lizenzen können jedoch schnell Inkompatibilitäten auch zu freien
 Lizenzen ohne Copyleft entstehen. So ist beispielsweise die 3-Clause-BSD-Lizenz
