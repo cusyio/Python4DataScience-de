@@ -31,4 +31,5 @@ Teams, Slack etc.
    roles-permissions
    merge-requests
    ci-cd
+   github-migration
    package-registry
