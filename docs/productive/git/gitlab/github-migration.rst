@@ -19,7 +19,7 @@ Jobs
 ----
 
 Jobs in GitHub Actions sind den Jobs in GitLab CI/CD sehr ähnlich. Beide haben
-folgende Mermale:
+folgende Merkmale:
 
 * Jobs enthalten eine Reihe von Schritten oder Skripten, die nacheinander
   ausgeführt werden.
@@ -28,8 +28,8 @@ folgende Mermale:
 * Jobs werden standardmäßig parallel ausgeführt, können aber auch für
   sequentielle Ausführung konfiguriert werden.
 * Jobs können ein Skript oder einen Shell-Befehl ausführen, wobei in
-  GitHub-Aktionen alle Skripte mit dem Schlüssel ``run`` angegeben werden . In
-  GitLab CI/CD werden die Skriptschritte hingegen mit dem ``script``-Schlüssel
+  GitHub-Aktionen alle Skripte mit dem Schlüssel ``run`` angegeben werden. In
+  GitLab CI/CD werden die Skript-Schritte hingegen mit dem ``script``-Schlüssel
   angegeben.
 
 Im Folgenden findet ihr ein Beispiel für die Syntax der beiden Systeme.
@@ -121,8 +121,8 @@ Syntax für Bedingungen und Ausdrücke
 
 GitHub Actions verwendet das ``if``-Schlüsselwort, um zu verhindern, dass ein
 Job ausgeführt wird, wenn eine Bedingung nicht erfüllt ist. GitLab CI/CD
-verwendet Regeln, um zu bestimmen, ob ein Job unter einer bestimmten Bedingung
-ausgeführt wird. 
+verwendet ``rules``, um zu bestimmen, ob ein Job unter einer bestimmten
+Bedingung ausgeführt wird. 
 
 Im Folgenden findet ihr ein Beispiel für die Syntax der beiden Systeme.
 
@@ -153,7 +153,7 @@ GitLab-Syntax für Bedingungen und Ausdrücke
      rules:
        - if: '$CI_COMMIT_BRANCH == "main"'
 
-Neben ``if`` bietet GitLab auch noch weitere Regeln wie ``changes``, ``exists``
+Neben ``if`` bietet GitLab auch noch weitere Regeln wie ``changes``, ``exists``,
 ``allow_failure``, ``variables`` und ``when``.
 
 .. seealso::
@@ -178,8 +178,8 @@ und ``lint``. Wenn diese Jobs abgeschlossen sind, wird ein weiterer Job mit dem
 Namen ``deploy-to-stage`` ausgeführt. Wenn ``deploy-to-stage`` abgeschlossen
 ist, wird schließlich der Auftrag ``deploy-to-prod`` ausgeführt.
 
-GitHub Actions-Syntax für Abhängigkeiten zwischen Aufträgen
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GitHub Actions-Syntax für Abhängigkeiten zwischen Jobs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: yaml
 
@@ -212,8 +212,8 @@ GitHub Actions-Syntax für Abhängigkeiten zwischen Aufträgen
          - run: echo "Deploying application in production environment..."
          - run: echo "Application successfully deployed to production."
 
-GitLab CI/CD-Syntax für Abhängigkeiten zwischen Aufträgen
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GitLab CI/CD-Syntax für Abhängigkeiten zwischen Jobs
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: yaml
 
