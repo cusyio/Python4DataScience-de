@@ -97,39 +97,3 @@ auch als Graphen in den Formaten PDF, PNG und SVG generiert werden.
      <https://trungdong.github.io/prov-python-short-tutorial.html>`_
    * `PROV Tutorial.ipynb
      <https://nbviewer.jupyter.org/github/trungdong/notebooks/blob/master/PROV%20Tutorial.ipynb>`_
-
-Git2PROV
-~~~~~~~~
-
-`Git2PROV <http://git2prov.org/>`_ generiert PROV-Daten aus den Informationen eines
-Git-Repository.
-
-Auf der Kommandozeile kann die Konvertierung einfach ausgeführt werden mit:
-
-.. code-block:: console
-
-    $ git2prov git_url [serialization]
-
-Zum Beispiel:
-
-.. code-block:: console
-
-    $ git2prov git@github.com:veit/jupyter-tutorial.git PROV-JSON
-
-Insgesamt stehen die folgenden Serialisierungsformate zur Verfügung:
-
-* ``PROV-N``
-* ``PROV-JSON``
-* ``PROV-O``
-* ``PROV-XML``
-
-Alternativ stellt Git2PROV auch einen Web-Server bereit mit:
-
-.. code-block:: console
-
-    $ git2prov-server [port]
-
-.. seealso::
-   * `Git2PROV: Exposing Version Control System Content as W3C PROV
-     <http://ceur-ws.org/Vol-1035/iswc2013_demo_32.pdf>`_
-   * `GitHub-Repository <https://github.com/IDLabResearch/Git2PROV>`_

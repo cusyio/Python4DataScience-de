@@ -1,10 +1,9 @@
 Software zitieren
 =================
 
-James Howison und Julia Bullard führten in ihrem 2016 veröffentlichten
-Artikel `Software in the scientific literature
-<https://doi.org/10.1002/asi.23538>`_ folgende Beispiele in absteigender
-Reputation auf:
+James Howison und Julia Bullard führten in ihrem 2016 veröffentlichten Artikel
+`Software in the scientific literature <https://doi.org/10.1002/asi.23538>`_
+folgende Beispiele in absteigender Reputation auf:
 
 #. zitieren von Veröffentlichungen, die die jeweilige Software beschreiben
 #. zitieren von Bedienungsanleitungen
@@ -15,17 +14,29 @@ Reputation auf:
 Die Situation bleibt für die Autor*innen von Software dennoch unbefriedigend,
 zumal wenn sie sich von den Autor*innen der Software-Beschreibung unterscheiden.
 Umgekehrt ist Forschungssoftware leider auch nicht immer gut geeignet um zitiert
-zu werden. So werden Kollegen eure Software kaum direkt zitieren können, wenn ihr
+zu werden. So werden andere eure Software kaum direkt zitieren können, wenn ihr
 ihnen die Software als Anhang von E-Mails schickt. Auch ein Download-Link ist
-hier noch nicht wirklich zielführend. Aber wie können Autor*innen ihre Software
-zitierfähig bereitstellen?
+hier noch nicht wirklich zielführend. Besser stellt ihr einen `Persistent
+Identifier (PID) <https://de.wikipedia.org/wiki/Persistent_Identifier>`_ bereit,
+um die langfristige Verfügbarkeit eurer Software sicherzustellen. Sowohl `Zenodo
+<https://zenodo.org/>`_- als auch das `figshare
+<https://figshare.com/>`_-Repository akzeptieren Quellcode einschließlich
+Binärdateien und stellen `Digital Object Identifier (DOI)
+<https://de.wikipedia.org/wiki/Digital_Object_Identifier>`_ hierfür bereit.
+Gleiches gilt für `CiteAs <https://citeas.org/>`_, mit dem sich
+Zitierinformationen für Software abrufen lassen.
 
-`Digital object identifier (DOI)
-<https://de.wikipedia.org/wiki/Digital_Object_Identifier>`_ werden in der
-Wissenschaft häufig für zum Zitieren verwendet. `Zenodo <https://zenodo.org/>`_
-ermöglicht die Archivierung von Software und die Bereitstellung eines DOI für
-diese Software. Im Folgenden werde ich am Beispiel des Jupyter-Tutorials zeigen,
-welche Schritte hierzu erforderlich sind:
+.. seealso::
+   * `Should I cite? <https://mr-c.github.io/shouldacite/index.html>`_
+   * `How to cite software “correctly”
+     <https://cite.research-software.org/>`_
+
+Erstellen eines DOI mit Zenodo
+------------------------------
+
+`Zenodo <https://zenodo.org/>`_ ermöglicht die Archivierung von Software und die
+Bereitstellung eines DOI für diese Software. Im Folgenden werde ich am Beispiel
+des Jupyter-Tutorials zeigen, welche Schritte hierzu erforderlich sind:
 
 #. Wenn ihr noch keinen `Account für Zenodo <https://zenodo.org/signup/>`_
    habt, erstellt einen, bevorzugt mit GitHub.
@@ -63,6 +74,9 @@ welche Schritte hierzu erforderlich sind:
 
         .. image:: https://zenodo.org/badge/307380211.svg
            :target: https://zenodo.org/badge/latestdoi/307380211
+
+Metadaten-Formate
+-----------------
 
 Die `FORCE11 <https://www.force11.org/group/software-citation-working-group>`_
 -Arbeitsgruppe hat ein Paper veröffentlicht, in denen Prinzipien des
@@ -180,19 +194,7 @@ aktuell zwei Projekte für strukturierte Metadaten heraus:
     Metainformationen des Repository, wie Unternehmen, Programmiersprache etc.,
     übernehmen.
 
-Ihr solltet einen `Persistent Identifier (PID)
-<https://de.wikipedia.org/wiki/Persistent_Identifier>`_ bereitstellen, um die
-langfristige Verfügbarkeit eurer Software sicherzustellen. Sowohl das `Zenodo
-<https://zenodo.org/>`_- als auch das `figshare
-<https://figshare.com/>`_-Repository akzeptieren Quellcode einschließlich
-Binärdateien und stellen DOIs hierfür breit. Gleiches gilt für `CiteAs
-<https://citeas.org/>`_, mit dem sich Zitierinformationen für Software
-abrufen lassen.
-
 .. seealso::
-   * `Should I cite? <https://mr-c.github.io/shouldacite/index.html>`_
-   * `How to cite software “correctly”
-     <https://cite.research-software.org/>`_
    * Daniel S. Katz: `Compact identifiers for software: The last missing link in
      user-oriented software citation?
      <https://danielskatzblog.wordpress.com/2018/02/06/compact-identifiers-for-software-the-last-missing-link-in-user-oriented-software-citation/>`_
@@ -215,3 +217,39 @@ abrufen lassen.
      <https://github.com/citation-file-format/citation-file-format/blob/main/schema-guide.md>`_
    * `schema.json
      <https://github.com/citation-file-format/citation-file-format/blob/main/schema.json>`_
+
+Git2PROV
+--------
+
+`Git2PROV <https://github.com/IDLabResearch/Git2PROV>`_ generiert PROV-Daten
+aus den Informationen eines Git-Repository.
+
+Auf der Kommandozeile kann die Konvertierung einfach ausgeführt werden mit:
+
+.. code-block:: console
+
+    $ git2prov git_url [serialization]
+
+Zum Beispiel:
+
+.. code-block:: console
+
+    $ git2prov git@github.com:veit/jupyter-tutorial.git PROV-JSON
+
+Insgesamt stehen die folgenden Serialisierungsformate zur Verfügung:
+
+* ``PROV-N``
+* ``PROV-JSON``
+* ``PROV-O``
+* ``PROV-XML``
+
+Alternativ stellt Git2PROV auch einen Web-Server bereit mit:
+
+.. code-block:: console
+
+    $ git2prov-server [port]
+
+.. seealso::
+   * `Git2PROV: Exposing Version Control System Content as W3C PROV
+     <http://ceur-ws.org/Vol-1035/iswc2013_demo_32.pdf>`_
+   * `GitHub-Repository <https://github.com/IDLabResearch/Git2PROV>`_
