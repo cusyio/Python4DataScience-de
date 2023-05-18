@@ -10,13 +10,6 @@ gesamten Forschungsprozess schneller und zuverlässiger. Zudem entstehen viele
 zusätzliche Komponenten, die die ursprünglichen Grenzen ihrer Nutzung erweitern
 und neue Verwendungsmöglichkeiten eröffnen.
 
-.. include:: ../README.rst
-   :start-after: badges
-   :end-before: first-steps
-
-.. include:: ../README.rst
-   :start-after: follow-us
-
 .. toctree::
     :hidden:
     :titlesonly:

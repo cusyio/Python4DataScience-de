@@ -115,3 +115,10 @@ Pipelines* und *Domain Driven Data Stores* erweitern lässt.
 
 Die Beispiele des Jupyter-Tutorials könnt ihr jedoch auch lokal erstellen und
 ausführen.
+
+.. include:: ../README.rst
+   :start-after: badges
+   :end-before: first-steps
+
+.. include:: ../README.rst
+   :start-after: follow-us
