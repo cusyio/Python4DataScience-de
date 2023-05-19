@@ -352,6 +352,11 @@ Alternativen
       Abhängigkeiten, um bestimmte Lizenzen einzuhalten
     * korrigiert Paket-Metadaten oder Lizenzfeststellungen selbst
 
+    .. seealso::
+       * `GitHub Action for ORT
+         <https://github.com/oss-review-toolkit/ort-ci-github-action>`_
+       * `ORT for GitLab <https://github.com/oss-review-toolkit/ort-gitlab-ci>`_
+
 Python-Paket-Metadaten
 ----------------------
 
