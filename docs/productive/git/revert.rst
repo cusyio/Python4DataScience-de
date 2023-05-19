@@ -1,7 +1,7 @@
 Änderungen zurücknehmen
 =======================
 
-:samp:`$ git reset [--hard|--soft] [{TARGET-REFERENCE}]`
+:samp:`$ git reset [--hard|--soft] [{TARGET_REFERENCE}]`
     setzt die Historie auf einen früheren Commit zurück, :abbr:`z.B. (zum
     Beispiel)`:
 
@@ -81,3 +81,25 @@
         diesem Fall müsst ihr noch ``git checkout`` verwenden:
 
        :samp:`$ git checkout [{FILE}]`
+
+Wenn ihr versehentlich einen Commit in einem bestehenden Zweig gemacht habt,
+anstatt zunächst einen neuen Zweig zu erstellen, könnt ihr das in den folgenden
+drei Schritten ändern:
+
+:samp:`$ git branch [{NEW_BRANCH}]`
+    erstellt einen neuen Zweig
+:samp:`$ git reset HEAD~ --hard`
+    nimmt den letzten Commit in eurem aktiven Branch zurück
+:samp:`$ git switch [{NEW_BRANCH}]`
+    übernimmt die Änderungen in den neuen Zweig
+
+Ähnlich ist das Vorgehen, wenn ihr einen Commit versehentlich im falschen Branch
+vorgenommen habt:
+
+:samp:`$ git reset HEAD~`
+    nimmt den letzten Commit zurück wobei dessen Änderungen nun wieder in den
+    Bühnenbereich übernommen werden.
+:samp:`$ git switch [{DESIRED_BRANCH}]`
+    wechselt in den gewünschten Branch.
+:samp:`$ git commit -m '[{COMMIT_MESSAGE}]'`
+    Commit der Änderungen aus dem Bühnenbereich in den gewünschten Branch.
