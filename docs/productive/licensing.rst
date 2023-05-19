@@ -304,6 +304,10 @@ Alternativen
     Software-Codebasen und -paketen, um den Ursprung und die Lizenz (Provenienz)
     von Open-Source-Software (und anderer Software von Drittanbietern) zu
     ermitteln.
+
+    `DeltaCode <https://github.com/nexB/deltacode>`_
+        vergleicht zwei Codebase-Scans, um signifikante Änderungen zu erkennen.
+
 `ClearlyDefined <https://clearlydefined.io/>`_
     sammelt und zeigt Informationen über die Lizenzierungs- und
     Urheberrechtssituation eines Software-Projekts an.
