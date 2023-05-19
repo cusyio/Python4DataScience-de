@@ -337,6 +337,20 @@ Alternativen
 `FOSSology <https://www.fossology.org/>`_
     ist ein Toolkit für die Einhaltung freier Software, das Informationen in
     einer Datenbank mit Lizenz-, Copyright- und Exportscanner speichert.
+`OSS Review Toolkit (ORT) <https://github.com/oss-review-toolkit/ort>`_
+    ist ein Toolkit zur Automatisierung und Orchestrierung von FOSS-Richtlinien,
+    mit dem ihr eure (Open-Source-)Software-Abhängigkeiten verwalten könnt. Es
+
+    * generiert `OWASP CycloneDX <https://cyclonedx.org>`_, `SPDX Software Bill
+      of Materials (SBOM)
+      <https://github.com/opensbom-generator/spdx-sbom-generator>`_ oder
+      benutzerdefinierte FOSS-Attributionsdokumentation für euer Softwareprojekt
+    * automatisiert eure FOSS-Policy, um euer Softwareprojekt und seine
+      Abhängigkeiten auf Lizenzierung, Sicherheitslücken, Quellcode und
+      technische Standards zu prüfen
+    * erstellt ein Quellcode-Archiv für euer Softwareprojekt und seine
+      Abhängigkeiten, um bestimmte Lizenzen einzuhalten
+    * korrigiert Paket-Metadaten oder Lizenzfeststellungen selbst
 
 Python-Paket-Metadaten
 ----------------------
