@@ -113,9 +113,9 @@ aktuell zwei Projekte für strukturierte Metadaten heraus:
 CodeMeta
 ~~~~~~~~
 
-`CodeMeta <https://codemeta.github.io/>`_ ist ein Austauschschema für allgemeine
-Software-Metadaten und Referenzimplementierung für JSON for Linking Data
-(`JSON-LD <https://json-ld.org/>`_).
+`CodeMeta <https://codemeta.github.io/>`__ ist ein Austauschschema für
+allgemeine Software-Metadaten und Referenzimplementierung für JSON for Linking
+Data (`JSON-LD <https://json-ld.org/>`_).
 
 Dabei wird eine ``codemeta.json``-Datei im Stammverzeichnis des
 Software-Repository erwartet. Die Datei kann :abbr:`z.B. (zum Beispiel)` so
