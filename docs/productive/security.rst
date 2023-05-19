@@ -121,7 +121,7 @@ veröffentlichte Lizenzdatei zu erkennen. Dateien in einem
 :file:`LICENSES`-Verzeichnis sollten mit mit ihrem :ref:`SPDX
 <standard_format_licensing>`-Lizenzbezeichner benannt werden, gefolgt
 von einer entsprechenden Dateierweiterung, wie in der :ref:`REUSE
-<check_conformity>`-Spezifikation beschrieben.
+<reuse>`-Spezifikation beschrieben.
 
 Wird nach den Best Practices der Core Infrastructure Initiative (CII) gehandelt?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -292,22 +292,3 @@ verhindern. Ihr könnt dieses Risiko verringern durch
 * automatisierte Werkzeuge, die euch benachrichtigen, wenn Abhängigkeiten in
   eurem Projekt veraltet sind
 * Anwendungen, die Abhängigkeiten festhalten, schnell aktualisieren.
-
-.. _open_chain:
-
-ISO/IEC 5230/OpenChain
-----------------------
-
-`ISO/IEC 5230 <https://de.wikipedia.org/wiki/ISO/IEC_5230>`_ basiert auf der
-`OpenChain Specification 2.1
-<https://github.com/OpenChain-Project/License-Compliance-Specification/raw/master/2.1/de/OpenChain-2.1_original_de.pdf>`_
-und ist ein internationaler Standard zu Software-Lieferketten, vereinfachter
-Beschaffung und Open-Source-Lizenz-Compliance.
-
-.. seealso::
-
-   * `OpenChain project <https://www.openchainproject.org>`_
-   * `OpenChain Self Certification
-     <https://certification.openchainproject.org>`_
-   * `Reference-Material
-     <https://github.com/OpenChain-Project/Reference-Material>`_

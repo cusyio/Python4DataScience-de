@@ -264,12 +264,15 @@ Lizenzdateien eintragen:
     #
     # SPDX-License-Identifier: [identifier]
 
-.. _check_conformity:
-
 Konformität überprüfen
 ----------------------
 
-`REUSE <https://reuse.software/de/>`_ wurde von der :abbr:`FSFE (Free Software
+.. _reuse:
+
+REUSE
+~~~~~
+
+`REUSE <https://reuse.software/de/>`__ wurde von der :abbr:`FSFE (Free Software
 Foundation Europe)` initiiert, um die Lizenzierung freier Software-Projekte zu
 erleichtern. Das `REUSE tool <https://git.fsfe.org/reuse/tool>`_ überprüft
 Lizenzen und unterstützt euch bei der Einhaltung der Lizenzkonformität. Mit der
@@ -282,7 +285,7 @@ dynamisches Compliance-Badge generieren:
 .. _gitlab-ci-workflow:
 
 GitLab-CI-Workflow
-~~~~~~~~~~~~~~~~~~
+::::::::::::::::::
 
 Ihr könnt REUSE einfach in euren Continuous Integration-Workflow integrieren,
 :abbr:`z.B. (zum Beispiel)` für GitLab in der ``.gitlab-ci.yml``-Datei mit:
@@ -297,7 +300,27 @@ Ihr könnt REUSE einfach in euren Continuous Integration-Workflow integrieren,
         - reuse lint
 
 Alternativen
-~~~~~~~~~~~~
+::::::::::::
+
+.. _open_chain:
+
+`ISO/IEC 5230/OpenChain <https://de.wikipedia.org/wiki/ISO/IEC_5230>`_
+    empfiehlt :ref:`REUSE <reuse>` als eine Komponente, um die Klarheit der
+    Lizenz- und Urheberrechtssituation zu verbessern, stellt jedoch höhere
+    Anforderungen, um eine vollständige Konformität zu erreichen.
+
+    Sie basiert auf der `OpenChain Specification 2.1
+    <https://github.com/OpenChain-Project/License-Compliance-Specification/raw/master/2.1/de/OpenChain-2.1_original_de.pdf>`_
+    und ist ein internationaler Standard zu Software-Lieferketten, vereinfachter
+    Beschaffung und Open-Source-Lizenz-Compliance.
+
+    .. seealso::
+
+       * `OpenChain project <https://www.openchainproject.org>`_
+       * `OpenChain Self Certification
+         <https://certification.openchainproject.org>`_
+       * `Reference-Material
+         <https://github.com/OpenChain-Project/Reference-Material>`_
 
 `ScanCode <https://www.aboutcode.org/projects/scancode.html>`_
     bietet eine Reihe von Tools und Anwendungen zum Scannen von
@@ -311,10 +334,6 @@ Alternativen
 `ClearlyDefined <https://clearlydefined.io/>`_
     sammelt und zeigt Informationen über die Lizenzierungs- und
     Urheberrechtssituation eines Software-Projekts an.
-:ref:`open_chain`
-    empfiehlt REUSE als eine Komponente, um die Klarheit der Lizenz- und
-    Urheberrechtssituation zu verbessern, stellt jedoch höhere Anforderungen, um
-    eine vollständige Konformität zu erreichen.
 `FOSSology <https://www.fossology.org/>`_
     ist ein Toolkit für die Einhaltung freier Software, das Informationen in
     einer Datenbank mit Lizenz-, Copyright- und Exportscanner speichert.
