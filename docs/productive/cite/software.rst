@@ -266,8 +266,8 @@ hermes
 
 `hermes <https://project.software-metadata.pub>`_ vereinfacht die Publikation
 von Forschungssoftware, indem kontinuierlich in :ref:`cff`, :ref:`codemeta` und
-:doc:`../git/index` vorhandene Metadaten abegrufen werden. Anschließend werden
-die Metadaten auch für `InvenioRDM
+:doc:`Git <../git/index>` vorhandene Metadaten abegrufen werden. Anschließend
+werden die Metadaten auch für `InvenioRDM
 <https://invenio-software.org/products/rdm/>`_ und `Dataverse
 <https://dataverse.org/>`_ passend zusammengestellt. Schließlich werden auch
 :ref:`CITATION.cff <cff>` und :ref:`codemeta.json <codemeta>` für die
