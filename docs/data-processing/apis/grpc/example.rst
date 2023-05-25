@@ -16,6 +16,8 @@ Reihe von Name-Wert-Paaren enthält, die *fields* genannt werden.
 :download:`accounts.proto` ist ein einfaches Beispiel hierfür:
 
 .. literalinclude:: accounts.proto
+   :caption: accounts.proto
+   :name: accounts.proto
    :language: proto
    :lines: 1-7
 
@@ -43,6 +45,8 @@ RPC-Methodenparameter und Rückgabetypen als Protocol-Buffer-Nachrichten
 angegeben werden:
 
 .. literalinclude:: accounts.proto
+   :caption: accounts.proto
+   :name: accounts.proto
    :language: proto
    :lines: 8-
 
@@ -69,6 +73,8 @@ Server erstellen
 Hierfür schreiben wir die Datei :download:`accounts_server.py`:
 
 .. literalinclude:: accounts_server.py
+   :caption: accounts_server.py
+   :name: accounts_server.py
    :language: python
 
 Client erstellen
@@ -77,6 +83,8 @@ Client erstellen
 Hierfür schreiben wir :download:`accounts_client.py`:
 
 .. literalinclude:: accounts_client.py
+   :caption: accounts_client.py
+   :name: accounts_client.py
    :language: python
 
 Client und Server starten

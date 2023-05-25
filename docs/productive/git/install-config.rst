@@ -118,6 +118,8 @@ Anschließend können wir in :file:`exceltocsv.py`
 Excel-Dateien verwenden:
 
 .. literalinclude:: exceltocsv.py
+    :caption: exceltocsv.py
+    :name: exceltocsv.py
     :language: python
 
 Anschließend wird der globalen Git-Konfiguration ``~/.gitconfig`` folgender

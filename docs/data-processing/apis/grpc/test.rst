@@ -21,6 +21,8 @@ gRPC lässt sich automatisiert testen z.B. mit `pytest-grpc
    Fixture (Prüfvorrichtung)>` mit:
 
    .. literalinclude:: tests/test_accounts.py
+      :caption: tests/test_accounts.py
+      :name: tests/test_accounts.py
       :language: python
       :lines: 3-27
 
