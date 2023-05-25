@@ -1,7 +1,7 @@
 Änderungen zurücknehmen
 =======================
 
-:samp:`$ git reset --hard|--soft] {TARGET_REFERENCE}`
+:samp:`$ git reset [--hard|--soft] {TARGET_REFERENCE}`
     setzt die Historie auf einen früheren Commit zurück, :abbr:`z.B. (zum
     Beispiel)`:
 
