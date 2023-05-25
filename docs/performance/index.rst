@@ -130,8 +130,9 @@ Vektorisierungen mit NumPy
 --------------------------
 
 :doc:`../workspace/numpy/index` verlagert sich wiederholte Operationen in eine
-statisch typisierte kompilierte Schicht, um so  die schnelle Entwicklungszeit von
-Python mit der schnellen Ausführungszeit von C zu kombinieren. :abbr:`Evtl. (Eventuell)` könnt ihr :doc:`../workspace/numpy/ufunc`, :doc:`Vektorisierung
+statisch typisierte kompilierte Schicht, um so  die schnelle Entwicklungszeit
+von Python mit der schnellen Ausführungszeit von C zu kombinieren. :abbr:`Evtl.
+(Eventuell)` könnt ihr :doc:`../workspace/numpy/ufunc`, :doc:`Vektorisierung
 <../workspace/numpy/vectorisation>` und
 :doc:`../workspace/numpy/indexing-slicing` in allen Kombinationen nutzen um sich
 wiederholende Operationen in kompilierten Code zu verschieben und damit langsame
