@@ -19,7 +19,7 @@ ihnen die Software als Anhang von E-Mails schickt. Auch ein Download-Link ist
 hier noch nicht wirklich zielführend. Besser stellt ihr einen `Persistent
 Identifier (PID) <https://de.wikipedia.org/wiki/Persistent_Identifier>`_ bereit,
 um die langfristige Verfügbarkeit eurer Software sicherzustellen. Sowohl `Zenodo
-<https://zenodo.org/>`_- als auch das `figshare
+<https://zenodo.org/>`__- als auch das `figshare
 <https://figshare.com/>`_-Repository akzeptieren Quellcode einschließlich
 Binärdateien und stellen `Digital Object Identifier (DOI)
 <https://de.wikipedia.org/wiki/Digital_Object_Identifier>`_ hierfür bereit.
@@ -53,13 +53,14 @@ Zitierinformationen für Software abrufen lassen.
    * `schema.json
      <https://github.com/citation-file-format/citation-file-format/blob/main/schema.json>`_
 
+.. _zenodo:
 
 Erstellen eines DOI mit Zenodo
 ------------------------------
 
-`Zenodo <https://zenodo.org/>`_ ermöglicht die Archivierung von Software und die
-Bereitstellung eines DOI für diese Software. Im Folgenden werde ich am Beispiel
-des Jupyter-Tutorials zeigen, welche Schritte hierzu erforderlich sind:
+`Zenodo <https://zenodo.org/>`__ ermöglicht die Archivierung von Software und
+die Bereitstellung eines DOI für diese Software. Im Folgenden werde ich am
+Beispiel des Jupyter-Tutorials zeigen, welche Schritte hierzu erforderlich sind:
 
 #. Wenn ihr noch keinen `Account für Zenodo <https://zenodo.org/signup/>`_
    habt, erstellt einen, bevorzugt mit GitHub.
@@ -261,19 +262,90 @@ Alternativ stellt Git2PROV auch einen Web-Server bereit mit:
      <http://ceur-ws.org/Vol-1035/iswc2013_demo_32.pdf>`_
    * `GitHub-Repository <https://github.com/IDLabResearch/Git2PROV>`_
 
-hermes
+HERMES
 ------
 
-`hermes <https://project.software-metadata.pub>`_ vereinfacht die Publikation
+`HERMES <https://project.software-metadata.pub>`_ vereinfacht die Publikation
 von Forschungssoftware, indem kontinuierlich in :ref:`cff`, :ref:`codemeta` und
 :doc:`Git <../git/index>` vorhandene Metadaten abegrufen werden. Anschließend
 werden die Metadaten auch für `InvenioRDM
 <https://invenio-software.org/products/rdm/>`_ und `Dataverse
 <https://dataverse.org/>`_ passend zusammengestellt. Schließlich werden auch
 :ref:`CITATION.cff <cff>` und :ref:`codemeta.json <codemeta>` für die
-Publikationsrepositories aktualisiert. Eine examplarische GitHub-Action findet
-ihr in `TEMPLATE_hermes_github_to_zenodo.yml
-<https://github.com/hermes-hmc/ci-templates/blob/main/TEMPLATE_hermes_github_to_zenodo.yml>`_.
+Publikationsrepositories aktualisiert.
 
-.. seealso::
-   * `GitHub <https://github.com/hermes-hmc/workflow>`_
+#. ``.hermes/`` in der :ref:`.gitignore <gitignore>`-Datei hinzufügen
+#. :ref:`CITATION.cff <cff>`-Datei mit zusätzlichen Metadaten bereitstellen
+
+   .. important::
+      Stellt sicher, dass ``license`` in der Datei :ref:`CITATION.cff <cff>`
+      definiert ist; andernfalls wird eure Veröffentlichung von der :ref:`Zenodo
+      <zenodo>`-Sandbox nicht als Open Access akzeptiert.
+
+#. HERMES-Workflow konfigurieren
+
+   Der HERMES-Workflow wird konfiguriert in der
+   :doc:`/data-processing/serialisation-formats/toml/index`-Datei
+   :file:`hermes.toml`, wobei jeder Schritt einen eigenen Abschnitt erhält.
+
+   Wenn ihr HERMES so konfigurieren wollt, dass die Metadaten aus :doc:`Git
+   <../git/index>` und :ref:`CITATION.cff <cff>` verwendet werden und die Ablage
+   in der Zenodo Sandbox, die auf InvenioRDM aufbaut, erfolgen soll, sieht die
+   :file:`hermes.toml`-Datei folgendermaßen aus:
+
+   .. literalinclude:: hermes.toml
+      :caption: hermes.toml
+      :name: hermes.toml
+
+#. Zugangstoken für Zenodo Sandbox
+
+   Damit GitHub Actions euer Repository in der Zenodo Sandbox veröffentlichen
+   kann, benötigt ihr ein persönliches Zugangstoken. Hierfür müsst ihr euch bei
+   der `Zenodo Sandbox <https://sandbox.zenodo.org/>`_ anmelden, um dann in
+   eurem Benutzerprofil einen `persönliches Zugangstoken
+   <https://sandbox.zenodo.org/account/settings/applications/tokens/new/>`_ mit
+   dem Namen :samp:`HERMES workflow` und den Geltungsbereichen
+   :guilabel:`deposit:actions` und :guilabel:`deposit:write` zu erstellen:
+
+   .. image:: zenodo-personal-access-token.png
+      :alt: Zenodo: Neues persönliches Zugangstoken
+
+#. Kopiert das neu erstellte Token in ein neues `GitHub Secret
+   <https://docs.github.com/de/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository>`_
+   namens :samp:`ZENODO_SANDBOX` in Ihrem Repository: :menuselection:`Settings
+   --> Secrets and Variables --> Actions --> New repository secret`:
+
+   .. image:: github-new-action-secret.png
+      :alt: GitHub: Neues Action-Secret
+
+#. Konfiguriert die GitHub-Aktion
+
+   Das HERMES-Projekt stellt Vorlagen zur kontinuierlichen Integration in einem
+   speziellen Repository bereit: `hermes-hmc/ci-templates
+   <https://github.com/hermes-hmc/ci-templates>`_. Kopiert die Vorlagendatei
+   `TEMPLATE_hermes_github_to_zenodo.yml
+   <https://github.com/hermes-hmc/ci-templates/blob/main/TEMPLATE_hermes_github_to_zenodo.yml>`_
+   in das Verzeichnis :file:`.github/workflows/` eures Repository und benennt
+   sie um, :abbr:`z.B. (zum Beispiel)` in :file:`hermes_github_to_zenodo.yml`.
+
+   Anschließend solltet ihr die Datei durchgehen und nach Kommentaren, die mit
+   :samp:`# ADAPT` gekennzeichnet sind, suchen. Passt die Datei an eure
+   Bedürfnisse an.
+
+   Schließlich fügt ihr die Workflow-Datei zur Versionskontrolle hinzu und
+   schiebt sie auf den GitHub-Server:
+
+   .. code-block:: console
+
+      $ git add .github/workflows/hermes_github_to_zenodo.yml
+      $ git commit -m ":construction_worker: GitHub action for automatic publication with HERMES"
+      $ git push
+
+#. GitHub-Actions sollen Pull Requests in eurem Repository erstellen dürfen
+
+   Der HERMES-Workflow wird keine Metadaten ohne eure Zustimmung
+   veröffentlichen. Stattdessen erstellt er einen Pull-Request, damit ihr die
+   hinterlegten Metadaten genehmigen oder ändern könnt. Um dies zu aktivieren,
+   geht in eurem Repository zu :menuselection:`Settings --> Actions --> General`
+   und aktiviert im Abschnitt :guilabel:`Workflow permissions` :guilabel:`Allow
+   GitHub Actions to create and approve pull requests`.
