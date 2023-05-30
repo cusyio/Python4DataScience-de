@@ -214,6 +214,20 @@ ORMs
 SQL Query Builders
 ------------------
 
+`FastAPI Filter <https://fastapi-filter.netlify.app>`_
+    Querystring-Filter für die Api-Endpunkte und die Swagger-Benutzeroberfläche.
+    Die unterstützten Backends sind :doc:`../../postgresql/sqlalchemy` und
+    :ref:`MongoEngine <mongoengine>`.
+
+    .. image:: https://raster.shields.io/github/stars/arthurio/fastapi-filter
+       :alt: Stars
+    .. image:: https://raster.shields.io/github/contributors/arthurio/fastapi-filter
+       :alt: Mitwirkende
+    .. image:: https://raster.shields.io/github/commit-activity/y/arthurio/fastapi-filter
+       :alt: Commit-Aktivität
+    .. image:: https://raster.shields.io/github/license/arthurio/fastapi-filter
+       :alt: Lizenz
+
 `asyncpgsa <https://github.com/CanopyTax/asyncpgsa>`_
     Python-Wrapper um `asyncpg <https://github.com/MagicStack/asyncpg>`_ für die
     Verwendung mit :doc:`/data-processing/postgresql/sqlalchemy`
@@ -261,7 +275,9 @@ ODMs
     .. image:: https://raster.shields.io/github/license/roman-right/beanie
        :alt: Lizenz
 
-`MongoEngine <https://github.com/MongoEngine/mongoengine>`_
+.. _mongoengine:
+
+`MongoEngine <https://github.com/MongoEngine/mongoengine>`__
     Python Object-Document Mapper für die Arbeit mit MongoDB
 
     .. image:: https://raster.shields.io/github/stars/MongoEngine/mongoengine
