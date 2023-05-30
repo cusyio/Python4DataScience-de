@@ -340,7 +340,7 @@ GitLab CI/CD-Syntax für Datenbank- und -Service-Container
        - postgres
      script:
        - python -m pytest
-         
+
 Zuordnungen
 -----------
 
@@ -501,4 +501,3 @@ Zuordnungen
 | github.event.pull_request.base.repo.full_name |                                               |
 | }}``                                          |                                               |
 +-----------------------------------------------+-----------------------------------------------+
-
