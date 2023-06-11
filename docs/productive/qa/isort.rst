@@ -28,7 +28,7 @@ Konfiguration
     not_skip="__init__.py"
     use_parentheses=true
 
-    known_first_party="jupyter-tutorial"
+    known_first_party=["MY_FIRST_MODULE", "MY_SECOND_MODULE"]
     known_third_party=["mpi4py", "numpy", "requests"]
 
 Um Pakete von Drittanbietern gegenüber euren Projektimporten zu erkennen, könnt

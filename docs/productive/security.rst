@@ -75,11 +75,11 @@ ihr die Situation genauer untersuchen solltet.
 Ihr könnt euch die Aktivitäten eines Projekts auch mit Badges anzeigen lassen,
 :abbr:`z.B. (zum Beispiel)`:
 
-.. image:: https://img.shields.io/github/commit-activity/y/veit/jupyter-tutorial
+.. image:: https://img.shields.io/github/commit-activity/y/veit/python4datascience
    :alt: Jährliche Commit-Aktivität
-.. image:: https://img.shields.io/github/commit-activity/m/veit/jupyter-tutorial
+.. image:: https://img.shields.io/github/commit-activity/m/veit/python4datascience
    :alt: Monatliche Commit-Aktivität
-.. image:: https://img.shields.io/github/commit-activity/w/veit/jupyter-tutorial
+.. image:: https://img.shields.io/github/commit-activity/w/veit/python4datascience
    :alt: Wöchentliche Commit-Aktivität
 
 Gibt es ein Sicherheitskonzept für das Projekt?

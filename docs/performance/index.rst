@@ -258,14 +258,14 @@ einige Python-Konstrukte werden nicht unterstützt.
 Aufgabenplaner
 --------------
 
-:doc:`ipyparallel/index`, :doc:`dask` und `Ray <https://docs.ray.io/>`_
-können Aufgaben in einem Cluster verteilen. Dabei haben sie unterschiedliche
-Schwerpunkte:
+:doc:`jupyter-tutorial:hub/ipyparallel/index`, :doc:`dask` und `Ray
+<https://docs.ray.io/>`_ können Aufgaben in einem Cluster verteilen. Dabei haben
+sie unterschiedliche Schwerpunkte:
 
 * ``ipyparallel`` integriert sich einfach in ein
-  :doc:`../workspace/jupyter/hub/index`.
-* Dask imitiert Pandas, NumPy, Iteratoren, Toolz und PySpark bei der Verteilung
-  ihrer Aufgaben.
+  :doc:`jupyter-tutorial:hub/index`.
+* :doc:`dask` imitiert pandas, NumPy, Iteratoren, Toolz und PySpark bei der
+  Verteilung ihrer Aufgaben.
 * Ray bietet eine einfache, universelle API für den Aufbau verteilter
   Anwendungen.
 
@@ -292,14 +292,13 @@ Unser Beispiel könnte mit Dask so aussehen:
 .. literalinclude:: ds_kmeans.py
    :caption: ds_kmeans.py
    :name: ds_kmeans.py
-   :lines: 1-32
+   :lines: 1-
 
 .. toctree::
     :hidden:
     :titlesonly:
     :maxdepth: 0
 
-    ipyparallel/index
     dask.ipynb
 
 Multithreading, Multiprocessing und Async

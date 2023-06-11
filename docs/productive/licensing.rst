@@ -238,13 +238,13 @@ License-Badge generieren lassen, das ihr :abbr:`z.B. (zum Beispiel)` auf eurer
 
     |License|
 
-    .. |License| image:: https://img.shields.io/github/license/veit/jupyter-tutorial.svg
-       :target: https://github.com/veit/jupyter-tutorial/blob/main/LICENSE
+    .. |License| image:: https://img.shields.io/github/license/veit/python4datascience.svg
+       :target: https://github.com/veit/python4datascience/blob/main/LICENSE
 
 |License|
 
-.. |License| image:: https://img.shields.io/github/license/veit/jupyter-tutorial.svg
-   :target: https://github.com/veit/jupyter-tutorial/blob/main/LICENSE
+.. |License| image:: https://img.shields.io/github/license/veit/python4datascience.svg
+   :target: https://github.com/veit/python4datascience/blob/main/LICENSE
 
 .. _standard_format_licensing:
 

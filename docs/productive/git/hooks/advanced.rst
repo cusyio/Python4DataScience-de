@@ -72,7 +72,7 @@ werden:
     ``$PRE_COMMIT_REMOTE_URL``
         Die URL des entfernten Repository, zu dem gepusht wurde,
         :abbr:`z.B. (zum Beispiel)`
-        :samp:`git@github.com:veit/jupyter-tutorial`
+        :samp:`git@github.com:veit/python4datascience`
     ``$PRE_COMMIT_REMOTE_BRANCH``
         Der Name des entfernten Zweigs, zu dem gepusht wurde, :abbr:`z.B. (zum
         Beispiel)` :samp:`refs/heads/{TARGET-BRANCH}`

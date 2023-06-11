@@ -4,117 +4,66 @@ Einführung
 Zielgruppe
 ----------
 
-Die Nutzung von Jupyter-Notebooks ist vielfältig und reicht von den
-Datenwissenschaften über Data-Engineering und Datenanalyse bis hin zu
-System-Engineering. Dabei sind die Fähigkeiten und Arbeitsabläufe der einzelnen
-Zielgruppen sehr unterschiedlich. Eine der großen Stärken von Jupyter-Notebooks
-ist jedoch, dass sie eine enge Zusammenarbeit dieser unterschiedlichen
-Fachgruppen in funktionsübergreifenden Teams ermöglichen.
+Die Zielgruppen sind vielfältig, von Data-Scientists über Data-Engineers und
+-Analysts  bis hin zu Systems-Engineers. Ihre Fähigkeiten und Arbeitsabläufe
+sind sehr unterschiedlich. Eine der großen Stärken von Python für Data Science
+ist jedoch, dass es diesen verschiedenen Expert*innen ermöglicht, in
+funktionsübergreifenden Teams eng zusammenzuarbeiten.
 
-* **Data Scientists** erforschen Daten mit verschiedenen Parametern und fassen
-  die Ergebnisse zusammen.
-* **Data-Engineers** überprüfen die Qualität des Codes und machen den Code
-  robuster, effizienter und skalierbar.
-* **Data-Analysts** verwenden den von Data-Engineers bereitgestellten Code, um
-  systematisch die Daten zu analysieren.
-* **System-Engineers** stellen die Forschungsplattform auf Basis des
-  :doc:`workspace/jupyter/hub/index` bereit, auf der die anderen Rollen ihre
-  Arbeit ausführen können.
+Data-Scientists
+    untersuchen Daten mit verschiedenen Parametern und fassen die Ergebnisse
+    zusammen.
+Data-Engineers
+    überprüfen die Qualität des Codes und machen ihn robuster, effizienter und
+    skalierbarer.
+Data-Analysts
+    nutzen den von Data-Engineers bereitgestellten Code, um die Daten
+    systematisch zu analysieren.
+Systems-Engineers
+    stellen die Forschungsplattform auf Basis von
+    :doc:`jupyter-tutorial:hub/index` bereit, auf der die anderen ihre Arbeit
+    verrichten können.
 
-Im ersten Teil dieses Tutorial wenden wir uns zunächst an das
-System-Engineering, das eine Plattform auf Basis von Jupyter-Notebooks aufbauen
-und betreiben will. In der Folge erläutern wir dann, wie diese Plattform
-effektiv von den Fachgruppen in den Datenwissenschaften, im Data-Engineering und
-und in der Datenanalyse genutzt werden kann.
+In diesem Tutorial wenden wir uns an Systems-Engineers, die eine auf
+Jupyter-Notebooks basierende Plattform aufbauen und betreiben wollen. Wir
+erklären dann, wie diese Plattform von Data-Scientists, Data-Engineers und
+-Analysts effektiv genutzt werden kann.
 
-Aufbau des Jupyter-Tutorial
----------------------------
+Aufbau des Tutorials Python für Data Science
+--------------------------------------------
 
-Das Jupyter-Tutorial folgt ab Kapitel 3 dem prototypischen Verlauf eines
-Forschungsprojekts:
+Ab Kapitel 2 folgt das Tutorial dem Prototyp eines Forschungsprojekts:
 
-3. **Arbeitsbereich einrichten** mit der Installation und Konfiguration von
-   :doc:`workspace/ipython/index`, :doc:`workspace/jupyter/index` mit
-   :doc:`workspace/jupyter/nbextensions/index` und
-   :doc:`workspace/jupyter/ipywidgets/index`.
-4. **Daten sammeln**, entweder durch eine :doc:`Rest-API
-   <data-processing/requests/index>` oder direkt von einer :doc:`HTML-Seite
+2. :doc:`workspace/index` mit der Installation und Konfiguration von
+   :doc:`workspace/ipython/index`, :doc:`Jupyter notebooks
+   <jupyter-tutorial:index>` mit :doc:`jupyter-tutorial:nbextensions/index`
+   und :doc:`jupyter-tutorial:ipywidgets/index`.
+#. :doc:`data-processing/index` entweder über eine :doc:`REST API
+   <data-processing/requests/index>` oder direkt über eine :doc:`HTML-Seite
    <data-processing/serialisation-formats/xml-html/beautifulsoup>`.
-5. **Daten bereinigen** ist eine wiederkehrende Aufgabe, die u.a. redundante,
-   inkonsistente oder falsch formatierte Daten entfernen oder modifizieren soll.
-6. **Erschließen der Daten –** :doc:`viz/index` umfasst explorative Analysen und
-   das Visualisieren von Daten.
-7. **Refactoring** umfasst das Parametrisieren, Validieren und
-   :doc:`Performance-Optimierungen <performance/index>`.
-8. **Produkt erstellen** umfasst :doc:`productive/testing`,
-   :doc:`productive/logging/index` und :doc:`productive/documenting` der
-   Methoden und Funktionen. Das :doc:`Erstellen von Bibliotheken und Paketen
-   <productive/packaging>` findet ihr in unserem our :doc:`Python Basics
-   Tutorial <python-basics:libs/index>`.
-9. **Web-Anwendungen** können entweder aus Jupyter-Notebooks
-   :doc:`web/dashboards/index` generieren oder umfassendere
-   Applikationslogik benötigen, wie z.B. in
-   :doc:`pyviz:bokeh/embedding-export/flask` demonstriert, oder Daten über eine
-   `RESTful API
-   <https://de.wikipedia.org/wiki/Representational_State_Transfer>`_
+#. :doc:`clean-prep/index` ist eine wiederkehrende Aufgabe, bei der redundante,
+   inkonsistente oder falsch formatierte Daten entfernt oder geändert werden.
+#. :doc:`viz/index` wurde in ein separates Tutorial mit den vielen
+   verschiedenen Möglichkeiten verschoben.
+#. :doc:`performance/index` stellt Möglichkeiten vor, wie ihr euren Code
+   schneller laufen lassen könnt.
+#. :doc:`productive/index` product zeigt, was notwendig ist, um reproduzierbare
+   Ergebnisse zu erzielen: Es werden nicht nur :doc:`reproducible environments
+   <productive/envs/index>` benötigt, sondern auch die Versionierung des
+   :doc:`Quellcodes <productive/git/index>` und der :doc:`Daten
+   <productive/dvc/index>`. Der Quellcode sollte in :doc:`Programmbibliotheken
+   verpackt werden <productive/packaging>` mit :doc:`Dokumentation
+   <productive/documenting>`, :doc:`Lizenz(en) <productive/licensing>`,
+   :doc:`Rests <productive/testing>` und :doc:`Logging
+   <productive/logging/index>`. Schließlich enthält das Kapitel Ratschläge zur
+   :doc:`Verbesserung der Codequalität <productive/qa/index>` und des
+   :doc:`sicheren Betriebs <productive/security>`.
+#. :doc:`web/index` kann entweder Dashboards aus Jupyter-Notebooks generieren
+   oder eine umfassendere Anwendungslogik erfordern, wie in
+   :doc:`pyviz:bokeh/embedding-export/flask`, demonstriert, oder Daten über
+   eine `RESTful API
+   <https://en.wikipedia.org/wiki/Representational_state_transfer>`_
    bereitstellen.
-
-Warum Jupyter?
---------------
-
-Wie können nun diese vielfältigen Aufgaben vereinfacht werden? Es wird sich
-kaum ein Werkzeug finden, das all diese Aufgaben abdeckt und selbst für
-einzelne Aufgaben sind häufig mehrere Werkzeuge notwendig. Daher suchen wir
-auf einer abstrakteren Ebene allgemeinere Muster für Tools und Sprachen, mit
-denen Daten analysiert und visualisiert sowie ein Projekt dokumentiert und
-präsentiert werden kann. Genau dies streben wir mit dem
-`Project Jupyter <https://jupyter.org/>`_ an.
-
-Das Projekt Jupyter startete 2014 mit dem Ziel, ein konsistentes Set von
-Open-Source-Tools für wissenschaftliche Forschung, reproduzierbare Workflows,
-`Computational Narratives
-<https://blog.jupyter.org/project-jupyter-computational-narratives-as-the-engine-of-collaborative-data-science-2b5fb94c3c58>`_
-und Datenanalyse zu erstellen. Bereits 2017 wurde Jupyter dann mit dem `ACM
-Software Systems Award
-<https://blog.jupyter.org/jupyter-receives-the-acm-software-system-award-d433b0dfe3a2>`_
-ausgezeichnet - eine prestigeträchtige Auszeichnung, die es u.a. mit Unix und
-dem Web teilt.
-
-Um zu verstehen, warum Jupyter-Notebooks so erfolgreich sind, schauen wir uns
-die Kernfunktionen einmal genauer an:
-
-`Jupyter Notebook Format <https://nbformat.readthedocs.io/>`_
-    Jupyter Notebooks sind ein offenes, auf JSON basierendes Dokumentenformat
-    mit vollständigen Aufzeichnungen der Sitzungen des Benutzers und des
-    enthaltenen Codes.
-Interactive Computing Protocol
-    Das Notebook kommuniziert mit einem Rechenkernel über das *Interactive Computing
-    Protocol*, einem offenen Netzwerkprotokoll basierend auf JSON-Daten über
-    `ZMQ <https://zeromq.org/>`_ und `WebSockets
-    <https://de.wikipedia.org/wiki/WebSocket>`_.
-:doc:`workspace/jupyter/kernels/index`
-    Rechenkernel sind Prozesse, die interaktiven Code in einer bestimmten
-    Programmiersprache ausführen und die Ausgabe an den Benutzer zurückgeben.
-
-.. seealso::
-   * `Jupyter celebrates 20 years
-     <https://data.berkeley.edu/news/project-jupyter-celebrates-20-years-fernando-perez-reflects-how-it-started-open-sciences>`_
-
-Jupyter-Infrastruktur
----------------------
-
-Eine Plattform für die oben genannten Use Cases erfordert eine umfangreiche
-Infrastruktur, die nicht nur die Bereitstellung der Kernel sowie die
-Parametrisierung, Zeitsteuerung und Parallelisierung von Notebooks erlaubt,
-sondern darüberhinaus auch die gleichmäßige Bereitstellung der Ressourcen.
-
-Mit diesem Tutorial wird eine Plattform bereitgestellt, die über Jupyter
-Notebooks hinaus schnelle, flexible und umfassende Datenanalysen ermöglicht.
-Aktuell gehen wir jedoch noch nicht darauf ein, wie sie sich um *Streaming
-Pipelines* und *Domain Driven Data Stores* erweitern lässt.
-
-Die Beispiele des Jupyter-Tutorials könnt ihr jedoch auch lokal erstellen und
-ausführen.
 
 .. include:: ../README.rst
    :start-after: badges

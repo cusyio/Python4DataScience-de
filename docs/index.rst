@@ -1,14 +1,28 @@
-================
-Jupyter-Tutorial
-================
+=======================
+Python für Data Science
+=======================
 
-`Jupyter-Notebooks <https://jupyter-notebook.readthedocs.io/>`_ erfreuen sich
-in den Datenwissenschaften wachsender Beliebtheit und wurden zum
-De-facto-Standard für schnelles Prototyping und explorative Analysen. Sie
-beflügeln nicht nur Experimente und Innovationen enorm, sie machen auch den
-gesamten Forschungsprozess schneller und zuverlässiger. Zudem entstehen viele
-zusätzliche Komponenten, die die ursprünglichen Grenzen ihrer Nutzung erweitern
-und neue Verwendungsmöglichkeiten eröffnen.
+Dies ist ein Tutorium über Data Science mit Python. Das wirft sofort die Frage
+auf: Was ist Data Science? Der Begriff ist mittlerweile allgegenwärtig, aber es
+gibt keine einheitliche Definition. Manche halten den Begriff sogar für
+überflüssig, denn welche Wissenschaft hat nicht mit Daten zu tun? Dennoch
+scheint mir, dass Data Science mehr als nur ein Hype ist: Wissenschaftliche
+Daten werden immer umfangreicher und lassen sich mit herkömmlichen
+mathematischen und statistischen Methoden allein oft nicht mehr adäquat
+erschließen – zusätzliche Hacking-Fähigkeiten sind gefragt. Es handelt sich
+jedoch nicht um ein neues Wissensgebiet, das ihr erlernen müsst, sondern um eine
+Reihe von Fähigkeiten, die ihr in eurem Bereich anwenden könnt. Ob ihr nun
+astronomische Objekte oder Maschinen analysiert, Börsenkurse prognostiziert oder
+in anderen Bereichen mit Daten arbeitet, das Ziel dieses Tutorials ist es, euch
+in die Lage zu versetzen, Aufgaben in eurem Bereich programmatisch zu lösen.
+
+Dieses Tutorial ist nicht als Einführung in Python oder in die Programmierung im
+Allgemeinen gedacht; dafür gibt es das :doc:`python-basics:index`-Tutorial.
+Stattdessen soll es den Python Data Science Stack – Bibliotheken wie
+:doc:`/workspace/ipython/index`, :doc:`/workspace/numpy/index`,
+:doc:`/workspace/pandas/index`, :doc:`pyviz:matplotlib/index` und verwandte
+Tools – vorstellen, damit ihr anschließend eure Daten effektiv analysieren und
+visualisieren könnt.
 
 .. toctree::
     :hidden:
@@ -16,13 +30,10 @@ und neue Verwendungsmöglichkeiten eröffnen.
     :maxdepth: 0
 
     intro
-    first-steps/index
     workspace/index
     data-processing/index
     clean-prep/index
     viz/index
-    parameterise/index
-    testing/index
     performance/index
     productive/index
     web/index
