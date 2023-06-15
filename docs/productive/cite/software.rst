@@ -65,6 +65,27 @@ Beispiel des Jupyter-Tutorials zeigen, welche Schritte hierzu erforderlich sind:
 #. Wenn ihr noch keinen `Account für Zenodo <https://zenodo.org/signup/>`_
    habt, erstellt einen, bevorzugt mit GitHub.
 
+#. Aktiviert in :menuselection:`Upload --> New Upload` unter :guilabel:`Basic
+   information` den Button :guilabel:`Reserve DOI` um einen :abbr:`DOI (Digital
+   Object Identifier)` für euren Upload zu reservieren. Lasst das Formular offen
+   um später eure Software hochladen zu können.
+
+#. Erstellt oder ändert die :ref:`codemeta`- und :ref:`cff`-Dateien in eurem
+   Software-Verzeichnis.
+
+#. Bindet den Badge in der :file:`README`-Datei eurer Software ein:
+
+   Markdown:
+    .. code-block:: md
+
+        [![DOI](https://zenodo.org/badge/307380211.svg)](https://zenodo.org/badge/latestdoi/307380211)
+
+   reStructedText:
+    .. code-block:: rst
+
+        .. image:: https://zenodo.org/badge/307380211.svg
+           :target: https://zenodo.org/badge/latestdoi/307380211
+
 #. Nun wählt das Repository aus, das ihr archivieren wollt:
 
    .. figure:: zenodo-github.png
@@ -85,19 +106,6 @@ Beispiel des Jupyter-Tutorials zeigen, welche Schritte hierzu erforderlich sind:
 
    .. figure:: zenodo-release.png
       :alt: Zenodo Release
-
-#. Schließlich könnt ihr den Badge in der README-Datei eurer Software einbinden:
-
-   Markdown:
-    .. code-block:: md
-
-        [![DOI](https://zenodo.org/badge/307380211.svg)](https://zenodo.org/badge/latestdoi/307380211)
-
-   reStructedText:
-    .. code-block:: rst
-
-        .. image:: https://zenodo.org/badge/307380211.svg
-           :target: https://zenodo.org/badge/latestdoi/307380211
 
 Metadaten-Formate
 -----------------
