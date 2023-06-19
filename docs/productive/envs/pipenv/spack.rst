@@ -2,9 +2,9 @@ Pipenv und Spack
 ================
 
 Pipenv wurde bereits zur :doc:`Installation von Jupyter Notebooks
-<jupyter-tutorial:first-steps/install>` verwendet. Wir benötigen hier jedoch
-Pipenv für unsere :doc:`Spack-Environments <../../envs/spack/envs>` um
-einerseits binärkompatible Builds mit Spack erzeugen zu können und andererseits
+<jupyter-tutorial:notebook/install>` verwendet. Wir benötigen hier jedoch Pipenv
+für unsere :doc:`Spack-Environments <../../envs/spack/envs>` um einerseits
+binärkompatible Builds mit Spack erzeugen zu können und andererseits
 Python-Pakete für die Datenerhebung, -Visualisierung :abbr:`etc. (et cetera)`
 einfach nutzen zu können.
 
