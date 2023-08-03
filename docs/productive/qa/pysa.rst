@@ -41,7 +41,7 @@ Praktische Beispiele findet ihr im `Pyre-Repository
 Verwendung
 ----------
 
-Pyre kann aufgerufen werden, z.B. mit
+Pyre kann aufgerufen werden, :abbr:`z.B. (zum Beispiel)` mit
 
 .. code-block:: console
 
@@ -63,7 +63,7 @@ Installation
 Verwendung
 ~~~~~~~~~~
 
-#. Parsen der JSON-Datei, z.B. mit
+#. Parsen der JSON-Datei, :abbr:`z.B. (zum Beispiel)` mit
 
    .. code-block:: console
 

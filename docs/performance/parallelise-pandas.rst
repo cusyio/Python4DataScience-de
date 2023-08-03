@@ -1,4 +1,4 @@
-Pandas parallelisieren
+pandas parallelisieren
 ======================
 
 In :doc:`pandas:user_guide/enhancingperf` werden einige Möglichkeiten

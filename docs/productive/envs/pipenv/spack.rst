@@ -13,22 +13,22 @@ Spack-Environment:
 
    .. code-block:: console
 
-    $  spack env activate python-38
+    $  spack env activate python-311
     $ spack env status
-    ==> In environment python-38
+    ==> In environment python-311
     $ which python
-    /srv/jupyter/spack/var/spack/environments/python-38/.spack-env/view/bin/python
+    /srv/jupyter/spack/var/spack/environments/python-311/.spack-env/view/bin/python
 
 Das bestehende Pipenv-Environment könnt ihr anschließend installieren mit:
 
    .. code-block:: console
 
     $ cd ~/jupyter-tutorial/pipenvs/python-374/
-    $ pipenv --python=/Users/veit/jupyter-tutorial/spackenvs/python-374/.spack-env/view/bin/python --site-packages
+    $ pipenv --python=/Users/veit/jupyter-tutorial/spackenvs/python-311/.spack-env/view/bin/python --site-packages
     $ pipenv install
     Creating a virtualenv for this project…
-    Pipfile: /Users/veit/jupyter-tutorial/pipenvs/python-374/Pipfile
-    Using /Users/veit/jupyter-tutorial/spackenvs/python-374/.spack-env/view/bin/python3.7 (3.7.4) to create virtualenv…
+    Pipfile: /Users/veit/jupyter-tutorial/pipenvs/python-311/Pipfile
+    Using /Users/veit/jupyter-tutorial/spackenvs/python-311/.spack-env/view/bin/python3.11 (3.11.4) to create virtualenv…
     …
 
 Dies verwendet das mit Spack installierte Environment und installiert weitere

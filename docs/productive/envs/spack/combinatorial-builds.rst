@@ -16,15 +16,15 @@ Environment modules
 
 * Vorteile
 
-    * tauschen verschiedene Versionen dynamisch in der Shell aus
-    * abstrahieren viel von der Environment-Komplexität
+  * tauschen verschiedene Versionen dynamisch in der Shell aus
+  * abstrahieren viel von der Environment-Komplexität
 
 * Nachteile
 
-    * Benutzer müssen daran denken, mit welchen Versionen der Build
-      durchgeführt wurde
-    * Es ist einfach, das falsche Modul zu laden und einen Build fehlschlagen
-      zu lassen
+  * Benutzer müssen daran denken, mit welchen Versionen der Build
+    durchgeführt wurde
+  * Es ist einfach, das falsche Modul zu laden und einen Build fehlschlagen
+    zu lassen
 
 Dependency DAG
 --------------
@@ -167,32 +167,47 @@ Spack bietet eine ``spec``-Syntax zum Beschreiben benutzerdefinierter DAGs:
 
     from spack import *
 
+
     class Dyninst(Package):
-        """API for dynamic binary instrumentation.""”
+        """API for dynamic binary instrumentation."""
+
         homepage = "https://paradyn.org"
 
-        version('8.2.1', 'abf60b7faabe7a2e’, url="http://www.paradyn.org/release8.2/DyninstAPI-8.2.1.tgz")
-        version('8.1.2', 'bf03b33375afa66f’, url="http://www.paradyn.org/release8.1.2/DyninstAPI-8.1.2.tgz")
-        version('8.1.1', 'd1a04e995b7aa709’, url="http://www.paradyn.org/release8.1/DyninstAPI-8.1.1.tgz")
+        version(
+            "8.2.1",
+            "abf60b7faabe7a2e",
+            url="http://www.paradyn.org/release8.2/DyninstAPI-8.2.1.tgz",
+        )
+        version(
+            "8.1.2",
+            "bf03b33375afa66f",
+            url="http://www.paradyn.org/release8.1.2/DyninstAPI-8.1.2.tgz",
+        )
+        version(
+            "8.1.1",
+            "d1a04e995b7aa709",
+            url="http://www.paradyn.org/release8.1/DyninstAPI-8.1.1.tgz",
+        )
 
         depends_on("libelf")
         depends_on("libdwarf")
         depends_on("boost@1.42:")
 
         def install(self, spec, prefix):
-            libelf = spec['libelf'].prefix
-            libdwarf = spec['libdwarf'].prefix
+            libelf = spec["libelf"].prefix
+            libdwarf = spec["libdwarf"].prefix
 
-            with working_dir('spack-build', create=True):
-                cmake('..',
-                    '-DBoost_INCLUDE_DIR=%s' % spec['boost'].prefix.include,
-                    '-DBoost_LIBRARY_DIR=%s' % spec['boost'].prefix.lib,
-                    '-DBoost_NO_SYSTEM_PATHS=TRUE’
-                    *std_cmake_args)
+            with working_dir("spack-build", create=True):
+                cmake(
+                    "..",
+                    "-DBoost_INCLUDE_DIR=%s" % spec["boost"].prefix.include,
+                    "-DBoost_LIBRARY_DIR=%s" % spec["boost"].prefix.lib,
+                    "-DBoost_NO_SYSTEM_PATHS=TRUE" * std_cmake_args,
+                )
                 make()
                 make("install")
 
-        @when('@:8.1')
+        @when("@:8.1")
         def install(self, spec, prefix):
             configure("--prefix=" + prefix)
             make()
@@ -207,11 +222,11 @@ Spack bietet eine ``spec``-Syntax zum Beschreiben benutzerdefinierter DAGs:
 
         class Vim(AutotoolsPackage):
             ...
-            variant('python', default=False, description="build with Python")
-            depends_on('python', when='+python')
+            variant("python", default=False, description="build with Python")
+            depends_on("python", when="+python")
 
-            variant('ruby', default=False, description="build with Ruby")
-            depends_on('ruby', when='+ruby')
+            variant("ruby", default=False, description="build with Ruby")
+            depends_on("ruby", when="+ruby")
 
   * …  und zum Installieren verwenden:
 

@@ -49,7 +49,7 @@ Konfiguration
 Ihr könnt ``check-manifest`` so konfigurieren, dass bestimmte Dateimuster
 ignoriert werden, indem ihr einen Abschnitt ``[tool.check-manifest]`` in eurer
 ``pyproject.toml``-Datei oder einen Abschnitt ``[check-manifest]`` in eurer
-``setup.cfg`` oder ``tox.ini``-Datei anlegt, z.B.:
+``setup.cfg`` oder ``tox.ini``-Datei anlegt, :abbr:`z.B. (zum Beispiel)`:
 
 .. code-block:: yaml
 

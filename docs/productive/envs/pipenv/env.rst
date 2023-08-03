@@ -28,8 +28,8 @@ Wenn eine ``.env``-Datei in eurer virtuellen Umgebung vorhanden ist, werden
     >>> os.environ['USERNAME']
     'Veit'
 
-Auch die Credentials, z.B. der Versionsverwaltung lassen sich im ``Pipfile``
-angeben, z.B.:
+Auch die Credentials, :abbr:`z.B. (zum Beispiel)` der Versionsverwaltung lassen
+sich im ``Pipfile`` angeben, :abbr:`z.B. (zum Beispiel)`:
 
 .. code-block:: ini
 

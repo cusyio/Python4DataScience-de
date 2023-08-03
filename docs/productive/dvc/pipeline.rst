@@ -74,10 +74,10 @@ Die generierte ``dvc.yaml``-Datei sieht dann z.B. folgendermaßen aus:
 Da die Daten im Ausgabeverzeichnis nie mit Git versioniert werden sollten, hat
 ``dvc run`` dies auch bereits die ``data/.gitignore``-Datei geschrieben:
 
- .. code-block:: console
+.. code-block:: console
 
-      /data.xml
-    + /splitted
+     /data.xml
+   + /splitted
 
 Anschließend müssen die geänderten Daten nur noch in Git bzw. DVC übernommen
 werden:

@@ -12,7 +12,7 @@ Auflisten der verfügbaren Pakete
     abyss                                  py-fiscalyear
     …
 
-oder zum filtern nach bestimmten Paketen, z.B.
+oder zum filtern nach bestimmten Paketen, :abbr:`z.B. (zum Beispiel)`
 
 .. code-block:: console
 
@@ -113,7 +113,8 @@ Auflisten der installierten Pakete
 ``spack version``
 -----------------
 
-``spack version`` zeigt die verfügbaren Versionen an, z.B.
+``spack version`` zeigt die verfügbaren Versionen an, :abbr:`z.B. (zum
+Beispiel)`
 
 .. code-block:: console
 
@@ -131,7 +132,7 @@ Auflisten der installierten Pakete
 Installation bestimmter Pakete
 ------------------------------
 
-z.B.:
+:abbr:`z.B. (zum Beispiel)`
 
 .. code-block:: console
 
@@ -183,7 +184,7 @@ Extensions und Python-Support
 Das Installationsmodell von Spack geht davon aus, dass jedes Paket in einem
 eigenen Installations-Präfix lebt. Module in interpretierten Sprachen wie
 Python werden typischerweise im ``$prefix/lib/python-3.7/site-packages/``
-installiert, also z.B.
+installiert, also :abbr:`z.B. (zum Beispiel)`
 ``/Users/veit/spack/opt/spack/darwin-mojave-x86_64/clang-10.0.1-apple/py-numpy-1.16.4-45sqnufha2yprpx6rxyelsokky65ucdy/lib/python3.7/site-packages/numpy``.
 Es können jedoch auch Pakete verwendet werden, die in einem anderen Präfix
 installiert wurden. In Spack wird ein solches Paket als *Extension* bezeichnet.

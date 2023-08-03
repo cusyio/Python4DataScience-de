@@ -4,18 +4,22 @@ Beispiel
 1. Erstellen
 ------------
 
-Erstellt die Datei ``main.py`` mit:
+Erstellt die Datei :file:`main.py` mit:
 
 .. code-block:: python
 
     from typing import Optional
+
     from fastapi import FastAPI
 
+
     app = FastAPI()
+
 
     @app.get("/")
     def read_root():
         return {"Hello": "World"}
+
 
     @app.get("/items/{item_id}")
     def read_item(item_id: int, q: Optional[str] = None):
@@ -64,30 +68,37 @@ Jetzt ändern wir die Datei ``main.py`` um einen Text von einer ``PUT``-Anfrage
 zu erhalten:
 
 .. code-block:: python
-   :emphasize-lines: 3,7-10,20-22
+   :emphasize-lines: 3,11-14,27-
 
     from typing import Optional
-    from fastapi import FastAPI
+
     from pydantic import BaseModel
 
+    from fastapi import FastAPI
+
+
     app = FastAPI()
+
 
     class Item(BaseModel):
         name: str
         price: float
         is_offer: Optional[bool] = None
 
+
     @app.get("/")
     def read_root():
         return {"Hello": "World"}
+
 
     @app.get("/items/{item_id}")
     def read_item(item_id: int, q: Optional[str] = None):
         return {"item_id": item_id, "q": q}
 
+
     @app.put("/items/{item_id}")
     def update_item(item_id: int, item: Item):
-        return {"item_name": item.name, "item_id": item_id}
+    return {"item_name": item.name, "item_id": item_id}
 
 Der Server sollte die Datei automatisch neu laden, da wir dem unicorn-Befehl
 ``--reload`` hinzugefügt haben. Auch die interaktive API-Dokumentation zeigt nun

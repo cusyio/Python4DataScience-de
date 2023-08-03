@@ -3,7 +3,7 @@ IPython-Erweiterungen
 
 IPython-Erweterungen sind Python-Module, die das Verhalten der Shell ändern. Sie
 werden mit einem importierbaren Modulnamen bezeichnet und befinden sich
-üblicherweise in ``.ipython/extensions/``.
+üblicherweise in :file:`.ipython/extensions/`.
 
 Einige wichtige Erweiterungen sind bereits in IPython enthalten:
 :label:`extensions_autoreload` und :label:`extensions_storemagic`. Andere
@@ -19,33 +19,22 @@ Erweiterungen verwenden
 -----------------------
 
 Die ``%load_ext``-Magie kann verwendet werden um Erweiterungen zu laden während
-IPython ausgeführt wird.
-
-.. code-block:: ipython
-
-    %load_ext myextension
+IPython ausgeführt wird, :abbr:`z.B. (zum Beispiel)` :samp:` %load_ext
+{MYEXTENSION}`.
 
 Alternativ kann eine Erweiterung auch bei jedem Start von IPython geladen
-werden, indem sie in der IPython-Konfigurationsdate aufgelistet wird:
-
-.. code-block:: Python
-
-    c.InteractiveShellApp.extensions = [
-        'myextension'
-    ]
+werden, indem sie in der IPython-Konfigurationsdate aufgelistet wird,
+:abbr:`z.B. (zum Beispiel)` :samp:`c.InteractiveShellApp.extensions =
+["{MYEXTENSION}"]`.
 
 Falls ihr noch keine IPython-Konfigurationsdatei erstellt habt, könnt ihr dies
-mit:
-
-.. code-block:: console
-
-    $ ipython profile create [profilename]
+mit :samp:`$ ipython profile create [{PROFILENAME}]`,
 
 Falls kein Profilname angegeben wird, wird ``default`` verwendet. Üblicherweise
-wird die Datei dann in ``~/.ipython/profile_default/`` erstellt und je nach
-Verwendungszweck benannt: ``ipython_config.py`` wird für alle IPython-Befehle
-verwendet, während ``ipython_notebook_config.py`` nur für Befehle in
-IPython-Notebooks Verwendung findet.
+wird die Datei dann in :file:`~/.ipython/profile_default/` erstellt und je nach
+Verwendungszweck benannt: :file:`ipython_config.py` wird für alle
+IPython-Befehle verwendet, während :file:`ipython_notebook_config.py` nur für
+Befehle in IPython-Notebooks Verwendung findet.
 
 IPython-Erweiterungen schreiben
 -------------------------------

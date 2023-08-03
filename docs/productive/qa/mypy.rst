@@ -14,7 +14,8 @@ Mit Mypy könnt ihr eine statische Typüberprüfung vornehmen.
 Installation
 ------------
 
-Mypy erfordert Python≥3.5. Dann kann es installiert werden, z.B. mit:
+Mypy erfordert Python≥3.5. Dann kann es installiert werden, :abbr:`z.B. (zum
+Beispiel)` mit:
 
 .. code-block:: console
 
@@ -23,7 +24,7 @@ Mypy erfordert Python≥3.5. Dann kann es installiert werden, z.B. mit:
 Überprüfen
 ----------
 
-Dann könnt ihr es überprüfen, z.B. mit:
+Dann könnt ihr es überprüfen, :abbr:`z.B. (zum Beispiel)` mit:
 
 .. code-block:: console
 
@@ -31,7 +32,7 @@ Dann könnt ihr es überprüfen, z.B. mit:
 
 .. note::
     Obwohl Mypy mit Python3 installiert werden muss, kann es auch Python2-Code
-    analysieren, z.B. mit:
+    analysieren, :abbr:`z.B. (zum Beispiel)` mit:
 
     .. code-block:: console
 

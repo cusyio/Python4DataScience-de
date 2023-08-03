@@ -21,13 +21,16 @@ Connection
     ``.cursor ()``
         Rückgabe eines neuen Corsor-Objekts über die Verbindung
 
-    Beispiel::
+    Beispiel:
+
+    .. code-block:: python
 
         import driver
 
         conn = driver.connect(database='example',
                                host='localhost',
                                port=5432)
+
         try:
             # create the cursor
             # use the cursor
@@ -67,13 +70,17 @@ Cursor
         `` .execute*()`` mit ``SELECT``, ``UPDATE`` oder ``INSERT``
         ergab.
 
-    Beispiel::
+    Beispiel:
+
+    .. code-block:: python
 
         cursor = conn.cursor()
-        cursor.execute("""
+        cursor.execute(
+            """
             SELECT column1, column2
             FROM tableA
-        """)
+            """
+        )
         for column1, column2 in cursor.fetchall():
             print(column1, column2)
 

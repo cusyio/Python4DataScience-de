@@ -20,8 +20,8 @@ Installation
 Zuverlässigkeitsanalyse
 -----------------------
 
-Eine FORM (first-order reliability method)-Analyse kann z.B. zu folgendem
-Ergebnis führen:
+Eine FORM (first-order reliability method)-Analyse kann :abbr:`z.B. (zum
+Beispiel)` zu folgendem Ergebnis führen:
 
 .. code-block:: console
 

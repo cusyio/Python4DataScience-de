@@ -13,15 +13,16 @@ Nachdem nun ``requests`` installiert ist, kann es verwendet werden.
 
     import requests
 
-    response = requests.get('https://cusy.io')
+
+    response = requests.get("https://cusy.io")
 
     print(response.status_code)
 
 #. Anschließend kann das Skript ausgeführt werden mit:
 
-.. code-block:: console
+   .. code-block:: console
 
-    $ pipenv run python main.py
+      $ pipenv run python main.py
 
 #. Als Ergebnis des Aufrufs solltet ihr den HTTP-Status-Code ``200`` erhalten.
 

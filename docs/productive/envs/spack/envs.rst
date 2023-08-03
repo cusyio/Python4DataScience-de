@@ -10,7 +10,7 @@ Environments, ``spack.yaml`` und ``spack.lock``
     ==>   spack env activate python-311
 
    Alternativ kann sie auch an beliebigen anderen Orten gespeichert werden,
-   z.B.:
+   :abbr:`z.B. (zum Beispiel)`:
 
    .. code-block:: console
 
@@ -170,7 +170,7 @@ Installation zusätzlicher Pakete
 
 Zusätzliche Pakete können in der virtuellen Umgebung mit ``spack add`` und
 ``spack install`` installiert werden. Für `Matplotlib <https://matplotlib.org/>`_
-sieht dies z.B. folgendermaßen aus:
+sieht dies :abbr:`z.B. (zum Beispiel)` folgendermaßen aus:
 
 .. code-block:: console
 
@@ -226,7 +226,8 @@ sieht dies z.B. folgendermaßen aus:
 Konfiguration
 -------------
 
-``spack spec`` spezifiziert die Abhängigkeiten bestimmter Pakete, z.B.:
+``spack spec`` spezifiziert die Abhängigkeiten bestimmter Pakete, :abbr:`z.B.
+(zum Beispiel)`:
 
 .. code-block:: console
 

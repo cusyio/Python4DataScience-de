@@ -3,7 +3,8 @@ Psycopg
 
 `Pycopg <https://www.psycopg.org/>`_ ist ein PostgreSQL-Adapter, der auf der
 C-Bibliothek für PostgreSQL `libpq
-<https://www.postgresql.org/docs/current/libpq.html>`_ basiert. Er bietet u.a.:
+<https://www.postgresql.org/docs/current/libpq.html>`_ basiert. Er bietet
+:abbr:`u.a. (unter anderem)`:
 
 * DB-API-2.0-Kompatibilität
 * Multithreading bei Thread Safety
@@ -20,9 +21,9 @@ C-Bibliothek für PostgreSQL `libpq
 Installation
 ------------
 
-Ihr könnt psycopg2 mit Spack installieren, z.B. mit
+Ihr könnt psycopg2 mit Spack installieren, :abbr:`z.B. (zum Beispiel)` mit
 
 .. code-block:: console
 
-    $ spack env activate python-374
-    $ spack install py-psycopg2 ^python@3.7.4
+    $ spack env activate python-311
+    $ spack install py-psycopg2

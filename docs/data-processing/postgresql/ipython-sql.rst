@@ -30,7 +30,7 @@ Erste Schritte
 
     In [2]: %sql postgresql://
 
-#. Anschließend könnt ihr eine Tabelle erstellen, z.B.:
+#. Anschließend könnt ihr eine Tabelle erstellen, :abbr:`z.B. (zum Beispiel)`:
 
    .. code-block:: python
 
@@ -71,7 +71,7 @@ lassen:
         Automatically limit the size of the returned result sets
     SqlMagic.autopandas=<Bool>
         Current: False
-        Return Pandas DataFrames instead of regular result sets
+        Return pandas DataFrames instead of regular result sets
     ...
 
 .. note::
@@ -80,7 +80,7 @@ lassen:
    werden wie in der `pandas-Dokumentation
    <https://pandas.pydata.org/pandas-docs/version/0.18.1/options.html#frequently-used-options>`_ beschrieben.
 
-Pandas
+pandas
 ------
 
 Wenn pandas installiert ist, kann die ``DataFrame``-Methode verwendet werden:
@@ -107,31 +107,32 @@ PostgreSQL-Funktionen
 
 Meta-Befehle von ``psql`` lassen sich auch in ipython-sql verwenden:
 
-``-l``, ``--connections``
+:samp:`-l`, :samp:`--connections`
     listet alle aktiven Verbindungen auf
-``-x``, ``--close <session-name>``
+:samp:`-x`, :samp:`--close {SESSION-NAME}`
     schließt benannte Verbindung
-``-c``, ``--creator <creator-function>``
+:samp:`-c`, :samp:`--creator {CREATOR-FUNCTION}`
     gibt die Creator-Funktion für eine neue Verbindung an
-``-s``, ``--section <section-name>``
+:samp:`-s`, :samp:`--section {SECTION-NAME}`
     gibt Abschnitt von ``dsn_file`` an, der in einer Verbindung verwendet werden
     soll
-``-p``, ``--persist``
+:samp:`-p`, :samp:`--persist`
     erstellt aus einem benannten DataFrame eine Tabelle in der Datenbank
-``--append``
-    ähnlich wie ``--persist``, die Inhalte werden jedoch an die Tabelle
+:samp:`--append`
+    ähnlich wie :samp:`--persist`, die Inhalte werden jedoch an die Tabelle
     angehängt
-``-a``, ``--connection_arguments <"{connection arguments}">``
+:samp:`-a`, :samp:`--connection_arguments "\{{connection arguments}\}"`
     gibt ein Dict von Verbindungsargumenten an, die an den SQL-Treiber
     übergeben werden
-``-f``, ``--file <path>``
+:samp:`-f`, :samp:`--file {PATH}`
     führt SQL aus der Datei unter diesem Pfad aus
 
 .. seealso::
    * `pgspecial <https://pypi.org/project/pgspecial/>`_
 
 .. warning::
-   Da ipython-sql ``--``-Optionen wie z.B. ``--persist`` verarbeitet, und
-   gleichzeitig ``--`` als SQL-Kommentar akzeptiert, muss der Parser einige
-   Annahmen treffen: so wird z.B. ``--persist is great`` in der ersten Zeile als
-   Argument und nicht als Kommentar verarbeitet.
+   Da ipython-sql ``--``-Optionen wie :abbr:`z.B. (zum Beispiel)` ``--persist``
+   verarbeitet, und gleichzeitig ``--`` als SQL-Kommentar akzeptiert, muss der
+   Parser einige Annahmen treffen: so wird :abbr:`z.B. (zum Beispiel)`
+   ``--persist is great`` in der ersten Zeile als Argument und nicht als
+   Kommentar verarbeitet.

@@ -15,7 +15,7 @@ Beste ist, dass diese Daten gemeinfrei sind:
     $ mkdir nedata
     $ cd !$
     cd nedata
-    $ wget http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/ne_110m_admin_0_countries.zip
+    $ wget https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/110m/cultural/ne_110m_admin_0_countries.zip
 
 #. Entpacken der Datei
 

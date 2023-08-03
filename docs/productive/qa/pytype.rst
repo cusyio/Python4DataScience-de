@@ -56,7 +56,7 @@ Für ein Python-Paket könnt ihr Pytype einrichten indem ihr eine
 
     $ pipenv run pytype --generate-config pytype.cfg
 
-Diese beginnt dann z.B. mit
+Diese beginnt dann :abbr:`z.B. (zum Beispiel)` mit
 
 .. code-block:: ini
 

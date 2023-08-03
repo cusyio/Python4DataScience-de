@@ -62,7 +62,8 @@ Beispiel
 
     import toml
 
-    config = toml.load('pyproject.toml')
+
+    config = toml.load("pyproject.toml")
 
 .. seealso::
 
