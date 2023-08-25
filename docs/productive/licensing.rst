@@ -35,15 +35,16 @@ Sie werden von der `Free Software Foundation (FSF)
 (OSI) <https://opensource.org/>`_ definiert. Dabei kann im Wesentlichen
 unterschieden werden zwischen Copyleft-, freizügigen- und gemeinfreien Lizenzen.
 
-Copyleft-Lizenzen
-~~~~~~~~~~~~~~~~~
+Copyleft- oder reziproke Lizenzen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Copyleft-Lizenzen verpflichten die Lizenznehmer, jegliche Bearbeitung der
-Software unter die Lizenz des ursprünglichen Werks zu stellen. Dies soll
-Nutzungseinschränkungen der Software verhindern. Die bekannteste Copyleft-Lizenz
-ist die :abbr:`GPL (GNU General Public License)`. Dabei wird das Copyleft der
-GPL als sehr stark, das der Mozilla Public License hingegen als sehr schwach
-angesehen.
+Software (:abbr:`sog. (sogenannte)` Derivate, unter die Lizenz des
+ursprünglichen Werks zu stellen. Dies soll Nutzungseinschränkungen der Software
+verhindern. Die bekannteste Copyleft-Lizenz ist die :abbr:`GPL (GNU General
+Public License)`. Dabei wird das Copyleft der :abbr:`GPL (GNU General Public
+License)` als sehr stark, das der Mozilla Public License hingegen als sehr
+schwach angesehen.
 
 Da die Lizenzgeber nicht selbst an ihr eigenes Copyleft gebunden sind, können
 sie neue Versionen auch unter proprietärer Lizenz veröffentlichen oder Dritten
