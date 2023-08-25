@@ -50,9 +50,17 @@ Da die Lizenzgeber nicht selbst an ihr eigenes Copyleft gebunden sind, können
 sie neue Versionen auch unter proprietärer Lizenz veröffentlichen oder Dritten
 dies erlauben (Mehrfachlizenzierung).
 
-Durch Copyleft-Lizenzen können jedoch schnell Inkompatibilitäten auch zu freien
-Lizenzen ohne Copyleft entstehen. So ist beispielsweise die 3-Clause-BSD-Lizenz
-mit der GPL inkompatibel.
+Durch Copyleft-Lizenzen können bei der Verbreitung zusammen mit Software unter
+anderen freien Lizenzen jedoch schnell Inkompatibilitäten entstehen. So ist
+beispielsweise die 3-Clause-BSD-Lizenz mit der :abbr:`GPL (GNU General Public
+License)` inkompatibel.
+
+Die `EUPL
+<https://joinup.ec.europa.eu/collection/eupl/introduction-eupl-licence>`_ ist
+hingegen eine reziproke Lizenz, die zumindest mit den meisten anderen offenen
+reziproken Lizenzen kompatibel und interoperabel ist: Die kompatiblen
+Lizenzverpflichtungen haben Vorrang, wenn sie mit den sich aus der EUPL
+ergebenden Verpflichtungen in Konflikt geraten.
 
 Freizügige Open-Source-Lizenzen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
