@@ -42,8 +42,10 @@ Copyleft-Lizenzen verpflichten die Lizenznehmer, jegliche Bearbeitung der
 Software (:abbr:`sog. (sogenannte)` Derivate, unter die Lizenz des
 ursprünglichen Werks zu stellen. Dies soll Nutzungseinschränkungen der Software
 verhindern. Die bekannteste Copyleft-Lizenz ist die :abbr:`GPL (GNU General
-Public License)`. Dabei wird das Copyleft der :abbr:`GPL (GNU General Public
-License)` als sehr stark, das der Mozilla Public License hingegen als sehr
+Public License)`. Dabei wird das Copyleft der `GPL (GNU General Public
+License) <https://de.wikipedia.org/wiki/GNU_General_Public_License>`_ als sehr
+stark, das der `Mozilla Public License
+<https://de.wikipedia.org/wiki/Mozilla_Public_License>`_ hingegen als sehr
 schwach angesehen.
 
 Da die Lizenzgeber nicht selbst an ihr eigenes Copyleft gebunden sind, können
@@ -69,14 +71,15 @@ Freizügige oder permissive Open-Source-Lizenzen erlauben eine breitere
 Wiederverwendung als die Copyleft-Lizenzen. Ableitungen und Kopien des
 Quellcodes können unter Bedingungen verbreitet werden, die grundlegend andere
 Eigenschaften haben als die der Originallizenz. Die bekanntesten Beispiele
-solcher Lizenzen sind die MIT-Lizenz und die BSD-Lizenz.
+solcher Lizenzen sind `MIT <https://de.wikipedia.org/wiki/MIT-Lizenz>`_ und
+`BSD <https://de.wikipedia.org/wiki/BSD-Lizenz>`_.
 
 Gemeinfreie Lizenzen
 ~~~~~~~~~~~~~~~~~~~~
 
 Bei gemeinfreien oder Public Domain-Lizenzen gehen die Urheberrechte an die
-Allgemeinheit über. Zur Kennzeichnung der Freigabe weitest möglicher
-Nutzungsrechte wurde die Creative Commons Zero-Lizenz erstellt.
+Allgemeinheit über. Zur Kennzeichnung der Gemeinfreiheit von Software wurde die
+`WTFPL <https://de.wikipedia.org/wiki/WTFPL>`_ erstellt.
 
 Nicht-Software-Lizenzen
 -----------------------
