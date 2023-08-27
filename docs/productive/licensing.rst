@@ -5,7 +5,7 @@ Damit andere eure Software verwenden können, sollte sie eine oder mehrere
 Lizenzen erhalten, die die Nutzungsbedingungen beschreiben. Andernfalls dürfte
 sie meist urheberrechtlich geschützt sein. Urheber sind diejenigen, die zur
 Software originär beigetragen haben. Wenn eine Software relizenziert werden
-soll, ist die Zustimmung aller Personen erforderlich, die Urheberschaft
+soll, ist häufig die Zustimmung aller Personen erforderlich, die Urheberschaft
 beanspruchen können.
 
 .. note::
@@ -199,9 +199,20 @@ kompatibel mit der GPL v2.
 Abhängigkeiten überprüfen
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Daher solltet ihr schauen, welche Lizenzen diejenigen Pakete haben, von denen
-ihr abhängt und zu denen ihr kompatibel sein solltet. Zur Analyse von Lizenzen
-könnt ihr euch `License compatibility
+Zudem solltet ihr schauen, welche Lizenzen diejenigen Pakete haben, von denen
+ihr abhängt und zu denen ihr kompatibel sein solltet:
+
+.. figure:: software-license-compatiblity.svg
+   :alt: Software-Lizenz-Kompatibilität
+
+   Lizenzkompatibilität für abgeleitete Werke oder kombinierte Werke aus eigenem
+   Code und externem Code, der unter einer Open-Source-Lizenz steht (aus
+   `License compatibility
+   <https://en.wikipedia.org/wiki/License_compatibility>`_, in Anlehnung an `The
+   Rise of Open Source Licensing
+   <https://www.turre.com/pub/openbook_valimaki.pdf>`_ S. 119).
+
+Zur Analyse von Lizenzen könnt ihr euch auch `License compatibility
 <https://en.wikipedia.org/wiki/License_compatibility>`_ anschauen und den
 `licensechecker
 <https://boyter.org/2018/03/licensechecker-command-line-application-identifies-software-license/>`_,
