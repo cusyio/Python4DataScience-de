@@ -221,7 +221,15 @@ Lizenzen durchsucht.
 
 Darüberhinaus kann es auch sinnvoll sein, ein Package unter mehreren Lizenzen
 zu veröffentlichen. Ein Beispiel hierfür ist `cryptography/LICENSE
-<https://github.com/pyca/cryptography/blob/adf234e/LICENSE>`_.
+<https://github.com/pyca/cryptography/blob/adf234e/LICENSE>`_:
+
+    This software is made available under the terms of *either* of the licenses
+    found in LICENSE.APACHE or LICENSE.BSD. Contributions to cryptography are
+    made under the terms of *both* these licenses.
+
+    The code used in the OpenSSL locking callback and OS random engine is
+    derived from the same in CPython, and is licensed under the terms of the PSF
+    License Agreement.
 
 GitHub
 ------
