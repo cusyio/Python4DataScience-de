@@ -405,6 +405,10 @@ Alternativen
 `ClearlyDefined <https://clearlydefined.io/>`_
     sammelt und zeigt Informationen über die Lizenzierungs- und
     Urheberrechtssituation eines Software-Projekts an.
+
+    .. figure:: clearly-defined.png
+       :alt: Screenshot der ClearlyDefined-Website mit cryptography-Beispiel
+
 `FOSSology <https://www.fossology.org/>`_
     ist ein Toolkit für die Einhaltung freier Software, das Informationen in
     einer Datenbank mit Lizenz-, Copyright- und Exportscanner speichert.
