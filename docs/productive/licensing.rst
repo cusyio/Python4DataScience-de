@@ -307,8 +307,42 @@ REUSE
 `REUSE <https://reuse.software/de/>`__ wurde von der :abbr:`FSFE (Free Software
 Foundation Europe)` initiiert, um die Lizenzierung freier Software-Projekte zu
 erleichtern. Das `REUSE tool <https://git.fsfe.org/reuse/tool>`_ überprüft
-Lizenzen und unterstützt euch bei der Einhaltung der Lizenzkonformität. Mit der
-`REUSE API <https://reuse.software/dev/#api>`_ könnt ihr euch auch ein
+Lizenzen und unterstützt euch bei der Einhaltung der Lizenzkonformität,
+:abbr:`z.B. (zum Beispiel)`:
+
+.. code-block:: console
+
+    $ cd cryptography
+    $ reuse lint
+    # FEHLENDE URHEBERRECHTS- UND LIZENZINFORMATIONEN
+
+    Die folgenden Dateien haben keine Urheberrechts- und Lizenzinformationen:
+    * .gitattributes
+    * .github/ISSUE_TEMPLATE/openssl-release.md
+    …
+    * vectors/cryptography_vectors/x509/wosign-bc-invalid.pem
+    * vectors/pyproject.toml
+
+    Die folgenden Dateien haben keine Lizenzinformationen:
+    * docs/_ext/linkcode_res.py
+    * src/cryptography/__about__.py
+
+
+    # ZUSAMMENFASSUNG
+
+    * Falsche Lizenzen: 0
+    * Veraltete Lizenzen: 0
+    * Lizenzen ohne Dateiendung: 0
+    * Fehlende Lizenzen: 0
+    * Unbenutzte Lizenzen: 0
+    * Verwendete Lizenzen: 0
+    * Read errors: 0
+    * files with copyright information: 2 / 2806
+    * files with license information: 0 / 2806
+
+    Leider ist Ihr Projekt nicht konform mit Version 3.0 der REUSE-Spezifikation :-(
+
+Mit der `REUSE API <https://reuse.software/dev/#api>`_ könnt ihr euch auch ein
 dynamisches Compliance-Badge generieren:
 
 .. figure:: reuse-compliant.svg
