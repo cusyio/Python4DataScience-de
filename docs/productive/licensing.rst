@@ -395,9 +395,9 @@ Alternativen
 
     `ScanCode <https://www.aboutcode.org/projects/scancode.html>`_
         bietet eine Reihe von Tools und Anwendungen zum Scannen von
-        Software-Codebasen und -paketen, um den Ursprung und die Lizenz (Provenienz)
-        von Open-Source-Software (und anderer Software von Drittanbietern) zu
-        ermitteln.
+        Software-Codebasen und -paketen, um den Ursprung und die Lizenz
+        (Provenienz) von Open-Source-Software (und anderer Software von
+        Drittanbietern) zu ermitteln.
 
     `DeltaCode <https://github.com/nexB/deltacode>`_
         vergleicht zwei Codebase-Scans, um signifikante Änderungen zu erkennen.
