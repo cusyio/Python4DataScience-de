@@ -237,13 +237,6 @@ könnt ihr Python-Pakete und ihre Abhängigkeiten mit einer
           dependency:
                   pycparser << cffi << cryptography
 
-Zur Analyse von Lizenzen könnt ihr euch auch `License compatibility
-<https://en.wikipedia.org/wiki/License_compatibility>`_ anschauen und den
-`licensechecker
-<https://boyter.org/2018/03/licensechecker-command-line-application-identifies-software-license/>`_,
-verwenden, ein Kommandozeilenwerkzeug, das Installationsverzeichnisse nach
-Lizenzen durchsucht.
-
 Darüberhinaus kann es auch sinnvoll sein, ein Package unter mehreren Lizenzen
 zu veröffentlichen. Ein Beispiel hierfür ist `cryptography/LICENSE
 <https://github.com/pyca/cryptography/blob/adf234e/LICENSE>`_:
@@ -493,6 +486,10 @@ Alternativen
        * `GitHub Action for ORT
          <https://github.com/oss-review-toolkit/ort-ci-github-action>`_
        * `ORT for GitLab <https://github.com/oss-review-toolkit/ort-gitlab-ci>`_
+
+`licensechecker <https://boyter.org/2018/03/licensechecker-command-line-application-identifies-software-license/>`_
+    Ein Kommandozeilenwerkzeug, das Installationsverzeichnisse nach Lizenzen
+    durchsucht.
 
 Python-Paket-Metadaten
 ----------------------
