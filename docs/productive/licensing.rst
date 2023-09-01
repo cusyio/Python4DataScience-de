@@ -378,17 +378,54 @@ dynamisches Compliance-Badge generieren:
 GitLab-CI-Workflow
 ::::::::::::::::::
 
-Ihr könnt REUSE einfach in euren Continuous Integration-Workflow integrieren,
-:abbr:`z.B. (zum Beispiel)` für GitLab in der ``.gitlab-ci.yml``-Datei mit:
+Ihr könnt REUSE problemlos in euren Continuous Integration-Workflow integrieren:
 
-.. code-block:: yaml
+.. tab:: Pre-commit
 
-    reuse:
-      image:
-        name: fsfe/reuse:latest
-        entrypoint: [""]
-      script:
-        - reuse lint
+    Ihr könnt ``reuse lint`` automatisch als :doc:`Pre-Commit-Hook
+    <git/hooks/pre-commit>` bei jedem Commit ausführen lassen, indem ihr
+    Folgendes zu eurer :file:`.pre-commit-config.yaml`-Datei hinzufügt:
+
+    .. code-block:: yaml
+
+        repos:
+        - repo: https://github.com/fsfe/reuse-tool
+          rev: v2.1.0
+          hooks:
+          - id: reuse
+
+.. tab:: GitLab
+
+    Fügt der :file:`.gitlab-ci.yml`-Datei Folgendes hinzu:
+
+    .. code-block:: yaml
+
+        reuse:
+          image:
+            name: fsfe/reuse:latest
+            entrypoint: [""]
+          script:
+            - reuse lint
+
+.. tab:: GitHub
+
+    Auf GitHub könnt ihr die REUSE-Aktion mit der GitHub-Aktion `REUSE
+    Compliance Check
+    <https://github.com/marketplace/actions/reuse-compliance-check>`_ in euren
+    Workflow integrieren, indem ihr :abbr:`z.B. (zum Beispiel)` Folgendes zu
+    eurer :file:`workflow .yml`-Datei hinzufügt:
+
+    .. code-block:: yaml
+
+        name: REUSE Compliance Check
+        on: [push, pull_request]
+        jobs:
+          test:
+            runs-on: ubuntu-latest
+            steps:
+            - uses: actions/checkout@v3
+            - name: REUSE Compliance Check
+              uses: fsfe/reuse-action@v2
 
 Alternativen
 ::::::::::::
