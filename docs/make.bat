@@ -1,3 +1,7 @@
+REM SPDX-FileCopyrightText: 2020 Veit Schiele
+REM
+REM SPDX-License-Identifier: BSD-3-Clause
+
 @ECHO OFF
 
 pushd %~dp0
