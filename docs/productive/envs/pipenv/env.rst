@@ -14,41 +14,44 @@ Weitere Informationen hierzu findet ihr unter
 `Configuration With Environment Variables
 <https://docs.pipenv.org/advanced/#configuration-with-environment-variables>`_.
 
-``.env``-Datei
---------------
+:file:`.env`-Datei
+------------------
 
-Wenn eine ``.env``-Datei in eurer virtuellen Umgebung vorhanden ist, werden
+Wenn eine :file:`.env`-Datei in eurer virtuellen Umgebung vorhanden ist, werden
 ``$ pipenv shell`` und ``$ pipenv run`` diese automatisch laden:
 
 .. code-block:: console
 
     $ cat .env
-    USERNAME=Veit⏎
+    USERNAME=veit
 
     $ pipenv run python
-    Loading .env environment variables…
+    Loading .env environment variables...
     …
+
+.. code-block:: python
+
     >>> import os
-    >>> os.environ['USERNAME']
-    'Veit'
+    >>> os.environ["USERNAME"]
+    'veit'
 
 Auch die Credentials, :abbr:`z.B. (zum Beispiel)` der Versionsverwaltung lassen
-sich im ``Pipfile`` angeben, :abbr:`z.B. (zum Beispiel)`:
+sich in der :file:`Pipfile`-Datei angeben, :abbr:`z.B. (zum Beispiel)`:
 
 .. code-block:: ini
 
     [[source]]
-    url = "https://$USERNAME:${PASSWORD}@pypi.cusy.io/simple"
+    url = "https://$USERNAME:${PASSWORD}@ce.cusy.io/api/v4/projects/$PROJECT_ID/packages/pypi/simple"
     verify_ssl = true
-    name = "cusy-pypi"
+    name = "gitlab"
 
 .. note::
-   ``pipenv`` hasht das ``Pipfile``, bevor die Umgebungsvariablen ermittelt
-   werden, und auch in ``Pipfile.lock`` werden die Umgebungsvariablen
-   geschrieben, sodass keine Credentials in der Versionsverwaltung gespeichert
-   werden müssen.
+   ``pipenv`` hasht die :file:`Pipfile`-Datei, bevor die Umgebungsvariablen
+   ermittelt werden, und auch die Umgebungsvariablen aus der
+   :file:`Pipfile.lock`-Datei werden ersetzt, sodass keine Credentials in der
+   Versionsverwaltung gespeichert werden müssen.
 
-Ihr könnt die ``.env``-Datei auch außerhalb eures Virtual Environments
+Ihr könnt die :file:`.env`-Datei auch außerhalb eures Virtual Environments
 speichern. Ihr müsst dann nur den Pfad zu dieser Datei angeben in
 ``PIPENV_DOTENV_LOCATION``:
 
@@ -56,7 +59,7 @@ speichern. Ihr müsst dann nur den Pfad zu dieser Datei angeben in
 
     $ PIPENV_DOTENV_LOCATION=/path/to/.env pipenv shell
 
-Ihr könnt auch verhindern, dass ``pipenv`` eine vorhanden ``.env``-Datei
+Ihr könnt auch verhindern, dass ``pipenv`` eine vorhandene :file:`.env`-Datei
 verwenet mit:
 
 .. code-block:: console
