@@ -43,3 +43,11 @@ Git-Glossar
         Der ``HEAD``-Zeiger repräsentiert euer aktuelles Arbeitsverzeichnis und
         kann mit ``git switch`` in verschiedene Zweige, Tags oder Commits
         verschoben werden
+
+    Trunk-Based Development
+    TBD
+        Git-Workflow mit kurzlebigen Themenzweigen, die schnell zum einem
+        einzigen ``main``-Zweig zusammengeführt werden.
+
+        .. seealso::
+           * `Trunk Based Development <https://trunkbaseddevelopment.com/>`_
