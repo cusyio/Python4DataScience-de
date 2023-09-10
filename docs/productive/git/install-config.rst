@@ -54,17 +54,18 @@ Für iX-Distributionen sollte Git im Standard-Repository vorhanden sein.
 Konfiguration
 -------------
 
-``$ git config --global user.name "[name]"``
+:samp:`$ git config --global user.name "{NAME}"`
     legt den Namen fest, der mit euren Commit-Transaktionen verknüpft wird.
-``$ git config --global user.email "[email address]"``
+:samp:`$ git config --global user.email "{EMAIL-ADDRESS}"`
     legt die E-Mail fest, die mit euren Commit-Transaktionen verknüpft wird.
-``$ git config --global color.ui auto``
+:samp:`$ git config --global color.ui auto`
     aktiviert die Kolorierung der Befehlszeilenausgabe.
 
-Die ``~/.gitconfig``-Datei
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Die :file:`~/.gitconfig`-Datei
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Mit den oben angegebenen Befehlen kann z.B. folgende Datei erstellt werden:
+Mit den oben angegebenen Befehlen wird dir folgende :file:`~/.gitconfig`-Datei
+erstellt:
 
 .. code-block:: ini
 
@@ -72,12 +73,10 @@ Mit den oben angegebenen Befehlen kann z.B. folgende Datei erstellt werden:
         name = veit
         email = veit@cusy.io
 
-    [color]
-        diff = auto
-        status = auto
-        branch = auto
+    color]
+        ui = auto
 
-In der ``~/.gitconfig``-Datei können jedoch auch Aliase festgelegt werden:
+In der :file:`~/.gitconfig`-Datei können jedoch auch Aliase festgelegt werden:
 
 .. code-block:: ini
 
@@ -95,7 +94,6 @@ in ``git diff``:
 .. code-block:: ini
 
     [core]
-
         editor = vim
 
         # Highlight whitespace errors in git diff:
@@ -122,11 +120,12 @@ Anschließend können wir in :file:`exceltocsv.py`
 Excel-Dateien verwenden:
 
 .. literalinclude:: exceltocsv.py
-    :caption: exceltocsv.py
-    :name: exceltocsv.py
-    :language: python
+   :caption: exceltocsv.py
+   :name: exceltocsv.py
+   :language: python
+   :lines: 5-
 
-Anschließend wird der globalen Git-Konfiguration ``~/.gitconfig`` folgender
+Anschließend wird der globalen Git-Konfiguration :file:`~/.gitconfig` folgender
 Abschnitt hinzugefügt:
 
 .. code-block:: ini
@@ -135,7 +134,7 @@ Abschnitt hinzugefügt:
         textconv=python3 /PATH/TO/exceltocsv.py
         binary=true
 
-Schließlich wird in der globalen ``~/.gitattributes``-Datei unser
+Schließlich wird in der globalen :file:`~/.gitattributes`-Datei unser
 ``excel``-Konverter mit :file:`*.xlsx`-Dateien verknüpft:
 
 .. code-block:: ini
@@ -159,7 +158,7 @@ Hierfür wird zusätzlich ``pdftohtml`` benötigt. Es kann installiert werden mi
 
       $ brew install pdftohtml
 
-Anschließend wird der globalen Git-Konfiguration ``~/.gitconfig`` folgender
+Anschließend wird der globalen Git-Konfiguration :file:`~/.gitconfig` folgender
 Abschnitt hinzugefügt:
 
 .. code-block:: ini
@@ -167,7 +166,7 @@ Abschnitt hinzugefügt:
     [diff "pdf"]
         textconv=pdftohtml -stdout
 
-Schließlich wird in der globalen ``~/.gitattributes``-Datei unser
+Schließlich wird in der globalen :file:`~/.gitattributes`-Datei unser
 ``pdf``-Konverter mit :file:`*.pdf`-Dateien verknüpft:
 
 .. code-block:: ini
@@ -186,8 +185,8 @@ mit
 
 .. tab:: Windows
 
-   Herunterladen und Installieren der ``.msi``-Datei von `GitHub
-   <https://github.com/jgm/pandoc/releases/tag/2.19.2>`_.
+   Herunterladen und Installieren der aktuellen :file:`.msi`-Datei von `GitHub
+   <https://github.com/jgm/pandoc/releases/>`_.
 
 .. tab:: Debian/Ubuntu
 
@@ -201,7 +200,7 @@ mit
 
       $ brew install pandoc
 
-Anschließend wird der globalen Git-Konfiguration ``~/.gitconfig`` folgender
+Anschließend wird der globalen Git-Konfiguration :file:`~/.gitconfig` folgender
 Abschnitt hinzugefügt:
 
 .. code-block:: ini
@@ -211,7 +210,7 @@ Abschnitt hinzugefügt:
            binary=true
            prompt=false
 
-Schließlich wird in der globalen ``~/.gitattributes``-Datei unser
+Schließlich wird in der globalen :file:`~/.gitattributes`-Datei unser
 ``word``-Konverter mit :file:`*.docx`-Dateien verknüpft:
 
 .. code-block:: ini
@@ -222,23 +221,23 @@ Die gleiche Vorgehensweise kann auch angewandt werden, um nützliche Diffs von
 anderen Binärdateien zu erhalten, :abbr:`z.B. (zum Beispiel)` ``*.zip``,
 ``*.jar`` und andere Archive mit ``unzip`` oder für Änderungen in den
 Metainformationen von Bildern mit ``exiv2``. Zudem gibt es
-Konvertierungswerkzeuge für die Umwandlung von ``*.odf``, ``.doc`` und anderen
-Dokumentenformaten in einfachen Text. Für Binärdateien, für die es keinen
-Konverter gibt, reichen oft auch Strings aus.
+Konvertierungswerkzeuge für die Umwandlung von :file:`*.odf`, :file:`.*doc` und
+anderen Dokumentenformaten in einfachen Text. Für Binärdateien, für die es
+keinen Konverter gibt, reichen oft auch Strings aus.
 
 Anmeldedaten verwalten
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Seit der Git-Version 1.7.9 lassen sich die Zugangsdaten zu git-Repositories mit
 `gitcredentials <https://git-scm.com/docs/gitcredentials>`_ verwalten. Um diese
-zu nutzen, könnt ihr z.B. folgendes angeben:
+zu nutzen, könnt ihr :abbr:`z.B. (zum Beispiel)` folgendes angeben:
 
 .. code-block:: console
 
     $ git config --global credential.helper Cache
 
 Hiermit wird ihr Passwort für 15 Minuten im Cache-Speicher gehalten. Der Timeout
-kann ggf. erhöht werden, z.B. mit:
+kann ggf. erhöht werden, :abbr:`z.B. (zum Beispiel)` mit:
 
 .. code-block:: console
 
@@ -261,7 +260,8 @@ kann ggf. erhöht werden, z.B. mit:
         Configuring component 'Git Credential Manager'...
         Configuring component 'Azure Repos provider'...
 
-    Dies trägt den ``[credential]``-Abschnitt in eure ``~.gitconfig``-Datei ein:
+    Dies trägt den ``[credential]``-Abschnitt in eure :file:`~.gitconfig`-Datei
+    ein:
 
     .. code-block:: ini
 
@@ -269,11 +269,11 @@ kann ggf. erhöht werden, z.B. mit:
             helper =
             helper = C:/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
 
-    Nun öffnet sich beim Clonen eines Repository ein Fenster des *Git Credential Manager*
-    und fodert euch zur Eingabe eurer Zugangsdaten auf.
+    Nun öffnet sich beim Clonen eines Repository ein Fenster des *Git Credential
+    Manager* und fordert euch zur Eingabe eurer Zugangsdaten auf.
 
-    Zudem wird die ``~/.gitconfig``-Datei ergänzt, :abbr:`z.B. (zum Beispiel)` um die
-    folgenden beiden Zeilen:
+    Zudem wird die :file:`~/.gitconfig`-Datei ergänzt, :abbr:`z.B. (zum
+    Beispiel)` um die folgenden beiden Zeilen:
 
     .. code-block:: ini
 
@@ -282,8 +282,8 @@ kann ggf. erhöht werden, z.B. mit:
 
 .. tab:: macOS
 
-    Unter macOS lässt sich mit `osxkeychain` die Schlüsselbundverwaltung
-    (*Keychain*) nutzen um die Zugangsdaten zu speichern. `osxkeychain` setzt
+    Unter macOS lässt sich mit ``osxkeychain`` die Schlüsselbundverwaltung
+    (*Keychain*) nutzen um die Zugangsdaten zu speichern. ``osxkeychain`` setzt
     Git in der Version 1.7.10 oder neuer voraus und kann im selben Verzeichnis
     wie Git installiert werden mit:
 
@@ -297,7 +297,7 @@ kann ggf. erhöht werden, z.B. mit:
         Password:
         git config --global credential.helper osxkeychain
 
-    Dies trägt folgendes in die ~/.gitconfig ein:
+    Dies trägt folgendes in die :file:`~/.gitconfig`-Datei ein:
 
     .. code-block:: ini
 
@@ -315,12 +315,12 @@ kann ggf. erhöht werden, z.B. mit:
 
 .. _gitignore:
 
-Die ``.gitignore``-Datei
-~~~~~~~~~~~~~~~~~~~~~~~~
+Die :file:`.gitignore`-Datei
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In der ``.gitignore``-Datei eines Repository könnt ihr Dateien von der
-Versionsverwaltung ausschließen. Eine typische ``.gitignore``-Datei kann z.B. so
-aussehen:
+In der :file:`.gitignore`-Datei eines Repository könnt ihr Dateien von der
+Versionsverwaltung ausschließen. Eine typische :file:`.gitignore`-Datei kann
+:abbr:`z.B. (zum Beispiel)` so aussehen:
 
 .. code-block:: ini
 
@@ -332,112 +332,113 @@ aussehen:
 Dabei verwendet Git `Globbing <https://linux.die.net/man/7/glob>`_-Muster,
 :abbr:`u.a. (unter anderem)`:
 
-+-------------------------------+-------------------------------+-------------------------------+
-| Muster                        | Beispiel                      | Erläuterung                   |
-+===============================+===============================+===============================+
-| .. code-block:: console       | ``logs/instance.log``,        | Ihr könnt zwei Sternchen      |
-|                               | ``logs/instance/error.log``,  | voranstellen um Verzeichnisse |
-|     **/logs                   | ``prod/logs/instance.log``    | an einer beliebigen Stelle im |
-|                               |                               | Verzeichnisbaum zu finden.    |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``logs/instance.log``,        | Ihr könnt zwei Sternchen      |
-|                               | ``prod/logs/instance.log``    | voranstellen um Dateien anhand|
-|     **/logs/instance.log      | aber nicht                    | ihres Namens in einem         |
-|                               | ``logs/prod/instance.log``    | übergeordneten Verzeichnis zu |
-|                               |                               | finden.                       |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``instance.log``,             | Ein Sternchen ist ein         |
-|                               | ``error.log``,                | Platzhalter für null oder     |
-|     *.log                     | ``logs/instance.log``         | mehr Zeichen.                 |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``/logs/instance.log``,       | Ein vor ein Muster gestelltes |
-|                               | ``/logs/error.log``,          | Anführungszeichen ignoriert   |
-|     /logs                     | nicht jedoch                  | dieses. Wenn eine Datei mit   |
-|     !/logs/.gitkeep           | ``/logs/.gitkeep`` oder       | einem Muster übereinstimmt,   |
-|                               | ``/instance.log``             | aber auch mit einem           |
-|                               |                               | negierenden, das später       |
-|                               |                               | definiert ist, wird sie nicht |
-|                               |                               | ignoriert.                    |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``/instance.log``,            | Mit dem vorangestellten       |
-|                               | nicht jedoch                  | Schrägstrich passt das Muster |
-|     /instance.log             | ``logs/instance.log``         | nur zu Dateien im             |
-|                               |                               | Stammverzeichnis des          |
-|                               |                               | Repository.                   |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``instance.log``,             | Üblicherweise passen die      |
-|                               | ``logs/instance.log``         | Muster zu Dateien in jedem    |
-|     instance.log              |                               | Verzeichnis.                  |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``instance0.log``,            | Ein Fragezeichen passt genau  |
-|                               | ``instance1.log``,            | zu einem Zeichen.             |
-|     instance?.log             | aber nicht                    |                               |
-|                               | ``instance.log`` oder         |                               |
-|                               | ``instance10.log``            |                               |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``instance0.log``,            | Eckige Klammern können        |
-|                               | ``instance1.log``,            | verwendet werden um ein       |
-|     instance[0-9].log         | aber nicht                    | einzelnes Zeichen aus einem   |
-|                               | ``instance.log`` oder         | bestimmten Bereich zu finden. |
-|                               | ``instance10.log``            |                               |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``instance0.log``,            | Eckige Klammern passen        |
-|                               | ``instance1.log``,            | auf ein einzelnes Zeichen     |
-|     instance[01].log          | aber nicht                    | aus einer bestimmten Menge.   |
-|                               | ``instance2.log`` oder        |                               |
-|                               | ``instance01.log``            |                               |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``instance2.log``,            | Ein Ausrufezeichen kann       |
-|                               | aber nicht                    | verwendet werden um ein       |
-|     instance[!01].log         | ``instance0.log``,            | beliebiges Zeichen aus einer  |
-|                               | ``instance1.log`` oder        | angegebenen Menge zu finden.  |
-|                               | ``instance01.log``            |                               |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``logs``                      | Wenn kein Schrägstrich        |
-|                               | ``logs/instance.log``         | anhängt, passt das Muster     |
-|     logs                      | ``prod/logs/instance.log``    | sowohl auf Dateien als auch   |
-|                               |                               | auf den Inhalt von            |
-|                               |                               | Verzeichnissen mit diesem     |
-|                               |                               | Namen.                        |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``logs/instance.log``,        | Das Anhängen eines            |
-|                               | ``logs/prod/instance.log``,   | Schrägstrichs zeigt an, dass  |
-|     logs/                     | ``prod/logs/instance.log``    | das Muster ein Verzeichnis    |
-|                               |                               | ist. Der gesamte Inhalt jedes |
-|                               |                               | Verzeichnisses im Repository, |
-|                               |                               | das diesem Namen entspricht – |
-|                               |                               | einschließlich all seiner     |
-|                               |                               | Dateien und Unterverzeichnisse|
-|                               |                               | – wird ignoriert.             |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       |``var/instance.log``,          | Zwei Sternchen passen zu null |
-|                               |``var/logs/instance.log``,     | oder mehr Verzeichnissen.     |
-|                               |nicht jedoch                   |                               |
-|     var/**/instance.log       |``var/logs/instance/error.log``|                               |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``logs/instance/error.log``,  | Wildcards können auch in      |
-|                               | ``logs/instance1/error.log``  | Verzeichnisnamen verwendet    |
-|     logs/instance*/error.log  |                               | werden.                       |
-+-------------------------------+-------------------------------+-------------------------------+
-| .. code-block:: console       | ``logs/instance.log``,        | Muster, die eine Datei in     |
-|                               | nicht jedoch                  | einem bestimmten Verzeichnis  |
-|     logs/instance.log         | ``var/logs/instance.log``     | angeben, sind relativ zum     |
-|                               | oder                          | Stammverzeichnis des          |
-|                               | ``instance.log``              | Repository.                   |
-+-------------------------------+-------------------------------+-------------------------------+
++-------------------------------+-----------------------------------+-------------------------------+
+| Muster                        | Beispiel                          | Erläuterung                   |
++===============================+===================================+===============================+
+| .. code-block:: console       | :file:`logs/instance.log`,        | Ihr könnt zwei Sternchen      |
+|                               | :file:`logs/instance/error.log`,  | voranstellen um Verzeichnisse |
+|     **/logs                   | :file:`prod/logs/instance.log`    | an einer beliebigen Stelle im |
+|                               |                                   | Verzeichnisbaum zu finden.    |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`logs/instance.log`,        | Ihr könnt zwei Sternchen      |
+|                               | :file:`prod/logs/instance.log`    | voranstellen um Dateien anhand|
+|     **/logs/instance.log      | aber nicht                        | ihres Namens in einem         |
+|                               | :file:`logs/prod/instance.log`    | übergeordneten Verzeichnis zu |
+|                               |                                   | finden.                       |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`instance.log`,             | Ein Sternchen ist ein         |
+|                               | :file:`error.log`,                | Platzhalter für null oder     |
+|     *.log                     | :file:`logs/instance.log`         | mehr Zeichen.                 |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`/logs/instance.log`,       | Ein vor ein Muster gestelltes |
+|                               | :file:`/logs/error.log`,          | Anführungszeichen ignoriert   |
+|     /logs                     | nicht jedoch                      | dieses. Wenn eine Datei mit   |
+|     !/logs/.gitkeep           | :file:`/logs/.gitkeep` oder       | einem Muster übereinstimmt,   |
+|                               | :file:`/instance.log`             | aber auch mit einem           |
+|                               |                                   | negierenden, das später       |
+|                               |                                   | definiert ist, wird sie nicht |
+|                               |                                   | ignoriert.                    |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`/instance.log`,            | Mit dem vorangestellten       |
+|                               | nicht jedoch                      | Schrägstrich passt das Muster |
+|     /instance.log             | :file:`logs/instance.log`         | nur zu Dateien im             |
+|                               |                                   | Stammverzeichnis des          |
+|                               |                                   | Repository.                   |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`instance.log`,             | Üblicherweise passen die      |
+|                               | :file:`logs/instance.log`         | Muster zu Dateien in jedem    |
+|     instance.log              |                                   | Verzeichnis.                  |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`instance0.log`,            | Ein Fragezeichen passt genau  |
+|                               | :file:`instance1.log`,            | zu einem Zeichen.             |
+|     instance?.log             | aber nicht                        |                               |
+|                               | :file:`instance.log` oder         |                               |
+|                               | :file:`instance10.log`            |                               |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`instance0.log`,            | Eckige Klammern können        |
+|                               | :file:`instance1.log`,            | verwendet werden um ein       |
+|     instance[0-9].log         | aber nicht                        | einzelnes Zeichen aus einem   |
+|                               | :file:`instance.log` oder         | bestimmten Bereich zu finden. |
+|                               | :file:`instance10.log`            |                               |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`instance0.log`,            | Eckige Klammern passen        |
+|                               | :file:`instance1.log`,            | auf ein einzelnes Zeichen     |
+|     instance[01].log          | aber nicht                        | aus einer bestimmten Menge.   |
+|                               | :file:`instance2.log` oder        |                               |
+|                               | :file:`instance01.log`            |                               |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`instance2.log`,            | Ein Ausrufezeichen kann       |
+|                               | aber nicht                        | verwendet werden um ein       |
+|     instance[!01].log         | :file:`instance0.log`,            | beliebiges Zeichen aus einer  |
+|                               | :file:`instance1.log` oder        | angegebenen Menge zu finden.  |
+|                               | :file:`instance01.log`            |                               |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`logs`                      | Wenn kein Schrägstrich        |
+|                               | :file:`logs/instance.log`         | anhängt, passt das Muster     |
+|     logs                      | :file:`prod/logs/instance.log`    | sowohl auf Dateien als auch   |
+|                               |                                   | auf den Inhalt von            |
+|                               |                                   | Verzeichnissen mit diesem     |
+|                               |                                   | Namen.                        |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`logs/instance.log`,        | Das Anhängen eines            |
+|                               | :file:`logs/prod/instance.log`,   | Schrägstrichs zeigt an, dass  |
+|     logs/                     | :file:`prod/logs/instance.log`    | das Muster ein Verzeichnis    |
+|                               |                                   | ist. Der gesamte Inhalt jedes |
+|                               |                                   | Verzeichnisses im Repository, |
+|                               |                                   | das diesem Namen entspricht – |
+|                               |                                   | einschließlich all seiner     |
+|                               |                                   | Dateien und Unterverzeichnisse|
+|                               |                                   | – wird ignoriert.             |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       |:file:`var/instance.log`,          | Zwei Sternchen passen zu null |
+|                               |:file:`var/logs/instance.log`,     | oder mehr Verzeichnissen.     |
+|                               |nicht jedoch                       |                               |
+|     var/**/instance.log       |:file:`var/logs/instance/error.log`|                               |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`logs/instance/error.log`,  | Wildcards können auch in      |
+|                               | :file:`logs/instance1/error.log`  | Verzeichnisnamen verwendet    |
+|     logs/instance*/error.log  |                                   | werden.                       |
++-------------------------------+-----------------------------------+-------------------------------+
+| .. code-block:: console       | :file:`logs/instance.log`,        | Muster, die eine Datei in     |
+|                               | nicht jedoch                      | einem bestimmten Verzeichnis  |
+|     logs/instance.log         | :file:`var/logs/instance.log`     | angeben, sind relativ zum     |
+|                               | oder                              | Stammverzeichnis des          |
+|                               | :file:`instance.log`              | Repository.                   |
++-------------------------------+-----------------------------------+-------------------------------+
 
 Git-commit leerer Ordner
 ::::::::::::::::::::::::
 
-In obigem Beispiel seht ihr, dass mit ``/logs/*`` keine Inhalte des
+In obigem Beispiel seht ihr, dass mit :file:`/logs/*` keine Inhalte des
 ``logs``-Verzeichnis mit Git versioniert werden sollen, in der Folgezeile jedoch
-eine Ausnahme definiert wird: ``!logs/.gitkeep`` erlaubt, dass die Datei
-``.gitkeep`` mit Git verwaltet werden darf. Damit wird dann auch das
-``logs``-Verzeichnis in das Git-Repository übernommen. Diese Hilfskonstruktion
-ist erforderlich, da leere Ordner nicht mit Git verwaltet werden können.
+eine Ausnahme definiert wird: :file:`!logs/.gitkeep` erlaubt, dass die Datei
+:file:`.gitkeep` mit Git verwaltet werden darf. Damit wird dann auch das
+:file:`logs`-Verzeichnis in das Git-Repository übernommen. Diese
+Hilfskonstruktion ist erforderlich, da leere Ordner nicht mit Git verwaltet
+werden können.
 
 Eine andere Möglichkeit besteht darin, in einem leeren Ordner eine
-``.gitignore``-Datei mit folgendem Inhalt zu erstellen:
+:file:`.gitignore`-Datei mit folgendem Inhalt zu erstellen:
 
 .. code-block:: ini
 
@@ -454,7 +455,8 @@ Eine andere Möglichkeit besteht darin, in einem leeren Ordner eine
 ::::::::::::::::
 
 Ihr könnt jedoch auch zentral für alle Git-Repositories Dateien ausschließen.
-Hierfür wird üblicherweise in der ``~/.gitconfig``-Datei folgendes angegeben:
+Hierfür wird üblicherweise in der :file:`~/.gitconfig`-Datei folgendes
+angegeben:
 
 .. code-block:: ini
 
@@ -474,9 +476,9 @@ Ignorieren einer Datei aus dem Repository
 
 Wenn ihr eine Datei ignorieren wollt, die in der Vergangenheit bereits dem Repository hinzugefügt
 wurde, müsst ihr die Datei aus eurem Repository löschen und dann eine
-``.gitignore``-Regel für sie hinzufügen. Die Verwendung der Option ``--cached`` bei ``git rm``
-bedeutet, dass die Datei aus dem Repository gelöscht wird, aber als ignorierte Datei in eurem
-Arbeitsverzeichnis verbleibt.
+``.gitignore``-Regel für sie hinzufügen. Die Verwendung der Option ``--cached``
+bei ``git rm`` bedeutet, dass die Datei aus dem Repository gelöscht wird, aber
+als ignorierte Datei in eurem Arbeitsverzeichnis verbleibt.
 
 .. code-block:: console
 
@@ -486,14 +488,14 @@ Arbeitsverzeichnis verbleibt.
     $ git commit -m "Remove log files"
 
 .. note::
-    Ihr könnt die Option ``--cached`` weglassen, wenn ihr die Datei sowohl aus dem Repository als
-    auch aus eurem lokalen Dateisystem löschen wollt.
+    Ihr könnt die Option ``--cached`` weglassen, wenn ihr die Datei sowohl aus
+   dem Repository als  auch aus eurem lokalen Dateisystem löschen wollt.
 
 Commit einer ignorierten Datei
 ::::::::::::::::::::::::::::::
 
-Es ist möglich, den Commit einer ignorierten Datei an das Repository mit der Option ``-f`` (oder
-``--force``) bei ``git add`` zu erzwingen:
+Es ist möglich, den Commit einer ignorierten Datei an das Repository mit der
+Option ``-f`` (oder ``--force``) bei ``git add`` zu erzwingen:
 
 .. code-block:: console
 
@@ -502,9 +504,9 @@ Es ist möglich, den Commit einer ignorierten Datei an das Repository mit der Op
     $ git add -f data/iris.csv
     $ git commit -m "Force add iris.csv"
 
-Ihr könnt dies in Erwägung ziehen, wenn ihr ein allgemeines Muster (wie ``*``) definiert habt, aber
-eine bestimmte Datei übertragen wollt. Eine bessere Lösung ist meist jedoch, eine Ausnahme von
-der allgemeinen Regel zu definieren:
+Ihr könnt dies in Erwägung ziehen, wenn ihr ein allgemeines Muster (wie ``*``)
+definiert habt, aber eine bestimmte Datei übertragen wollt. Eine bessere Lösung
+ist meist jedoch, eine Ausnahme von der allgemeinen Regel zu definieren:
 
 .. code-block:: console
 
@@ -517,13 +519,13 @@ der allgemeinen Regel zu definieren:
 
 Dieser Ansatz dürfte für euer Team offensichtlicher und weniger verwirrend sein.
 
-Fehlersuche in ``.gitignore``-Dateien
-:::::::::::::::::::::::::::::::::::::
+Fehlersuche in :file:`.gitignore`-Dateien
+:::::::::::::::::::::::::::::::::::::::::
 
-Bei komplizierten ``.gitignore``-Mustern oder bei Mustern, die über mehrere
-``.gitignore``-Dateien verteilt sind, kann es schwierig sein, herauszufinden,
-warum eine bestimmte Datei ignoriert wird. Ihr könnt den Befehl ``git
-check-ignore`` mit der Option ``-v`` (oder ``--verbose``) verwenden, um
+Bei komplizierten :file:`.gitignore`-Mustern oder bei Mustern, die über mehrere
+:file:`.gitignore`-Dateien verteilt sind, kann es schwierig sein,
+herauszufinden, warum eine bestimmte Datei ignoriert wird. Ihr könnt den Befehl
+``git check-ignore`` mit der Option ``-v`` (oder ``--verbose``) verwenden, um
 festzustellen, welches Muster die Ursache für das Ignorieren einer bestimmten
 Datei ist:
 
