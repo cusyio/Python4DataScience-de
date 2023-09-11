@@ -145,6 +145,14 @@ Git Best Practices
           <https://git-scm.com/book/de/v2/Git-Interna-Wartung-und-Datenwiederherstellung>`_
 
   * Bereinigt die Remote Tracking Branches mit ``git remote update --prune``.
+    Noch besser ist, wenn ihr die Standardeinstellung so ändert, dass entfernt
+    gelöschte Zweige auch bei ``git fetch`` und ``git pull`` bei euch lokal
+    gelöscht werden. Dies erreicht ihr mit:
+
+    .. code-block:: console
+
+       $ git config --global fetch.prune true
+
   * Überprüft vergessene Arbeiten mit ``git stash list``.
 
 * Überprüft eure Repositories regelmäßig auf unerwünschte Dateien!

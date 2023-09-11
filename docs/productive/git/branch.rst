@@ -146,6 +146,14 @@ entfernten Server zu löschen, könnt ihr folgendes eingeben:
 
 :samp:`$ git push origin --delete [{BRANCH_NAME}]`
 
+Um entfernte Zweige auch bei euch lokal zu entfernen, könnt ihr ``git fetch``
+mit der Option ``--prune`` oder ``-p`` ausführen. Ihr könnt dieses Verhalten
+auch zur Standardeinstellung machen, indem ihr ``fetch.prune`` aktiviert:
+
+.. code-block:: console
+
+   $ git config --global fetch.prune true
+
 Zweige umbenennen
 -----------------
 
