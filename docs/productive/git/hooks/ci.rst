@@ -11,7 +11,7 @@ Integration)`) verwendet werden.
 .. _gh-action-pre-commit-example:
 
 Beispiele für GitHub Actions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 `pre-commit ci <https://pre-commit.ci>`_
     Service, der eurem GitHub-Repository die *pre-commit ci*-App in eurem
@@ -54,7 +54,7 @@ Beispiele für GitHub Actions
         * `pre-commit/action <https://github.com/pre-commit/action>`_
 
 Beispiel für GitLab Actions
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------
 
 .. code-block:: yaml
 
@@ -85,9 +85,3 @@ Beispiel für GitLab Actions
     Weitere Informationen zur Feinabstimmung des Caching findet ihr in `Good
     caching practices
     <https://docs.gitlab.com/ee/ci/caching/#good-caching-practices>`_.
-
-.. toctree::
-    :hidden:
-
-    hooks
-    advanced

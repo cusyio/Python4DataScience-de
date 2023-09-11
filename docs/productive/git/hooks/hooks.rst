@@ -20,11 +20,15 @@ pre-commit-Skripte
     ``check-shebang-scripts-are-executable``
         stellt sicher, dass (nicht-binäre) Dateien mit einer Shebang-Zeile
         ausführbar sind
+    ``check-merge-conflict``
+        sucht nach Dateien, die Merge-Conflict-Strings enthalten
     ``check-symlinks``
         prüft auf Symlinks, die auf nichts verweisen
     ``destroyed-symlinks``
         erkennt Symlinks, die in reguläre Dateien mit dem Inhalt des Pfades, auf
         den der Symlink verweist, geändert wurden.
+    ``no-commit-to-branch``
+        schützt Zweige vor dem Commit
 
 `pygrep-hooks <https://github.com/pre-commit/pygrep-hooks>`_
     stellt reguläre Ausdrücke für Python und reStructuredText bereit,
@@ -148,6 +152,8 @@ Misc
     Git commit message Linter
 `nbstripout <https://github.com/kynan/nbstripout>`_
     entfernt die Ausgabe von Jupyter Notebooks
+`ripsecrets <https://github.com/sirwart/ripsecrets>`_
+    verhindert, dass geheime Schlüssel in euren Quellcode aufgenommen werden
 `detect-secrets <https://github.com/Yelp/detect-secrets>`_
     erkennt Zeichenfolgen mit hoher Entropie, bei denen es sich wahrscheinlich
     um Passwörter handelt

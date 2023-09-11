@@ -6,9 +6,25 @@ Git Hooks
 =========
 
 Git-Hooks sind Skripte, die bei bestimmten Ereignissen in einem Git-Repository
-automatisch ausgeführt werden. Sie können sich entweder in lokalen oder
-serverseitigen Repositories befinden. So können Git-Repositories individuell
-angepasst und benutzerdefinierte Aktionen ausgelöst werden.
+automatisch ausgeführt werden, :abbr:`u.a. (unter anderem)`:
+
++---------------+-------------------------------------------------------+
+| Befehl        | Hook                                                  |
++===============+=======================================================+
+| ``comit``     | ``comit-msg``, ``pre-commit``                         |
++---------------+-------------------------------------------------------+
+| ``merge``     | ``pre-merge``, ``comit-msg``                          |
++---------------+-------------------------------------------------------+
+| ``rebase``    | ``pre-rebase``                                        |
++---------------+-------------------------------------------------------+
+| ``pull``      | ``pre-merge``, ``comit-msg``                          |
++---------------+-------------------------------------------------------+
+| ``push``      | ``pre-push``                                          |
++---------------+-------------------------------------------------------+
+
+Sie können sich entweder in lokalen oder serverseitigen Repositories befinden.
+So können Git-Repositories individuell angepasst und benutzerdefinierte Aktionen
+ausgelöst werden.
 
 Git Hooks befinden sich im Verzeichnis :file:`.git/hooks/`. Beim Anlegen eines
 Repository werden dort auch bereits einige Beispielskripte angelegt:
@@ -46,5 +62,6 @@ Die Skripte können jedoch nicht in das serverseitige Repository kopiert werden.
     pre-commit
     hooks
     advanced
-    template
     ci
+    skip
+    template
