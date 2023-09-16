@@ -60,6 +60,11 @@ Linter und Formatierer
         pre-commit-Framework bereit
     `mypy <https://github.com/pre-commit/mirrors-mypy>`_
         stellt `mypy <https://github.com/python/mypy>`__ bereit
+    `validate-pyproject <https://github.com/abravalheri/validate-pyproject>`_
+        überprüft :file:`pyproject.toml`-Dateien
+    `sp-repo-review <https://github.com/scientific-python/cookie>`_
+        evaluiert bestehende Repos anhand der `Scientific Python-Richtlinien
+        <https://learn.scientific-python.org/development/>`_.
     `clang-format <https://github.com/pre-commit/mirrors-clang-format>`_
         stellt `clang-format-wheel
         <https://github.com/ssciwr/clang-format-wheel>`__ bereit
