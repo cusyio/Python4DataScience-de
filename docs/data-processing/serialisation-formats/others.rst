@@ -70,6 +70,6 @@ Andere Formate
           <https://github.com/Abscissa/SDLang-D/wiki/Language-Guide>`_
         * `GitHub <https://github.com/Abscissa/SDLang-D>`__
 
-`XDR (RFC 4506) <https://tools.ietf.org/html/rfc4506>`_
+`XDR (:rfc:`4506`)
     Abkürzung für *External Data Representation Standard*. Nützlich zum
     Übertragen von Daten zwischen verschiedenen Computerarchitekturen.

@@ -58,7 +58,7 @@ Beispiel
 
 .. seealso::
 
-    * `RFC 4180 <https://tools.ietf.org/html/rfc4180>`_
+    * :rfc:`4180`
 
 .. _`csv`: https://docs.python.org/3/library/csv.html
 .. _`pandas`: https://pandas.pydata.org/

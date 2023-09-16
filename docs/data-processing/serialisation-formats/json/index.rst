@@ -24,21 +24,23 @@ JSON
 |                       |       | Schlüssel/Wert-Paar.                                  |
 +-----------------------+-------+-------------------------------------------------------+
 | Standardisierung      | \+    | JSON hat einen formal streng typisierten `Standard`_  |
-|                       |       | siehe auch `RFC 8259`_).                              |
+|                       |       | siehe auch :rfc:`8259`).                              |
 |                       |       | Jedoch enthalten JSON-Daten auch einige Fallstricke   |
 |                       |       | aufgrund der Mehrdeutigkeit der JSON-Specifikationen: |
 |                       |       |                                                       |
-|                       |       | *A JSON parser MUST accept all texts that conform to  |
-|                       |       | the JSON grammar* (`RFC 7159`_)                       |
+|                       |       | *Ein JSON-Parser MUSS alle Texte akzeptieren, die der |
+|                       |       | JSON-Grammatik entsprechen* (:rfc:`7159`).            |
 |                       |       |                                                       |
 |                       |       | und                                                   |
 |                       |       |                                                       |
-|                       |       | *An implementation may set limits on the size of texts|
-|                       |       | that it accepts. An implementation may set limits on  |
-|                       |       | the maximum depth of nesting. An implementation may   |
-|                       |       | set limits on the range and precision of numbers. An  |
-|                       |       | implementation may set limits on the length and       |
-|                       |       | character contents of strings* (`RFC 7158 #9`_).      |
+|                       |       | *Eine Implementierung kann Grenzen für die Größe der  |
+|                       |       | akzeptierten Texte setzen. Eine Implementierung kann  |
+|                       |       | Grenzen für die maximale Verschachtelungstiefe        |
+|                       |       | festlegen. Eine Implementierung kann Grenzen für den  |
+|                       |       | Bereich und die Genauigkeit von Zahlen festlegen. Eine|
+|                       |       | Implementierung kann Grenzen für die Länge und den    |
+|                       |       | Zeicheninhalt von Zeichenketten festlegen*            |
+|                       |       | (:rfc:`7158#9`).                                      |
 |                       |       |                                                       |
 |                       |       | Unglücklicherweise gibt es weder eine                 |
 |                       |       | Referenzimplementierung noch eine offizielle          |
@@ -125,9 +127,6 @@ Antwort der :ref:`OSM-Nomination-API
     ]
 
 .. _`standard`: https://www.json.org/json-en.html
-.. _`RFC 8259`: https://tools.ietf.org/html/rfc8259
-.. _`RFC 7159`: https://tools.ietf.org/html/rfc7159
-.. _`RFC 7158 #9`: https://www.ietf.org/rfc/rfc7158.html#section-9
 .. _`JSON_Checker`: http://www.json.org/JSON_checker/
 .. _`JSON Schema Proposal`: http://json-schema.org/
 .. _`JSON Encoding Rules (JER)`: https://www.itu.int/rec/T-REC-X.697-201710-I/
