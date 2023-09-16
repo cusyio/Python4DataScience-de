@@ -74,6 +74,13 @@ JSON
 |                       |       | :doc:`../yaml/index` und :doc:`../toml/index`.        |
 +-----------------------+-------+-------------------------------------------------------+
 
+.. seealso::
+
+    * `JC – JSON Convert <https://github.com/kellyjonbrazil/jc>`_
+    * `fx <https://github.com/antonmedv/fx>`_
+    * `gron <https://github.com/tomnomnom/gron>`_
+    * `python-json-patch <https://github.com/stefankoegl/python-json-patch>`_
+
 Beispiel
 --------
 
