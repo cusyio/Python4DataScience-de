@@ -73,7 +73,7 @@ An einem Projekt arbeiten
     Die übrige Ausgabe ist eine Liste von :abbr:`sog. (sogenannten)` *diff
     chunks*, deren Header von ``@@``-Symbolen eingeschlossen ist. Jeder *diff
     chunk* zeigt in einer Datei vorgenommene Änderungen. In unserem Beispiel
-    wurde 7 Zeilen ab Zeile 46 extrahiert und 7 Zeilen ab Zeile 46 hinzugefügt.
+    wurden 7 Zeilen ab Zeile 46 extrahiert und 7 Zeilen ab Zeile 46 hinzugefügt.
 
     Standardmäßig führt ``git diff`` den Vergleich gegen ``HEAD`` aus. Wenn ihr
     im obigen Beispiel ``git diff HEAD docs/productive/git/work.rst`` verwendet,
