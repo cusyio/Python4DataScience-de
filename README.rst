@@ -2,8 +2,8 @@
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
-Schnelleinstieg
-===============
+Python4DataScience
+==================
 
 .. _badges:
 
@@ -30,6 +30,17 @@ Status
    :target: https://mastodon.social/@Python4DataScience
 
 .. _first-steps:
+
+Überblick 
+---------
+
+Dieses Repository enthält ein Tutorium für Datenmanagement und -alyse mit Python.
+Die Ordner enthalten:
+
+- `data/` - Daten für ein Beispielprojekt
+- `docs/` - die eigentliche Dokumentation mit Sphinx
+- `fastapi/` - Beispielprojekt eines Servers, der Daten bereitstellt
+
 
 Installation
 ------------
