@@ -72,8 +72,8 @@ An einem Projekt arbeiten
 
     Die übrige Ausgabe ist eine Liste von :abbr:`sog. (sogenannten)` *diff
     chunks*, deren Header von ``@@``-Symbolen eingeschlossen ist. Jeder *diff
-    chunk* zeigt in einer Datei vorgenommene Änderungen. In unserem Beispiel 
-    wurden 7 Zeilen ab Zeile 46 extrahiert und 7 Zeilen ab Zeile 46 hinzugefügt.
+    chunk* zeigt in einer Datei vorgenommene Änderungen. In unserem Beispiel
+    wurde 7 Zeilen ab Zeile 46 extrahiert und 7 Zeilen ab Zeile 46 hinzugefügt.
 
     Standardmäßig führt ``git diff`` den Vergleich gegen ``HEAD`` aus. Wenn ihr
     im obigen Beispiel ``git diff HEAD docs/productive/git/work.rst`` verwendet,
@@ -91,7 +91,7 @@ An einem Projekt arbeiten
     geändert wird, dass die Referenz der gemeinsame Vorfahre von :samp:`MAIN`
     und :samp:`FEATURE` ist.
 
-    Jeder Commit in Git hat eine Commit-ID, die ihr mittels ``git log`` erhaltet. 
+    Jeder Commit in Git hat eine Commit-ID, die ihr mittels ``git log`` erhaltet.
     Anschließend könnt ihr diese Commit-ID auch an ``git diff`` übergeben:
 
     .. code-block:: console
