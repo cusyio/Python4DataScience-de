@@ -20,7 +20,7 @@ Arbeitsbereiche
 ``git push``
     verschiebt Dateien aus dem Bühnenbereich in das Repository.
 
-    ``git push -u origin main``
+    :samp:`git push -u {origin} {main}`
         ``-u`` legt die Upstream-Referenz für jeden Zweig fest, deren Argumente
         anschließend in ``git pull`` o.ä. nicht mehr explizit festgelegt werden
         müssen. In unserem Beispiel wird ``main`` im entfernten Repository
