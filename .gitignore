@@ -11,6 +11,9 @@
 # Intersphinx objects
 _intersphinx
 
+# Sphinx builds
+docs/_build/
+
 # spack
 .spack-env
 
