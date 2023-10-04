@@ -31,7 +31,7 @@ Status
 
 .. _first-steps:
 
-Überblick 
+Überblick
 ---------
 
 Dieses Repository enthält ein Tutorium für Datenmanagement und -analyse mit Python.
