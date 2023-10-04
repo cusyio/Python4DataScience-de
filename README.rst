@@ -34,12 +34,12 @@ Status
 Überblick 
 ---------
 
-Dieses Repository enthält ein Tutorium für Datenmanagement und -alyse mit Python.
+Dieses Repository enthält ein Tutorium für Datenmanagement und -analyse mit Python.
 Die Ordner enthalten:
 
-- `data/` - Daten für ein Beispielprojekt
-- `docs/` - die eigentliche Dokumentation mit Sphinx
-- `fastapi/` - Beispielprojekt eines Servers, der Daten bereitstellt
+- ``data/`` - Daten für ein Beispielprojekt
+- ``docs/`` - die eigentliche Dokumentation
+- ``fastapi/`` - Beispielprojekt eines Servers, der Daten bereitstellt
 
 
 Installation
