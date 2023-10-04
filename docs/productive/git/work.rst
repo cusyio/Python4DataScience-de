@@ -12,27 +12,27 @@ Ein eigenes Projekt starten
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :samp:`$ git init {MY_PROJECT}`
-    erstellt ein neues, lokales Git-Repository
+    erstellt ein neues, lokales Git-Repository.
 
     :samp:`{MY_PROJECT}`
         wenn der Projektname angegeben wird, erzeugt Git ein neues Verzeichnis
-        und initialisiert es
+        und initialisiert es.
 
         Wird kein Projektname angegeben, wird das aktuelle Verzeichnis
-        initialisiert
+        initialisiert.
 
 An einem Projekt mitarbeiten
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :samp:`$ git clone {PROJECT_URL}`
     lädt ein Projekt mit allen Zweigen (engl.: *branches*) und der gesamten
-    Historie vom entfernten Repository herunter
+    Historie vom entfernten Repository herunter.
 
     ``--depth``
-        gibt die Anzahl der Commits an, die heruntergeladen werden sollen
+        gibt die Anzahl der Commits an, die heruntergeladen werden sollen.
 
     ``-b`` (Langform: ``--branch``)
-        gibt den Namen des entfernten Zweigs an, der heruntergeladen werden soll
+        gibt den Namen des entfernten Zweigs an, der heruntergeladen werden soll.
 
 An einem Projekt arbeiten
 -------------------------
@@ -51,7 +51,7 @@ An einem Projekt arbeiten
 
 :samp:`$ git diff {FILE}`
     zeigt Unterschiede zwischen Arbeits- und Bühnenbereich, :abbr:`z.B. (zum
-    Beispiel)`.
+    Beispiel)`:
 
     .. code-block:: console
 
@@ -71,10 +71,9 @@ An einem Projekt arbeiten
     Hash-Kennungen der Git-Objektversionen.
 
     Die übrige Ausgabe ist eine Liste von :abbr:`sog. (sogenannten)` *diff
-    chunks*, deren Header von ``@@``-Symbolen eingeschlossen ist. Er gibt eine
-    Zusammenfassung der in der Datei vorgenommenen Änderungen. In unserem
-    Beispiel wurden 7 Zeilen ab Zeile 46 extrahiert und 7 Zeilen ab Zeile 46
-    hinzugefügt.
+    chunks*, deren Header von ``@@``-Symbolen eingeschlossen ist. Jeder *diff
+    chunk* zeigt in einer Datei vorgenommene Änderungen. In unserem Beispiel 
+    wurden 7 Zeilen ab Zeile 46 extrahiert und 7 Zeilen ab Zeile 46 hinzugefügt.
 
     Standardmäßig führt ``git diff`` den Vergleich gegen ``HEAD`` aus. Wenn ihr
     im obigen Beispiel ``git diff HEAD docs/productive/git/work.rst`` verwendet,
@@ -92,9 +91,8 @@ An einem Projekt arbeiten
     geändert wird, dass die Referenz der gemeinsame Vorfahre von :samp:`MAIN`
     und :samp:`FEATURE` ist.
 
-    Jeder Commit in Git hat eine Commit-ID, die ihr erhalten könnt, wenn ihr
-    ``git log`` ausführt. Anschließend könnt ihr diese Commit-ID auch an ``git
-    diff`` übergeben:
+    Jeder Commit in Git hat eine Commit-ID, die ihr mittels ``git log`` erhaltet. 
+    Anschließend könnt ihr diese Commit-ID auch an ``git diff`` übergeben:
 
     .. code-block:: console
 
@@ -132,9 +130,9 @@ An einem Projekt arbeiten
 ``$ git reset [--hard|--soft] [target-reference]``
     setzt die Historie auf einen früheren Commit zurück.
 :samp:`$ git rm {FILE}`
-    entfernen einer Datei aus dem Arbeits- und Bühnenbereich.
+    entfernt eine Datei aus dem Arbeits- und Bühnenbereich.
 ``$ git stash``
-    verschieben der aktuellen Änderungen aus dem Arbeitsbereich in das Versteck
+    verschiebt die aktuellen Änderungen aus dem Arbeitsbereich in das Versteck
     (engl.: *stash*).
 
     Um eure versteckten Änderungen möglichst gut unterscheiden zu können,
@@ -218,7 +216,7 @@ An einem Projekt arbeiten
             $ git stash pop stash@{2}
 
     ``drop``
-        leeren eines spezifischen Verstecks, :abbr:`z.B. (zum Beispiel)`:
+        leert ein spezifisches Versteck, :abbr:`z.B. (zum Beispiel)`:
 
         .. code-block:: console
 
