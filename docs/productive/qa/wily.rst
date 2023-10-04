@@ -174,7 +174,7 @@ Verwendung
 … als pre-commit Hook
 ~~~~~~~~~~~~~~~~~~~~~
 
-Ihr könnt Wily auch als :doc:`../git/hooks/pre-commit` verwenden. Hierzu müsstet
+Ihr könnt Wily auch als :doc:`../git/advanced/hooks/pre-commit` verwenden. Hierzu müsstet
 ihr in der ``pre-commit-config.yaml``-Konfigurationsdatei :abbr:`z.B. (zum
 Beispiel)` folgendes hinzufügen:
 

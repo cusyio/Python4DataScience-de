@@ -25,9 +25,9 @@ Im Folgenden behandeln wir einige dieser Git-Workflows.
    :hidden:
 
    feature-branches
-   git-flow
    deploy-branches
    tbd
+   git-flow
    monorepos
    split-repos
    ci

@@ -8,6 +8,8 @@ Fortgeschrittenes Git
 .. toctree::
    :hidden:
 
+   cherry-pick
+   bisect
    hooks/index
    tools
    jupyter-config
