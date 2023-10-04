@@ -25,3 +25,14 @@ Arbeitsbereiche
         anschließend in ``git pull`` o.ä. nicht mehr explizit festgelegt werden
         müssen. In unserem Beispiel wird ``main`` im entfernten Repository
         referenziert.
+
+        Hierbei bedeuten die einzelnen Parameter:
+
+        ``-u`` (Langform ``--set-upstream``)
+            Lege die Upstream-Referenz für jeden Zweig fest.
+
+        ``origin``
+            Benutze als Herkunftszweig ``origin``.
+
+        ``main``
+            Benutze den Zweig ``main`` im entfernten Repository.
