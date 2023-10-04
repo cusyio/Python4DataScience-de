@@ -5,16 +5,17 @@
 Monorepos und große Repositories
 ================================
 
-Git ist ein sehr flexibles Versionskontrollsystem. Insbesondere ``branch`` und
-``merge`` sind mächtige Werkzeuge in verteilten Entwicklungsumgebungen. Manchmal
-schafft dies jedoch auch eine unnötige Komplexität. In diesen Fällen kann es
-sinnvoll sein, mit einem monolithischen Repository oder *Monorepo* zu arbeiten.
+In einem großen Projekt kann es sinnvoll sein, einzelne Komponenten in separaten Repositories zu pflegen.
+Manchmal schafft dies jedoch unnötige Komplexität, z.B. welche Versionen der Repositories miteinander kompatibel sind.
+In diesen Fällen kann es sinnvoll sein, alle Teile eines Projekts in
+einem monolithischen Repository oder *Monorepo* zu halten.
 
 Definition
 ----------
 
-* Das Repository enthält mehr als ein logisches Projekt (:abbr:`z.B. (zum
+* In einem Monorepo enthält das Repository mehr als ein logisches Projekt (:abbr:`z.B. (zum
   Beispiel)` einen iOS-Client und eine Webanwendung).
+* Diese Projekte können unabhängig voneinander gebaut, getestet oder deployt werden.
 * Diese Projekte sind meist nur lose miteinander verbunden oder können auf
   andere Weise miteinander verbunden werden, :abbr:`z.B. (zum Beispiel)` über
   Tools zur Verwaltung von Abhängigkeiten.
