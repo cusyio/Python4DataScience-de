@@ -94,7 +94,7 @@ könnt ihr diese auch später noch in mehrere Commits aufteilen mit:
 Auch wenn ihr zu einem späteren Zeitpunkt herausfindet, dass ein Commit, der
 mit ``git push`` bereits veröffentlicht wurde, einen oder mehrere Fehler
 enthält, so solltet ihr dennoch niemals versuchen, diesen Commit ungeschehen zu
-machen. Vielmehr solltest Du durch weitere Commits den oder die aufgetretenen
+machen. Vielmehr solltet ihr durch weitere Commits den oder die aufgetretenen
 Fehler zu beheben.
 
 .. warning::
