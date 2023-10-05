@@ -17,22 +17,22 @@ Arbeitsbereiche
     verschiebt Dateien aus dem Arbeitsbereich in ein Versteck (engl.: *stash*).
 ``git stash pop``
     holt Dateien aus dem Versteck in den Arbeitsbereich.
+``git commit``
+    schreibt Änderungen im Bühnenbereich in das lokale Repository.
+``git pull``
+    kopiert Änderungen aus dem entfernten in das lokale Repository.
 ``git push``
-    verschiebt Dateien aus dem Bühnenbereich in das Repository.
+    kopiert Änderungen aus dem lokalen Repository in das entfernte (:abbr:`engl.
+    (englisch)` remote) Repository.
 
     :samp:`git push -u {UPSTREAM} {BRANCHNAME}`
-        ``-u`` legt die Upstream-Referenz für jeden Zweig fest, deren Argumente
-        anschließend in ``git pull`` :abbr:`o.ä. (oder ähnlichem)` nicht mehr
-        explizit festgelegt werden müssen.
-
-        Mit dem Aufruf :samp:`git push -u origin main` wird ``main`` im entfernten
-        Repository referenziert. Hierbei bedeuten die einzelnen Parameter:
-
         ``-u`` (Langform ``--set-upstream``)
-            legt das entfernte Repository fest.
+            erlaubt die Angabe eines entfernten Repository und des darin
+            enthaltenen Zweiges.
 
-        ``origin`` als :samp:`{UPSTREAM}`
-            benutze als Herkunftszweig ``origin``.
+        :samp:`{UPSTREAM}`
+            ist der Name des entfernten Repository, üblicherweise ``origin``.
 
-        ``main`` als :samp:`{BRANCHNAME}`
-            verweist auf den den Zweig ``main`` im entfernten Repository.
+        :samp:`{BRANCHNAME}`
+            ist der Name des Zweiges im entfernten Repository, üblicherweise
+            derselbe Name wie im lokalen Repository.
