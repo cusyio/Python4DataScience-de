@@ -22,10 +22,17 @@ Arbeitsbereiche
 ``git pull``
     kopiert Änderungen aus dem entfernten in das lokale Repository.
 ``git push``
-    kopiert Änderungen aus dem lokalen in das entfernte Repository.
+    kopiert Änderungen aus dem lokalen Repository in das entfernte (:abbr:`engl.
+    (englisch)` remote) Repository.
 
-    ``git push -u origin main``
-        ``-u`` legt die Upstream-Referenz für jeden Zweig fest, deren Argumente
-        anschließend in ``git pull`` o.ä. nicht mehr explizit festgelegt werden
-        müssen. In unserem Beispiel wird ``main`` im entfernten Repository
-        referenziert.
+    :samp:`git push -u {UPSTREAM} {BRANCHNAME}`
+        ``-u`` (Langform ``--set-upstream``)
+            erlaubt die Angabe eines entfernten Repository und des darin
+            enthaltenen Zweiges.
+
+        :samp:`{UPSTREAM}`
+            ist der Name des entfernten Repository, üblicherweise ``origin``.
+
+        :samp:`{BRANCHNAME}`
+            ist der Name des Zweiges im entfernten Repository, üblicherweise
+            derselbe Name wie im lokalen Repository.

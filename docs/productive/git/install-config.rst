@@ -12,12 +12,24 @@ Für iX-Distributionen sollte Git im Standard-Repository vorhanden sein.
 
 .. tab:: Debian/Ubuntu
 
+   Das Paket `git-all <https://packages.debian.org/stable/git-all>`_ stellt euch
+   eine vollständige Umgebung für Git bereit. Dieses installiert ihr wie folgt:
+
    .. code-block:: console
 
     $ sudo apt install git-all
 
+   Geht es ausschliesslich um Git, genügt das Paket namens
+   `git <https://packages.debian.org/stable/git>`_:
+
+   .. code-block:: console
+
+    $ sudo apt install git
+
    Mit der Bash-Autovervollständigung lässt sich Git auf der Kommandozeile
-   einfacher bedienen:
+   einfacher bedienen. Das entsprechende Paket dazu heisst
+   `bash-completion <https://packages.debian.org/stable/bash-completion>`_
+   und ihr installiert es wie folgt:
 
    .. code-block:: console
 
@@ -35,7 +47,7 @@ Für iX-Distributionen sollte Git im Standard-Repository vorhanden sein.
 
    ``git-completion`` könnt ihr mit `Homebrew <https://brew.sh/>`_ installieren:
 
-   Anschließend müsst ihr folgende Zeile in ``~/.bash_profile`` hinzufügen:
+   Anschließend müsst ihr folgende Zeile in der Datei ``~/.bash_profile`` hinzufügen:
 
    .. code-block:: bash
 
@@ -43,8 +55,8 @@ Für iX-Distributionen sollte Git im Standard-Repository vorhanden sein.
 
 .. tab:: Windows
 
-   Ihr könnt einfach https://git-scm.com/download/win aufrufen und den passenden
-   Download starten.
+   Ruft dazu https://git-scm.com/download/win auf und startet den passenden
+   Download dazu.
 
    .. seealso::
       * `git for windows <https://gitforwindows.org/>`__
@@ -54,10 +66,18 @@ Für iX-Distributionen sollte Git im Standard-Repository vorhanden sein.
 Konfiguration
 -------------
 
+Für jede Änderung muss ersichtlich sein, wer diese verursacht hat. Dazu hinterlegt
+ihr euren Namen und eure E-Mail-Adresse wie folgt:
+
 :samp:`$ git config --global user.name "{NAME}"`
-    legt den Namen fest, der mit euren Commit-Transaktionen verknüpft wird.
+    legt den Namen :samp:`{NAME}` fest, der mit euren Commit-Transaktionen verknüpft wird.
 :samp:`$ git config --global user.email "{EMAIL-ADDRESS}"`
-    legt die E-Mail fest, die mit euren Commit-Transaktionen verknüpft wird.
+    legt die E-Mail-Adresse :samp:`{EMAIL-ADDRESS}` fest, die mit euren Commit-Transaktionen
+    verknüpft wird.
+
+Für eine bessere Lesbarkeit der Ausgabe sorgt die Kolorierung der Befehlszeilenausgabe.
+Diese schaltet ihr mit Hilfe dieses Aufrufs ein:
+
 :samp:`$ git config --global color.ui auto`
     aktiviert die Kolorierung der Befehlszeilenausgabe.
 
@@ -105,7 +125,7 @@ In der :file:`~/.gitconfig`-Datei können jedoch auch Aliase festgelegt werden:
      * `git_state <https://starship.rs/config/#git-state>`_
      * `git_status-Modul <https://starship.rs/config/#git-status>`_
 
-Auch der Editor lässt sich angeben und die Hervorhebung von Leerzeichenfehlern
+Sowohl der Editor lässt sich angeben, als auch die Hervorhebung von Leerzeichenfehlern
 in ``git diff``:
 
 .. code-block:: ini
@@ -177,8 +197,8 @@ globalen Konfiguration:
 Dieses Konstrukt sorgt dafür, dass Git zusätzliche Konfigurationen einbezieht
 oder bestehende überschreibt, wenn ihr in :file:`~/private` arbeitet.
 
-Erstellt nun die Datei :file:`~/.config/git/config-private` und legt dort eure
-alternative Konfiguration fest, :abbr:`z.B. (zum Beispiel)`:
+Erstellt dazu nun die Datei :file:`~/.config/git/config-private` und legt dort
+eure alternative Konfiguration fest, :abbr:`z.B. (zum Beispiel)`:
 
 .. code-block:: ini
 
@@ -195,11 +215,11 @@ alternative Konfiguration fest, :abbr:`z.B. (zum Beispiel)`:
 ``git diff``
 ~~~~~~~~~~~~
 
-Git diff lässt sich konfigurieren, sodass es auch bei Binärdateien sinnvolle
+``git diff`` lässt sich konfigurieren, sodass es auch bei Binärdateien sinnvolle
 Diffs anzeigen kann.
 
-…für Excel-Dateien
-::::::::::::::::::
+… für Excel-Dateien
+:::::::::::::::::::
 
 Hierfür benötigen wir `openpyxl <https://openpyxl.readthedocs.io/en/stable/>`_
 und `pandas <https://pandas.pydata.org>`_:
@@ -218,8 +238,8 @@ Excel-Dateien verwenden:
    :language: python
    :lines: 5-
 
-Anschließend wird der globalen Git-Konfiguration :file:`~/.gitconfig` folgender
-Abschnitt hinzugefügt:
+Nun fügt ihr noch in der globalen Git-Konfiguration in der Datei :file:`~/.gitconfig`
+den folgenden Abschnitt hinzu:
 
 .. code-block:: ini
 
@@ -234,10 +254,10 @@ Schließlich wird in der globalen :file:`~/.gitattributes`-Datei unser
 
     *.xlsx diff=excel
 
-…für PDF-Dateien
-::::::::::::::::
+… für PDF-Dateien
+:::::::::::::::::
 
-Hierfür wird zusätzlich ``pdftohtml`` benötigt. Es kann installiert werden mit
+Hierfür wird zusätzlich ``pdftohtml`` benötigt. Ihr installiert es mit
 
 .. tab:: Debian/Ubuntu
 
@@ -251,8 +271,8 @@ Hierfür wird zusätzlich ``pdftohtml`` benötigt. Es kann installiert werden mi
 
       $ brew install pdftohtml
 
-Anschließend wird der globalen Git-Konfiguration :file:`~/.gitconfig` folgender
-Abschnitt hinzugefügt:
+Anschließend fügt ihr den folgenden Abschnitt der globalen Git-Konfiguration in der
+Datei :file:`~/.gitconfig` hinzu:
 
 .. code-block:: ini
 
@@ -269,17 +289,12 @@ Schließlich wird in der globalen :file:`~/.gitattributes`-Datei unser
 Nun wird beim Aufruf von ``git diff`` die PDF-Datei zunächst konvertiert und
 dann ein Diff über den Ausgaben des Konverters durchgeführt.
 
-…für Word-Dokumente
-:::::::::::::::::::
+… für Word-Dokumente
+::::::::::::::::::::
 
 Auch Unterschiede in Word-Dokumenten lassen sich anzeigen. Hierfür kann `Pandoc
 <https://pandoc.org/>`_ verwendet werden, das einfach installiert werden kann
 mit
-
-.. tab:: Windows
-
-   Herunterladen und Installieren der aktuellen :file:`.msi`-Datei von `GitHub
-   <https://github.com/jgm/pandoc/releases/>`_.
 
 .. tab:: Debian/Ubuntu
 
@@ -292,6 +307,11 @@ mit
    .. code-block:: console
 
       $ brew install pandoc
+
+.. tab:: Windows
+
+   Herunterladen und Installieren der aktuellen :file:`.msi`-Datei von `GitHub
+   <https://github.com/jgm/pandoc/releases/>`_.
 
 Anschließend wird der globalen Git-Konfiguration :file:`~/.gitconfig` folgender
 Abschnitt hinzugefügt:
@@ -314,7 +334,7 @@ Die gleiche Vorgehensweise kann auch angewandt werden, um nützliche Diffs von
 anderen Binärdateien zu erhalten, :abbr:`z.B. (zum Beispiel)` ``*.zip``,
 ``*.jar`` und andere Archive mit ``unzip`` oder für Änderungen in den
 Metainformationen von Bildern mit ``exiv2``. Zudem gibt es
-Konvertierungswerkzeuge für die Umwandlung von :file:`*.odf`, :file:`.*doc` und
+Konvertierungswerkzeuge für die Umwandlung von :file:`*.odt`, :file:`.*doc` und
 anderen Dokumentenformaten in einfachen Text. Für Binärdateien, für die es
 keinen Konverter gibt, reichen oft auch Strings aus.
 
@@ -329,12 +349,36 @@ zu nutzen, könnt ihr :abbr:`z.B. (zum Beispiel)` folgendes angeben:
 
     $ git config --global credential.helper Cache
 
-Hiermit wird ihr Passwort für 15 Minuten im Cache-Speicher gehalten. Der Timeout
-kann ggf. erhöht werden, :abbr:`z.B. (zum Beispiel)` mit:
+Hiermit wird euer Passwort für 15 Minuten im Cache-Speicher gehalten. Der Timeout
+kann :abbr:`ggf. (gegebenenfalls)` erhöht werden, :abbr:`z.B. (zum Beispiel)` mit:
 
 .. code-block:: console
 
     $ git config --global credential.helper 'cache --timeout=3600'
+
+.. tab:: macOS
+
+    Unter macOS lässt sich mit ``osxkeychain`` die Schlüsselbundverwaltung
+    (*Keychain*) nutzen um die Zugangsdaten zu speichern. ``osxkeychain`` setzt
+    Git in der Version 1.7.10 oder neuer voraus und kann im selben Verzeichnis
+    wie Git installiert werden mit:
+
+    .. code-block:: console
+
+        $ git credential-osxkeychain
+        git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+        $ curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain
+        $ chmod u+x git-credential-osxkeychain
+        $ sudo mv git-credential-osxkeychain /usr/bin/
+        Password:
+        git config --global credential.helper osxkeychain
+
+    Dies trägt folgendes in die :file:`~/.gitconfig`-Datei ein:
+
+    .. code-block:: ini
+
+        [credential]
+            helper = osxkeychain
 
 .. tab:: Windows
 
@@ -373,33 +417,9 @@ kann ggf. erhöht werden, :abbr:`z.B. (zum Beispiel)` mit:
         [credential "https://ce.cusy.io"]
             provider = generic
 
-.. tab:: macOS
-
-    Unter macOS lässt sich mit ``osxkeychain`` die Schlüsselbundverwaltung
-    (*Keychain*) nutzen um die Zugangsdaten zu speichern. ``osxkeychain`` setzt
-    Git in der Version 1.7.10 oder neuer voraus und kann im selben Verzeichnis
-    wie Git installiert werden mit:
-
-    .. code-block:: console
-
-        $ git credential-osxkeychain
-        git: 'credential-osxkeychain' is not a git command. See 'git --help'.
-        $ curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain
-        $ chmod u+x git-credential-osxkeychain
-        $ sudo mv git-credential-osxkeychain /usr/bin/
-        Password:
-        git config --global credential.helper osxkeychain
-
-    Dies trägt folgendes in die :file:`~/.gitconfig`-Datei ein:
-
-    .. code-block:: ini
-
-        [credential]
-            helper = osxkeychain
-
 .. note::
-    Ein umfangreiches Beispiel einer `Konfigurationsdatei findet ihr in meinem
-    `dotfiles <https://github.com/veit/dotfiles/>`__-Repository: `.gitconfig
+    Ein umfangreiches Beispiel einer Konfigurationsdatei findet ihr in meinem
+    `dotfiles <https://github.com/veit/dotfiles/>`_-Repository: `.gitconfig
     <https://github.com/veit/dotfiles/blob/main/.config/git/config>`_.
 
 .. seealso::
