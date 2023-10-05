@@ -76,7 +76,7 @@ ihr euren Namen und eure E-Mail-Adresse wie folgt:
     verknüpft wird.
 
 Für eine bessere Lesbarkeit der Ausgabe sorgt die Kolorierung der Befehlszeilenausgabe.
-Dieses schaltet ihr mit Hilfe dieses Aufrufs ein:
+Diese schaltet ihr mit Hilfe dieses Aufrufs ein:
 
 :samp:`$ git config --global color.ui auto`
     aktiviert die Kolorierung der Befehlszeilenausgabe.
