@@ -23,8 +23,8 @@ Arbeitsbereiche
     :samp:`git push -u {UPSTREAM} {BRANCHNAME}`
         ``-u`` legt die Upstream-Referenz für jeden Zweig fest, deren Argumente
         anschließend in ``git pull`` :abbr:`o.ä. (oder ähnlichem)` nicht mehr
-        explizit festgelegt werden müssen. 
-        
+        explizit festgelegt werden müssen.
+
         Mit dem Aufruf :samp:`git push -u origin main` wird ``main`` im entfernten
         Repository referenziert. Hierbei bedeuten die einzelnen Parameter:
 
