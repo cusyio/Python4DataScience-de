@@ -53,14 +53,14 @@ eine große Anzahl von Git-Referenzen
     Datei zusammengefasst.
 
     Jede Operation, die den Commit-Verlauf eines Repositories durchlaufen und
-    die einzelnen Referenzen berücksichtigen muss, wie 
+    die einzelnen Referenzen berücksichtigen muss, wie
     :abbr:`z.B. (zum Beispiel)` bei ``git branch --contains <commit>``, werden bei einem Repo mit
     vielen Referenzen langsam.
 
 eine große Anzahl an versionierten Dateien
     Der Index des Directory Cache (``.git/index``) wird von Git verwendet um
     zu ermitteln, ob die Datei verändert wurde. Dabei verlangsamen sich mit
-    zunehmender Anzahl an Dateien viele Vorgänge, wie 
+    zunehmender Anzahl an Dateien viele Vorgänge, wie
     :abbr:`z.B. (zum Beispiel)` ``git status`` und ``git commit``.
 
 große Dateien
