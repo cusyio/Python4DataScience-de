@@ -197,5 +197,5 @@ Mögliche Antworten hierfür werden in :doc:`deploy-branches` beschrieben.
 
 .. seealso::
 
-   Beide Varianten mit feature branches sind stark vereinfachte Alternativen
-   des deutlich komplexeren :doc:`git-flow` .
+   Beide Varianten mit Feature Branches sind stark vereinfachte Alternativen
+   des deutlich komplexeren :doc:`git-flow`.

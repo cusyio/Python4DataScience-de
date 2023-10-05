@@ -14,7 +14,7 @@ Ein oder mehrere Deployment-Branches empfehlen sich, wenn ihr :abbr:`z.B. (zum B
 Release-Zeitpunkt nicht selbst bestimmen könnt, wie bei einer iOS-Anwendung, die
 die App-Store-Validierung bestehen muss, oder wenn euch nur ein bestimmtes
 Zeitfenster für die Bereitstellung zur Verfügung steht. In diesen Fällen
-empfiehlt sich ein *deployment*-Branch, der den bereitgestellten Code
+empfiehlt sich ein Deployment-Branch, der den bereitgestellten Code
 widerspiegelt. Ein solcher Arbeitsablauf verhindert dann zusätzliche
 Arbeitsaufwände bei :doc:`../rebase` und :doc:`../tag`.
 
