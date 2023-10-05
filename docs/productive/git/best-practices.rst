@@ -118,7 +118,7 @@ um nachvollziehen zu können, welches Ziel mit dem Code erreicht werden
 sollte.
 
 Üblicherweise sollten kurze, 50–72 Zeichen lange Nachrichten angegeben
-werden, die in einer Zeile ausgegeben werden, z.B. mit
+werden, die in einer Zeile ausgegeben werden, `z.B. (zum Beispiel)` mit
 ``git log --oneline``.
 
 Mit ``git blame`` könnt ihr euch auch später noch für jede Zeile angeben
@@ -166,13 +166,13 @@ Wartet euer Repository regelmäßig
 Folgende Wartungsarbeiten solltet ihr regelmäßig durchführen:
 
 Validiert das Repo
-++++++++++++++++++
+~~~~~~~~~~~~~~~~~~
 
 Der Befehl ``git fsck`` prüft, ob alle Objekte in der internen Datenstruktur von Git
 noch miteinander verknüpft sind.
 
 Komprimiert das Repo
-++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~
 
 Spart Speicherplatz mit den Befehlen ``git gc`` bzw. ``git gc --aggressive``.
 
@@ -182,7 +182,7 @@ Spart Speicherplatz mit den Befehlen ``git gc`` bzw. ``git gc --aggressive``.
       <https://git-scm.com/book/de/v2/Git-Interna-Wartung-und-Datenwiederherstellung>`_
 
 Bereinigt Remote Tracking Branches
-++++++++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nicht genutzte Zweige auf einem entfernten Server lassen sich mit ``git remote update --prune`` löschen.
 Noch besser ist, wenn ihr die Standardeinstellung so ändert, dass entfernt
@@ -194,13 +194,13 @@ gelöscht werden. Dies erreicht ihr mit:
     $ git config --global fetch.prune true
 
 Überprüft vergessene Arbeiten
-+++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Mit ``git stash list`` seht ihr eine List von gespeicherten stashes.
 Diese könnt ihr mit ``git stash drop`` entfernen.
 
 Überprüft eure Repositories auf unerwünschte Dateien
-++++++++++++++++++++++++++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Mit `Gitleaks <https://github.com/zricethezav/gitleaks>`_ könnt ihr eure
 Repositories regelmäßig auf ungewollt gespeicherte Zugangsdaten überprüfen.
@@ -232,82 +232,5 @@ gespeichert, den ihr später herunterladen und analysieren könnt.
     * `GitLab Secret Detection
       <https://docs.gitlab.com/ee/user/application_security/secret_detection/>`_
 
-Mit `git-filter-repo <https://github.com/newren/git-filter-repo>`_ könnt ihr
-unerwünschte Dateien, seien es Zugangsdaten oder große Binärdateien aus eurer
-Git-Historie entfernen.
-
-Alternativ könnt ihr auch auf der Kommandozeile die Daten löschen.
-
-Editieren von Commits
----------------------
-
-Löschen des letzten Commits
-+++++++++++++++++++++++++++
-
-.. code-block:: console
-
-    $ git reset HEAD^ --hard
-    $ git push origin -f
-
-Löschen anderer Commits
-+++++++++++++++++++++++
-
-.. code-block:: console
-
-  $ git rebase -i SHA origin/main
-
-``-i``
-interaktiver Modus, in dem euer Standardeditor geöffnet wird und eine
-Liste aller Commits nach dem zu entfernenden Commit mit dem Hash-Wert
-:samp:`{SHA}` angezeigt wird, z.B.:
-
-.. code-block:: console
-
-   pick d82199e Update readme
-   pick 410266e Change import for the interface
-   …
-
-   Wenn ihr nun eine Zeile entfernt, so wird dieser Commit nach dem
-   Speichern und Schließen des Editors gelöscht. Anschließend kann das
-   entfernte Repository aktualisiert werden mit:
-
-.. code-block:: console
-
-    $ git push origin HEAD:main -f
-
-Ändern einer Commit-Nachricht
-+++++++++++++++++++++++++++++
-
-Dies lässt sich ebenfalls einfach mit ``rebase`` realisieren wobei ihr in
-eurem Editor nicht die Zeile löschen sondern in der Zeile ``pick`` durch
-``r`` (*reword*) ersetzen müsst.
-
-Entfernen einer Datei aus der Historie
-++++++++++++++++++++++++++++++++++++++
-
-Eine Datei kann vollständig aus Git-Historie des aktuellen Branches entfernt
-werden.
-Das ist nötig, wenn ihr beispielsweise aus Versehen Passwörter oder eine sehr große Datei zum Repository hinzugefügt habt.
-
-.. code-block:: console
-
-    $ git filter-repo --invert-paths --path path/somefile
-    $ git push --no-verify --mirror
-
-.. note::
-    Informiert die Team-Mitglieder, dass sie erneut einen Klon des Repository
-    erstellen sollten.
-
-Entfernen einer Zeichenkette aus der Historie
-+++++++++++++++++++++++++++++++++++++++++++++
-
-Das Entfernen funktioniert auch mit einzelnen Wörtern oder Zeichenketten:
-
-.. code-block:: console
-
-    $ git filter-repo --message-callback 'return re.sub(b"^git-svn-id:.*\n", b"", message, flags=re.MULTILINE)'
-
-.. seealso::
-  * `git-filter-repo — Man Page <https://www.mankier.com/1/git-filter-repo>`_
-  * `git-reflog <https://git-scm.com/docs/git-reflog>`_
-  * `git-gc <https://git-scm.com/docs/git-gc>`_
+Mit :ref:`git-filter-repo` könnt ihr
+unerwünschte Dateien oder Zugangsdaten aus eurer Git-Historie entfernen.
