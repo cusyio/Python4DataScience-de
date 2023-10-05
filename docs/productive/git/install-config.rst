@@ -47,7 +47,7 @@ Für iX-Distributionen sollte Git im Standard-Repository vorhanden sein.
 
    ``git-completion`` könnt ihr mit `Homebrew <https://brew.sh/>`_ installieren:
 
-   Anschließend müsst ihr folgende Zeile in ``~/.bash_profile`` hinzufügen:
+   Anschließend müsst ihr folgende Zeile in der Datei ``~/.bash_profile`` hinzufügen:
 
    .. code-block:: bash
 
