@@ -66,10 +66,18 @@ Für iX-Distributionen sollte Git im Standard-Repository vorhanden sein.
 Konfiguration
 -------------
 
+Für jede Änderung muss ersichtlich sein, wer diese verursacht hat. Dazu hinterlegt 
+ihr euren Namen und eure Emailadresse wie folgt:
+
 :samp:`$ git config --global user.name "{NAME}"`
-    legt den Namen fest, der mit euren Commit-Transaktionen verknüpft wird.
+    legt den Namen ``NAME`` fest, der mit euren Commit-Transaktionen verknüpft wird.
 :samp:`$ git config --global user.email "{EMAIL-ADDRESS}"`
-    legt die E-Mail fest, die mit euren Commit-Transaktionen verknüpft wird.
+    legt die Emailadresse ``EMAIL-ADDRESS`` fest, die mit euren Commit-Transaktionen
+    verknüpft wird.
+
+Für eine bessere Lesbarkeit der Ausgabe sorgt die Kolorierung der Befehlszeilenausgabe.
+Dieses schaltet ihr mit Hilfe dieses Aufrufs ein:
+
 :samp:`$ git config --global color.ui auto`
     aktiviert die Kolorierung der Befehlszeilenausgabe.
 
