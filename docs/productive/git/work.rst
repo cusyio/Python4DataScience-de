@@ -88,8 +88,8 @@ An einem Projekt arbeiten
     Leerzeichen zwischen den Zweigen verwendet wird. Zusätzlich gibt es einen
     Operator mit drei Punkten: :samp:`git diff {MAIN}...{FEATURE_BRANCH}`, der
     ein Diff initiiert, bei dem der erste Eingabeparammeter :samp:`{MAIN}` so
-    geändert wird, dass die Referenz der gemeinsame Vorfahre von :samp:`MAIN`
-    und :samp:`FEATURE` ist.
+    geändert wird, dass die Referenz der gemeinsame Vorfahre von :samp:`{MAIN}`
+    und :samp:`{FEATURE}` ist.
 
     Jeder Commit in Git hat eine Commit-ID, die ihr mittels ``git log`` erhaltet.
     Anschließend könnt ihr diese Commit-ID auch an ``git diff`` übergeben:
