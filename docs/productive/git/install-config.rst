@@ -356,6 +356,30 @@ kann :abbr:`ggf. (gegebenenfalls)` erhöht werden, :abbr:`z.B. (zum Beispiel)` m
 
     $ git config --global credential.helper 'cache --timeout=3600'
 
+.. tab:: macOS
+
+    Unter macOS lässt sich mit ``osxkeychain`` die Schlüsselbundverwaltung
+    (*Keychain*) nutzen um die Zugangsdaten zu speichern. ``osxkeychain`` setzt
+    Git in der Version 1.7.10 oder neuer voraus und kann im selben Verzeichnis
+    wie Git installiert werden mit:
+
+    .. code-block:: console
+
+        $ git credential-osxkeychain
+        git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+        $ curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain
+        $ chmod u+x git-credential-osxkeychain
+        $ sudo mv git-credential-osxkeychain /usr/bin/
+        Password:
+        git config --global credential.helper osxkeychain
+
+    Dies trägt folgendes in die :file:`~/.gitconfig`-Datei ein:
+
+    .. code-block:: ini
+
+        [credential]
+            helper = osxkeychain
+
 .. tab:: Windows
 
     Für Windows steht `Git Credential Manager (GCM)
@@ -392,30 +416,6 @@ kann :abbr:`ggf. (gegebenenfalls)` erhöht werden, :abbr:`z.B. (zum Beispiel)` m
 
         [credential "https://ce.cusy.io"]
             provider = generic
-
-.. tab:: macOS
-
-    Unter macOS lässt sich mit ``osxkeychain`` die Schlüsselbundverwaltung
-    (*Keychain*) nutzen um die Zugangsdaten zu speichern. ``osxkeychain`` setzt
-    Git in der Version 1.7.10 oder neuer voraus und kann im selben Verzeichnis
-    wie Git installiert werden mit:
-
-    .. code-block:: console
-
-        $ git credential-osxkeychain
-        git: 'credential-osxkeychain' is not a git command. See 'git --help'.
-        $ curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain
-        $ chmod u+x git-credential-osxkeychain
-        $ sudo mv git-credential-osxkeychain /usr/bin/
-        Password:
-        git config --global credential.helper osxkeychain
-
-    Dies trägt folgendes in die :file:`~/.gitconfig`-Datei ein:
-
-    .. code-block:: ini
-
-        [credential]
-            helper = osxkeychain
 
 .. note::
     Ein umfangreiches Beispiel einer `Konfigurationsdatei findet ihr in meinem
