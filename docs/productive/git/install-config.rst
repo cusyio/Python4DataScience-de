@@ -349,8 +349,8 @@ zu nutzen, könnt ihr :abbr:`z.B. (zum Beispiel)` folgendes angeben:
 
     $ git config --global credential.helper Cache
 
-Hiermit wird ihr Passwort für 15 Minuten im Cache-Speicher gehalten. Der Timeout
-kann ggf. erhöht werden, :abbr:`z.B. (zum Beispiel)` mit:
+Hiermit wird euer Passwort für 15 Minuten im Cache-Speicher gehalten. Der Timeout
+kann :abbr:`ggf. (gegebenenfalls)` erhöht werden, :abbr:`z.B. (zum Beispiel)` mit:
 
 .. code-block:: console
 
