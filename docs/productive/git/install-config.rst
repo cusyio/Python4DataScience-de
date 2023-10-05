@@ -19,7 +19,7 @@ Für iX-Distributionen sollte Git im Standard-Repository vorhanden sein.
 
     $ sudo apt install git-all
 
-   Geht es ausschliesslich um Git, genügt das Paket namens 
+   Geht es ausschliesslich um Git, genügt das Paket namens
    `git <https://packages.debian.org/stable/git>`_:
 
    .. code-block:: console
@@ -27,7 +27,7 @@ Für iX-Distributionen sollte Git im Standard-Repository vorhanden sein.
     $ sudo apt install git
 
    Mit der Bash-Autovervollständigung lässt sich Git auf der Kommandozeile
-   einfacher bedienen. Das entsprechende Paket dazu heisst 
+   einfacher bedienen. Das entsprechende Paket dazu heisst
    `bash-completion <https://packages.debian.org/stable/bash-completion>`_
    und ihr installiert es wie folgt:
 
