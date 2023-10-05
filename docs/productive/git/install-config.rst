@@ -215,10 +215,10 @@ eure alternative Konfiguration fest, :abbr:`z.B. (zum Beispiel)`:
 ``git diff``
 ~~~~~~~~~~~~
 
-Git diff lässt sich konfigurieren, sodass es auch bei Binärdateien sinnvolle
+``git diff`` lässt sich konfigurieren, sodass es auch bei Binärdateien sinnvolle
 Diffs anzeigen kann.
 
-…für Excel-Dateien
+… für Excel-Dateien
 ::::::::::::::::::
 
 Hierfür benötigen wir `openpyxl <https://openpyxl.readthedocs.io/en/stable/>`_
@@ -238,8 +238,8 @@ Excel-Dateien verwenden:
    :language: python
    :lines: 5-
 
-Anschließend wird der globalen Git-Konfiguration :file:`~/.gitconfig` folgender
-Abschnitt hinzugefügt:
+Nun fügt ihr noch in der globalen Git-Konfiguration in der Datei :file:`~/.gitconfig`
+den folgenden Abschnitt hinzu:
 
 .. code-block:: ini
 
@@ -254,10 +254,10 @@ Schließlich wird in der globalen :file:`~/.gitattributes`-Datei unser
 
     *.xlsx diff=excel
 
-…für PDF-Dateien
+… für PDF-Dateien
 ::::::::::::::::
 
-Hierfür wird zusätzlich ``pdftohtml`` benötigt. Es kann installiert werden mit
+Hierfür wird zusätzlich ``pdftohtml`` benötigt. Ihr installiert es mit
 
 .. tab:: Debian/Ubuntu
 
@@ -271,8 +271,8 @@ Hierfür wird zusätzlich ``pdftohtml`` benötigt. Es kann installiert werden mi
 
       $ brew install pdftohtml
 
-Anschließend wird der globalen Git-Konfiguration :file:`~/.gitconfig` folgender
-Abschnitt hinzugefügt:
+Anschließend fügt ihr den folgenden Abschnitt der globalen Git-Konfiguration in der
+Datei :file:`~/.gitconfig` hinzu:
 
 .. code-block:: ini
 
@@ -289,17 +289,12 @@ Schließlich wird in der globalen :file:`~/.gitattributes`-Datei unser
 Nun wird beim Aufruf von ``git diff`` die PDF-Datei zunächst konvertiert und
 dann ein Diff über den Ausgaben des Konverters durchgeführt.
 
-…für Word-Dokumente
+… für Word-Dokumente
 :::::::::::::::::::
 
 Auch Unterschiede in Word-Dokumenten lassen sich anzeigen. Hierfür kann `Pandoc
 <https://pandoc.org/>`_ verwendet werden, das einfach installiert werden kann
 mit
-
-.. tab:: Windows
-
-   Herunterladen und Installieren der aktuellen :file:`.msi`-Datei von `GitHub
-   <https://github.com/jgm/pandoc/releases/>`_.
 
 .. tab:: Debian/Ubuntu
 
@@ -312,6 +307,11 @@ mit
    .. code-block:: console
 
       $ brew install pandoc
+
+.. tab:: Windows
+
+   Herunterladen und Installieren der aktuellen :file:`.msi`-Datei von `GitHub
+   <https://github.com/jgm/pandoc/releases/>`_.
 
 Anschließend wird der globalen Git-Konfiguration :file:`~/.gitconfig` folgender
 Abschnitt hinzugefügt:
@@ -334,7 +334,7 @@ Die gleiche Vorgehensweise kann auch angewandt werden, um nützliche Diffs von
 anderen Binärdateien zu erhalten, :abbr:`z.B. (zum Beispiel)` ``*.zip``,
 ``*.jar`` und andere Archive mit ``unzip`` oder für Änderungen in den
 Metainformationen von Bildern mit ``exiv2``. Zudem gibt es
-Konvertierungswerkzeuge für die Umwandlung von :file:`*.odf`, :file:`.*doc` und
+Konvertierungswerkzeuge für die Umwandlung von :file:`*.odt`, :file:`.*doc` und
 anderen Dokumentenformaten in einfachen Text. Für Binärdateien, für die es
 keinen Konverter gibt, reichen oft auch Strings aus.
 
