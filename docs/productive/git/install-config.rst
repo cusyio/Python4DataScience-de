@@ -125,7 +125,7 @@ In der :file:`~/.gitconfig`-Datei können jedoch auch Aliase festgelegt werden:
      * `git_state <https://starship.rs/config/#git-state>`_
      * `git_status-Modul <https://starship.rs/config/#git-status>`_
 
-Auch der Editor lässt sich angeben und die Hervorhebung von Leerzeichenfehlern
+Sowohl der Editor lässt sich angeben, als auch die Hervorhebung von Leerzeichenfehlern
 in ``git diff``:
 
 .. code-block:: ini
