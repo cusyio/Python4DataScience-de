@@ -5,6 +5,12 @@
 Repos aufteilen
 ===============
 
+Häufig ist es sinnvoll, ein großes Git-Repository in mehrere kleinere aufzuteilen.
+Das kann in einem Projekt nötig sein, das stark angewachsen ist, oder wenn wir
+ein Teilprojekt als eigenständiges Repo auslagern möchten.
+Natürlich könnten wir einfach ein neues Repository erstellen und die Dateien für das Teilprojekt hineinkopieren.
+Allerdings würden wir dabei die gesamte Versionsgeschichte verlieren.
+
 Hier beschreibe ich, wie ihr ein Git-Repository aufteilen könnt, ohne die
 jeweils zugehörige Historie zu verlieren.
 

@@ -74,5 +74,5 @@ Zweig-Builds auf Knopfdruck zu erstellen, anstatt sie automatisch auszulösen.
 Dies scheint uns ein guter Weg, um ein Gleichgewicht zwischen regelmäßigen Tests
 und der Einsparung von Ressourcen zu schaffen. In kritischen Zweigen wie
 ``main`` oder ``stable`` werden Builds jedoch automatisch ausgelöst. Zudem
-erhalten wir automatisiert auch bei jedoem Merge- oder Pull-Request zeitnahe
+erhalten wir automatisiert auch bei jedem Merge- oder Pull-Request zeitnahe
 Testergebnisse.

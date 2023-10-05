@@ -2,7 +2,7 @@
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
-Git flow
+Git Flow
 ========
 
 Git Flow war einer der ersten Vorschläge zur Verwendung von Git-Branches. Es
@@ -10,8 +10,14 @@ empfahl einen ``main``-Branch und einen separaten ``develop``-Branch sowie
 diverse weitere Branches für Features, Releases und Hotfixes. Die verschiedenen
 Entwicklungen sollten im ``develop``-Branch zusammengeführt werden, anschließend
 in den ``release``-Branch überführt werden und schließlich im ``main``-Branch
-landen. So ist Git Flow zwar ein wohldefinierter, aber komplexer Standard, der
-praktisch die folgenden beiden Probleme hat:
+landen.
+
+
+Nachteile von Git Flow
+----------------------
+
+Git Flow ist zwar ein wohldefinierter, aber komplexer Standard, der
+in der Praxis folgende zwei Probleme erzeugt:
 
 * Die meisten Entwickler und Werkzeuge gehen von der Annahme aus, dass der
   ``main``-Branch der Hauptzweig ist von dem aus ``branch`` und ``merge``

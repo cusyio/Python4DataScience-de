@@ -26,6 +26,7 @@ Im Folgenden behandeln wir einige dieser Git-Workflows.
 
    feature-branches
    deploy-branches
+   git-flow
    tbd
    git-flow
    monorepos
