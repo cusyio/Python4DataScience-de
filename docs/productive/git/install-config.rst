@@ -12,12 +12,22 @@ Für iX-Distributionen sollte Git im Standard-Repository vorhanden sein.
 
 .. tab:: Debian/Ubuntu
 
+   Das Paket ``git-all`` stellt euch eine vollständige Umgebung für Git
+   bereit. Dieses installiert ihr wie folgt:
+
    .. code-block:: console
 
     $ sudo apt install git-all
 
+   Geht es ausschliesslich um Git, genügt das Paket namens ``git``:
+
+   .. code-block:: console
+
+    $ sudo apt install git
+
    Mit der Bash-Autovervollständigung lässt sich Git auf der Kommandozeile
-   einfacher bedienen:
+   einfacher bedienen. Das entsprechende Paket dazu heisst ``bash-completion``
+   und ihr installiert es wie folgt:
 
    .. code-block:: console
 
