@@ -6,7 +6,7 @@ Visual Studio Code
 ==================
 
 `Visual Studio Code <https://code.visualstudio.com/>`_ kann eine bereits
-vorhandene :doc:`Git-Installation <../install-config>` nutzen um die
+vorhandene :doc:`Git-Installation <../../install-config>` nutzen um die
 entsprechenden Funktionalitäten zur Verfügung stellen zu können.
 
 Klonen

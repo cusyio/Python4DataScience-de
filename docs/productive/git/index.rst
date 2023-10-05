@@ -97,8 +97,6 @@ Zum Weiterlesen
     branch
     revert
     rebase
-    cherry-pick
-    bisect
     best-practices
     workflows/index
     advanced/index
