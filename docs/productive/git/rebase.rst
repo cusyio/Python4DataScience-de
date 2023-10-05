@@ -43,7 +43,7 @@ folgendes:
 
 .. note::
 
-   ``git rebase`` wird auch kurz in :doc:`advanced/jupyter-config`, :doc:`best-practices`
+   ``git rebase`` wird auch kurz in :doc:`advanced/jupyter-config`
    und :doc:`workflows/feature-branches` behandelt
 
 Rebase abhängiger Zweige mit ``–update-refs``
@@ -69,3 +69,37 @@ die Option ``--update-refs`` immer angegeben ist.
 .. seealso::
    `rebase: add --update-refs option
    <https://lore.kernel.org/git/3ec2cc922f971af4e4a558188cf139cc0c0150d6.1657631226.git.gitgitgadget@gmail.com/>`_
+
+
+Commits mit rebase löschen
+--------------------------
+
+.. code-block:: console
+
+  $ git rebase -i SHA origin/main
+
+``-i``
+interaktiver Modus, in dem euer Standardeditor geöffnet wird und eine
+Liste aller Commits nach dem zu entfernenden Commit mit dem Hash-Wert
+:samp:`{SHA}` angezeigt wird, :abbr:`z.B. (zum Beispiel)`:
+
+.. code-block:: console
+
+   pick d82199e Update readme
+   pick 410266e Change import for the interface
+   …
+
+Wenn ihr nun eine Zeile entfernt, so wird dieser Commit nach dem
+Speichern und Schließen des Editors gelöscht. Anschließend kann das
+entfernte Repository aktualisiert werden mit:
+
+.. code-block:: console
+
+    $ git push origin HEAD:main -f
+
+Ändern einer Commit-Nachricht mit rebase
+----------------------------------------
+
+Dies lässt sich ebenfalls einfach mit ``rebase`` realisieren wobei ihr in
+eurem Editor nicht die Zeile löschen sondern in der Zeile ``pick`` durch
+``r`` (*reword*) ersetzen müsst.

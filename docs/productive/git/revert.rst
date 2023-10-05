@@ -103,7 +103,36 @@ vorgenommen habt:
 :samp:`$ git reset HEAD~`
     nimmt den letzten Commit zurück wobei dessen Änderungen nun wieder in den
     Bühnenbereich übernommen werden.
-:samp:`$ git switch {DESIRED_BRANCH}`
-    wechselt in den gewünschten Branch.
-:samp:`$ git commit -m '{COMMIT_MESSAGE}'`
-    Commit der Änderungen aus dem Bühnenbereich in den gewünschten Branch.
+
+
+.. _git-filter-repo:
+
+Entfernen einer Datei aus der Historie
+--------------------------------------
+
+Eine Datei kann vollständig aus Git-Historie des aktuellen Branches entfernt
+werden.
+Das ist nötig, wenn ihr beispielsweise aus Versehen Passwörter oder eine sehr große Datei zum Repository hinzugefügt habt.
+
+.. code-block:: console
+
+    $ git filter-repo --invert-paths --path path/somefile
+    $ git push --no-verify --mirror
+
+.. note::
+    Informiert die Team-Mitglieder, dass sie erneut einen Klon des Repository
+    erstellen sollten.
+
+Entfernen einer Zeichenkette aus der Historie
+---------------------------------------------
+
+Das Entfernen funktioniert auch mit einzelnen Wörtern oder Zeichenketten:
+
+.. code-block:: console
+
+    $ git filter-repo --message-callback 'return re.sub(b"^git-svn-id:.*\n", b"", message, flags=re.MULTILINE)'
+
+.. seealso::
+  * `git-filter-repo — Man Page <https://www.mankier.com/1/git-filter-repo>`_
+  * `git-reflog <https://git-scm.com/docs/git-reflog>`_
+  * `git-gc <https://git-scm.com/docs/git-gc>`_
