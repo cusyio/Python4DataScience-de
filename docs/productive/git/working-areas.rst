@@ -17,8 +17,12 @@ Arbeitsbereiche
     verschiebt Dateien aus dem Arbeitsbereich in ein Versteck (engl.: *stash*).
 ``git stash pop``
     holt Dateien aus dem Versteck in den Arbeitsbereich.
+``git commit``
+    schreibt Änderungen im Bühnenbereich in das lokale Repository.
+``git pull``
+    kopiert Änderungen aus dem entfernten in das lokale Repository.
 ``git push``
-    verschiebt Dateien aus dem Bühnenbereich in das Repository.
+    kopiert Änderungen aus dem lokalen in das entfernte Repository.
 
     ``git push -u origin main``
         ``-u`` legt die Upstream-Referenz für jeden Zweig fest, deren Argumente
