@@ -66,7 +66,7 @@ Für iX-Distributionen sollte Git im Standard-Repository vorhanden sein.
 Konfiguration
 -------------
 
-Für jede Änderung muss ersichtlich sein, wer diese verursacht hat. Dazu hinterlegt 
+Für jede Änderung muss ersichtlich sein, wer diese verursacht hat. Dazu hinterlegt
 ihr euren Namen und eure Emailadresse wie folgt:
 
 :samp:`$ git config --global user.name "{NAME}"`
