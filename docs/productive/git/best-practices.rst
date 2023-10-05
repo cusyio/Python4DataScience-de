@@ -11,7 +11,7 @@ Macht früh Commits
 Macht euren ersten Commit nachdem ihr die initiale Installation
 fertiggestellt habt und noch bevor ihr erste Änderungen vornehmt.
 
-Verwendet ihr ein Cookiecutter-Template, commitet unmittelbar nach den folgenden Schritten:
+Verwendet ihr ein Cookiecutter-Template, committet unmittelbar nach den folgenden Schritten:
 
 .. code-block:: console
 
@@ -67,8 +67,8 @@ Schreibt ein README
 Auch eine ``README.rst``-Datei sollte in jedem Repository vorhanden sein, in
 der das Deployment und der grundsätzliche Aufbau des Codes beschrieben wird.
 
-Macht oft Commits!
-------------------
+Macht oft Commits
+-----------------
 
 Nach jeder abgeschlossenen Aufgabe und Teilaufgabe sollte ein Commit erfolgen.
 Auch nicht abgeschlossene Aufgaben können auf git gesichert werden.
