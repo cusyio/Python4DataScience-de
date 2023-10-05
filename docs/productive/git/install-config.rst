@@ -219,7 +219,7 @@ eure alternative Konfiguration fest, :abbr:`z.B. (zum Beispiel)`:
 Diffs anzeigen kann.
 
 … für Excel-Dateien
-::::::::::::::::::
+:::::::::::::::::::
 
 Hierfür benötigen wir `openpyxl <https://openpyxl.readthedocs.io/en/stable/>`_
 und `pandas <https://pandas.pydata.org>`_:
@@ -255,7 +255,7 @@ Schließlich wird in der globalen :file:`~/.gitattributes`-Datei unser
     *.xlsx diff=excel
 
 … für PDF-Dateien
-::::::::::::::::
+:::::::::::::::::
 
 Hierfür wird zusätzlich ``pdftohtml`` benötigt. Ihr installiert es mit
 
@@ -290,7 +290,7 @@ Nun wird beim Aufruf von ``git diff`` die PDF-Datei zunächst konvertiert und
 dann ein Diff über den Ausgaben des Konverters durchgeführt.
 
 … für Word-Dokumente
-:::::::::::::::::::
+::::::::::::::::::::
 
 Auch Unterschiede in Word-Dokumenten lassen sich anzeigen. Hierfür kann `Pandoc
 <https://pandoc.org/>`_ verwendet werden, das einfach installiert werden kann
