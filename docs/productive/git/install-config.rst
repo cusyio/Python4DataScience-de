@@ -55,8 +55,8 @@ Für iX-Distributionen sollte Git im Standard-Repository vorhanden sein.
 
 .. tab:: Windows
 
-   Ihr könnt einfach https://git-scm.com/download/win aufrufen und den passenden
-   Download starten.
+   Ruft dazu https://git-scm.com/download/win auf und startet den passenden
+   Download dazu.
 
    .. seealso::
       * `git for windows <https://gitforwindows.org/>`__
