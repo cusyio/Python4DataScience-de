@@ -133,7 +133,7 @@ An einem Projekt arbeiten
     entfernt eine Datei namens :samp:`{FILE}` aus dem Arbeits- und Bühnenbereich.
 ``$ git stash``
     verschiebt die aktuellen Änderungen aus dem Arbeitsbereich in das Versteck
-    (engl.: *stash*).
+    (:abbr:`engl. (englisch)`: *stash*).
 
     Um eure versteckten Änderungen möglichst gut unterscheiden zu können,
     empfehlen sich die folgenden beiden Optionen:
