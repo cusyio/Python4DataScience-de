@@ -17,7 +17,7 @@ Continuous Integration
     führt eine Reihe von Skripten sequentiell oder parallel aus, die eure
     Anwendung automatisch erstellt und testet, :abbr:`z.B. (zum Beispiel)` nach
     jedem ``git pull`` in einem :doc:`Feature-Branch
-    <../workflows/feature-branches>`. Damit soll es weniger wahrscheinlich
+    <../../workflows/feature-branches>`. Damit soll es weniger wahrscheinlich
     werden, dass ihr Fehler in eure Anwendung einbringt.
 
     Wenn die Überprüfungen wie erwartet funktionieren, könnt ihr einen

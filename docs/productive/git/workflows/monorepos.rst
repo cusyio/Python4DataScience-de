@@ -6,15 +6,15 @@ Monorepos und große Repositories
 ================================
 
 In einem großen Projekt kann es sinnvoll sein, einzelne Komponenten in separaten Repositories zu pflegen.
-Manchmal schafft dies jedoch unnötige Komplexität, z.B. welche Versionen der Repositories miteinander kompatibel sind.
+Manchmal schafft dies jedoch unnötige Komplexität, :abbr:`z.B. (zum Beispiel)` welche Versionen der Repositories miteinander kompatibel sind.
 In diesen Fällen kann es sinnvoll sein, alle Teile eines Projekts in
 einem monolithischen Repository oder *Monorepo* zu halten.
 
 Definition
 ----------
 
-* In einem Monorepo enthält das Repository mehr als ein logisches Projekt (:abbr:`z.B. (zum
-  Beispiel)` einen iOS-Client und eine Webanwendung).
+* In einem Monorepo enthält das Repository mehr als ein logisches Projekt
+  (:abbr:`z.B. (zum Beispiel)` einen iOS-Client und eine Webanwendung).
 * Diese Projekte können unabhängig voneinander gebaut, getestet oder deployt werden.
 * Diese Projekte sind meist nur lose miteinander verbunden oder können auf
   andere Weise miteinander verbunden werden, :abbr:`z.B. (zum Beispiel)` über
@@ -53,15 +53,15 @@ eine große Anzahl von Git-Referenzen
     Datei zusammengefasst.
 
     Jede Operation, die den Commit-Verlauf eines Repositories durchlaufen und
-    die einzelnen Referenzen berücksichtigen muss, wie :abbr:`z.B. (zum
-    Beispiel)` bei ``git branch --contains <commit>``, werden bei einem Repo mit
+    die einzelnen Referenzen berücksichtigen muss, wie
+    :abbr:`z.B. (zum Beispiel)` bei ``git branch --contains <commit>``, werden bei einem Repo mit
     vielen Referenzen langsam.
 
 eine große Anzahl an versionierten Dateien
     Der Index des Directory Cache (``.git/index``) wird von Git verwendet um
     zu ermitteln, ob die Datei verändert wurde. Dabei verlangsamen sich mit
-    zunehmender Anzahl an Dateien viele Vorgänge, wie :abbr:`z.B. (zum
-    Beispiel)` ``git status`` und ``git commit``.
+    zunehmender Anzahl an Dateien viele Vorgänge, wie
+    :abbr:`z.B. (zum Beispiel)` ``git status`` und ``git commit``.
 
 große Dateien
     Große Dateien in einem Teilbaum oder einem Projekt verringern die Leistung
@@ -177,8 +177,8 @@ Anschließend könnt ihr Git LFS in eurem Repository installieren mit
    Updated Git hooks.
    Git LFS initialized.
 
-Um nun Git LFS auf bestimmte Dateitypen anzuwenden, könnt ihr :abbr:`z.B. (zum
-Beispiel)` folgendes angeben:
+Um nun Git LFS auf bestimmte Dateitypen anzuwenden, könnt ihr
+:abbr:`z.B. (zum Beispiel)` folgendes angeben:
 
 .. code-block:: console
 

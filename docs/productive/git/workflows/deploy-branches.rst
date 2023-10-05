@@ -14,7 +14,7 @@ Ein oder mehrere Deployment-Branches empfehlen sich, wenn ihr :abbr:`z.B. (zum B
 Release-Zeitpunkt nicht selbst bestimmen könnt, wie bei einer iOS-Anwendung, die
 die App-Store-Validierung bestehen muss, oder wenn euch nur ein bestimmtes
 Zeitfenster für die Bereitstellung zur Verfügung steht. In diesen Fällen
-empfiehlt sich ein *deployment*-Branch, der den bereitgestellten Code
+empfiehlt sich ein Deployment-Branch, der den bereitgestellten Code
 widerspiegelt. Ein solcher Arbeitsablauf verhindert dann zusätzliche
 Arbeitsaufwände bei :doc:`../rebase` und :doc:`../tag`.
 
@@ -132,7 +132,7 @@ erzeugt um bei Bugfixes die Anzahl der Merges, die auf mehrere Branches verteilt
 werden müssen, zu reduzieren. Nachdem ein neuer Release-Branch erstellt wurde,
 erhält dieser nur noch Bugfixes. Meist werden diese zunächst in den
 ``main``-Branch übernommen und kommen anschließend von dort mit
-:doc:`../cherry-pick` in den Release-Branch, :abbr:`z.B. (zum Beispiel)`:
+:doc:`../advanced/cherry-pick` in den Release-Branch, :abbr:`z.B. (zum Beispiel)`:
 
 .. code-block:: console
 
