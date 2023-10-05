@@ -70,9 +70,9 @@ Für jede Änderung muss ersichtlich sein, wer diese verursacht hat. Dazu hinter
 ihr euren Namen und eure E-Mail-Adresse wie folgt:
 
 :samp:`$ git config --global user.name "{NAME}"`
-    legt den Namen ``NAME`` fest, der mit euren Commit-Transaktionen verknüpft wird.
+    legt den Namen :samp:`{NAME}` fest, der mit euren Commit-Transaktionen verknüpft wird.
 :samp:`$ git config --global user.email "{EMAIL-ADDRESS}"`
-    legt die E-Mail-Adresse ``EMAIL-ADDRESS`` fest, die mit euren Commit-Transaktionen
+    legt die E-Mail-Adresse :samp:`{EMAIL-ADDRESS}` fest, die mit euren Commit-Transaktionen
     verknüpft wird.
 
 Für eine bessere Lesbarkeit der Ausgabe sorgt die Kolorierung der Befehlszeilenausgabe.
