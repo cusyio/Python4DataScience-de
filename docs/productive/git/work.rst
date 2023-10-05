@@ -130,7 +130,7 @@ An einem Projekt arbeiten
 ``$ git reset [--hard|--soft] [target-reference]``
     setzt die Historie auf einen früheren Commit zurück.
 :samp:`$ git rm {FILE}`
-    entfernt eine Datei aus dem Arbeits- und Bühnenbereich.
+    entfernt eine Datei namens :samp:`{FILE}` aus dem Arbeits- und Bühnenbereich.
 ``$ git stash``
     verschiebt die aktuellen Änderungen aus dem Arbeitsbereich in das Versteck
     (engl.: *stash*).
@@ -138,7 +138,7 @@ An einem Projekt arbeiten
     Um eure versteckten Änderungen möglichst gut unterscheiden zu können,
     empfehlen sich die folgenden beiden Optionen:
 
-    ``-p`` oder ``--patch``
+    ``-p`` (Langform ``--patch``)
         erlaubt euch, Änderungen partiell zu verstecken, :abbr:`z.B. (zum
         Beispiel)`:
 
