@@ -2,12 +2,12 @@
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
-Feature-Branch-Workflows
-========================
+Feature-Branches
+================
 
-Die Grundidee hinter den Feature-Branch-Workflows ist, dass die Entwicklung
+Die Grundidee hinter Workflows mit Feature-Branches ist, dass die Entwicklung
 einzelner Features jeweils in einem dedizierten Branch und nicht im
-``main``-Branch stattfinden sollte. Diese Kapselung erleichtert in einem
+``main``-Branch stattfindet. Diese Kapselung erleichtert in einem
 Entwicklungsteam die Arbeit, da Veränderungen im ``main``-Branch nicht stören
 und zunächst vernachlässigt werden können. Umgekehrt sollte so vermieden werden,
 dass der ``main``-Branch durch unfertigen Code verunreinigt wird. Dieses zweite
@@ -30,12 +30,13 @@ um Änderungen mit anderen im Team diskutieren zu können und ihnen die
 Möglichkeit zu geben, ein Feature freizugeben, bevor es in das offizielle
 Projekt integriert wird. Wenn ihr in eurer Feature-Entwicklung auf Probleme
 stoßt, könnt ihr Merge- oder Pull-Requests jedoch auch nutzen um mit anderen im
-Team Lösungsmöglichkeiten zu erörtern. Merge- oder Pull-Requests werden von
-Web-basierten Diensten wie `GitHub <https://github.com/>`_, `GitLab
+Team Lösungsmöglichkeiten zu erörtern.
+
+Merge- oder Pull-Requests werden von Web-basierten Diensten wie `GitHub <https://github.com/>`_, `GitLab
 <https://about.gitlab.com/>`_ und `Atlassian <https://bitbucket.org/>`_ zum
 Review und Kommentieren der Änderungen bereitgestellt. Mit :samp:`@{ID}` in
 euren Kommentaren könnt ihr auch bestimmte Personen aus dem Projektteam direkt
-nach Feedback fragen. Sofern ihr automatisiert testet, könnt ihr hier auch die
+um Feedback bitten. Sofern ihr automatisiert testet, könnt ihr hier auch die
 Testergebnisse sehen; :abbr:`evtl. (eventuell)` entspricht ja der Coding Style
 nicht euren Projektrichtlinien, oder die Testabdeckung ist ungenügend. In den
 Merge- oder Pull-Requests werden solche Diskussionen gefördert und dokumentiert
@@ -59,9 +60,9 @@ GitHub Flow
 -----------
 
 `GitHub Flow <https://docs.github.com/en/get-started/quickstart/github-flow>`_
-war als stark vereinfachte Alternative zu :doc:`git-flow` gedacht, wobei es
+ist ein einfacher Workflow, bei dem es
 neben dem ``main``-Branch nur verschiedene Feature-Branches geben sollte. Der
-Lebenszyklus eines Git-Feature-Branches könnte dann so aussehen:
+Lebenszyklus eines Feature-Branches könnte dann so aussehen:
 
 #. Alle Feature-Branches starten auf Basis des aktuellen ``main``-Branches.
 
@@ -177,6 +178,10 @@ dem Zusammenführen mit einem Fast-Forward-Merge an die Spitze des ``main``-Bran
       $ git pull origin main
       $ git merge --no-ff 17-some-feature
 
+Der Simple-Git-Workflow über ``rebase`` schafft eine strikt lineare Versionshistorie.
+In der linearen Historie ist es tendenziell leichter, Änderungen nachzuvollziehen und Fehler zu finden,
+beispielsweise über :doc:`bisect <../advanced/bisect>`
+
 Zusammenfassung
 ---------------
 
@@ -193,3 +198,8 @@ Die Vorteile von Feature-Branches-Workflows sind vor allem
 Sie können jedoch nicht beantworten, wie Deployments in unterschiedliche
 Umgebungen oder die Aufteilung in verschiedene Releases erfolgen sollen.
 Mögliche Antworten hierfür werden in :doc:`deploy-branches` beschrieben.
+
+.. seealso::
+
+   Beide Varianten mit Feature Branches sind stark vereinfachte Alternativen
+   des deutlich komplexeren :doc:`git-flow`.

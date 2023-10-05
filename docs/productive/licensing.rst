@@ -380,7 +380,7 @@ Ihr könnt REUSE problemlos in euren Continuous Integration-Workflow integrieren
 .. tab:: Pre-commit
 
     Ihr könnt ``reuse lint`` automatisch als :doc:`Pre-Commit-Hook
-    <git/hooks/pre-commit>` bei jedem Commit ausführen lassen, indem ihr
+    <git/advanced/hooks/pre-commit>` bei jedem Commit ausführen lassen, indem ihr
     Folgendes zu eurer :file:`.pre-commit-config.yaml`-Datei hinzufügt:
 
     .. code-block:: yaml

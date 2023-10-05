@@ -10,11 +10,11 @@ Deployment und Release Branches
 Deployment-Branches
 -------------------
 
-Deployment-Branches empfehlen sich, wenn ihr :abbr:`z.B. (zum Beispiel)` den
+Ein oder mehrere Deployment-Branches empfehlen sich, wenn ihr :abbr:`z.B. (zum Beispiel)` den
 Release-Zeitpunkt nicht selbst bestimmen könnt, wie bei einer iOS-Anwendung, die
 die App-Store-Validierung bestehen muss, oder wenn euch nur ein bestimmtes
 Zeitfenster für die Bereitstellung zur Verfügung steht. In diesen Fällen
-empfiehlt sich ein *Production*-Branch, der den bereitgestellten Code
+empfiehlt sich ein Deployment-Branch, der den bereitgestellten Code
 widerspiegelt. Ein solcher Arbeitsablauf verhindert dann zusätzliche
 Arbeitsaufwände bei :doc:`../rebase` und :doc:`../tag`.
 
@@ -24,7 +24,7 @@ eine Feature-Entwicklung beim ``staging``-Branch gestellt. Sofern die
 Qualitätsprüfung dort bestanden wurde und der Code
 produktionsreif ist, können die Änderungen in den ``main``-Branch übernommen
 werden. Dieser Vorgang kann sich für neue Features mehrfach wiederholen, bis
-:abbr:`z.B. (zum Beispiel)` der Zeitpunkt für das *Going Life* dieser Änderungen
+:abbr:`z.B. (zum Beispiel)` der Zeitpunkt für das *Going Live* dieser Änderungen
 gekommen ist und ein Deployment-Branch erstellt werden kann.
 
 .. graphviz::
@@ -132,7 +132,7 @@ erzeugt um bei Bugfixes die Anzahl der Merges, die auf mehrere Branches verteilt
 werden müssen, zu reduzieren. Nachdem ein neuer Release-Branch erstellt wurde,
 erhält dieser nur noch Bugfixes. Meist werden diese zunächst in den
 ``main``-Branch übernommen und kommen anschließend von dort mit
-:doc:`../cherry-pick` in den Release-Branch, :abbr:`z.B. (zum Beispiel)`:
+:doc:`../advanced/cherry-pick` in den Release-Branch, :abbr:`z.B. (zum Beispiel)`:
 
 .. code-block:: console
 

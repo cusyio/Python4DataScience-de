@@ -90,23 +90,14 @@ Zum Weiterlesen
     :hidden:
 
     working-areas
-    work
     install-config
-    hooks/index
-    jupyter-config
-    tools
+    work
     log
     tag
     branch
-    gitlab/index
-    workflows/index
-    rebase
-    bisect
-    cherry-pick
     revert
+    rebase
     best-practices
-    vs-code/index
-    git-big-picture
-    etckeeper
-    advanced
+    workflows/index
+    advanced/index
     glossary

@@ -142,3 +142,9 @@ einen `Fork <https://github.com/veit/Python4DataScience-de/fork>`_ meines
 erstellen und darin eure Änderungen vorzunehmen. Gerne dürft ihr auch einen
 *Pull Request* stellen. Sofern die darin enthaltenen Änderungen klein und
 atomar sind, schaue ich mir eure Vorschläge gerne an.
+
+Da eine englischsprachige Übersetzung gepflegt wird, beachtet bitte folgende Richtlinien:
+
+* Commit messages auf Englisch
+* Commit messages mit einem `Gitmoji <https://gitmoji.dev/>`__ am Anfang
+* Namen von Ordnern und Dateien auf Englisch.

@@ -6,7 +6,11 @@ kurzlebige Themenzweige, die zu einem einzigen ``main``-Zweig zusammengeführt
 werden. :abbr:`TBD (Trunk-Based Development)` führt zu einem leicht zu
 verwaltenden linearen Verlauf.
 
-In kleineren Entwicklungsteams überträgt vorzugsweise jedes Pair-Programming-Duo
+Trunk Based Development eignet sich hervorragend für ein-Personen-Projekte.
+Verzweigungen sind nicht notwendig, das Verwenden einer Versionskontrolle zahlt sich
+aber auch für einen selbst schnell aus.
+
+In kleineren Entwicklungsteams übertragen wir
 kleine Commits direkt in den Trunk (oder den ``main``-Branch), wobei vor der
 Integration zunächst der Build erfolgreich ausgeführt sein muss.
 
