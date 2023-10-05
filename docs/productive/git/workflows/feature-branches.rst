@@ -178,6 +178,10 @@ dem Zusammenführen mit einem Fast-Forward-Merge an die Spitze des ``main``-Bran
       $ git pull origin main
       $ git merge --no-ff 17-some-feature
 
+Der Simple-Git-Workflow über ``rebase`` schafft eine strikt lineare Versionshistorie.
+In der linearen Historie ist es tendenziell leichter, Änderungen nachzuvollziehen und Fehler zu finden,
+beispielsweise über :doc:`bisect <../advanced/bisect>`
+
 Zusammenfassung
 ---------------
 

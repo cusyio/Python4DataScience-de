@@ -28,6 +28,7 @@ Im Folgenden behandeln wir einige dieser Git-Workflows.
    deploy-branches
    git-flow
    tbd
+   git-flow
    monorepos
    split-repos
    ci
