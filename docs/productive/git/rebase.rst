@@ -97,7 +97,7 @@ entfernte Repository aktualisiert werden mit:
 
     $ git push origin HEAD:main -f
 
-rebase zum Ändern einer Commit-Nachricht
+Ändern einer Commit-Nachricht mit rebase
 ----------------------------------------
 
 Dies lässt sich ebenfalls einfach mit ``rebase`` realisieren wobei ihr in
