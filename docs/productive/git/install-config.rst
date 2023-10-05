@@ -197,8 +197,8 @@ globalen Konfiguration:
 Dieses Konstrukt sorgt dafür, dass Git zusätzliche Konfigurationen einbezieht
 oder bestehende überschreibt, wenn ihr in :file:`~/private` arbeitet.
 
-Erstellt nun die Datei :file:`~/.config/git/config-private` und legt dort eure
-alternative Konfiguration fest, :abbr:`z.B. (zum Beispiel)`:
+Erstellt dazu nun die Datei :file:`~/.config/git/config-private` und legt dort
+eure alternative Konfiguration fest, :abbr:`z.B. (zum Beispiel)`:
 
 .. code-block:: ini
 
