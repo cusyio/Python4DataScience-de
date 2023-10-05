@@ -418,8 +418,8 @@ kann :abbr:`ggf. (gegebenenfalls)` erhöht werden, :abbr:`z.B. (zum Beispiel)` m
             provider = generic
 
 .. note::
-    Ein umfangreiches Beispiel einer `Konfigurationsdatei findet ihr in meinem
-    `dotfiles <https://github.com/veit/dotfiles/>`__-Repository: `.gitconfig
+    Ein umfangreiches Beispiel einer Konfigurationsdatei findet ihr in meinem
+    `dotfiles <https://github.com/veit/dotfiles/>`_-Repository: `.gitconfig
     <https://github.com/veit/dotfiles/blob/main/.config/git/config>`_.
 
 .. seealso::
