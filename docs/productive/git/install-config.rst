@@ -257,12 +257,12 @@ Schließlich wird in der globalen :file:`~/.gitattributes`-Datei unser
 … für PDF-Dateien
 :::::::::::::::::
 
-Hierfür wird zusätzlich das Werkzeug ``pdftohtml`` benötigt. Je nach 
+Hierfür wird zusätzlich das Werkzeug ``pdftohtml`` benötigt. Je nach
 Betriebssystem befindet es sich in unterschiedlich benannten Softwarepaketen.
 
 .. tab:: Debian/Ubuntu
 
-   Hier heisst das Paket 
+   Hier heisst das Paket
    `poppler-utils <https://packages.debian.org/stable/poppler-utils>`_. Dieses
    installiert ihr wie folgt:
 
@@ -314,7 +314,7 @@ Auch Unterschiede in Word-Dokumenten lassen sich anzeigen. Hier kommt `Pandoc
 
 .. tab:: macOS
 
-   Das Paket heisst ``pandoc``. Dieses installiert ihr mittels ``brew`` wie 
+   Das Paket heisst ``pandoc``. Dieses installiert ihr mittels ``brew`` wie
    folgt:
 
    .. code-block:: console
