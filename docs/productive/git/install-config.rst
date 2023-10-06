@@ -300,11 +300,13 @@ dann ein Diff über den Ausgaben des Konverters durchgeführt.
 … für Word-Dokumente
 ::::::::::::::::::::
 
-Auch Unterschiede in Word-Dokumenten lassen sich anzeigen. Hierfür kann `Pandoc
-<https://pandoc.org/>`_ verwendet werden, das einfach installiert werden kann
-mit
+Auch Unterschiede in Word-Dokumenten lassen sich anzeigen. Hier kommt `Pandoc
+<https://pandoc.org/>`_ ins Spiel.
 
 .. tab:: Debian/Ubuntu
+
+   Das Paket heisst `pandoc <https://packages.debian.org/stable/pandoc>`_.
+   Dieses installiert ihr wie folgt:
 
    .. code-block:: console
 
@@ -312,14 +314,17 @@ mit
 
 .. tab:: macOS
 
+   Das Paket heisst ``pandoc``. Dieses installiert ihr mittels ``brew`` wie 
+   folgt:
+
    .. code-block:: console
 
       $ brew install pandoc
 
 .. tab:: Windows
 
-   Herunterladen und Installieren der aktuellen :file:`.msi`-Datei von `GitHub
-   <https://github.com/jgm/pandoc/releases/>`_.
+   Dazu ladet ihr zunächst die aktuelle :file:`.msi`-Datei von `GitHub
+   <https://github.com/jgm/pandoc/releases/>`_ herunter und installiert diese.
 
 Anschließend wird der globalen Git-Konfiguration :file:`~/.gitconfig` folgender
 Abschnitt hinzugefügt:
