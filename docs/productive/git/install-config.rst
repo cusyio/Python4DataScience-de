@@ -552,18 +552,21 @@ Dabei verwendet Git `Globbing <https://linux.die.net/man/7/glob>`_-Muster,
 |                               | :file:`instance.log`              | Repository.                   |
 +-------------------------------+-----------------------------------+-------------------------------+
 
-Git-commit leerer Ordner
-::::::::::::::::::::::::
+Git-commit eines leeren Verzeichnisses
+::::::::::::::::::::::::::::::::::::::
 
 In obigem Beispiel seht ihr, dass mit :file:`/logs/*` keine Inhalte des
-``logs``-Verzeichnis mit Git versioniert werden sollen, in der Folgezeile jedoch
-eine Ausnahme definiert wird: :file:`!logs/.gitkeep` erlaubt, dass die Datei
-:file:`.gitkeep` mit Git verwaltet werden darf. Damit wird dann auch das
-:file:`logs`-Verzeichnis in das Git-Repository übernommen. Diese
-Hilfskonstruktion ist erforderlich, da leere Ordner nicht mit Git verwaltet
-werden können.
+``logs``-Verzeichnisses mit Git versioniert werden sollen, in der Folgezeile
+jedoch eine Ausnahme definiert wird: 
 
-Eine andere Möglichkeit besteht darin, in einem leeren Ordner eine
+:file:`!logs/.gitkeep` 
+
+Diese Angabe erlaubt, dass die Datei :file:`.gitkeep` mit Git verwaltet werden
+darf. Damit wird dann auch das :file:`logs`-Verzeichnis in das Git-Repository
+übernommen. Diese Hilfskonstruktion ist erforderlich, da leere Verzeichnisse
+nicht mit Git verwaltet werden können.
+
+Eine andere Möglichkeit besteht darin, in einem leeren Verzeichnis eine
 :file:`.gitignore`-Datei mit folgendem Inhalt zu erstellen:
 
 .. code-block:: ini
