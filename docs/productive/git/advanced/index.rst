@@ -11,8 +11,7 @@ Fortgeschrittenes Git
    cherry-pick
    bisect
    hooks/index
-   tools
-   jupyter-config
+   jupyter-notebooks
    binary-files
    vs-code/index
    gitlab/index
