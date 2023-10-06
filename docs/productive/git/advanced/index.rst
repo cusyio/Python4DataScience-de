@@ -13,6 +13,7 @@ Fortgeschrittenes Git
    hooks/index
    tools
    jupyter-config
+   binary-files
    vs-code/index
    gitlab/index
    git-big-picture
