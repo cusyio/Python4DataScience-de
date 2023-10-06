@@ -257,23 +257,16 @@ Schließlich wird in der globalen :file:`~/.gitattributes`-Datei unser
 … für PDF-Dateien
 :::::::::::::::::
 
-Hierfür wird zusätzlich das Werkzeug ``pdftohtml`` benötigt. Je nach
-Betriebssystem befindet es sich in unterschiedlich benannten Softwarepaketen.
+Hierfür wird zusätzlich das Werkzeug ``pdftohtml`` benötigt. Ihr installiert es
+mit
 
 .. tab:: Debian/Ubuntu
-
-   Hier heisst das Paket
-   `poppler-utils <https://packages.debian.org/stable/poppler-utils>`_. Dieses
-   installiert ihr wie folgt:
 
    .. code-block:: console
 
       $ sudo apt install poppler-utils
 
 .. tab:: macOS
-
-   Hier heisst das Paket ``pdftohtml`` Dieses installiert ihr mittels ``brew``
-   wie folgt:
 
    .. code-block:: console
 
