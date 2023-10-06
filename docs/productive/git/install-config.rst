@@ -397,7 +397,7 @@ kann :abbr:`ggf. (gegebenenfalls)` erhöht werden, :abbr:`z.B. (zum Beispiel)` m
 
     Für Windows steht `Git Credential Manager (GCM)
     <https://github.com/GitCredentialManager/git-credential-manager>`_ zur
-    Verfügung. Er ist ingegriert in `Git for Windows
+    Verfügung. Er ist integriert in `Git for Windows
     <https://git-scm.com/download/win>`_ und wird standardmäßig mitinstalliert.
     Es git jedoch auch ein eigenständiges Installationsprogramm in `Releases
     <https://github.com/GitCredentialManager/git-credential-manager/releases/>`_.
