@@ -655,9 +655,9 @@ Bei komplizierten :file:`.gitignore`-Mustern oder bei Mustern, die über mehrere
 :file:`.gitignore`-Dateien verteilt sind, kann es schwierig sein,
 herauszufinden, ob oder warum eine bestimmte Datei ignoriert wird.
 
-Mit ``git status --ignored=matching`` [#]_ wird der Ausgabe ein Abschnitt
-*Ignorierte Dateien* hinzugefügt, der alle ignorierten Dateien und Verzeichnisse
-anzeigt:
+Mit dem Aufruf ``git status --ignored=matching`` [#]_ wird der Ausgabe ein
+Abschnitt *Ignorierte Dateien* hinzugefügt, der zusätzlich alle von Git
+ignorierten Dateien und Verzeichnisse beinhaltet:
 
 .. code-block:: console
 
