@@ -673,7 +673,7 @@ ignorierten Dateien und Verzeichnisse beinhaltet:
        …
        nichts zu committen, Arbeitsverzeichnis unverändert
 
-Ihr könnt den Befehl ``git check-ignore`` [#]_ mit der Option ``-v`` (oder
+Ihr könnt den Befehl ``git check-ignore`` [#]_ mit der Option ``-v`` (Langform:
 ``--verbose``) verwenden, um festzustellen, welches Muster die Ursache für das
 Ignorieren einer bestimmten Datei ist:
 
@@ -682,9 +682,21 @@ Ignorieren einer bestimmten Datei ist:
     $ git check-ignore -v data/iris.csv
     data/.gitignore:2:!iris.csv	data/iris.csv
 
-Die Ausgabe zeigt
-:samp:`{FILE_CONTAINING_THE_PATTERN}:{LINE_NUMBER_OF_THE_PATTERN}:{PATTERN}
-{FILE_NAME}`
+Obige Ausgabe besteht aus vier Feldern (Trennzeichen sind drei Doppelpunkte
+und ein Leerzeichen) und beinhaltet:
+
+:samp:`{FILE_CONTAINING_THE_PATTERN}`
+    den Namen der Datei, die das Muster enthält.
+
+:samp:`{LINE_NUMBER_OF_THE_PATTERN}`
+    die Zeilennummer, in der in der Datei :samp:`{FILE_CONTAINING_THE_PATTERN}`
+    das Muster gefunden wurde.
+
+:samp:`{PATTERN}`
+    das gefundene Muster.
+
+:samp:`{FILE_NAME}`
+    den Namen der Datei inklusive Pfad, die Git ignoriert.
 
 Ihr könnt mehrere Dateinamen an ``git check-ignore`` übergeben, wenn ihr
 möchtet, und die Namen selbst müssen nicht einmal den Dateien entsprechen, die
