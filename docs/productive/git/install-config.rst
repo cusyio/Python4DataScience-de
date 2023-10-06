@@ -402,7 +402,7 @@ kann :abbr:`ggf. (gegebenenfalls)` erhöht werden, :abbr:`z.B. (zum Beispiel)` m
     Zusätzlich besteht jedoch auch ein eigenständiges Installationsprogramm in
     `Releases <https://github.com/GitCredentialManager/git-credential-manager/releases/>`_.
 
-    GCM wird konfiguriert mit
+    GCM wird mit dem nachfolgenden Aufruf konfiguriert:
 
     .. code-block:: console
 
@@ -410,7 +410,7 @@ kann :abbr:`ggf. (gegebenenfalls)` erhöht werden, :abbr:`z.B. (zum Beispiel)` m
         Configuring component 'Git Credential Manager'...
         Configuring component 'Azure Repos provider'...
 
-    Dies trägt den ``[credential]``-Abschnitt in eure :file:`~.gitconfig`-Datei
+    Dies trägt den ``[credential]``-Abschnitt in eure :file:`~/.gitconfig`-Datei
     ein:
 
     .. code-block:: ini
