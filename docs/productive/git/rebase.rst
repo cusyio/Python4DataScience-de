@@ -43,7 +43,7 @@ folgendes:
 
 .. note::
 
-   ``git rebase`` wird auch kurz in :doc:`advanced/jupyter-config`
+   ``git rebase`` wird auch kurz in :doc:`advanced/jupyter-notebooks`
    und :doc:`workflows/feature-branches` behandelt
 
 Rebase abhängiger Zweige mit ``–update-refs``
