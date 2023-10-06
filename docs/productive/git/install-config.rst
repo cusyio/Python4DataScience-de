@@ -301,7 +301,7 @@ dann ein Diff über den Ausgaben des Konverters durchgeführt.
 ::::::::::::::::::::
 
 Auch Unterschiede in Word-Dokumenten lassen sich anzeigen. Hier kommt `Pandoc
-<https://pandoc.org/>`_ ins Spiel.
+<https://pandoc.org/>`__ ins Spiel.
 
 .. tab:: Debian/Ubuntu
 
