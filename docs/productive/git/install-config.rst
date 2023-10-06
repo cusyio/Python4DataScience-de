@@ -580,8 +580,8 @@ Eine andere Möglichkeit besteht darin, in einem leeren Verzeichnis eine
     * `Can I add empty directories?
       <https://git.wiki.kernel.org/index.php/GitFaq#Can_I_add_empty_directories.3F>`_
 
-``excludesfile``
-::::::::::::::::
+Dateien zentral mit ``excludesfile`` ausschließen
+:::::::::::::::::::::::::::::::::::::::::::::::::
 
 Ihr könnt jedoch auch zentral für alle Git-Repositories Dateien ausschließen.
 Hierfür wird üblicherweise in der :file:`~/.gitconfig`-Datei folgendes
