@@ -419,8 +419,8 @@ kann :abbr:`ggf. (gegebenenfalls)` erhöht werden, :abbr:`z.B. (zum Beispiel)` m
             helper =
             helper = C:/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
 
-    Nun öffnet sich beim Clonen eines Repository ein Fenster des *Git Credential
-    Manager* und fordert euch zur Eingabe eurer Zugangsdaten auf.
+    Nun öffnet sich beim Clonen eines Repository ein Fenster des GCM und fordert
+    euch zur Eingabe eurer Zugangsdaten auf.
 
     Zudem wird die :file:`~/.gitconfig`-Datei ergänzt, :abbr:`z.B. (zum
     Beispiel)` um die folgenden beiden Zeilen:
