@@ -557,9 +557,9 @@ Git-commit eines leeren Verzeichnisses
 
 In obigem Beispiel seht ihr, dass mit :file:`/logs/*` keine Inhalte des
 ``logs``-Verzeichnisses mit Git versioniert werden sollen, in der Folgezeile
-jedoch eine Ausnahme definiert wird: 
+jedoch eine Ausnahme definiert wird:
 
-:file:`!logs/.gitkeep` 
+:file:`!logs/.gitkeep`
 
 Diese Angabe erlaubt, dass die Datei :file:`.gitkeep` mit Git verwaltet werden
 darf. Damit wird dann auch das :file:`logs`-Verzeichnis in das Git-Repository
