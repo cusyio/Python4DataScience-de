@@ -20,7 +20,7 @@ Arbeitsbereiche
 ``git commit``
     schreibt Änderungen im Bühnenbereich in das lokale Repository.
 ``git pull``
-    kopiert Änderungen aus dem entfernten in das lokale Repository.
+    kopiert Änderungen aus dem entfernten in das lokale Repository und aktualisiert das Arbeitsverzeichnis.
 ``git push``
     kopiert Änderungen aus dem lokalen Repository in das entfernte (:abbr:`engl.
     (englisch)` remote) Repository.
