@@ -294,21 +294,15 @@ dann ein Diff über den Ausgaben des Konverters durchgeführt.
 ::::::::::::::::::::
 
 Auch Unterschiede in Word-Dokumenten lassen sich anzeigen. Hier kommt `Pandoc
-<https://pandoc.org/>`__ ins Spiel.
+<https://pandoc.org/>`__ ins Spiel. Dieses installiert ihr wie folgt:
 
 .. tab:: Debian/Ubuntu
-
-   Das Paket heisst `pandoc <https://packages.debian.org/stable/pandoc>`_.
-   Dieses installiert ihr wie folgt:
 
    .. code-block:: console
 
       $ sudo apt install pandoc
 
 .. tab:: macOS
-
-   Das Paket heisst ``pandoc``. Dieses installiert ihr mittels ``brew`` wie
-   folgt:
 
    .. code-block:: console
 
