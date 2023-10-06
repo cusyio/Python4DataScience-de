@@ -24,7 +24,7 @@ Arbeitsbereiche
     kopiert Änderungen aus dem entfernten in das lokale Repository.
 ``git push``
     kopiert Änderungen aus dem lokalen Repository in das entfernte (:abbr:`engl.
-    (englisch)`: remote) Repository.
+    (englisch)`: *remote*) Repository.
 
     :samp:`git push -u {UPSTREAM} {BRANCHNAME}`
         ``-u`` (Langform ``--set-upstream``)
