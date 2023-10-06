@@ -9,12 +9,13 @@ Arbeitsbereiche
    :alt: Git Arbeitsbereiche
 
 ``git add``
-    fügt Dateien aus dem Arbeitsverzeichnis dem Bühnenbereich (engl.: *staging
-    area*) hinzu.
+    fügt Dateien aus dem Arbeitsverzeichnis dem Bühnenbereich (:abbr:`engl.
+    (englisch)`: *staging area*) hinzu.
 ``git reset HEAD``
     stellt eine Datei im Arbeitsbereich aus dem Bühnenbereich wieder her.
 ``git stash``
-    verschiebt Dateien aus dem Arbeitsbereich in ein Versteck (engl.: *stash*).
+    verschiebt Dateien aus dem Arbeitsbereich in ein Versteck (:abbr:`engl.
+    (englisch)`: *stash*).
 ``git stash pop``
     holt Dateien aus dem Versteck in den Arbeitsbereich.
 ``git commit``
@@ -23,7 +24,7 @@ Arbeitsbereiche
     kopiert Änderungen aus dem entfernten in das lokale Repository und aktualisiert das Arbeitsverzeichnis.
 ``git push``
     kopiert Änderungen aus dem lokalen Repository in das entfernte (:abbr:`engl.
-    (englisch)` remote) Repository.
+    (englisch)`: *remote*) Repository.
 
     :samp:`git push -u {UPSTREAM} {BRANCHNAME}`
         ``-u`` (Langform ``--set-upstream``)

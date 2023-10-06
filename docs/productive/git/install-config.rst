@@ -256,14 +256,14 @@ kann :abbr:`ggf. (gegebenenfalls)` erhöht werden, :abbr:`z.B. (zum Beispiel)` m
 
 .. tab:: Windows
 
-    Für Windows steht `Git Credential Manager (GCM)
+    Für Windows steht der `Git Credential Manager (GCM)
     <https://github.com/GitCredentialManager/git-credential-manager>`_ zur
-    Verfügung. Er ist ingegriert in `Git for Windows
+    Verfügung. Er ist integriert in `Git for Windows
     <https://git-scm.com/download/win>`_ und wird standardmäßig mitinstalliert.
-    Es git jedoch auch ein eigenständiges Installationsprogramm in `Releases
-    <https://github.com/GitCredentialManager/git-credential-manager/releases/>`_.
+    Zusätzlich besteht jedoch auch ein eigenständiges Installationsprogramm in
+    `Releases <https://github.com/GitCredentialManager/git-credential-manager/releases/>`_.
 
-    Er wird konfiguriert mit
+    GCM wird mit dem nachfolgenden Aufruf konfiguriert:
 
     .. code-block:: console
 
@@ -271,7 +271,7 @@ kann :abbr:`ggf. (gegebenenfalls)` erhöht werden, :abbr:`z.B. (zum Beispiel)` m
         Configuring component 'Git Credential Manager'...
         Configuring component 'Azure Repos provider'...
 
-    Dies trägt den ``[credential]``-Abschnitt in eure :file:`~.gitconfig`-Datei
+    Dies trägt den ``[credential]``-Abschnitt in eure :file:`~/.gitconfig`-Datei
     ein:
 
     .. code-block:: ini
@@ -280,8 +280,8 @@ kann :abbr:`ggf. (gegebenenfalls)` erhöht werden, :abbr:`z.B. (zum Beispiel)` m
             helper =
             helper = C:/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
 
-    Nun öffnet sich beim Clonen eines Repository ein Fenster des *Git Credential
-    Manager* und fordert euch zur Eingabe eurer Zugangsdaten auf.
+    Nun öffnet sich beim Clonen eines Repository ein Fenster des GCM und fordert
+    euch zur Eingabe eurer Zugangsdaten auf.
 
     Zudem wird die :file:`~/.gitconfig`-Datei ergänzt, :abbr:`z.B. (zum
     Beispiel)` um die folgenden beiden Zeilen:
@@ -413,18 +413,21 @@ Dabei verwendet Git `Globbing <https://linux.die.net/man/7/glob>`_-Muster,
 |                               | :file:`instance.log`              | Repository.                   |
 +-------------------------------+-----------------------------------+-------------------------------+
 
-Git-commit leerer Ordner
-::::::::::::::::::::::::
+Git-commit eines leeren Verzeichnisses
+::::::::::::::::::::::::::::::::::::::
 
 In obigem Beispiel seht ihr, dass mit :file:`/logs/*` keine Inhalte des
-``logs``-Verzeichnis mit Git versioniert werden sollen, in der Folgezeile jedoch
-eine Ausnahme definiert wird: :file:`!logs/.gitkeep` erlaubt, dass die Datei
-:file:`.gitkeep` mit Git verwaltet werden darf. Damit wird dann auch das
-:file:`logs`-Verzeichnis in das Git-Repository übernommen. Diese
-Hilfskonstruktion ist erforderlich, da leere Ordner nicht mit Git verwaltet
-werden können.
+``logs``-Verzeichnisses mit Git versioniert werden sollen, in der Folgezeile
+jedoch eine Ausnahme definiert wird:
 
-Eine andere Möglichkeit besteht darin, in einem leeren Ordner eine
+:file:`!logs/.gitkeep`
+
+Diese Angabe erlaubt, dass die Datei :file:`.gitkeep` mit Git verwaltet werden
+darf. Damit wird dann auch das :file:`logs`-Verzeichnis in das Git-Repository
+übernommen. Diese Hilfskonstruktion ist erforderlich, da leere Verzeichnisse
+nicht mit Git verwaltet werden können.
+
+Eine andere Möglichkeit besteht darin, in einem leeren Verzeichnis eine
 :file:`.gitignore`-Datei mit folgendem Inhalt zu erstellen:
 
 .. code-block:: ini
@@ -438,8 +441,8 @@ Eine andere Möglichkeit besteht darin, in einem leeren Ordner eine
     * `Can I add empty directories?
       <https://git.wiki.kernel.org/index.php/GitFaq#Can_I_add_empty_directories.3F>`_
 
-``excludesfile``
-::::::::::::::::
+Dateien zentral mit ``excludesfile`` ausschließen
+:::::::::::::::::::::::::::::::::::::::::::::::::
 
 Ihr könnt jedoch auch zentral für alle Git-Repositories Dateien ausschließen.
 Hierfür wird üblicherweise in der :file:`~/.gitconfig`-Datei folgendes
@@ -513,9 +516,9 @@ Bei komplizierten :file:`.gitignore`-Mustern oder bei Mustern, die über mehrere
 :file:`.gitignore`-Dateien verteilt sind, kann es schwierig sein,
 herauszufinden, ob oder warum eine bestimmte Datei ignoriert wird.
 
-Mit ``git status --ignored=matching`` [#]_ wird der Ausgabe ein Abschnitt
-*Ignorierte Dateien* hinzugefügt, der alle ignorierten Dateien und Verzeichnisse
-anzeigt:
+Mit dem Aufruf ``git status --ignored=matching`` [#]_ wird der Ausgabe ein
+Abschnitt *Ignorierte Dateien* hinzugefügt, der zusätzlich alle von Git
+ignorierten Dateien und Verzeichnisse beinhaltet:
 
 .. code-block:: console
 
@@ -531,7 +534,7 @@ anzeigt:
        …
        nichts zu committen, Arbeitsverzeichnis unverändert
 
-Ihr könnt den Befehl ``git check-ignore`` [#]_ mit der Option ``-v`` (oder
+Ihr könnt den Befehl ``git check-ignore`` [#]_ mit der Option ``-v`` (Langform:
 ``--verbose``) verwenden, um festzustellen, welches Muster die Ursache für das
 Ignorieren einer bestimmten Datei ist:
 
@@ -540,9 +543,21 @@ Ignorieren einer bestimmten Datei ist:
     $ git check-ignore -v data/iris.csv
     data/.gitignore:2:!iris.csv	data/iris.csv
 
-Die Ausgabe zeigt
-:samp:`{FILE_CONTAINING_THE_PATTERN}:{LINE_NUMBER_OF_THE_PATTERN}:{PATTERN}
-{FILE_NAME}`
+Obige Ausgabe besteht aus vier Feldern (Trennzeichen sind drei Doppelpunkte
+und ein Leerzeichen) und beinhaltet:
+
+:samp:`{FILE_CONTAINING_THE_PATTERN}`
+    den Namen der Datei, die das Muster enthält.
+
+:samp:`{LINE_NUMBER_OF_THE_PATTERN}`
+    die Zeilennummer, in der in der Datei :samp:`{FILE_CONTAINING_THE_PATTERN}`
+    das Muster gefunden wurde.
+
+:samp:`{PATTERN}`
+    das gefundene Muster.
+
+:samp:`{FILE_NAME}`
+    den Namen der Datei inklusive Pfad, die Git ignoriert.
 
 Ihr könnt mehrere Dateinamen an ``git check-ignore`` übergeben, wenn ihr
 möchtet, und die Namen selbst müssen nicht einmal den Dateien entsprechen, die
