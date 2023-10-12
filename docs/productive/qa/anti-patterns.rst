@@ -107,9 +107,33 @@ ersetzt werden durch:
    Die `itertools <https://docs.python.org/3/library/itertools.html>`_ der
    Python-Standardbibliothek sind häufig ebenfalls gut geeignet, um die
    Verschachtelungstiefe zu reduzieren indem Funktionen zum Erstellen von
-   Iteratoren aus Datenstrukturen erstellt werden. Zudem könnt ihr mit
-   itertools auch filtern, z.B. mit `filterfalse
-   <https://docs.python.org/3/library/itertools.html#itertools.filterfalse>`_.
+   Iteratoren aus Datenstrukturen erstellt werden.
+
+.. note::
+   Zudem könnt ihr mit den itertools auch filtern, :abbr:`z.B. (zum Beispiel)`
+   mit `filterfalse
+   <https://docs.python.org/3/library/itertools.html#itertools.filterfalse>`_:
+
+   .. code-block::
+
+      >>> from itertools import filterfalse
+      >>> from math import isnan
+      >>> from statistics import median
+      >>> data = [20.7, float('NaN'),19.2, 18.3, float('NaN'), 14.4]
+      >>> sorted(data)
+      [20.7, nan, 14.4, 18.3, 19.2, nan]
+      >>> median(data)
+      16.35
+      >>> sum(map(isnan, data))
+      2
+      >>> clean = list(filterfalse(isnan, data))
+      >>> clean
+      [20.7, 19.2, 18.3, 14.4]
+      >>> sorted(clean)
+      [14.4, 18.3, 19.2, 20.7]
+      >>> median(clean)
+      18.75
+
 
 Query-Tools für komplexe Dicts
 ------------------------------
