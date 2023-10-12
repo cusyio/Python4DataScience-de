@@ -8,6 +8,28 @@ Arbeitsbereiche
 .. figure:: git-workspaces.png
    :alt: Git Arbeitsbereiche
 
+Git verwaltet mehrere Speicherorte oder **Workspaces**, in denen Dateien
+gespeichert werden:
+
+local working copy
+    enthält Dateien und Verzeichnisse, die normal bearbeitet werden.
+staging area
+    enthält Änderungen an Dateien, die in die Versionsgeschichte geschrieben
+    werden sollen.
+local repository
+    enthält die gesamte Historie aller Dateien im Projekt.
+remote repository
+    enthält ebenfalls die gesamte Historie, ist aber auf einem entfernten Server
+    gespeichert.
+stash
+    enthält Änderungen, die vorübergehend an einem anderen Ort gespeichert
+    werden, um sie aus dem aus dem Weg zu schaffen.
+
+Basic Git commands
+------------------
+
+The following basic Git commands move changes between these workspaces.
+
 ``git add``
     fügt Dateien aus dem Arbeitsverzeichnis dem Bühnenbereich (:abbr:`engl.
     (englisch)`: *staging area*) hinzu.
