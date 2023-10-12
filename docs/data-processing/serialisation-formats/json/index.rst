@@ -84,8 +84,8 @@ JSON
 Beispiel
 --------
 
-Antwort der :ref:`OSM-Nomination-API
-</data-processing/requests/requests.ipynb#Beispiel-OSM-Nomination-API>`:
+Antwort der :ref:`OSM-Nominatim-API
+</data-processing/requests/requests.ipynb#Beispiel-OSM-Nominatim-API>`:
 
 .. code-block:: javascript
 
