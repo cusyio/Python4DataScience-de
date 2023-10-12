@@ -87,13 +87,13 @@ haben.
     clone` oder :samp:`git pull` des Repos.
 
 :samp:`git checkout {TAGNAME}`
-    wechselt in den Zustand des Repos mit diesem Tag und trennt ``HEAD`` ab.
+    wechselt in den Zustand des Repository mit diesem Tag und trennt ``HEAD`` ab.
     :abbr:`D.h. (Das heißt)`, dass alle Änderungen, die nun vorgenommen werden,
     das Tag nicht aktualisieren, sondern in einem losgelösten Commit landen, der
     nicht Teil eines Zweiges sein kann und nur direkt über den SHA-Hash des
     Commits erreichbar sein wird. Daher wird meist ein neuer Zweig erstellt,
     wenn solche Änderungen vorgenommen werden sollen, :abbr:`z.B. (zum
-    Beispiel)` mit :samp:`git checkout -b v3.9.17 v3.9.16`
+    Beispiel)` mit :samp:`git checkout -b v3.9.17 v3.9.16`.
 
 :samp:`git tag -d {TAGNAME}`
     löscht einen Tag, :abbr:`z.B. (zum Beispiel)`:

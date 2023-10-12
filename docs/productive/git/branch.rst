@@ -130,7 +130,7 @@ Zweige löschen
 Entfernte Zweige
 ----------------
 
-Bisher haben diese Beispiele alle lokale Verzweigungen gezeigt. Der Befehl ``git
+Bisher haben diese Beispiele alle lokalen Verzweigungen gezeigt. Der Befehl ``git
 branch`` funktioniert jedoch auch mit entfernten Zweigen. Um mit entfernten
 Zweigen arbeiten zu können, muss zunächst ein entferntes Repository konfiguriert
 und zur lokalen Repository-Konfiguration hinzugefügt werden:
