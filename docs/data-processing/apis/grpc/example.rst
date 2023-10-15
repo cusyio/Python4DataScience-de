@@ -26,11 +26,11 @@ Reihe von Name-Wert-Paaren enthält, die *fields* genannt werden.
    :lines: 1-7
 
 .. warning::
-   Beachtet bitte, dass ihr üblicherweise **nicht** einfach ``uint32`` für User-
-   oder Group-IDs verwenden solltet, da diese viel zu einfach zu erraten wären.
-   Hierfür könnt ihr :abbr:`z.B. (zum Beispiel)`eine :rfc:`4122`-konforme
-   Implementierung verwenden. Eine entsprechende Protobuf-Konfiguration findet
-   ihr in :download:`rfc4122.proto`.
+   Beachtet bitte, dass ihr üblicherweise **nicht** einfach ``uint32`` für
+   User- oder Group-IDs verwenden solltet, da diese viel zu einfach zu erraten
+   wären. Hierfür könnt ihr :abbr:`z.B. (zum Beispiel)` eine
+   :rfc:`4122`-konforme Implementierung verwenden. Eine entsprechende
+   Protobuf-Konfiguration findet ihr in :download:`rfc4122.proto`.
 
 Nachdem ihr eure Datenstruktur definiert habt, könnt ihr das
 Protocol-Buffer-Compiler-Protokoll ``protoc`` verwenden, um Deskriptoren in

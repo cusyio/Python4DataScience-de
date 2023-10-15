@@ -16,7 +16,7 @@ anschließend die mit DVC verwalteten Daten ab:
     A       data/data.xml
     1 file added
     $ ls data/
-    data.xml	data.xml.dvc
+    data.xml    data.xml.dvc
 
 Anschließend könnt ihr die Ergebnisse einfach reproduzieren mit `dvc repro
 <https://dvc.org/doc/command-reference/repro>`_:

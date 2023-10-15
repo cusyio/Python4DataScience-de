@@ -249,7 +249,8 @@ Glossar
         Datenbank aus. Daher sperren auch lesende Zugriffe die Daten werden
         erst wieder freigegeben, wenn die Änderungen gespeichert sind.
 
-    Property-Graph-Modell (PGM)
+    Property-Graph-Modell
+    PGM
         Knoten und Kanten bestehen aus Objekten mit darin eingebetteten
         Eigenschaften (Properties). Es wird nicht nur ein Wert (Label) in einer
         Kante bzw. einem Knoten gespeichert, sondern ein

@@ -6,13 +6,14 @@ etckeeper
 =========
 
 `etckeeper <https://etckeeper.branchable.com>`_ ist eine Sammlung von
-Werkzeugen, mit denen das ``/etc``-Verzeichnis in einem Git-Repository verwaltet
-werden kann. So können Änderungen überprüft und :abbr:`ggf. (gegebenenfalls)`
-rückgängig gemacht werden. Zudem verbindet es sich mit Paketmanagern wie `apt
+Werkzeugen, mit denen das :file:`/etc`-Verzeichnis in einem Git-Repository
+verwaltet werden kann. So können Änderungen überprüft und :abbr:`ggf.
+(gegebenenfalls)` rückgängig gemacht werden. Zudem verbindet es sich mit
+Paketmanagern wie `apt
 <https://de.wikipedia.org/wiki/Advanced_Packaging_Tool>`_, um Änderungen, die
 während eines Paket-Upgrades an :file:`/etc` vorgenommen werden, automatisch zu
 übertragen. Schließlich werden auch Metadaten von Dateien berücksichtigt, die
-Git normalerweise nicht verwaltet, die aber für file:`/etc` wichtig sind, wie
+Git normalerweise nicht verwaltet, die aber für :file:`/etc` wichtig sind, wie
 :abbr:`z.B. (zum Beispiel)` die Berechtigungen von` :file:`/etc/shadow`.
 
 Installation

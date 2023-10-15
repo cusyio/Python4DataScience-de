@@ -71,8 +71,8 @@ Typische Graphdatenbanken sind Neo4j, OrientDB InfiniteGraph und ArangoDB.
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Lizenzen**           | AGPL u. kommerziell            | Apache License 2.0             | kommerziell                    | Apache License 2.0             |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Datenmodell**        | :term:`Property-Graph-Modell   | Multi-Model                    | :term:`Property-Graph-Modell   | Multi-Model: Dokumente, Graphen|
-|                        | (PGM)`                         |                                | (PGM)`                         | und :term:`Schlüssel/Wert-Paar`|
+| **Datenmodell**        | :term:`Property-Graph-Modell`  | Multi-Model                    | :term:`Property-Graph-Modell`  | Multi-Model: Dokumente, Graphen|
+|                        |                                |                                |                                | und :term:`Schlüssel/Wert-Paar`|
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Query-Langauge**     | REST, `Cypher`_, `Gremlin`_    | `Extended SQL`_, `Gremlin`_    | Traverser API, PQL             |`ArangoDB Query Language (AQL)`_|
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+

@@ -541,7 +541,7 @@ Ignorieren einer bestimmten Datei ist:
 .. code-block:: console
 
     $ git check-ignore -v data/iris.csv
-    data/.gitignore:2:!iris.csv	data/iris.csv
+    data/.gitignore:2:!iris.csv data/iris.csv
 
 Obige Ausgabe besteht aus vier Feldern (Trennzeichen sind drei Doppelpunkte
 und ein Leerzeichen) und beinhaltet:

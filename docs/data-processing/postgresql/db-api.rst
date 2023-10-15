@@ -70,9 +70,8 @@ Cursor
         werden können.
 
     ``.rowcount``
-        gibt die Anzahl der Zeilen an, die der letzte Aufruf von
-        `` .execute*()`` mit ``SELECT``, ``UPDATE`` oder ``INSERT``
-        ergab.
+        gibt die Anzahl der Zeilen an, die der letzte Aufruf von ``.execute*()``
+        mit ``SELECT``, ``UPDATE`` oder ``INSERT`` ergab.
 
     Beispiel:
 
