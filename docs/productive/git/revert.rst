@@ -13,7 +13,7 @@
 
         $ git reset HEAD~1
 
-    ``--HEAD~1``
+    ``HEAD~1``
         nimmt den letzten Commit zurück wobei dessen Änderungen nun wieder in
         den Bühnenbereich übernommen werden.
 
