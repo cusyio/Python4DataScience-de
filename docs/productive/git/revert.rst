@@ -86,24 +86,18 @@
 
        :samp:`$ git checkout {FILE}`
 
+Commit im falschen Zweig zurücknehmen
+-------------------------------------
+
 Wenn ihr versehentlich einen Commit in einem bestehenden Zweig gemacht habt,
 anstatt zunächst einen neuen Zweig zu erstellen, könnt ihr das in den folgenden
 drei Schritten ändern:
 
-:samp:`$ git branch {NEW_BRANCH}`
-    erstellt einen neuen Zweig
-:samp:`$ git reset HEAD~ --hard`
-    nimmt den letzten Commit in eurem aktiven Branch zurück
-:samp:`$ git switch {NEW_BRANCH}`
-    übernimmt die Änderungen in den neuen Zweig
-
-Ähnlich ist das Vorgehen, wenn ihr einen Commit versehentlich im falschen Branch
-vorgenommen habt:
-
-:samp:`$ git reset HEAD~`
-    nimmt den letzten Commit zurück wobei dessen Änderungen nun wieder in den
-    Bühnenbereich übernommen werden.
-
+#. Erstellt einen neuen Zweig mit :samp:`$ git branch {NEW_BRANCH}`
+#. Nehmt den letzten Commit in eurem aktiven Branch zurück mit :samp:`$ git
+   reset HEAD~ --hard`
+#. Übernehmt die Änderungen in den neuen Zweig mit :samp:`$ git switch
+   {NEW_BRANCH}`
 
 .. _git-filter-repo:
 
