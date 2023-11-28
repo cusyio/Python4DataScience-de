@@ -150,9 +150,9 @@ Code reduzieren mit ``dataclasses`` und ``attrs``
 Python 3.7 eingeführt und es gibt auch einen Backport für Python 3.6. Sie sollen
 die Definition von Klassen vereinfachen, die hauptsächlich zum Speichern von
 Werten erstellt werden, und auf die dann über die Attributsuche zugegriffen
-werden kann. Einige Beispiele sind ``collection.namedtuple``,
-``Typing.NamedTuple``, Rezepte zu Records [#]_ und Verschachtelte Dicts [#]_.
-Datenklassen ersparen Euch das Schreiben und Verwalten dieser Methoden.
+werden kann. Einige Beispiele sind :func:`collections.namedtuple`,
+:py:class:`typing.NamedTuple`, Rezepte zu Records [#]_ und Verschachtelte Dicts
+[#]_. Datenklassen ersparen Euch das Schreiben und Verwalten dieser Methoden.
 
 .. seealso::
    * :pep:`557` – Data Classes
