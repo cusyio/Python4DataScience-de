@@ -23,15 +23,25 @@ Historie für den aktuellen Zweig aufgezeichnet  werden.
 .. seealso::
     * `Git Branching - Branches auf einen Blick
       <https://git-scm.com/book/de/v2/Git-Branching-Branches-auf-einen-Blick>`_
+    * :doc:`workflows/merge-strategies`
 
 Gebräuchliche Befehle
 ---------------------
 
-:samp:`$ git branch [-a]`
+:samp:`$ git branch [-a] [-l "{GLOB_PATTERN}"]`
     zeigt alle lokalen Verzweigungen in einem Repository an.
 
     ``-a``
         zeigt auch alle entfernten Verzweigungen an.
+    ``-l``
+        beschränkt die Zweige auf diejenigen, die einem bestimmten Muster
+        entsprechen.
+
+:samp:`$ git branch --sort=-committerdate`
+    sortiert die Zweige nach dem Commit-Datum.
+
+    Mit :samp:`git config --global branch.sort -committerdate` könnt ihr diese
+    Einstellung auch zu eurer Standardeinstellung machen.
 
 :samp:`$ git branch [{BRANCH_NAME}]`
     erstellt auf Basis des aktuellen ``HEAD`` einen neuen Zweig.
@@ -76,7 +86,7 @@ Gebräuchliche Befehle
     .. code-block:: console
 
         $ git switch main
-        $ git merge '#42'
+        $ git merge 'my-feature'
         Merge made by recursive.
          setup.py |    1 +
          1 files changed, 1 insertions(+), 0 deletions(-)
@@ -95,7 +105,7 @@ Gelegentlich stößt Git beim Zusammenführen jedoch auf Probleme, :abbr:`z.B.
 
 .. code-block:: console
 
-    $ git merge '#17'
+    $ git merge 'my-feature'
     automatischer Merge von setup.py
     KONFLIKT (Inhalt): Merge-Konflikt in setup.py
     Automatischer Merge fehlgeschlagen; beheben Sie die Konflikte und committen Sie dann das Ergebnis.
@@ -104,19 +114,19 @@ Die Historie kann dann :abbr:`z.B. (zum Beispiel)` so aussehen:
 
 .. code-block:: console
 
-    *   49770a2 (HEAD -> main) Fix merge conflict with #17
+    *   49770a2 (HEAD -> main) Fix merge conflict with my-feature
     |\
-    | * 9412467 (#17) Feature #17
+    | * 9412467 (my-feature) My feature
     * | 46ab1a2 Hotfix directly in main
     |/
     * 0c65f04 Initial commit
 
 .. seealso::
 
-    * `Git Branching - Einfaches Branching und Merging
-      <https://git-scm.com/book/de/v2/Git-Branching-Einfaches-Branching-und-Merging>`_
-    * `Git Tools - Fortgeschrittenes Merging
-      <https://git-scm.com/book/de/v2/Git-Tools-Fortgeschrittenes-Merging>`_
+   * `Git Branching - Einfaches Branching und Merging
+     <https://git-scm.com/book/de/v2/Git-Branching-Einfaches-Branching-und-Merging>`_
+   * `Git Tools - Fortgeschrittenes Merging
+     <https://git-scm.com/book/de/v2/Git-Tools-Fortgeschrittenes-Merging>`_
 
 Zweige löschen
 --------------
@@ -153,6 +163,9 @@ auch zur Standardeinstellung machen, indem ihr ``fetch.prune`` aktiviert:
 .. code-block:: console
 
    $ git config --global fetch.prune true
+
+.. seealso::
+   `PRUNING <https://git-scm.com/docs/git-fetch#_pruning>`_
 
 Zweige umbenennen
 -----------------

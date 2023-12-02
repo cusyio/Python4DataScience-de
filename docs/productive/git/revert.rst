@@ -5,6 +5,38 @@
 Änderungen zurücknehmen
 =======================
 
+Mit Git 2.23 kam ``git restore`` zum Rückgängigmachen von Datei-Änderungen
+hinzu. Vorher übernahm ``git reset`` diese Aufgabe, das aber auch noch andere
+Aufgaben hat:
+
+:samp:`$ git restore`
+    ändert Dateien im Arbeitsverzeichnis in einen Zustand, der Git zuvor bekannt
+    war. Standardmäßig checkt Git ``HEAD`` den letzten Commit des aktuellen
+    Zweigs aus.
+
+    .. note::
+
+        In Git < 2.23 steht euch ``git restore`` noch nicht zur Verfügung. In
+        diesem Fall müsst ihr noch ``git checkout`` verwenden:
+
+       :samp:`$ git checkout {FILE}`
+
+    :samp:`git restore [-S|--staged] {FILE}`
+        nimmt das Hinzufügen von Dateien zurück. Die Änderungen bleiben in eurem
+        Arbeitsbereich erhalten, so dass ihr sie bei Bedarf ändern und wieder
+        hinzufügen könnt.
+
+        Der Befehl entspricht :samp:`git reset {PATH}`.
+
+    :samp:`git restore [-SW] {FILE}`
+        nimmt das Hinzufügen und Änderungen im Arbeitsbereich zurück.
+    :samp:`git restore [-s|--source] {BRANCH} {FILE}`
+        setzt eine Änderung auf die Version im Zweig :samp:`{BRANCH}` zurück.
+    :samp:`git restore [-s|--source] @~ {FILE}`
+        setzt eine Änderung auf den vorherigen Commit zurück.
+    :samp:`git restore [-p|--patch]`
+        lässt euch die rückgängig zu machenden Änderungen einzeln auswählen.
+
 :samp:`$ git reset [--hard|--soft] {TARGET_REFERENCE}`
     setzt die Historie auf einen früheren Commit zurück, :abbr:`z.B. (zum
     Beispiel)`:
@@ -74,17 +106,6 @@
     alle bereitgestellten Änderungen mit dem Inhalt des vorherigen Commits
     kombiniert. Wenn nichts bereitgestellt ist, wird nur die vorherige
     Commit-Nachricht neu geschrieben.
-:samp:`$ git restore {FILE}`
-    ändert Dateien im Arbeitsverzeichnis in einen Zustand, der Git zuvor bekannt
-    war. Standardmäßig checkt Git ``HEAD`` den letzten Commit des aktuellen
-    Zweigs aus.
-
-    .. note::
-
-        In Git < 2.23 steht euch ``git restore`` noch nicht zur Verfügung. In
-        diesem Fall müsst ihr noch ``git checkout`` verwenden:
-
-       :samp:`$ git checkout {FILE}`
 
 Commit im falschen Zweig zurücknehmen
 -------------------------------------

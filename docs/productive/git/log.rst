@@ -41,6 +41,25 @@ Git Log
     filtert nach unterschiedlichen Commits in verschiedenen Zweigen (Branches),
     in unserem Fall zwischen den Branches :samp:`MAIN` und :samp:`FEATURE`.
 
+    Dies ist jedoch nicht dasselbe wie :samp:`$ git log {FEATURE}..{MAIN}`.
+    Nehmen wir folgendes Beispiel.
+
+    .. code-block::
+
+       A - B main
+        \
+         C - D feature
+
+    :samp:`$ git log {MAIN}..{FEATURE}`
+        zeigt Änderungen in :samp:`{FEATURE}` an, die nicht in :samp:`{MAIN}`
+        enthalten sind, also die Commits ``C`` und ``D``.
+    :samp:`$ git log {FEATURE}..{MAIN}`
+        zeigt Änderungen in :samp:`{MAIN}` an, die nicht in :samp:`{FEATURE}`
+        enthalten sind, also den Commit ``B``.
+    :samp:`$ git log {MAIN}...{FEATURE}`
+        zeigt die Änderungen auf beiden Seiten an, also die Commits ``B``, ``C``
+        und ``D``.
+
 :samp:`$ git log --oneline --graph --decorate`
     anzeigen des Verlaufsdiagramms mit Referenzen, ein Commit pro Zeile.
 

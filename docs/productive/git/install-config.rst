@@ -125,14 +125,31 @@ In der :file:`~/.gitconfig`-Datei können jedoch auch Aliase festgelegt werden:
      * `git_state <https://starship.rs/config/#git-state>`_
      * `git_status-Modul <https://starship.rs/config/#git-status>`_
 
-Sowohl der Editor lässt sich angeben, als auch die Hervorhebung von Leerzeichenfehlern
-in ``git diff``:
+Auch der Editor lässt sich angeben, :abbr:`z.B. (zum Beispiel)` mit:
 
 .. code-block:: ini
 
     [core]
         editor = vim
 
+oder für Visual Studio Code mit:
+
+.. code-block:: ini
+
+    [core]
+        editor = code --wait
+
+.. note::
+   Auf macOS müsst ihr zunächst Visual Studio Code starten, dann die
+   Befehlspalette mit :kbd:`⌘+⇧-p` öffnen und schließlich den Befehl ``Install
+   'code' command in PATH`` ausführen.
+
+Auch die Hervorhebung von Leerzeichenfehlern in ``git diff`` lässt sich
+konfigurieren:
+
+.. code-block:: ini
+
+    [core]
         # Highlight whitespace errors in git diff:
         whitespace = tabwidth=4,tab-in-indent,cr-at-eol,trailing-space
 

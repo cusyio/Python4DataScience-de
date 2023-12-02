@@ -33,16 +33,19 @@ folgendes:
 #. Durch die *saubere Historie* des Hauptzweigs sollte :doc:`log` schnell
    Rückschlüsse ermöglichen.
 #. Sollte :doc:`log` nicht zum gewünschten Ergebnis führen, hilft vermutlich
-   :doc:`git bisect <advanced/bisect>` weiter. Dabei hilft ``git bisect`` die saubere
-   Git-Historie bei der Suche nach der Regression.
+   :doc:`git bisect <advanced/bisect>` weiter. Dabei hilft ``git bisect`` die
+   saubere Git-Historie bei der Suche nach der Regression.
 
 .. warning::
     Die veröffentlichte Historie sollte nur in sehr seltenen Ausnahmefällen
     geändert werden, da die alten Commits durch neue ersetzt und es so aussehen
     würde, als wäre dieser Teil der Projektgeschichte plötzlich verschwunden.
 
-.. note::
+.. seealso::
+   `git rebase: what can go wrong?
+   <https://jvns.ca/blog/2023/11/06/rebasing-what-can-go-wrong-/#undoing-a-rebase-is-hard>`_
 
+.. note::
    ``git rebase`` wird auch kurz in :doc:`advanced/jupyter-notebooks`
    und :doc:`workflows/feature-branches` behandelt
 
