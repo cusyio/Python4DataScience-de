@@ -157,17 +157,113 @@ GitLab interpretiert bestimmte Commit-Nachrichten auch als Links, :abbr:`z.B.
 
 .. code-block:: console
 
-  $ git commit -m "Awesome commit message (Fix #21 and close group/otherproject#22)"
+  $ git commit -m "Expand section on meaningful commit messages (#21: Add
+  multi-line commit messages and close group/project#22)"
 
 * zu Issues: :samp:`#{NUMBER}`
 
-  * auch in anderen Projekten: :samp:`{OTHERGROUP/OTHERPROJECT}#{NUMBER}`
+  * auch in anderen Projekten: :samp:`{GROUP/PROJECT}#{NUMBER}`
 
 * zu Merge Requests: :samp:`!{NUMBER}`
 * zu Snippets::samp:`${NUMBER}`
 
 Dabei sollte es zu jedem Commit mindestens ein Ticket geben, das ausführlichere
-Hinweise zu den Änderungen geben sollte.
+Hinweise zu den Änderungen geben sollte. Alternativ könnt ihr auch mehrzeilige
+Commit-Nachrichten schreiben, die diese Informationen enthalten, :abbr:`z.B.
++(zum Beispiel)` mit:
+
+.. code-block:: console
+
+   $ git commit -m 'Expand section on meaningful commit messages' -m 'Fix the serious problem'
+
+Oder, wenn ihr nur :samp:`git commit` eingebt, öffnet sich euer Editor,
+:abbr:`z.B. (zum Beispiel)` mit folgendem Text:
+
+.. code-block:: ini
+
+   # Bitte geben Sie eine Commit-Beschreibung für Ihre Änderungen ein. Zeilen,
+   # die mit '#' beginnen, werden ignoriert, und eine leere Beschreibung
+   # bricht den Commit ab.
+   #
+   # Auf Branch main
+
+Git erwartet, dass ihr eure Commit-Nachricht am Anfang der Datei einfügt.
+Nachdem ihr die Bearbeitung der Datei abgeschlossen habt, liest Git ihren Inhalt
+und fährt fort. Es *bereinigt* die Datei, indem es mit ``#`` kommentierte Zeilen
+und nachfolgende Leerzeilen entfernt. Wenn die Nachricht nach dem Aufräumen leer
+ist, bricht Git den Commit ab – das ist praktisch, wenn ihr merkt, dass ihr
+etwas vergessen habt. Andernfalls wird der Commit mit dem verbleibenden Inhalt
+erstellt. GitLab verwendet ``#`` jedoch als Präfix für die Nummer eines Items.
+Diese doppelte Bedeutung von ``#`` kann zu einer Verwechslung führen, wenn ihr
+eine Commit-Nachricht schreibt, die sich auf ein Item bezieht:
+
+.. code-block:: ini
+
+   Expand section on meaningful commit messages
+
+   #21: Add multi-line commit messages
+
+   # Bitte geben Sie eine Commit-Beschreibung für Ihre Änderungen ein. Zeilen,
+   # die mit '#' beginnen, werden ignoriert, und eine leere Beschreibung
+   # bricht den Commit ab.
+   #
+   # Auf Branch main
+   # Ihr Branch ist auf demselben Stand wie 'origin/main'.
+   #
+   # Zum Commit vorgemerkte Änderungen:
+   #       geändert:       productive/git/best-practices.rst
+   #
+
+Üblicherweise entfernt Git die Zeile, die mit #21 beginnt, so dass die Nachricht
+wie folgt aussieht:
+
+.. code-block:: ini
+
+   Expand section on meaningful commit messages
+
+Vermeiden Sie dieses Missgeschick, indem ihr einen alternativen
+Bereinigungsmodus namens *Scissors* verwenden. Ihr könnt ihn global aktivieren
+mit:
+
+.. code-block:: console
+
+   $ git config --global commit.cleanup scissors
+
+Dann beginnt Git jede neue Commit-Nachricht mit der *Scissors*-Zeile:
+
+.. code-block:: ini
+
+   # ------------------------ >8 ------------------------
+   # Ändern oder entfernen Sie nicht die obige Zeile.
+   # Alles unterhalb von ihr wird ignoriert.
+   #
+   # Auf Branch main
+   # Ihr Branch ist auf demselben Stand wie 'origin/main'.
+   #
+   # ...
+   #
+
+Co-Autoren angeben
+~~~~~~~~~~~~~~~~~~
+
+Wenn ihr mit einem Teammitglied an einem Commit arbeiten, ist es gut, dessen
+Beitrag mit dem ``co-authored-by``-Trailer anzuerkennen. Trailer sind
+zusätzliche Metadaten am Ende der Commit-Nachricht, die eine :samp:`{KEY}:
+{VALUE}`-Syntax verwenden und wiederholt werden kann, um mehrere Werte
+aufzulisten:
+
+.. code-block:: ini
+
+   Expand section on meaningful commit messages
+
+   #21: Add multi-line commit messages
+
+   co-authored-by: Kristian Rother <kristian.rother@cusy.io>
+   co-authored-by: Frank Hofmann <frank.hofmann@cusy.io>
+
+GitLab analysiert die ``co-authored-by``-Zeilen, um alle Avatare des Commits
+anzuzeigen und auc die Profilstatistiken der Co-Autoren zu aktualisieren
+:abbr:`usw (und so weiter)`.
 
 Wartet euer Repository regelmäßig
 ---------------------------------
