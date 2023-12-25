@@ -143,8 +143,38 @@ Aufgaben hat:
     kombiniert. Wenn nichts bereitgestellt ist, wird nur die vorherige
     Commit-Nachricht neu geschrieben.
 
+Referenz für häufige Befehle zum Zurücksetzen
+---------------------------------------------
+
+Alle lokalen Änderungen an einem Zweig rückgängig machen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: console
+
+    $ git reset --keep '@{u}'
+
+Alle Commits im aktuellen Zweig rückgängig machen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+`git merge-base <https://git-scm.com/docs/git-merge-base>`_ wählt den Commit
+aus, bei dem sich zwei Zweige getrennt haben. Übergebt ``@`` und ``main``, um
+den Commit auszuwählen, bei dem der aktuelle Zweig von ``main`` abgezweigt ist.
+Setzt ihn zurück, um alle Commits auf dem lokalen Zweig rückgängig zu machen
+mit:
+
+.. code-block:: console
+
+    $ git reset --soft $(git merge-base @ main)
+
+Alle Änderungen im aktuellen Zweig rückgängig machen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: console
+
+    $ git reset --keep main
+
 Commit im falschen Zweig zurücknehmen
--------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Wenn ihr versehentlich einen Commit in einem bestehenden Zweig gemacht habt,
 anstatt zunächst einen neuen Zweig zu erstellen, könnt ihr das in den folgenden
@@ -152,7 +182,7 @@ drei Schritten ändern:
 
 #. Erstellt einen neuen Zweig mit :samp:`$ git branch {NEW_BRANCH}`
 #. Nehmt den letzten Commit in eurem aktiven Branch zurück mit :samp:`$ git
-   reset HEAD~ --hard`
+   reset --keep @~`
 #. Übernehmt die Änderungen in den neuen Zweig mit :samp:`$ git switch
    {NEW_BRANCH}`
 
