@@ -37,15 +37,22 @@ Aufgaben hat:
     :samp:`git restore [-p|--patch]`
         lässt euch die rückgängig zu machenden Änderungen einzeln auswählen.
 
-:samp:`$ git reset [--hard|--soft] {TARGET_REFERENCE}`
-    setzt die Historie auf einen früheren Commit zurück, :abbr:`z.B. (zum
-    Beispiel)`:
+:samp:`$ git reset [--hard | --mixed | --soft | --keep] {TARGET_REFERENCE}`
+    setzt die Historie auf einen früheren Commit zurück.
+
+    .. warning::
+        Das Risiko bei ``reset`` ist, dass Arbeit verloren gehen kann. Zwar
+        werden Commits nicht unmittelbar gelöscht, allerdings können sie
+        verwaisen, so dass es keinen direkten Pfad mehr zu ihnen gibt. Sie
+        müssen dann zeitnah mit ``git reflog`` gefunden und wiederhergestellt
+        werden da Git üblicherweise alle verwaisten Commits nach 30 Tagen
+        löscht.
 
     .. code-block:: console
 
-        $ git reset HEAD~1
+        $ git reset @~
 
-    ``HEAD~1``
+    ``@~``
         nimmt den letzten Commit zurück wobei dessen Änderungen nun wieder in
         den Bühnenbereich übernommen werden.
 
@@ -68,6 +75,11 @@ Aufgaben hat:
               (benutzen Sie "git add <Datei>...", um die Änderungen zum Commit vorzumerken)
                 README.rst
 
+    ``@~3``
+        nimmt den letzten drei Commits zurück.
+    ``'@{u}'``
+        nimmt die entfernte Version (*Upstream*) des aktuellen Zweigs.
+
     ``--hard``
         verwirft die Änderungen auch im Staging- und Arbeitsbereich.
 
@@ -84,17 +96,41 @@ Aufgaben hat:
             nichts zu committen (erstellen/kopieren Sie Dateien und benutzen
             Sie "git add" zum Versionieren)
 
+    ``--mixed``
+        setzt den Bühnen-, aber nicht den Arbeitsbereich zurück, :abbr:`d.h.
+        (das heißt)`, die geänderten Dateien bleiben erhalten, werden aber nicht
+        für den Commit markiert.
+
+        .. tip::
+           Ich bevorzuge meist ``--soft`` gegenüber ``--mixed``: es hält die
+           rückgängig gemachten Änderungen getrennt, so dass alle zusätzlichen
+           Änderungen explizit sind. Dies ist Besonders nützlich, wenn ihr
+           im Bühnen- und Arbeitsbereich Änderungen an der gleichen Datei habt.
+
     ``--soft``
         nimmt den oder die Commits zurück, lässt jedoch Bühnen- und
         Arbeitsbereich unverändert.
+    ``--keep``
+        setzt den Bühnenbereich zurück und aktualisiert die Dateien im
+        Arbeitsbereich, die sich zwischen :samp:`COMMIT` und ``HEAD``
+        unterscheiden, behält aber diejenigen bei, die sich zwischen Bühnen- und
+        Arbeitsbereich unterscheiden, :abbr:`d.h. (das heißt)`, die Änderungen
+        haben, aber noch nicht hinzugefügt wurden. Wenn eine Datei, die sich
+        zwischen :samp:`COMMIT` und Bühnenbereich unterscheidet, nicht
+        hinzugefügte Änderungen aufweist, wird ``reset`` abgebrochen.
 
-    .. warning::
-        Das Risiko bei ``reset`` ist, dass Arbeit verloren gehen kann. Zwar
-        werden Commits nicht unmittelbar gelöscht, allerdings können sie
-        verwaisen, so dass es keinen direkten Pfad mehr zu ihnen gibt. Sie
-        müssen dann zeitnah mit ``git reflog`` gefunden und wiederhergestellt
-        werden da Git üblicherweise alle verwaisten Commits nach 30 Tagen
-        löscht.
+        Ihr könnt euch dann mit euren nicht im Commit enthaltenen Änderungen
+        befassen, sie vielleicht mit ``git restore`` rückgängig macht oder mit
+        ``git stash`` versteckt, bevor ihr es erneut versucht.
+
+        .. tip::
+           Viele andere Anleitungen empfehlen ``--hard`` für diese Aufgabe,
+           wahrscheinlich weil es diesen Modus schon länger gibt. Dieser Modus
+           ist jedoch riskanter, da er die nicht im Commit enthaltenen
+           Änderungen unwiderruflich verwirft ohne Fragen zu stellen.  Ich
+           verwende jedoch ``--keep`` und wenn ich alle nicht zum Commit
+           vorgesehenen Änderungen vor dem ``reset`` verwerfen will, verwende
+           ich ``git restore -SW``.
 
 :samp:`$ git revert {COMMIT SHA}`
     erstellt einen neuen Commit und nimmt die Änderungen des angegebenen Commits
