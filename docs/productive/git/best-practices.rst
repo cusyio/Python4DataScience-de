@@ -221,9 +221,8 @@ wie folgt aussieht:
 
    Expand section on meaningful commit messages
 
-Vermeiden Sie dieses Missgeschick, indem ihr einen alternativen
-Bereinigungsmodus namens *Scissors* verwenden. Ihr könnt ihn global aktivieren
-mit:
+Vermeidet dieses Missgeschick, indem ihr einen alternativen Bereinigungsmodus
+namens *Scissors* verwendet. Ihr könnt ihn global aktivieren mit:
 
 .. code-block:: console
 
@@ -262,7 +261,7 @@ aufzulisten:
    co-authored-by: Frank Hofmann <frank.hofmann@cusy.io>
 
 GitLab analysiert die ``co-authored-by``-Zeilen, um alle Avatare des Commits
-anzuzeigen und auc die Profilstatistiken der Co-Autoren zu aktualisieren
+anzuzeigen und auch die Profilstatistiken der Co-Autoren zu aktualisieren
 :abbr:`usw (und so weiter)`.
 
 Wartet euer Repository regelmäßig
