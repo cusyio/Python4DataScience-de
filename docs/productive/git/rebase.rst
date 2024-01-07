@@ -74,8 +74,8 @@ die Option ``--update-refs`` immer angegeben ist.
    <https://lore.kernel.org/git/3ec2cc922f971af4e4a558188cf139cc0c0150d6.1657631226.git.gitgitgadget@gmail.com/>`_
 
 
-Commits mit rebase löschen
---------------------------
+Commits mit ``git rebase`` löschen
+----------------------------------
 
 .. code-block:: console
 
@@ -100,9 +100,76 @@ entfernte Repository aktualisiert werden mit:
 
     $ git push origin HEAD:main -f
 
-Ändern einer Commit-Nachricht mit rebase
-----------------------------------------
+Ändern einer Commit-Nachricht mit ``git rebase``
+------------------------------------------------
 
-Dies lässt sich ebenfalls einfach mit ``rebase`` realisieren wobei ihr in
-eurem Editor nicht die Zeile löschen sondern in der Zeile ``pick`` durch
-``r`` (*reword*) ersetzen müsst.
+Dies lässt sich ebenfalls einfach mit ``git rebase`` realisieren wobei ihr in
+eurem Editor nicht die Zeile löschen sondern in der Zeile ``pick`` durch ``r``
+(*reword*) ersetzen müsst.
+
+``rebase`` als Standard-``git pull``-Strategie
+----------------------------------------------
+
+Normalerweise holt und führt ``git pull`` neue Remote-Commits ohne Probleme
+zusammen. Meistens werden nur neue Commits aus dem entfernten Zweig hinzugefügt,
+ein :abbr:`sog. (sogenannter)` Fast-Forward-Merge. Wenn aber sowohl der lokale
+als auch der entfernte Zweig neue Commits haben, weichen die Zweige voneinander
+ab. Ihr müsst dann die verschiedenen Historien irgendwie in Einklang bringen.
+Standardmäßig führt ab Git 2.33.1 jede Abweichung dazu, dass ``git pull`` anhält
+und die folgende Meldung ausgibt:
+
+.. code-block:: console
+
+   $ git pull
+   Hinweis: Sie haben abweichende Branches und müssen angeben, wie mit diesen
+   Hinweis: umgegangen werden soll.
+   Hinweis: Sie können dies tun, indem Sie einen der folgenden Befehle vor dem
+   Hinweis: nächsten Pull ausführen:
+   Hinweis:
+   Hinweis:   git config pull.rebase false  # Merge
+   Hinweis:   git config pull.rebase true   # Rebase
+   Hinweis:   git config pull.ff only       # ausschließlich Vorspulen
+   Hinweis:
+   Hinweis: Sie können statt "git config" auch "git config --global" nutzen, um
+   Hinweis: einen Standard für alle Repositories festzulegen. Sie können auch die
+   Hinweis: Option --rebase, --no-rebase oder --ff-only auf der Kommandozeile nutzen,
+   Hinweis: um das konfigurierte Standardverhalten pro Aufruf zu überschreiben.
+   Schwerwiegend: Es muss angegeben werden, wie mit abweichenden Branches umgegangen werden sollen.
+
+Die Hinweise erlauben drei Optionen:
+
+``git config pull.rebase false``
+    führt die lokalen und entfernten Commits zusammen. Vor Git 2.33.1 verwendete
+    Git immer diese Zusammenführung.
+``git config pull.rebase true``
+    Die lokalen Commits werden auf die Remote-Commits übernommen.
+``git config pull.ff only``
+    führt bei divergierenden Zweigen immer zu einen Fehler. Ihr könnt dann von
+    Fall zu Fall mit ``--no-rebase`` (was ``merge`` bedeutet) oder ``--rebase``
+    entscheiden, ob ihr mergen oder rebasen wollt.
+
+.. tip::
+   Ich empfehle ``git config pull.rebase true``, da Merging verwirrend sein
+   kann. Das Rebasen der lokalen Commits auf die entfernten macht die Geschichte
+   linear, was verständlicher ist.
+
+Macht ``rebase`` zu eurer Standardstrategie mit:
+
+.. code-block:: console
+
+   $ git config --global pull.rebase interactive
+
+Wenn ``git pull`` dann auf abweichende lokale und entfernte Zweige stößt, wird
+es ein ``rebase`` durchgeführt:
+
+.. code-block:: console
+
+   $ git pull
+   automatischer Merge von README.md
+   KONFLIKT (Inhalt): Merge-Konflikt in README.md
+   Fehler: Konnte e50dfe5... nicht anwenden
+   Hinweis: Resolve all conflicts manually, mark them as resolved with
+   Hinweis: "git add/rm <conflicted_files>", then run "git rebase --continue".
+   Hinweis: You can instead skip this commit: run "git rebase --skip".
+   Hinweis: To abort and get back to the state before "git rebase", run "git rebase --abort".
+   Konnte e50dfe5... nicht anwenden

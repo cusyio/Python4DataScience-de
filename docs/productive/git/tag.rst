@@ -68,7 +68,7 @@ haben.
         Tag 'v3.9.16' aktualisiert (war 4f5c5473ea)
 
 :samp:`git push origin {TAGNAME}`
-    Die Teilen von Tags ist ähnlich wie der Push von Zweigen: standardmäßig
+    Das Teilen von Tags ist ähnlich wie der Push von Zweigen: standardmäßig
     werden mit :samp:`git push` keine Tags freigegeben, sondern sie müssen
     explizit an :samp:`git push` übergeben werden :abbr:`z.B. (zum Beispiel)`:
 
@@ -85,6 +85,26 @@ haben.
     Um mehrere Tags gleichzeitig zu pushen, übergebt die Option :samp:`--tags`
     an den Befehl :samp:`git push`. Andere erhalten die Tags bei :samp:`git
     clone` oder :samp:`git pull` des Repos.
+
+    Mit ``git push --follow-tags`` könnt ihr mit einem Commit auch gleichzeitig
+    die zugehörigen annotierten Tags teilen.
+
+    .. note::
+       ``--follow-tags`` funktioniert  nur für annotierte Tags, nicht für die
+       leichtgewichtigen Tags.
+
+    Wenn ihr für alle zukünftigen Pushes ``--follow-tags`` verwenden wollt,
+    könnt ihr dies konfigurieren mit
+
+    .. code-block:: console
+
+       $ git config --global push.followTags true
+
+    .. seealso::
+       * `git push --follow-tags
+         <https://git-scm.com/docs/git-push#Documentation/git-push.txt---follow-tags>`_
+       * `git config push.followTags
+         <https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushfollowTags>`_
 
 :samp:`git checkout {TAGNAME}`
     wechselt in den Zustand des Repository mit diesem Tag und trennt ``HEAD`` ab.
