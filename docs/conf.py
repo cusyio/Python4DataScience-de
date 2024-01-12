@@ -22,7 +22,7 @@
 # -- Project information -----------------------------------------------------
 
 project = "Python für Data Science"
-copyright = "2019–2023, Veit Schiele"
+copyright = "2019–2024, Veit Schiele"
 author = "Veit Schiele"
 
 # The full version, including alpha/beta/rc tags
