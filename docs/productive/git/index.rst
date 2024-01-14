@@ -95,8 +95,8 @@ Zum Weiterlesen
     log
     tag
     branch
-    revert
     rebase
+    undo
     best-practices
     workflows/index
     advanced/index
