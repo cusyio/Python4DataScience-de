@@ -121,6 +121,6 @@ Die gleiche Vorgehensweise kann auch angewandt werden, um nützliche Diffs von
 anderen Binärdateien zu erhalten, :abbr:`z.B. (zum Beispiel)` ``*.zip``,
 ``*.jar`` und andere Archive mit ``unzip`` oder für Änderungen in den
 Metainformationen von Bildern mit ``exiv2``. Zudem gibt es
-Konvertierungswerkzeuge für die Umwandlung von :file:`*.odt`, :file:`.*doc` und
+Konvertierungswerkzeuge für die Umwandlung von :file:`*.odt`, :file:`*.doc` und
 anderen Dokumentenformaten in einfachen Text. Für Binärdateien, für die es
 keinen Konverter gibt, reichen oft auch Strings aus.
