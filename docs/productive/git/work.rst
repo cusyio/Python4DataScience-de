@@ -40,6 +40,16 @@ An einem Projekt arbeiten
 ``$ git status``
     zeigt den Status des aktuellen Zweiges im Arbeitsverzeichnisses an mit
     neuen, geänderten und bereits zum Commit vorgemerkten Dateien.
+
+    ``-v``
+        zeigt die Änderungen im Bühnenbereich als Diff an.
+    ``-vv``
+        zeigt auch die Änderungen im Arbeitsverzeichnis als zweites Diff an.
+
+    .. seealso::
+       `git status -v
+       <https://git-scm.com/docs/git-status#Documentation/git-status.txt--v>`_
+
 :samp:`$ git add {FILE}`
     fügt eine Datei dem Bühnenbereich hinzu.
 

@@ -43,3 +43,12 @@ Beim Cherry-Picking entstehen jedoch üblicherweise doppelte Commits, und in
 vielen Fällen bevorzugen wir daher eher Git Merges. Dennoch kann sich ``git
 cherry-pick`` für einige Szenarien sehr gut eignen, :abbr:`z.B. (zum Beispiel)`
 für :ref:`release-branches`-Workflows.
+
+``git range-diff``
+------------------
+
+`git range-diff <https://git-scm.com/docs/git-range-diff>`_ zeigt die Differenz
+zwischen zwei Commit-Bereichen an, :abbr:`d.h. (das heißt)`, welche Commits
+zwischen diesen Bereichen gleich sind oder sich geändert haben. Dieser Befehl
+kann :abbr:`z.B. (zum Beispiel)` beim Überprüfen helfen, welche Commits mit
+``git cherry-pick`` auf welche Zweige verteilt wurden.
