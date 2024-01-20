@@ -230,6 +230,13 @@ böswillig manipuliert sein können. Diesen Problemen kann mit verifizierten,
 reproduzierbaren Builds begegnet werden, deren ausführbare Dateien jedoch nicht
 wieder im Quellcode-Repository landen sollten.
 
+.. seealso::
+   * `Reproducible Builds <https://reproducible-builds.org>`_
+   * `Python 3.12.0 from a supply chain security perspective
+     <https://sethmlarson.dev/security-developer-in-residence-weekly-report-13>`_
+   * `Defending against the PyTorch supply chain attack PoC
+     <https://sethmlarson.dev/security-developer-in-residence-weekly-report-25>`_
+
 Ist der Entwicklungsprozess anfällig für das Einschleusen von bösartigem Code?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
