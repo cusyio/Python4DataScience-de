@@ -235,8 +235,8 @@ Ist der Entwicklungsprozess anfällig für das Einschleusen von bösartigem Code
 
 Risiko: Hoch
 
-Mit :ref:`geschützten Git-Zweigen <protected_branches>` können Regeln für
-die Übernahme von Änderungen in Standard- und Veröffentlichungszweige definiert
+Mit :ref:`geschützten Git-Zweigen <protected_branches>` können Regeln für die
+Übernahme von Änderungen in Standard- und Veröffentlichungszweige definiert
 werden, :abbr:`z.B. (zum Beispiel)` automatisierte `statische Code-Analysen
 <https://de.wikipedia.org/wiki/Statische_Code-Analyse>`_ mit :doc:`qa/flake8`,
 :doc:`qa/pysa`, :doc:`qa/wily` und :ref:`Code-Reviews <code_reviews>` über
