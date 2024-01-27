@@ -149,22 +149,19 @@ Python deutlich vereinfachen.
 Code reduzieren mit ``dataclasses`` und ``attrs``
 -------------------------------------------------
 
-:doc:`python-basics:dataclasses` sollen die Definition von Klassen vereinfachen, die
-hauptsächlich zum Speichern von Werten erstellt werden, und auf die dann über die
-Attributsuche zugegriffen werden kann. Einige Beispiele sind
-:func:`collections.namedtuple`, :py:class:`typing.NamedTuple`, Rezepte zu Records [#]_ und
-Verschachtelte Dicts [#]_. Datenklassen ersparen euch das Schreiben und Verwalten dieser
-Methoden.
+:doc:`python-basics:dataclasses`
+    sollen die Definition von Klassen vereinfachen, die hauptsächlich zum Speichern von
+    Werten erstellt werden, und auf die dann über die Attributsuche zugegriffen werden
+    kann. Einige Beispiele sind :func:`collections.namedtuple`,
+    :py:class:`typing.NamedTuple`, Rezepte zu `Records
+    <https://web.archive.org/web/20170904185553/http://code.activestate.com/recipes/576555-records/>`_
+    und `Verschachtelte Dicts
+    <https://web.archive.org/web/20100604034714/http://code.activestate.com/recipes/576586-dot-style-nested-lookups-over-dictionary-based-dat>`_.
+    Datenklassen ersparen sie euch das Schreiben und Verwalten dieser Methoden.
 
-.. seealso::
-   * :pep:`557` – Data Classes
+    .. seealso::
+       * :pep:`557` – Data Classes
 
-`attrs <https://www.attrs.org/en/stable/>`_ ist ein Python-Paket, das es schon
-viel länger als ``dataclasses`` gibt, umfangreicher ist und auch mit älteren
-Versionen von Python verwendet werden kann.
-
-----
-
-.. [#] `Records (Python recipe) <https://web.archive.org/web/20170904185553/http://code.activestate.com/recipes/576555-records/>`_
-.. [#] `Dot-style nested lookups over dictionary based data structures (Python recipe)
-       <https://web.archive.org/web/20100604034714/http://code.activestate.com/recipes/576586-dot-style-nested-lookups-over-dictionary-based-dat>`_
+`attrs <https://www.attrs.org/en/stable/>`_
+    ist ein Python-Paket, das es schon viel länger als ``dataclasses`` gibt, umfangreicher
+    ist und auch mit älteren Versionen von Python verwendet werden kann.
