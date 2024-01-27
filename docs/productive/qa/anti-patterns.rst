@@ -6,8 +6,11 @@ Code-Smells und Anti-Patterns
 =============================
 
 .. seealso::
-   * `Brett Slatkin: Effektiv Python programmieren
-     <https://www.mitp.de/IT-WEB/Programmierung/Effektiv-Python-programmieren.html>`_
+   * `Effective Python <https://effectivepython.com/>`_
+     by Brett Slatkin
+   * `When Python Practices Go Wrong
+     <https://rhodesmill.org/brandon/slides/2019-11-codedive/>`_
+     by Brandon Rhodes
 
 Funktionen, die Objekte sein sollten
 ------------------------------------
