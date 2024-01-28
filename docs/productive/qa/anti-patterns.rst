@@ -12,8 +12,31 @@ Code-Smells und Anti-Patterns
      <https://rhodesmill.org/brandon/slides/2019-11-codedive/>`_
      by Brandon Rhodes
 
+Erkennen von Code-Smells
+------------------------
+
+Eine Möglichkeit, Code-Smells besser zu erkennen, besteht darin, die Merkmale
+von Code zu beschreiben. Notiert euch die Dinge, die euch auffallen; fügt alle
+Muster hinzu, die ihr seht, die ihr mögt oder nicht versteht. Möglicherweise
+können euch die folgenden Fragen zu weiteren Überlegungen anregen:
+
+* Gibt es Methoden, die die gleiche Form haben?
+* Gibt es Methoden, die ein Argument mit demselben Namen haben?
+* Bedeuten gleichnamige Argumente immer das Gleiche?
+* Wenn ihr eine private Methode einer Klasse hinzufügen wollt, wo würde sie
+  hingehören?
+* Wenn ihr die Klasse in zwei Teile aufteilen würdet, wo wäre die Trennlinie?
+* Haben die Tests in den Bedingungen etwas gemeinsam?
+* Wie viele Verzweigungen haben die Bedingungen?
+* Enthalten die Methoden außer der Bedingung noch weiteren Code?
+* Hängt jede Methode mehr vom übergebenen Argument ab oder von der Klasse als
+  Ganzes?
+
+Tyische Code-Smells in Python
+-----------------------------
+
 Funktionen, die Objekte sein sollten
-------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Python unterstützt neben der objektorientierten auch die prozedurale
 Programmierung mithilfe von Funktionen und vererbbaren Klassen. Beide Paradigmen
@@ -46,7 +69,7 @@ Klassenmethode wird und ``get_thumbnail()`` eine Eigenschaft:
             return thumb
 
 Objekte, die Funktionen sein sollten
-------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Manchmal sollte jedoch auch objektorientierter Code besser in Funktionen
 aufgelöst werden, z.B. wenn in einer Klasse außer ``.__init__()`` nur eine
@@ -74,7 +97,7 @@ weitere Methode oder nur statische Methoden enthalten sind.
    Methode.
 
 Verschachtelter Code
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
     *«Flat is better than nested.»*
 
@@ -139,7 +162,7 @@ ersetzt werden durch:
 
 
 Query-Tools für komplexe Dicts
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 `JMESPath <https://jmespath.org/>`_, `glom <https://github.com/mahmoud/glom>`_,
 `asq <https://asq.readthedocs.io/en/latest/>`_ und `flupy
@@ -147,7 +170,7 @@ Query-Tools für komplexe Dicts
 Python deutlich vereinfachen.
 
 Code reduzieren mit ``dataclasses`` und ``attrs``
--------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :doc:`python-basics:dataclasses`
     sollen die Definition von Klassen vereinfachen, die hauptsächlich zum Speichern von
