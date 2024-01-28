@@ -49,9 +49,10 @@ sollte, sind
 * hohe Anzahl eindeutiger Halstead-Operanden
 * Mix aus mutable und immutable Funktionen
 
-So können z.B. drei Funktionen mit unklarer Verwendung so reorganisiert werden,
-dass ``load_image()`` durch ``.__init__()`` ersetzt wird, ``crop()`` eine
-Klassenmethode wird und ``get_thumbnail()`` eine Eigenschaft:
+So können :abbr:`z.B. (zum Beispiel)` drei Funktionen mit unklarer Verwendung
+so reorganisiert werden, dass ``load_image()`` durch ``.__init__()`` ersetzt
+wird, ``crop()`` eine Klassenmethode wird und ``get_thumbnail()`` eine
+Eigenschaft:
 
 .. code-block:: python
 
@@ -72,8 +73,9 @@ Objekte, die Funktionen sein sollten
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Manchmal sollte jedoch auch objektorientierter Code besser in Funktionen
-aufgelöst werden, z.B. wenn in einer Klasse außer ``.__init__()`` nur eine
-weitere Methode oder nur statische Methoden enthalten sind.
+aufgelöst werden, :abbr:`z.B. (zum Beispiel)` wenn in einer Klasse außer
+``.__init__()`` nur eine weitere Methode oder nur statische Methoden enthalten
+sind.
 
 .. note::
    Ihr müsst nicht händisch nach solchen Klassen suchen, sondern es gibt eine
@@ -109,9 +111,8 @@ erhöht sich die zyklomatische Komplexität bei steigender Anzahl der
 Code-Verzweigungen.
 
 Ihr könnt verschachtelte Methoden mit mehreren ineinandergesteckten
-``if``-Anweisungen reduzieren, indem ihr Ebenen durch Methoden ersetzt, die ggf.
-``False`` zurückgeben. Anschließend könnt ihr mit ``.count()`` überprüfen, ob
-die Anzahl der Fehler ``> 0`` ist.
+``if``-Anweisungen reduzieren, indem ihr Ebenen durch Methoden ersetzt, die :abbr:`ggf. (gegebenenfalls)` ``False`` zurückgeben. Anschließend könnt ihr mit
+``.count()`` überprüfen, ob die Anzahl der Fehler ``> 0`` ist.
 
 Eine andere Möglichkeit besteht in der Verwendung von *List Comprehensions*. So
 kann der Code
@@ -173,18 +174,20 @@ Code reduzieren mit ``dataclasses`` und ``attrs``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :doc:`python-basics:dataclasses`
-    sollen die Definition von Klassen vereinfachen, die hauptsächlich zum Speichern von
-    Werten erstellt werden, und auf die dann über die Attributsuche zugegriffen werden
-    kann. Einige Beispiele sind :func:`collections.namedtuple`,
-    :py:class:`typing.NamedTuple`, Rezepte zu `Records
+    sollen die Definition von Klassen vereinfachen, die hauptsächlich zum
+    Speichern von Werten erstellt werden, und auf die dann über die
+    Attributsuche zugegriffen werden kann. Einige Beispiele sind
+    :func:`collections.namedtuple`, :py:class:`typing.NamedTuple`, Rezepte zu
+    `Records
     <https://web.archive.org/web/20170904185553/http://code.activestate.com/recipes/576555-records/>`_
     und `Verschachtelte Dicts
     <https://web.archive.org/web/20100604034714/http://code.activestate.com/recipes/576586-dot-style-nested-lookups-over-dictionary-based-dat>`_.
-    Datenklassen ersparen sie euch das Schreiben und Verwalten dieser Methoden.
+    ``dataclasses`` ersparen euch das Schreiben und Verwalten dieser Methoden.
 
     .. seealso::
        * :pep:`557` – Data Classes
 
 `attrs <https://www.attrs.org/en/stable/>`_
-    ist ein Python-Paket, das es schon viel länger als ``dataclasses`` gibt, umfangreicher
-    ist und auch mit älteren Versionen von Python verwendet werden kann.
+    ist ein Python-Paket, das es schon viel länger als ``dataclasses`` gibt,
+    umfangreicher ist und auch mit älteren Versionen von Python verwendet werden
+    kann.
