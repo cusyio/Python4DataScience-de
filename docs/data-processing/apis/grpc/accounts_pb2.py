@@ -292,9 +292,9 @@ _CREATEACCOUNTRESULT.fields_by_name["account"].message_type = _ACCOUNT
 _GETACCOUNTSREQUEST.fields_by_name["account"].message_type = _ACCOUNT
 _GETACCOUNTSRESULT.fields_by_name["account"].message_type = _ACCOUNT
 DESCRIPTOR.message_types_by_name["Account"] = _ACCOUNT
-DESCRIPTOR.message_types_by_name[
-    "CreateAccountRequest"
-] = _CREATEACCOUNTREQUEST
+DESCRIPTOR.message_types_by_name["CreateAccountRequest"] = (
+    _CREATEACCOUNTREQUEST
+)
 DESCRIPTOR.message_types_by_name["CreateAccountResult"] = _CREATEACCOUNTRESULT
 DESCRIPTOR.message_types_by_name["GetAccountsRequest"] = _GETACCOUNTSREQUEST
 DESCRIPTOR.message_types_by_name["GetAccountsResult"] = _GETACCOUNTSRESULT
@@ -305,7 +305,7 @@ Account = _reflection.GeneratedProtocolMessageType(
     (_message.Message,),
     {
         "DESCRIPTOR": _ACCOUNT,
-        "__module__": "accounts_pb2"
+        "__module__": "accounts_pb2",
         # @@protoc_insertion_point(class_scope:Account)
     },
 )
@@ -316,7 +316,7 @@ CreateAccountRequest = _reflection.GeneratedProtocolMessageType(
     (_message.Message,),
     {
         "DESCRIPTOR": _CREATEACCOUNTREQUEST,
-        "__module__": "accounts_pb2"
+        "__module__": "accounts_pb2",
         # @@protoc_insertion_point(class_scope:CreateAccountRequest)
     },
 )
@@ -327,7 +327,7 @@ CreateAccountResult = _reflection.GeneratedProtocolMessageType(
     (_message.Message,),
     {
         "DESCRIPTOR": _CREATEACCOUNTRESULT,
-        "__module__": "accounts_pb2"
+        "__module__": "accounts_pb2",
         # @@protoc_insertion_point(class_scope:CreateAccountResult)
     },
 )
@@ -338,7 +338,7 @@ GetAccountsRequest = _reflection.GeneratedProtocolMessageType(
     (_message.Message,),
     {
         "DESCRIPTOR": _GETACCOUNTSREQUEST,
-        "__module__": "accounts_pb2"
+        "__module__": "accounts_pb2",
         # @@protoc_insertion_point(class_scope:GetAccountsRequest)
     },
 )
@@ -349,7 +349,7 @@ GetAccountsResult = _reflection.GeneratedProtocolMessageType(
     (_message.Message,),
     {
         "DESCRIPTOR": _GETACCOUNTSRESULT,
-        "__module__": "accounts_pb2"
+        "__module__": "accounts_pb2",
         # @@protoc_insertion_point(class_scope:GetAccountsResult)
     },
 )
