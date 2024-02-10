@@ -11,13 +11,6 @@ von ``isinstance``-Prüfungen gegen konkrete Klassen ein Code-Smell, da das
 Programm dadurch schwieriger zu erweitern ist, um mit neuen Typen in der Zukunft
 umzugehen.
 
-.. seealso::
-   * `Effective Python <https://effectivepython.com/>`_
-     by Brett Slatkin
-   * `When Python Practices Go Wrong
-     <https://rhodesmill.org/brandon/slides/2019-11-codedive/>`_
-     by Brandon Rhodes
-
 Erkennen von Code-Smells
 ------------------------
 
@@ -40,6 +33,13 @@ können euch die folgenden Fragen zu weiteren Überlegungen anregen:
 
 Tyische Code-Smells in Python
 -----------------------------
+
+.. seealso::
+   * `Effective Python <https://effectivepython.com/>`_
+     by Brett Slatkin
+   * `When Python Practices Go Wrong
+     <https://rhodesmill.org/brandon/slides/2019-11-codedive/>`_
+     by Brandon Rhodes
 
 Funktionen, die Objekte sein sollten
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
