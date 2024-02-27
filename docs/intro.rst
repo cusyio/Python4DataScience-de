@@ -43,7 +43,7 @@ Ab Kapitel 2 folgt das Tutorial dem Prototyp eines Forschungsprojekts:
    <jupyter-tutorial:index>` mit :doc:`jupyter-tutorial:nbextensions/index`
    und :doc:`jupyter-tutorial:ipywidgets/index`.
 #. :doc:`data-processing/index` entweder über eine :doc:`REST API
-   <data-processing/requests/index>` oder direkt über eine :doc:`HTML-Seite
+   <data-processing/httpx/index>` oder direkt über eine :doc:`HTML-Seite
    <data-processing/serialisation-formats/xml-html/beautifulsoup>`.
 #. :doc:`clean-prep/index` ist eine wiederkehrende Aufgabe, bei der redundante,
    inkonsistente oder falsch formatierte Daten entfernt oder geändert werden.

@@ -85,7 +85,7 @@ Beispiel
 --------
 
 Antwort der :ref:`OSM-Nominatim-API
-</data-processing/requests/requests.ipynb#Beispiel-OSM-Nominatim-API>`:
+</data-processing/httpx/install-example.ipynb#Beispiel-OSM-Nominatim-API>`:
 
 .. code-block:: javascript
 

@@ -14,7 +14,7 @@ stellen wir euch :doc:`serialisation-formats/index` und drei Werkzeuge genauer
 vor:
 
 * :doc:`/data-processing/pandas-io`
-* :doc:`/data-processing/requests/index`
+* :doc:`/data-processing/httpx/index`
 * :doc:`/data-processing/intake/index`
 
 .. seealso::
@@ -51,7 +51,7 @@ hilfreiche Python-Pakete zum :doc:`Bereinigen und Validieren von Daten
     pandas-io
     serialisation-formats/index
     intake/index
-    requests/index
+    httpx/index
     remote-file-systems
     geodata
     postgresql/index
