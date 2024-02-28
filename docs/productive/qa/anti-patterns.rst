@@ -5,7 +5,7 @@
 Code-Smells und Anti-Patterns
 =============================
 
-Code-Smells sind Codierungsmusters, die darauf hinweisen, dass mit dem Entwurf
+Code-Smells sind Codierungsmuster, die darauf hinweisen, dass mit dem Entwurf
 eines Programms etwas nicht stimmt. Zum Beispiel ist die übermäßige Verwendung
 von ``isinstance``-Prüfungen gegen konkrete Klassen ein Code-Smell, da das
 Programm dadurch schwieriger zu erweitern ist, um mit neuen Typen in der Zukunft
@@ -147,8 +147,8 @@ werden als
 – `Robert C. Martin: The Dependency Inversion Principle
 <https://www.cs.utexas.edu/users/downing/papers/DIP-1996.pdf>`_
 
-Tyische Code-Smells in Python
------------------------------
+Typische Code-Smells in Python
+------------------------------
 
 .. seealso::
    * `Effective Python <https://effectivepython.com/>`_
