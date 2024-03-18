@@ -37,7 +37,7 @@ Filtern und sortieren
 
        :samp:`git log --author="{VEIT\|VSC}"`
 
-   :samp:`git log --grep = "{TERM}" [-i]`
+   :samp:`git log --grep="{TERM}" [-i]`
        filtert die Commit-Historie nach regulären Ausdrücken in der
        Commit-Nachricht.
 
