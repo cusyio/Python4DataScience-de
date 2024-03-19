@@ -105,6 +105,8 @@ Die zugehörige ``.gitlab-ci.yml``-Datei könnte dann so aussehen:
 
 .. code-block:: yaml
 
+    image: "docker.io/ubuntu"
+
     stages:
       - build
       - test
