@@ -317,13 +317,8 @@ eurer ``.gitlab-ci.yml``-Datei einbinden:
 
 .. code-block:: yaml
 
-   stages:
-     - secrets-detection
-
-   gitleaks:
-     stage: secrets-detection
-     include:
-       - template: Security/Secret-Detection.gitlab-ci.yml
+   include:
+   - template: Security/Secret-Detection.gitlab-ci.yml
 
 Die Vorlage erstellt *Secret Detection*-Aufträge in eurer CI/CD-Pipeline und
 durchsucht den Quellcode eures Projekts nach *Secrets*. Die Ergebnisse werden
