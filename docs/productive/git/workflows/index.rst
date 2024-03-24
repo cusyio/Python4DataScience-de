@@ -29,6 +29,7 @@ Im Folgenden behandeln wir einige dieser Git-Workflows.
    tbd
    git-flow
    merge-strategies
+   clean-history
    monorepos
    split-repos
    ci
