@@ -5,6 +5,35 @@
 Fortgeschrittenes Git
 =====================
 
+:doc:`git cherry-pick <cherry-pick>`
+    ermöglicht euch, beliebige Git-Commits anhand ihres Hash-Wertes dem
+    aktuellen ``HEAD`` anzuhängen.
+:doc:`git bisect <bisect>`
+    ermöglicht euch, einen Git-Commit, der eine Regression eingeführt hat,
+    schnell zu finden.
+:doc:`git notes <notes>`
+    fügt Textnotizen zu Commits, Tags und anderen Objekten hinzu.
+:doc:`hooks/index`
+    sind Skripte, die bei bestimmten Ereignissen in einem Git-Repository
+    automatisch ausgeführt werden.
+:doc:`Jupyter Notebooks <jupyter-notebooks>`
+    können zu Problemen führen bei der Verwaltung mit Git.
+:doc:`Binärdateien <binary-files>`
+    können in Git so konfiguriert werden, dass sinnvolle Diffs angezeigt werden.
+:doc:`vs-code/index`
+    kann eine bereits vorhandene Git-Installation nutzen um die entsprechenden
+    Funktionalitäten zur Verfügung zu stellen.
+:doc:`gitlab/index`
+    ist eine Webanwendung zur Versionsverwaltung auf Basis von Git.
+:doc:`git-big-picture`
+    visualisiert Git-Repositories als :abbr:`DAGs (gerichteter azyklischer
+    Graph, engl.: directed acyclic graph)`.
+:doc:`etckeeper`
+    ist eine Sammlung von Werkzeugen, mit denen das :file:`/etc`-Verzeichnis in
+    einem Git-Repository verwaltet werden kann.
+:doc:`internals`
+    verweist auf Artikel zu Git’s Datenbank-Interna.
+
 .. toctree::
    :hidden:
 
@@ -18,16 +47,4 @@ Fortgeschrittenes Git
    gitlab/index
    git-big-picture
    etckeeper
-
-Git's Datenbank-Interna
------------------------
-
-.. seealso::
-   * `Commits are snapshots, not diffs
-     <https://github.blog/2020-12-17-commits-are-snapshots-not-diffs/>`_
-   * `Git’s database internals I: packed object store
-     <https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store/>`_
-   * `Git’s database internals II: commit history queries
-     <https://github.blog/2022-08-30-gits-database-internals-ii-commit-history-queries/>`_
-   * `Git’s Database Internals III: File History Queries
-     <https://github.blog/2022-08-31-gits-database-internals-iii-file-history-queries/>`_
+   internals
