@@ -29,7 +29,9 @@ Schlüssel/Wert-Datenbanksysteme sind z.B. Riak, Cassandra, Redis und MongoDB.
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Entwicklungssprache**| Erlang                         | Java                           | ANSI C                         | C++                            |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Lizenzen**           | Apache License 2.0             | Apache License 2.0             | BSD-3-Clause License           | Server Side Public License     |
+| **Lizenzen**           | Apache License 2.0             | Apache License 2.0             | Redis Source Available License | Server Side Public License     |
+|                        |                                |                                | v2, Server-Side Public License |                                |
+|                        |                                |                                | v1                             |                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Datenmodell**        | Im Wesentlichen                | :term:`Column Family`          | Schlüssel werden als           | Flexibles Schema mit           |
 |                        | :term:`Schlüssel/Wert-Paar`    | entsprechen Tabellen,          | Zeichenkette gespeichert,      | denormalisiertem Modell        |
@@ -49,10 +51,18 @@ Schlüssel/Wert-Datenbanksysteme sind z.B. Riak, Cassandra, Redis und MongoDB.
 |                        |                                | OldNetworkTopologyStrategy     | :term:`consistent hashing      |                                |
 |                        |                                |                                | <Konsistente Hashfunktion>`    |                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Anmerkungen**        |                                | Siehe auch `Scylla`_, eine     | Siehe auch `KeyDB`_, ein Fork  | `BSON` mit einre maximalen     |
-|                        |                                | Cassandra-kompatible           | von Redis mit Multithreading.  | Dokumentengröße von 16 MB.     |
-|                        |                                | Reimplementierung in C.        |                                |                                |
+| **Anmerkungen**        |                                | Siehe auch `Scylla`_, eine     | Siehe auch:                    | `BSON` mit einre maximalen     |
+|                        |                                | Cassandra-kompatible           |                                | Dokumentengröße von 16 MB.     |
+|                        |                                | Reimplementierung in C.        | `KeyDB`_                       |                                |
+|                        |                                |                                |     ein Fork mit Multithreading|                                |
+|                        |                                |                                | `Redict`_                      |                                |
+|                        |                                |                                |     ein Fork, lizenziert unter |                                |
+|                        |                                |                                |     LGPL-3.0                   |                                |
+|                        |                                |                                | `Valkey`_                      |                                |
+|                        |                                |                                |     ein Fork der Linux         |                                |
+|                        |                                |                                |     Foundation                 |                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
+
 
 .. _`Riak`: https://riak.com/
 .. _`Cassandra`: https://cassandra.apache.org/
@@ -70,4 +80,6 @@ Schlüssel/Wert-Datenbanksysteme sind z.B. Riak, Cassandra, Redis und MongoDB.
 .. _`Cassandra Query Language (CQL)`: https://cassandra.apache.org/doc/latest/cql/
 .. _`Scylla`: https://www.scylladb.com/
 .. _`KeyDB`: https://github.com/JohnSully/KeyDB
+.. _`Redict`: https://redict.io/
+.. _`Valkey`: https://www.linuxfoundation.org/press/linux-foundation-launches-open-source-valkey-community
 .. _`BSON`: http://www.bsonspec.org/
