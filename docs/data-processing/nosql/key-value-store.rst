@@ -29,7 +29,9 @@ Schlüssel/Wert-Datenbanksysteme sind z.B. Riak, Cassandra, Redis und MongoDB.
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Entwicklungssprache**| Erlang                         | Java                           | ANSI C                         | C++                            |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Lizenzen**           | Apache License 2.0             | Apache License 2.0             | BSD-3-Clause License           | Server Side Public License     |
+| **Lizenzen**           | Apache License 2.0             | Apache License 2.0             | Redis Source Available License | Server Side Public License     |
+|                        |                                |                                | v2, Server-Side Public License |                                |
+|                        |                                |                                | v1                             |                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Datenmodell**        | Im Wesentlichen                | :term:`Column Family`          | Schlüssel werden als           | Flexibles Schema mit           |
 |                        | :term:`Schlüssel/Wert-Paar`    | entsprechen Tabellen,          | Zeichenkette gespeichert,      | denormalisiertem Modell        |
@@ -50,8 +52,9 @@ Schlüssel/Wert-Datenbanksysteme sind z.B. Riak, Cassandra, Redis und MongoDB.
 |                        |                                |                                | <Konsistente Hashfunktion>`    |                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Anmerkungen**        |                                | Siehe auch `Scylla`_, eine     | Siehe auch `KeyDB`_, ein Fork  | `BSON` mit einre maximalen     |
-|                        |                                | Cassandra-kompatible           | von Redis mit Multithreading.  | Dokumentengröße von 16 MB.     |
-|                        |                                | Reimplementierung in C.        |                                |                                |
+|                        |                                | Cassandra-kompatible           | von Redis mit Multithreading,  | Dokumentengröße von 16 MB.     |
+|                        |                                | Reimplementierung in C.        | und `Redict`_, ein Fork,       |                                |
+|                        |                                |                                | lizenziert unter LGPL-3.0.     |                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 
 .. _`Riak`: https://riak.com/
@@ -70,4 +73,5 @@ Schlüssel/Wert-Datenbanksysteme sind z.B. Riak, Cassandra, Redis und MongoDB.
 .. _`Cassandra Query Language (CQL)`: https://cassandra.apache.org/doc/latest/cql/
 .. _`Scylla`: https://www.scylladb.com/
 .. _`KeyDB`: https://github.com/JohnSully/KeyDB
+.. _`Redict`: https://redict.io/
 .. _`BSON`: http://www.bsonspec.org/
