@@ -8,7 +8,7 @@ Beispiel
 1. Erstellen
 ------------
 
-Erstellt die Datei :file:`main.py` mit:
+Erstellt die Datei :file:`main.py` mit diesem Inhalt:
 
 .. code-block:: python
 
@@ -32,7 +32,8 @@ Erstellt die Datei :file:`main.py` mit:
 2. Ausführen
 ------------
 
-Startet den Server mit:
+Startet den Server mit dem folgenden Aufruf (hier wieder am Beispiel von
+`uvicorn <http://www.uvicorn.org/>`_):
 
 .. code-block:: console
 
@@ -46,7 +47,7 @@ Startet den Server mit:
 3. Überprüfen
 -------------
 
-Öffnet euren Browser unter http://127.0.0.1:8000/ und ihr werdet folgendes
+Öffnet euren Webbrowser unter http://127.0.0.1:8000/ und ihr werdet folgendes
 sehen:
 
 .. figure:: fastapi-example.png
