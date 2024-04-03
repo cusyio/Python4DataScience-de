@@ -106,14 +106,15 @@ zu erhalten:
     return {"item_name": item.name, "item_id": item_id}
 
 Der Server lädt die Datei automatisch neu, da wir den
-`uvicorn <http://www.uvicorn.org/>`-Aufruf in Schritt 2 mit der Option
+`uvicorn <http://www.uvicorn.org/>`_-Aufruf in Schritt 2 mit der Option
 ``--reload`` ausgeführt haben.
 
-Auch die interaktive API-Dokumentation zeigt nun den neuen Body mit
-``PUT``. Wenn ihr auf die Schaltfläche *Try it out* klickt
-und einen Wert für den Parameter ``item_id`` angebt, wird beim Klick auf die
-*Execute*-Schaltfläche der Parameter vom Browser an das API übertragen und die
-Antwort auf dem Bildschirm angezeigt:
+Auch die interaktive API-Dokumentation zeigt nun den neuen Body mit ``PUT``.
+Wenn ihr auf die Schaltfläche *Try it out* (aus der Abbildung in Schritt 3)
+klickt und einen Wert für den Parameter ``item_id`` angebt, wird beim Klick
+auf die *Execute*-Schaltfläche der Parameter vom Browser an das API übertragen
+und die Antwort auf dem Bildschirm angezeigt. Nachfolgend seht ihr die Ausgabe
+für den beispielhaft eingetragenen Wert ``1234``:
 
 .. code-block:: javascript
 
