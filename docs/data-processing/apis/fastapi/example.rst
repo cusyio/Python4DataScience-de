@@ -105,9 +105,12 @@ zu erhalten:
     def update_item(item_id: int, item: Item):
     return {"item_name": item.name, "item_id": item_id}
 
-Der Server sollte die Datei automatisch neu laden, da wir dem uvicorn-Befehl
-``--reload`` hinzugefügt haben. Auch die interaktive API-Dokumentation zeigt nun
-den neuen Body mit ``PUT``. Wenn ihr auf die Schaltfläche *Try it out* klickt
+Der Server lädt die Datei automatisch neu, da wir den
+`uvicorn <http://www.uvicorn.org/>`-Aufruf in Schritt 2 mit der Option
+``--reload`` ausgeführt haben.
+
+Auch die interaktive API-Dokumentation zeigt nun den neuen Body mit
+``PUT``. Wenn ihr auf die Schaltfläche *Try it out* klickt
 und einen Wert für den Parameter ``item_id`` angebt, wird beim Klick auf die
 *Execute*-Schaltfläche der Parameter vom Browser an das API übertragen und die
 Antwort auf dem Bildschirm angezeigt:
