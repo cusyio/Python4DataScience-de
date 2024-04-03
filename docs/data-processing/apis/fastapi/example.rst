@@ -105,7 +105,7 @@ zu erhalten:
     def update_item(item_id: int, item: Item):
     return {"item_name": item.name, "item_id": item_id}
 
-Der Server sollte die Datei automatisch neu laden, da wir dem unicorn-Befehl
+Der Server sollte die Datei automatisch neu laden, da wir dem uvicorn-Befehl
 ``--reload`` hinzugefügt haben. Auch die interaktive API-Dokumentation zeigt nun
 den neuen Body mit ``PUT``. Wenn ihr auf die Schaltfläche *Try it out* klickt
 und einen Wert für den Parameter ``item_id`` angebt, wird beim Klick auf die
