@@ -34,7 +34,7 @@ Reihe von Name-Wert-Paaren enthält, die *fields* genannt werden.
 
 Nachdem ihr eure Datenstruktur definiert habt, könnt ihr das
 Protocol-Buffer-Compiler-Protokoll ``protoc`` verwenden, um Deskriptoren in
-eurer bevorzugten Sprache zu erzeugen. Diese bietet einfache Zugriffsfunktionen
+eurer bevorzugten Sprache zu erzeugen. Dieses bietet einfache Zugriffsfunktionen
 für jedes Feld sowie Methoden zur Serialisierung der gesamten Struktur. Wenn
 eure Sprache z.B. Python ist, werden beim Ausführen des Compilers für das obige
 Beispiel Deklaratoren generiert, die ihr dann in eurer Anwendung zum Einpflegen,
