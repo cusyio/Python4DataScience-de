@@ -75,13 +75,13 @@ Wireshark
 ---------
 
 `Wireshark <https://www.wireshark.org/>`_ ist ein Open-Source-Tool zur Analyse
-von Netzwerkprotokollen. Im Folgenden zeigen wir Euch, wie ihr den `gRPC
+von Netzwerkprotokollen. Im Folgenden seht ihr, wie ihr den `gRPC
 <https://gitlab.com/wireshark/wireshark/-/wikis/gRPC>`_- und den `Protobuf
-<https://gitlab.com/wireshark/wireshark/-/wikis/Protobuf>`_-Dissectors verwenden
-könnt. Sie erleichtern Euch das Zerlegen (Dekodieren) von gRPC-Nachrichten, die
+<https://gitlab.com/wireshark/wireshark/-/wikis/Protobuf>`_-Dissector verwenden
+könnt. Sie erleichtern euch das Zerlegen (Dekodieren) von gRPC-Nachrichten, die
 im :doc:`Protobuf </data-processing/serialisation-formats/protobuf>`- oder
 :doc:`/data-processing/serialisation-formats/json/index`-Format serialisiert
-sind. Zudem könnt ihr damit das Server-, Client- und bidirektionales
+sind. Zudem könnt ihr damit das Server-, Client- und bidirektionale
 gRPC-Streaming analysieren.
 
 .. note::
