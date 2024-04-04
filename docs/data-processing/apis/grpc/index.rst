@@ -109,7 +109,7 @@ gRPC liegen die folgenden Design-Prinzipien zu Grunde:
 
 Ausgehend von einer Schnittstellendefinition in einer ``.proto``-Datei bietet
 gRPC Protocol-Compiler-Plugins, die clientseitige und serverseitige APIs
-generieren.  Das `gRPC-Protokoll
+generieren. Das `gRPC-Protokoll
 <https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-HTTP2.md>`_ gibt abstrakt
 die Kommunikation zwischen Clients und Servern an:
 
