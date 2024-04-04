@@ -83,7 +83,7 @@ Hierfür schreiben wir die Datei :download:`accounts_server.py`:
 Client erstellen
 ----------------
 
-Hierfür schreiben wir :download:`accounts_client.py`:
+Hierfür schreiben wir die Datei :download:`accounts_client.py`:
 
 .. literalinclude:: accounts_client.py
    :caption: accounts_client.py
