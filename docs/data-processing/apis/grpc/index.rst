@@ -22,8 +22,8 @@ gRPC liegen die folgenden Design-Prinzipien zu Grunde:
 
 * gRPC kann auf allen gängigen Entwicklungsplattformen und in vielen
   verschiedenen Sprachen erstellt werden.
-* Es ist auf Geräten mit geringer CPU- und Speicherfähigkeiten funktionsfähig
-  sein, so neben Android [#]_- und iOS-Geräten auch auf MicroPython-Boards und
+* Es ist auf Geräten mit geringer CPU- und Speicherfähigkeit funktionsfähig,
+  so neben Android [#]_- und iOS-Geräten auch auf MicroPython-Boards und
   in Browsern [#]_ [#]_.
 * Es ist lizenziert unter Apache License 2.0 und nutzt offene Standards wie z.B.
   HTTP/2 und Quick UDP Internet Connections (QUIC).
@@ -35,7 +35,8 @@ gRPC liegen die folgenden Design-Prinzipien zu Grunde:
 * gRPC unterstützt unterschiedliche Serialisierungsformate, u.a.
   :doc:`/data-processing/serialisation-formats/protobuf`,
   :doc:`/data-processing/serialisation-formats/json/index` [#]_,
-  :doc:`/data-processing/serialisation-formats/xml-html/index` und Thrift)
+  :doc:`/data-processing/serialisation-formats/xml-html/index` und
+  `Thrift <https://thrift.apache.org/>`_)
 * Asynchrone und synchrone (blockierende) Verarbeitung werden in den meisten
   Sprachen unterstützt.
 * Das Streaming von Nachrichten in einem einzelnen RPC-Aufruf wird unterstützt.
