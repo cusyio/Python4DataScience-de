@@ -13,8 +13,8 @@ Definieren der Datenstruktur
 ----------------------------
 
 Der erste Schritt bei der Arbeit mit Protocol-Buffers besteht darin, die
-Struktur für die Daten zu definieren, die Sie in einer ``.proto``-Datei
-serialisieren möchten. Protocol-Buffers-Daten sind als *Nachrichten*
+Struktur für die Daten zu definieren, die ihr in einer ``.proto``-Datei
+serialisieren möchtet. Protocol-Buffers-Daten sind als *Nachrichten*
 strukturiert, wobei jede Nachricht ein kleiner logischer Datensatz ist, der eine
 Reihe von Name-Wert-Paaren enthält, die *fields* genannt werden.
 :download:`accounts.proto` ist ein einfaches Beispiel hierfür:
