@@ -21,12 +21,16 @@
 
 # -- Project information -----------------------------------------------------
 
+import os
+import re
+
+
 project = "Python für Data Science"
-copyright = "2019–2024, Veit Schiele"
 author = "Veit Schiele"
+copyright = f"2019–2024, {author}"
 
 # The full version, including alpha/beta/rc tags
-release = "1.0.0"
+release = re.sub("^v", "", os.popen("git describe --abbrev=0").read().strip())
 
 
 # -- General configuration ---------------------------------------------------
@@ -86,7 +90,7 @@ html_theme = "furo"
 # documentation.
 #
 # Change default HTML title
-html_title = "Python für Data Science 1.0.0"
+html_title = f"{project} {release}"
 #
 # html_theme_options = {}
 # html_sidebars = {}
