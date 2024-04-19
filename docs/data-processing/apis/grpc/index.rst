@@ -18,7 +18,7 @@ aufgerufen werden können. Der Server implementiert dieses Interface, um die
 Client-Aufrufe zu verarbeiten. Für den Client wurde ein sog. *Stub* generiert,
 der dieselben Methoden wie der Server bereitstellt.
 
-gRPC liegen die folgenden Design-Prinzipien zu Grunde:
+gRPC liegen die folgenden Design-Prinzipien zugrunde:
 
 * gRPC kann auf allen gängigen Entwicklungsplattformen und in vielen
   verschiedenen Sprachen erstellt werden.
