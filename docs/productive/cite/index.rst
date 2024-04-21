@@ -29,5 +29,5 @@ definiert werden.
     :maxdepth: 0
 
     data
-    software
+    software/index
     journals
