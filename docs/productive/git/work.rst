@@ -11,10 +11,10 @@ Die Arbeit an einem Projekt beginnen
 Ein eigenes Projekt starten
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:samp:`$ git init {MY_PROJECT}`
+:samp:`$ git init {PROJECT}`
     erstellt ein neues, lokales Git-Repository.
 
-    :samp:`{MY_PROJECT}`
+    :samp:`{PROJECT}`
         wenn der Projektname angegeben wird, erzeugt Git ein neues Verzeichnis
         und initialisiert es.
 
@@ -50,16 +50,16 @@ An einem Projekt arbeiten
        `git status -v
        <https://git-scm.com/docs/git-status#Documentation/git-status.txt--v>`_
 
-:samp:`$ git add {FILE}`
-    fügt eine Datei dem Bühnenbereich hinzu.
+:samp:`$ git add {PATH}`
+    fügt eine oder mehrere Dateien dem Bühnenbereich hinzu.
 
     ``-p``
-        fügt Teile einer Datei dem Bühnenbereich hinzu.
+        fügt Teile einer oder mehrerer Dateien dem Bühnenbereich hinzu.
     ``-e``
         die zu übernehmenden Änderungen können im Standardeditor bearbeitet
         werden.
 
-:samp:`$ git diff {FILE}`
+:samp:`$ git diff {PATH}`
     zeigt Unterschiede zwischen Arbeits- und Bühnenbereich, :abbr:`z.B. (zum
     Beispiel)`:
 
@@ -72,7 +72,7 @@ An einem Projekt arbeiten
         +++ b/docs/productive/git/work.rst
         @@ -46,7 +46,7 @@
 
-         :samp:`$ git diff {FILE}`
+         :samp:`$ git diff {PATH}`
         -    zeigt Unterschiede zwischen Arbeits- und Bühnenbereich.
         +    zeigt Unterschiede zwischen Arbeits- und Bühnenbereich, :abbr:`z.B. (zum Beispiel)`.
 
@@ -130,17 +130,18 @@ An einem Projekt arbeiten
         :samp:`$ git checkout {FILE}`
 
 ``$ git commit``
-    einen neuen Commit mit den hinzugefügten Änderungen machen.
+    macht einen neuen Commit mit den hinzugefügten Änderungen.
 
     :samp:`-m '{COMMIT_MESSAGE}'`
-        direkt in der Kommandozeile eine Commit-Message schreiben.
+        schreibt direkt in der Kommandozeile eine Commit-Message.
     ``--dry-run --short``
         zeigt, was committet werden würde mit dem Status im Kurzformat.
 
 ``$ git reset [--hard|--soft] [target-reference]``
     setzt die Historie auf einen früheren Commit zurück.
-:samp:`$ git rm {FILE}`
-    entfernt eine Datei namens :samp:`{FILE}` aus dem Arbeits- und Bühnenbereich.
+:samp:`$ git rm {PATH}`
+    entfernt eine Datei namens :samp:`{PATH}` aus dem Arbeits- und
+    Bühnenbereich.
 ``$ git stash``
     verschiebt die aktuellen Änderungen aus dem Arbeitsbereich in das Versteck
     (:abbr:`engl. (englisch)`: *stash*).
@@ -214,16 +215,16 @@ An einem Projekt arbeiten
     :samp:`-u {UNTRACKED_FILE}`
         versteckt unversionierte Dateien.
     ``list``
-        listet die versteckten Änderungen auf.
+        listet die Verstecke auf.
     ``show``
-        zeigt die Änderungen in den versteckten Dateien an.
+        zeigt die Änderungen in den Verstecken an.
     ``pop``
-        übernimmt Änderungen aus dem Versteck in den Arbeitsbereich und leert
+        übernimmt Änderungen aus einem Versteck in den Arbeitsbereich und leert
         das Versteck, :abbr:`z.B. (zum Beispiel)`:
 
         .. code-block:: console
 
-            $ git stash pop stash@{2}
+           $ git stash pop stash@{2}
 
     ``drop``
         leert ein spezifisches Versteck, :abbr:`z.B. (zum Beispiel)`:

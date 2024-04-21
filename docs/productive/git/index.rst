@@ -92,7 +92,7 @@ Zum Weiterlesen
     working-areas
     install-config
     work
-    log
+    review
     tag
     branch
     rebase

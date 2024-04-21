@@ -30,9 +30,9 @@ folgendes:
 
 #. Im Hauptzweig wird ein Fehler in einer Funktion festgestellt, die früher
    einmal fehlerfrei funktionierte.
-#. Durch die *saubere Historie* des Hauptzweigs sollte :doc:`log` schnell
+#. Durch die *saubere Historie* des Hauptzweigs sollte :doc:`review` schnell
    Rückschlüsse ermöglichen.
-#. Sollte :doc:`log` nicht zum gewünschten Ergebnis führen, hilft vermutlich
+#. Sollte :doc:`review` nicht zum gewünschten Ergebnis führen, hilft vermutlich
    :doc:`git bisect <advanced/bisect>` weiter. Dabei hilft ``git bisect`` die
    saubere Git-Historie bei der Suche nach der Regression.
 

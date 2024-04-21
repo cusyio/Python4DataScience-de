@@ -11,7 +11,8 @@ Schlüssel-Werte-Datenbanken, auch Key Value Stores genannt, speichern
 Datenbanksysteme
 ----------------
 
-Schlüssel/Wert-Datenbanksysteme sind z.B. Riak, Cassandra, Redis und MongoDB.
+Schlüssel/Wert-Datenbanksysteme sind :abbr:`z.B. (zum Beispiel)` Riak,
+Cassandra, Redis und MongoDB.
 
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Home**               | `Riak`_                        | `Cassandra`_                   | `Redis`_                       | `MongoDB`_                     |

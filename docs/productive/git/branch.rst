@@ -43,10 +43,10 @@ Gebräuchliche Befehle
     Mit :samp:`git config --global branch.sort -committerdate` könnt ihr diese
     Einstellung auch zu eurer Standardeinstellung machen.
 
-:samp:`$ git branch [{BRANCH_NAME}]`
+:samp:`$ git branch {BRANCH_NAME}`
     erstellt auf Basis des aktuellen ``HEAD`` einen neuen Zweig.
 
-:samp:`$ git switch [-c] [{BRANCH_NAME}]`
+:samp:`$ git switch [-c] {BRANCH_NAME}`
     wechselt zwischen Zweigen.
 
     ``-c``
@@ -63,7 +63,7 @@ Gebräuchliche Befehle
             ``-b``
                 erstellt den angegebenen Zweig, wenn dieser nicht schon besteht.
 
-:samp:`$ git merge [{FROM_BRANCH_NAME}]`
+:samp:`$ git merge {FROM_BRANCH_NAME}`
     verbindet den angegebenen mit dem aktuellen Zweig, in dem ihr euch gerade
     befindet, :abbr:`z.B. (zum Beispiel)`:
 

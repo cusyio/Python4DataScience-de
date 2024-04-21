@@ -2,8 +2,8 @@
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
-``log`` und ``reflog``
-======================
+Rückblick
+=========
 
 ``log``
 -------
@@ -17,46 +17,46 @@ Filtern und sortieren
 
 .. glossary::
 
-   :samp:`git log [-n {COUNT}]`
-       auflisten der Commit-Historie des aktuellen Zweiges.
+   :samp:`$ git log [-n {COUNT}]`
+       listet die Commit-Historie des aktuellen Zweiges auf.
 
        ``-n``
            beschränkt die Anzahl der Commits auf die angegebene Zahl.
 
-   :samp:`git log [--after="{YYYY-MM-DD}"] [--before="{YYYY-MM-DD}"]`
+   :samp:`$ git log [--after="{YYYY-MM-DD}"] [--before="{YYYY-MM-DD}"]`
        Commit-Historie gefiltert nach Datum.
 
        Auch relative Angaben wie ``1 week ago`` oder ``yesterday`` sind
        zulässig.
 
-   :samp:`git log --author="{VEIT}"`
+   :samp:`$ git log --author="{VEIT}"`
        filtert die Commit-Historie nach Autor*innen.
 
        Es kann auch nach mehreren Autor*innen gleichzeitig gesucht werden,
        :abbr:`z.B. (zum Beispiel)`:
 
-       :samp:`git log --author="{VEIT\|VSC}"`
+       :samp:`$ git log --author="{VEIT\|VSC}"`
 
-   :samp:`git log --grep="{TERM}" [-i]`
+   :samp:`$ git log --grep="{TERM}" [-i]`
        filtert die Commit-Historie nach regulären Ausdrücken in der
        Commit-Nachricht.
 
        ``-i``
            ignoriert Groß- und Kleinschreibung.
 
-   :samp:`git log -S"{FOO}" [-i]`
+   :samp:`$ git log -S"{FOO}" [-i]`
        filtert Commits nach bestimmten Zeilen im Quellcode.
 
        ``-i``
            ignoriert Groß- und Kleinschreibung.
 
-   :samp:`git log -G"{BA*}"`
+   :samp:`$ git log -G"{BA*}"`
        filtert Commits nach regulären Ausdrücken im Quellcode.
 
-   :samp:`git log -- {PATH/TO/FOO.PY}`
+   :samp:`$ git log -- {PATH/TO/FILE}`
        filtert die Commit-Historie nach bestimmten Dateien.
 
-   :samp:`git log {MAIN}..{FEATURE}`
+   :samp:`$ git log {MAIN}..{FEATURE}`
        filtert nach unterschiedlichen Commits in verschiedenen Zweigen
        (Branches), in unserem Fall zwischen den Branches :samp:`MAIN` und
        :samp:`FEATURE`.
@@ -70,17 +70,17 @@ Filtern und sortieren
            \
             C - D feature
 
-       :samp:`git log {MAIN}..{FEATURE}`
+       :samp:`$ git log {MAIN}..{FEATURE}`
            zeigt Änderungen in :samp:`{FEATURE}` an, die nicht in :samp:`{MAIN}`
            enthalten sind, also die Commits ``C`` und ``D``.
-       :samp:`git log {FEATURE}..{MAIN}`
+       :samp:`$ git log {FEATURE}..{MAIN}`
            zeigt Änderungen in :samp:`{MAIN}` an, die nicht in :samp:`{FEATURE}`
            enthalten sind, also den Commit ``B``.
-       :samp:`git log {MAIN}...{FEATURE}`
+       :samp:`$ git log {MAIN}...{FEATURE}`
            zeigt die Änderungen auf beiden Seiten an, also die Commits ``B``,
            ``C`` und ``D``.
 
-   :samp:`$git log --follow {PATH/TO/FOO.PY}`
+   :samp:`$ git log --follow {PATH/TO/FILE}`
        Dies sorgt dafür, dass das Log Änderungen an einer einzelnen Datei
        anzeigt, auch wenn diese umbenannt oder verschoben wurde.
 
@@ -90,13 +90,13 @@ Filtern und sortieren
 
        .. code-block:: console
 
-          git config --global log.follow true
+          $ git config --global log.follow true
 
        Dann müsst ihr nicht mehr ``--follow`` angeben, sondern nur noch den
        Dateinamen.
 
-   :samp:`git log -L {LINE_START_INT|LINE_START_REGEX},{LINE_END_INT|LINE_END_REGEX}:{PATH/TO/FOO.PY}`
-   :samp:`git log -L :{FUNCNAME_REGEX}:{PATH/TO/FOO.PY}`
+   :samp:`$ git log -L {LINE_START_INT|LINE_START_REGEX},{LINE_END_INT|LINE_END_REGEX}:{PATH/TO/FILE}`
+   :samp:`$ git log -L :{FUNCNAME_REGEX}:{PATH/TO/FILE}`
        Mit der Option `-L
        <https://git-scm.com/docs/git-log#Documentation/git-log.txt--Lltstartgtltendgtltfilegt>`_
        könnt ihr eine verfeinerte Suche durchführen, indem ihr das Log nur eines
@@ -109,7 +109,7 @@ Filtern und sortieren
        Für umfassendere Untersuchungen könnt ihr auch mehrere Blöcke verfolgen.
        Hierfür könnt ihr mehrere ``-L``-Optionen auf einmal verwenden.
 
-   :samp:`git log --reverse`
+   :samp:`$ git log --reverse`
        Üblicherweise zeigt das Protokoll den neuesten Commit zuerst an. Ihr
        könnt dies mit ``--reverse`` umkehren. Dies ist besonders nützlich, wenn
        ihr mit den bereits erwähnten Optionen ``-S`` und ``-G`` untersucht.
@@ -122,14 +122,14 @@ Ansicht
 
 .. glossary::
 
-   :samp:`git log --stat --patch|-p`
+   :samp:`$ git log --stat --patch|-p`
        ``--stat``
            Den üblichen Metadaten wird noch eine eine Zusammenfassung der Anzahl
            der geänderten Zeilen pro Datei hinzugefügt.
        ``--patch|-p``
            ergänzt die Ausgabe um den vollständigen Commit-Diff.
 
-   :samp:`git log --oneline --decorate --graph --all|{FEATURE}`
+   :samp:`$ git log --oneline --decorate --graph --all|{FEATURE}`
        anzeigen des Verlaufsdiagramms mit Referenzen, ein Commit pro Zeile.
 
        ``--oneline``
@@ -172,7 +172,7 @@ Das Reflog für ``HEAD`` anzeigen
 
 .. glossary::
 
-   :samp:`git reflog`
+   :samp:`$ git reflog`
        Wenn keine Optionen angegeben sind, zeigt der Befehl standardmäßig das
        Reflog für ``HEAD`` an. Es ist die Abkürzung für ``git reflog show
        HEAD``. git reflog hat weitere Unterbefehle zur Verwaltung des Logs, aber

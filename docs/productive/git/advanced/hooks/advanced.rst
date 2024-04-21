@@ -79,7 +79,7 @@ werden:
         :samp:`git@github.com:veit/python4datascience`
     ``$PRE_COMMIT_REMOTE_BRANCH``
         Der Name des entfernten Zweigs, zu dem gepusht wurde, :abbr:`z.B. (zum
-        Beispiel)` :samp:`refs/heads/{TARGET-BRANCH}`
+        Beispiel)` :samp:`refs/heads/{TARGET_BRANCH}`
     ``$PRE_COMMIT_LOCAL_BRANCH``
         Der Name des lokalen Zweigs, der in den entfernten Zweig verschoben
         wurde, :abbr:`z.B. (zum Beispiel)` :samp:`{HEAD}`

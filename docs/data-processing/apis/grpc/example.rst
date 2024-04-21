@@ -64,7 +64,7 @@ Generieren des gRPC-Codes
 Dies erzeugt zwei Dateien:
 
 :download:`accounts_pb2.py`
-    enthält Klassen für die in ``accounts.proto`` definierten Messages.
+    enthält Klassen für die in :file:`accounts.proto` definierten Messages.
 :download:`accounts_pb2_grpc.py`
     enthält die definierten Klassen ``AccountsStub`` für den Aufruf von RPCs,
     ``AccountsServicer`` für die API-Definition des Services und eine Funktion

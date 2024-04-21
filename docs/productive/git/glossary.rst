@@ -30,16 +30,19 @@ Git-Glossar
         <https://de.wikipedia.org/wiki/Secure_Hash_Algorithm>`_.
 
     Fork
-        Kopie eines Repository auf GitLab, die einem anderen User oder einer
-        anderen Gruppe gehört.
+        Kopie eines Repository auf :term:`GitLab`, das einem anderen User oder
+        einer anderen Gruppe gehört.
 
     Git
         Git ist eine verteilte Versionsverwaltung.
 
     GitLab
         Web-Anwendung zur Versionsverwaltung auf Basis von :term:`git`. Später
-        kamen Gitlab CI, ein System zur kontinuierlichen Integration, GitLab
-        Runner, Container-Registry und vieles andere hinzu.
+        kamen :doc:`advanced/gitlab/ci-cd`, ein System zur kontinuierlichen
+        Integration, GitLab Runner, Container-Registry und vieles andere hinzu.
+
+        .. seealso::
+           * :doc:`advanced/gitlab/index`
 
     ``HEAD``
         Der ``HEAD``-Zeiger repräsentiert euer aktuelles Arbeitsverzeichnis und
@@ -53,9 +56,10 @@ Git-Glossar
 
     Merge request
         Ort zum Vergleichen und Diskutieren der in einem Branch eingeführten
-        Änderungen mit Bewertungen, Kommentaren, Tests etc.; siehe auch
-        `Merge requests
-        <https://docs.gitlab.com/ee/user/project/merge_requests/>`_.
+        Änderungen mit Bewertungen, Kommentaren, Tests :abbr:`etc. (et cetera)`;
+
+        .. seealso::
+            * :doc:`advanced/gitlab/merge-requests`.
 
     ``origin``
         Das übliche Upstream-Repository. Die meisten Projekte haben mindestens
@@ -65,8 +69,8 @@ Git-Glossar
         die ihr mit ``git branch -r`` sehen könnt.
 
     Remote Repository
-        Ein Repository, das zum Nachverfolgen eines gemeinsamen Projekt
-        verwendet wird, sich aber an einem anderen Ort befindet.
+        Gemeinsames Repository, :abbr:`z.B. (zum Beispiel)` auf :term:`GitLab`,
+        zum Austausch von Änderungen in einem Team.
 
     Trunk-Based Development
     TBD
@@ -74,7 +78,7 @@ Git-Glossar
         einzigen ``main``-Zweig zusammengeführt werden.
 
         .. seealso::
-           * `Trunk Based Development <https://trunkbaseddevelopment.com/>`_
+           * :doc:`workflows/tbd`
 
     Working Tree
         Der Baum der tatsächlich ausgecheckten Dateien. Der Arbeitsbaum enthält

@@ -11,7 +11,7 @@ markiert werden, :abbr:`z.B. (zum Beispiel)` :samp:`v3.9.16`. Tags sind wie
 :doc:`branch`, die sich nicht ändern, also keine weitere Historie von Commits
 haben.
 
-:samp:`git tag {TAGNAME}`
+:samp:`$ git tag {TAGNAME}`
     erstellt einen Tag, wobei :samp:`{TAGNAME}` eine semantische Bezeichnung für
     den aktuellen Zustand des Git-Repositories ist. Dabei unterscheidet Git zwei
     verschiedene Arten von Tags: annotierte und leichtgewichtige Tags. Sie
@@ -32,7 +32,7 @@ haben.
         erstellt werden. Sie erstellen eine Tag-Prüfsumme, die im
         :file:`.git/`-Verzeichnis eures Repos gespeichert werden.
 
-:samp:`git tag`
+:samp:`$ git tag`
     listet die Tags eures Repos auf, :abbr:`z.B. (zum Beispiel)`:
 
     .. code-block:: console
@@ -43,15 +43,16 @@ haben.
         v1.1
         ...
 
-    :samp:`git tag -l '{REGEX}'`
+    :samp:`$ git tag -l '{REGEX}'`
         listet nur Tags auf, die zu einem regulären Ausdruck passen.
 
-:samp:`git tag -a {TAGNAME} {COMMIT-SHA}`
+:samp:`$ git tag -a {TAGNAME} {COMMIT-SHA}`
     erstellt einen Tag für einen früheren Commit.
 
     Die vorangegangenen Beispiele erstellen Tags für implizite Commits, die auf
     ``HEAD`` verweisen. Alternativ kann :samp:`git tag` auch die Referenz auf
-    einen bestimmten Commit übergeben werden, die ihr mit :doc:`log` erhaltet.
+    einen bestimmten Commit übergeben werden, die ihr mit :doc:`review`
+    erhaltet.
 
     Wenn ihr jedoch versucht, ein Tag mit dem gleichen Bezeichner wie ein
     bestehendes Tag zu erstellen, gibt Git eine Fehlermeldung aus, :abbr:`z.B.
@@ -67,7 +68,7 @@ haben.
         $ git tag -af v3.9.16 595f9ccb0c059f2fb5bf13643bfc0cdd5b55a422 -m 'Python 3.9.16'
         Tag 'v3.9.16' aktualisiert (war 4f5c5473ea)
 
-:samp:`git push origin {TAGNAME}`
+:samp:`$ git push origin {TAGNAME}`
     Das Teilen von Tags ist ähnlich wie der Push von Zweigen: standardmäßig
     werden mit :samp:`git push` keine Tags freigegeben, sondern sie müssen
     explizit an :samp:`git push` übergeben werden :abbr:`z.B. (zum Beispiel)`:
@@ -106,7 +107,7 @@ haben.
        * `git config push.followTags
          <https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushfollowTags>`_
 
-:samp:`git checkout {TAGNAME}`
+:samp:`$ git checkout {TAGNAME}`
     wechselt in den Zustand des Repository mit diesem Tag und trennt ``HEAD`` ab.
     :abbr:`D.h. (Das heißt)`, dass alle Änderungen, die nun vorgenommen werden,
     das Tag nicht aktualisieren, sondern in einem losgelösten Commit landen, der
@@ -115,7 +116,7 @@ haben.
     wenn solche Änderungen vorgenommen werden sollen, :abbr:`z.B. (zum
     Beispiel)` mit :samp:`git checkout -b v3.9.17 v3.9.16`.
 
-:samp:`git tag -d {TAGNAME}`
+:samp:`$ git tag -d {TAGNAME}`
     löscht einen Tag, :abbr:`z.B. (zum Beispiel)`:
 
     .. code-block:: console

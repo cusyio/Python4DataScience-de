@@ -19,22 +19,22 @@ Aufgaben hat:
         In Git < 2.23 steht euch ``git restore`` noch nicht zur Verfügung. In
         diesem Fall müsst ihr noch ``git checkout`` verwenden:
 
-       :samp:`$ git checkout {FILE}`
+       :samp:`$ git checkout {PATH/TO/FILE}`
 
-    :samp:`git restore [-S|--staged] {FILE}`
+    :samp:`$ git restore [-S|--staged] {PATH/TO/FILE}`
         nimmt das Hinzufügen von Dateien zurück. Die Änderungen bleiben in eurem
         Arbeitsbereich erhalten, so dass ihr sie bei Bedarf ändern und wieder
         hinzufügen könnt.
 
-        Der Befehl entspricht :samp:`git reset {PATH}`.
+        Der Befehl entspricht :samp:`git reset {PATH/TO/PATH}`.
 
-    :samp:`git restore [-SW] {FILE}`
+    :samp:`$ git restore [-SW] {PATH/TO/FILE}`
         nimmt das Hinzufügen und Änderungen im Arbeitsbereich zurück.
-    :samp:`git restore [-s|--source] {BRANCH} {FILE}`
+    :samp:`$ git restore [-s|--source] {BRANCH} {PATH/TO/FILE}`
         setzt eine Änderung auf die Version im Zweig :samp:`{BRANCH}` zurück.
-    :samp:`git restore [-s|--source] @~ {FILE}`
+    :samp:`$ git restore [-s|--source] @~ {PATH/TO/FILE}`
         setzt eine Änderung auf den vorherigen Commit zurück.
-    :samp:`git restore [-p|--patch]`
+    :samp:`$ git restore [-p|--patch]`
         lässt euch die rückgängig zu machenden Änderungen einzeln auswählen.
 
 :samp:`$ git reset [--hard | --mixed | --soft | --keep] {TARGET_REFERENCE}`
@@ -132,7 +132,7 @@ Aufgaben hat:
            vorgesehenen Änderungen vor dem ``reset`` verwerfen will, verwende
            ich ``git restore -SW``.
 
-:samp:`$ git revert {COMMIT SHA}`
+:samp:`$ git revert {COMMIT_SHA}`
     erstellt einen neuen Commit und nimmt die Änderungen des angegebenen Commits
     zurück, sodass die Änderungen invertiert werden.
 :samp:`$ git fetch --prune {REMOTE}`
