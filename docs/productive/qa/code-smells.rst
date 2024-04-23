@@ -2,8 +2,8 @@
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
-Code-Smells und Anti-Patterns
-=============================
+Code-Smells und Design-Prinzipien
+=================================
 
 Code-Smells sind Codierungsmuster, die darauf hinweisen, dass mit dem Entwurf
 eines Programms etwas nicht stimmt. Zum Beispiel ist die übermäßige Verwendung
@@ -56,13 +56,15 @@ D – :ref:`dependency-inversion`
 Open-Closed-Prinzip
 -------------------
 
-Die Entscheidung, ob eine Refaktorierung durchgeführt werden soll, sollte davon
-abhängen, ob euer Code bereits *offen* für neue Anforderungen ist, ohne hierfür
-bestehenden Code ändern zu müssen. Refaktorierungen sollten nicht mit dem
-Hinzufügen neuer Funktionen vermischt sondern beide Vorgänge voneinander
-getrennt werden. Wenn ihr mit einer neuen Anforderung konfrontiert werdet,
-ordnet zunächst den vorhandenen Code so um, dass er für die neue Funktion offen
-ist, und fügt den neuen Code erst hinzu, wenn dies abgeschlossen ist.
+Die Entscheidung, ob eine Refaktorierung überhaupt durchgeführt werden soll,
+sollte davon abhängen, ob euer Code bereits *offen* für neue Anforderungen ist.
+*Offen* meint hier, dass euer Code offen für Erweiterungen sein sollte, ohne
+hierfür jedoch bestehenden Code ändern zu müssen. Refaktorierungen sollten nicht
+mit dem Hinzufügen neuer Funktionen vermischt werden. Stattdessen sollten diese
+beiden Vorgänge voneinander getrennt werden. Wenn ihr mit einer neuen
+Anforderung konfrontiert werdet, ordnet zunächst den vorhandenen Code so um,
+dass er für die neue Funktion offen ist, und fügt den neuen Code erst hinzu,
+wenn dies abgeschlossen ist.
 
     Unter Refaktorierung versteht man den Prozess, ein Softwaresystem so zu
     verändern, dass das äußere Verhalten des Codes nicht verändert, aber seine
@@ -80,6 +82,22 @@ ist, und fügt den neuen Code erst hinzu, wenn dies abgeschlossen ist.
 
    * habt ihr den Code versehentlich beschädigt,
    * oder die vorhandenen Tests sind fehlerhaft.
+
+Das Open-Closed-Prinzip entspricht dem *O* in den `SOLID-Prinzipien
+<https://de.wikipedia.org/wiki/Prinzipien_objektorientierten_Designs#SOLID-Prinzipien>`_:
+
+S – :ref:`single-responsibility`
+    Die Methoden einer Klasse sollten auf einen einzigen Zweck ausgerichtet
+    sein.
+O – :ref:`open-closed`
+    Objekte sollten offen für Erweiterungen, aber geschlossen für Änderungen
+    sein.
+L – :ref:`liskov-substitution`
+    Unterklassen sollten durch ihre Oberklassen substituierbar sein.
+I – :ref:`interface-segregation`
+    Objekte sollten nicht von Methoden abzuhängen, die sie nicht verwenden.
+D – :ref:`dependency-inversion`
+    Abstraktionen sollten nicht von Details abhängen.
 
 .. _single-responsibility:
 
@@ -149,13 +167,6 @@ werden als
 
 Typische Code-Smells in Python
 ------------------------------
-
-.. seealso::
-   * `Effective Python <https://effectivepython.com/>`_
-     by Brett Slatkin
-   * `When Python Practices Go Wrong
-     <https://rhodesmill.org/brandon/slides/2019-11-codedive/>`_
-     by Brandon Rhodes
 
 Funktionen, die Objekte sein sollten
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -313,3 +324,10 @@ Code reduzieren mit ``dataclasses`` und ``attrs``
     ist ein Python-Paket, das es schon viel länger als ``dataclasses`` gibt,
     umfangreicher ist und auch mit älteren Versionen von Python verwendet werden
     kann.
+
+.. seealso::
+   * `Effective Python <https://effectivepython.com/>`_
+     by Brett Slatkin
+   * `When Python Practices Go Wrong
+     <https://rhodesmill.org/brandon/slides/2019-11-codedive/>`_
+     by Brandon Rhodes

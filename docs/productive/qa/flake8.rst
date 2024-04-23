@@ -5,10 +5,11 @@
 ``flake8``
 ==========
 
-`flake8 <https://pypi.org/project/flake8/>`_ stellt sicher, dass euer Code
-größtenteils :pep:`8` folgt. Eine automatische Formatierung, :abbr:`z.B. (zum
-Beispiel)` mit :doc:`black`, ist jedoch noch komfortabler. Zudem prüft
-``flake8`` auf nicht verwendete Importe.
+`flake8 <https://pypi.org/project/flake8/>`_ ist ein Wrapper um `PyFlakes
+<https://pypi.org/project/pyflakes/>`_, `pycodestyle
+<https://pypi.org/project/pycodestyle/>`_ und `McCabe
+<https://pypi.org/project/mccabe/>`_. Eine automatische Formatierung,
+:abbr:`z.B. (zum Beispiel)` mit :doc:`black`, ist jedoch noch komfortabler.
 
 Installation
 ------------

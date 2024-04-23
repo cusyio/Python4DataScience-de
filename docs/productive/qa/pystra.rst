@@ -2,24 +2,24 @@
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
-PyRe
-====
+Pystra
+======
 
-PyRe (Python Reliability) analysiert die strukturelle Zuverlässigkeit von
-Python-Code und fasst sie in einem Report zusammen. Aktuell werden jedoch nur
-Zufälligkeitsmethoden erster Ordnung unterstützt wie Crude
-Monte-Carlo-Simulation und Importance Sampling.
+:abbr:`Pystra (Python Structural Reliability Analysis)` analysiert die
+strukturelle Zuverlässigkeit von Python-Code und fasst sie in einem Report
+zusammen. Aktuell werden jedoch nur Zufälligkeitsmethoden erster Ordnung
+unterstützt wie *Crude Monte-Carlo*-Simulation und *Importance Sampling*.
 
 .. seealso::
-   * `Docs <https://hackl.science/pyre/>`_
-   * `GitHub <https://github.com/hackl/pyre>`_
+   * `Docs <http://pystra.github.io/pystra/>`_
+   * `GitHub <https://github.com/pystra/pystra>`_
 
 Installation
 ------------
 
 .. code-block:: console
 
-    $ pipenv install git+git://github.com/hackl/pyre.git
+    $ pipenv install pystra
 
 Zuverlässigkeitsanalyse
 -----------------------
