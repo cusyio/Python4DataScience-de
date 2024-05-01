@@ -47,7 +47,7 @@ Beispiele für GitHub Actions
               with:
                 path: ~/.cache/pre-commit
                 key: pre-commit|${{ env.pythonLocation }}|${{ hashFiles('.pre-commit-config.yaml') }}
-            - uses: pre-commit/action@v3.0.0
+            - uses: pre-commit/action@v3.0.1
 
     .. seealso::
 
@@ -64,7 +64,7 @@ Beispiel für GitLab Actions
     pre-commit:
       stage: validate
       image:
-        name: python:3.10
+        name: python:3.12
       variables:
         PRE_COMMIT_HOME: ${CI_PROJECT_DIR}/.cache/pre-commit
       only:
