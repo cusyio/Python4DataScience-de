@@ -441,10 +441,20 @@ jedoch eine Ausnahme definiert wird:
 
 Diese Angabe erlaubt, dass die Datei :file:`.gitkeep` mit Git verwaltet werden
 darf. Damit wird dann auch das :file:`logs`-Verzeichnis in das Git-Repository
-übernommen. Diese Hilfskonstruktion ist erforderlich, da leere Verzeichnisse
-nicht mit Git verwaltet werden können.
+übernommen. Eine solche Hilfskonstruktion ist erforderlich, da leere
+Verzeichnisse nicht mit Git verwaltet werden können.
 
-Eine andere Möglichkeit besteht darin, in einem leeren Verzeichnis eine
+.. warning::
+   Diese Technik hat jedoch mehrere Nachteile:
+
+   * Sowohl :file:`.gitignore` wie auch :file:`log/.gitkeep` müssen bearbeitet
+     werden.
+   * Beim Umbenennen des Verzeichnis kann leicht vergessen werden, auch die
+     :file:`.gitignore`-Datei zu ändern.
+   * :file:`.gitkeep` ist für Git eine ganz normale Datei; der Name legt jedoch
+     nahe, dass die Datei von Git besonders behandelt würde.
+
+Eine bessere Möglichkeit ist, in einem leeren Verzeichnis eine
 :file:`.gitignore`-Datei mit folgendem Inhalt zu erstellen:
 
 .. code-block:: ini
@@ -453,6 +463,7 @@ Eine andere Möglichkeit besteht darin, in einem leeren Verzeichnis eine
     *
     !.gitignore
 
+Dies vermeidet die vorher genannten Probleme.
 
 .. seealso:
     * `Can I add empty directories?
