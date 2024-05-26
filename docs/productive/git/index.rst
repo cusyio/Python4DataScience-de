@@ -76,7 +76,7 @@ Zum Weiterlesen
 
 .. seealso::
 
-    * :download:`Git Cheat Sheet (PDF) <git-cheatsheet-web.pdf>`
+    * :download:`Git Cheat Sheet (PDF) <git-cheatsheet.pdf>`
     * `Interactive Git Cheatsheet <http://ndpsoftware.com/git-cheatsheet.html>`_
     * `Software Carpentry Version Control with Git
       <https://swcarpentry.github.io/git-novice/>`_
