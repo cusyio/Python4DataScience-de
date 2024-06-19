@@ -83,22 +83,6 @@ wenn dies abgeschlossen ist.
    * habt ihr den Code versehentlich beschädigt,
    * oder die vorhandenen Tests sind fehlerhaft.
 
-Das Open-Closed-Prinzip entspricht dem *O* in den `SOLID-Prinzipien
-<https://de.wikipedia.org/wiki/Prinzipien_objektorientierten_Designs#SOLID-Prinzipien>`_:
-
-S – :ref:`single-responsibility`
-    Die Methoden einer Klasse sollten auf einen einzigen Zweck ausgerichtet
-    sein.
-O – :ref:`open-closed`
-    Objekte sollten offen für Erweiterungen, aber geschlossen für Änderungen
-    sein.
-L – :ref:`liskov-substitution`
-    Unterklassen sollten durch ihre Oberklassen substituierbar sein.
-I – :ref:`interface-segregation`
-    Objekte sollten nicht von Methoden abzuhängen, die sie nicht verwenden.
-D – :ref:`dependency-inversion`
-    Abstraktionen sollten nicht von Details abhängen.
-
 .. _single-responsibility:
 
 Single-Responsibility-Prinzip
