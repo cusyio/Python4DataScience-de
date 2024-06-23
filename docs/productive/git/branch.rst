@@ -128,6 +128,62 @@ Die Historie kann dann :abbr:`z.B. (zum Beispiel)` so aussehen:
    * `Git Tools - Fortgeschrittenes Merging
      <https://git-scm.com/book/de/v2/Git-Tools-Fortgeschrittenes-Merging>`_
 
+Verbesserte Konfliktanzeige mit zdiff3
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Normalerweise stellt Git Zusammenführungskonflikte folgendermaßen dar:
+
+.. code-block:: console
+
+   <<<<<<< HEAD
+   This line has been changed by feature one.
+   This line has also been changed by feature one.
+   This line will be changed by feature two.
+   =======
+   This line is changed by feature one.
+   This line has been changed by feature two.
+   This line has also been changed by feature two.
+   >>>>>>> feature_two
+
+Zwischen den Markierungen ``<<<<<<<`` und ``=======`` befinden sich die Zeilen
+des Merge-Ziels. Die Zeilen zwischen den Markierungen ``=======`` und
+``>>>>>>>`` sind die Zeilen der Merge-Quelle. Die Beschriftungen nach den
+Pfeilmarkierungen benennen die Commit-Referenzen, die zusammengeführt werden.
+
+Dies ist oft ausreichend, um einen Konflikt lösen zu können. Aber es kann auch
+unnötig herausfordernd sein, weil die ursprünglichen Zeilen, von denen beide
+Seiten ausgingen, fehlen. Die gemeinsame Basis, von der beide Seiten ausgegangen
+sind, schaffen Klarheit über den Kontext, in dem beide Änderungen entstanden.
+
+Wenn iht `merge.conflictStyle
+<https://git-scm.com/docs/git-config#Documentation/git-config.txt-mergeconflictStyle>`_
+auf ``zdiff3`` setzt, könnt ihr euch auch die gemeinsame Basis anzeigen lassen:
+
+.. code-block:: console
+
+   $ git config --global merge.conflictStyle zdiff3
+
+Hier ist der gleiche Merge mit diesem Stil:
+
+.. code-block:: console
+
+   <<<<<<< HEAD
+   This line has been changed by feature one.
+   This line has also been changed by feature one.
+   This line will be changed by feature two.
+   ||||||| 45d92bd
+   This line is changed by feature one.
+   This line will be changed by feature one and feature two.
+   This line will be changed by feature two.
+   =======
+   This line is changed by feature one.
+   This line has been changed by feature two.
+   This line has also been changed by feature two.
+
+Die gemeinsame Basis wird nun zwischen den Markierungen ``|||||||`` und
+``=======`` angezeigt mit dem SHA-Wert der gemeinsamen Basis. Dieser zusätzliche
+Kontext ist oft nützlich, um einen Konflikt auflösen zu können.
+
 ``rerere``, um aufgezeichnete Konfliktlösungen wiederzuverwenden
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
