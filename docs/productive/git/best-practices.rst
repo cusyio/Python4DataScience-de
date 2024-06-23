@@ -115,23 +115,60 @@ anderer Workflow empfehlen als im weiteren Fortschritt des Projekts.
 
 Schreibt aussagekräftige Commit-Nachrichten
 -------------------------------------------
+
+.. figure:: git_commit.png
+   :alt: Git Commit-Nachrichten
+
+   xkcd: `Git Commit <https://xkcd.com/1296/>`_
+
+   Merge branch 'asdfasjkfdlas/alkdjf' into sdkjfls-final
+
 Aufschlussreiche und beschreibende Commit-Nachrichten erleichtern euch die
 Arbeit im Team ungemein. Sie ermöglichen anderen und euch selbst, eure
 Änderungen zu verstehen. Auch sind sie zu einem späteren Zeitpunkt hilfreich um
-nachvollziehen zu können, welches Ziel mit dem Code erreicht werden sollte.
+nachvollziehen zu können, welches Ziel mit dem Code erreicht werden sollte. Ein
+Diff kann euch genau sagen, was sich geändert hat, aber die Commit-Nachricht
+kann euch auch sagen, **warum**.
 
-Üblicherweise sollten kurze, 50–72 Zeichen lange Nachrichten angegeben werden,
-die in einer Zeile ausgegeben werden, `z.B. (zum Beispiel)` mit ``git log
---oneline``.
+So wie der :doc:`Python Style Guide <python-basics:style>` Konventionen zur
+Benennung, Formatierung :abbr:`usw. (und so weiter)` festlegt, sollte sich ein
+Team auch auf Konventionen für Commit-Nachrichten einigen. Diese sollten
+zumindest Stil, Inhalt und Metadaten definieren:
 
-Mit ``git blame`` könnt ihr euch auch später noch für jede Zeile angeben lassen,
-in welcher Revision und von welchem Autor sie kam. Weitere Informationen hierzu
-findet ihr in der Git-Dokumentation: `git-blame
-<https://git-scm.com/docs/git-blame>`_.
+Stil
+    Markup-Syntax, Grammatik, Großschreibung und Zeichensetzung.
+Inhalt
+    Welchen Inhalt sollte der Hauptteil der Commit-Nachricht enthalten? Und was
+    sollte er nicht enthalten?
+Metadaten
+    Wie sollte auf Issue-IDs, Pull Requests :abbr:`etc. (et cetera)` verwiesen
+    werden?
 
-.. note::
-  * `A Note About Git Commit Messages
-    <https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>`_
+Glücklicherweise gibt es bereits etablierte Konventionen, was eine idealtypische
+Git-Commit-Nachricht ausmacht. Ihr müsst also nichts neu erfinden. Befolgt
+einfach die folgenden sieben Regeln und ihr seid auf dem richtigen Weg:
+
+#. Trennt den Betreff vom Text durch eine Leerzeile
+#. Begrenzt die Betreffzeile auf 50 Zeichen
+#. Schreibt die Betreffzeile groß
+#. Beendet die Betreffzeile nicht mit einem Punkt
+#. Verwendet den Imperativ in der Betreffzeile
+#. Beschränkt den Textkörper auf 72 Zeichen je Zeile
+#. Erläutert im Textkörper das **Was** und **Warum**, nicht das Wie.
+
+.. seealso::
+   * Tim Pope: `A Note About Git Commit Messages
+     <https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>`_
+   * Pro Git: `Commit Guidelines
+     <https://www.git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines>`_
+   * Linus Torvalds: `Contributing
+     <https://github.com/torvalds/subsurface-for-dirk/blob/master/README.md#contributing>`_
+   * Peter Hutterer: `On commit messages
+     <http://who-t.blogspot.com/2009/12/on-commit-messages.html>`_
+   * Erlang/OTP: `Writing good commit messages
+     <https://github.com/erlang/otp/wiki/writing-good-commit-messages>`_
+   * spring-framework: `Format commit messages
+     <https://github.com/spring-projects/spring-framework/blob/30bce7/CONTRIBUTING.md#format-commit-messages>`_
 
 Gitmojis
 ~~~~~~~~
