@@ -184,6 +184,10 @@ von den CERN Open Hardware Lizenzen abgedeckt:
 `CERN-OHL-S-2.0 <https://ohwr.org/cern_ohl_s_v2.txt>`_
     stark reziprok
 
+.. seealso::
+   * `Certified Open Source Hardware Projects
+     <https://certification.oshwa.org/list.html>`_
+
 Auswahl geeigneter Lizenzen
 ---------------------------
 
