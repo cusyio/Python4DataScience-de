@@ -8,6 +8,18 @@ Erweiterungen
 Administration
 --------------
 
+`edgy <https://github.com/dymmond/edgy>`_
+    Edgy ist ein ORM, bei dem eure Modelle zu 100 % aus Pydantic bestehen.
+
+    .. image:: https://raster.shields.io/github/stars/dymmond/edgy
+       :alt: Stars
+    .. image:: https://raster.shields.io/github/contributors/dymmond/edgy
+       :alt: Contributors
+    .. image:: https://raster.shields.io/github/commit-activity/y/dymmond/edgy
+       :alt: Commit activity
+    .. image:: https://raster.shields.io/github/license/dymmond/edgy
+       :alt: License
+
 `SQLAlchemy Admin for Starlette/FastAPI <https://github.com/aminalaee/sqladmin>`_
     Flexible Admin-Schnittstelle für
     :doc:`/data-processing/postgresql/sqlalchemy`-Modelle
