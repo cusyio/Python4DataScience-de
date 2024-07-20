@@ -17,6 +17,10 @@ vor:
 * :doc:`/data-processing/httpx/index`
 * :doc:`/data-processing/intake/index`
 
+.. tip::
+   `cusy Seminar: Daten lesen, schreiben und bereitstellen mit Python
+   <https://cusy.io/de/unsere-schulungsangebote/daten-lesen-schreiben-und-bereitstellen-mit-python>`_
+
 .. seealso::
     `Scrapy <https://scrapy.org/>`_
         Framework zum Extrahieren von Daten aus Websites als JSON-, CSV- oder

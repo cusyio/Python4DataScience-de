@@ -28,6 +28,10 @@ pandas genutzt, um
   verarbeiten
 * maschinelles Lernen vorzubereiten
 
+.. tip::
+   `cusy Seminar: Daten analysieren mit pandas
+   <https://cusy.io/de/unsere-schulungsangebote/daten-analysieren-mit-pandas>`_
+
 .. seealso::
     * `Home
       <https://pandas.pydata.org/>`_

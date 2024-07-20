@@ -17,6 +17,10 @@ Lösungen gegenüber großen, universellen Systemen wie `Great Expectations
 <https://greatexpectations.io/>`_ oder `MobyDQ
 <https://ubisoft.github.io/mobydq/>`_.
 
+.. tip::
+   `cusy Seminar: Daten bereinigen und validieren mit Python
+   <https://cusy.io/de/unsere-schulungsangebote/daten-bereinigen-und-validieren-mit-python>`_
+
 Überblick
 ---------
 

@@ -11,6 +11,10 @@ von ``isinstance``-Prüfungen gegen konkrete Klassen ein Code-Smell, da das
 Programm dadurch schwieriger zu erweitern ist, um mit neuen Typen in der Zukunft
 umzugehen.
 
+.. tip::
+   `Entwurfsmuster in Python
+   <>https://cusy.io/de/unsere-schulungsangebote/entwurfsmuster-in-python`_
+
 Erkennen von Code-Smells
 ------------------------
 

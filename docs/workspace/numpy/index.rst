@@ -37,6 +37,10 @@ wesentlichen Funktionsumfang von NumPy geben:
     array-orientierten Programmierung und Denkweise ist ein wichtiger Schritt
     auf dem Weg zum Data-Scientist.
 
+.. tip::
+   `cusy Seminar: Numerische Berechnungen mit NumPy
+   <https://cusy.io/de/unsere-schulungsangebote/numerische-berechnungen-mit-numpy?set_language=de>`_
+
 .. seealso::
     * `Home
       <https://numpy.org/>`_
