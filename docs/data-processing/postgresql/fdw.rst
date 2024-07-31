@@ -119,6 +119,8 @@ XML
     * `GitHub <https://github.com/Kozea/Multicorn>`__
     * `PGXN <https://pgxn.org/dist/multicorn/>`__
 
+.. _geo-wrappers:
+
 Geo Wrappers
 ------------
 
