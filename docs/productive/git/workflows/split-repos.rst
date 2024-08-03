@@ -2,20 +2,24 @@
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
-Repos aufteilen
-===============
+Repos aufteilen und zusammenführen
+==================================
 
-Häufig ist es sinnvoll, ein großes Git-Repository in mehrere kleinere aufzuteilen.
-Das kann in einem Projekt nötig sein, das stark angewachsen ist, oder wenn wir
-ein Teilprojekt als eigenständiges Repo auslagern möchten.
-Natürlich könnten wir einfach ein neues Repository erstellen und die Dateien für das Teilprojekt hineinkopieren.
-Allerdings würden wir dabei die gesamte Versionsgeschichte verlieren.
+Repos aufteilen
+---------------
+
+Häufig ist es sinnvoll, ein großes Git-Repository in mehrere kleinere
+aufzuteilen. Das kann in einem Projekt nötig sein, das stark angewachsen ist,
+oder wenn wir ein Teilprojekt als eigenständiges Repo auslagern möchten.
+Natürlich könnten wir einfach ein neues Repository erstellen und die Dateien für
+das Teilprojekt hineinkopieren. Allerdings würden wir dabei die gesamte
+Versionsgeschichte verlieren.
 
 Hier beschreibe ich, wie ihr ein Git-Repository aufteilen könnt, ohne die
 jeweils zugehörige Historie zu verlieren.
 
 Szenario und Ziele
-------------------
+~~~~~~~~~~~~~~~~~~
 
 Wir wollen aus dem Jupyter-Tutorial-Repository denjenigen Teil herauslösen, der
 sich mit der Visualisierung der Daten befasst: ``docs/viz/``. Die
@@ -62,3 +66,27 @@ Pfad:
     $ python3 ../git-filter-repo --invert-paths --path docs/viz
     $ git remote add origin git@github.com:veit/jupyter-tutorial.git
     $ git push -f -u origin main
+
+Repos zusammenführen
+--------------------
+
+Repos mit unterschiedlicher Historie können auch zusammengeführt werden. Dies
+kann :abbr:`z.B. (zum Beispiel)` wünschenswert sein, wenn ein Projekt lokal
+begonnen wurde, auf dem Git-Server jedoch ein Projekt mit einem initialen Commit
+angelegt wurde. In diesem Fall könnt ihr dann einfach ``git pull
+--allow-unrelated-histories`` verwenden; dabei wird dann die Option an das
+darunterliegende ``git merge`` weitergereicht.
+
+Wollt ihr zwei größere Projekte zusammenführen, könnt ihr dies folgendermaßen:
+
+.. code-block:: console
+
+    $ git remote add -f pyviz git@github.com:veit/pyviz-tutorial.git docs/viz/
+    $ git merge -s ours --no-commit --allow-unrelated-histories pyviz/main
+    $ git read-tree --prefix=docs/pyviz -u pyviz/main
+    $ git commit -m "Merge pyviz tutorial as subdirectory"
+    $ git push
+
+.. seealso::
+   `merge-options
+   <https://git-scm.com/docs/merge-options#Documentation/merge-options.txt---allow-unrelated-histories>`_
