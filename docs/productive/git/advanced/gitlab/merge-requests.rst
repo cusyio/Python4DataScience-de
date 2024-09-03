@@ -33,7 +33,7 @@ Merge-Request-Arbeitsabläufe
    :doc:`GitLab CI/CD <ci-cd>`.
 #. Ihr vermeidet die Verwendung von Abhängigkeiten, deren Lizenz nicht mit eurem
    Projekt kompatibel ist, mit :ref:`Berichten zur Lizenzkonformität
-   <gitlab-ci-workflow>`.
+   <reuse-in-gitlab-ci>`.
 #. Ihr beantragt die `Genehmigung
    <https://docs.gitlab.com/ee/user/project/merge_requests/approvals/index.html>`_
    eurer Änderungen.

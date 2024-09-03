@@ -35,8 +35,8 @@ Continuous Delivery
     Branch <deployment-branches>` bereitzustellen.
 
     .. seealso::
-       * `Continuous Delivery <https://continuousdelivery.com>`_
-       * `Continuous Delivery
+       * `continuousdelivery.com <https://continuousdelivery.com>`_
+       * `Wikipedia: Continuous Delivery
          <https://de.wikipedia.org/wiki/Continuous_Delivery>`__
 
 Continuous Deployment
@@ -67,7 +67,11 @@ Jobs
     oder Testen.
 
     .. seealso::
-       `Jobs <https://docs.gitlab.com/ee/ci/jobs/index.html>`_
+       * `GitLab Docs: Jobs
+         <https://docs.gitlab.com/ee/ci/jobs/index.html>`_
+       * :ref:`cibuildwheel <python-basics:cibuildwheel-in-gitlab-ci>`
+       * :ref:`pre-commit Hooks <pre-commit-in-gitlab-ci>`
+       * :ref:`Lizenzieren <reuse-in-gitlab-ci>`
 
 Stages
     legen fest, wann die Jobs ausgeführt werden sollen, :abbr:`z.B. (zum
@@ -75,7 +79,8 @@ Stages
     soll.
 
     .. seealso::
-       `Stages <https://docs.gitlab.com/ee/ci/yaml/index.html#stages>`_
+       `GitLab Docs: CI/CD YAML syntax reference
+       <https://docs.gitlab.com/ee/ci/yaml/index.html#stages>`_
 
 *Jobs* werden von :abbr:`sog. (sogenannten)` `Runners
 <https://docs.gitlab.com/ee/ci/runners/index.html>`_ ausgeführt. Mehrere *Jobs*
@@ -163,11 +168,11 @@ Pipeline löschen.
    GitLab-CI/CD-Pipeline
 
 .. seealso::
-   * `Customize pipeline configuration
+   * `GitLab Docs: Customize pipeline configuration
      <https://docs.gitlab.com/ee/ci/yaml/index.html>`_
-   * `Scheduled pipelines
+   * `GitLab Docs: Scheduled pipelines
      <https://docs.gitlab.com/ee/ci/pipelines/schedules.html>`_
-   * `GitLab CI/CD variables
+   * `GitLab Docs: GitLab CI/CD variables
      <https://docs.gitlab.com/ee/ci/variables/index.html>`_
-   * `Predefined variables reference
+   * `GitLab Docs: Predefined variables reference
      <https://docs.gitlab.com/ee/ci/variables/predefined_variables.html>`_

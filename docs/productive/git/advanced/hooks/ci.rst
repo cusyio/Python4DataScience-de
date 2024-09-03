@@ -53,6 +53,8 @@ Beispiele für GitHub Actions
 
         * `pre-commit/action <https://github.com/pre-commit/action>`_
 
+.. _pre-commit-in-gitlab-ci:
+
 Beispiel für GitLab Actions
 ---------------------------
 

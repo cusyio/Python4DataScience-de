@@ -374,7 +374,7 @@ dynamisches Compliance-Badge generieren:
 .. figure:: reuse-compliant.svg
    :alt: REUSE-compliant Badge
 
-.. _gitlab-ci-workflow:
+.. _reuse-in-gitlab-ci:
 
 GitLab-CI-Workflow
 ::::::::::::::::::
