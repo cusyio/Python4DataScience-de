@@ -13,7 +13,7 @@ umzugehen.
 
 .. tip::
    `Entwurfsmuster in Python
-   <>https://cusy.io/de/unsere-schulungsangebote/entwurfsmuster-in-python`_
+   <https://cusy.io/de/unsere-schulungsangebote/entwurfsmuster-in-python>`_
 
 Erkennen von Code-Smells
 ------------------------
