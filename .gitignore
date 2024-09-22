@@ -30,3 +30,9 @@ panel-examples
 deploy-panel.html
 test.png
 pyviz.pkl
+
+# venv
+.venv/
+
+# pip install -e .
+Python4DataScience.egg-info/

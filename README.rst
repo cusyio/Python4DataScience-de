@@ -61,9 +61,9 @@ Installation
    .. code-block:: console
 
     $ cd python4datascience-de-main
-    $ python3 -m venv .
-    $ . bin/activate
-    $ python -m pip install -r docs/requirements.txt
+    $ python3 -m venv .venv
+    $ . .venv/bin/activate
+    $ python -m pip install -e ".[dev]"
 
 #. Installieren der `Jupyter Notebook Extensions
    <https://jupyter-contrib-nbextensions.readthedocs.io/>`_:
