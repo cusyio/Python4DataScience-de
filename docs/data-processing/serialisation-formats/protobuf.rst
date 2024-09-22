@@ -30,14 +30,14 @@ Protocol Buffers (Protobuf)
 
 .. seealso::
 
-    * `Home <https://developers.google.com/protocol-buffers/>`__
+    * `Home <https://protobuf.dev>`__
     * `GitHub <https://github.com/protocolbuffers/protobuf>`__
     * `Language Guide (proto3)
-      <https://developers.google.com/protocol-buffers/docs/proto3>`_
+      <https://protobuf.dev/programming-guides/proto3/>`_
     * Buf
 
       * `Home <https://buf.build/>`__
-      * `Docs <https://docs.buf.build/introduction>`__
+      * `Docs <https://buf.build/docs/introduction>`__
       * `GitHub <https://github.com/bufbuild/buf>`__
 
     * :doc:`../apis/grpc/index`

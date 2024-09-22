@@ -103,7 +103,7 @@ Authentifizierung
 ORMs
 ----
 
-`SQLModel <https://github.com/tiangolo/sqlmodel>`_
+`SQLModel <https://github.com/fastapi/sqlmodel>`_
     Bibliothek für die Interaktion von SQL-Datenbanken mit Python-Objekten
 
     .. image:: https://raster.shields.io/pypi/dm/sqlmodel
@@ -146,10 +146,11 @@ ORMs
 `ormar <https://github.com/collerek/ormar/>`_
     Asynchroner Mini-ORM, mit dem ihr nur ein Set von Modellen pflegen und ggf.
     mit :doc:`/data-processing/postgresql/alembic` migrieren müsst (→ `Beispiel
-    <https://collerek.github.io/ormar/fastapi/>`__); zudem wird er unterstützt
-    von `fastapi-users <https://github.com/fastapi-users/fastapi-users>`_,
-    `fastapi-crudrouter <https://github.com/awtkns/fastapi-crudrouter>`_ und
-    `fastapi-pagination <https://github.com/uriyyo/fastapi-pagination>`_.
+    <https://collerek.github.io/ormar/latest/fastapi/>`__); zudem wird er
+    unterstützt von `fastapi-users
+    <https://github.com/fastapi-users/fastapi-users>`_, `fastapi-crudrouter
+    <https://github.com/awtkns/fastapi-crudrouter>`_ und `fastapi-pagination
+    <https://github.com/uriyyo/fastapi-pagination>`_.
 
     .. image:: https://raster.shields.io/pypi/dm/ormar
        :alt: Downloads
@@ -254,10 +255,10 @@ ODMs
     .. image:: https://raster.shields.io/github/license/MongoEngine/mongoengine
        :alt: Lizenz
 
-`Beanie <https://github.com/roman-right/beanie>`_
+`Beanie <https://github.com/BeanieODM/beanie>`_
     Asynchroner Python-Objekt-Dokumenten-Mapper (ODM) für MongoDB, basierend auf
     `Motor <https://motor.readthedocs.io/en/stable/>`_ und `Pydantic
-    <https://pydantic-docs.helpmanual.io/>`__
+    <https://docs.pydantic.dev/latest/>`__
 
     .. image:: https://raster.shields.io/pypi/dm/beanie
        :alt: Downloads
@@ -270,7 +271,7 @@ ODMs
 
 `ODMantic <https://github.com/art049/odmantic/>`_
     Asynchroner ODM (Object Document Mapper) für MongoDB basierend auf
-    Python-Type-Hints und `pydantic <https://pydantic-docs.helpmanual.io/>`__
+    Python-Type-Hints und `pydantic <https://docs.pydantic.dev/latest/>`__
 
     .. image:: https://raster.shields.io/pypi/dm/odmantic
        :alt: Downloads

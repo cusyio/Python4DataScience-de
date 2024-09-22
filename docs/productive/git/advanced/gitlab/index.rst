@@ -5,13 +5,13 @@
 GitLab
 ======
 
-`GitLab <https://gitlab.com>`_ ist eine Webanwendung zur Versionsverwaltung auf
-Basis von Git. Später kamen weitere Funktionen hinzu wie ein
-Issue-Tracking-System mit Kanban-Board, ein System für `Continuous Integration
-und Continuous Delivery (CI/CD)
-<https://about.gitlab.com/features/continuous-integration/>`_ sowie ein Wiki und
-Snippets. Die GitLab Community Edition (CE) wird als Open-Source-Software unter
-der MIT-Lizenz entwickelt und kann On-Premises, also in den eigenen
+`GitLab <https://about.gitlab.com>`_ ist eine Webanwendung zur
+Versionsverwaltung auf Basis von Git. Später kamen weitere Funktionen hinzu wie
+ein Issue-Tracking-System mit Kanban-Board, ein System für `Continuous
+Integration und Continuous Delivery (CI/CD)
+<https://about.gitlab.com/solutions/continuous-integration/>`_ sowie ein Wiki
+und Snippets. Die GitLab Community Edition (CE) wird als Open-Source-Software
+unter der MIT-Lizenz entwickelt und kann On-Premises, also in den eigenen
 Räumlichkeiten, installiert werden.
 
 Die GitLab CI Tools ermöglichen automatisierte Builds und Deployments ohne dass

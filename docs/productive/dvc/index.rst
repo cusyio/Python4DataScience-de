@@ -47,7 +47,7 @@ Abhängigkeiten angeben.
    <https://cusy.io/de/unsere-schulungsangebote/code-und-daten-versioniert-und-reproduzierbar-speichern>`_
 
 .. seealso::
-   * `Tutorial <https://dvc.org/doc/tutorial>`_
+   * `Get Started with DVC <https://dvc.org/doc/start>`_
    * `Documentation <https://dvc.org/doc>`_
    * `Git Repository <https://github.com/iterative/dvc>`_
 

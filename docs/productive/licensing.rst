@@ -20,7 +20,7 @@ beanspruchen können.
    * `The Whys and Hows of Licensing Scientific Code
      <https://www.astrobetter.com/blog/2014/03/10/the-whys-and-hows-of-licensing-scientific-code/>`_
    * `A Quick Guide to Software Licensing for the Scientist-Programmer
-     <https://doi.org/10.1371/journal.pcbi.1002598>`_
+     <https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002598>`_
    * Karl Fogel: `Producing Open Source Software <https://producingoss.com/>`_
    * `Forschungsdaten veröffentlichen
      <https://forschungsdaten.info/themen/rechte-und-pflichten/forschungsdaten-veroeffentlichen/>`_
@@ -102,8 +102,8 @@ offene Lizenzen, die für Nicht-Software-Material verwendet werden, von
 Datensätzen bis zu Videos. Sie sind jedoch `nicht für Software empfohlen
 <https://creativecommons.org/faq/#can-i-apply-a-creative-commons-license-to-software>`_.
 
-Die `Open Knowledge Foundation <https://okfn.org>`_ hat ebenfalls eine Reihe von
-`Open Data Commons <https://opendatacommons.org>`_-Lizenzen für
+Die `Open Knowledge Foundation <https://okfn.org/en/>`_ hat ebenfalls eine Reihe
+von `Open Data Commons <https://opendatacommons.org>`_-Lizenzen für
 Daten/Datenbanken veröffentlicht:
 
 `Open Data Commons Open Database License (ODbL) v1.0 <https://opendatacommons.org/licenses/odbl/1-0/>`_
@@ -152,7 +152,7 @@ es speziell für freie Dokumentationen folgende Lizenzen.
 Schriftarten
 ~~~~~~~~~~~~
 
-`SIL Open Font License 1.1 <https://opensource.org/licenses/OFL-1.1>`_
+`SIL Open Font License 1.1 <https://opensource.org/license/OFL-1.1>`_
     Schriftlizenz, die in anderen Werken frei verwendet werden kann.
 `GNU General Public License 3 <https://www.gnu.org/licenses/gpl-3.0>`_
     Sie kann auch für Schriften verwendet werden, sie darf jedoch nur mit der
@@ -193,8 +193,8 @@ Auswahl geeigneter Lizenzen
 
 Übersichten über mögliche Lizenzen findet ihr in `SPDX License List
 <https://spdx.org/licenses/>`_ oder `OSI Open Source Licenses by Category
-<https://opensource.org/licenses/category>`_. Bei der Wahl geeigneter
-Lizenzen unterstützt euch die Website `Choose an open source license
+<https://opensource.org/licenses#toggle-license-categories>`_. Bei der Wahl
+geeigneter Lizenzen unterstützt euch die Website `Choose an open source license
 <https://choosealicense.com/>`_ und `Comparison of free and open-source
 software licenses
 <https://en.wikipedia.org/wiki/Comparison_of_free_and_open-source_software_licenses>`_.
@@ -286,7 +286,7 @@ könnt, :abbr:`z.B. (zum Beispiel)` indem ihr Komplexität in die
 Umgekehrt könnt ihr auf GitHub auch nach Repositories mit bestimmten Lizenzen
 oder Lizenzfamilien suchen. Eine Übersicht über die Lizenz-Schlüsselwörter
 erhaltet ihr in `Searching GitHub by license type
-<https://help.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository#searching-github-by-license-type>`_.
+<https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository#searching-github-by-license-type>`_.
 
 Schließlich könnt ihr euch von `Shields.io <https://shields.io/>`_ ein
 License-Badge generieren lassen, das ihr :abbr:`z.B. (zum Beispiel)` auf eurer
@@ -302,7 +302,7 @@ License-Badge generieren lassen, das ihr :abbr:`z.B. (zum Beispiel)` auf eurer
 |License|
 
 .. |License| image:: https://img.shields.io/github/license/veit/python4datascience.svg
-   :target: https://github.com/veit/python4datascience/blob/main/LICENSE
+   :target: https://github.com/cusyio/Python4DataScience/blob/main/LICENSE
 
 .. _standard_format_licensing:
 
@@ -439,30 +439,30 @@ Alternativen
     Anforderungen, um eine vollständige Konformität zu erreichen.
 
     Sie basiert auf der `OpenChain Specification 2.1
-    <https://github.com/OpenChain-Project/License-Compliance-Specification/raw/master/2.1/de/OpenChain-2.1_original_de.pdf>`_
+    <https://raw.githubusercontent.com/OpenChain-Project/License-Compliance-Specification/master/2.1/de/OpenChain-2.1_original_de.pdf>`_
     und ist ein internationaler Standard zu Software-Lieferketten, vereinfachter
     Beschaffung und Open-Source-Lizenz-Compliance.
 
     .. seealso::
 
-       * `OpenChain project <https://www.openchainproject.org>`_
+       * `OpenChain project <https://openchainproject.org/>`_
        * `OpenChain Self Certification
-         <https://certification.openchainproject.org>`_
+         <https://openchainproject.org/get-started>`_
        * `Reference-Material
          <https://github.com/OpenChain-Project/Reference-Material>`_
 
-`AboutCode <https://www.aboutcode.org>`_
+`AboutCode <https://aboutcode.org/>`_
     ist eine Community von Open-Source-Entwicklern, die die Nutzung von Open
     Source durch die Entwicklung von Open-Source-Tools für die Software
     Composition Analysis (SCA) erleichtern.
 
-    `ScanCode <https://www.aboutcode.org/projects/scancode.html>`_
+    `ScanCode <https://aboutcode.org/scancode/>`_
         bietet eine Reihe von Tools und Anwendungen zum Scannen von
         Software-Codebasen und -paketen, um den Ursprung und die Lizenz
         (Provenienz) von Open-Source-Software (und anderer Software von
         Drittanbietern) zu ermitteln.
 
-    `DeltaCode <https://github.com/nexB/deltacode>`_
+    `DeltaCode <https://github.com/aboutcode-org/deltacode>`_
         vergleicht zwei Codebase-Scans, um signifikante Änderungen zu erkennen.
 
 `ClearlyDefined <https://clearlydefined.io/>`_
@@ -493,7 +493,7 @@ Alternativen
     .. seealso::
        * `GitHub Action for ORT
          <https://github.com/oss-review-toolkit/ort-ci-github-action>`_
-       * `ORT for GitLab <https://github.com/oss-review-toolkit/ort-gitlab-ci>`_
+       * `ORT for GitLab <https://github.com/oss-review-toolkit/ort-ci-gitlab>`_
 
 `licensechecker <https://boyter.org/2018/03/licensechecker-command-line-application-identifies-software-license/>`_
     Ein Kommandozeilenwerkzeug, das Installationsverzeichnisse nach Lizenzen

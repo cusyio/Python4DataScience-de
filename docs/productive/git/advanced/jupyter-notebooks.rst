@@ -253,8 +253,8 @@ Für diesen Zweck ist ReviewNB perfekt.
 ``nbdime``
 ----------
 
-`nbdime <https://nbdime.readthedocs.io/>`_ ist ein GUI für `nbformat
-<https://nbformat.readthedocs.io/>`_-Diffs und ersetzt `nbdiff
+`nbdime <https://nbdime.readthedocs.io/en/latest/>`_ ist ein GUI für `nbformat
+<https://nbformat.readthedocs.io/en/latest/>`_-Diffs und ersetzt `nbdiff
 <https://github.com/tarmstrong/nbdiff>`_. Es versucht lokal
 *Content-Aware*-Diffing sowie das Merging von Notebooks, beschränkt sich nicht
 nur auf die Darstellung von Diffs, sondern verhindert auch, dass unnötige
@@ -266,9 +266,9 @@ nur auf die Darstellung von Diffs, sondern verhindert auch, dass unnötige
 --------------
 
 `nbstripout <https://github.com/kynan/nbstripout>`_ automatisiert *Clear all
-outputs*. Es nutzt auch `nbformat <https://nbformat.readthedocs.io/>`_ und ein
-paar Automagien um ``git config`` einzurichten. Meines Erachtens hat es jedoch
-zwei Nachteile:
+outputs*. Es nutzt auch `nbformat <https://nbformat.readthedocs.io/en/latest/>`_
+und ein paar Automagien um ``git config`` einzurichten. Meines Erachtens hat es
+jedoch zwei Nachteile:
 
 * es beschränkt sich auf den problematischen Metadaten-Abschnitt
 * es ist langsam.

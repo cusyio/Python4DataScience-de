@@ -178,10 +178,10 @@ Beispiel:
     hardened for production use and should be used only as a development aid.
 
 .. note::
-   :term:`Pipenv` bettet hierfür einen API-Clientschlüssel von `pyup.io
-   <https://pyup.io>`_ ein, anstatt eine vollständige Kopie der `CC BY-NC-SA 3.0
-   <https://creativecommons.org/licenses/by-nc-sa/3.0/de/>`_ lizenzierten
-   Datenbank aufzunehmen.
+   :term:`Pipenv` bettet hierfür einen API-Clientschlüssel von `Safety CLI
+   <https://safetycli.com>`_ ein, anstatt eine vollständige Kopie der `CC
+   BY-NC-SA 3.0 <https://creativecommons.org/licenses/by-nc-sa/3.0/de/>`_
+   lizenzierten Datenbank aufzunehmen.
 
 Um nun die vollständige Datenbank zu installieren könnt ihr
 diese auschecken mit:
@@ -274,16 +274,16 @@ kompatibles :term:`wheel` bevorzugen.
 Requirement specifier
 ~~~~~~~~~~~~~~~~~~~~~
 
-Dabei konkretisieren `Requirement specifier <https://www.python.org/dev/peps/pep-0508/>`_
-das jeweilige Paket.
+Dabei konkretisieren `Requirement specifier
+<https://peps.python.org/pep-0508/>`_ das jeweilige Paket.
 
-* Die aktuelleste Version kann installiert werden, z.B.:
+* Die aktuelleste Version kann installiert werden, :abbr:`z.B. (zum Beispiel)`:
 
   .. code-block:: console
 
     $ pipenv install requests
 
-* Eine spezifische Version kann installiert werden, z.B.:
+* Eine spezifische Version kann installiert werden, :abbr:`z.B. (zum Beispiel)`:
 
   .. code-block:: console
 
@@ -305,7 +305,7 @@ das jeweilige Paket.
   Dies ist kompatibel mit ``==2.18.*``.
 
 * Für einige Pakete können auch Installationsoptionen mit `Extras
-  <https://setuptools.readthedocs.io/en/latest/setuptools.html#declaring-extras-optional-features-with-their-own-dependencies>`_
+  <https://setuptools.pypa.io/en/latest/userguide/dependency_management.html#optional-dependencies>`_
   mit eckigen Klammern angegeben werden:
 
   .. code-block:: console

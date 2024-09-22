@@ -5,7 +5,7 @@
 Versuchsmetriken
 ================
 
-Mit dem `dvc metrics <https://dvc.org/doc/commands-reference/metrics>`_-Kommando
+Mit dem `dvc metrics <https://dvc.org/doc/command-reference/metrics>`_-Kommando
 ist DVC auch ein Framework zum Erfassen und Vergleichen der Performance von
 Experimenten.
 
@@ -16,7 +16,8 @@ der Kurve <https://de.wikipedia.org/wiki/Fl%C3%A4che_unter_der_Kurve>`_)-Wert.
 Dabei verwendet es den Testdatensatz, ließt die Features aus ``features/test.pkl``
 und erstellt die Metrikdatei ``auc.metric``. Sie kann DVC als Metrik kenntlich
 gemacht werden mit der ``-M``-Option von `dvc run
-<https://dvc.org/doc/commands-reference/run>`_, in unserem Beispiel also mit:
+<https://dvc.org/doc/command-reference/stage/add>`_, in unserem Beispiel also
+mit:
 
 .. code-block:: console
 

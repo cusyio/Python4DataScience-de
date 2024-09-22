@@ -85,8 +85,8 @@ werden muss:
 
 Dies fügt die Datei ``data/data.xml`` in ``data/.gitignore`` hinzu und
 schreibt die Meta-Angaben in ``data/data.xml.dvc``. Weitere Informationen
-zum Dateiformat der ``*.dvc``-Datei erhaltet ihr unter `DVC-File Format
-<https://dvc.org/doc/user-guide/dvc-file-format>`_.
+zum Dateiformat der ``*.dvc``-Datei erhaltet ihr unter `.dvc Files
+<https://dvc.org/doc/user-guide/project-structure/dvc-files>`_.
 
 Um nun verschiedene Versionen eurer Projektdaten mit Git verwalten zu können,
 müsst ihr jedoch nur die DVC-Datei hinzufügen:

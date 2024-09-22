@@ -222,7 +222,8 @@ bereits in C geschriebener Code, I/O-lastige Prozesse und Multithreading-Code
 dürften hingegen kaum profitieren.
 
 .. seealso::
-    * `Faster CPython <https://faster-cpython.readthedocs.io/>`__
+   * `Faster CPython
+     <https://web.archive.org/web/20221007175548/https://faster-cpython.readthedocs.io/>`__
 
 Wenn ihr mit eurem Projekt nicht bis zur Veröffentlichung von Python 3.11 in der
 finalen Version voraussichtlich am 24. Oktober 2022 warten wollt, könnt ihr euch
@@ -268,8 +269,8 @@ Aufgabenplaner
 --------------
 
 :doc:`jupyter-tutorial:hub/ipyparallel/index`, :doc:`dask` und `Ray
-<https://docs.ray.io/>`_ können Aufgaben in einem Cluster verteilen. Dabei haben
-sie unterschiedliche Schwerpunkte:
+<https://docs.ray.io/en/latest/>`_ können Aufgaben in einem Cluster verteilen.
+Dabei haben sie unterschiedliche Schwerpunkte:
 
 * ``ipyparallel`` integriert sich einfach in ein
   :doc:`jupyter-tutorial:hub/index`.
@@ -278,20 +279,22 @@ sie unterschiedliche Schwerpunkte:
 * Ray bietet eine einfache, universelle API für den Aufbau verteilter
   Anwendungen.
 
-  * `RLlib <https://docs.ray.io/en/latest/rllib.html>`_ skaliert insbesondere
+  * `RLlib <https://docs.ray.io/en/latest/rllib/>`_ skaliert insbesondere
     reinforcement Learning.
-  * Ein `Backend für Joblib <https://docs.ray.io/en/latest/joblib.html>`_
-    unterstützt verteilte `scikit-learn
-    <https://scikit-learn.org/stable/>`_-Programme.
-  * `XGBoost-Ray <https://docs.ray.io/en/latest/xgboost-ray.html>`_ ist ein
-    Backend für verteiltes `XGBoost
+  * Ein `Backend für Joblib
+    <https://docs.ray.io/en/latest/ray-more-libs/joblib.html>`_ unterstützt
+    verteilte `scikit-learn <https://scikit-learn.org/stable/>`_-Programme.
+  * `XGBoost-Ray
+    <https://docs.ray.io/en/latest/train/distributed-xgboost-lightgbm.html>`_
+    ist ein Backend für verteiltes `XGBoost
     <https://xgboost.readthedocs.io/en/latest/>`_.
-  * `LightGBM-Ray <https://docs.ray.io/en/latest/lightgbm-ray.html>`_ ist ein
-    Backend für verteiltes `LightGBM
+  * `LightGBM-Ray
+    <https://docs.ray.io/en/latest/train/distributed-xgboost-lightgbm.html>`_
+    ist ein Backend für verteiltes `LightGBM
     <https://lightgbm.readthedocs.io/en/latest/>`_
   * `Collective Communication Lib
-    <https://docs.ray.io/en/latest/ray-collective.html>`_ bietet eine Reihe von
-    nativen Collective-Primitiven für `Gloo
+    <https://docs.ray.io/en/latest/ray-more-libs/ray-collective.html>`_ bietet
+    eine Reihe von nativen Collective-Primitiven für `Gloo
     <https://github.com/facebookincubator/gloo>`_ und die `NVIDIA Collective
     Communication Library (NCCL)
     <https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/index.html>`_.

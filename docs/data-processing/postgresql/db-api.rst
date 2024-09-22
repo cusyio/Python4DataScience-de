@@ -10,8 +10,8 @@ verstehen. Die beiden wesentlichen Konzepte sind:
 
 Connection
     `Connection Objects
-    <https://www.python.org/dev/peps/pep-0249/#connection-objects>`_ erlauben
-    die folgenden Methoden:
+    <https://peps.python.org/pep-0249/#connection-objects>`_ erlauben die
+    folgenden Methoden:
 
     ``connect(parameters…)``
         öffnet die Verbindung zur Datenbank
@@ -45,8 +45,8 @@ Connection
             conn.close()
 
 Cursor
-    `Cursorobjekte <https://www.python.org/dev/peps/pep-0249/#cursor-objects>`_
-    werden zum Verwalten des Kontexts einer ``.fetch*()``-Methode verwendet.
+    `Cursorobjekte <https://peps.python.org/pep-0249/#cursor-objects>`_ werden
+    zum Verwalten des Kontexts einer ``.fetch*()``-Methode verwendet.
 
     Dabei sind Cursor, die in derselben *Connection* erstellt werden, nicht
     isoliert voneinander.

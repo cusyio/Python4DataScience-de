@@ -10,7 +10,7 @@ basierenden Type-Hints.
 
 Hauptmerkmale sind:
 
-* sehr hohe Leistung dank `pydantic <https://pydantic-docs.helpmanual.io/>`_ für
+* sehr hohe Leistung dank `pydantic <https://docs.pydantic.dev/latest/>`_ für
   den Datenteil und `Starlette <https://www.starlette.io/>`_ für den Web-Teil
 * schnell und einfach zu codieren
 * Validierung für die meisten Python-Datentypen, einschließlich
@@ -28,11 +28,11 @@ Hauptmerkmale sind:
 * robuster, produktionsreifer Code mit automatischer interaktiver Dokumentation
 * basierend auf den offenen Standards für APIs: `OpenAPI
   <https://www.openapis.org/>`_ (früher bekannt als Swagger) und `JSON Schema
-  <http://json-schema.org/>`_
+  <https://json-schema.org>`_
 
 .. seealso::
     * `Home <https://fastapi.tiangolo.com/>`_
-    * `GitHub <https://github.com/tiangolo/fastapi>`_
+    * `GitHub <https://github.com/fastapi/fastapi>`_
 
 .. toctree::
     :hidden:

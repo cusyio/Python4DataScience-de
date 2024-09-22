@@ -41,4 +41,4 @@ Pakete.
 .. seealso::
 
     * `Pipenv and Other Python Distributions
-      <https://pipenv.pypa.io/en/latest/advanced/#pipenv-and-other-python-distributions>`_
+      <https://web.archive.org/web/20230926100453/https://pipenv.pypa.io/en/latest/advanced/#pipenv-and-other-python-distributions>`_

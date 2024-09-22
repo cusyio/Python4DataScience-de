@@ -15,7 +15,8 @@ Ursprung zu ihrem Endpunkt und identifiziert dabei anfälligen Code.
      <https://dzone.com/articles/what-is-taint-analysis-and-why-should-i-care>`_
    * `How Pysa works <https://pyre-check.org/docs/pysa-basics>`_
    * `Running Pysa <https://pyre-check.org/docs/pysa-running/>`_
-   * `Pysa Tutorial <https://github.com/facebook/pyre-check/tree/master/documentation/pysa_tutorial>`_
+   * `Pysa Tutorial
+     <https://github.com/facebook/pyre-check/tree/main/documentation/pysa_tutorial>`_
 
 Konfiguration
 -------------
@@ -40,7 +41,7 @@ Pysa verwendet zwei Dateitypen für die Konfiguration:
   wurde.
 
 Praktische Beispiele findet ihr im `Pyre-Repository
-<https://github.com/facebook/pyre-check/tree/master/stubs/taint/core_privacy_security>`_.
+<https://github.com/facebook/pyre-check/tree/main/stubs/taint/core_privacy_security>`_.
 
 Verwendung
 ----------
@@ -97,5 +98,5 @@ Verwendung
    ``jump 1``
     springt zum ersten Aufruf und zeigt den Quellcode an
 
-Weitere Kommandos erhaltet ihr in `Commands
-<https://pyre-check.org/docs/static-analysis-post-processor/#commands>`_.
+Weitere Kommandos erhaltet ihr in `SAPP Command-Line Interface
+<https://github.com/facebook/sapp/blob/main/README.md#command-line-interface>`_.

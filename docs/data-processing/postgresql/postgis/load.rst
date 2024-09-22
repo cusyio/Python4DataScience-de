@@ -41,10 +41,11 @@ Beste ist, dass diese Daten gemeinfrei sind:
    Die Dateien ``.dbf``, ``.prj``, ``.shp`` und ``.shp`` bilden ein sog.
    ShapeFile, ein beliebtes Geodaten-Datenformat, das von der GIS-Software
    verwendet wird. Um dies in unsere Datenbank zu laden, benötigen wir
-   zusätzlich `GDAL <http://www.gdal.org/>`_, die *Geospatial Data Abstraction
-   Library*. Wenn wir GDAL installieren, erhalten wir auch OGR, *OpenGIS Simple
-   Features Reference Implementation*, eine Vektordaten-Übersetzungsbibliothek,
-   mit der wir das Shapefile in Daten übersetzen können.
+   zusätzlich `GDAL <https://gdal.org/en/latest/>`_, die *Geospatial Data
+   Abstraction Library*. Wenn wir GDAL installieren, erhalten wir auch OGR,
+   *OpenGIS Simple Features Reference Implementation*, eine
+   Vektordaten-Übersetzungsbibliothek, mit der wir das Shapefile in Daten
+   übersetzen können.
 
    #. GDAL kann un einfach mit dem Paketmanager installiert werden:
 
@@ -87,7 +88,7 @@ Beste ist, dass diese Daten gemeinfrei sind:
         gibt den Pfad zur Eingabedatei an
 
       .. seealso::
-         * `ogr2ogr <https://gdal.org/programs/ogr2ogr.html>`_
+         * `ogr2ogr <https://gdal.org/en/latest/programs/ogr2ogr.html>`_
 
    #. Überprüfen des Imports mit ``ogrinfo``
 

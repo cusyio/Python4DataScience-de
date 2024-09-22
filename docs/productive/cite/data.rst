@@ -9,8 +9,8 @@ DataCite Metadata Schema
 ------------------------
 
 Die DataCite Metadata Working Group veröffentlichte 2019 die `DataCite Metadata
-Schema <https://doi.org/10.14454/7xq3-zf69>`_ zum Veröffentlichen und Zitieren
-von Forschungsdaten zusammen mit einer XSD (XML Schema Definition):
+Schema <https://schema.datacite.org/meta/kernel-4.3/>`_ zum Veröffentlichen und
+Zitieren von Forschungsdaten zusammen mit einer XSD (XML Schema Definition):
 `metadata.xsd <https://schema.datacite.org/meta/kernel-4.3/metadata.xsd>`_.
 
 Ein einfaches Datacite-Beispiel kann folgendermaßen aussehen:
@@ -82,14 +82,14 @@ können.
 Python prov
 ~~~~~~~~~~~
 
-Mit `prov <https://prov.readthedocs.io/>`_ steht eine Python3-Bibliothek zur
-Verfügung, die den Im- und Export des `PROV-Datenmodells
+Mit `prov <https://prov.readthedocs.io/en/latest/>`_ steht eine
+Python-Bibliothek zur Verfügung, die den Im- und Export des `PROV-Datenmodells
 <https://www.w3.org/TR/prov-dm/>`_ in folgende Serialisierungsformate
 unterstützt:
 
 * `PROV-O (RDF) <https://www.w3.org/TR/2013/REC-prov-o-20130430/>`_
 * `PROV-XML <https://www.w3.org/TR/2013/NOTE-prov-xml-20130430/>`_
-* `PROV-JSON <https://www.w3.org/Submission/prov-json/>`_
+* `PROV-JSON <https://www.w3.org/submissions/prov-json/>`_
 
 Zudem können mit :doc:`pyviz:matplotlib/networkx` `MultiDiGraph
 <https://networkx.org/documentation/stable/reference/classes/multidigraph.html>`_
@@ -100,4 +100,4 @@ auch als Graphen in den Formaten PDF, PNG und SVG generiert werden.
    * Dong Huynh: `A Short Tutorial for Prov Python
      <https://trungdong.github.io/prov-python-short-tutorial.html>`_
    * `PROV Tutorial.ipynb
-     <https://nbviewer.jupyter.org/github/trungdong/notebooks/blob/master/PROV%20Tutorial.ipynb>`_
+     <https://nbviewer.org/github/trungdong/notebooks/blob/master/PROV%20Tutorial.ipynb>`_

@@ -123,7 +123,7 @@ identifizieren: :samp:`git filter-branch --tree-filter 'rm -rf
 
 .. seealso::
    * `How to tear apart a repository: the Git way
-     <https://www.atlassian.com/blog/git/tear-apart-repository-git-way?>`_
+     <https://web.archive.org/web/20230612060352/https://www.atlassian.com/blog/git/tear-apart-repository-git-way>`_
 
 .. _git-clone-branch:
 
@@ -142,12 +142,12 @@ werdet ihr damit jedoch wahrscheinlich keinen großen Unterschied feststellen.
 Git LFS
 ~~~~~~~
 
-`Git LFS <https://git-lfs.github.com/>`_ ist eine Erweiterung, die Pointer auf
-große Dateien in eurem Repository speichert, anstatt die Dateien selbst; diese
-werden auf einem entfernten Server gespeichert, wodurch die Zeit für das Klonen
-eures Projektarchivs drastisch verkürzt wird. Git LFS greift dabei auf die
-nativen Push-, Pull-, Checkout- und Fetch-Operationen von Git zu, um die Objekte
-zu übertragen und zu ersetzen, :abbr:`d.h. (das heißt)`, dass ihr mit großen
+`Git LFS <https://git-lfs.com>`_ ist eine Erweiterung, die Pointer auf große
+Dateien in eurem Repository speichert, anstatt die Dateien selbst; diese werden
+auf einem entfernten Server gespeichert, wodurch die Zeit für das Klonen eures
+Projektarchivs drastisch verkürzt wird. Git LFS greift dabei auf die nativen
+Push-, Pull-, Checkout- und Fetch-Operationen von Git zu, um die Objekte zu
+übertragen und zu ersetzen, :abbr:`d.h. (das heißt)`, dass ihr mit großen
 Dateien in eurem Repository wie gewohnt arbeiten könnt.
 
 Ihr könnt Git LFS installieren mit
@@ -267,9 +267,9 @@ indem der Umfang der Suche reduziert wird:
 
 .. seealso::
    * `Improve Git monorepo performance with a file system monitor
-     <https://github.blog/2022-06-29-improve-git-monorepo-performance-with-a-file-system-monitor/>`_
+     <https://github.blog/engineering/improve-git-monorepo-performance-with-a-file-system-monitor/>`_
    * `Scaling monorepo maintenance
-     <https://github.blog/2021-04-29-scaling-monorepo-maintenance/>`_
+     <https://github.blog/open-source/git/scaling-monorepo-maintenance/>`_
 
 Scalar
 ------

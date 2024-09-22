@@ -162,8 +162,8 @@ Neben ``if`` bietet GitLab auch noch weitere Regeln wie ``changes``, ``exists``,
 
 .. seealso::
    * `rules <https://docs.gitlab.com/ee/ci/yaml/#rules>`_
-   * `Complex rules
-     <https://docs.gitlab.com/ee/ci/jobs/job_control.html#complex-rules>`_
+   * `Specify when jobs run with rules
+     <https://docs.gitlab.com/ee/ci/jobs/job_rules.html>`_
 
 Abhängigkeiten zwischen Jobs
 ----------------------------

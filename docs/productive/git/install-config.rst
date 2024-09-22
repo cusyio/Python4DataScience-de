@@ -114,7 +114,7 @@ In der :file:`~/.gitconfig`-Datei können jedoch auch Aliase festgelegt werden:
    * `oh-my-zsh <https://ohmyz.sh>`_
 
      * `Git plugin aliases
-       <https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git#aliases>`_
+       <https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/README.md#aliases>`_
      * `zsh-you-should-use
        <https://github.com/MichaelAquilina/zsh-you-should-use>`_
 
@@ -274,11 +274,11 @@ kann :abbr:`ggf. (gegebenenfalls)` erhöht werden, :abbr:`z.B. (zum Beispiel)` m
 .. tab:: Windows
 
     Für Windows steht der `Git Credential Manager (GCM)
-    <https://github.com/GitCredentialManager/git-credential-manager>`_ zur
-    Verfügung. Er ist integriert in `Git for Windows
-    <https://git-scm.com/download/win>`_ und wird standardmäßig mitinstalliert.
-    Zusätzlich besteht jedoch auch ein eigenständiges Installationsprogramm in
-    `Releases <https://github.com/GitCredentialManager/git-credential-manager/releases/>`_.
+    <https://github.com/git-ecosystem/git-credential-manager>`_ zur Verfügung.
+    Er ist integriert in `Git for Windows <https://git-scm.com/download/win>`_
+    und wird standardmäßig mitinstalliert. Zusätzlich besteht jedoch auch ein
+    eigenständiges Installationsprogramm in
+    `Releases <https://github.com/git-ecosystem/git-credential-manager/releases>`_.
 
     GCM wird mit dem nachfolgenden Aufruf konfiguriert:
 
@@ -315,7 +315,7 @@ kann :abbr:`ggf. (gegebenenfalls)` erhöht werden, :abbr:`z.B. (zum Beispiel)` m
 
 .. seealso::
     * `Git Credential Manager: authentication for everyone
-      <https://github.blog/2022-04-07-git-credential-manager-authentication-for-everyone/>`_
+      <https://github.blog/security/application-security/git-credential-manager-authentication-for-everyone/>`_
 
 .. _gitignore:
 
@@ -485,9 +485,10 @@ angegeben:
         …
 
 .. note::
-    Hilfreiche Vorlagen findet ihr in meinem `dotfiles
-    <https://github.com/veit/dotfiles/tree/main/gitignores>`__-Repository oder
-    auf der Website `gitignore.io <https://gitignore.io/>`_.
+   Hilfreiche Vorlagen findet ihr in meinem `dotfiles
+   <https://github.com/veit/dotfiles/tree/main/gitignores>`__-Repository oder
+   auf der Website `gitignore.io
+   <https://www.toptal.com/developers/gitignore/>`_.
 
 Ignorieren einer Datei aus dem Repository
 :::::::::::::::::::::::::::::::::::::::::

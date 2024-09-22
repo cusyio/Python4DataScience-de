@@ -45,7 +45,7 @@ YAML
     * `noyaml.com <https://noyaml.com/>`_
 
 .. _`Kwalify`: http://www.kuwata-lab.com/kwalify/
-.. _`Rx`: http://rx.codesimply.com/
+.. _`Rx`: https://rx.codesimply.com
 
 .. toctree::
     :hidden:

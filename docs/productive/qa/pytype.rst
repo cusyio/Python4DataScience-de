@@ -7,14 +7,14 @@ Pytype
 
 Pytype ist ein statisches Analysewerkzeug, das Typen aus eurem Python-Code
 ableitet ohne dass Typanmerkungen notwendig sind. Es kann jedoch auch im Code
-stehende `Type Annotations <https://www.python.org/dev/peps/pep-0484>`_
-erzwingen. Obwohl Annotationen für Pytype optional sind, werden sie geprüft und
-angewendet, sofern sie vorhanden sind. Die von Pytype erzeugten Typ-Annotationen
-werden in eigenständigen ``.pyi``-Dateien gespeichert, die mit `merge-pyi
-<https://github.com/google/pytype/tree/master/pytype/tools/merge_pyi>`_ wieder
-in den Python-Code eingebunden werden können. Schließlich markiert es häufige Fehler
-wie falsch geschriebene Attributnamen oder Funktionsaufrufe und vieles mehr,
-auch über Dateigrenzen hinweg.
+stehende `Type Annotations <https://peps.python.org/pep-0484/>`_ erzwingen.
+Obwohl Annotationen für Pytype optional sind, werden sie geprüft und angewendet,
+sofern sie vorhanden sind. Die von Pytype erzeugten Typ-Annotationen werden in
+eigenständigen ``.pyi``-Dateien gespeichert, die mit `merge-pyi
+<https://github.com/google/pytype/tree/main/pytype/tools/merge_pyi>`_ wieder
+in den Python-Code eingebunden werden können. Schließlich markiert es häufige
+Fehler wie falsch geschriebene Attributnamen oder Funktionsaufrufe und vieles
+mehr, auch über Dateigrenzen hinweg.
 
 .. seealso::
    * `Home <https://google.github.io/pytype/>`_
@@ -28,7 +28,7 @@ Anforderungen
 
 * Alle gängigen Linux-Distributionen werden unterstützt
 * macOS ≥ 10.7 und Xcode ≥ 8
-* Windows mit `WSL <https://docs.microsoft.com/en-us/windows/wsl/faq>`_.
+* Windows mit `WSL <https://learn.microsoft.com/en-us/windows/wsl/faq>`_.
   Zusätzlich müssen folgende Bibliotheken installiert werden:
 
   .. code-block:: console

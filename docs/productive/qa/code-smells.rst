@@ -82,7 +82,7 @@ sind.
 
 .. note::
    Ihr müsst nicht händisch nach solchen Klassen suchen, sondern es gibt eine
-   `pylint <https://github.com/PyCQA/pylint>`_-Regel dafür:
+   `pylint <https://github.com/pylint-dev/pylint>`_-Regel dafür:
 
    .. code-block:: console
 
@@ -106,7 +106,7 @@ Verschachtelter Code
 
     *«Flat is better than nested.»*
 
-– Tim Peters, `Zen of Python <https://www.python.org/dev/peps/pep-0020/>`_
+– Tim Peters, `Zen of Python <https://peps.python.org/pep-0020/>`_
 
 Verschachtelter Code erschwert das Lesen und Verstehen. Ihr müsst die
 Bedingungen verstehen und merken, wenn ihr durch die Zweige geht. Objektiv

@@ -26,12 +26,13 @@ ODBC
 
 Multicorn
     `Multicorn <https://multicorn.org/>`_ erleichtert die Entwicklung von FDWs.
-    So verwendet z.B. `SQLAlchemy <http://www.sqlalchemy.org/>`_ `Multicorn
+    So verwendet z.B. `SQLAlchemy <https://www.sqlalchemy.org>`_ `Multicorn
     <https://multicorn.org/>`_ um seine Daten in PostgreSQL zu speichern.
 
     * `GitHub <sqlalchem://github.com/Kozea/Multicorn>`__
     * `PGXN <https://pgxn.org/dist/multicorn/>`__
-    * `Docs <https://multicorn.org/foreign-data-wrappers/#sqlalchemy-foreign-data-wrapper>`__
+    * `Docs
+      <https://multicorn.org/foreign-data-wrappers/#sqlalchemy-foreign-data-wrapper>`__
 
 VirtDB
     Nativer Zugang zu VirtDB (SAP ERP, Oracle RDBMS)
@@ -76,7 +77,7 @@ NoSQL-Database-Wrappers
 -----------------------
 
 Cassandra
-    FDW für `Cassandra <https://cassandra.apache.org//>`_
+    FDW für `Cassandra <https://cassandra.apache.org/_/index.html>`_
 
     * `GitHub <https://github.com/rankactive/cassandra-fdw>`__
     * `rankactive <https://rankactive.com/resources/postgresql-cassandra-fdw>`__
@@ -116,7 +117,7 @@ JSON
 XML
     FDW für XML-Dateien
 
-    * `GitHub <https://github.com/Kozea/Multicorn>`__
+    * `GitHub <https://github.com/Segfault-Inc/Multicorn>`__
     * `PGXN <https://pgxn.org/dist/multicorn/>`__
 
 .. _geo-wrappers:
@@ -125,7 +126,7 @@ Geo Wrappers
 ------------
 
 GDAL/OGR
-    FDW für den `GDAL/OGR <https://gdal.org/>`_-Treiber einschließlich
+    FDW für den `GDAL/OGR <https://gdal.org/en/latest/>`_-Treiber einschließlich
     Datenbanken wie Oracle und SQLite sowie Dateiformate wie MapInfo, CSV,
     Excel, OpenOffice, OpenStreetMap PBF und XML.
 

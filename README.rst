@@ -10,21 +10,21 @@ Python4DataScience
 Status
 ------
 
-.. image:: https://img.shields.io/github/contributors/veit/python4datascience-de.svg
+.. image:: https://img.shields.io/github/contributors/cusyio/python4datascience-de.svg
    :alt: Contributors
-   :target: https://github.com/veit/python4datascience-de/graphs/contributors
-.. image:: https://img.shields.io/github/license/veit/python4datascience-de.svg
+   :target: https://github.com/cusyio/python4datascience-de/graphs/contributors
+.. image:: https://img.shields.io/github/license/cusyio/python4datascience-de.svg
    :alt: License
-   :target: https://github.com/veit/python4datascience-de/blob/master/LICENSE
-.. image:: https://results.pre-commit.ci/badge/github/veit/Python4DataScience-de/main.svg
-   :target: https://results.pre-commit.ci/latest/github/veit/Python4DataScience-de/main
+   :target: https://github.com/cusyio/python4datascience-de/blob/main/LICENSE
+.. image:: https://results.pre-commit.ci/badge/github/cusyio/Python4DataScience-de/main.svg
+   :target: https://results.pre-commit.ci/run/github/649725482/1726568571.WhuLTrgJT3aZZkF-R0Fd8w
    :alt: pre-commit.ci status
 .. image:: https://readthedocs.org/projects/python4datascience-de/badge/?version=latest
    :alt: Docs
    :target: https://python4datascience-de.readthedocs.io/de/latest/
 .. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.10907725.svg
    :alt: DOI
-   :target: https://doi.org/10.5281/zenodo.10907725
+   :target: https://zenodo.org/records/10907725
 .. image:: https://img.shields.io/badge/dynamic/json?label=Mastodon&query=totalItems&url=https%3A%2F%2Fmastodon.social%2F@Python4DataScience%2Ffollowers.json&logo=mastodon
    :alt: Mastodon
    :target: https://mastodon.social/@Python4DataScience
@@ -49,7 +49,7 @@ Installation
 
    .. code-block:: console
 
-    $ curl -O https://codeload.github.com/veit/python4datascience-de/zip/main
+    $ curl -O https://codeload.github.com/cusyio/python4datascience-de/zip/main
     $ unzip main
     Archive:  main
     …
@@ -130,15 +130,15 @@ Installation
 Folge uns
 ---------
 
-* `GitHub <https://github.com/veit/Python4DataScience-de>`_
+* `GitHub <https://github.com/cusyio/Python4DataScience-de>`_
 * `Mastodon <https://mastodon.social/@Python4DataScience>`_
 
 Pull-Requests
 -------------
 
 Wenn ihr Vorschläge für Verbesserungen und Ergänzungen habt, empfehle ich euch,
-einen `Fork <https://github.com/veit/Python4DataScience-de/fork>`_ meines
-`GitHub-Repository <https://github.com/veit/Python4DataScience-de/>`_ zu
+einen `Fork <https://github.com/cusyio/Python4DataScience-de/fork>`_ meines
+`GitHub-Repository <https://github.com/cusyio/Python4DataScience-de/>`_ zu
 erstellen und darin eure Änderungen vorzunehmen. Gerne dürft ihr auch einen
 *Pull Request* stellen. Sofern die darin enthaltenen Änderungen klein und
 atomar sind, schaue ich mir eure Vorschläge gerne an.

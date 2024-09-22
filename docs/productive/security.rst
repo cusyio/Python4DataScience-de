@@ -57,7 +57,7 @@ Schwachstellen. Daher sollte der Prozess der Aktualisierung von Abhängigkeiten
 automatisiert werden, indem nach veralteten oder unsicheren Anforderungen
 gesucht und :abbr:`ggf. (gegebenenfalls)` aktualisiert werden. Hierfür könnt ihr
 :abbr:`z.B. (zum Beispiel)` `dependabot <https://github.com/dependabot>`_ oder
-`PyUp <https://pyup.io>`_ verwenden.
+`Safety CLI <https://safetycli.com>`_ verwenden.
 
 Ihr könnt eure :doc:`/productive/envs/pipenv/index`-Umgebungen auch automatisch
 mit :ref:`pipenv update <pipenv_update>` aktualisieren.
@@ -121,7 +121,7 @@ Sicherheitsüberprüfung oder Audit und stellt ein rechtliches Risiko für die
 potenzielle Nutzung dar.
 
 OSSF-Scorecard verwendet die `GitHub License API
-<https://docs.github.com/en/rest/licenses#get-the-license-for-a-repository>`_
+<https://docs.github.com/en/rest/licenses/licenses?apiVersion=2022-11-28#get-the-license-for-a-repository>`_
 für auf GitHub gehostete Projekte, ansonsten eine eigene Heuristik, um eine
 veröffentlichte Lizenzdatei zu erkennen. Dateien in einem
 :file:`LICENSES`-Verzeichnis sollten mit mit ihrem :ref:`SPDX
@@ -129,14 +129,14 @@ veröffentlichte Lizenzdatei zu erkennen. Dateien in einem
 von einer entsprechenden Dateierweiterung, wie in der :ref:`REUSE
 <reuse>`-Spezifikation beschrieben.
 
-Wird nach den Best Practices der Core Infrastructure Initiative (CII) gehandelt?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Wird nach den Best Practices der :abbr:`OpenSSF (Open Source Security Foundation)` gehandelt?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Risiko: Niedrig
 
-Das `Core Infrastructure Initiative (CII) Best Practices Program
-<https://www.coreinfrastructure.org/programs/best-practices-program/>`_ umfasst
-eine Reihe von sicherheitsorientierten Best Practices für die Entwicklung von
+Das `Open Source Security Foundation (OpenSSF) Best Practices Program
+<https://github.com/ossf/wg-best-practices-os-developers>`_ umfasst eine Reihe
+von sicherheitsorientierten Best Practices für die Entwicklung von
 Open-Source-Software:
 
 * das Verfahren zur Meldung von Schwachstellen ist auf der Projektseite
@@ -151,8 +151,8 @@ Open-Source-Software:
   Produktionsversion angewendet wird
 
 Mit dem `OpenSSF Best Practices Badge Programm
-<https://bestpractices.coreinfrastructure.org/de>`_ könnt ihr euch auch ein
-entsprechendes Badge holen.
+<https://www.bestpractices.dev/de>`_ könnt ihr euch auch ein entsprechendes
+Badge holen.
 
 Kontinuierliches Testen
 -----------------------
@@ -213,7 +213,8 @@ Zudem könnt ihr :doc:`/productive/qa/pysa` für `Taint
 
 Für GitHub-Repositories könnt ihr alternativ auch `CodeQL
 <https://codeql.github.com>`_ verwenden; :abbr:`s.a. (siehe auch)`
-`codeql-action <https://github.com/github/codeql-action#usage>`_.
+`codeql-action
+<https://github.com/github/codeql-action/blob/main/README.md#usage>`_.
 
 Risikobewertung des Quellcodes
 ------------------------------
