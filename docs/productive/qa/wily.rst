@@ -205,6 +205,6 @@ könnt jedoch auch andere Referenzen angeben, z.B. ``HEAD^1`` mit
 
 .. [#] :pep:`20` – The Zen of Python
 .. [#] `C4 Software Technology Reference Guide, S. 147
-       <https://resources.sei.cmu.edu/asset_files/Handbook/1997_002_001_16523.pdf>`_
+       <https://insights.sei.cmu.edu/documents/1625/1997_002_001_16523.pdf>`_
 .. [#] `Using Metrics to Evaluate Software Svstem Maintainability
        <https://www.ecs.csun.edu/~rlingard/comp589/ColemanPaper.pdf>`_

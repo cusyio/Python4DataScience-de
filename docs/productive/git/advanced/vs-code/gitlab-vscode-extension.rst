@@ -12,12 +12,12 @@ GitLab VS Code Extension
 Anzeigen von GitLab-Issues und Merge-Requests
     Issues, Kommentare, Merge Requests und geänderte Dateien werden in der
     Seitenleiste oder in einer `benutzerdefinierten Suche
-    <https://gitlab.com/gitlab-org/gitlab-vscode-extension/-/blob/main/docs/user/custom-queries.md#custom-queries>`_
+    <https://gitlab.com/gitlab-org/gitlab-vscode-extension/-/blob/main/docs/user/custom-queries.md>`_
     angezeigt.
 Merge-Requests erstellen und überprüfen
     Issues können direkt in VS Code kommentiert werden, und dabei werden auch
-    `GitLab Slash Commands
-    <https://docs.gitlab.com/ee/integration/slash_commands.html>`_ unterstützt.
+    `GitLab quick actions
+    <https://docs.gitlab.com/ee/user/project/quick_actions.html>`_ unterstützt.
     In der Ansicht des Diff eines Merge-Requests könnt ihr Kommentare erstellen,
     bearbeiten und löschen.
 GitLab CI/CD konfigurieren und validieren

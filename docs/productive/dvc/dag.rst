@@ -47,7 +47,7 @@ darstellen mit ``dvc dag``:
     evaluate.dvc
 
 * Mit ``dvc dag --dot`` kann auch eine ``.dot``-Datei für `Graphviz
-  <http://www.graphviz.org/>`_ generiert werden:
+  <https://www.graphviz.org>`_ generiert werden:
 
 .. graphviz::
 

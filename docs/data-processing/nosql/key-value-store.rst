@@ -19,7 +19,7 @@ Cassandra, Redis und MongoDB.
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **GitHub**             | `basho/riak`_                  | `apache/cassandra`_            | `redis/redis`_                 | `mongodb/mongo`_               |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Docs**               | `docs.riak.com`_               | `cassandra.apache.org/doc/`_   | `redis.io/documentation`_      | `docs.mongodb.com`_            |
+| **Docs**               | `docs.riak.com`_               | `cassandra.apache.org/doc/`_   | `redis.io/docs`_               | `www.mongodb.com/docs/`_       |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Anwendungsgebiete**  | Session storage, Log data,     | Georedundanz, hohe             | Session Cache, Full Page       | IoT, Mobile apps, CMS,         |
 |                        | Sensor data, CMS               | Schreibgeschwindigkeit,        | Cache (FPC), Queues, Pub/Sub   | `einfache Geodaten`_, …        |
@@ -66,7 +66,7 @@ Cassandra, Redis und MongoDB.
 
 
 .. _`Riak`: https://riak.com/
-.. _`Cassandra`: https://cassandra.apache.org/
+.. _`Cassandra`: https://cassandra.apache.org/_/index.html
 .. _`Redis`: https://redis.io/
 .. _`MongoDB`: https://www.mongodb.com/
 .. _`basho/riak`: https://github.com/basho/riak
@@ -75,12 +75,12 @@ Cassandra, Redis und MongoDB.
 .. _`mongodb/mongo`: https://github.com/mongodb/mongo
 .. _`docs.riak.com`: https://docs.riak.com/
 .. _`cassandra.apache.org/doc/`: https://cassandra.apache.org/doc/latest/
-.. _`redis.io/documentation`: https://redis.io/documentation
-.. _`docs.mongodb.com`: https://docs.mongodb.com/
-.. _`einfache Geodaten`: https://docs.mongodb.com/manual/core/geospatial-indexes/
-.. _`Cassandra Query Language (CQL)`: https://cassandra.apache.org/doc/latest/cql/
+.. _`redis.io/docs`: https://redis.io/docs/latest/
+.. _`www.mongodb.com/docs/`: https://www.mongodb.com/docs/
+.. _`einfache Geodaten`: https://www.mongodb.com/docs/manual/core/indexes/index-types/geospatial/2d/internals/
+.. _`Cassandra Query Language (CQL)`: https://cassandra.apache.org/doc/stable/cassandra/cql/
 .. _`Scylla`: https://www.scylladb.com/
-.. _`KeyDB`: https://github.com/JohnSully/KeyDB
+.. _`KeyDB`: https://github.com/Snapchat/KeyDB
 .. _`Redict`: https://redict.io/
 .. _`Valkey`: https://www.linuxfoundation.org/press/linux-foundation-launches-open-source-valkey-community
 .. _`BSON`: http://www.bsonspec.org/

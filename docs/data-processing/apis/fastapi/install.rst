@@ -53,7 +53,7 @@ Starlette kann die folgenden optionalen Abhängigkeiten verwenden:
     wenn ihr ``FileResponse`` oder ``StaticFiles`` verwenden wollt.
 `jinja2 <https://jinja.palletsprojects.com/>`_
     wenn ihr die Standard-Template-Konfiguration verwenden wollt.
-`python-multipart <https://andrew-d.github.io/python-multipart/>`_
+`python-multipart <https://multipart.fastapiexpert.com>`_
     wenn ihr das Parsen von Formularen mit ``request.form()`` unterstützen
     wollt.
 `itsdangerous <https://itsdangerous.palletsprojects.com/>`_

@@ -25,7 +25,7 @@ formatieren könnt. Einige dieser Tools könnt ihr sowohl in euren Editor wie au
 ich euch noch :doc:`rope` vor, ein Tool, das euch bei Refactorings unterstützt.
 
 .. seealso::
-   * `PyCQA Meta Documentation <https://meta.pycqa.org/en/latest/>`_
+   * `PyCQA Meta Documentation <https://meta.pycqa.org>`_
    * `github.com/PyCQA <https://github.com/PyCQA>`_
 
 

@@ -101,11 +101,11 @@ Python Code Quality Authority
         Python-Docstring-Konventionen.
     `docformatter <https://github.com/PyCQA/docformatter>`_
         formatiert docstrings gemäß :pep:`257`
-    `pylint <https://github.com/PyCQA/pylint>`_
+    `pylint <https://github.com/pylint-dev/pylint>`_
         Python-Linter
     `doc8 <https://github.com/PyCQA/doc8>`_
         führt doc8 zum Linting von Dokumenten aus
-    `prospector <https://github.com/PyCQA/prospector>`_
+    `prospector <https://github.com/landscapeio/prospector>`_
         analysiert Python-Code mit Prospector
     `isort <https://github.com/PyCQA/isort>`_
         sortiert Python-Importe
@@ -147,7 +147,7 @@ Misc
 
 `pyupgrade <https://github.com/asottile/pyupgrade>`_
     aktualisiert automatisch die Syntax für neuere Versionen
-`reorder-python-imports <https://github.com/asottile/reorder_python_imports>`_
+`reorder-python-imports <https://github.com/asottile/reorder-python-imports>`_
     ordnet Importe in Python-Dateien neu an
 `dead <https://github.com/asottile/dead>`_
     erkkent toten Python-Code

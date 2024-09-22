@@ -114,7 +114,7 @@ versehentlich systemweite Pakete überschrieben werden:
 .. seealso::
    Weitere Informationen zur nutzerspezifischen Installation findet ihr in `User
    Installs
-   <https://pip.readthedocs.io/en/latest/user_guide.html#user-installs>`_.
+   <https://pip.pypa.io/en/latest/user_guide/#user-installs>`_.
 
 Virtuelle Umgebungen erstellen
 ------------------------------

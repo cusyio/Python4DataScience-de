@@ -5,8 +5,8 @@
 ``isort``
 =========
 
-`isort <https://github.com/timothycrosley/isort>`_ formatiert eure
-``import``-Anweisungen in getrennte und sortierte Blöcke.
+`isort <https://github.com/PyCQA/isort>`_ formatiert eure ``import``-Anweisungen
+in getrennte und sortierte Blöcke.
 
 Installation
 ------------

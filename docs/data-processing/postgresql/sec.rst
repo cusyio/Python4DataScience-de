@@ -140,7 +140,7 @@ dreißig Tagen mit:
 Das Löschen kann noch beschleunigt werden, wenn für jeden Tag mit der
 PostgreSQL-Erweiterung `pg_partman <https://github.com/pgpartman/pg_partman>`_
 eine eigene `Partition
-<https://github.com/pgpartman/pg_partman/blob/master/doc/pg_partman_howto_native.md>`_
+<https://github.com/pgpartman/pg_partman/blob/master/doc/pg_partman_howto.md>`_
 erstellt wird.
 
 .. seealso::

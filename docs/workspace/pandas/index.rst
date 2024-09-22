@@ -20,7 +20,8 @@ weniger speicherintensiv und schneller ist als reiner Python-Code. Meist wird
 pandas genutzt, um
 
 * :doc:`/data-processing/serialisation-formats/excel` und `Power BI
-  <https://powerbi.microsoft.com/de-de/>`_ zu ersetzen
+  <https://www.microsoft.com/de-de/power-platform/products/power-bi/>`_ zu
+  ersetzen
 * einen `ETL-Prozess <https://de.wikipedia.org/wiki/ETL-Prozess>`_ zu
   realisieren
 * :doc:`/data-processing/serialisation-formats/csv/index`- oder

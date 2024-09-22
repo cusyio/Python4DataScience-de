@@ -7,8 +7,8 @@
 
 APIs können genutzt werden um die Daten bereitstellen zu können. Mit
 :doc:`fastapi/index` steht euch eine Bibliothek zur Verfügung, die basierend auf
-`OpenAPI <https://www.openapis.org/>`_ und `JSON Schema
-<http://json-schema.org/>`_ APIs und Dokumentationen generieren kann.
+`OpenAPI <https://www.openapis.org>`_ und `JSON Schema
+<https://json-schema.org>`_ APIs und Dokumentationen generieren kann.
 :doc:`grpc/index` ist hingegen ein modernes Open-Source-RPC-Framework, das
 HTTP/2 und QUIC verwendet.
 
@@ -17,7 +17,7 @@ Um das Design eurer API festzulegen, könnt ihr euch an `Zalandos API Styleguide
 könnt ihr dann mit `Zally <https://github.com/zalando/zally>`_ automatisiert
 die Qualität eurer API überprüfen. Darüberhinaus könnt ihr auch eure eigenen
 Regeln für Zally definieren, siehe `Rule Development Manual
-<https://github.com/zalando/zally/blob/master/documentation/rule-development.md>`_.
+<https://github.com/zalando/zally/blob/main/documentation/rule-development.md>`_.
 
 .. seealso::
    * `REST API Design – Resource Modeling
@@ -30,7 +30,7 @@ Regeln für Zally definieren, siehe `Rule Development Manual
      <https://www.oreilly.com/library/view/rest-in-practice/9781449383312/>`_
    * `Build APIs You Won’t Hate <https://leanpub.com/build-apis-you-wont-hate>`_
    * `Representational State Transfer (REST)
-     <https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm>`_
+     <https://ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm>`_
 
 .. toctree::
     :hidden:

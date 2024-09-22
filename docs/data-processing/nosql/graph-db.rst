@@ -60,7 +60,7 @@ Typische Graphdatenbanken sind Neo4j, OrientDB InfiniteGraph und ArangoDB.
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **GitHub**             | `neo4j/neo4j`_                 | `orientechnologies/orientdb`_  |                                | `arangodb/arangodb`_           |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Docs**               | `neo4j.com/docs/`_             | `orientdb.org/docs/`_          | `InfiniteGraph Tutorials`_     | `arangodb.com/documentation/`_ |
+| **Docs**               | `neo4j.com/docs/`_             | `orientdb.org/docs/`_          | `InfiniteGraph Tutorials`_     | `docs.arangodb.com`_           |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Anwendungsgebiete**  | CMS, Soziale Netzwerke,        | Stammdatenverwaltung, soziale  | Erweiterung von                | Fraud Detection, IoT,          |
 |                        | GIS-Systeme, ERP, …            | Netzwerke, `Time Series`_,     | Objectivity/DB-Installationen  | Identitätsmanagement,          |
@@ -110,9 +110,9 @@ Typische Graphdatenbanken sind Neo4j, OrientDB InfiniteGraph und ArangoDB.
 
 .. _`Neo4j`: https://neo4j.com
 .. _`OrientDB`: https://orientdb.org/
-.. _`InfiniteGraph`: https://objectivity.com/infinitegraph/
+.. _`InfiniteGraph`: https://web.archive.org/web/20230524090143/https://objectivity.com/infinitegraph/
 .. _`neo4j/neo4j`: https://github.com/neo4j/neo4j
-.. _`ArangoDB`: https://www.arangodb.com/
+.. _`ArangoDB`: https://arangodb.com
 .. _`orientechnologies/orientdb`: https://github.com/orientechnologies/orientdb
 .. _`arangodb/arangodb`: https://github.com/arangodb/arangodb
 .. _`Time Series`: https://orientdb.org/docs//2.0/orientdb.wiki/Time-series-use-case.html
@@ -120,9 +120,9 @@ Typische Graphdatenbanken sind Neo4j, OrientDB InfiniteGraph und ArangoDB.
 .. _`neo4j.com/docs/`: https://neo4j.com/docs/
 .. _`orientdb.org/docs/`: https://orientdb.org/docs/
 .. _`InfiniteGraph Tutorials`:
-   https://www.objectivity.com/products/infinitegraph/infinitegraph-tutorials/
-.. _`arangodb.com/documentation/`: https://arangodb.com/documentation/
+   https://web.archive.org/web/20151008140630/http://www.objectivity.com/products/infinitegraph/infinitegraph-tutorials/
+.. _`docs.arangodb.com`: https://docs.arangodb.com/stable/
 .. _`Extended SQL`: https://orientdb.org/docs/2.2.x/SQL.html
 .. _`Cypher`: https://neo4j.com/docs/1.4/cypher-query-lang.html
 .. _`Gremlin`: https://github.com/tinkerpop/gremlin/wiki
-.. _`ArangoDB Query Language (AQL)`: https://www.arangodb.com/docs/stable/aql/
+.. _`ArangoDB Query Language (AQL)`: https://docs.arangodb.com/stable/aql/

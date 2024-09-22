@@ -54,8 +54,7 @@ dem R-Paket ``V8`` überprüft.
 
 Es gibt auch einige Tools zum Workflow von :doc:`CITATION.cff <cff>`-Dateien:
 
-* `cff-converter-python
-  <https://github.com/citation-file-format/cff-converter-python>`_ konvertiert
+* `cffconvert <https://github.com/citation-file-format/cffconvert>`_ konvertiert
   ``CITATION.cff``-Dateien in BibTeX, RIS, :doc:`codemeta`- und andere
   Dateiformate
 * `doi2cff <https://github.com/citation-file-format/doi2cff>`_ erstellt eine
@@ -71,7 +70,7 @@ kopieren.
 
 .. seealso::
    * `GitHub Docs: About CITATION files
-     <https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/about-citation-files>`_
+     <https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files>`_
 
 Wenn ihr einen DOI mit Zenodo registriert, wird die ``CITATION.cff``-Datei aus
 dem GitHub-Repository ebenfalls verwendet. Auch `Zotero

@@ -45,7 +45,7 @@ das explizit.
 
 Eine Vorlage mit :file:`.gitignore`-Einträgen für Python-Projekte findet ihr im
 Repository `dotfiles <https://github.com/veit/dotfiles>`_. Auf der Website
-`gitignore.io <https://gitignore.io/>`_ könnt ihr euch
+`gitignore.io <https://www.toptal.com/developers/gitignore/>`_ könnt ihr euch
 :file:`.gitignore`-Vorlagen für euer Projekt generieren lassen.  Auch die
 :file:`.gitignore`-Datei gehört in das Repository eingecheckt:
 
@@ -343,7 +343,7 @@ ihr mit ``git stash drop`` entfernen.
 Überprüft eure Repositories auf unerwünschte Dateien
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Mit `Gitleaks <https://github.com/zricethezav/gitleaks>`_ könnt ihr eure
+Mit `Gitleaks <https://github.com/gitleaks/gitleaks>`_ könnt ihr eure
 Repositories regelmäßig auf ungewollt gespeicherte Zugangsdaten überprüfen.
 
 Ihr könnt Gitleaks auch automatisch als GitLab-Action ausführen. Hierzu müsst

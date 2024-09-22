@@ -27,9 +27,10 @@ in der Praxis folgende zwei Probleme erzeugt:
   Komplexität, die nur in den seltensten Fällen Vorteile bringen dürfte.
 
 Als Reaktion auf die Probleme von Git Flow entwickelten `GitHub
-<https://guides.github.com/introduction/flow/>`_ und `Atlassian
-<https://www.atlassian.com/de/git/tutorials/comparing-workflows>`_ einfachere
-Alternativen, die sich meist auf sog. :doc:`feature-branches` beschränken.
+<https://docs.github.com/de/get-started/using-github/github-flow>`_ und
+`Atlassian <https://www.atlassian.com/de/git/tutorials/comparing-workflows>`_
+einfachere Alternativen, die sich meist auf sog. :doc:`feature-branches`
+beschränken.
 
 .. seealso::
    `Vincent Driessen: A successful Git branching model

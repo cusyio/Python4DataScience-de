@@ -11,19 +11,19 @@ Andere Formate
     .. seealso::
 
         * `Specification
-          <https://avro.apache.org/docs/current/spec.html#Data+Serialization>`__
+          <https://avro.apache.org/docs/1.11.1/specification/#data-serialization-and-deserialization>`__
 
-`BSON <http://bsonspec.org/>`_
+`BSON <https://bsonspec.org>`_
     Abkürzung für *Binary JSON*. Ein binäres Datenformat hauptsächlich für
     :term:`MongoDB`
 
     .. seealso::
 
-        * `Specification <http://bsonspec.org/spec.html>`__
+        * `Specification <https://bsonspec.org/spec.html>`__
         * `MongoDB Extended JSON
-          <https://docs.mongodb.com/manual/reference/mongodb-extended-json/>`_
+          <https://www.mongodb.com/docs/manual/reference/mongodb-extended-json/>`_
         * `bsondump
-          <https://docs.mongodb.com/manual/reference/program/bsondump/>`_
+          <https://www.mongodb.com/docs/database-tools/bsondump/>`_
 
 `Cap’n Proto <https://capnproto.org/>`_
     Ein schnelles Datenaustauschformat.
@@ -67,8 +67,8 @@ Andere Formate
     .. seealso::
 
         * `Language Guide
-          <https://github.com/Abscissa/SDLang-D/wiki/Language-Guide>`_
-        * `GitHub <https://github.com/Abscissa/SDLang-D>`__
+          <https://github.com/dlang-community/SDLang-D/wiki/Language-Guide>`_
+        * `GitHub <https://github.com/dlang-community/SDLang-D>`__
 
 `XDR (:rfc:`4506`)
     Abkürzung für *External Data Representation Standard*. Nützlich zum

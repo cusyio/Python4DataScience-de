@@ -28,7 +28,7 @@ vor:
     `Pattern <https://github.com/clips/pattern>`_
         Python-Modul zum Data Mining, Verarbeitung natürlicher Sprache, ML und
         Netzwerkanalyse
-    `Web Scraping Reference <https://blog.hartleybrody.com/web-scraping-cheat-sheet/#javascript-heavy-websites>`_
+    `Web Scraping Reference <https://blog.hartleybrody.com/web-scraping-cheat-sheet/>`_
         Übersicht zu Web Scraping mit Python
 
 Zum Speichern von relationalen Daten, Python-Objekten und Geodaten stellen wir

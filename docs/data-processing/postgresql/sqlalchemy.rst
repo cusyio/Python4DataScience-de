@@ -33,7 +33,7 @@ Datenbanken:
 +---------------+-------------------+---------------+-------------------+
 
 .. _`Installation`: https://www.psycopg.org/docs/install.html
-.. _`README`: https://github.com/PyMySQL/mysqlclient#readme
+.. _`README`: https://github.com/PyMySQL/mysqlclient/blob/main/README.md
 .. _`Wiki`: https://github.com/mkleehammer/pyodbc/wiki
 .. _`cx_Oracle`: https://oracle.github.io/python-cx_Oracle/
 

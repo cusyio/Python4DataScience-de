@@ -5,8 +5,8 @@
 Alembic
 =======
 
-`Alembic <https://alembic.sqlalchemy.org/>`_ basiert auf SQLAlchemy und dient als
-Datenbankmigrationswerkzeug mit den folgenden Funktionen:
+`Alembic <https://alembic.sqlalchemy.org/en/latest/>`_ basiert auf SQLAlchemy
+und dient als Datenbankmigrationswerkzeug mit den folgenden Funktionen:
 
 * ``ALTER``-Anweisungen an eine Datenbank ausgeben um die Strukturen von
   Tabellen und anderen Konstrukten zu ändern

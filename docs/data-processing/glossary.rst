@@ -100,7 +100,7 @@ Glossar
 
         Cassandra stellt zwei verschiedene APIs zur Verfügung: `Thrift
         <https://thrift.apache.org/>`_ und `CQL (Cassandra Query Language)
-        <https://cassandra.apache.org/doc/latest/cql/>`_.
+        <https://cassandra.apache.org/doc/stable/cassandra/cql/>`_.
 
     Column Family
         Column Families entsprechen Tabellen in relationalen Datenbanken. Sie

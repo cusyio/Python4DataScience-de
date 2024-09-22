@@ -38,12 +38,12 @@ Zitierinformationen für Software abrufen lassen.
      user-oriented software citation?
      <https://danielskatzblog.wordpress.com/2018/02/06/compact-identifiers-for-software-the-last-missing-link-in-user-oriented-software-citation/>`_
    * `Neil Chue Hong: How to cite software: current best practice
-     <https://zenodo.org/record/2842910>`_
+     <https://zenodo.org/records/2842910>`_
    * `Recognizing the value of software: a software citation guide
      <https://f1000research.com/articles/9-1257/v2>`_
    * Stephan Druskat, Radovan Bast, Neil Chue Hong, Alexander Konovalov, Andrew
      Rowley, Raniere Silva: `A standard format for CITATION files
-     <https://www.software.ac.uk/blog/2017-12-12-standard-format-citation-files>`_
+     <https://www.software.ac.uk/blog/standard-format-citation-files>`_
    * `Module-5-Open-Research-Software-and-Open-Source
      <https://github.com/OpenScienceMOOC/Module-5-Open-Research-Software-and-Open-Source/blob/master/content_development/README.md/>`_
    * Software Heritage: `Save and reference research software
@@ -67,12 +67,12 @@ Zitierinformationen für Software abrufen lassen.
 Metadaten-Formate
 -----------------
 
-Die `FORCE11 <https://www.force11.org/group/software-citation-working-group>`_
+Die `FORCE11 <https://force11.org/group/software-citation-working-group>`_
 -Arbeitsgruppe hat ein Paper veröffentlicht, in denen Prinzipien des
 wissenschaftlichen Software-zitierens dargelegt werden: Arfon Smith, Daniel
 Katz, Kyle Niemeyer: `FORCE11 Software Citation Working Group
-<https://doi.org/10.7717/peerj-cs.86>`_, 2016. Dabei kristallisieren sich
-aktuell zwei Projekte für strukturierte Metadaten heraus:
+<https://peerj.com/articles/cs-86/>`_, 2016. Dabei kristallisieren sich aktuell
+zwei Projekte für strukturierte Metadaten heraus:
 
 :doc:`codemeta`
     ist ein Austauschschema für allgemeine Software-Metadaten und

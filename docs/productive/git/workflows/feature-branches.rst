@@ -59,10 +59,10 @@ ohne dass sie als unmittelbar als Commits im Repository erscheinen.
 GitHub Flow
 -----------
 
-`GitHub Flow <https://docs.github.com/en/get-started/quickstart/github-flow>`_
-ist ein einfacher Workflow, bei dem es
-neben dem ``main``-Branch nur verschiedene Feature-Branches geben sollte. Der
-Lebenszyklus eines Feature-Branches könnte dann so aussehen:
+`GitHub Flow <https://docs.github.com/en/get-started/using-github/github-flow>`_
+ist ein einfacher Workflow, bei dem es neben dem ``main``-Branch nur
+verschiedene Feature-Branches geben sollte. Der Lebenszyklus eines
+Feature-Branches könnte dann so aussehen:
 
 #. Alle Feature-Branches starten auf Basis des aktuellen ``main``-Branches.
 
@@ -128,10 +128,11 @@ Simple-Git-Workflow
 -------------------
 
 Auch Atlassian empfiehlt eine `ähnliche Strategie
-<https://www.atlassian.com/blog/git/simple-git-workflow-is-simple>`_, wobei sie
-jedoch ein :doc:`rebase <../rebase>` der Feature-Branches empfehlen. Hiermit
-erhaltet ihr einen linearen Verlauf, indem die Änderungen im Feature-Branch vor
-dem Zusammenführen mit einem Fast-Forward-Merge an die Spitze des ``main``-Branch verschoben werden.
+<https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow>`_,
+wobei sie jedoch ein :doc:`rebase <../rebase>` der Feature-Branches empfehlen.
+Hiermit erhaltet ihr einen linearen Verlauf, indem die Änderungen im
+Feature-Branch vor dem Zusammenführen mit einem Fast-Forward-Merge an die Spitze
+des ``main``-Branch verschoben werden.
 
 #. Verwendet ``rebase``, um euren Feature-Branch auf dem neuesten Stand von
    ``main`` zu halten:

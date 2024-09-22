@@ -47,9 +47,9 @@ Pickle
     `Ned Batchelder: Pickle’s nine flaws <https://nedbatchelder.com/blog/202006/pickles_nine_flaws.html>`_
         Nachteile von ``pickle`` und Alternativen
 
-.. _`307`: https://www.python.org/dev/peps/pep-0307
-.. _`3154`: https://www.python.org/dev/peps/pep-3154
-.. _`574`: https://www.python.org/dev/peps/pep-0574
+.. _`307`: https://peps.python.org/pep-0307/
+.. _`3154`: https://peps.python.org/pep-3154/
+.. _`574`: https://peps.python.org/pep-0574/
 .. _`Don’t pickle your data`:
    https://www.benfrederickson.com/dont-pickle-your-data/
 
