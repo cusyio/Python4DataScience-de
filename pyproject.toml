@@ -2,6 +2,48 @@
 #
 # SPDX-License-Identifier: BSD-3-Clause
 
+[project]
+name = "Python4DataScience"
+version = "24.2.0"
+authors = [
+  { name="Veit Schiele", email="veit@cusy.io" },
+]
+description = "Teaching materials for the cusy training courses on Python-based data science workflows: https://cusy.io/en/seminars"
+readme = "README.rst"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.optional-dependencies]
+docs = [
+    "furo",
+    "ipython",
+    "ipywidgets",
+    "nbsphinx",
+    "sphinxcontrib-svg2pdfconverter",
+    "sphinxext.opengraph", # matplotlib is required for social cards
+    "matplotlib",
+    "sphinx-copybutton",
+    "sphinx_inline_tabs",
+    "sphinx-lint",
+]
+
+dev = [
+    "Python4DataScience[docs]",
+    "pre-commit",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/cusyio/Python4DataScience/"
+"Bug Tracker" = "https://github.com/cusyio/Python4DataScience/issues"
+
+[tool.setuptools]
+packages = []
+
 [tool.black]
 line-length = 79
 
@@ -15,5 +57,5 @@ multi_line_output=3
 not_skip="__init__.py"
 use_parentheses=true
 
-known_first_party="jupyter-tutorial-de"
-known_third_party=["Cython", "accounts_pb2", "accounts_pb2_grpc", "dataprep", "google", "grpc", "mpi4py", "numpy", "pandas", "pydantic", "pytest", "requests", "setuptools"]
+known_first_party="Python4DataScience"
+known_third_party=["Cython", "accounts_pb2", "accounts_pb2_grpc", "dataprep", "grpc", "mpi4py", "numpy", "pandas", "pydantic", "pytest", "requests", "setuptools"]
