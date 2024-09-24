@@ -72,7 +72,7 @@ Beispiele für Objektdatenbanksysteme sind ZODB und Objectivity/DB.
 | **Datenmodell**        | PersistentList, PersistentMapping,     | Objects, References, Relationships,    |
 |                        | BTree                                  | Indexes, Trees und Collections         |
 +------------------------+----------------------------------------+----------------------------------------+
-| **Query-Langauge**     |                                        | Objectivity/DB predicate query language|
+| **Query-Language**     |                                        | Objectivity/DB predicate query language|
 +------------------------+----------------------------------------+----------------------------------------+
 | **Transaktionen,       | :term:`ACID`                           | :term:`ACID`                           |
 | Nebenläufigkeit**      |                                        |                                        |
@@ -83,7 +83,7 @@ Beispiele für Objektdatenbanksysteme sind ZODB und Objectivity/DB.
 | **Anmerkungen**        |                                        |                                        |
 +------------------------+----------------------------------------+----------------------------------------+
 
-.. _`ZODB`: hhttp://www.zodb.org/
+.. _`ZODB`: https://zodb.org/en/latest/
 .. _`Objectivity/DB`:
    https://web.archive.org/web/20210119045523/https://www.objectivity.com/products/objectivitydb/
 .. _`Objectivity/DB Basics Tutorial`:

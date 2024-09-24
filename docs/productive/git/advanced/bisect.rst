@@ -66,7 +66,7 @@ gefunden ist. So müssen nur log₂(n+1) Commits getestet werden.
       -EXTRAVERSION =
       + SUBLEVEL = 26
       + EXTRAVERSION = -rc1
-       NAME = Funky Weasel ist Jiggy wit it
+       NAME = Funky Weasel is Jiggy with it
 
        # * DOKUMENTATION *
 

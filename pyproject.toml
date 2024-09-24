@@ -35,6 +35,7 @@ docs = [
 dev = [
     "Python4DataScience[docs]",
     "pre-commit",
+    "codespell",
 ]
 
 [project.urls]
@@ -59,3 +60,6 @@ use_parentheses=true
 
 known_first_party="Python4DataScience"
 known_third_party=["Cython", "accounts_pb2", "accounts_pb2_grpc", "dataprep", "grpc", "mpi4py", "numpy", "pandas", "pydantic", "pytest", "requests", "setuptools"]
+
+[tool.codespell]
+skip = "*.csv, *.pdf, *.rst, *.ipynb, ./docs/_build/*, */books.json,  */books.txt, ./styles/*, ./Python4DataScience.egg-info/*"

@@ -35,7 +35,7 @@ OrientDB und ArangoDB.
 | **Datenmodell**        | Flexibles Schema mit           | Flexibles Schema               | Im Wesentlichen                | Multi-Model                    | Multi-Model: Dokumente, Graphen|
 |                        | denormalisiertem Modell        |                                | :term:`Schlüssel/Wert-Paar`    |                                | und :term:`Schlüssel/Wert-Paar`|
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Query-Langauge**     | jQuery, :term:`MapReduce`      | REST, :term:`MapReduce`        | Keyfilter, :term:`MapReduce`,  | `Extended SQL`_, `Gremlin`_    |`ArangoDB Query Language (AQL)`_|
+| **Query-Language**     | jQuery, :term:`MapReduce`      | REST, :term:`MapReduce`        | Keyfilter, :term:`MapReduce`,  | `Extended SQL`_, `Gremlin`_    |`ArangoDB Query Language (AQL)`_|
 |                        |                                |                                | Link-Walking, keine Ad-hoc     |                                |                                |
 |                        |                                |                                | Queries möglich                |                                |                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+

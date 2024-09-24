@@ -40,7 +40,7 @@ Beispiele für spaltenorientierte Datenbanksysteme sind
 |                        | logische Struktur, kein Schema |                                |                                |
 |                        |                                |                                |                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Query-Langauge**     | `Cassandra Query Language      | `Hypertable Query Language     | Java Client API, Thrift/REST   |
+| **Query-Language**     | `Cassandra Query Language      | `Hypertable Query Language     | Java Client API, Thrift/REST   |
 |                        | (CQL)`_                        | (HQL)`_                        | API                            |
 |                        |                                |                                |                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+
