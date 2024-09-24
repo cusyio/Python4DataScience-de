@@ -29,7 +29,7 @@ Wenn eine :file:`.env`-Datei in eurer virtuellen Umgebung vorhanden ist, werden
     Loading .env environment variables...
     …
 
-.. code-block:: python
+.. code-block:: pycon
 
     >>> import os
     >>> os.environ["USERNAME"]

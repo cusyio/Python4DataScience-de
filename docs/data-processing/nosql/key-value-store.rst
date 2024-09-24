@@ -40,7 +40,7 @@ Cassandra, Redis und MongoDB.
 |                        |                                | logische Struktur, kein Schema | Listen, Sets und sortierten    |                                |
 |                        |                                |                                | Sets                           |                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Query-Langauge**     | Keyfilter, :term:`MapReduce`,  | `Cassandra Query Language      |                                | jQuery, :term:`MapReduce`      |
+| **Query-Language**     | Keyfilter, :term:`MapReduce`,  | `Cassandra Query Language      |                                | jQuery, :term:`MapReduce`      |
 |                        | Link-Walking, keine Ad-hoc     | (CQL)`_                        |                                |                                |
 |                        | Queries möglich                |                                |                                |                                |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+

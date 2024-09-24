@@ -2,8 +2,8 @@
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
-**A**\pplication **P**\rogramming **I**\nterface (API)
-======================================================
+Application Programming Interface (API)
+=======================================
 
 APIs können genutzt werden um die Daten bereitstellen zu können. Mit
 :doc:`fastapi/index` steht euch eine Bibliothek zur Verfügung, die basierend auf

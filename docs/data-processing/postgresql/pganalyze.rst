@@ -136,7 +136,7 @@ Das Ergebnis kann dann z.B. so aussehen:
     2021/02/06 06:40:19 I [server1] Log test successful
 
 Wenn der Test erfolgreich verlief, muss der *Collector* neu gestartet werden
-damit die Konfiugration wirksam wird:
+damit die Konfiguration wirksam wird:
 
 .. code-block:: console
 
