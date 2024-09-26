@@ -9,9 +9,8 @@ Einen Überblick zu öffentlichen Repositories mit Forschungsdaten erhaltet ihr
 z.B. in :doc:`opendata`.
 
 Neben spezifischen Python-Bibliotheken zum Zugriff auf
-:doc:`/data-processing/remote-file-systems` und :doc:`/data-processing/geodata`
-stellen wir euch :doc:`serialisation-formats/index` und drei Werkzeuge genauer
-vor:
+:doc:`/data-processing/file-systems` und :doc:`/data-processing/geodata` stellen
+wir euch :doc:`serialisation-formats/index` und drei Werkzeuge genauer vor:
 
 * :doc:`/data-processing/pandas-io`
 * :doc:`/data-processing/httpx/index`
@@ -56,7 +55,7 @@ hilfreiche Python-Pakete zum :doc:`Bereinigen und Validieren von Daten
     serialisation-formats/index
     intake/index
     httpx/index
-    remote-file-systems
+    file-systems
     geodata
     postgresql/index
     nosql/index
