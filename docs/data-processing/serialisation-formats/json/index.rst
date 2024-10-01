@@ -18,7 +18,7 @@ JSON
 |                       |       | JavaScript: ``NaN`` und ``Infinity`` werden zu        |
 |                       |       | ``null``.                                             |
 |                       |       |                                                       |
-|                       |       | Bitte beachtet auch, dass die JSON keine Kommentare   |
+|                       |       | Beachtet auch, dass die JSON keine Kommentare         |
 |                       |       | unterstützt und ihr gegebenenfalls darum herumarbeiten|
 |                       |       | müsst, z.B. mit einem ``__comment__``                 |
 |                       |       | Schlüssel/Wert-Paar.                                  |

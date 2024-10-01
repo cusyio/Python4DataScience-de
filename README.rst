@@ -143,7 +143,8 @@ erstellen und darin eure Änderungen vorzunehmen. Gerne dürft ihr auch einen
 *Pull Request* stellen. Sofern die darin enthaltenen Änderungen klein und
 atomar sind, schaue ich mir eure Vorschläge gerne an.
 
-Da eine englischsprachige Übersetzung gepflegt wird, beachtet bitte folgende Richtlinien:
+Da eine englischsprachige Übersetzung gepflegt wird, beachtet folgende
+Richtlinien:
 
 * Commit messages auf Englisch
 * Commit messages mit einem `Gitmoji <https://gitmoji.dev/>`__ am Anfang

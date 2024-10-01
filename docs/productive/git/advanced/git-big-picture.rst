@@ -109,19 +109,19 @@ erstellt den folgenden Abschnitt in eurer ``~/.gitconfig``-Datei:
         viewer = firefox
 
 .. note::
-  Bitte beachtet jedoch, dass ihr dann keine  anderen Optionen mehr auswählen
-  könnt. So könnt ihr nun den Graph nicht mehr als Graphviz ausgeben lassen:
+   Beachtet, dass ihr dann keine anderen Optionen mehr auswählen könnt. So könnt
+   ihr nun den Graph nicht mehr als Graphviz ausgeben lassen:
 
-  .. code-block:: console
+   .. code-block:: console
 
-    $ git-big-picture -g
-    fatal: Options '-g | --graphviz' and '-p | --processed' are incompatible with other output options.
+      $ git-big-picture -g
+      fatal: Options '-g | --graphviz' and '-p | --processed' are incompatible with other output options.
 
-  In diesem Fall müsst ihr dann die ``-V`` oder ``--no-viewer``-Option wählen:
+   In diesem Fall müsst ihr dann die ``-V`` oder ``--no-viewer``-Option wählen:
 
-  .. code-block:: console
+   .. code-block:: console
 
-    $ git-big-picture -g -V
-    digraph {
-        "c509669a01b156900eed9f1c9f927b6d2f7bb95b"[label="origin/pyup-scheduled-update-2020-11-16", color="/pastel13/2", style=filled];
-    …
+      $ git-big-picture -g -V
+      digraph {
+          "c509669a01b156900eed9f1c9f927b6d2f7bb95b"[label="origin/pyup-scheduled-update-2020-11-16", color="/pastel13/2", style=filled];
+      …

@@ -13,8 +13,8 @@ entwickelt worden.
 Im Folgenden nur eine kleine Auswahl der bekanntesten FDW:
 
 .. note::
-   Beachtet bitte, dass die meisten dieser Wrapper nicht offiziell von der
-   PostgreSQL Global Development Group (PGDG) unterstützt werden.
+   Beachtet, dass die meisten dieser Wrapper nicht offiziell von der PostgreSQL
+   Global Development Group (PGDG) unterstützt werden.
 
 Generische SQL-Wrapper
 ----------------------
