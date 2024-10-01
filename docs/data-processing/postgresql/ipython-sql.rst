@@ -22,7 +22,7 @@ Erste Schritte
 
 #. Zunächst wird ipython-sql in eurem Notebook aktiviert mit
 
-   .. code-block:: python
+   .. code-block:: ipython
 
     In [1]: %load_ext sql
 
@@ -30,13 +30,13 @@ Erste Schritte
    <https://docs.sqlalchemy.org/en/14/core/engines.html#database-urls>`_
    verwendet:
 
-   .. code-block:: python
+   .. code-block:: ipython
 
     In [2]: %sql postgresql://
 
 #. Anschließend könnt ihr eine Tabelle erstellen, :abbr:`z.B. (zum Beispiel)`:
 
-   .. code-block:: python
+   .. code-block:: ipython
 
     In [3]: %%sql postgresql://
        ....: CREATE TABLE accounts (login, name, email)
@@ -44,7 +44,7 @@ Erste Schritte
 
 #. Die Inhalte der Tabelle ``accounts`` könnt ihr abfragen mit
 
-   .. code-block:: python
+   .. code-block:: ipython
 
     In [4]: result = %sql select * from accounts
 
@@ -62,7 +62,7 @@ Begrenzung, mit ``Autolimit`` lässt sich  jedoch die Ergebnismenge limitieren.
 Mit ``%config SqlMagic`` könnt ihr Euch die aktuelle Konfiguration ausgeben
 lassen:
 
-.. code-block:: python
+.. code-block:: ipython
 
     In [5]: %config SqlMagic
     SqlMagic options
@@ -89,7 +89,7 @@ pandas
 
 Wenn pandas installiert ist, kann die ``DataFrame``-Methode verwendet werden:
 
-.. code-block:: python
+.. code-block:: ipython
 
     In [6]: result = %sql SELECT * FROM accounts
 

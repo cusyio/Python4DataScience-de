@@ -97,10 +97,7 @@ Create Session
     address = Address(street="Birnbaumweg 10", zipcode="79115", country="Germany")
 
     contact = Contact(
-        firstname="Veit",
-        lastname="Schiele",
-        email="veit@cusy.io",
-        address=address
+        firstname="Veit", lastname="Schiele", email="veit@cusy.io", address=address
     )
 
     session.add(contact)

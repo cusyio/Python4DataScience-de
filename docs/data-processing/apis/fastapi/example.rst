@@ -103,7 +103,7 @@ zu erhalten:
 
     @app.put("/items/{item_id}")
     def update_item(item_id: int, item: Item):
-    return {"item_name": item.name, "item_id": item_id}
+        return {"item_name": item.name, "item_id": item_id}
 
 Der Server lädt die Datei automatisch neu, da wir den
 `uvicorn <http://www.uvicorn.org/>`_-Aufruf in Schritt 2 mit der Option

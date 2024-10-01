@@ -46,6 +46,8 @@ IPython-Erweiterungen schreiben
 Eine IPython-Erweiterung ist ein importierbares Python-Modul, das über spezielle
 Funktionen zum Laden und Entladen verfügt:
 
+.. blacken-docs:off
+
 .. code-block:: python
 
     def load_ipython_extension(ipython):
@@ -55,6 +57,8 @@ Funktionen zum Laden und Entladen verfügt:
 
     def unload_ipython_extension(ipython):
         # If you want your extension to be unloadable, put that logic here.
+
+.. blacken-docs:on
 
 .. seealso::
     * :label:`defining_magics`

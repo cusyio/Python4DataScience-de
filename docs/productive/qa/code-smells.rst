@@ -61,15 +61,16 @@ Eigenschaft:
 
     class Image(object):
         thumbnail_resolution = 128
+
         def __init__(self, path):
-            ...
+            "..."
 
         def crop(self, width, height):
-            ...
+            "..."
 
         @property
         def thumbnail(self):
-            ...
+            "..."
             return thumb
 
 Objekte, die Funktionen sein sollten

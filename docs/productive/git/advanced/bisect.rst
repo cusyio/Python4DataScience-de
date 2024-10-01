@@ -144,6 +144,8 @@ komplizierteren Verhaltensänderungen suchen. Für Performance-Tests benötigen 
 hierfür ein Testprogramm, das mehrere Durchläufe durchführen und die minimale
 Zeit ermitteln kann, wobei mögliches Rauschen eliminiert werden soll:
 
+.. blacken-docs:off
+
 .. code-block:: python
 
    from subprocess import run
@@ -166,6 +168,8 @@ Zeit ermitteln kann, wobei mögliches Rauschen eliminiert werden soll:
    else:
        print("Fast enough")
        raise SystemExit(0)
+
+.. blacken-docs:on
 
 Das Programm führt :samp:`python perftest.py {PARAM}` zehnmal aus und misst bei
 jeder Ausführung die Zeit. Anschließend vergleicht es die minimale

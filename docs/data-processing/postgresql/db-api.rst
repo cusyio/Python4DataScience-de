@@ -27,6 +27,8 @@ Connection
 
     Beispiel:
 
+    .. blacken-docs:off
+
     .. code-block:: python
 
         import driver
@@ -43,6 +45,8 @@ Connection
         else:
             conn.commit()
             conn.close()
+
+    .. blacken-docs:on
 
 Cursor
     `Cursorobjekte <https://peps.python.org/pep-0249/#cursor-objects>`_ werden
