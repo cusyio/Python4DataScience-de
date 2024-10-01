@@ -13,8 +13,8 @@ soll, ist häufig die Zustimmung aller Personen erforderlich, die Urheberschaft
 beanspruchen können.
 
 .. note::
-   Dies stellt keine Rechtsberatung dar. Wendet euch im Zweifelsfall bitte an
-   eine Rechtsvertretung oder die Rechtsabteilung eures Unternehmens.
+   Dies stellt keine Rechtsberatung dar. Wendet euch im Zweifelsfall an eine
+   Rechtsvertretung oder die Rechtsabteilung eures Unternehmens.
 
 .. seealso::
    * `The Whys and Hows of Licensing Scientific Code

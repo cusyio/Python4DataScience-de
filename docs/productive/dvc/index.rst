@@ -54,10 +54,10 @@ Abhängigkeiten angeben.
 Installation
 ------------
 
-DVC lässt sich mit Pipenv installieren. Beachtet dabei jedoch bitte, dass ihr
-hierbei die Extras explizit angeben müsst. Dies können ``[ssh]``, ``[s3]``,
-``[gs]``, ``[azure]``, und ``[oss]`` oder ``[all]`` sein. Für ``ssh`` sieht das
-Kommando dann so aus:
+DVC lässt sich mit Pipenv installieren. Beachtet dabei jedoch, dass ihr hierbei
+die Extras explizit angeben müsst. Dies können ``[ssh]``, ``[s3]``, ``[gs]``,
+``[azure]``, und ``[oss]`` oder ``[all]`` sein. Für ``ssh`` sieht das Kommando
+dann so aus:
 
 .. code-block:: console
 
@@ -80,24 +80,23 @@ Alternativ kann DVC auch über andere Paketmanager installiert werden:
       $ brew install iterative/homebrew-dvc/dvc
 
 .. note::
-
-   Bitte beachtet, dass das folgende Beispiel mit einer aktuellen DVC-Version
-   erstellt wurde (1.0.0a9), die :abbr:`z.T. (zum Teil)` eine andere Syntax als
-   frühere Versionen verwendet. Dies könnt ihr aktuell (8. Juni 2020) nur mit
-   pip installieren:
+   Beachtet, dass das folgende Beispiel mit einer aktuellen DVC-Version erstellt
+   wurde (1.0.0a9), die :abbr:`z.T. (zum Teil)` eine andere Syntax als frühere
+   Versionen verwendet. Dies könnt ihr aktuell (8. Juni 2020) nur mit pip
+   installieren:
 
    .. code-block:: console
 
       $ pipenv install dvc[all]==1.0.0a9
 
 .. toctree::
-    :hidden:
+   :hidden:
 
-    init
-    pipeline
-    params
-    metrics
-    dag
-    reproduce
-    integration
-    fds
+   init
+   pipeline
+   params
+   metrics
+   dag
+   reproduce
+   integration
+   fds

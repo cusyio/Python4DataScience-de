@@ -36,6 +36,7 @@ dev = [
     "Python4DataScience[docs]",
     "pre-commit",
     "codespell",
+    "vale",
 ]
 
 [project.urls]
