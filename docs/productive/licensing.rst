@@ -162,7 +162,7 @@ Schriftarten
     .. seealso::
        * `Font Licensing <https://www.fsf.org/blogs/licensing/20050425novalis>`_
 
-`LaTeX ec fonts <https://dante.ctan.org/tex-archive/fonts/ec/src/copyrite.txt>`_
+`LaTeX ec fonts <https://ctan.joethei.xyz/fonts/ec/src/copyrite.txt>`_
     Freie *European Computer Modern- und Text Companion*-Schriften, die
     üblicherweise mit Latex verwendet werden.
 `Arphic Public License <https://spdx.org/licenses/Arphic-1999>`_

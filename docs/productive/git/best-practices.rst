@@ -160,7 +160,7 @@ einfach die folgenden sieben Regeln und ihr seid auf dem richtigen Weg:
    * Tim Pope: `A Note About Git Commit Messages
      <https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html>`_
    * Pro Git: `Commit Guidelines
-     <https://www.git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines>`_
+     <https://git-scm.com/book/en/v2/Distributed-Git-Contributing-to-a-Project#_commit_guidelines>`_
    * Linus Torvalds: `Contributing
      <https://github.com/torvalds/subsurface-for-dirk/blob/master/README.md#contributing>`_
    * Peter Hutterer: `On commit messages
