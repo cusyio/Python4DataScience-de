@@ -58,8 +58,8 @@ Generieren des gRPC-Codes
 
 .. code-block:: console
 
-    $ pipenv install grpcio grpcio-tools
-    $ pipenv run python -m grpc_tools.protoc --python_out=. --grpc_python_out=. accounts.proto
+    $ uv add grpcio grpcio-tools
+    $ uv run python -m grpc_tools.protoc --python_out=. --grpc_python_out=. accounts.proto
 
 Dies erzeugt zwei Dateien:
 
@@ -97,11 +97,11 @@ Client und Server starten
 
    .. code-block:: console
 
-        $ pipenv run python accounts_server.py
+        $ uv run python accounts_server.py
 
 #. Starten des Client von einem anderen Terminal aus:
 
    .. code-block:: console
 
-    $ pipenv run python accounts_client.py
+    $ uv run python accounts_client.py
     Account created: tom

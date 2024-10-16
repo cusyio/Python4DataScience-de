@@ -61,7 +61,7 @@ dann so aus:
 
 .. code-block:: console
 
-    $ pipenv install dvc[ssh]
+    $ uv add dvc[ssh]
 
 Alternativ kann DVC auch über andere Paketmanager installiert werden:
 
@@ -78,16 +78,6 @@ Alternativ kann DVC auch über andere Paketmanager installiert werden:
    .. code-block:: console
 
       $ brew install iterative/homebrew-dvc/dvc
-
-.. note::
-   Beachtet, dass das folgende Beispiel mit einer aktuellen DVC-Version erstellt
-   wurde (1.0.0a9), die :abbr:`z.T. (zum Teil)` eine andere Syntax als frühere
-   Versionen verwendet. Dies könnt ihr aktuell (8. Juni 2020) nur mit pip
-   installieren:
-
-   .. code-block:: console
-
-      $ pipenv install dvc[all]==1.0.0a9
 
 .. toctree::
    :hidden:

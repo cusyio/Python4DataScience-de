@@ -15,7 +15,7 @@ werden:
 
     .. code-block:: console
 
-        $ pipenv run pre-commit install --hook-type post-commit
+        $ uv run pre-commit install --hook-type post-commit
         pre-commit installed at .git/hooks/post-commit
 
     Da ``post-commit`` jedoch nicht auf Dateien wirkt, müssen all diese Hooks
@@ -49,7 +49,7 @@ werden:
 
     .. code-block:: console
 
-        $ pipenv run pre-commit install --hook-type post-merge
+        $ uv run pre-commit install --hook-type post-merge
         pre-commit installed at .git/hooks/post-merge
 
     Mit ``$PRE_COMMIT_IS_SQUASH_MERGE`` könnt ihr herausfinden, ob es sich um

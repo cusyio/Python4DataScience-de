@@ -42,13 +42,13 @@ Pytype kann einfach installiert werden mit
 
 .. code-block:: console
 
-    $ pipenv install pytype
+    $ uv add pytype
 
 Anschließend kann die Installation überprüft werden mit
 
 .. code-block:: console
 
-    $ pipenv run pytype file_or_directory
+    $ uv run pytype file_or_directory
 
 Konfiguration
 -------------
@@ -58,7 +58,7 @@ Für ein Python-Paket könnt ihr Pytype einrichten indem ihr eine
 
 .. code-block:: console
 
-    $ pipenv run pytype --generate-config pytype.cfg
+    $ uv run pytype --generate-config pytype.cfg
 
 Diese beginnt dann :abbr:`z.B. (zum Beispiel)` mit
 

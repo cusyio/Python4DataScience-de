@@ -68,7 +68,7 @@ Die generierte ``dvc.yaml``-Datei sieht dann z.B. folgendermaßen aus:
 
     stages:
       split:
-        cmd: pipenv run python src/split.py data/data.xml
+        cmd: uv run python src/split.py data/data.xml
         deps:
         - data/data.xml
         - src/split.py

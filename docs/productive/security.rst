@@ -21,9 +21,8 @@ Sicherheitslücken in seiner eigenen Codebasis oder in seinen Abhängigkeiten
 aufweist. Eine offene Sicherheitslücke kann leicht ausgenutzt werden und sollte
 so schnell wie möglich geschlossen werden.
 
-Für eine solche Überprüfung könnt ihr :abbr:`z.B. (zum Beispiel)` :ref:`pipenv
-check <pipenv_check>` verwenden, das die Python-Bibliothek `safety
-<https://github.com/pyupio/safety>`_ verwendet. Alternativ könnt ihr auch `osv
+Für eine solche Überprüfung könnt ihr :abbr:`z.B. (zum Beispiel)` `safety
+<https://github.com/pyupio/safety>`_ verwenden. Alternativ könnt ihr auch `osv
 <https://pypi.org/project/osv/>`_ oder `pip-audit
 <https://pypi.org/project/pip-audit/>`_ verwenden, das auf die `Open Source
 Vulnerability Database <https://osv.dev>`_ zurückgreift.
@@ -47,6 +46,8 @@ Beispiel)`:
 Wartung
 -------
 
+.. _automatic-update:
+
 Werden die Abhängigkeiten automatisch aktualisiert?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -59,8 +60,11 @@ gesucht und :abbr:`ggf. (gegebenenfalls)` aktualisiert werden. Hierfür könnt i
 :abbr:`z.B. (zum Beispiel)` `dependabot <https://github.com/dependabot>`_ oder
 `Safety CLI <https://safetycli.com>`_ verwenden.
 
-Ihr könnt eure :doc:`/productive/envs/pipenv/index`-Umgebungen auch automatisch
-mit :ref:`pipenv update <pipenv_update>` aktualisieren.
+Ihr könnt eure :doc:`/productive/envs/uv/index`-Umgebungen auch automatisch
+aktualisieren.
+
+.. seealso::
+   * `Aktualisieren von uv.lock <python-basics:update-uv-lock>`_
 
 Werden die Abhängigkeiten noch gewartet?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -276,6 +280,8 @@ Teammitglieder mindestens fünf Commits gemacht haben sollte.
 Risikobewertung der Builds
 --------------------------
 
+.. _lock-dependencies:
+
 Werden im Projekt Abhängigkeiten deklariert und festgeschrieben?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -287,11 +293,16 @@ Release-Prozesses verwendet werden, festgeschrieben werden. Dabei sollte eine
 nicht nur auf eine veränderbare Version oder einen Versionsbereich.
 
 :doc:`envs/spack/index` schreibt für die jeweilige Umgebung diese Hashes in
-:ref:`spack_lock`, :doc:`envs/pipenv/index` in :ref:`Pipfile.lock <pipenv_lock>`
-fest. Diese Dateien sollten daher ebenfalls mit dem Quellcode eingecheckt
-werden.
+:ref:`spack_lock`, :doc:`envs/uv/index` in :ref:`uv_lock` fest.
 
-Hierdurch können die folgenden Sicherheitsrisiken verringert werden:
+.. tip::
+   Üblicherweise verwalte ich diese Dateien jedoch nur bei
+   :doc:`python-basics:apps` in :doc:`git/index`. Bei
+   :doc:`python-basics:libs/index` schränke ich üblicherweise lediglich den
+   Versionsbereich der Abhängigkeiten in der :file:`pyproject.toml`-Datei ein.
+
+Für :doc:`python-basics:apps` können sich dadurch die folgenden
+Sicherheitsrisiken verringern:
 
 * Die Prüfung und Bereitstellung erfolgt mit derselben Software, was die Risiken
   beim Deployment verringert, die Fehlersuche vereinfacht und Reproduzierbarkeit

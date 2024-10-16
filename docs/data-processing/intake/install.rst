@@ -18,7 +18,7 @@ Intake lässt sich einfach für euren Jupyter-Kernel installieren mit:
 
 .. code-block:: console
 
-    $ pipenv install intake
+    $ uv add intake
 
 Katalog mit Beispieldaten erstellen
 -----------------------------------
@@ -28,7 +28,7 @@ erstellen mit:
 
 .. code-block:: console
 
-    $ pipenv run intake example
+    $ uv run intake example
     Creating example catalog...
       Writing us_states.yml
       Writing states_1.csv

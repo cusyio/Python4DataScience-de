@@ -18,7 +18,7 @@ Installation
 
 .. code-block:: console
 
-    $ pipenv install black
+    $ uv add black
 
 Überprüfen
 ----------
@@ -27,7 +27,7 @@ Anschließend könnt ihr die Installation überprüfen mit
 
 .. code-block:: console
 
-    $ pipenv run black /PATH/TO/YOUR/SOURCE/FILE
+    $ uv run black /PATH/TO/YOUR/SOURCE/FILE
 
 Integration
 -----------

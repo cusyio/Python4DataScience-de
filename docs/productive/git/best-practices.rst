@@ -16,7 +16,7 @@ folgenden Schritten:
 
 .. code-block:: console
 
-  $ pipenv run cookiecutter https://github.com/veit/cookiecutter-namespace-template.git
+  $ uv run cookiecutter https://github.com/veit/cookiecutter-namespace-template.git
   full_name [Veit Schiele]:
   email [veit@cusy.io]:
   github_username [veit]:

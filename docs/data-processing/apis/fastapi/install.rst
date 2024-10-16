@@ -10,7 +10,7 @@ Anforderungen
 
 .. code-block:: console
 
-    $ pipenv install fastapi
+    $ uv add fastapi
     Adding fastapi to Pipfile's [packages]…
     ✔ Installation Succeeded
     Locking [dev-packages] dependencies…
@@ -28,7 +28,7 @@ Für die Produktion benötigt ihr außerdem einen `ASGI
 
 .. code-block:: console
 
-    $ pipenv install uvicorn
+    $ uv add uvicorn
     Adding uvicorn to Pipfile's [packages]…
     ✔ Installation Succeeded
     Locking [dev-packages] dependencies…
@@ -71,10 +71,10 @@ Sie können installiert werden, z.B. mit:
 
 .. code-block:: console
 
-    $ pipenv install fastapi[ujson]
+    $ uv add fastapi[ujson]
 
 Alternativ könnt ihr alle installieren mit:
 
 .. code-block:: console
 
-    $ pipenv install fastapi[all]
+    $ uv add fastapi[all]

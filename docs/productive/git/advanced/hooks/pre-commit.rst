@@ -9,9 +9,8 @@ pre-commit-Framework
 Pflegen mehrsprachiger Commit-Hooks.
 
 Eine wesentliche Aufgabe ist es, dem gesamten Entwicklungsteam dieselben Skripte
-zur Verfügung zu stellen. `pre-commit <https://pre-commit.com/>`_ von yelp
-verwaltet solche Hooks und verteilt sie auf verschiedene Projekte und
-Entwickler.
+zur Verfügung zu stellen. pre-commit von yelp verwaltet solche Hooks und
+verteilt sie auf verschiedene Projekte und Entwickler.
 
 Git Hooks werden meist verwendet um vor Code Reviews automatisch auf Probleme im
 Code hinzuweisen, :abbr:`z.B. (zum Beispiel)` um die Formatierung zu überprüfen
@@ -40,7 +39,7 @@ werden:
 
    .. code-block:: console
 
-      $ pipenv install pre-commit
+      $ uv add pre-commit
 
 .. tab:: Debian/Ubuntu
 
@@ -58,13 +57,13 @@ werden:
 
    .. code-block:: console
 
-      $ pipenv install pre-commit
+      $ uv add pre-commit
 
 Überprüfen der Installation :abbr:`z.B. (zum Beispiel)` mit
 
 .. code-block:: console
 
-    $ pipenv run pre-commit -V
+    $ uv run pre-commit -V
     pre-commit 2.21.0
 
 Konfiguration
@@ -90,7 +89,7 @@ generieren lassen mit
 
 .. code-block:: console
 
-    $ pipenv run pre-commit sample-config > .pre-commit-config.yaml
+    $ uv run pre-commit sample-config > .pre-commit-config.yaml
 
 Wenn ihr ``check-json`` auf eure Jupyter Notebooks anwenden möchtet, müsst ihr
 zunächst konfigurieren, dass die Überprüfung auch für den Datei-Suffix
@@ -139,7 +138,7 @@ Ausführen
 
     .. code-block:: console
 
-        $ pipenv run pre-commit run --all-files
+        $ uv run pre-commit run --all-files
         Trim Trailing Whitespace.................................................Passed
         Fix End of Files.........................................................Passed
         Check Yaml...............................................................Passed
@@ -166,3 +165,21 @@ Ausführen
 Die vom pre-commit-Framework verwalteten Hooks jedoch nicht darauf beschränkt,
 vor Commits ausgeführt zu werden; sie können auch für andere Git-Hooks verwendet
 werden, siehe :doc:`advanced`.
+
+.. _pre-commit-uv:
+
+``pre-commit-uv``
+-----------------
+
+Alternativ könnt ihr auch `pre-commit-uv
+<https://pypi.org/project/pre-commit-uv/>`__ verwenden um mit :term:`uv`
+:term:`virtuelle Umgebungen <Virtuelle Umgebung>` zu erstellen und Pakete für
+Pre-Commit zu installieren.
+
+``pre-commit-uv`` könnt ihr installieren mit:
+
+.. code-block:: console
+
+   uv tool install pre-commit --with pre-commit-uv --force-reinstall
+
+Anschließend könnt ihr ``pre-commit-uv`` anstelle von ``pre-commit`` aufrufen.
