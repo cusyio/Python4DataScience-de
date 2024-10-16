@@ -13,7 +13,7 @@ und `pandas <https://pandas.pydata.org>`_:
 
 .. code-block:: console
 
-    $ pipenv install openpyxl pandas
+    $ uv add openpyxl pandas
 
 Anschließend können wir in :file:`exceltocsv.py`
 :doc:`pandas:reference/api/pandas.DataFrame.to_csv` zum Konvertieren der

@@ -15,7 +15,7 @@ gRPC lässt sich automatisiert testen z.B. mit `pytest-grpc
 
    .. code-block:: console
 
-    $ pipenv install pytest-grpc
+    $ uv add pytest-grpc
     Installing pytest-grpc…
     Adding pytest-grpc to Pipfile's [packages]…
     ✔ Installation Succeeded
@@ -50,13 +50,13 @@ gRPC lässt sich automatisiert testen z.B. mit `pytest-grpc
 
    .. code-block:: console
 
-    $ pipenv run pytest --fixtures tests/
+    $ uv run pytest --fixtures tests/
 
    oder direkt gegen den Python-Code:
 
    .. code-block:: console
 
-    $ pipenv run pytest --fixtures tests/ --grpc-fake-server
+    $ uv run pytest --fixtures tests/ --grpc-fake-server
     ============================= test session starts ==============================
     platform darwin -- Python 3.7.3, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
     rootdir: /Users/veit/cusy/trn/Python4DataScience/docs/data/grpc

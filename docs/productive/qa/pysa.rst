@@ -50,7 +50,7 @@ Pyre kann aufgerufen werden, :abbr:`z.B. (zum Beispiel)` mit
 
 .. code-block:: console
 
-    $ $ pipenv run pyre analyze --save-results-to ./
+    $ $ uv run pyre analyze --save-results-to ./
 
 Die Option ``--save-results-to`` speichert detaillierte Ergebnisse in
 ``./taint-output.json``.
@@ -63,7 +63,7 @@ Installation
 
 .. code-block:: console
 
-    $ pipenv install fb-sapp
+    $ uv add fb-sapp
 
 Verwendung
 ~~~~~~~~~~
@@ -72,7 +72,7 @@ Verwendung
 
    .. code-block:: console
 
-    $ pipenv run sapp --database-name sapp.db analyze ./taint-output.json
+    $ uv run sapp --database-name sapp.db analyze ./taint-output.json
 
    Die Ergebnisse werden in der lokalen SQLite-Datei ``sapp.db`` gespeichert.
 
@@ -80,7 +80,7 @@ Verwendung
 
    .. code-block:: console
 
-    $ pipenv run sapp --database-name sapp.db explore
+    $ uv run sapp --database-name sapp.db explore
 
    Dies startet ein IPython-Interface, das mit der SQLite-Datenbank verbunden
    ist:

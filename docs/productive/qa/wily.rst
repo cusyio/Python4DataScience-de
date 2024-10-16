@@ -72,18 +72,22 @@ Wily kann einfach installiert werden mit
 
 .. code-block:: console
 
-    $ pipenv install wily
+    $ uv add wily
 
 Anschließend könnt ihr die Installation überprüfen mit
 
 .. code-block:: console
 
-    $ pipenv run wily --help
-    Usage: wily [OPTIONS] COMMAND [ARGS]...
-      Version: 1.19.0
-      🦊 Inspect and search through the complexity of your source code. To get
-      started, run setup:
-        $ wily setup …
+   $ uv run wily --help
+   Usage: wily [OPTIONS] COMMAND [ARGS]...
+
+     Version: 1.25.0
+
+     🦊 Inspect and search through the complexity of your source code. To get
+     started, run setup:
+
+       $ wily setup
+       …
 
 Konfiguration
 -------------
@@ -131,13 +135,13 @@ Verwendung
 
    .. code-block:: console
 
-        $ pipenv run wily build
+        $ uv run wily build
 
 #. Metrik anzeigen
 
    .. code-block:: console
 
-        $ pipenv run wily report
+        $ uv run wily report
 
     Dies gibt sowohl die Metrik wie auch das Delta zur vorherigen Revision aus.
 
@@ -145,7 +149,7 @@ Verwendung
 
    .. code-block:: console
 
-        $ pipenv run wily rank
+        $ uv run wily rank
 
    Dies zeigt die Rangfolge aller Dateien in einem Verzeichnis oder einer
    einzelnen Datei an basierend auf der angegebenen Metrik, sofern diese in
@@ -155,7 +159,7 @@ Verwendung
 
    .. code-block:: console
 
-        $ pipenv run wily graph
+        $ uv run wily graph
 
    Dies zeigt ein Diagramm im Standard-Browser an.
 
@@ -163,13 +167,13 @@ Verwendung
 
    .. code-block:: console
 
-        $ pipenv run wily index
+        $ uv run wily index
 
 #. Auflisten der in den Wily-Operatoren verfügbaren Metriken
 
    .. code-block:: console
 
-        $ pipenv run wily list-metrics
+        $ uv run wily list-metrics
 
 … als pre-commit Hook
 ~~~~~~~~~~~~~~~~~~~~~
@@ -198,8 +202,8 @@ könnt jedoch auch andere Referenzen angeben, z.B. ``HEAD^1`` mit
 
 .. code-block:: console
 
-    $ pipenv run wily build src/
-    $ pipenv run wily diff src/ -r HEAD^1
+    $ uv run wily build src/
+    $ uv run wily diff src/ -r HEAD^1
 
 ----
 

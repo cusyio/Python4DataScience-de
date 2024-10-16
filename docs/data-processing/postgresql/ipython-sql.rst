@@ -15,7 +15,7 @@ Ihr könnt ipython-sql einfach in eurem Jupyter-Kernel installieren mit:
 
 .. code-block:: console
 
-    $ pipenv install ipython-sql
+    $ uv add ipython-sql
 
 Erste Schritte
 --------------

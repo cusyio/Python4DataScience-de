@@ -23,7 +23,7 @@ Beispiel)` mit:
 
 .. code-block:: console
 
-    $ pipenv install mypy
+    $ uv add mypy
 
 Überprüfen
 ----------
@@ -32,7 +32,7 @@ Dann könnt ihr es überprüfen, :abbr:`z.B. (zum Beispiel)` mit:
 
 .. code-block:: console
 
-    $ pipenv run mypy myprogram.py
+    $ uv run mypy myprogram.py
 
 .. note::
     Obwohl Mypy mit Python3 installiert werden muss, kann es auch Python2-Code
@@ -40,4 +40,4 @@ Dann könnt ihr es überprüfen, :abbr:`z.B. (zum Beispiel)` mit:
 
     .. code-block:: console
 
-        $ pipenv run mypy --py2 myprogram.py
+        $ uv run mypy --py2 myprogram.py

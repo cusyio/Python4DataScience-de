@@ -16,7 +16,7 @@ FastDS kann einfach installiert werden mit:
 
 .. code-block:: console
 
-    $ pipenv install fastds
+    $ uv add fastds
 
 Einführung
 ----------

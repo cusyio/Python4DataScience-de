@@ -33,7 +33,7 @@ Ihr könnt ``git-big-picture`` einfach installieren mit:
 
 .. code-block:: console
 
-    $ pipenv install git-big-picture
+    $ uv add git-big-picture
     Installing git-big-picture…
     Adding git-big-picture to Pipfile's [packages]…
     ✔ Installation Succeeded
