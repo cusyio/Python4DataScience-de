@@ -38,14 +38,14 @@ Für die Produktion benötigt ihr außerdem einen `ASGI
     Updated Pipfile.lock (051f02)!
     …
 
-Pydantic kann die folgenden optionalen Abhängigkeiten verwenden:
+`Pydantic <https://pydantic.dev/>`_ kann die folgenden optionalen Abhängigkeiten verwenden:
 
 `ujson <https://github.com/ultrajson/ultrajson>`_
     für schnelleres JSON-Parsing.
 `email_validator <https://github.com/JoshData/python-email-validator>`_
     zur E-Mail-Validierung.
 
-Starlette kann die folgenden optionalen Abhängigkeiten verwenden:
+`Starlette <https://www.starlette.io/>`_ kann die folgenden optionalen Abhängigkeiten verwenden:
 
 :doc:`httpx <../../httpx/index>`
     wenn ihr den ``TestClient`` verwenden wollt.
