@@ -346,27 +346,33 @@ ihr mit ``git stash drop`` entfernen.
 Mit `Gitleaks <https://github.com/gitleaks/gitleaks>`_ könnt ihr eure
 Repositories regelmäßig auf ungewollt gespeicherte Zugangsdaten überprüfen.
 
-Ihr könnt Gitleaks auch automatisch als GitLab-Action ausführen. Hierzu müsst
-ihr die `Secret-Detection.gitlab-ci.yml
-<https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Jobs/Secret-Detection.gitlab-ci.yml>`_-Vorlage
-:abbr:`z.B. (zum Beispiel)` in eine Stufe namens ``secrets-detection`` in
-eurer ``.gitlab-ci.yml``-Datei einbinden:
+Ihr könnt Gitleaks mit dem :doc:`advanced/hooks/pre-commit` verwenden, indem ihr
+in der :file:`.pre-commit-config.yaml`-Datei folgendes eintragt:
 
 .. code-block:: yaml
 
-   include:
-   - template: Security/Secret-Detection.gitlab-ci.yml
+   repos:
+     - repo: https://github.com/gitleaks/gitleaks
+       rev: v8.21.1
+       hooks:
+         - id: gitleaks
 
-Die Vorlage erstellt *Secret Detection*-Aufträge in eurer CI/CD-Pipeline und
-durchsucht den Quellcode eures Projekts nach *Secrets*. Die Ergebnisse werden
-als `Secret Detection Report Artefakt
-<https://docs.gitlab.com/ee/ci/yaml/artifacts_reports.html#artifactsreportssecret_detection>`_
-gespeichert, den ihr später herunterladen und analysieren könnt.
+.. note::
+   Um den Gitleaks-Hook zu deaktivieren, könnt ihr ``SKIP=Gitleaks``
+   voranstellen, so dass Gitleaks nicht ausgeführt wird:
 
-.. seealso::
+   .. code-block:: console
 
-   * `GitLab Secret Detection
-     <https://docs.gitlab.com/ee/user/application_security/secret_detection/>`_
+      $ SKIP=gitleaks git commit -m "Add secret"
+      Detect hardcoded secrets................................................Skipped
+
+   Alternativ könnt ihr auch den ``gitleaks:allow``-Kommentar einer Zeile
+   anhängen, :abbr:`z.B. (zum Beispiel)`:
+
+   .. code-block:: Python
+
+      class MyClass:
+          client_secret = "Srtub6pZcTSET9V4vUpUg7xPi64sh3NV"  #gitleaks:allow
 
 Mit :ref:`git-filter-repo` könnt ihr unerwünschte Dateien oder Zugangsdaten aus
 eurer Git-Historie entfernen.
