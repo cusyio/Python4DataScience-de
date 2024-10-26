@@ -5,7 +5,7 @@
 Arbeitsbereiche
 ===============
 
-.. figure:: git-workspaces.png
+.. figure:: git-workspaces.svg
    :alt: Git Arbeitsbereiche
 
 Git verwaltet mehrere Speicherorte oder **Workspaces**, in denen Dateien
