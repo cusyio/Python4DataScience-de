@@ -55,50 +55,50 @@ Datenbanksysteme
 
 Typische Graphdatenbanken sind Neo4j, OrientDB InfiniteGraph und ArangoDB.
 
-+------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Home**               | `Neo4j`_                       | `OrientDB`_                    | `InfiniteGraph`_               | `ArangoDB`_                    |
-+------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **GitHub**             | `neo4j/neo4j`_                 | `orientechnologies/orientdb`_  |                                | `arangodb/arangodb`_           |
-+------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Docs**               | `neo4j.com/docs/`_             | `orientdb.org/docs/`_          | `InfiniteGraph Tutorials`_     | `docs.arangodb.com`_           |
-+------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Anwendungsgebiete**  | CMS, Soziale Netzwerke,        | Stammdatenverwaltung, soziale  | Erweiterung von                | Fraud Detection, IoT,          |
-|                        | GIS-Systeme, ERP, …            | Netzwerke, `Time Series`_,     | Objectivity/DB-Installationen  | Identitätsmanagement,          |
-|                        |                                | `Key Value`_,                  |                                | E-Commerce, Netzwerk, Logistik,|
-|                        |                                | Verkehrsmanagement             |                                | CMS                            |
-+------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Entwicklungssprache**| Java                           | Java                           | Java                           | C++, JavaScript                |
-+------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Lizenzen**           | AGPL u. kommerziell            | Apache License 2.0             | kommerziell                    | Apache License 2.0             |
-+------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Datenmodell**        | :term:`Property-Graph-Modell`  | Multi-Model                    | :term:`Property-Graph-Modell`  | Multi-Model: Dokumente, Graphen|
-|                        |                                |                                |                                | und :term:`Schlüssel/Wert-Paar`|
-+------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Query-Language**     | REST, `Cypher`_, `Gremlin`_    | `Extended SQL`_, `Gremlin`_    | Traverser API, PQL             |`ArangoDB Query Language (AQL)`_|
-+------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Transaktionen,       | * :term:`Two-phase locking     | :term:`ACID`                   | :term:`ACID`                   | :term:`ACID`,                  |
-| Nebenläufigkeit**      |   (2PL)`,                      |                                |                                | :term:`MVCC – Multiversion     |
-|                        | * einzelner Server:            |                                |                                | Concurrency Control`           |
-|                        |   :term:`ACID`,                |                                |                                |                                |
-|                        | * verteilte Systeme:           |                                |                                |                                |
-|                        |   :term:`BASE`                 |                                |                                |                                |
-+------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Replikation,         | Master-Slave mit Master        | Multi-Master-Replikation,      | Objectivity/DB,                | Master-Slave-Replikation,      |
-| Skalierung**           | Failover                       | Sharding                       | keine                          | Sharding                       |
-|                        |                                |                                | :term:`Graphpartitionierung`   |                                |
-+------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Anmerkungen**        |                                |                                | InfiniteGraph ist eine, auf    |                                |
-|                        |                                |                                | dem :doc:`object-db`           |                                |
-|                        |                                |                                | Objectivity/DB aufsetzende     |                                |
-|                        |                                |                                | Graphdatenbank, wobei die      |                                |
-|                        |                                |                                | Objekte durch Kanten verbunden |                                |
-|                        |                                |                                | werden. Hierbei sind auch      |                                |
-|                        |                                |                                | mehrfache und bidirektionale   |                                |
-|                        |                                |                                | Kanten erlaubt.                |                                |
-|                        |                                |                                |                                |                                |
-|                        |                                |                                | Iteratoren entsprechen dem     |                                |
-|                        |                                |                                | :term:`Graph traversal`.       |                                |
-+------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
++------------------------+--------------------------------+--------------------------------+--------------------------------+
+| **Home**               | `Neo4j`_                       | `OrientDB`_                    | `ArangoDB`_                    |
++------------------------+--------------------------------+--------------------------------+--------------------------------+
+| **GitHub**             | `neo4j/neo4j`_                 | `orientechnologies/orientdb`_  | `arangodb/arangodb`_           |
++------------------------+--------------------------------+--------------------------------+--------------------------------+
+| **Docs**               | `neo4j.com/docs/`_             | `orientdb.org/docs/`_          | `docs.arangodb.com`_           |
++------------------------+--------------------------------+--------------------------------+--------------------------------+
+| **Anwendungsgebiete**  | CMS, Soziale Netzwerke,        | Stammdatenverwaltung, soziale  | Fraud Detection, IoT,          |
+|                        | GIS-Systeme, ERP, …            | Netzwerke, `Time Series`_,     | Identitätsmanagement,          |
+|                        |                                | `Key Value`_,                  | E-Commerce, Netzwerk, Logistik,|
+|                        |                                | Verkehrsmanagement             | CMS                            |
++------------------------+--------------------------------+--------------------------------+--------------------------------+
+| **Entwicklungssprache**| Java                           | Java                           | C++, JavaScript                |
++------------------------+--------------------------------+--------------------------------+--------------------------------+
+| **Lizenzen**           | AGPL u. kommerziell            | Apache License 2.0             | Apache License 2.0             |
++------------------------+--------------------------------+--------------------------------+--------------------------------+
+| **Datenmodell**        | :term:`Property-Graph-Modell`  | Multi-Model                    | Multi-Model: Dokumente, Graphen|
+|                        |                                |                                | und :term:`Schlüssel/Wert-Paar`|
++------------------------+--------------------------------+--------------------------------+--------------------------------+
+| **Query-Language**     | REST, `Cypher`_, `Gremlin`_    | `Extended SQL`_, `Gremlin`_    |`ArangoDB Query Language (AQL)`_|
++------------------------+--------------------------------+--------------------------------+--------------------------------+
+| **Transaktionen,       | * :term:`Two-phase locking     | :term:`ACID`                   | :term:`ACID`,                  |
+| Nebenläufigkeit**      |   (2PL)`,                      |                                | :term:`MVCC – Multiversion     |
+|                        | * einzelner Server:            |                                | Concurrency Control`           |
+|                        |   :term:`ACID`,                |                                |                                |
+|                        | * verteilte Systeme:           |                                |                                |
+|                        |   :term:`BASE`                 |                                |                                |
++------------------------+--------------------------------+--------------------------------+--------------------------------+
+| **Replikation,         | Master-Slave mit Master        | Multi-Master-Replikation,      | Master-Slave-Replikation,      |
+| Skalierung**           | Failover                       | Sharding                       | Sharding                       |
+|                        |                                |                                |                                |
++------------------------+--------------------------------+--------------------------------+--------------------------------+
+| **Anmerkungen**        |                                |                                |                                |
+|                        |                                |                                |                                |
+|                        |                                |                                |                                |
+|                        |                                |                                |                                |
+|                        |                                |                                |                                |
+|                        |                                |                                |                                |
+|                        |                                |                                |                                |
+|                        |                                |                                |                                |
+|                        |                                |                                |                                |
+|                        |                                |                                |                                |
+|                        |                                |                                |                                |
++------------------------+--------------------------------+--------------------------------+--------------------------------+
 
 .. seealso::
    * `Apache TinkerPop Home <https://tinkerpop.apache.org/>`_
@@ -110,7 +110,6 @@ Typische Graphdatenbanken sind Neo4j, OrientDB InfiniteGraph und ArangoDB.
 
 .. _`Neo4j`: https://neo4j.com
 .. _`OrientDB`: https://orientdb.org/
-.. _`InfiniteGraph`: https://web.archive.org/web/20230524090143/https://objectivity.com/infinitegraph/
 .. _`neo4j/neo4j`: https://github.com/neo4j/neo4j
 .. _`ArangoDB`: https://arangodb.com
 .. _`orientechnologies/orientdb`: https://github.com/orientechnologies/orientdb
@@ -119,8 +118,6 @@ Typische Graphdatenbanken sind Neo4j, OrientDB InfiniteGraph und ArangoDB.
 .. _`Key Value`: https://orientdb.org/docs//2.0/orientdb.wiki/Key-Value-use-case.html
 .. _`neo4j.com/docs/`: https://neo4j.com/docs/
 .. _`orientdb.org/docs/`: https://orientdb.org/docs/
-.. _`InfiniteGraph Tutorials`:
-   https://web.archive.org/web/20151008140630/http://www.objectivity.com/products/infinitegraph/infinitegraph-tutorials/
 .. _`docs.arangodb.com`: https://docs.arangodb.com/stable/
 .. _`Extended SQL`: https://orientdb.org/docs/2.2.x/SQL.html
 .. _`Cypher`: https://neo4j.com/docs/1.4/cypher-query-lang.html

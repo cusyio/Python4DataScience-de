@@ -54,40 +54,36 @@ komplexer, fehleranfälliger und in der Wartung aufwändiger.
 Datenbanksysteme
 ----------------
 
-Beispiele für Objektdatenbanksysteme sind ZODB und Objectivity/DB.
+Ein Beispiel für Objektdatenbanksysteme ist die ZODB.
 
-+------------------------+----------------------------------------+----------------------------------------+
-| **Home**               | `ZODB`_                                | `Objectivity/DB`_                      |
-+------------------------+----------------------------------------+----------------------------------------+
-| **GitHub**             | `zopefoundation/ZODB`_                 |                                        |
-+------------------------+----------------------------------------+----------------------------------------+
-| **Docs**               | `zodb.org/en/latest/tutorial.html`_    | `Objectivity/DB Basics Tutorial`_      |
-+------------------------+----------------------------------------+----------------------------------------+
-| **Anwendungsgebiete**  | Plone, Pyramid, BTrees, volatile Daten | IoT, Telekommunikation, Netzwerktechnik|
-+------------------------+----------------------------------------+----------------------------------------+
-| **Entwicklungssprache**| Python                                 | Java                                   |
-+------------------------+----------------------------------------+----------------------------------------+
-| **Lizenzen**           | Zope Public License (ZPL) 2.1          | kommerziell                            |
-+------------------------+----------------------------------------+----------------------------------------+
-| **Datenmodell**        | PersistentList, PersistentMapping,     | Objects, References, Relationships,    |
-|                        | BTree                                  | Indexes, Trees und Collections         |
-+------------------------+----------------------------------------+----------------------------------------+
-| **Query-Language**     |                                        | Objectivity/DB predicate query language|
-+------------------------+----------------------------------------+----------------------------------------+
-| **Transaktionen,       | :term:`ACID`                           | :term:`ACID`                           |
-| Nebenläufigkeit**      |                                        |                                        |
-+------------------------+----------------------------------------+----------------------------------------+
-| **Replikation,         | `ZODB Replication Services (ZRS)`_     | Quorum basierte synchrone Replikation  |
-| Skalierung**           |                                        |                                        |
-+------------------------+----------------------------------------+----------------------------------------+
-| **Anmerkungen**        |                                        |                                        |
-+------------------------+----------------------------------------+----------------------------------------+
++------------------------+----------------------------------------+
+| **Home**               | `ZODB`_                                |
++------------------------+----------------------------------------+
+| **GitHub**             | `zopefoundation/ZODB`_                 |
++------------------------+----------------------------------------+
+| **Docs**               | `zodb.org/en/latest/tutorial.html`_    |
++------------------------+----------------------------------------+
+| **Anwendungsgebiete**  | Plone, Pyramid, BTrees, volatile Daten |
++------------------------+----------------------------------------+
+| **Entwicklungssprache**| Python                                 |
++------------------------+----------------------------------------+
+| **Lizenzen**           | Zope Public License (ZPL) 2.1          |
++------------------------+----------------------------------------+
+| **Datenmodell**        | PersistentList, PersistentMapping,     |
+|                        | BTree                                  |
++------------------------+----------------------------------------+
+| **Query-Language**     |                                        |
++------------------------+----------------------------------------+
+| **Transaktionen,       | :term:`ACID`                           |
+| Nebenläufigkeit**      |                                        |
++------------------------+----------------------------------------+
+| **Replikation,         | `ZODB Replication Services (ZRS)`_     |
+| Skalierung**           |                                        |
++------------------------+----------------------------------------+
+| **Anmerkungen**        |                                        |
++------------------------+----------------------------------------+
 
 .. _`ZODB`: https://zodb.org/en/latest/
-.. _`Objectivity/DB`:
-   https://web.archive.org/web/20210119045523/https://www.objectivity.com/products/objectivitydb/
-.. _`Objectivity/DB Basics Tutorial`:
-   https://web.archive.org/web/20230402001525/https://support.objectivity.com/sites/default/files/docs/objy/R12_4_1/html/assist/tutorial/Tutorial.html
 .. _`zopefoundation/ZODB`: https://github.com/zopefoundation/ZODB
 .. _`zodb.org/en/latest/tutorial.html`: https://zodb.org/en/latest/tutorial.html
 .. _`ZODB Replication Services (ZRS)`: https://pypi.org/project/zc.zrs/
