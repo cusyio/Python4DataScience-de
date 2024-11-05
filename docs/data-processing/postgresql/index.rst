@@ -68,7 +68,7 @@ Erweiterungen
     enthält verschiedene Erweiterungen, die in `Appendix F
     <https://www.postgresql.org/docs/9.5/contrib.html>`_ beschrieben sind.
     Andere Erweiterungen sind unabhängig entwickelt worden, wie z.B. `PostGIS
-    <http://postgis.net/>`_ oder `Slony-I <https://slony.info>`_.
+    <http://postgis.net/>`_.
 
 Common Table Expression
     `WITH Queries (Common Table Expressions)

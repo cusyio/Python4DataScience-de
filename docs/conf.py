@@ -224,6 +224,7 @@ linkcheck_ignore = [
     r"https://journals.sagepub.com/home/*",
     r"https://linux.die.net/man/",
     r"https://onlinelibrary.wiley.com/",
+    r"https://opensource.org/",
     r"https://pubs.acs.org/journal/",
     r"https://www.cell.com/",
     r"https://www.journals.elsevier.com/",
