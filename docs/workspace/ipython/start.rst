@@ -9,10 +9,10 @@ Ihr könnt IPython einfach in einer Konsole starten:
 
 .. code-block:: console
 
-   $ uv run ipython
-   Python 3.11.10 (main, Sep  7 2024, 01:03:31) [Clang 16.0.0 (clang-1600.0.26.3)]
+   uv run ipython
+   Python 3.13.0 (main, Oct  7 2024, 23:47:22) [Clang 18.1.8 ]
    Type 'copyright', 'credits' or 'license' for more information
-   IPython 8.21.0 -- An enhanced Interactive Python. Type '?' for help.
+   IPython 8.29.0 -- An enhanced Interactive Python. Type '?' for help.
 
    In [1]:
 
