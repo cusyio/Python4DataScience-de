@@ -300,17 +300,22 @@ Entfernen einer Datei aus der Historie
 --------------------------------------
 
 Eine Datei kann vollständig aus Git-Historie des aktuellen Branches entfernt
-werden.
-Das ist nötig, wenn ihr beispielsweise aus Versehen Passwörter oder eine sehr große Datei zum Repository hinzugefügt habt.
+werden. Das ist nötig, wenn ihr beispielsweise aus Versehen Passwörter oder eine
+sehr große Datei zum Repository hinzugefügt habt.
+
+Hierfür müsst ihr `git-filter-repo <https://github.com/newren/git-filter-repo>`_
+installieren, :abbr:`z.B. (zum Beispiel)` mit ``uv add git-filter-repo``.
+Anschliepend könnt ihr eure Datei, :abbr:`z.B. (zum Beispiel)`
+:samp:`{PATH/SOMEFILE}` löschen mit:
 
 .. code-block:: console
 
-    $ git filter-repo --invert-paths --path path/somefile
-    $ git push --no-verify --mirror
+   $ git filter-repo --invert-paths --path PATH/SOMEFILE
+   $ git push --no-verify --mirror
 
 .. note::
-    Informiert die Team-Mitglieder, dass sie erneut einen Klon des Repository
-    erstellen sollten.
+   Informiert die Team-Mitglieder, dass sie erneut einen Klon des Repository
+   erstellen sollten.
 
 Entfernen einer Zeichenkette aus der Historie
 ---------------------------------------------
