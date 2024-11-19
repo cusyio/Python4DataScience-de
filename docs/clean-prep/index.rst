@@ -8,13 +8,13 @@ Daten bereinigen und validieren
 Im Folgenden wollen wir euch einen praktischen Überblick über verschiedene
 Bibliotheken und Methoden zur `Datenbereinigung
 <https://de.wikipedia.org/wiki/Datenbereinigung>`_ und -validierung mit Python
-geben. Dabei verwenden wir neben bekannten Bibliotheken wie NumPy und Pandas
-auch mehrere kleine, spezialisierte Bibliotheken wie
-:doc:`dedupe <deduplicate>`, :doc:`fuzzywuzzy <string-matching>`,
-:doc:`voluptuous <voluptuous>`, :doc:`bulwark <bulwark>`, :doc:`tdda <tdda>` und
-:doc:`hypothesis <hypothesis>`. Wir bevorzugen diese leichtgewichtigeren
-Lösungen gegenüber großen, universellen Systemen wie `Great Expectations
-<https://greatexpectations.io/>`_ oder `MobyDQ
+geben. Dabei verwenden wir neben bekannten Bibliotheken wie
+:doc:`/workspace/numpy/index` und :doc:`/workspace/pandas/index` auch mehrere
+kleine, spezialisierte Bibliotheken wie :doc:`dedupe <deduplicate>`,
+:doc:`fuzzywuzzy <string-matching>`, :doc:`voluptuous <voluptuous>`, :doc:`tdda
+<tdda>` und :doc:`hypothesis <hypothesis>`. Wir bevorzugen diese
+leichtgewichtigeren Lösungen gegenüber großen, universellen Systemen wie `Great
+Expectations <https://greatexpectations.io/>`_ oder `MobyDQ
 <https://ubisoft.github.io/mobydq/>`_.
 
 .. tip::
@@ -27,22 +27,29 @@ Lösungen gegenüber großen, universellen Systemen wie `Great Expectations
 .. csv-table:: GitHub-Insights
     :header: "Name", "Stars", "Mitwirkende", "Commit-Aktivität", "Lizenz"
 
-    "`fuzzywuzzy <https://github.com/seatgeek/fuzzywuzzy>`_",".. image:: https://raster.shields.io/github/stars/seatgeek/fuzzywuzzy",".. image:: https://raster.shields.io/github/contributors/seatgeek/fuzzywuzzy",".. image:: https://raster.shields.io/github/commit-activity/y/seatgeek/fuzzywuzzy",".. image:: https://raster.shields.io/github/license/seatgeek/fuzzywuzzy"
-    "`dedupe <https://github.com/dedupeio/dedupe>`_",".. image:: https://raster.shields.io/github/stars/dedupeio/dedupe",".. image:: https://raster.shields.io/github/contributors/dedupeio/dedupe",".. image:: https://raster.shields.io/github/commit-activity/y/dedupeio/dedupe",".. image:: https://raster.shields.io/github/license/dedupeio/dedupe"
-    "`Bulwark <https://github.com/ZaxR/bulwark>`_",".. image:: https://raster.shields.io/github/stars/ZaxR/bulwark",".. image:: https://raster.shields.io/github/contributors/ZaxR/bulwark",".. image:: https://raster.shields.io/github/commit-activity/y/ZaxR/bulwark",".. image:: https://raster.shields.io/github/license/ZaxR/bulwark"
-    "`Hypothesis <https://github.com/HypothesisWorks/hypothesis>`_",".. image:: https://raster.shields.io/github/stars/HypothesisWorks/hypothesis",".. image:: https://raster.shields.io/github/contributors/HypothesisWorks/hypothesis",".. image:: https://raster.shields.io/github/commit-activity/y/HypothesisWorks/hypothesis",".. image:: https://raster.shields.io/github/license/HypothesisWorks/hypothesis"
-    "`TDDA <https://github.com/tdda/tdda>`_",".. image:: https://raster.shields.io/github/stars/tdda/tdda",".. image:: https://raster.shields.io/github/contributors/tdda/tdda",".. image:: https://raster.shields.io/github/commit-activity/y/tdda/tdda",".. image:: https://raster.shields.io/github/license/tdda/tdda"
-    "`Voluptuous <https://github.com/alecthomas/voluptuous>`_",".. image:: https://raster.shields.io/github/stars/alecthomas/voluptuous",".. image:: https://raster.shields.io/github/contributors/alecthomas/voluptuous",".. image:: https://raster.shields.io/github/commit-activity/y/alecthomas/voluptuous",".. image:: https://raster.shields.io/github/license/alecthomas/voluptuous"
     "`scikit-learn <https://github.com/scikit-learn/scikit-learn>`_",".. image:: https://raster.shields.io/github/stars/scikit-learn/scikit-learn",".. image:: https://raster.shields.io/github/contributors/scikit-learn/scikit-learn",".. image:: https://raster.shields.io/github/commit-activity/y/scikit-learn/scikit-learn",".. image:: https://raster.shields.io/github/license/scikit-learn/scikit-learn"
-    "`pandera <https://github.com/unionai-oss/pandera>`_",".. image:: https://raster.shields.io/github/stars/unionai-oss/pandera",".. image:: https://raster.shields.io/github/contributors/unionai-oss/pandera",".. image:: https://raster.shields.io/github/commit-activity/y/unionai-oss/pandera",".. image:: https://raster.shields.io/github/license/unionai-oss/pandera"
-    "`Validr <https://github.com/guyskk/validr>`_",".. image:: https://raster.shields.io/github/stars/guyskk/validr",".. image:: https://raster.shields.io/github/contributors/guyskk/validr",".. image:: https://raster.shields.io/github/commit-activity/y/guyskk/validr",".. image:: https://raster.shields.io/github/license/guyskk/validr"
+    "`ydata-profiling <https://github.com/ydataai/ydata-profiling>`_",".. image:: https://raster.shields.io/github/stars/ydataai/ydata-profiling",".. image:: https://raster.shields.io/github/contributors/ydataai/ydata-profiling",".. image:: https://raster.shields.io/github/commit-activity/y/ydataai/ydata-profiling",".. image:: https://raster.shields.io/github/license/ydataai/ydata-profiling"
+    "`fuzzywuzzy <https://github.com/seatgeek/fuzzywuzzy>`_",".. image:: https://raster.shields.io/github/stars/seatgeek/fuzzywuzzy",".. image:: https://raster.shields.io/github/contributors/seatgeek/fuzzywuzzy",".. image:: https://raster.shields.io/github/commit-activity/y/seatgeek/fuzzywuzzy",".. image:: https://raster.shields.io/github/license/seatgeek/fuzzywuzzy"
+    "`Hypothesis <https://github.com/HypothesisWorks/hypothesis>`_",".. image:: https://raster.shields.io/github/stars/HypothesisWorks/hypothesis",".. image:: https://raster.shields.io/github/contributors/HypothesisWorks/hypothesis",".. image:: https://raster.shields.io/github/commit-activity/y/HypothesisWorks/hypothesis",".. image:: https://raster.shields.io/github/license/HypothesisWorks/hypothesis"
     "`marshmallow <https://github.com/marshmallow-code/marshmallow>`_",".. image:: https://raster.shields.io/github/stars/marshmallow-code/marshmallow",".. image:: https://raster.shields.io/github/contributors/marshmallow-code/marshmallow",".. image:: https://raster.shields.io/github/commit-activity/y/marshmallow-code/marshmallow",".. image:: https://raster.shields.io/github/license/marshmallow-code/marshmallow"
+    "`dedupe <https://github.com/dedupeio/dedupe>`_",".. image:: https://raster.shields.io/github/stars/dedupeio/dedupe",".. image:: https://raster.shields.io/github/contributors/dedupeio/dedupe",".. image:: https://raster.shields.io/github/commit-activity/y/dedupeio/dedupe",".. image:: https://raster.shields.io/github/license/dedupeio/dedupe"
+    "`pandera <https://github.com/unionai-oss/pandera>`_",".. image:: https://raster.shields.io/github/stars/unionai-oss/pandera",".. image:: https://raster.shields.io/github/contributors/unionai-oss/pandera",".. image:: https://raster.shields.io/github/commit-activity/y/unionai-oss/pandera",".. image:: https://raster.shields.io/github/license/unionai-oss/pandera"
+    "`Voluptuous <https://github.com/alecthomas/voluptuous>`_",".. image:: https://raster.shields.io/github/stars/alecthomas/voluptuous",".. image:: https://raster.shields.io/github/contributors/alecthomas/voluptuous",".. image:: https://raster.shields.io/github/commit-activity/y/alecthomas/voluptuous",".. image:: https://raster.shields.io/github/license/alecthomas/voluptuous"
     "`datacleaner <https://github.com/rhiever/datacleaner>`_",".. image:: https://raster.shields.io/github/stars/rhiever/datacleaner",".. image:: https://raster.shields.io/github/contributors/rhiever/datacleaner",".. image:: https://raster.shields.io/github/commit-activity/y/rhiever/datacleaner",".. image:: https://raster.shields.io/github/license/rhiever/datacleaner"
-    "`Probatus <https://github.com/ing-bank/probatus>`_",".. image:: https://raster.shields.io/github/stars/ing-bank/probatus",".. image:: https://raster.shields.io/github/contributors/ing-bank/probatus",".. image:: https://raster.shields.io/github/commit-activity/y/ing-bank/probatus",".. image:: https://raster.shields.io/github/license/ing-bank/probatus"
     "`popmon <https://github.com/ing-bank/popmon>`_",".. image:: https://raster.shields.io/github/stars/ing-bank/popmon",".. image:: https://raster.shields.io/github/contributors/ing-bank/popmon",".. image:: https://raster.shields.io/github/commit-activity/y/ing-bank/popmon",".. image:: https://raster.shields.io/github/license/ing-bank/popmon"
-    "`Pandas Profiling <https://github.com/ydataai/ydata-profiling>`_",".. image:: https://raster.shields.io/github/stars/ydataai/ydata-profiling",".. image:: https://raster.shields.io/github/contributors/ydataai/ydata-profiling",".. image:: https://raster.shields.io/github/commit-activity/y/ydataai/ydata-profiling",".. image:: https://raster.shields.io/github/license/ydataai/ydata-profiling"
-    "`pandas-validation <https://github.com/jmenglund/pandas-validation>`_",".. image:: https://raster.shields.io/github/stars/jmenglund/pandas-validation",".. image:: https://raster.shields.io/github/contributors/jmenglund/pandas-validation",".. image:: https://raster.shields.io/github/commit-activity/y/jmenglund/pandas-validation",".. image:: https://raster.shields.io/github/license/jmenglund/pandas-validation"
+    "`TDDA <https://github.com/tdda/tdda>`_",".. image:: https://raster.shields.io/github/stars/tdda/tdda",".. image:: https://raster.shields.io/github/contributors/tdda/tdda",".. image:: https://raster.shields.io/github/commit-activity/y/tdda/tdda",".. image:: https://raster.shields.io/github/license/tdda/tdda"
+    "`Validr <https://github.com/guyskk/validr>`_",".. image:: https://raster.shields.io/github/stars/guyskk/validr",".. image:: https://raster.shields.io/github/contributors/guyskk/validr",".. image:: https://raster.shields.io/github/commit-activity/y/guyskk/validr",".. image:: https://raster.shields.io/github/license/guyskk/validr"
+    "`Probatus <https://github.com/ing-bank/probatus>`_",".. image:: https://raster.shields.io/github/stars/ing-bank/probatus",".. image:: https://raster.shields.io/github/contributors/ing-bank/probatus",".. image:: https://raster.shields.io/github/commit-activity/y/ing-bank/probatus",".. image:: https://raster.shields.io/github/license/ing-bank/probatus"
+
+Ruhende Projekte
+----------------
+
+.. csv-table:: GitHub-Insights
+    :header: "Name", "Stars", "Mitwirkende", "Commit-Aktivität", "Lizenz"
+
+    "`Bulwark <https://github.com/ZaxR/bulwark>`_",".. image:: https://raster.shields.io/github/stars/ZaxR/bulwark",".. image:: https://raster.shields.io/github/contributors/ZaxR/bulwark",".. image:: https://raster.shields.io/github/commit-activity/y/ZaxR/bulwark",".. image:: https://raster.shields.io/github/license/ZaxR/bulwark"
     "`PandasSchema <https://github.com/multimeric/PandasSchema>`_",".. image:: https://raster.shields.io/github/stars/multimeric/PandasSchema",".. image:: https://raster.shields.io/github/contributors/multimeric/PandasSchema",".. image:: https://raster.shields.io/github/commit-activity/y/multimeric/PandasSchema",".. image:: https://raster.shields.io/github/license/multimeric/PandasSchema"
+    "`pandas-validation <https://github.com/jmenglund/pandas-validation>`_",".. image:: https://raster.shields.io/github/stars/jmenglund/pandas-validation",".. image:: https://raster.shields.io/github/contributors/jmenglund/pandas-validation",".. image:: https://raster.shields.io/github/commit-activity/y/jmenglund/pandas-validation",".. image:: https://raster.shields.io/github/license/jmenglund/pandas-validation"
     "`Opulent-Pandas <https://github.com/danielvdende/opulent-pandas>`_",".. image:: https://raster.shields.io/github/stars/danielvdende/opulent-pandas",".. image:: https://raster.shields.io/github/contributors/danielvdende/opulent-pandas",".. image:: https://raster.shields.io/github/commit-activity/y/danielvdende/opulent-pandas",".. image:: https://raster.shields.io/github/license/danielvdende/opulent-pandas"
     "`signpost <https://github.com/ilsedippenaar/signpost>`_",".. image:: https://raster.shields.io/github/stars/ilsedippenaar/signpost",".. image:: https://raster.shields.io/github/contributors/ilsedippenaar/signpost",".. image:: https://raster.shields.io/github/commit-activity/y/ilsedippenaar/signpost",".. image:: https://raster.shields.io/github/license/ilsedippenaar/signpost"
 
@@ -55,7 +62,6 @@ Lösungen gegenüber großen, universellen Systemen wie `Great Expectations
     outliers.ipynb
     string-matching.ipynb
     deduplicate.ipynb
-    bulwark.ipynb
     hypothesis.ipynb
     tdda.ipynb
     voluptuous.ipynb
