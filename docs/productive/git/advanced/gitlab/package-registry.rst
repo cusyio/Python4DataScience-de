@@ -6,8 +6,7 @@ GitLab Package-Registry
 =======================
 
 Ihr könnt eure Verteilungspakete auch in der Paketregistrierung eures
-GitLab-Projekts veröffentlichen und sowohl mit :term:`Pip` als auch mit
-:term:`twine` nutzen.
+GitLab-Projekts veröffentlichen mit :term:`twine`.
 
 .. seealso::
    :doc:`python-basics:packs/gitlab`
