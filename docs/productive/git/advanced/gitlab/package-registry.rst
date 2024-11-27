@@ -10,4 +10,4 @@ GitLab-Projekts veröffentlichen und sowohl mit :term:`Pip` als auch mit
 :term:`twine` nutzen.
 
 .. seealso::
-   :doc:`python-basics:libs/gitlab`
+   :doc:`python-basics:packs/gitlab`

@@ -64,7 +64,7 @@ Ihr könnt eure :doc:`/productive/envs/uv/index`-Umgebungen auch automatisch
 aktualisieren.
 
 .. seealso::
-   * `Aktualisieren von uv.lock <python-basics:update-uv-lock>`_
+   * :ref:`Update uv.lock <python-basics:update-uv-lock>`
 
 Werden die Abhängigkeiten noch gewartet?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

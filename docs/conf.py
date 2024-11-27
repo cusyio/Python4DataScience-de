@@ -187,7 +187,7 @@ intersphinx_mapping = {
 # All HTTP redirections from the source URI to the canonical URI will be treated# as "working".
 linkcheck_allowed_redirects = {
     r"https://app.pganalyze.com/": r"https://app.pganalyze.com/users/sign_in",
-    r"https://doi.org/10.5281/zenodo.12593850": r"https://zenodo.org/records/12593850",
+    r"https://doi.org/10.5281/zenodo.14031392": r"https://zenodo.org/records/14031392",
     r"https://github.com/apps/pre-commit-ci/installations/new": r"https://github.com/login?integration=pre-commit-ci&return_to=%2Fapps%2Fpre-commit-ci%2Finstallations%2Fnew",
     r"https://itsdangerous.palletsprojects.com/": r"https://itsdangerous.palletsprojects.com/en/2.2.x/",
     r"https://jinja.palletsprojects.com/": r"https://jinja.palletsprojects.com/en/3.1.x/",
