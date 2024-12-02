@@ -504,8 +504,8 @@ Python-Paket-Metadaten
 
 Mit :pep:`658` wird die :file:`METADATA`-Datei aus Distributionen in der
 :pep:`503`-Repository-API auf :term:`PyPI` verfügbar. Damit können die Metadaten
-der :doc:`Verteilungspakete <python-basics:libs/distribution>` analysiert werden
-ohne dass das ganze Paket heruntergeladen werden muss.
+der :doc:`Verteilungspakete <python-basics:packs/distribution>` analysiert
+werden ohne dass das ganze Paket heruntergeladen werden muss.
 
 In Python-Paketen gibt es noch weitere Felder, in denen Lizenzinformationen
 gespeichert werden, wie die `Core metadata specifications

@@ -6,8 +6,8 @@ uns schneller neue Builds bereitzustellen. Dabei beginnen wir mit den Layern,
 die sich am wenigsten ändern, damit wir die Artefakte so lange wie möglich
 zwischenspeichern können. Dies ist auch der Grund, weswegen wir die
 Installationen der Abhängigkeiten aus :file:`uv.lock` und Installation unserer
-:doc:`Anwendung <python-basics:apps>` strikt getrennthalten – wahrscheinlich
-ändert sich unser Code schneller als der der Abhängigkeiten.
+:doc:`Anwendung <python-basics:packs/apps>` strikt getrennthalten –
+wahrscheinlich ändert sich unser Code schneller als der der Abhängigkeiten.
 
 .. seealso::
    * `Order your layers
@@ -197,7 +197,7 @@ Installationen der Abhängigkeiten aus :file:`uv.lock` und Installation unserer
 
    Zeilen 29–30:
        Wenn eure Anwendung kein :doc:`Python-Paket
-       <python-basics:libs/distribution>` ist, das mit ``uv sync`` installiert
+       <python-basics:packs/distribution>` ist, das mit ``uv sync`` installiert
        wurde, müsst ihr eure Anwendung hier in den Container kopieren.
 
    Zeile 32:

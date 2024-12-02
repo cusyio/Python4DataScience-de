@@ -177,7 +177,7 @@ Python deutlich vereinfachen.
 Code reduzieren mit ``dataclasses`` und ``attrs``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:doc:`python-basics:dataclasses`
+:doc:`python-basics:oop/dataclasses`
     sollen die Definition von Klassen vereinfachen, die hauptsächlich zum
     Speichern von Werten erstellt werden, und auf die dann über die
     Attributsuche zugegriffen werden kann. Einige Beispiele sind

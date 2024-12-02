@@ -58,10 +58,10 @@ Ab Kapitel 2 folgt das Tutorial dem Prototyp eines Forschungsprojekts:
    <productive/dvc/index>`. Der Quellcode sollte in :doc:`Programmbibliotheken
    verpackt werden <productive/packaging>` mit :doc:`Dokumentation
    <productive/documenting>`, :doc:`Lizenz(en) <productive/licensing>`,
-   :doc:`Rests <productive/testing>` und :doc:`Logging
-   <productive/logging/index>`. Schließlich enthält das Kapitel Ratschläge zur
-   :doc:`Verbesserung der Codequalität <productive/qa/index>` und des
-   :doc:`sicheren Betriebs <productive/security>`.
+   :doc:`Rests <productive/testing>` und :doc:`python-basics:logging/index`.
+   Schließlich enthält das Kapitel Ratschläge zur :doc:`Verbesserung der
+   Codequalität <productive/qa/index>` und des :doc:`sicheren Betriebs
+   <productive/security>`.
 #. :doc:`web/index` kann entweder Dashboards aus Jupyter-Notebooks generieren
    oder eine umfassendere Anwendungslogik erfordern, wie in
    :doc:`pyviz:bokeh/embedding-export/flask`, demonstriert, oder Daten über

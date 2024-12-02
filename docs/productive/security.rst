@@ -297,11 +297,11 @@ nicht nur auf eine veränderbare Version oder einen Versionsbereich.
 
 .. tip::
    Üblicherweise verwalte ich diese Dateien jedoch nur bei
-   :doc:`python-basics:apps` in :doc:`git/index`. Bei
+   :doc:`python-basics:packs/apps` in :doc:`git/index`. Bei
    :doc:`python-basics:libs/index` schränke ich üblicherweise lediglich den
    Versionsbereich der Abhängigkeiten in der :file:`pyproject.toml`-Datei ein.
 
-Für :doc:`python-basics:apps` können sich dadurch die folgenden
+Für :doc:`python-basics:packs/apps` können sich dadurch die folgenden
 Sicherheitsrisiken verringern:
 
 * Die Prüfung und Bereitstellung erfolgt mit derselben Software, was die Risiken
