@@ -6,7 +6,7 @@ GitLab Package-Registry
 =======================
 
 Ihr könnt eure Verteilungspakete auch in der Paketregistrierung eures
-GitLab-Projekts veröffentlichen mit :term:`twine`.
+GitLab-Projekts veröffentlichen mit :term:`uv`.
 
 .. seealso::
    :doc:`python-basics:packs/gitlab`

@@ -1,6 +1,8 @@
 CI/CD-Pipelines
 ===============
 
+.. _uv-gitlab:
+
 GitLab CI/CD
 ------------
 
