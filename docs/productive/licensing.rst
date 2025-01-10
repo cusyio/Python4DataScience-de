@@ -507,6 +507,10 @@ Alternativen
     Ein Kommandozeilenwerkzeug, das Installationsverzeichnisse nach Lizenzen
     durchsucht.
 
+.. seealso::
+   * `Debian Copyright Review Tools
+     <https://wiki.debian.org/de/CopyrightReviewTools>`_
+
 Python-Paket-Metadaten
 ----------------------
 
