@@ -102,6 +102,14 @@ offene Lizenzen, die für Nicht-Software-Material verwendet werden, von
 Datensätzen bis zu Videos. Sie sind jedoch `nicht für Software empfohlen
 <https://creativecommons.org/faq/#can-i-apply-a-creative-commons-license-to-software>`_.
 
+.. _deal:
+
+.. tip::
+   Das `DEAL-Konsortium <https://deal-konsortium.de>`_ empfiehlt für
+   Open-Access-Veröffentlichungen die CC BY-Lizenz, :abbr:`s.a. (siehe auch)`
+   `Warum CC BY die beste Wahl für Open-Access-Publikationen ist
+   <https://deal-konsortium.de/warum-ccby>`_.
+
 Die `Open Knowledge Foundation <https://okfn.org/en/>`_ hat ebenfalls eine Reihe
 von `Open Data Commons <https://opendatacommons.org>`_-Lizenzen für
 Daten/Datenbanken veröffentlicht:
