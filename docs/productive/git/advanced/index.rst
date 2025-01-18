@@ -46,6 +46,7 @@ Fortgeschrittenes Git
    jupyter-notebooks
    binary-files
    batch
+   lfs
    vs-code/index
    gitlab/index
    git-big-picture

@@ -16,6 +16,14 @@ Notfälle, wenn Zweige für ältere Versionen erstellt werden müssen.
 
 .. _changelog
 
+`Unreleased <https://github.com/cusyio/Python4DataScience-de/compare/24.3.0...HEAD>`_
+------------------------------------------------------------------------------------
+
+Added
+~~~~~
+
+* 📝 Add the removal of git lfs
+
 `24.3.0 <https://github.com/cusyio/Python4DataScience-de/compare/24.2.0...24.3.0>`_: 2024-11-19
 -----------------------------------------------------------------------------------------------
 
