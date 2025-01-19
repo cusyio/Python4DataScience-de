@@ -11,6 +11,8 @@ nochmal zusammenfassen und erweitern. Dabei orientieren wir uns an der `OpenSSF
 Scorecard <https://securityscorecards.dev/>`_. Alternativ könnt ihr euch auch an
 :ref:`open_chain` orientieren.
 
+.. _check-vulnerabilities:
+
 Schwachstellen überprüfen
 -------------------------
 
@@ -21,9 +23,9 @@ Sicherheitslücken in seiner eigenen Codebasis oder in seinen Abhängigkeiten
 aufweist. Eine offene Sicherheitslücke kann leicht ausgenutzt werden und sollte
 so schnell wie möglich geschlossen werden.
 
-Für eine solche Überprüfung könnt ihr :abbr:`z.B. (zum Beispiel)` `safety
-<https://github.com/pyupio/safety>`_ verwenden. Alternativ könnt ihr auch `osv
-<https://pypi.org/project/osv/>`_ oder `pip-audit
+Für eine solche Überprüfung könnt ihr :abbr:`z.B. (zum Beispiel)` `uv-secure
+<https://pypi.org/project/uv-secure/>`_ verwenden. Alternativ könnt ihr auch
+`osv <https://pypi.org/project/osv/>`_ oder `pip-audit
 <https://pypi.org/project/pip-audit/>`_ verwenden, das auf die `Open Source
 Vulnerability Database <https://osv.dev>`_ zurückgreift.
 

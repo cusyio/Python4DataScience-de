@@ -5,12 +5,15 @@ Es ist eine bewährte Praxis, Abhängigkeiten regelmäßig zu aktualisieren, um
 Schwachstellen zu vermeiden, Inkompatibilitäten zwischen Abhängigkeiten
 einzuschränken und komplexe Upgrades zu vermeiden, wenn von einer zu alten
 Version aktualisiert wird. Eine Vielzahl von Werkzeugen kann dabei helfen, auf
-dem neuesten Stand zu bleiben. :term:`uv` wird hierbei von `Renovate
-<https://docs.renovatebot.com/>`_ unterstützt.
+dem neuesten Stand zu bleiben. In :ref:`update-uv-lock` ist beschrieben, wie ihr
+mit ``uv lock --upgrade`` alle Abhängigkeiten und mit :samp:`uv lock
+--upgrade-package {PACKAGE}=={VERSION}` einzelne Abhängigkeiten kontrolliert
+aktualisieren könnt. Ihr könnt euch jedoch hierbei auch von `Renovate
+<https://docs.renovatebot.com/>`_ unterstützen lassen.
 
 Renovate nutzt die :ref:`uv_lock`-Datei, um festzustellen, dass ``uv`` für die
 Verwaltung von Abhängigkeiten verwendet wird, und schlägt Aktualisierungen für
-Projektabhängigkeiten, optionale Abhängigkeiten undEntwicklungsabhängigkeiten
+Projektabhängigkeiten, optionale Abhängigkeiten und Entwicklungsabhängigkeiten
 vor. Renovate aktualisiert sowohl die Dateien :file:`pyproject.toml` als auch
 :file:`uv.lock`.
 
