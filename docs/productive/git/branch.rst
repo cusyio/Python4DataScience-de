@@ -47,21 +47,25 @@ Gebräuchliche Befehle
     erstellt auf Basis des aktuellen ``HEAD`` einen neuen Zweig.
 
 :samp:`$ git switch [-c] {BRANCH_NAME}`
-    wechselt zwischen Zweigen.
+    wechselt zum Zweig.
 
     ``-c``
         erstellt einen neuen Zweig.
 
+:samp:`$ git switch -`
+    wechselt zu dem zuvor zuvor ausgecheckten Zweig. Das hin und her springen
+    zwischen zwei Zweigen wird damit deutlich vereinfacht.
+
     .. note::
 
-        In Git < 2.23 steht euch ``git switch`` noch nicht zur Verfügung. In
-        diesem Fall müsst ihr noch ``git checkout`` verwenden:
+       In Git < 2.23 steht euch ``git switch`` noch nicht zur Verfügung. In
+       diesem Fall müsst ihr noch ``git checkout`` verwenden:
 
-        :samp:`$ git checkout [-b] [{BRANCH_NAME}]`
-            ändert das Arbeitsverzeichnis in den angegebenen Zweig.
+       :samp:`$ git checkout [-b] [{BRANCH_NAME}]`
+           ändert das Arbeitsverzeichnis in den angegebenen Zweig.
 
-            ``-b``
-                erstellt den angegebenen Zweig, wenn dieser nicht schon besteht.
+           ``-b``
+               erstellt den angegebenen Zweig, wenn dieser nicht schon besteht.
 
 :samp:`$ git merge {FROM_BRANCH_NAME}`
     verbindet den angegebenen mit dem aktuellen Zweig, in dem ihr euch gerade
@@ -69,12 +73,12 @@ Gebräuchliche Befehle
 
     .. code-block:: console
 
-        $ git switch main
-        $ git merge hotfix
-        Updating f42c576..3a0874c
-        Fast forward
-         setup.py |    1 -
-         1 files changed, 0 insertions(+), 1 deletions(-)
+       $ git switch main
+       $ git merge hotfix
+       Updating f42c576..3a0874c
+       Fast forward
+        setup.py |    1 -
+        1 files changed, 0 insertions(+), 1 deletions(-)
 
     ``Fast forward``
         besagt, dass der neue Commit direkt auf den ursprünglichen Commit folgte
@@ -85,11 +89,11 @@ Gebräuchliche Befehle
 
     .. code-block:: console
 
-        $ git switch main
-        $ git merge 'my-feature'
-        Merge made by recursive.
-         setup.py |    1 +
-         1 files changed, 1 insertions(+), 0 deletions(-)
+       $ git switch main
+       $ git merge 'my-feature'
+       Merge made by recursive.
+        setup.py |    1 +
+        1 files changed, 1 insertions(+), 0 deletions(-)
 
     ``recursive``
         ist eine Merge-Strategie, die verwendet wird, sofern die Zusammenführung
@@ -105,21 +109,21 @@ Gelegentlich stößt Git beim Zusammenführen jedoch auf Probleme, :abbr:`z.B.
 
 .. code-block:: console
 
-    $ git merge 'my-feature'
-    automatischer Merge von setup.py
-    KONFLIKT (Inhalt): Merge-Konflikt in setup.py
-    Automatischer Merge fehlgeschlagen; beheben Sie die Konflikte und committen Sie dann das Ergebnis.
+   $ git merge 'my-feature'
+   automatischer Merge von setup.py
+   KONFLIKT (Inhalt): Merge-Konflikt in setup.py
+   Automatischer Merge fehlgeschlagen; beheben Sie die Konflikte und committen Sie dann das Ergebnis.
 
 Die Historie kann dann :abbr:`z.B. (zum Beispiel)` so aussehen:
 
 .. code-block:: console
 
-    *   49770a2 (HEAD -> main) Fix merge conflict with my-feature
-    |\
-    | * 9412467 (my-feature) My feature
-    * | 46ab1a2 Hotfix directly in main
-    |/
-    * 0c65f04 Initial commit
+   *   49770a2 (HEAD -> main) Fix merge conflict with my-feature
+   |\
+   | * 9412467 (my-feature) My feature
+   * | 46ab1a2 Hotfix directly in main
+   |/
+   * 0c65f04 Initial commit
 
 .. seealso::
 
