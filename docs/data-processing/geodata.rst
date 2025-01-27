@@ -5,6 +5,8 @@
 Geodaten
 ========
 
+.. _geodata-repositories:
+
 Daten-Repositorien
 ------------------
 
