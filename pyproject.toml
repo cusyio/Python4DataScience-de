@@ -64,3 +64,4 @@ known_third_party=["Cython", "accounts_pb2", "accounts_pb2_grpc", "dataprep", "g
 
 [tool.codespell]
 skip = "*.csv, *.pdf, *.rst, *.ipynb, ./docs/_build/*, */books.json,  */books.txt, ./styles/*, ./Python4DataScience.egg-info/*"
+ignore-words-list = "comit"

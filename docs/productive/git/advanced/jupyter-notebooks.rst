@@ -85,6 +85,7 @@ Standard-Jupyter-Notebook-Umgebung aufgelöst werden können:
 Um loszulegen, folgt den Anweisungen in `Git-Friendly Jupyter
 <https://nbdev.fast.ai/tutorials/git_friendly_jupyter.html>`_.
 
+.. _nbstrip_jq:
 
 ``jq``
 ------
@@ -177,12 +178,12 @@ Einrichten
 #. Wenn ihr diesen Filter für alle Git-Repositories verwenden wollt, könnt ihr
    euer Git auch global konfigurieren:
 
-   #. Zunächst fügt ihr in  ``~/.gitconfig`` folgendes hinzu:
+   #. Zunächst fügt ihr in :file:`~/.config/git/config` folgendes hinzu:
 
       .. code-block:: ini
 
         [core]
-        attributesfile = ~/.gitattributes
+        attributesfile = ~/.config/git/attributes
 
         [filter "nbstrip_jq"]
         clean = "jq --indent 1 \
@@ -200,7 +201,8 @@ Einrichten
           wird beim Zurücksetzen des Arbeitsbereichs durch Änderungen aus dem
           Bühnenbereich angewendet.
 
-   #. Anschließend müsst ihr in ``~/.gitattributes`` nur noch folgendes angeben:
+   #. Anschließend müsst ihr in :file:`~/.config/git/attributes` nur noch
+      folgendes angeben:
 
       .. code-block:: ini
 
