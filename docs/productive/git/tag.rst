@@ -32,6 +32,9 @@ haben.
         erstellt werden. Sie erstellen eine Tag-Prüfsumme, die im
         :file:`.git/`-Verzeichnis eures Repos gespeichert werden.
 
+``git tag``
+-----------
+
 :samp:`$ git tag`
     listet die Tags eures Repos auf, :abbr:`z.B. (zum Beispiel)`:
 
@@ -123,3 +126,19 @@ haben.
 
         $ git tag -d v3.9.16
         $ git push origin --delete v3.9.16
+
+``git describe``
+----------------
+
+Der :samp:`git describe {SH}`-Befehl findet das neueste Tag, das von einem
+Commit aus erreicht werden kann. Wenn das Tag auf den Commit verweist, wird nur
+das Tag angezeigt, andernfalls wird die Anzahl der weiteren Commits an den
+Tagnamen angehängt. Das Ergebnis ist ein Objektname, der von anderen
+Git-Befehlen verwendet werden kann, um den Commit zu identifizieren. Angenommen,
+ihr habt einen Commit-SHA und möchtet wissen, in welcher Version er zuerst
+veröffentlicht wurde, könnt ihr den folgenden Befehl verwenden:
+
+.. code-block:: console
+
+   $ git describe --contains 39ff38d | sed -E 's/[~^][0-9]*//g'
+   24.1.0

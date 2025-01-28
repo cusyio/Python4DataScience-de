@@ -20,7 +20,15 @@ die Kombination von `git ls-files <https://git-scm.com/docs/git-ls-files>`_ und
 Beispiel
 ~~~~~~~~
 
-:samp:`$ git ls-files -z -- "*.py" | xargs -0 git update-index --chmod=+x`
+To execute commands for the changed file list, you can use the shell `Command
+Substitution
+<https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html>`_:
+
+:samp:`$ uv run codespell $(git list-changed '*.py')`
+    Die Shell führt das ``git list-changed`` in Klammern aus und fügt dessen
+    Ausgabe in den äußeren Befehl ein. ``codespell`` erhält also die Liste der
+    geänderten Textdateien als Argument.
+:samp:`uv run pytest $(git diff --staged --name-only "tests/*test_*.py")`
     ändert für alle Dateien mit dem Suffix ``.py`` ggf. die Berechtigungen von
     ``100644`` zu ``100755``, sodass sie ausführbar werden.
 
@@ -36,6 +44,9 @@ Alle im Arbeits- oder Bühnenbereich geänderten Dateien
     gibt die dem Bühnenbereich hinzugefügten Dateien aus.
 :samp:`git diff --staged --name-only "*.{SUFFIX}"`
     filtert darüberhinaus noch nach einer bestimmten Dateiendung.
+
+.. _list-changed:
+
 :samp:`git diff --name-only --diff-filter d`
     schließt gelöschte Dateien aus.
 

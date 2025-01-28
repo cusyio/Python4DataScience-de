@@ -43,6 +43,8 @@ Ihr könnt jedoch die Ausgabe wieder an ``less`` übergeben:
 
    $ git log --oneline | grep Jupyter | less
 
+.. _delta_config:
+
 delta
 -----
 
@@ -71,6 +73,8 @@ Installation
    .. code-block:: ps1
 
       > choco install delta
+
+.. _delta_config:
 
 Konfiguration
 ~~~~~~~~~~~~~

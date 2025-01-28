@@ -8,6 +8,8 @@ Mit Git arbeiten
 Die Arbeit an einem Projekt beginnen
 ------------------------------------
 
+.. _git-init:
+
 Ein eigenes Projekt starten
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -72,6 +74,75 @@ An einem Projekt arbeiten
     .. seealso::
        `git status -v
        <https://git-scm.com/docs/git-status#Documentation/git-status.txt--v>`_
+
+    ``-s|--short``
+        zeigt den Status im Kurzformat an, :abbr:`z.B. (zum Beispiel)`:
+
+        .. code-block:: console
+
+           $ git status -s
+            M docs/productive/git/work.rst
+           ?? Python4DataScience.txt
+
+        Die vorangestellten Buchstaben geben den Zustand der Datei an.
+
+    ``git status`` gibt viele Ratschläge, was mit den Dateien in den einzelnen
+    Zuständen geschehen soll:
+
+    .. code-block:: console
+
+       $ git status
+       Auf Branch main
+       Ihr Branch und 'origin/main' sind divergiert,
+       und haben jeweils 1 und 1 unterschiedliche Commits.
+         (verwenden Sie "git pull", wenn Sie den Remote-Branch in Ihren integrieren wollen)
+
+       Änderungen, die nicht zum Commit vorgemerkt sind:
+         (benutzen Sie "git add <Datei>...", um die Änderungen zum Commit vorzumerken)
+         (benutzen Sie "git restore <Datei>...", um die Änderungen im Arbeitsverzeichnis zu verwerfen)
+           geändert:       docs/productive/git/work.rst
+
+       Unversionierte Dateien:
+         (benutzen Sie "git add <Datei>...", um die Änderungen zum Commit vorzumerken)
+           Python4DataScience.txt
+
+       keine Änderungen zum Commit vorgemerkt (benutzen Sie "git add" und/oder "git commit -a")
+
+    .. _git-statushints:
+
+    Wenn ihr mit Git vertraut seid, werdet ihr diese Hinweise vielleicht als
+    unnötig empfinden. Dann könnt ihr diese Meldungen mit der Option
+    ``advice.statusHints`` deaktivieren:
+
+    .. code-block:: console
+
+       $ git config --global advice.statusHints false
+
+    Von nun an zeigt der Aufruf von ``git status`` keine Hinweise mehr an:
+
+    .. code-block:: console
+
+       $ git status
+       Auf Branch main
+       Ihr Branch und 'origin/main' sind divergiert,
+       und haben jeweils 1 und 1 unterschiedliche Commits.
+
+       Änderungen, die nicht zum Commit vorgemerkt sind:
+           geändert:       docs/productive/git/work.rst
+
+       Unversionierte Dateien:
+           Python4DataScience.txt
+
+       keine Änderungen zum Commit vorgemerkt
+
+    Auch beim Aufruf von ``git-switch``  und ``git-checkout`` sowie beim
+    Schreiben von Commit-Nachrichten werden nun keine Hinweise mehr angezeigt.
+
+    .. tip::
+       Es gibt zwar noch viele andere `advice.*
+       <https://git-scm.com/docs/git-config#Documentation/git-config.txt-advice>`_-Optionen,
+       die meisten davon sind jedoch ziemlich unbedeutend, so dass sie erst
+       ausgeschlossen werden sollten, wenn sie anfangen zu stören.
 
 :samp:`$ git add {PATH}`
     fügt eine oder mehrere Dateien dem Bühnenbereich hinzu.
@@ -177,8 +248,14 @@ An einem Projekt arbeiten
         schreibt direkt in der Kommandozeile eine Commit-Message.
     ``--dry-run --short``
         zeigt, was committet werden würde mit dem Status im Kurzformat.
+    :samp:`-m '{FILE}'`
+        übergibt Dateinamen oder `Globbing
+        <https://de.wikipedia.org/wiki/Wildcard_(Informatik)>`_-Muster an ``git
+        commit``, um Änderungen an diesen Dateien zu übertragen, wobei alle
+        Änderungen übersprungen werden, die mit ``git add`` bereits in der
+        Staging-Area vorhanden sind.
 
-``$ git reset [--hard|--soft] [target-reference]``
+:samp:`$ git reset [--hard|--soft] [{TARGET_REFERENCE}]`
     setzt die Historie auf einen früheren Commit zurück.
 :samp:`$ git rm {PATH}`
     entfernt eine Datei namens :samp:`{PATH}` aus dem Arbeits- und
@@ -231,6 +308,27 @@ An einem Projekt arbeiten
         +---------------+-----------------------------------------------+
         | ``?``         | Hilfe                                         |
         +---------------+-----------------------------------------------+
+
+        .. _git-singlekey:
+
+        .. tip::
+           Normalerweise müsst ihr nach jedem Befehl, der einen Buchstaben
+           enthält, die Taste ︎ drücken. Ihr könnt diesen Overhead jedoch
+           abschalten:
+
+
+           .. code-block:: console
+
+              $ git config --global interactive.singleKey true
+
+        .. _git-autostash:
+
+        Ihr könnt auch automatisch Stash für Merge und Rebase anwenden:
+
+        .. code-block:: console
+
+           $ git config --global merge.autoStash true
+           $ git config --global rebase.autoStash true
 
     ``branch``
         erstellt aus versteckten Dateien einen Zweig, :abbr:`z.B. (zum

@@ -136,6 +136,8 @@ Konvertierungswerkzeuge für die Umwandlung von :file:`*.odt`, :file:`*.doc` und
 anderen Dokumentenformaten in einfachen Text. Für Binärdateien, für die es
 keinen Konverter gibt, reichen oft auch Strings aus.
 
+.. _exiftool:
+
 … für Medien-Dateien
 --------------------
 
