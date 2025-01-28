@@ -8,7 +8,7 @@ Git-Installation und -Konfiguration
 Installation
 ------------
 
-Für iX-Distributionen sollte Git im Standard-Repository vorhanden sein.
+Für ix-Distributionen sollte Git im Standard-Repository vorhanden sein.
 
 .. tab:: Debian/Ubuntu
 
@@ -66,106 +66,40 @@ Für iX-Distributionen sollte Git im Standard-Repository vorhanden sein.
 Konfiguration
 -------------
 
-Für jede Änderung muss ersichtlich sein, wer diese verursacht hat. Dazu hinterlegt
-ihr euren Namen und eure E-Mail-Adresse wie folgt:
+Sichern der globalen Konfiguration in :file:`~/.config/git/`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:samp:`$ git config --global user.name "{NAME}"`
-    legt den Namen :samp:`{NAME}` fest, der mit euren Commit-Transaktionen verknüpft wird.
-:samp:`$ git config --global user.email "{EMAIL-ADDRESS}"`
-    legt die E-Mail-Adresse :samp:`{EMAIL-ADDRESS}` fest, die mit euren Commit-Transaktionen
-    verknüpft wird.
+Git nutzt verschiedene Ebenen von Konfigurationsdateien, die in der folgenden
+Reihenfolge ausgeführt werden:
 
-Für eine bessere Lesbarkeit der Ausgabe sorgt die Kolorierung der Befehlszeilenausgabe.
-Diese schaltet ihr mit Hilfe dieses Aufrufs ein:
+``system``
+    gilt für alle User auf eurem Computer, aber es ist unwahrscheinlich, dass
+    ihr dies jemals benutzen werdet.
+``global``
+    gilt für alle Repositories eines einzelnen Users und wir werden uns das
+    detaillierter anschauen.
+``local``
+    gilt für ein einzelnes Repository und ist nur für einige wenige
+    Repository-spezifische Optionen.
 
-:samp:`$ git config --global color.ui auto`
-    aktiviert die Kolorierung der Befehlszeilenausgabe.
-
-Die :file:`~/.gitconfig`-Datei
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Mit den oben angegebenen Befehlen wird dir folgende :file:`~/.gitconfig`-Datei
-erstellt:
-
-.. code-block:: ini
-
-    [user]
-        name = veit
-        email = veit@cusy.io
-
-    [color]
-        ui = auto
-
-In der :file:`~/.gitconfig`-Datei können jedoch auch Aliase festgelegt werden:
-
-.. code-block:: ini
-
-    [alias]
-        st = status
-        ci = commit
-        br = branch
-        co = checkout
-        df = diff
-        dfs = diff --staged
-
-.. seealso::
-   Shell-Konfiguration:
-
-   * `oh-my-zsh <https://ohmyz.sh>`_
-
-     * `Git plugin aliases
-       <https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/README.md#aliases>`_
-     * `zsh-you-should-use
-       <https://github.com/MichaelAquilina/zsh-you-should-use>`_
-
-   * `Starship <https://starship.rs>`_
-
-     * `git_branch-Modul <https://starship.rs/config/#git-branch>`_
-     * `git_commit-Modul <https://starship.rs/config/#git-commit>`_
-     * `git_state <https://starship.rs/config/#git-state>`_
-     * `git_status-Modul <https://starship.rs/config/#git-status>`_
-
-Auch der Editor lässt sich angeben, :abbr:`z.B. (zum Beispiel)` mit:
-
-.. code-block:: ini
-
-    [core]
-        editor = vim
-
-oder für Visual Studio Code mit:
-
-.. code-block:: ini
-
-    [core]
-        editor = code --wait
+Git such nach einer globalen Konfigurationsdatei an zwei verschiedenen Orten:
+:file:`~/.config/git/config` und :file:`~/.gitconfig`. Der erste Ort ist der
+Standard für Konfigurationsdateien, der zweite ist der frühere Standard.
 
 .. note::
-   Auf macOS müsst ihr zunächst Visual Studio Code starten, dann die
-   Befehlspalette mit :kbd:`⌘+⇧-p` öffnen und schließlich den Befehl ``Install
-   'code' command in PATH`` ausführen.
-
-Auch die Hervorhebung von Leerzeichenfehlern in ``git diff`` lässt sich
-konfigurieren:
-
-.. code-block:: ini
-
-    [core]
-        # Highlight whitespace errors in git diff:
-        whitespace = tabwidth=4,tab-in-indent,cr-at-eol,trailing-space
-
-.. note::
-   Neben :file:`~/.gitconfig` sucht Git seit Version 1.17.12 auch in
-   :file:`~/.config/git/config` nach einer globalen Konfigurationsdatei.
-
-   Unter Linux kann :file:`~/.config` manchmal ein anderer Pfad sein, der durch
-   die Umgebungsvariable ``XDG_CONFIG_HOME`` festgelegt wird. Dieses
-   Verhalten ist Teil der `Spezifikation der X Desktop Group (XDG)
-   <https://wiki.archlinux.org/title/XDG_Base_Directory#Specification>`_. Den
-   anderen Pfad erhaltet ihr mit:
+   Auf Linux-Maschinen kann :file:`~/.config` manchmal ein anderer Pfad sein,
+   abhängig von der Umgebungsvariable ``XDG_CONFIG_HOME``. Dieses Verhalten ist
+   Teil der `X Desktop Group (XDG) specification
+   <https://wiki.archlinux.org/title/XDG_Base_Directory#Specification>`_. Ihr
+   erhaltet den Pfad mit:
 
    .. code-block:: ini
 
       $ echo $XDG_CONFIG_HOME
+
+   Wenn dies nichts zurückgibt, wird Ihr System :file:`~/.config` verwenden,
+   andernfalls wird es den angezeigten Pfad verwenden. Der Einfachheit halber
+   werden wir uns von nun an nur noch auf :file:`~/.config` beziehen.
 
 .. seealso::
    * `git config files <https://git-scm.com/docs/git-config#FILES>`_
@@ -195,6 +129,134 @@ Konfigurationsdateien aufzulisten:
    file:/Users/veit/.config/git/config     user.email=veit@cusy.io
    …
 
+.. note::
+    Ein umfangreiches Beispiel einer Konfigurationsdatei findet ihr in meinem
+    `dotfiles <https://github.com/veit/dotfiles/>`_-Repository: `.gitconfig
+    <https://github.com/veit/dotfiles/blob/main/.config/git/config>`_.
+
+.. _migrate-git-config:
+
+Migrieren von :file:`~/.gitconfig` zu :file:`~/.config/git/config`
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Wenn ihr aktuell noch die alte Datei :file:`~/.gitconfig` verwendet, könnt ihr
+die Datei mit wenigen Schritten in das :file:`~/.config`-Verzeichnis
+verschieben:
+
+#. Stellt sicher, dass das :file:`~/.config`-Verzeichnis existiert.
+#. Verschiebt eure bestehende Konfigurationsdate in dieses Verzeichnis:
+
+   .. code-block:: console
+
+      $ mv ~/.gitconfig ~/.config/git/config
+
+#. Überprüft, ob Git weiterhin eure Konfigurationsdatei liest, indem ihr
+   ``user.name`` abfragt:
+
+   .. code-block:: console
+
+      $ git config --global user.name
+      Veit Schiele
+
+#. Möglicherweise solltet ihr auch noch andere Dateien verschieben, :abbr:`z.B.
+   (zum Beispiel)` :file:`~/.gitattributes` und :file:`~/.gitignore`. Ob diese Dateien vorhanden sind, könnt ihr überprüfen mit
+
+   .. code-block:: console
+
+      $ git config --global core.excludesFile
+      ~/.gitignore
+      $ git config --global core.attributesFile
+      ~/.gitattributes
+
+   Dann müsst ihr die Dateien ebenfalls verschieben und die zugehörigen Konfigurationseinträge löschen:
+
+   .. code-block:: console
+
+      $ mv ~/.gitignore_global ~/.config/git/ignore
+      $ git config --global --unset core.excludesFile
+      $ mv ~/.gitattributes ~/.config/git/attributes
+      $ git config --global --unset core.attributesFile
+
+Lesen und Schreiben der Konfigurationseinträge
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Wie wir bereits oben gesehen haben, können Konfigurationseinträge gelesen werden
+mit `git config <https://git-scm.com/docs/git-config>`_, :abbr:`z.B. (zum
+Beispiel)`:
+
+.. code-block:: console
+
+   $ git config --global user.name
+   Veit Schiele
+
+… und um den Eintrag zu ändern
+
+.. code-block:: console
+
+   $ git config --global user.name 'veit'
+
+Ihr könnt die Konfigurationsdatei auch direkt ändern, indem ihr ``git config``
+zusammen mit der ``-e|--edit``-Option aufruft:
+
+.. code-block:: console
+
+   $ git config --global -e
+
+Dies öffnet die :file:`~/.config/git/config`-Datei in eurem Standardeditor.
+
+Git speichert die Konfiguration in `INI
+<https://de.wikipedia.org/wiki/Initialisierungsdatei>`_-Dateien.
+
+Der Standardeditor für Git ist definiert in der ``GIT_EDITOR``-Umgebungsvariable
+oder in Git’s ``core.editor``-Option oder in der ``VISUAL`` oder
+``EDITOR``-Umgebungsvariable. Ihr könnt die Werte abfragen mit
+
+.. code-block:: console
+
+   $ echo $GIT_EDITOR
+   $ git config core.editor
+   $ echo $VISUAL
+   $ echo $EDITOR
+
+Üblicherweise wollt ihr immer denselben Editor verwenden und daher sollte die
+``EDITOR``-Umgebungsvariable gesetzt werden. Um dies zu tun, könnt ihr folgendes
+in :file:`~/.bash_profile` oder :file:`~/.zprofile` eintragen:
+
+.. code-block:: sh
+
+   export EDITOR='C:\Program Files (x86)\Microsoft VS Code\code.exe --wait'
+
+.. note::
+   Auf macOS müsst ihr zunächst Visual Studio Code starten, dann die
+   Befehlspalette mit :kbd:`⌘+⇧-p` öffnen und schließlich den Befehl *Install
+   'code' command in PATH* ausführen.
+
+oder
+
+.. code-block:: sh
+
+   export EDITOR='vim'
+
+.. _basic-git-config:
+
+Basiskonfiguration
+~~~~~~~~~~~~~~~~~~
+
+Git Commits haben zwei Pflichtfelder, die sich auf die Person beziehen: den Namen der Person, die die Code-Änderungen vorgenommen hat und die Person, die den
+Code ins Repository übertragen hat. In den meisten Workflows ist dies dieselbe
+Person. Mit den Optionen ``user.name`` und ``user.email`` könnt ihr diese
+Informationen für ``author`` und ``committer`` konfigurieren.
+
+.. tip::
+   Git-Hosts, wie `GitHub <https://github.com>`_ oder
+   :doc:`advanced/gitlab/index`, verknüpfen Commits mit eurem Profil über die
+   E-Mail-Adresse. Wenn die konfigurierte E-Mail-Adresse nicht mit eurem Profil
+   übereinstimmt, werden eure Commits nicht richtig zugewiesen. Dadurch können
+   Teammitglieder schwerer bestimmen, dass der Commit von euch kommt. Daher
+   solltet ihr den konfigurierten Namen und die E-Mail-Adresse stets überprüfen.
+
+.. _includeif:
+
 Alternative Konfigurationsdatei
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -207,9 +269,9 @@ globalen Konfiguration:
 
 .. code-block:: ini
 
-    …
-    [includeIf "gitdir:~/private"]
-    path = ~/.config/git/config-private
+   …
+   [includeIf "gitdir:~/private"]
+   path = ~/.config/git/config-private
 
 Dieses Konstrukt sorgt dafür, dass Git zusätzliche Konfigurationen einbezieht
 oder bestehende überschreibt, wenn ihr in :file:`~/private` arbeitet.
@@ -219,15 +281,115 @@ eure alternative Konfiguration fest, :abbr:`z.B. (zum Beispiel)`:
 
 .. code-block:: ini
 
-    [user]
-        email = kontakt@veit-schiele.de
+   [user]
+       email = kontakt@veit-schiele.de
 
-    [core]
-        sshCommand = ssh -i ~/.ssh/private_id_rsa
+   [core]
+       sshCommand = ssh -i ~/.ssh/private_id_rsa
 
 .. seealso::
    * `core.sshCommand
      <https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresshCommand>`_
+
+.. _git-colouring:
+
+Kolorieren
+~~~~~~~~~~
+
+Standardmäßig nutzt Git die Fähigkeit eures Terminals, verschiedene Arten von
+Text einzufärben und zu formatieren. Eine solche Kolorierung ermöglicht euch,
+die Ausgabe schneller zu analysieren. Die Standardfarben sind jedoch suboptimal:
+``git status`` beispielsweise markiert geänderte Dateien in Rot, einer Farbe,
+die im Allgemeinen mit Fehlern assoziiert wird; das Ändern von Dateien ist
+jedoch kein Fehler, sondern völlig normal in jedem Git-Prozess. Ihr könnt die
+Optionen ``color.*`` verwenden, um die Farben pro Befehl anzupassen. Ich
+verwende die Farben des `cheat sheet colours
+<https://web.archive.org/web/20180223152317/https://cheat.errtheblog.com/s/git>`_
+schon seit langem:
+
+.. code-block:: ini
+
+   [color "branch"]
+       current = yellow reverse
+       local = yellow
+       remote = green
+
+   [color "status"]
+       added = yellow
+       changed = green
+       untracked = cyan
+
+.. note::
+   Später werden wir uns :ref:`git-delta` ansehen, ein Werkzeug zur besseren
+   Visualisierung von Unterschieden. Seine Kolorierung würde die Informationen
+   aus ``[colour "diff"]`` überschreiben, weshalb wir diesen Abschnitt nicht
+   hinzugefügt haben.
+
+.. _git-autocorrect:
+
+Befehle korrigieren
+~~~~~~~~~~~~~~~~~~~
+
+Wenn ihr bei der Eingabe eines Git-Befehls einen Fehler macht, werden
+standardmäßig ähnliche Befehle aufgelistet und das Programm beendet:
+
+.. code-block:: console
+
+   $ git comit -m ':wrench: Update git config'
+   git: 'comit' ist kein Git-Befehl. Siehe 'git --help'.
+
+   Der ähnlichste Befehl ist
+       commit
+
+Ihr könnt Git aber auch mit ``git config --global help.autoCorrect immediate``
+[#]_ so konfigurieren, dass der erste Treffer automatisch ausgeführt wird:
+
+.. code-block:: console
+
+   $ git comit -m ':wrench: Update git config'
+   WARNUNG: Sie haben Git-Befehl 'comit' ausgeführt, welcher nicht existiert.
+   Setze fort unter der Annahme, dass Sie 'commit' meinten.
+   [main 48cafbf5f] :wrench: Update git config
+
+Git korrigiert jedoch nur dann automatisch, wenn ein Befehl eine ausreichend
+große Übereinstimmung aufweist. Wenn es mehrere potenzielle Übereinstimmungen
+gibt, werden diese aufgelistet und die Korrektur wird abgebrochen:
+
+.. code-block:: console
+
+   $ git co -m ':wrench: Update git config'
+   git: 'co' is not a git command. See 'git --help'.
+
+   The most similar commands are
+       commit
+       clone
+       log
+
+Wenn euch die automatische Korrektur eines Befehls zu viel ist, könnt ihr
+stattdessen den *Prompt*-Modus verwenden:
+
+.. code-block:: console
+
+   $ git config --global help.autoCorrect prompt
+   $ git comit -m ':wrench: Update git config'
+   WARNUNG: Sie haben Git-Befehl 'comit' ausgeführt, welcher nicht existiert.
+   Stattdessen 'commit' ausführen (y/N)? y
+   [main 48cafbf5f] :wrench: Update git config
+
+.. _git-pagination:
+
+Paginierung
+~~~~~~~~~~~
+
+Ihr könnt die Paginierung standardmäßig für einen Befehl aktivieren, indem ihr
+die entsprechende Option setzt: :samp:`pager.{CMD} = true`, [#]_ zum Beispiel,
+um den Git-Status auf Paginierung umzustellen:
+
+.. code-block:: console
+
+   $ git config --global pager.status true
+
+.. _credential-helper:
 
 Anmeldedaten verwalten
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -245,77 +407,91 @@ kann :abbr:`ggf. (gegebenenfalls)` erhöht werden, :abbr:`z.B. (zum Beispiel)` m
 
 .. code-block:: console
 
-    $ git config --global credential.helper 'cache --timeout=3600'
+   $ git config --global credential.helper 'cache --timeout=3600'
+
+.. tab:: Debian/Ubuntu
+
+   Unter Linux müsst ihr einen :abbr:`sog: (sogenannten)` `Credential Store
+   <https://github.com/git-ecosystem/git-credential-manager/blob/release/docs/credstores.md>`_
+   auswählen. In den meisten Fällen werdet ihr euch für die *Secret Service API*
+   entscheiden, wie :abbr:`z.B. (zum Beispiel)` ``libsecret`` von Git, den ihr
+   auswählen könnt mit:
+
+   .. code-block:: console
+
+      $ git config --global credential.credentialStore secretservice
 
 .. tab:: macOS
 
-    Unter macOS lässt sich mit ``osxkeychain`` die Schlüsselbundverwaltung
-    (*Keychain*) nutzen um die Zugangsdaten zu speichern. ``osxkeychain`` setzt
-    Git in der Version 1.7.10 oder neuer voraus und kann im selben Verzeichnis
-    wie Git installiert werden mit:
+   Unter macOS lässt sich mit ``osxkeychain`` die Schlüsselbundverwaltung
+   (*Keychain*) nutzen um die Zugangsdaten zu speichern. ``osxkeychain`` setzt
+   Git in der Version 1.7.10 oder neuer voraus und kann im selben Verzeichnis
+   wie Git installiert werden mit:
 
-    .. code-block:: console
+   .. code-block:: console
 
-        $ git credential-osxkeychain
-        git: 'credential-osxkeychain' is not a git command. See 'git --help'.
-        $ curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain
-        $ chmod u+x git-credential-osxkeychain
-        $ sudo mv git-credential-osxkeychain /usr/bin/
-        Password:
-        git config --global credential.helper osxkeychain
+      $ git credential-osxkeychain
+      git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+      $ curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain
+      $ chmod u+x git-credential-osxkeychain
+      $ sudo mv git-credential-osxkeychain /usr/bin/
+      Password:
+      git config --global credential.helper osxkeychain
 
-    Dies trägt folgendes in die :file:`~/.gitconfig`-Datei ein:
+   Dies trägt folgendes in die :file:`~/.gitconfig`-Datei ein:
 
-    .. code-block:: ini
+   .. code-block:: ini
 
-        [credential]
-            helper = osxkeychain
+      [credential]
+          helper = osxkeychain
+
+   Alternativ könnt ihr auch den `Git Credential Manager
+   <https://github.com/git-ecosystem/git-credential-manager>`_ installieren mit
+
+   .. code-block:: console
+
+       brew install --cask git-credential-manager
 
 .. tab:: Windows
 
-    Für Windows steht der `Git Credential Manager (GCM)
-    <https://github.com/git-ecosystem/git-credential-manager>`_ zur Verfügung.
-    Er ist integriert in `Git for Windows <https://git-scm.com/download/win>`_
-    und wird standardmäßig mitinstalliert. Zusätzlich besteht jedoch auch ein
-    eigenständiges Installationsprogramm in
-    `Releases <https://github.com/git-ecosystem/git-credential-manager/releases>`_.
+   Für Windows steht der `Git Credential Manager (GCM)
+   <https://github.com/git-ecosystem/git-credential-manager>`_ zur Verfügung. Er
+   ist integriert in `Git for Windows <https://git-scm.com/download/win>`_ und
+   wird standardmäßig mitinstalliert. Zusätzlich besteht jedoch auch ein
+   eigenständiges Installationsprogramm in
+   `Releases <https://github.com/git-ecosystem/git-credential-manager/releases>`_.
 
-    GCM wird mit dem nachfolgenden Aufruf konfiguriert:
+   GCM wird mit dem nachfolgenden Aufruf konfiguriert:
 
-    .. code-block:: console
+   .. code-block:: console
 
-        $ git credential-manager configure
-        Configuring component 'Git Credential Manager'...
-        Configuring component 'Azure Repos provider'...
+      $ git credential-manager configure
+      Configuring component 'Git Credential Manager'...
+      Configuring component 'Azure Repos provider'...
 
-    Dies trägt den ``[credential]``-Abschnitt in eure :file:`~/.gitconfig`-Datei
-    ein:
+   Dies trägt den ``[credential]``-Abschnitt in eure :file:`~/.gitconfig`-Datei
+   ein:
 
-    .. code-block:: ini
+   .. code-block:: ini
 
-        [credential]
-            helper =
-            helper = C:/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
+      [credential]
+          helper =
+          helper = C:/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
 
-    Nun öffnet sich beim Clonen eines Repository ein Fenster des GCM und fordert
-    euch zur Eingabe eurer Zugangsdaten auf.
+   Nun öffnet sich beim Clonen eines Repository ein Fenster des GCM und fordert
+   euch zur Eingabe eurer Zugangsdaten auf.
 
-    Zudem wird die :file:`~/.gitconfig`-Datei ergänzt, :abbr:`z.B. (zum
-    Beispiel)` um die folgenden beiden Zeilen:
+   Zudem wird die :file:`~/.gitconfig`-Datei ergänzt, :abbr:`z.B. (zum
+   Beispiel)` um die folgenden beiden Zeilen:
 
-    .. code-block:: ini
+   .. code-block:: ini
 
-        [credential "https://ce.cusy.io"]
-            provider = generic
-
-.. note::
-    Ein umfangreiches Beispiel einer Konfigurationsdatei findet ihr in meinem
-    `dotfiles <https://github.com/veit/dotfiles/>`_-Repository: `.gitconfig
-    <https://github.com/veit/dotfiles/blob/main/.config/git/config>`_.
+      [credential "https://ce.cusy.io"]
+          provider = generic
 
 .. seealso::
-    * `Git Credential Manager: authentication for everyone
-      <https://github.blog/security/application-security/git-credential-manager-authentication-for-everyone/>`_
+   * `Git Credential Manager: authentication for everyone
+     <https://github.blog/security/application-security/git-credential-manager-authentication-for-everyone/>`_
 
 .. _gitignore:
 
@@ -328,10 +504,10 @@ Versionsverwaltung ausschließen. Eine typische :file:`.gitignore`-Datei kann
 
 .. code-block:: ini
 
-    /logs/*
-    !logs/.gitkeep
-    /tmp
-    *.swp
+   /logs/*
+   !logs/.gitkeep
+   /tmp
+   *.swp
 
 Dabei verwendet Git `Globbing <https://linux.die.net/man/7/glob>`_-Muster,
 :abbr:`u.a. (unter anderem)`:
@@ -459,15 +635,15 @@ Eine bessere Möglichkeit ist, in einem leeren Verzeichnis eine
 
 .. code-block:: ini
 
-    # ignore everything except .gitignore
-    *
-    !.gitignore
+   # ignore everything except .gitignore
+   *
+   !.gitignore
 
 Dies vermeidet die vorher genannten Probleme.
 
 .. seealso:
-    * `Can I add empty directories?
-      <https://git.wiki.kernel.org/index.php/GitFaq#Can_I_add_empty_directories.3F>`_
+   * `Can I add empty directories?
+     <https://git.wiki.kernel.org/index.php/GitFaq#Can_I_add_empty_directories.3F>`_
 
 Dateien zentral mit ``excludesfile`` ausschließen
 :::::::::::::::::::::::::::::::::::::::::::::::::
@@ -478,11 +654,11 @@ angegeben:
 
 .. code-block:: ini
 
-    [core]
+   [core]
 
-        # Use custom `.gitignore`
-        excludesfile = ~/.gitignore
-        …
+       # Use custom `.gitignore`
+       excludesfile = ~/.gitignore
+       …
 
 .. note::
    Hilfreiche Vorlagen findet ihr in meinem `dotfiles
@@ -501,10 +677,10 @@ als ignorierte Datei in eurem Arbeitsverzeichnis verbleibt.
 
 .. code-block:: console
 
-    $ echo *.log >> .gitignore
-    $ git rm --cached *.log
-    rm 'instance.log'
-    $ git commit -m "Remove log files"
+   $ echo *.log >> .gitignore
+   $ git rm --cached *.log
+   rm 'instance.log'
+   $ git commit -m "Remove log files"
 
 .. note::
    Ihr könnt die Option ``--cached`` weglassen, wenn ihr die Datei sowohl aus
@@ -518,10 +694,10 @@ Option ``-f`` (oder ``--force``) bei ``git add`` zu erzwingen:
 
 .. code-block:: console
 
-    $ cat data/.gitignore
-    *
-    $ git add -f data/iris.csv
-    $ git commit -m "Force add iris.csv"
+   $ cat data/.gitignore
+   *
+   $ git add -f data/iris.csv
+   $ git commit -m "Force add iris.csv"
 
 Ihr könnt dies in Erwägung ziehen, wenn ihr ein allgemeines Muster (wie ``*``)
 definiert habt, aber eine bestimmte Datei übertragen wollt. Eine bessere Lösung
@@ -529,12 +705,12 @@ ist meist jedoch, eine Ausnahme von der allgemeinen Regel zu definieren:
 
 .. code-block:: console
 
-    $ echo '!iris.csv' >> data/.gitignore
-    $ cat data/.gitignore
-    *
-    !iris.csv
-    $ git add data/iris.csv
-    $ git commit -m "Add iris.csv"
+   $ echo '!iris.csv' >> data/.gitignore
+   $ cat data/.gitignore
+   *
+   !iris.csv
+   $ git add data/iris.csv
+   $ git commit -m "Add iris.csv"
 
 Dieser Ansatz dürfte für euer Team offensichtlicher und weniger verwirrend sein.
 
@@ -569,8 +745,8 @@ Ignorieren einer bestimmten Datei ist:
 
 .. code-block:: console
 
-    $ git check-ignore -v data/iris.csv
-    data/.gitignore:2:!iris.csv data/iris.csv
+   $ git check-ignore -v data/iris.csv
+   data/.gitignore:2:!iris.csv data/iris.csv
 
 Obige Ausgabe besteht aus vier Feldern (Trennzeichen sind drei Doppelpunkte
 und ein Leerzeichen) und beinhaltet:
@@ -652,6 +828,9 @@ Git-Verwaltung nehmen, sie aber nicht löschen:
    <https://git-scm.com/docs/git-config#Documentation/git-config.txt---show-scope>`_
 .. [#] `git config --show-origin
    <https://git-scm.com/docs/git-config#Documentation/git-config.txt---show-origin>`_
+.. [#] `help.autoCorrect
+       <https://git-scm.com/docs/git-config#Documentation/git-config.txt-helpautoCorrect>`_
+.. [#] `pager.cmd <https://git-scm.com/docs/git-config#Documentation/git-config.txt-pagerltcmdgt>`_
 .. [#] `git status --ignored
    <https://git-scm.com/docs/git-status#Documentation/git-status.txt---ignoredltmodegt>`_
 .. [#] `git check-ignore

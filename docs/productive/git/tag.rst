@@ -32,16 +32,33 @@ haben.
         erstellt werden. Sie erstellen eine Tag-Prüfsumme, die im
         :file:`.git/`-Verzeichnis eures Repos gespeichert werden.
 
+``git tag``
+-----------
+
 :samp:`$ git tag`
     listet die Tags eures Repos auf, :abbr:`z.B. (zum Beispiel)`:
 
     .. code-block:: console
 
-        v0.9.9
-        v1.0.1
-        v1.0.2
-        v1.1
-        ...
+       0.1.0
+       0.1.1
+       0.1.10
+       0.1.11
+       0.1.12
+       0.1.2
+       …
+
+    .. _tag-sort:
+
+    .. tip::
+       Die Reiehnfolge der Tags entspricht jedoch nicht derjenigen, die wir
+       eigentlich erwarten würden: Nach ``0.1.1`` erwarten wir ``0.1.2`` und
+       nicht ``0.1.10``. Um dies zu erreichen, können wir Git folgendermaßen
+       konfigurieren:
+
+       .. code-block:: console
+
+          git config --global tag.sort version:refname
 
     :samp:`$ git tag -l '{REGEX}'`
         listet nur Tags auf, die zu einem regulären Ausdruck passen.
@@ -83,9 +100,9 @@ haben.
         To git@github.com:python/cpython.git
          * [new tag]         v3.9.16 -> v3.9.16
 
-    Um mehrere Tags gleichzeitig zu pushen, übergebt die Option :samp:`--tags`
-    an den Befehl :samp:`git push`. Andere erhalten die Tags bei :samp:`git
-    clone` oder :samp:`git pull` des Repos.
+    Um Tags an den Server zu übermitteln, könnt ihr die :samp:`--tags`-Option
+    für den Befehl :samp:`git push` verwenden. Andere erhalten die Tags bei
+    :samp:`git clone`, :samp:`git pull` oder :samp:`git fetch` des Repos.
 
     Mit ``git push --follow-tags`` könnt ihr mit einem Commit auch gleichzeitig
     die zugehörigen annotierten Tags teilen.
@@ -123,3 +140,30 @@ haben.
 
         $ git tag -d v3.9.16
         $ git push origin --delete v3.9.16
+
+    .. _prune-tags:
+
+    Wenn Tags, die auf dem Server gelöscht wurden, auch bei euch lokal
+    gelöscht werden sollen, könnt ihr :samp:`git fetch --prune-tags`
+    verwenden. Alternativ könnt ihr auch die globale Konfiguration anpassen
+    mit:
+
+    .. code-block:: console
+
+       $ git config --global fetch.pruneTags true
+
+``git describe``
+----------------
+
+Der :samp:`git describe {SH}`-Befehl findet das neueste Tag, das von einem
+Commit aus erreicht werden kann. Wenn das Tag auf den Commit verweist, wird nur
+das Tag angezeigt, andernfalls wird die Anzahl der weiteren Commits an den
+Tagnamen angehängt. Das Ergebnis ist ein Objektname, der von anderen
+Git-Befehlen verwendet werden kann, um den Commit zu identifizieren. Angenommen,
+ihr habt einen Commit-SHA und möchtet wissen, in welcher Version er zuerst
+veröffentlicht wurde, könnt ihr den folgenden Befehl verwenden:
+
+.. code-block:: console
+
+   $ git describe --contains 39ff38d | sed -E 's/[~^][0-9]*//g'
+   24.1.0

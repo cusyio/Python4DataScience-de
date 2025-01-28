@@ -37,6 +37,8 @@ Gebräuchliche Befehle
         beschränkt die Zweige auf diejenigen, die einem bestimmten Muster
         entsprechen.
 
+.. _committerdate:
+
 :samp:`$ git branch --sort=-committerdate`
     sortiert die Zweige nach dem Commit-Datum.
 
@@ -132,6 +134,8 @@ Die Historie kann dann :abbr:`z.B. (zum Beispiel)` so aussehen:
    * `Git Tools - Fortgeschrittenes Merging
      <https://git-scm.com/book/de/v2/Git-Tools-Fortgeschrittenes-Merging>`_
 
+.. _merge-conflictstyle:
+
 Verbesserte Konfliktanzeige mit zdiff3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -187,6 +191,8 @@ Hier ist der gleiche Merge mit diesem Stil:
 Die gemeinsame Basis wird nun zwischen den Markierungen ``|||||||`` und
 ``=======`` angezeigt mit dem SHA-Wert der gemeinsamen Basis. Dieser zusätzliche
 Kontext ist oft nützlich, um einen Konflikt auflösen zu können.
+
+.. _rerere:
 
 ``rerere``, um aufgezeichnete Konfliktlösungen wiederzuverwenden
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -281,6 +287,47 @@ zweierlei beachten:
        bestimmt, wie lange Einträge für ungelöste Konflikte aufbewahrt werden.
        Der Standardwert ist 15 Tage.
 
+.. _merge-aliases:
+
+Aliase für die schnellere Auflösung von Merge-Konflikten
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Das Auflösen von Merge-Konflikten kann aufwändig sein, aber Aliase können den
+Prozess beschleunigen.
+
+Ihr könnt die `--diff-filter
+<https://git-scm.com/docs/diff-options#Documentation/diff-options.txt-code--diff-filterACDMRTUXBcode>`_-Option
+für ``git diff`` verwenden, um euch nur die Dateien anzeigen zu lassen, die
+nicht zusammengeführt werden können.
+
+.. code-block:: console
+
+   $ git diff --name-only --diff-filter U
+
+Ihr könnt auch einen `Git Command Alias
+<https://git-scm.com/docs/git-config#Documentation/git-config.txt-alias>`_
+erstellen:
+
+.. code-block:: console
+
+   $ git config --global alias.list-unmerged '!git diff --name-only --diff-filter U'
+
+Und um diese Dateien zu editieren, könnt ihr den folgenden `Git Command Alias
+<https://git-scm.com/docs/git-config#Documentation/git-config.txt-alias>`_
+verwenden:
+
+.. code-block:: console
+
+   $ git config --global alias.edit-unmerged '!git diff --name-only --diff-filter U | xargs -r $(git var GIT_EDITOR)'
+
+Nun könnt ihr die nicht-zusammengeführten Dateien editieren mit
+``git edit-unmerged`` und anschließend alle Dateien in die Staging-Area überführen mit ``git add -u``.
+
+.. seealso::
+   Ich habe die Editor-Variable dem `gitalias
+   <https://github.com/GitAlias/gitalias/tree/main>`_-Projekt entnommen. Und
+   vielleicht findet ihr dort ja noch mehr Ideen für eure Aliase.
+
 Zweige löschen
 --------------
 
@@ -311,6 +358,8 @@ Wollt ihr alle Zweige eines lokalen Repositories dem entfernten Repo hinzufügen
 könnt ihr dies mit:
 
 :samp:`$ git push --set-upstream origin --all`
+
+.. _push-autoSetupRemote:
 
 Damit dies für Zweige ohne Tracking-Upstream automatisch geschieht, könnt ihr
 folgendes konfigurieren:
@@ -399,3 +448,12 @@ Team-Mitgliedeer können ihre lokal noch vorhandenen Referenzen auf den
 .. code-block:: console
 
    $ git fetch origin --prune
+
+.. tip::
+   Mit `git-symbolic-ref <https://git-scm.com/docs/git-symbolic-ref>`_ könnt ihr
+   Aliase erzeugen, :abbr:`z.B. (zum Beispiel)`:
+
+   .. code-block:: console
+
+      $ git symbolic-ref refs/heads/main refs/heads/master
+      $ git symbolic-ref refs/remotes/origin/main refs/remotes/origin/master

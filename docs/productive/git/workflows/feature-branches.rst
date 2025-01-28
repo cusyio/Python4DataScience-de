@@ -32,15 +32,18 @@ Projekt integriert wird. Wenn ihr in eurer Feature-Entwicklung auf Probleme
 stoßt, könnt ihr Merge- oder Pull-Requests jedoch auch nutzen um mit anderen im
 Team Lösungsmöglichkeiten zu erörtern.
 
-Merge- oder Pull-Requests werden von Web-basierten Diensten wie `GitHub <https://github.com/>`_, `GitLab
-<https://about.gitlab.com/>`_ und `Atlassian <https://bitbucket.org/>`_ zum
-Review und Kommentieren der Änderungen bereitgestellt. Mit :samp:`@{ID}` in
-euren Kommentaren könnt ihr auch bestimmte Personen aus dem Projektteam direkt
-um Feedback bitten. Sofern ihr automatisiert testet, könnt ihr hier auch die
-Testergebnisse sehen; :abbr:`evtl. (eventuell)` entspricht ja der Coding Style
-nicht euren Projektrichtlinien, oder die Testabdeckung ist ungenügend. In den
-Merge- oder Pull-Requests werden solche Diskussionen gefördert und dokumentiert
-ohne dass sie als unmittelbar als Commits im Repository erscheinen.
+.. _merge-pull-requests:
+
+Merge- oder Pull-Requests werden von Web-basierten Diensten wie `GitHub
+<https://github.com/>`_, `GitLab <https://about.gitlab.com/>`_ und `Atlassian
+<https://bitbucket.org/>`_ zum Review und Kommentieren der Änderungen
+bereitgestellt. Mit :samp:`@{ID}` in euren Kommentaren könnt ihr auch bestimmte
+Personen aus dem Projektteam direkt um Feedback bitten. Sofern ihr automatisiert
+testet, könnt ihr hier auch die Testergebnisse sehen; :abbr:`evtl. (eventuell)`
+entspricht ja der Coding Style nicht euren Projektrichtlinien, oder die
+Testabdeckung ist ungenügend. In den Merge- oder Pull-Requests werden solche
+Diskussionen gefördert und dokumentiert ohne dass sie als unmittelbar als
+Commits im Repository erscheinen.
 
 .. warning::
    Merge- oder Pull-Requests sind kein Bestandteil von Git selbst, sondern des

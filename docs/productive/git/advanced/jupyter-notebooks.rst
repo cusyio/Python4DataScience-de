@@ -85,6 +85,7 @@ Standard-Jupyter-Notebook-Umgebung aufgelöst werden können:
 Um loszulegen, folgt den Anweisungen in `Git-Friendly Jupyter
 <https://nbdev.fast.ai/tutorials/git_friendly_jupyter.html>`_.
 
+.. _nbstrip_jq:
 
 ``jq``
 ------
@@ -130,12 +131,12 @@ Ein typischer Aufruf ist:
 
 .. code-block:: console
 
-    jq --indent 1  \
-      '(.cells [] | select (has ("output")) | .outputs) = []
-      | (.cells [] | select (has ("execution_count")) | .execution_count) = null
-      | .metadata = {"language_info": {"name": "python", "pygments_lexer": "ipython3"}}
-      | .Cells []. Metadaten = {}
-      '  example.ipynb
+   jq --indent 1  \
+     '(.cells [] | select (has ("output")) | .outputs) = []
+     | (.cells [] | select (has ("execution_count")) | .execution_count) = null
+     | .metadata = {"language_info": {"name": "python", "pygments_lexer": "ipython3"}}
+     | .Cells []. Metadaten = {}
+     '  example.ipynb
 
 Jede Zeile innerhalb der einfachen Anführungszeichen definiert einen Filter –
 die erste wählt alle Einträge aus der Liste *cells* aus und löscht die Ausgaben.
@@ -152,7 +153,7 @@ Einrichten
 #. Um euch die Arbeit zu erleichtern, könnt ihr einen Alias in der
    ``~/.bashrc``-Datei anlegen:
 
-   .. code-block:: bash
+   .. code-block:: console
 
     alias nbstrip_jq="jq --indent 1 \
         '(.cells[] | select(has(\"outputs\")) | .outputs) = []  \
@@ -177,22 +178,22 @@ Einrichten
 #. Wenn ihr diesen Filter für alle Git-Repositories verwenden wollt, könnt ihr
    euer Git auch global konfigurieren:
 
-   #. Zunächst fügt ihr in  ``~/.gitconfig`` folgendes hinzu:
+   #. Zunächst fügt ihr in :file:`~/.config/git/config` folgendes hinzu:
 
-      .. code-block:: ini
+      .. code-block:: console
 
-        [core]
-        attributesfile = ~/.gitattributes
+         [core]
+         attributesfile = ~/.config/git/attributes
 
-        [filter "nbstrip_jq"]
-        clean = "jq --indent 1 \
-                '(.cells[] | select(has(\"outputs\")) | .outputs) = []  \
-                | (.cells[] | select(has(\"execution_count\")) | .execution_count) = null  \
-                | .metadata = {\"language_info\": {\"name\": \"python\", \"pygments_lexer\": \"ipython3\"}} \
-                | .cells[].metadata = {} \
-                '"
-        smudge = cat
-        required = true
+         [filter "nbstrip_jq"]
+         clean = "jq --indent 1 \
+                 '(.cells[] | select(has(\"outputs\")) | .outputs) = []  \
+                 | (.cells[] | select(has(\"execution_count\")) | .execution_count) = null  \
+                 | .metadata = {\"language_info\": {\"name\": \"python\", \"pygments_lexer\": \"ipython3\"}} \
+                 | .cells[].metadata = {} \
+                 '"
+         smudge = cat
+         required = true
 
       ``clean``
           wird beim Hinzufügen von Änderungen in den Bühnenbereich angewendet.
@@ -200,7 +201,8 @@ Einrichten
           wird beim Zurücksetzen des Arbeitsbereichs durch Änderungen aus dem
           Bühnenbereich angewendet.
 
-   #. Anschließend müsst ihr in ``~/.gitattributes`` nur noch folgendes angeben:
+   #. Anschließend müsst ihr in :file:`~/.config/git/attributes` nur noch
+      folgendes angeben:
 
       .. code-block:: ini
 

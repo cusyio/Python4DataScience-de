@@ -143,7 +143,6 @@ GitHub-Syntax für Bedingungen und Ausdrücke
        steps:
          - run: echo "Deploy to production server"
 
-
 GitLab-Syntax für Bedingungen und Ausdrücke
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

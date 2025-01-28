@@ -137,15 +137,15 @@ Pull-Requests
 -------------
 
 Wenn ihr Vorschläge für Verbesserungen und Ergänzungen habt, empfehle ich euch,
-einen `Fork <https://github.com/cusyio/Python4DataScience-de/fork>`_ meines
+einen `Fork <https://github.com/cusyio/Python4DataScience-de/fork>`_ unseres
 `GitHub-Repository <https://github.com/cusyio/Python4DataScience-de/>`_ zu
 erstellen und darin eure Änderungen vorzunehmen. Gerne dürft ihr auch einen
 *Pull Request* stellen. Sofern die darin enthaltenen Änderungen klein und
-atomar sind, schaue ich mir eure Vorschläge gerne an.
+atomar sind, schauen wir uns eure Vorschläge gerne an.
 
 Da eine englischsprachige Übersetzung gepflegt wird, beachtet folgende
 Richtlinien:
 
-* Commit messages auf Englisch
-* Commit messages mit einem `Gitmoji <https://gitmoji.dev/>`__ am Anfang
+* Commit-Nachrichten auf Englisch
+* Commit-Nachrichten mit einem `Gitmoji <https://gitmoji.dev/>`__ am Anfang
 * Namen von Ordnern und Dateien auf Englisch.
