@@ -6,8 +6,8 @@ Merge-Requests
 ==============
 
 Mit Merge-Requests könnt ihr Quellcodeänderungen in einen Zweig einchecken. Wenn
-ihr eine Zusammenführungsanforderung öffnet, könnt ihr die Codeänderungen vor
-der Zusammenführung visualisieren und gemeinsam daran arbeiten.
+ihr eine Zusammenführungsanforderung öffnet, könnt ihr euch die Codeänderungen
+vor dem Zusammenführen anschauen und gemeinsam daran arbeiten.
 Zusammenführungsanfragen enthalten:
 
 * eine Beschreibung der Anfrage
@@ -15,6 +15,18 @@ Zusammenführungsanfragen enthalten:
 * Informationen über :doc:`CI/CD-Pipelines <ci-cd>`
 * Diskussionsbeiträge
 * die Liste der Commits
+
+.. tip::
+   Wenn ihr einen Fork erstellt habt, stellt die Merge-Requests dennoch nicht
+   vom ``main``-Branch aus. Damit vermeidet ihr folgende Schwierigkeiten:
+
+   * Ihr könnt dann an nicht nur an einem sondern an mehreren Merge-Requests
+     arbeiten.
+   * Wenn euer Merge-Request akzeptiert wurde, könnt ihr kein ``git pull`` mehr
+     machen, da ihr widersprüchliche Commits habt.
+   * Wenn der ``main``-Branch des Ziel-Repository geschützt ist, können Personen
+     mit *Maintainer*-Rolle den Merge-Request nicht mehr bearbeiten. Alle
+     Änderungen müssten dann über euch laufen.
 
 .. seealso::
    * `Merge requests <https://docs.gitlab.com/ee/user/project/merge_requests/>`_

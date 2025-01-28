@@ -30,11 +30,19 @@ Git-Glossar
         <https://de.wikipedia.org/wiki/Secure_Hash_Algorithm>`_.
 
     Fork
-        Kopie eines Repository auf :term:`GitLab`, das einem anderen User oder
-        einer anderen Gruppe gehört.
+        Kopie eines Repository auf :term:`GitHub` oder :term:`GitLab`, das einem
+        anderen User oder einer anderen Gruppe gehört. Dies ermöglicht
+        :abbr:`sog. (sogenannte)` :term:`Merge-Requests <Merge-Request>`.
 
     Git
         Git ist eine verteilte Versionsverwaltung.
+
+    GitHub
+        Web-Anwendung zur Versionsverwaltung auf Basis von :term:`git`, die die
+        Zusammenarbeit auch über :term:`Forks <Fork>` ermöglicht. Zudem gibt es
+        mit `GitHub Actions <https://docs.github.com/de/actions>`_ und `GitHub
+        Pages <https://pages.github.com>`_ Erweiterungen für kontinuierliche
+        Integration und statische Websites.
 
     GitLab
         Web-Anwendung zur Versionsverwaltung auf Basis von :term:`git`. Später
@@ -54,12 +62,13 @@ Git-Glossar
         Objekte gespeichert wird. Der Index ist eine gespeicherte Version eures
         :term:`Working Tree`.
 
-    Merge request
+    Merge-Request
         Ort zum Vergleichen und Diskutieren der in einem Branch eingeführten
         Änderungen mit Bewertungen, Kommentaren, Tests :abbr:`etc. (et cetera)`;
 
         .. seealso::
-            * :doc:`advanced/gitlab/merge-requests`.
+           * :doc:`advanced/gitlab/merge-requests`.
+           * :ref:`Merge- oder Pull-Requests <merge-pull-requests>`.
 
     ``origin``
         Das übliche Upstream-Repository. Die meisten Projekte haben mindestens

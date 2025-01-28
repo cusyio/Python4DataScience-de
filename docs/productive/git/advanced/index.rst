@@ -44,8 +44,9 @@ Fortgeschrittenes Git
    notes
    hooks/index
    jupyter-notebooks
-   binary-files
+   shell
    batch
+   binary-files
    lfs
    vs-code/index
    gitlab/index

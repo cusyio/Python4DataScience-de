@@ -186,8 +186,10 @@ die Absicht des Commits erkennen.
   * `Visual Studio Code Extension
     <https://marketplace.visualstudio.com/items?itemName=seatonjiang.gitmoji-vscode>`_
 
-GitLab
-~~~~~~
+.. _gitlab-references:
+
+GitLab-spezifische Referenzen
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 GitLab interpretiert bestimmte Commit-Nachrichten auch als Links, :abbr:`z.B.
 (zum Beispiel)`:
@@ -279,6 +281,10 @@ Dann beginnt Git jede neue Commit-Nachricht mit der *Scissors*-Zeile:
    # ...
    #
 
+.. seealso::
+   * `GitLab-specific references
+     <https://docs.gitlab.com/ee/user/markdown.html#gitlab-specific-references>`_
+
 Co-Autoren angeben
 ~~~~~~~~~~~~~~~~~~
 
@@ -321,6 +327,8 @@ Spart Speicherplatz mit den Befehlen ``git gc`` bzw. ``git gc --aggressive``.
    * `git gc <https://git-scm.com/docs/git-gc>`_
    * `Git Interna - Wartung und Datenwiederherstellung
      <https://git-scm.com/book/de/v2/Git-Interna-Wartung-und-Datenwiederherstellung>`_
+
+ .. _fetch-prune:
 
 Bereinigt Remote Tracking Branches
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

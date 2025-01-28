@@ -25,10 +25,34 @@ stash
     enthält Änderungen, die vorübergehend an einem anderen Ort gespeichert
     werden, um sie aus dem aus dem Weg zu schaffen.
 
-Basic Git commands
-------------------
+Grundlegende Git-Befehle
+------------------------
 
-The following basic Git commands move changes between these workspaces.
+Mit den folgenden grundlegenden Git-Befehlen werden Änderungen zwischen diesen
+Arbeitsbereichen verschoben.
+
+.. hint::
+   Shell-Befehle verwenden eine Bash-kompatible Syntax. Daher sollten sie mit
+   den gängigsten Shells, die für Git verwendet werden, kompatibel sein:
+
+   * Windows: Git Bash
+   * WSL: Bash
+   * Linux: Bash oder Zsh
+   * macOS: Zsh
+
+   Möglicherweise müsst ihr die Syntax geringfügig anpassen, wenn ihr eine
+   andere Shell verwendet, :abbr:`z.B. (zum Beispiel)` die PowerShell.
+
+.. hint::
+   Dieses Buch konzentriert sich auf die Kommandozeile und behandelt :abbr:`GUI
+   (Grafische Benutzeroberflächen)`’s nur am Rande. Die Befehlszeile ist die
+   leistungsfähigste Art, Git zu verwenden. GUIs implementieren nur eine
+   Teilmenge dessen, was mit Git und der Shell möglich ist. Dennoch ist mit
+   vielen GUIs ein hybrider Ansatz möglich und weit verbreitet: Ihr könnt eine
+   grafische Benutzeroberfläche für Aufgaben verwenden, und die CLI für die
+   volle Leistungsfähigkeit. In `GUI Clients
+   <https://git-scm.com/downloads/guis>`_ könnt ihr euch ein passendes GUI-Tool
+   auswählen.
 
 ``git add``
     fügt Dateien aus dem Arbeitsverzeichnis dem Bühnenbereich (:abbr:`engl.
@@ -38,8 +62,10 @@ The following basic Git commands move changes between these workspaces.
 ``git stash``
     verschiebt Dateien aus dem Arbeitsbereich in ein Versteck (:abbr:`engl.
     (englisch)`: *stash*).
-``git stash pop``
-    holt Dateien aus dem Versteck in den Arbeitsbereich.
+
+    .. seealso::
+       * :ref:`Mit Git arbeiten <git-stash>`
+
 ``git commit``
     schreibt Änderungen im Bühnenbereich in das lokale Repository.
 ``git pull``

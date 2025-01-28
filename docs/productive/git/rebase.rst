@@ -65,6 +65,8 @@ ausgeliefert, die solche Aktualisierungen für euch durchführt , ohne dass ihr
 jeden einzelnen Zweig manuell aktualisieren müsst und ohne dass die
 nachfolgenden Zweige ihre Historie verlieren.
 
+.. _rebase-updaterefs:
+
 Wenn ihr diese Option bei jedem Rebase verwenden möchtet, könnt ihr ``git config
 --global rebase.updateRefs true`` ausführen, damit sich Git so verhält, als ob
 die Option ``--update-refs`` immer angegeben ist.
