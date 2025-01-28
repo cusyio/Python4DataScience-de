@@ -399,3 +399,12 @@ Team-Mitgliedeer können ihre lokal noch vorhandenen Referenzen auf den
 .. code-block:: console
 
    $ git fetch origin --prune
+
+.. tip::
+   Mit `git-symbolic-ref <https://git-scm.com/docs/git-symbolic-ref>`_ könnt ihr
+   Aliase erzeugen, :abbr:`z.B. (zum Beispiel)`:
+
+   .. code-block:: console
+
+      $ git symbolic-ref refs/heads/main refs/heads/master
+      $ git symbolic-ref refs/remotes/origin/main refs/remotes/origin/master

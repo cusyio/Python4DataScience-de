@@ -31,24 +31,34 @@ Projektarchiv in das aktuelle Arbeitsverzeichnis. Dabei klont Git üblicherweise
 die gesamte Historie des Repos, wodurch dieser Vorgang mit der Zeit immer länger
 dauert. Es sei denn, ihr verwendet :abbr:`sog. (sogenannte)` Shallow-Clones, bei
 denen mit :ref:`git-clone-depth` nur der aktuelle Snapshot des Repos und mit
-:ref:`git-clone-branch` nur der relevante Zweig heruntergezogen wird. Das
-verkürzt die Build-Zeit vor allem bei Repositories mit einer langen Geschichte
-und vielen Zweigen.
+:ref:`git-clone-branch` nur der relevante Zweig heruntergezogen wird,
+:abbr:`z.B. (zum Beispiel)` :samp:`git clone --depth 1 -b {MYBRANCH}
+{REPOSITORY-URL}`.
 
-Dabei kann Git seit Version 1.9 einfache Änderungen an Dateien, wie :abbr:`z.B.
-(zum Beispiel)` das Aktualisieren einer Versionsnummer, vornehmen, ohne dass die
-gesamte Historie gepusht wurde.
+Dies verkürzt die Download-Zeit vor allem bei Repositories mit einer langen
+Geschichte und vielen Zweigen.
+
+Alternativ könnt ihr ``--shallow-since`` verwenden um Repositories nur von einem
+bestimmten Datum an herunterzuladen, :abbr:`z.B. (zum Beispiel)` :samp:`git
+clone --shallow-since {1.week.ago} {REPOSITORY-URL} oder :samp:`git clone
+--shallow-since {2025-01-21}`.
+
+Git kann seit Version 1.9 einfache Änderungen an Dateien, wie :abbr:`z.B. (zum
+Beispiel)` das Aktualisieren einer Versionsnummer, auch in Shallow-Clones
+vornehmen, ohne dass hierfür die gesamte Historie heruntergeladen wurde.
 
 .. warning::
-    In einem shallow clone kann ``git fetch`` dazu führen, dass ein fast
-    vollständiger Commit-Verlauf heruntergeladen wird. Auch andere
-    Git-Operationen können zu unerwarteten Ergebnissen führen und die
-    vermeintlichen Vorteile von Shallow-Clones zunichte machen, sodass wir
-    empfehlen, Shallow-Clones nur für Builds zu verwenden und das Repository
-    sofort danach wieder zu löschen.
+   In einem Shallow-Clone kann ``git fetch`` jedoch dazu führen, dass ein fast
+   vollständiger Commit-Verlauf heruntergeladen wird. Auch andere
+   Git-Operationen können zu unerwarteten Ergebnissen führen und die
+   vermeintlichen Vorteile von Shallow-Clones zunichte machen, sodass wir
+   bei umfangreicheren Operationen empfehlen, eure Shallow-Clone-Repositories
+   mit ``git fetch --unshallow`` zu vervollständigen. Mit ``git rev-parse
+   --is-shallow-repository`` könnt ihr anschließend herausfinden, ob euer
+   Repository nun auch tatsächlich vollständig ist.
 
-Wollt ihr die Repositories jedoch weiterverwenden, kann der folgende Tipp
-hilfreich sein.
+Eine andere Möglichkeit, eure Repositories weiterzuverwenden, zeige ich euch im
+folgenden Abschnitt.
 
 Cache des Repos auf Build-Servern
 ---------------------------------

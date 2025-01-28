@@ -81,8 +81,13 @@ Diese schaltet ihr mit Hilfe dieses Aufrufs ein:
 :samp:`$ git config --global color.ui auto`
     aktiviert die Kolorierung der Befehlszeilenausgabe.
 
-Die :file:`~/.gitconfig`-Datei
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. note::
+    Ein umfangreiches Beispiel einer Konfigurationsdatei findet ihr in meinem
+    `dotfiles <https://github.com/veit/dotfiles/>`_-Repository: `.gitconfig
+    <https://github.com/veit/dotfiles/blob/main/.config/git/config>`_.
+
+Die :file:`~/.config/git/config`-Datei
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Mit den oben angegebenen Befehlen wird dir folgende :file:`~/.gitconfig`-Datei
 erstellt:
@@ -109,21 +114,7 @@ In der :file:`~/.gitconfig`-Datei können jedoch auch Aliase festgelegt werden:
         dfs = diff --staged
 
 .. seealso::
-   Shell-Konfiguration:
-
-   * `oh-my-zsh <https://ohmyz.sh>`_
-
-     * `Git plugin aliases
-       <https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/git/README.md#aliases>`_
-     * `zsh-you-should-use
-       <https://github.com/MichaelAquilina/zsh-you-should-use>`_
-
-   * `Starship <https://starship.rs>`_
-
-     * `git_branch-Modul <https://starship.rs/config/#git-branch>`_
-     * `git_commit-Modul <https://starship.rs/config/#git-commit>`_
-     * `git_state <https://starship.rs/config/#git-state>`_
-     * `git_status-Modul <https://starship.rs/config/#git-status>`_
+   * :doc:`advanced/shell`
 
 Auch der Editor lässt sich angeben, :abbr:`z.B. (zum Beispiel)` mit:
 
@@ -245,77 +236,91 @@ kann :abbr:`ggf. (gegebenenfalls)` erhöht werden, :abbr:`z.B. (zum Beispiel)` m
 
 .. code-block:: console
 
-    $ git config --global credential.helper 'cache --timeout=3600'
+   $ git config --global credential.helper 'cache --timeout=3600'
+
+.. tab:: Debian/Ubuntu
+
+   Unter Linux müsst ihr einen :abbr:`sog: (sogenannten)` `Credential Store
+   <https://github.com/git-ecosystem/git-credential-manager/blob/release/docs/credstores.md>`_
+   auswählen. In den meisten Fällen werdet ihr euch für die *Secret Service API*
+   entscheiden, wie :abbr:`z.B. (zum Beispiel)` ``libsecret`` von Git, den ihr
+   auswählen könnt mit:
+
+   .. code-block:: console
+
+      $ git config --global credential.credentialStore secretservice
 
 .. tab:: macOS
 
-    Unter macOS lässt sich mit ``osxkeychain`` die Schlüsselbundverwaltung
-    (*Keychain*) nutzen um die Zugangsdaten zu speichern. ``osxkeychain`` setzt
-    Git in der Version 1.7.10 oder neuer voraus und kann im selben Verzeichnis
-    wie Git installiert werden mit:
+   Unter macOS lässt sich mit ``osxkeychain`` die Schlüsselbundverwaltung
+   (*Keychain*) nutzen um die Zugangsdaten zu speichern. ``osxkeychain`` setzt
+   Git in der Version 1.7.10 oder neuer voraus und kann im selben Verzeichnis
+   wie Git installiert werden mit:
 
-    .. code-block:: console
+   .. code-block:: console
 
-        $ git credential-osxkeychain
-        git: 'credential-osxkeychain' is not a git command. See 'git --help'.
-        $ curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain
-        $ chmod u+x git-credential-osxkeychain
-        $ sudo mv git-credential-osxkeychain /usr/bin/
-        Password:
-        git config --global credential.helper osxkeychain
+      $ git credential-osxkeychain
+      git: 'credential-osxkeychain' is not a git command. See 'git --help'.
+      $ curl -s -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain
+      $ chmod u+x git-credential-osxkeychain
+      $ sudo mv git-credential-osxkeychain /usr/bin/
+      Password:
+      git config --global credential.helper osxkeychain
 
-    Dies trägt folgendes in die :file:`~/.gitconfig`-Datei ein:
+   Dies trägt folgendes in die :file:`~/.gitconfig`-Datei ein:
 
-    .. code-block:: ini
+   .. code-block:: ini
 
-        [credential]
-            helper = osxkeychain
+      [credential]
+          helper = osxkeychain
+
+   Alternativ könnt ihr auch den `Git Credential Manager
+   <https://github.com/git-ecosystem/git-credential-manager>`_ installieren mit
+
+   .. code-block:: console
+
+       brew install --cask git-credential-manager
 
 .. tab:: Windows
 
-    Für Windows steht der `Git Credential Manager (GCM)
-    <https://github.com/git-ecosystem/git-credential-manager>`_ zur Verfügung.
-    Er ist integriert in `Git for Windows <https://git-scm.com/download/win>`_
-    und wird standardmäßig mitinstalliert. Zusätzlich besteht jedoch auch ein
-    eigenständiges Installationsprogramm in
-    `Releases <https://github.com/git-ecosystem/git-credential-manager/releases>`_.
+   Für Windows steht der `Git Credential Manager (GCM)
+   <https://github.com/git-ecosystem/git-credential-manager>`_ zur Verfügung. Er
+   ist integriert in `Git for Windows <https://git-scm.com/download/win>`_ und
+   wird standardmäßig mitinstalliert. Zusätzlich besteht jedoch auch ein
+   eigenständiges Installationsprogramm in
+   `Releases <https://github.com/git-ecosystem/git-credential-manager/releases>`_.
 
-    GCM wird mit dem nachfolgenden Aufruf konfiguriert:
+   GCM wird mit dem nachfolgenden Aufruf konfiguriert:
 
-    .. code-block:: console
+   .. code-block:: console
 
-        $ git credential-manager configure
-        Configuring component 'Git Credential Manager'...
-        Configuring component 'Azure Repos provider'...
+      $ git credential-manager configure
+      Configuring component 'Git Credential Manager'...
+      Configuring component 'Azure Repos provider'...
 
-    Dies trägt den ``[credential]``-Abschnitt in eure :file:`~/.gitconfig`-Datei
-    ein:
+   Dies trägt den ``[credential]``-Abschnitt in eure :file:`~/.gitconfig`-Datei
+   ein:
 
-    .. code-block:: ini
+   .. code-block:: ini
 
-        [credential]
-            helper =
-            helper = C:/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
+      [credential]
+          helper =
+          helper = C:/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
 
-    Nun öffnet sich beim Clonen eines Repository ein Fenster des GCM und fordert
-    euch zur Eingabe eurer Zugangsdaten auf.
+   Nun öffnet sich beim Clonen eines Repository ein Fenster des GCM und fordert
+   euch zur Eingabe eurer Zugangsdaten auf.
 
-    Zudem wird die :file:`~/.gitconfig`-Datei ergänzt, :abbr:`z.B. (zum
-    Beispiel)` um die folgenden beiden Zeilen:
+   Zudem wird die :file:`~/.gitconfig`-Datei ergänzt, :abbr:`z.B. (zum
+   Beispiel)` um die folgenden beiden Zeilen:
 
-    .. code-block:: ini
+   .. code-block:: ini
 
-        [credential "https://ce.cusy.io"]
-            provider = generic
-
-.. note::
-    Ein umfangreiches Beispiel einer Konfigurationsdatei findet ihr in meinem
-    `dotfiles <https://github.com/veit/dotfiles/>`_-Repository: `.gitconfig
-    <https://github.com/veit/dotfiles/blob/main/.config/git/config>`_.
+      [credential "https://ce.cusy.io"]
+          provider = generic
 
 .. seealso::
-    * `Git Credential Manager: authentication for everyone
-      <https://github.blog/security/application-security/git-credential-manager-authentication-for-everyone/>`_
+   * `Git Credential Manager: authentication for everyone
+     <https://github.blog/security/application-security/git-credential-manager-authentication-for-everyone/>`_
 
 .. _gitignore:
 

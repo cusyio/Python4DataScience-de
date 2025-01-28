@@ -24,6 +24,8 @@ Beispiel
     ändert für alle Dateien mit dem Suffix ``.py`` ggf. die Berechtigungen von
     ``100644`` zu ``100755``, sodass sie ausführbar werden.
 
+.. _git-name-only:
+
 Alle im Arbeits- oder Bühnenbereich geänderten Dateien
 ------------------------------------------------------
 
@@ -34,11 +36,26 @@ Alle im Arbeits- oder Bühnenbereich geänderten Dateien
     gibt die dem Bühnenbereich hinzugefügten Dateien aus.
 :samp:`git diff --staged --name-only "*.{SUFFIX}"`
     filtert darüberhinaus noch nach einer bestimmten Dateiendung.
+:samp:`git diff --name-only --diff-filter d`
+    schließt gelöschte Dateien aus.
+
+    Dies ist bei mir der häufigste Fall, weswegen ich mir hierfür einen Alias
+    ``list-changed`` angelegt habe: ``git config --global alias.list-changed
+    'diff --name-only --diff-filter d'``.
 
 Beispiel
 ~~~~~~~~
 
-:samp:`pytest $(git diff --staged --name-only "tests/test_*.py")`
+Um Befehle für die geänderte Dateiliste auszuführen, könnt ihr die
+Shell-`Command Substitution
+<https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html>`_
+verwenden:
+
+:samp:`$ uv run codespell $(git list-changed '*.py')`
+    Die Shell führt das in Klammern gesetzte ``git list-changed`` aus und fügt
+    dessen Ausgabe in den äußeren Befehl ein. ``codespell`` erhält also die
+    Liste der geänderten Textdateien als Argument.
+:samp:`uv run pytest $(git diff --staged --name-only "tests/*test_*.py")`
     ruft :doc:`python-basics:test/pytest/index` auf, um anschließend nur
     diejenigen Testmodule auszuführen, die im Arbeitsverzeichnis geändert
     wurden.

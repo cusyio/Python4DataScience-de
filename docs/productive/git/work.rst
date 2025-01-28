@@ -21,12 +21,35 @@ Ein eigenes Projekt starten
         Wird kein Projektname angegeben, wird das aktuelle Verzeichnis
         initialisiert.
 
+    .. tip::
+       Der Standardzweig in Git ist ``master``. Da dieser Begriff jedoch
+       `für manche Menschen verletzend ist
+       <https://sfconservancy.org/news/2020/jun/23/gitbranchname/>`_, lässt sich
+       in Git ≥ 2.28 der Standard-Zweigname konfigurieren:
+
+       .. code-block:: console
+
+          $ git config --global init.defaultBranch main
+
+    Die meisten Git-Hosts verwenden ebenfalls *main* als Standard für neue
+    Repositories.
+
 An einem Projekt mitarbeiten
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:samp:`$ git clone {PROJECT_URL}`
+:samp:`$ git clone {SOURCE}`
     lädt ein Projekt mit allen Zweigen (engl.: *branches*) und der gesamten
-    Historie vom entfernten Repository herunter.
+    Historie vom entfernten Repository herunter, :abbr:`z.B. (zum Beispiel)`:
+
+    .. code-block:: console
+
+       $ git clone https://github.com/cusyio/Python4DataScience.git
+
+    oder
+
+    .. code-block:: console
+
+       $ git clone git@github.com:cusyio/Python4DataScience.git
 
     ``--depth``
         gibt die Anzahl der Commits an, die heruntergeladen werden sollen.
@@ -65,16 +88,31 @@ An einem Projekt arbeiten
 
     .. code-block:: console
 
-        $ git diff docs/productive/git/work.rst
-        diff --git a/docs/productive/git/work.rst b/docs/productive/git/work.rst
-        index e2a5ea6..fd84434 100644
-        --- a/docs/productive/git/work.rst
-        +++ b/docs/productive/git/work.rst
-        @@ -46,7 +46,7 @@
+       $ git diff docs/productive/git/work.rst
+       diff --git a/docs/productive/git/work.rst b/docs/productive/git/work.rst
+       index e2a5ea6..fd84434 100644
+       --- a/docs/productive/git/work.rst
+       +++ b/docs/productive/git/work.rst
+       @@ -46,7 +46,7 @@
 
-         :samp:`$ git diff {PATH}`
-        -    zeigt Unterschiede zwischen Arbeits- und Bühnenbereich.
-        +    zeigt Unterschiede zwischen Arbeits- und Bühnenbereich, :abbr:`z.B. (zum Beispiel)`.
+        :samp:`$ git diff {PATH}`
+       -    zeigt Unterschiede zwischen Arbeits- und Bühnenbereich.
+       +    zeigt Unterschiede zwischen Arbeits- und Bühnenbereich, :abbr:`z.B. (zum Beispiel)`.
+
+    Git erweitert das Diff-Format standardmäßig um die Präfixe ``a/`` und ``b/``
+    vor den Dateipfaden.
+
+    .. tip::
+       Diese Präfixe sollen dazu dienen, die Pfade als *alt* und *neu* zu
+       kennzeichnen, aber die verhindern, dass die Dateipfade einfach kopiert
+       werden können – manche Terminals erlauben auch, Dateipfade anzuklicken,
+       um sie zu öffnen – aber die Präfixe verhindern dies. Mit einer neuen
+       Funktion in Git 2.45 könnt ihr dies ändern:
+
+       .. code-block:: console
+
+          $ git config --global diff.srcPrefix './'
+          $ git config --global diff.dstPrefix './'
 
     ``index e2a5ea6..fd84434 100644`` zeigt einige interne Git-Metadaten an, die
     ihr vermutlich nie benötigen werdet. Die Zahlen entsprechen den
@@ -116,6 +154,9 @@ An einem Projekt arbeiten
         zeigt Unterschiede zwischen Bühnenbereich und Repository an.
     ``--word-diff``
         zeigt die geänderten Wörter an.
+
+    .. seealso::
+       * :ref:`git-name-only`
 
 :samp:`$ git restore {FILE}`
     ändert Dateien im Arbeitsverzeichnis in einen Zustand, der Git zuvor bekannt
