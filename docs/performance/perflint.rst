@@ -6,8 +6,49 @@ perflint
 ========
 
 `perflint <https://github.com/tonybaloney/perflint>`_ ist eine Erweiterung für
-`pylint <https://pylint.org/>`_ für Performance-Anti-Patterns, :abbr:`u.a.
-(unter anderem)`:
+`pylint <https://pylint.org/>`_ für Performance-Anti-Patternsr.
+
+Installation
+------------
+
+.. code-block:: console
+
+   $ uv add --dev perflint
+
+Verwendung
+----------
+
+… als eigenständiger Linter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: console
+
+   $ uv run perflint src/
+
+… als ``pylint``-Plugin
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: console
+
+   $ uv run perflint src/ --load-plugins=perflint
+
+… als pre-commit-Hook
+~~~~~~~~~~~~~~~~~~~~~
+
+perflint kann auch mit dem :doc:`/productive/git/advanced/hooks/pre-commit`
+verwendet werden:
+
+.. code-block:: yaml
+   :caption: .pre-commit-config.yaml
+
+   repos:
+     - repo: https://github.com/tonybaloney/perflint
+       rev: 0.8.1
+       hooks:
+       - id: perflint
+
+Regeln
+------
 
 W8101: ``unnecessary-list-cast``
     Unnötige Verwendung von ``list()`` bei einem bereits iterierbarem Typ.
