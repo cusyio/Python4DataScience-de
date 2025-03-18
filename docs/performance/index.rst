@@ -66,8 +66,8 @@ Performance-Messungen
 ---------------------
 
 Wenn ihr erst einmal mit eurem Code gearbeitet habt, kann es nützlich sein, die
-Effizienz genauer zu untersuchen. Hierfür kann der :doc:`ipython-profiler` oder
-:doc:`scalene` genutzt werden.
+Effizienz genauer zu untersuchen. Hierfür kann :mod:`cProfile`,
+:doc:`ipython-profiler` oder :doc:`scalene` genutzt werden.
 
 .. seealso::
     * `airspeed velocity (asv) <https://asv.readthedocs.io/en/stable/>`_ ist ein
