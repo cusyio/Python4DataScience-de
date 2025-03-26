@@ -12,7 +12,7 @@ Zusammenführungsanfragen enthalten:
 
 * eine Beschreibung der Anfrage
 * Codeänderungen und Codeüberprüfungen
-* Informationen über :doc:`CI/CD-Pipelines <ci-cd>`
+* Informationen über :doc:`CI/CD-Pipelines <ci-cd/index>`
 * Diskussionsbeiträge
 * die Liste der Commits
 
@@ -42,7 +42,7 @@ Merge-Request-Arbeitsabläufe
    <https://docs.gitlab.com/ee/ci/testing/code_quality.html>`_.
 #. Ihr verifiziert eure Änderungen mit `Berichten von Unit-Tests
    <https://docs.gitlab.com/ee/ci/testing/unit_test_reports.html>`_ in
-   :doc:`GitLab CI/CD <ci-cd>`.
+   :doc:`GitLab CI/CD <ci-cd/index>`.
 #. Ihr vermeidet die Verwendung von Abhängigkeiten, deren Lizenz nicht mit eurem
    Projekt kompatibel ist, mit :ref:`Berichten zur Lizenzkonformität
    <reuse-in-gitlab-ci>`.
@@ -50,4 +50,5 @@ Merge-Request-Arbeitsabläufe
    <https://docs.gitlab.com/ee/user/project/merge_requests/approvals/index.html>`_
    eurer Änderungen.
 #. Wenn die Zusammenführungsanforderung genehmigt wurde, wird die :doc:`GitLab
-   CI/CD <ci-cd>` die Änderungen in der ``production``-Umgebung bereitstellen.
+   CI/CD <ci-cd/index>` die Änderungen in der ``production``-Umgebung
+   bereitstellen.

@@ -17,7 +17,7 @@ Räumlichkeiten, installiert werden.
 Die GitLab CI Tools ermöglichen automatisierte Builds und Deployments ohne dass
 externe Integrationen erforderlich wären, :abbr:`z.B. (zum Beispiel)` das
 :doc:`Bauen eines Docker-Containers mit der Python-Version des Projekts
-<docker>`.
+<ci-cd/docker>`.
 
 Wenn bereits eine PaaS-Lösung wie `Kubernetes
 <https://de.wikipedia.org/wiki/Kubernetes>`_ verwendet wird, können mit
@@ -39,7 +39,5 @@ Teams, Slack etc.
 
    roles-permissions
    merge-requests
-   ci-cd
-   docker
-   github-migration
+   ci-cd/index
    package-registry

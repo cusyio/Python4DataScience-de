@@ -46,8 +46,10 @@ Git-Glossar
 
     GitLab
         Web-Anwendung zur Versionsverwaltung auf Basis von :term:`git`. Später
-        kamen :doc:`advanced/gitlab/ci-cd`, ein System zur kontinuierlichen
-        Integration, GitLab Runner, Container-Registry und vieles andere hinzu.
+        kamen :doc:`advanced/gitlab/ci-cd/index`, ein System zur
+        kontinuierlichen Integration, GitLab Runner,
+        :doc:`advanced/gitlab/package-registry`,
+        :doc:`advanced/gitlab/ci-cd/pages` und vieles andere hinzu.
 
         .. seealso::
            * :doc:`advanced/gitlab/index`

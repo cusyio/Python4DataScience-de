@@ -1,4 +1,4 @@
-.. SPDX-FileCopyrightText: 2022 Veit Schiele
+.. SPDX-FileCopyrightText: 2022–2025 Veit Schiele
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
@@ -17,11 +17,11 @@ Continuous Integration
     führt eine Reihe von Skripten sequentiell oder parallel aus, die eure
     Anwendung automatisch erstellt und testet, :abbr:`z.B. (zum Beispiel)` nach
     jedem ``git pull`` in einem :doc:`Feature-Branch
-    <../../workflows/feature-branches>`. Damit soll es weniger wahrscheinlich
+    <../../../workflows/feature-branches>`. Damit soll es weniger wahrscheinlich
     werden, dass ihr Fehler in eure Anwendung einbringt.
 
     Wenn die Überprüfungen wie erwartet funktionieren, könnt ihr einen
-    :doc:`Merge Request <merge-requests>` stellen; schlagen die Überprüfungen
+    :doc:`Merge Request <../merge-requests>` stellen; schlagen die Überprüfungen
     fehl, könnt ihr die Änderungen :abbr:`ggf. (gegebenenfalls)` zurücknehmen.
 
     .. seealso::
@@ -155,7 +155,7 @@ Pipelines anzeigen
 
 Ihr findet die aktuellen und historischen Pipeline-Runs auf der Seite
 :menuselection:`CI/CD --> Pipelines` eures Projekts. Ihr könnt auch auf Pipelines
-für einen :doc:`Merge-Request <merge-requests>` zugreifen, indem ihr zu deren
+für einen :doc:`Merge-Request <../merge-requests>` zugreifen, indem ihr zu deren
 Registerkarte :guilabel:`Pipelines` navigiert. Wählt eine Pipeline aus, um die
 Seite *Pipeline-Details* zu öffnen und die *Jobs* anzuzeigen, die für diese
 Pipeline ausgeführt wurde. Von hier aus könnt ihr eine laufende Pipeline
@@ -176,3 +176,12 @@ Pipeline löschen.
      <https://docs.gitlab.com/ee/ci/variables/index.html>`_
    * `GitLab Docs: Predefined variables reference
      <https://docs.gitlab.com/ee/ci/variables/predefined_variables.html>`_
+
+.. toctree::
+   :hidden:
+
+   pages
+   npm
+   docker
+   buildah
+   github-migration
