@@ -268,6 +268,15 @@ An einem Projekt arbeiten
     verschiebt die aktuellen Änderungen aus dem Arbeitsbereich in das Versteck
     (:abbr:`engl. (englisch)`: *stash*).
 
+    .. _git-autostash:
+
+    Ihr könnt auch automatisch Stash für Merge und Rebase anwenden:
+
+    .. code-block:: console
+
+       $ git config --global merge.autoStash true
+       $ git config --global rebase.autoStash true
+
     Um eure versteckten Änderungen möglichst gut unterscheiden zu können,
     empfehlen sich die folgenden beiden Optionen:
 
@@ -324,14 +333,8 @@ An einem Projekt arbeiten
 
               $ git config --global interactive.singleKey true
 
-        .. _git-autostash:
-
-        Ihr könnt auch automatisch Stash für Merge und Rebase anwenden:
-
-        .. code-block:: console
-
-           $ git config --global merge.autoStash true
-           $ git config --global rebase.autoStash true
+    :samp:`git stash save {MESSAGE}`
+        fügt den Änderungen eine Nachricht hinzu.
 
     ``git stash pop``
         entfernt den obersten Stash-Eintrag und übernimmt die Änderungen in den
@@ -357,15 +360,6 @@ An einem Projekt arbeiten
 
               $ git config --global stash.showPatch true
 
-        .. _git-autostash:
-
-        Ihr könnt auch automatisch Stash für Merge und Rebase anwenden:
-
-        .. code-block:: console
-
-           $ git config --global merge.autoStash true
-           $ git config --global rebase.autoStash true
-
     :samp:`git stash branch {BRANCHNAME} [{n}]`
         erstellt aus versteckten Dateien einen Zweig, :abbr:`z.B. (zum
         Beispiel)`:
@@ -385,8 +379,6 @@ An einem Projekt arbeiten
 
             stash@{1} (6565fdd1cc7dff9e0e6a575e3e20402e3881a82e) gelöscht
 
-    :samp:`git stash save {MESSAGE}`
-        fügt den Änderungen eine Nachricht hinzu.
     :samp:`git stash -u {UNTRACKED_FILE}`
         versteckt unversionierte Dateien.
     ``git stash list``
@@ -395,8 +387,6 @@ An einem Projekt arbeiten
         :samp:`git stash list --date=relative|default`
             zeigt zusätzlich das relative oder absolute datum an.
 
-    ``git stash show``
-        zeigt die Änderungen in den Verstecken an.
     ``git stash pop``
         übernimmt Änderungen aus einem Versteck in den Arbeitsbereich und leert
         das Versteck, :abbr:`z.B. (zum Beispiel)`:

@@ -163,8 +163,8 @@ Schauen wir uns die Grundlagen der Verwendung von Reflog und einige typische
 Anwendungsfälle an.
 
 .. warning::
-Das Reflog ist nur Teil eures lokalen Repository. Wenn ihr ein Projektarchiv
-löscht und neu klont, wird der neue Klon ein frisches, leeres Reflog haben.
+   Das Reflog ist nur Teil eures lokalen Repository. Wenn ihr ein Projektarchiv
+   löscht und neu klont, wird der neue Klon ein frisches, leeres Reflog haben.
 
 Das Reflog für ``HEAD`` anzeigen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
