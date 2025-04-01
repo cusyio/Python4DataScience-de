@@ -54,10 +54,10 @@ Abhängigkeiten angeben.
 Installation
 ------------
 
-DVC lässt sich mit Pipenv installieren. Beachtet dabei jedoch, dass ihr hierbei
-die Extras explizit angeben müsst. Dies können ``[ssh]``, ``[s3]``, ``[gs]``,
-``[azure]``, und ``[oss]`` oder ``[all]`` sein. Für ``ssh`` sieht das Kommando
-dann so aus:
+DVC lässt sich mit :term:`uv` installieren. Beachtet dabei jedoch, dass ihr
+hierbei die Extras explizit angeben müsst. Dies können ``[ssh]``, ``[s3]``,
+``[gs]``, ``[azure]``, und ``[oss]`` oder ``[all]`` sein. Für ``ssh`` sieht das
+Kommando dann so aus:
 
 .. code-block:: console
 

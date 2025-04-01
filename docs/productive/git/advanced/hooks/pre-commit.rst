@@ -28,7 +28,7 @@ werden:
 
 .. tab:: Windows
 
-   Bevor das pre-commit Framework mit Pipenv installiert werden kann, müssen
+   Bevor das pre-commit Framework mit :term:`uv` installiert werden kann, müssen
    zunächst noch die `Microsoft Build Tools für C++
    <https://visualstudio.microsoft.com/de/visual-cpp-build-tools/>`_
    heruntergeladen und ausgeführt werden damit anschließend die
