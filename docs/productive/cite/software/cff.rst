@@ -33,7 +33,7 @@ aussehen:
       - ipython
       - pandas
       - spack
-      - pipenv
+      - uv
       - ipywidgets
       - "ipython-widget"
       - dvc
