@@ -110,6 +110,11 @@ Datensätzen bis zu Videos. Sie sind jedoch `nicht für Software empfohlen
    `Warum CC BY die beste Wahl für Open-Access-Publikationen ist
    <https://deal-konsortium.de/warum-ccby>`_.
 
+   Das :abbr:`RADAR (Research Data Repository)`, ein disziplinübergreifendes
+   Repository zur Archivierung und Veröffentlichung von Forschungsdaten
+   empfiehlt hingegen nur eine der `CC-Lizenzen
+   <https://radar.products.fiz-karlsruhe.de/de/radarfeatures/lizenzen-fuer-forschungsdaten#cc-lizenzen>`_.
+
 Die `Open Knowledge Foundation <https://okfn.org/en/>`_ hat ebenfalls eine Reihe
 von `Open Data Commons <https://opendatacommons.org>`_-Lizenzen für
 Daten/Datenbanken veröffentlicht:
@@ -135,6 +140,53 @@ beibehalten werden.
 
 Eine weitere mögliche Lizenz für künstlerische Werke ist die `Free Art License
 1.3 <https://artlibre.org/licence/lal/en/>`_.
+
+Machine Learning-Modelle
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Es ist eine offene Frage, ob :abbr:`KI (Künstliche Intelligenz)`/:abbr:`ML
+(Machine Learning)`-Modellgewichte überhaupt urheberrechtsfähig sind. Das
+US-Urheberrechtsgesetz schließt ausdrücklich *„jede Idee, jedes Verfahren, jeden
+Prozess, jedes System, jede Betriebsmethode, jedes Konzept, jeden Grundsatz oder
+jede Entdeckung, unabhängig von der Form, in der sie in einem solchen Werk
+beschrieben, erläutert, illustriert oder verkörpert werden“* von
+urheberrechtlich schützbaren Werken aus.Darüber hinaus hat das
+US-Urheberrechtsamt erklärt, dass sich dieser Ausschluss auch auf
+*„wissenschaftliche oder technische Methoden oder Entdeckungen“*,
+*„mathematische Prinzipien“* und *„Formeln oder Algorithmen“* erstreckt.
+
+Es ist noch nicht klar, ob Modellgewichte als Werke menschlicher Urheberschaft
+oder eher als Ergebnisse automatisierter Prozesse angesehen werden können. Diese
+Fragen müssen von den Gerichten erst noch entschieden werden.
+
+Während viele :abbr:`ML (Machine Learning)`-Modelle offene Softwarelizenzen
+verwenden wie :abbr:`z.B. (zum Beispiel)` MIT oder Apache 2.0, gibt es eine
+Reihe von ML-Modell-spezifischen Lizenzen, die für ein Unternehmen oder
+bestimmte Modelle entwickelt wurden:
+
+* `Microsoft Data Use Agreement for Open AI Model Development
+  <https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Rjfq>`_
+* `OPT-175B
+  <https://github.com/facebookresearch/metaseq/blob/main/projects/OPT/MODEL_LICENSE.md>`_
+* `BigScience BLOOM RAIL v1.0
+  <https://bigscience.huggingface.co/blog/the-bigscience-rail-license>`_
+* `BigScience OpenRAIL-M (Responsible AI License
+  <https://www.licenses.ai/blog/2022/8/26/bigscience-open-rail-m-license>`_
+
+  RAIL-D
+      enthält Nutzungsbeschränkungen, die sich nur auf die Daten beziehen.
+  RAIL-A
+      enthält Nutzungsbeschränkungen, die nur für die Anwendung/Ausführbarkeit
+      gelten.
+  RAIL-M
+      enthält Nutzungsbeschränkungen, die nur für das Modell gelten.
+  RAIL-S
+      enthält Nutzungsbeschränkungen, die nur für den Quellcode gelten.
+
+.. seealso::
+   * The Turing Way Community: `Licensing Machine Learning models
+     <https://book.the-turing-way.org/reproducible-research/licensing/licensing-ml>`_
 
 Dokumentation
 ~~~~~~~~~~~~~
@@ -182,19 +234,34 @@ Schriftarten
 Hardware
 ~~~~~~~~
 
-Entwürfe für `Open-Source-Hardware <https://www.oshwa.org/definition/>`_ werden
-von den CERN Open Hardware Lizenzen abgedeckt:
+Die `Open Source Hardware Association (OSHWA)
+<https://www.oshwa.org/definition/>`_ akzeptiert neben der `GNU General Public
+License (GPL) <http://www.gnu.org/licenses/gpl.html/>`_ und den `Creative
+Commons Lizenzen <https://creativecommons.org/licenses/>`_ auch die folgenden
+speizialisierten Lizenzen:
 
 `CERN-OHL-P-2.0 <https://ohwr.org/cern_ohl_p_v2.txt>`_
-    permissiv
+    Freizügige Variante
 `CERN-OHL-W-2.0 <https://ohwr.org/cern_ohl_w_v2.txt>`_
-    schwach reziprok
+    Schwach wechselseitige Variante
 `CERN-OHL-S-2.0 <https://ohwr.org/cern_ohl_s_v2.txt>`_
-    stark reziprok
+    Copyleft- oder stark wechselseitige Variante
+`TAPR <https://tapr.org/the-tapr-open-hardware-license/>`_
+    Copyleft-Lizenz
+`Solderpad Hardware License <https://solderpad.org>`_
+    Freizügige Lizenz, die auf der `Apache 2.0-Softwarelizenz
+    <https://www.apache.org/licenses/LICENSE-2.0.html>`_ basiert
 
 .. seealso::
+   * Michael Weinberg: `Licensing Open Source Hardware
+     <https://larszimmermann.de/licensing-open-source-hardware-by-michael-weinberg/>`_
+   * `OSHW 101 <https://oshwa.org/oshw-101/>`_
    * `Certified Open Source Hardware Projects
      <https://certification.oshwa.org/list.html>`_
+   * `OSHWA Certification Process - Hardware
+     <https://certification.oshwa.org/process/hardware.html>`_
+   * Santosh Ilhamparuth: `Licensing Open Hardware <https://zenodo.org/records/7195720>`_
+   * `Free and Open Source Silicon Foundation <https://fossi-foundation.org>`_
 
 Auswahl geeigneter Lizenzen
 ---------------------------
