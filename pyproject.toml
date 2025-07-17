@@ -18,7 +18,7 @@ classifiers = [
 ]
 dependencies = []
 
-[project.optional-dependencies]
+[dependency-groups]
 docs = [
     "furo",
     "ipython",
@@ -36,7 +36,7 @@ docs = [
 ]
 
 dev = [
-    "Python4DataScience[docs]",
+    { include-group = "docs" },
     "pre-commit",
     "codespell",
     "vale",
