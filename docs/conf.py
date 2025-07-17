@@ -36,7 +36,7 @@ import re
 
 project = "Python für Data Science"
 author = "Veit Schiele"
-copyright = f"2019–2024, {author}"
+copyright = f"2019–2025, {author}"
 
 # The full version, including alpha/beta/rc tags
 release = re.sub("^v", "", os.popen("git describe --abbrev=0").read().strip())
