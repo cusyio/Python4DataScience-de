@@ -10,6 +10,9 @@ Produkt erstellen
 
 .. [#] Karl Popper in *Logik der Forschung*, 1935
 
+.. figure:: replication_crisis_2x.png
+   :alt: XKCD #3117: Replication Crisis
+
 Damit auch andere euren Code nutzen können, sollte er einige Bedingungen
 erfüllen:
 
