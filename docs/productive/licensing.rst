@@ -88,9 +88,8 @@ Allgemeinheit über. Zur Kennzeichnung der Gemeinfreiheit von Software wurde die
 Nicht-Software-Lizenzen
 -----------------------
 
-Open-Source-Software-Lizenzen können auch für Werke verwendet werden, die nicht
-Software sind. Oft sind sie auch die beste Wahl, insbesondere wenn die
-betreffenden Werke als Quelltext bearbeitet und versioniert werden.
+Open-Source-Software-Lizenzen werden häufig auch für Werke verwendet, die nicht
+Software sind. Oft sind sie jedoch nicht die beste Wahl.
 
 Daten, Medien, etc.
 ~~~~~~~~~~~~~~~~~~~
@@ -105,45 +104,52 @@ Datensätzen bis zu Videos. Sie sind jedoch `nicht für Software empfohlen
 .. _deal:
 
 .. tip::
-   Das `DEAL-Konsortium <https://deal-konsortium.de>`_ empfiehlt für
-   Open-Access-Veröffentlichungen die CC BY-Lizenz, :abbr:`s.a. (siehe auch)`
-   `Warum CC BY die beste Wahl für Open-Access-Publikationen ist
-   <https://deal-konsortium.de/warum-ccby>`_.
+   * Das `DEAL-Konsortium <https://deal-konsortium.de>`_ empfiehlt für
+     Open-Access-Veröffentlichungen von Forschungsergebnissen die CC BY-Lizenz,
+     :abbr:`s.a. (siehe auch)` `Warum CC BY die beste Wahl für
+     Open-Access-Publikationen ist <https://deal-konsortium.de/warum-ccby>`_.
+   * Das :abbr:`RADAR (Research Data Repository)`, ein disziplinübergreifendes
+     Repository zur Archivierung und Veröffentlichung von Forschungsdaten
+     empfiehlt hingegen nur eine der `CC-Lizenzen
+     <https://radar.products.fiz-karlsruhe.de/de/radarfeatures/lizenzen-fuer-forschungsdaten#cc-lizenzen>`_.
 
-   Das :abbr:`RADAR (Research Data Repository)`, ein disziplinübergreifendes
-   Repository zur Archivierung und Veröffentlichung von Forschungsdaten
-   empfiehlt hingegen nur eine der `CC-Lizenzen
-   <https://radar.products.fiz-karlsruhe.de/de/radarfeatures/lizenzen-fuer-forschungsdaten#cc-lizenzen>`_.
+* Die `Open Knowledge Foundation <https://okfn.org/en/>`_ hat ebenfalls eine
+  Reihe von `Open Data Commons <https://opendatacommons.org>`_-Lizenzen für
+  Daten/Datenbanken veröffentlicht:
 
-Die `Open Knowledge Foundation <https://okfn.org/en/>`_ hat ebenfalls eine Reihe
-von `Open Data Commons <https://opendatacommons.org>`_-Lizenzen für
-Daten/Datenbanken veröffentlicht:
+  `Open Data Commons Open Database License (ODbL) v1.0 <https://opendatacommons.org/licenses/odbl/1-0/>`_
+      Namensnennung und Weitergabe unter gleichen Bedingungen.
+  `Open Data Commons Attribution License (ODC-By) v1.0 <https://opendatacommons.org/licenses/by/1-0/>`_
+      Namensnennung.
+  `Open Data Commons Public Domain Dedication and License (PDDL) v1.0 <https://opendatacommons.org/licenses/pddl/1-0/>`_
+      Die PDDL stellt die Daten in den öffentlichen Bereich und verzichtet auf
+      alle Rechte.
 
-`Open Data Commons Open Database License (ODbL) v1.0 <https://opendatacommons.org/licenses/odbl/1-0/>`_
-    Namensnennung und Weitergabe unter gleichen Bedingungen.
-`Open Data Commons Attribution License (ODC-By) v1.0 <https://opendatacommons.org/licenses/by/1-0/>`_
-    Namensnennung.
-`Open Data Commons Public Domain Dedication and License (PDDL) v1.0 <https://opendatacommons.org/licenses/pddl/1-0/>`_
-    Die PDDL stellt die Daten in den öffentlichen Bereich und verzichtet auf
-    alle Rechte.
+* `GovData <https://www.govdata.de>`_ hat die *Datenlizenz Deutschland* in zwei
+  Varianten vorgelegt:
 
-`GovData <https://www.govdata.de>`_ hat die *Datenlizenz Deutschland* in zwei
-Varianten vorgelegt:
+  * `Datenlizenz Deutschland – Namensnennung – Version 2.0
+    <https://www.govdata.de/dl-de/by-2-0>`_
+  * `Datenlizenz Deutschland – Zero – Version 2.0
+    <https://www.govdata.de/dl-de/zero-2-0>`_
 
-* `Datenlizenz Deutschland – Namensnennung – Version 2.0
-  <https://www.govdata.de/dl-de/by-2-0>`_
-* `Datenlizenz Deutschland – Zero – Version 2.0
-  <https://www.govdata.de/dl-de/zero-2-0>`_
+* Das `Community Data License Agreement <https://cdla.dev>`_ kann in vier
+  verschiedenen Varianten genutzt werden:
 
-Bei der Verwendung des `Community Data License Agreement – Permissive, Version 2.0 <https://cdla.dev/permissive-2-0/>`_ müssen die Urheberrechtshinweise
-beibehalten werden.
+  * `Community Data License Agreement – Permissive, Version 2.0
+    <https://cdla.dev/permissive-2-0/>`_
+  * `Community Data License Agreement – Sharing, Version 1.0
+    <https://cdla.dev/sharing-1-0/>`_
+  * `Open Use of Data Agreement, Version 1.0
+    <https://cdla.dev/open-use-of-data-agreement-v1-0/>`_
+  * `Computational Use of Data Agreement, Version 1.0
+    <https://cdla.dev/computational-use-of-data-agreement-v1-0/>`_
 
-Eine weitere mögliche Lizenz für künstlerische Werke ist die `Free Art License
-1.3 <https://artlibre.org/licence/lal/en/>`_.
+* Eine weitere mögliche Lizenz für künstlerische Werke ist die `Free Art License
+  1.3 <https://artlibre.org/licence/lal/en/>`_.
 
 Machine Learning-Modelle
 ~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 Es ist eine offene Frage, ob :abbr:`KI (Künstliche Intelligenz)`/:abbr:`ML
 (Machine Learning)`-Modellgewichte überhaupt urheberrechtsfähig sind. Das
@@ -171,22 +177,99 @@ bestimmte Modelle entwickelt wurden:
   <https://github.com/facebookresearch/metaseq/blob/main/projects/OPT/MODEL_LICENSE.md>`_
 * `BigScience BLOOM RAIL v1.0
   <https://bigscience.huggingface.co/blog/the-bigscience-rail-license>`_
-* `BigScience OpenRAIL-M (Responsible AI License
-  <https://www.licenses.ai/blog/2022/8/26/bigscience-open-rail-m-license>`_
 
-  RAIL-D
+  Es gibt noch weitere `Responsible AI Licenses (RAIL)
+  <https://www.licenses.ai>`_ mit verschiedenen Nutzungsbeschränkungen:
+
+  OpenRAIL-D
       enthält Nutzungsbeschränkungen, die sich nur auf die Daten beziehen.
-  RAIL-A
+  OpenRAIL-A
       enthält Nutzungsbeschränkungen, die nur für die Anwendung/Ausführbarkeit
       gelten.
-  RAIL-M
+  OpenRAIL-M
       enthält Nutzungsbeschränkungen, die nur für das Modell gelten.
+
+      .. seealso::
+         `RAIL-M
+         <https://www.licenses.ai/blog/2022/8/26/bigscience-open-rail-m-license>`_
+
   RAIL-S
       enthält Nutzungsbeschränkungen, die nur für den Quellcode gelten.
+
+KI-Modelle, die zwar unter einer Open-Source-Lizenz stehen, deren Schulungsdaten
+und -Programme jedoch nicht veröffentlicht wurden, sind **nicht** konform mit
+den `Debian Free Software Guidelines (DFSG)
+<https://de.wikipedia.org/wiki/Debian_Free_Software_Guidelines>`_, :abbr:`s.a.
+(siehe auch)` `Interpretation of DFSG on Artificial Intelligence (AI) Models
+<https://www.debian.org/vote/2025/vote_002>`_.
+
+.. _osaid:
+
+Auch für die `Open Source Initiative (OSI) <https://opensource.org/>`__ geht die
+Definition von Open-Source-KI weit über die Verwendung eines Modells hinaus –
+es muss auch verständlich sein, wie das Modell erstellt wurde, und das Modell
+muss auch verändert und mit anderen geteilt für jeden Zweck geteilt werden
+können. Diese vier Freiheiten sind erfüllt mit
+
+Open Data
+    Ausreichend detaillierte Informationen über die zum Training des Systems
+    verwendeten Daten, so dass ein im Wesentlichen gleichwertiges System
+    aufgebaut werden kann.
+Open Code
+    Der vollständige Quellcode, der für das Training und den Betrieb des Systems
+    verwendet wird unter von der OSI genehmigten Lizenzen.
+Open Weights
+    Modellparameter, wie :abbr:`z. B. (zum Beispiel)` Gewichte oder andere
+    Konfigurationseinstellungen unter von der OSI genehmigten Lizenzen.
+
+Die OSI entwickelte entsprechend `OSAID 1.0
+<https://opensource.org/ai/open-source-ai-definition>`_, die :abbr:`u.a. (unter
+anderem)` für folgende Modelle gilt:
+
+* EleutherAI: `pythia <https://github.com/EleutherAI/pythia>`_, `GPT-J
+  <https://www.eleuther.ai/artifacts/gpt-j>`_
+* The Allen Institute for Artificial Intelligence: `OLMo 2
+  <https://allenai.org/olmo>`_, `Molmo <https://allenai.org/blog/molmo>`_
+* LLM360: `K2
+  <https://huggingface.co/collections/LLM360/k2-6622ae6911e3eb6219690039>`_,
+  `Amber
+  <https://huggingface.co/collections/LLM360/amber-65e7333ff73c7bbb014f2f2f>`_,
+  `CrystalCoder <https://huggingface.co/LLM360/Crystal>`_
+* Google: `T5
+  <https://github.com/google-research/text-to-text-transfer-transformer>`_
+
+Vermutlich würden auch die folgenden Modelle die Anforderungen erfüllen, wenn
+sie ihre rechtlichen Bedingungen ändern würden:
+
+* BigScience: `Bloom <https://huggingface.co/bigscience/bloom>`_
+* BigCode: `StarCoder 2 <https://github.com/bigcode-project/starcoder2>`_
+* Technology Innovation Institute: `Falcon
+  <https://huggingface.co/collections/tiiuae/falcon-h1-6819f2795bc406da60fab8df>`_
+
+Es gibt jedoch auch einige Modelle, die analysiert wurden und nicht bestanden
+haben, weil ihnen erforderlichen Komponenten und/oder rechtlichen Vereinbarungen
+fehlen:
+
+* Meta: Llama2
+* xAI: Grok
+* Microsoft: Phi-2
+* Mistral AI: Mixtral
 
 .. seealso::
    * The Turing Way Community: `Licensing Machine Learning models
      <https://book.the-turing-way.org/reproducible-research/licensing/licensing-ml>`_
+   * `Open Source AI <https://opensource.org/ai>`_
+   * Alek Tarkowski, Open Future in Zusammenarbeit mit der Open Source
+     Initiative: `Data Governance in Open Source AI
+     <https://opensource.org/wp-content/uploads/2025/02/2025-OSI-DataGovernanceOSAI-final-v5.pdf>`_
+
+Datenbanken
+~~~~~~~~~~~
+
+Einige der wenigen Lizenzen für Datenbanken ist die `Open Data Commons Open
+Database License (ODbL) v1.0 <https://opendatacommons.org/licenses/odbl/1-0/>`_,
+die :abbr:`z.B. (zum Beispiel)` von `OpenStreetMap (OSM)
+<https://www.openstreetmap.org>`_ verwendet wird.
 
 Dokumentation
 ~~~~~~~~~~~~~
