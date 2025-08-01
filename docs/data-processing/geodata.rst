@@ -328,6 +328,66 @@ Allgemeine Zwecke
     .. image::
        https://raster.shields.io/github/license/pyproj4/pyproj
 
+.. _geopython:
+
+`geopython <https://geopython.github.io>`_
+    ist eine GitHub-Organisation, die Python-Projekte rund um Geodaten umfasst.
+
+    `pygeoapi <https://github.com/geopython/pygeoapi>`_
+        ist eine Python-Serverimplementierung der `OGC-API
+        <https://ogcapi.ogc.org>`_-Standardsuite.
+
+        .. image::
+           https://raster.shields.io/github/stars/geopython/pygeoapi
+        .. image::
+           https://raster.shields.io/github/contributors/geopython/pygeoapi
+        .. image::
+           https://raster.shields.io/github/commit-activity/y/geopython/pygeoapi
+        .. image::
+           https://raster.shields.io/github/license/geopython/pygeoapi
+
+    `OWSLib <https://github.com/geopython/OWSLib>`_
+        ist ein Python-Paket für die Client-Programmierung mit den
+        Schnittstellenstandards des `Open Geospatial Consortium (OGC) Web
+        Service <https://www.ogc.org/standards/owc/>`_ und den damit verbundenen
+        Inhaltsmodellen.
+
+        .. image::
+           https://raster.shields.io/github/stars/geopython/OWSLib
+        .. image::
+           https://raster.shields.io/github/contributors/geopython/OWSLib
+        .. image::
+           https://raster.shields.io/github/commit-activity/y/geopython/OWSLib
+        .. image::
+           https://raster.shields.io/github/license/geopython/OWSLib
+
+    `pycsw <https://github.com/geopython/pycsw>`_
+        ist eine in Python geschriebene `OGC CSW
+        <https://www.ogc.org/standards/cat/>`_-Server-Implementierung, die
+        vollständig den `OpenGIS Catalogue Service
+        <https://www.ogc.org/standards/cat/>`_ implementiert.
+
+        .. image::
+           https://raster.shields.io/github/stars/geopython/pycsw
+        .. image::
+           https://raster.shields.io/github/contributors/geopython/pycsw
+        .. image::
+           https://raster.shields.io/github/commit-activity/y/geopython/pycsw
+        .. image::
+           https://raster.shields.io/github/license/geopython/pycsw
+
+    `pygeometa <https://github.com/geopython/pygeometa>`_
+        kann zur Generierung von Metadaten für Geodatensätze verwendet werden.
+
+        .. image::
+           https://raster.shields.io/github/stars/geopython/pygeometa
+        .. image::
+           https://raster.shields.io/github/contributors/geopython/pygeometa
+        .. image::
+           https://raster.shields.io/github/commit-activity/y/geopython/pygeometa
+        .. image::
+           https://raster.shields.io/github/license/geopython/pygeometa
+
 `pgeocode <https://pypi.org/project/pgeocode/>`_
     Abfrage von GPS-Koordinaten und Gemeindenamen aus Postleitzahlen,
     Entfernungen zwischen Postleitzahlen sowie allgemeine Entfernungen.
