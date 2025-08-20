@@ -19,8 +19,8 @@ import os
 import re
 
 
-# Set canonical URL from the Read the Docs Domain
-html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "")
+# Set canonical URL for the sitemap
+html_baseurl = "https://python4data.science/de/latest/"
 
 html_context = {}
 # Tell Jinja2 templates the build is running on Read the Docs

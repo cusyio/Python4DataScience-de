@@ -74,13 +74,6 @@ JSON
 |                       |       | :doc:`../yaml/index` und :doc:`../toml/index`.        |
 +-----------------------+-------+-------------------------------------------------------+
 
-.. seealso::
-
-    * `JC – JSON Convert <https://github.com/kellyjonbrazil/jc>`_
-    * `fx <https://github.com/antonmedv/fx>`_
-    * `gron <https://github.com/tomnomnom/gron>`_
-    * `python-json-patch <https://github.com/stefankoegl/python-json-patch>`_
-
 Beispiel
 --------
 
@@ -132,6 +125,125 @@ Antwort der :ref:`OSM-Nominatim-API
             'icon': 'https://nominatim.openstreetmap.org/images/mapicons/accommodation_hotel2.p.20.png'
         }
     ]
+
+JSON-Tools
+----------
+
+`fx <https://github.com/antonmedv/fx>`_
+    macht JSON durchsuchbar. Dies erleichtert :abbr:`v.a. (vor allem)` die
+    Erkundung von APIs, die große JSON-Blöcke zurückgeben, aber schlecht
+    dokumentiert sind.
+
+    .. image:: https://raster.shields.io/github/stars/antonmedv/fx
+       :alt: Stars
+       :target: https://github.com/antonmedv/fx
+
+    .. image:: https://raster.shields.io/github/contributors/antonmedv/fx
+       :alt: Contributors
+       :target: https://github.com/antonmedv/fx/graphs/contributors
+
+    .. image:: https://raster.shields.io/github/commit-activity/y/antonmedv/fx
+       :alt: Commit activity
+       :target: https://github.com/antonmedv/fx/graphs/commit-activity
+
+    .. image:: https://raster.shields.io/github/license/antonmedv/fx
+       :alt: Lizenz
+
+`gron <https://github.com/tomnomnom/gron>`_
+    Terminal JSON viewer & processor
+
+    .. image:: https://raster.shields.io/github/stars/tomnomnom/gron
+       :alt: Stars
+       :target: https://github.com/tomnomnom/gron
+
+    .. image:: https://raster.shields.io/github/contributors/tomnomnom/gron
+       :alt: Contributors
+       :target: https://github.com/tomnomnom/gron/graphs/contributors
+
+    .. image:: https://raster.shields.io/github/commit-activity/y/tomnomnom/gron
+       :alt: Commit activity
+       :target: https://github.com/tomnomnom/gron/graphs/commit-activity
+
+    .. image:: https://raster.shields.io/github/license/tomnomnom/gron
+       :alt: Lizenz
+
+`JC – JSON Convert <https://github.com/kellyjonbrazil/jc>`_
+    ist ein CLI-Tool und eine Python-Bibliothek, die die Ausgabe gängiger
+    Befehlszeilentools, Dateitypen und Zeichenfolgen in JSON,
+    :doc:`../yaml/index` oder :doc:`python-basics:types/dicts` konvertiert; dies
+    ermöglicht die Weiterleitung der Ausgabe an Tools wie `jq
+    <https://jqlang.org>`_ und vereinfacht Automatisierungsskripte.
+
+    .. image:: https://raster.shields.io/github/stars/kellyjonbrazil/jc
+       :alt: Stars
+       :target: https://github.com/kellyjonbrazil/jc
+
+    .. image:: https://raster.shields.io/github/contributors/kellyjonbrazil/jc
+       :alt: Contributors
+       :target: https://github.com/kellyjonbrazil/jc/graphs/contributors
+
+    .. image:: https://raster.shields.io/github/commit-activity/y/kellyjonbrazil/jc
+       :alt: Commit activity
+       :target: https://github.com/kellyjonbrazil/jc/graphs/commit-activity
+
+    .. image:: https://raster.shields.io/github/license/kellyjonbrazil/jc
+       :alt: Lizenz
+
+`UltraJSON <https://github.com/ultrajson/ultrajson>`_
+    ist ein schneller JSON-Encoder und -Decoder, der in reinem C geschrieben ist
+    und Bindings für Python≥3.9 bietet.
+
+    .. image:: https://raster.shields.io/github/stars/ultrajson/ultrajson
+       :alt: Stars
+       :target: https://github.com/ultrajson/ultrajson
+
+    .. image:: https://raster.shields.io/github/contributors/ultrajson/ultrajson
+       :alt: Contributors
+       :target: https://github.com/ultrajson/ultrajson/graphs/contributors
+
+    .. image:: https://raster.shields.io/github/commit-activity/y/ultrajson/ultrajson
+       :alt: Commit activity
+       :target: https://github.com/ultrajson/ultrajson/graphs/commit-activity
+
+    .. image:: https://raster.shields.io/github/license/ultrajson/ultrajson
+       :alt: Lizenz
+
+`simplejson <https://github.com/simplejson/simplejson>`_
+    ist ein einfacher, schneller und erweiterbarer JSON-Encoder/Decoder für
+    Python.
+
+    .. image:: https://raster.shields.io/github/stars/simplejson/simplejson
+       :alt: Stars
+       :target: https://github.com/simplejson/simplejson
+
+    .. image:: https://raster.shields.io/github/contributors/simplejson/simplejson
+       :alt: Contributors
+       :target: https://github.com/simplejson/simplejson/graphs/contributors
+
+    .. image:: https://raster.shields.io/github/commit-activity/y/simplejson/simplejson
+       :alt: Commit activity
+       :target: https://github.com/simplejson/simplejson/graphs/commit-activity
+
+    .. image:: https://raster.shields.io/github/license/simplejson/simplejson
+       :alt: Lizenz
+
+`python-json-patch <https://github.com/stefankoegl/python-json-patch>`_
+    ist eine Python-Bibliothek für JSON-Patches gemäß :rfc:`6902`.
+
+    .. image:: https://raster.shields.io/github/stars/stefankoegl/python-json-patch
+       :alt: Stars
+       :target: https://github.com/stefankoegl/python-json-patch
+
+    .. image:: https://raster.shields.io/github/contributors/stefankoegl/python-json-patch
+       :alt: Contributors
+       :target: https://github.com/stefankoegl/python-json-patch/graphs/contributors
+
+    .. image:: https://raster.shields.io/github/commit-activity/y/stefankoegl/python-json-patch
+       :alt: Commit activity
+       :target: https://github.com/stefankoegl/python-json-patch/graphs/commit-activity
+
+    .. image:: https://raster.shields.io/github/license/stefankoegl/python-json-patch
+       :alt: Lizenz
 
 .. _`standard`: https://www.json.org/json-en.html
 .. _`JSON_Checker`: http://www.json.org/JSON_checker/
