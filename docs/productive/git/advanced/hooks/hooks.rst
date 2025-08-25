@@ -110,7 +110,9 @@ Python Code Quality Authority
     `isort <https://github.com/PyCQA/isort>`_
         sortiert Python-Importe
 
-`nbQA <https://github.com/nbQA-dev/nbQA>`_
+.. _nbqa:
+
+`nbQA <https://github.com/nbQA-dev/nbQA>`__
     führt isort, pyupgrade, mypy, pylint, flake8 und mehr auf Jupyter Notebooks
     aus:
 

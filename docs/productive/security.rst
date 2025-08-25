@@ -202,8 +202,10 @@ Risiko: Mittel
 testen den Quellcode, bevor die Anwendung ausgeführt wird. Dies kann verhindern,
 dass bekannte Fehlerklassen versehentlich in die Codebasis eingeführt werden.
 
+.. _bandit:
+
 Um Schwachstellen zu überprüfen, könnt ihr `bandit
-<https://github.com/PyCQA/bandit>`_ verwenden, das ihr auch in eure
+<https://github.com/PyCQA/bandit>`__ verwenden, das ihr auch in eure
 :file:`.pre-commit-hooks.yaml` integrieren könnt:
 
 .. code-block:: yaml

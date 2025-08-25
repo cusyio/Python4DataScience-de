@@ -6,7 +6,7 @@ perflint
 ========
 
 `perflint <https://github.com/tonybaloney/perflint>`_ ist eine Erweiterung für
-`pylint <https://pylint.org/>`_ für Performance-Anti-Patternsr.
+`pylint <https://pylint.org/>`_ für Performance-Anti-Patterns.
 
 Installation
 ------------
