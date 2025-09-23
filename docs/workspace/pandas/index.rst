@@ -31,7 +31,7 @@ pandas genutzt, um
 
 .. tip::
    `cusy Seminar: Daten analysieren mit pandas
-   <https://cusy.io/de/unsere-schulungsangebote/daten-analysieren-mit-pandas>`_
+   <https://cusy.io/de/our-training-courses/analysing-data-with-pandas.html>`_
 
 .. seealso::
     * `Home
@@ -42,6 +42,33 @@ pandas genutzt, um
       <https://pandas.pydata.org/docs/reference/index.html>`_
     * `GitHub
       <https://github.com/pandas-dev/pandas/>`_
+
+pandas vs. Polars vs. Dask und DuckDB
+-------------------------------------
+
+Die Wahl zwischen pandas, `Polars <https://pola.rs>`_, :doc:`/performance/dask`
+und `DuckDB <https://duckdb.org>`_ hängt von der Art der Arbeitslast ab:
+
+pandas
+    ist die kanonische Python-DataFrame-Bibliothek für Analysen auf einem
+    einzelnen Rechner.
+Polars
+    ist in Rust geschrieben und erlaubt leistungsfähige Analysen auf einem
+    einzigen Knoten oder wenn `Lazy
+    Evaluation <https://de.wikipedia.org/wiki/Lazy_Evaluation>`_ und
+    `Expressions-API
+    <https://docs.pola.rs/api/python/stable/reference/expressions/index.html>`_
+    wichtig sind.
+Dask
+    ist eine Python-Bibliothek für paralleles Rechnen, die bekannte APIs,
+    :abbr:`u.a. (unter anderem)` von pandas und `Scikit-Learn
+    <https://scikit-learn.org/stable/>`_ auf Cluster skaliert.
+DuckDB
+    ist eine In-Process `OLAP
+    <https://de.wikipedia.org/wiki/Online_Analytical_Processing>`_-Datenbank
+    für Analysen und SQL über **lokale** Dateien, die häufig pandas DataFrames
+    ergänzt, da es sich hervorragend für In-Process-Analysen und SQL-Aufgaben
+    eignet.
 
 .. toctree::
     :hidden:
