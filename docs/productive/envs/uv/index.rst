@@ -52,10 +52,15 @@ Abhängigkeiten deklarieren, festschreiben und automatisch aktualisieren
 
 In :ref:`update-uv-lock` ist beschrieben, wie ihr mit ``uv lock --upgrade`` alle
 Abhängigkeiten und mit :samp:`uv lock --upgrade-package {PACKAGE}=={VERSION}`
-einzelne Abhängigkeiten kontrolliert aktualisieren könnt. Wie ihr regelmäßig
-automatisiert die Abhängigkeiten eures Projekts aktualisieren könnt, beschreiben
-wir in :doc:`dependency-bot`. Diese Maßnahmen erhöhen die Sicherheit eures
-Projekts erheblich.
+einzelne Abhängigkeiten kontrolliert aktualisieren könnt.
+
+In :doc:`claude-cursor` ist beschreiben, wie ihr eine Konfiguration erstellen
+könnt, sodass auch `Claude Code <https://claude.com/product/claude-code>`_ oder
+`Cursor <https://cursor.com>`_ zuverlässig uv verwenden.
+
+Wie ihr regelmäßig automatisiert die Abhängigkeiten eures Projekts aktualisieren
+könnt, beschreiben wir in :doc:`dependency-bot`. Diese Maßnahmen erhöhen die
+Sicherheit eures Projekts erheblich.
 
 .. seealso::
    * :ref:`lock-dependencies`
@@ -74,4 +79,5 @@ automatisiert in den verschiedenen Python-Umgebungen testen.
 
    cicd
    dependency-bot
+   claude-cursor
    docker
