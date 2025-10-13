@@ -278,3 +278,11 @@ beziehen, ist standardmäßig auf 30 Tage eingestellt.
 
 Ihr könnt diese Optionen auf einen längeren Zeitrahmen erhöhen, was allerdings
 nur selten sinnvoll sein dürfte.
+
+``fsck``
+--------
+
+`git fsck <https://git-scm.com/docs/git-fsck>`_ ist der letzte Ausweg wenn ein
+Commit nicht mehr im Reflog ist (:abbr:`z. B. (zum Beispiel)` wenn ihr ihn mit
+``git stash drop`` *„verloren”*. habt). Mit ``git fsck`` könnt ihr euch alle
+Commit-IDs auflisten lassen, auf die nicht verwiesen wird.
