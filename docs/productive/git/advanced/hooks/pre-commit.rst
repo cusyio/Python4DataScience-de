@@ -64,7 +64,7 @@ werden:
 .. code-block:: console
 
     $ uv run pre-commit -V
-    pre-commit 2.21.0
+    pre-commit 4.3.0
 
 Konfiguration
 -------------
@@ -77,7 +77,7 @@ dieses Projekt konfiguriert werden.
 
     repos:
       - repo: https://github.com/pre-commit/pre-commit-hooks
-        rev: v3.2.0
+        rev: v6.0.0
         hooks:
         -   id: trailing-whitespace
         -   id: end-of-file-fixer
@@ -100,7 +100,7 @@ zunächst konfigurieren, dass die Überprüfung auch für den Datei-Suffix
 
     repos:
       - repo: https://github.com/pre-commit/pre-commit-hooks
-        rev: v3.2.0
+        rev: v6.0.0
         hooks:
         …
         - id: check-json
