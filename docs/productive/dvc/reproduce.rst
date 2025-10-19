@@ -10,43 +10,42 @@ anschließend die mit DVC verwalteten Daten ab:
 
 .. code-block:: console
 
-    $ git clone https://github.com/veit/dvc-example.git
-    $ cd dvc-example
-    $ dvc pull -TR
-    A       data/data.xml
-    1 file added
-    $ ls data/
-    data.xml    data.xml.dvc
+   $ git clone https://github.com/veit/dvc-example.git
+   $ cd dvc-example
+   $ uv sync
+   $ uv run dvc pull -TR
+   Collecting                                            |23.0 [00:02, 7.77entry/s]
+   Fetching
+   Building workspace index                              |1.00 [00:00,  119entry/s]
+   Comparing indexes                                    |25.0 [00:00, 1.92kentry/s]
+   Applying changes                                      |14.0 [00:00, 4.10kfile/s]
+   A       data/features/
+   A       data/prepared/
+   A       eval/
+   A       data/data.xml
+   A       model.pkl
+   17 files fetched and 14 files added
+   $ tree data
+   data
+   ├── data.xml
+   ├── data.xml.dvc
+   ├── features
+   │   ├── test.pkl
+   │   └── train.pkl
+   └── prepared
+       ├── test.tsv
+       └── train.tsv
 
 Anschließend könnt ihr die Ergebnisse einfach reproduzieren mit `dvc repro
 <https://dvc.org/doc/command-reference/repro>`_:
 
 .. code-block:: console
 
-    $ dvc repro
-    Verifying data sources in stage: 'data/data.xml.dvc'
-    Stage 'split' didn't change, skipping
-    Stage 'featurize' didn't change, skipping
-    Stage 'train' didn't change, skipping
-    Stage 'evaluate' didn't change, skipping
-
-Ihr könnt nun z.B. Parameter in der ``params.yaml``-Datei ändern und
-anschließend die Pipeline erneut durchlaufen:
-
-.. code-block:: console
-
-    $ dvc repro
-    Stage 'data/data.xml.dvc' didn't change, skipping
-    Stage 'split' didn't change, skipping
-    Running stage 'featurize' with command:
-        python src/featurization.py data/splitted data/features
-    …
-    Stage 'train' didn't change, skipping
-    Stage 'evaluate' didn't change, skipping
-    To track the changes with git, run:
-        git add dvc.lock
-
-In unserem Fall hatte die Änderung der Parameter also keinen Einfluss auf das
-Ergebnis. Beachtet dabei jedoch, dass DVC Änderungen an Abhängigkeiten und
-Ausgaben über md5-Hashwerte erkennt, die in der ``dvc.lock``-Datei gespeichert
-sind.
+   $ uv run dvc repro
+   'data/data.xml.dvc' didn't change, skipping
+   Stage 'prepare' didn't change, skipping
+   Stage 'featurize' didn't change, skipping
+   Stage 'train' didn't change, skipping
+   Running stage 'evaluate':
+   > uv run python src/dvc_example/evaluate.py model.pkl data/features
+   Use `dvc exp run` to save experiment.
