@@ -9,130 +9,129 @@ DVC lässt sich einfach initialisieren mit:
 
 .. code-block:: console
 
-    $ mkdir -p dvc-example/data
+    $ uv init --package dvc-example
     $ cd dvc-example
     $ git init
-    $ dvc init
-    $ git add .dvc
-    $ git commit -m "Initialize DVC"
+    $ git add --all
+    $ git commit -m ':tada: Initial commit'
+    $ uv add dvc
+    $ uv run dvc init
+    $ git add pyproject.toml .dvc .dvcignore
+    $ git commit -m ":heavy_plus_sign: Add and initialise DVC"
 
-``dvc init``
-    erstellt ein Verzeichnis ``.dvc/`` mit ``config``, ``.gitignore`` und
-    ``cache``-Verzeichnis.
-``git commit``
-    stellt ``.dvc/config`` und ``.dvc/.gitignore`` unter Git-Versionskontrolle.
+``uv run dvc init``
+    erstellt ein Verzeichnis :file:`.dvc/` mit :file:`config`,
+    :file:`.gitignore` und :file:`cache`-Verzeichnis.
 
-Konfigurieren
--------------
+    Beim ersten Aufruf von ``dvc init`` werdet ihr darüber informiert, dass DVC
+    anonymisierte Nutzungsstatistiken erfasst und überträgt. Wenn ihr dies
+    deaktivieren möchtet, könnt ihr dies mit dem Befehl ``dvc config`` machen:
+
+    .. code-block:: console
+
+       $ uv run dvc config core.analytics false
+
+    Dadurch wird es für das Projekt deaktiviert. Alternativ könnt ihr die
+    Optionen ``--global`` oder ``--system`` von ``dvc config`` verwenden, um die
+    Analyse für den aktiven Account :abbr:`bzw. (beziehungsweise)` für alle
+    Accounts im System zu deaktivieren.
+
+``git add pyproject.toml .dvc .dvcignore``
+    stellt :file:`.dvc/config`, :file:`.dvc/.gitignore` und die aktualisierte
+    :file:`pyproject.toml` unter Git-Versionsverwaltung.
+
+Remote Storages konfigurieren
+-----------------------------
 
 .. _dvc-remote:
 
 Bevor DVC verwendet wird, sollte noch ein entfernter Speicherplatz (*remote
 storage*) eingerichtet werden. Dieser sollte für alle zugänglich sein, die auf
 die Daten oder das Modell zugreifen sollen. Es ähnelt der Verwendung eines
-Git-Server. Häufig ist das jedoch auch ein NFS-Mount, der z.B. folgendermaßen
-eingebunden werden kann:
+Git-Server. Häufig ist das jedoch auch ein NFS-Mount, der :abbr:`z. B. (zum
+Beispiel)` folgendermaßen eingebunden werden kann:
 
 .. code-block:: console
 
-    $ sudo mkdir -p /var/dvc-storage
-    $ dvc remote add -d local /var/dvc-storage
+    $ mkdir ~/dvc-storage
+    $ uv run dvc remote add -d local ~/dvc-storage
     Setting 'local' as a default remote.
-    $ git commit .dvc/config -m "Configure local remote"
-    [master efaeb84] Configure local remote
+    $ git commit .dvc/config -m ":wrench: Configure local remote"
+    [main 3e0c8fb] :wrench: Configure local remote
      1 file changed, 4 insertions(+)
 
 ``-d``, ``--default``
     Standardwert für den entfernten Speicherplatz
 ``local``
     Name des entfernten Speicherplatzes
-``/var/dvc-storage``
+:file:`~/dvc-storage`
     URL des entfernten Speicherplatzes
 
     Daneben werden noch weitere Protokolle unterstützt, die dem Pfad
     vorangestellt werden, u.a. ``ssh:``, ``hdfs:``, ``https:``.
 
 Es kann also einfach noch ein weiterer entfernter Datenspeicher hinzugefügt
-werden, z.B. mit:
+werden, :abbr:`z. B. (zum Beispiel)` mit:
 
 .. code-block:: console
 
-    $ dvc remote add webserver https://dvc.example.org/myproject
+    $ uv run dvc remote add webserver https://dvc.cusy.io/dvc-example
 
-Die zugehörige Konfigurationsdatei ``.dvc/config`` sieht dann so aus:
+Die zugehörige Konfigurationsdatei :file:`.dvc/config` sieht dann so aus:
 
 .. code-block:: ini
 
-    ['remote "local"']
-    url = /var/dvc-storage
-    [core]
-    remote = local
-    ['remote "webserver"']
-    url = https://dvc.example.org/myproject
+   [core]
+       remote = local
+   ['remote "local"']
+       url = /Users/veit/dvc-storage
+   ['remote "webserver"']
+       url = https://dvc.cusy.io/dvc-example
 
-Daten und Verzeichnisse hinzufügen
-----------------------------------
+.. seealso::
+   `Remote Storage
+   <https://dvc.org/doc/user-guide/data-management/remote-storage>`_
 
-Mit DVC könnt ihr Dateien, ML-Modelle, Verzeichnisse und Zwischenergebnisse mit
-Git speichern und versionieren, ohne dass der Dateiinhalt in Git eingecheckt
-werden muss:
+pre-commit konfigurieren
+------------------------
 
-.. code-block:: console
+Ihr könnt vor jedem ``git commit`` und ``git push`` sowie nach jedem ``git
+checkout`` die von DVC verwalteten Daten mit dem
+:doc:`../git/advanced/hooks/pre-commit` überprüfen. Mit ``dvc config
+--use-pre-commit-tool`` erhält die :file:`.pre-commit-config.yaml`-Datei
+folgende Checks:
 
-    $ dvc get https://github.com/iterative/dataset-registry get-started/data.xml \
-        -o data/data.xml
-    $ dvc add data/data.xml
+.. code-block:: yaml
 
-Dies fügt die Datei ``data/data.xml`` in ``data/.gitignore`` hinzu und
-schreibt die Meta-Angaben in ``data/data.xml.dvc``. Weitere Informationen
-zum Dateiformat der ``*.dvc``-Datei erhaltet ihr unter `.dvc Files
-<https://dvc.org/doc/user-guide/project-structure/dvc-files>`_.
+    - repo: https://github.com/iterative/dvc
+      rev: 3.63.0
+      hooks:
+      - id: dvc-pre-commit
+        additional_dependencies:
+        - .[all]
+        language_version: python3
+        stages:
+        - pre-commit
+      - id: dvc-pre-push
+        additional_dependencies:
+        - .[all]
+        language_version: python3
+        stages:
+        - pre-push
+      - id: dvc-post-checkout
+        additional_dependencies:
+        - .[all]
+        language_version: python3
+        stages:
+        - post-checkout
+        always_run: true
 
-Um nun verschiedene Versionen eurer Projektdaten mit Git verwalten zu können,
-müsst ihr jedoch nur die DVC-Datei hinzufügen:
-
-.. code-block:: console
-
-    $ git add data/.gitignore data/fortune500.csv.dvc
-    $ git commit -m "Add raw data to project"
-
-Daten speichern und abrufen
----------------------------
-
-Die Daten können vom Arbeitsverzeichnis eures Git-Repository auf den entfernten
-Speicherplatz kopiert werden mit
-
-.. code-block:: console
-
-    $ dvc push
-
-Falls ihr aktuellere Daten abrufen wollt, könnt ihr dies mit
-
-.. code-block:: console
-
-    $ dvc pull
-
-Importieren und Aktualisieren
------------------------------
-
-Ihr könnt auch Daten und Modelle eines anderen Projekts importieren mit dem
-``dvc import``-Befehl, z.B.:
+Damit nicht nur der ``pre-commit``-Hook verwendet wird, müsst ihr auch die
+``pre-push``- und ``post-checkout``-Hooks aktivieren:
 
 .. code-block:: console
 
-    $ dvc import https://github.com/iterative/dataset-registry  get-started/data.xml
-    Importing 'get-started/data.xml (https://github.com/iterative/dataset-registry)' -> 'data.xml'
-
-Dies lädt die Datei aus der `dataset-registry
-<https://github.com/iterative/dataset-registry>`_ in das aktuelle
-Arbeitsverzeichnis, fügt sie ``.gitignore`` hinzu und erstellt
-``data.xml.dvc``.
-
-Mit ``dvc update`` können wir diese Datenquellen aktualisieren, bevor wir eine
-Pipeline reproduzieren, die von diesen Datenquellen abhängt, z.B.:
-
-.. code-block:: console
-
-    $ dvc update data.xml.dvc
-    Stage 'data.xml.dvc' didn't change.
-    Saving information to 'data.xml.dvc'.
+   $ pre-commit install --hook-type pre-commit --hook-type pre-push --hook-type post-checkout
+   pre-commit installed at .git/hooks/pre-commit
+   pre-commit installed at .git/hooks/pre-push
+   pre-commit installed at .git/hooks/post-checkout
