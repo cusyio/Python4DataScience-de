@@ -68,8 +68,8 @@ Die Skripte können jedoch nicht in das serverseitige Repository kopiert werden.
     :hidden:
 
     pre-commit
+    scripts
     hooks
-    advanced
     ci
     skip
     template

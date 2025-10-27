@@ -164,7 +164,7 @@ Ausführen
 
 Die vom pre-commit-Framework verwalteten Hooks jedoch nicht darauf beschränkt,
 vor Commits ausgeführt zu werden; sie können auch für andere Git-Hooks verwendet
-werden, siehe :doc:`advanced`.
+werden, siehe :doc:`hooks`.
 
 .. _pre-commit-uv:
 

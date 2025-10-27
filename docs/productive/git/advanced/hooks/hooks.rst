@@ -2,172 +2,206 @@
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
-pre-commit-Skripte
-==================
+Unterstützte Git-Hooks
+======================
 
-`pre-commit-hooks <https://github.com/pre-commit/pre-commit-hooks>`_
-    Das pre-commit-Framework bringt bereits eine ganze Reihe von Skripten mit,
-    :abbr:`u.a. (unter anderem)`:
+Die vom pre-commit-Framework verwalteten Hooks beschränken sich nicht darauf,
+vor Commits ausgeführt zu werden; sie können auch für andere Git-Hooks verwendet
+werden:
 
-    ``check-added-large-files``
-        verhindert, dass große Dateien übertragen werden
-    ``check-case-conflict``
-        sucht nach Dateien, die in Dateisystemen, die Groß- und Kleinschreibung
-        nicht berücksichtigen, in Konflikt geraten würden
-    ``check-executables-have-shebangs``
-        stellt sicher, dass (nicht-binäre) ausführbare Dateien eine
-        Shebang-Zeile haben
-    ``check-shebang-scripts-are-executable``
-        stellt sicher, dass (nicht-binäre) Dateien mit einer Shebang-Zeile
-        ausführbar sind
-    ``check-merge-conflict``
-        sucht nach Dateien, die Merge-Conflict-Strings enthalten
-    ``check-symlinks``
-        prüft auf Symlinks, die auf nichts verweisen
-    ``destroyed-symlinks``
-        erkennt Symlinks, die in reguläre Dateien mit dem Inhalt des Pfades, auf
-        den der Symlink verweist, geändert wurden.
-    ``no-commit-to-branch``
-        schützt Zweige vor dem Commit
+* :ref:`commit-msg <commit-msg-hook>`
+* :ref:`post-checkout <post-checkout-hook>`
+* :ref:`post-commit <post-commit-hook>`
+* :ref:`post-merge <post-merge-hook>`
+* :ref:`post-rewrite <post-rewrite-hook>`
+* :ref:`pre-merge-commit <pre-merge-commit-hook>`
+* :ref:`pre-push <pre-push-hook>`
+* :ref:`pre-rebase <pre-rebase-hook>`
+* :ref:`prepare-commit-msg <prepare-commit-msg-hook>`
 
-`pygrep-hooks <https://github.com/pre-commit/pygrep-hooks>`_
-    stellt reguläre Ausdrücke für Python und reStructuredText bereit,
-    :abbr:`u.a. (unter anderem)`:
+.. _commit-msg-hook:
 
-    ``python-no-log-warn``
-        such nach der veralteten ``.warn()``-Methode von Python-Loggern
-    ``python-use-type-annotations``
-        erzwingt, dass Type-Annotations anstelle von Type-Comments verwendet
-        werden
-    ``rst-backticks``
-        erkennt die Verwendung einzelner Backticks beim Schreiben von
-        reStructuredText
-    ``rst-directive-colons``
-        erkennt, dass reStructuredText-Direktiven nicht mit einem Doppelpunkt
-        oder einem Leerzeichen vor dem Doppelpunkt enden
-    ``rst-inline-touching-normal``
-        erkennt, dass Inline-Code in normalem Text in reStructuredText verwendet
-        wird
-    ``text-unicode-replacement-char``
-        verhindert Dateien, die UTF-8-Unicode-Replacement-Character enthalten
+``commit-msg``
+    `commit-msg <https://git-scm.com/docs/githooks#_commit_msg>`_ kann verwendet
+    werden mit:
 
-Linter und Formatierer
-    Sie werden in eigenen Repositories bereitgestellt, :abbr:`u.a. (unter
-    anderem)`:
+    .. code-block:: console
 
-    `autopep8 <https://github.com/pre-commit/mirrors-autopep8>`_
-        stellt `autopep8 <https://github.com/hhatto/autopep8>`__ für das
-        pre-commit-Framework bereit
-    `mypy <https://github.com/pre-commit/mirrors-mypy>`_
-        stellt `mypy <https://github.com/python/mypy>`__ bereit
-    `validate-pyproject <https://github.com/abravalheri/validate-pyproject>`_
-        überprüft :file:`pyproject.toml`-Dateien
-    `sp-repo-review <https://github.com/scientific-python/cookie>`_
-        evaluiert bestehende Repos anhand der `Scientific Python-Richtlinien
-        <https://learn.scientific-python.org/development/>`_.
-    `clang-format <https://github.com/pre-commit/mirrors-clang-format>`_
-        stellt `clang-format-wheel
-        <https://github.com/ssciwr/clang-format-wheel>`__ bereit
-    `csslint <https://github.com/pre-commit/mirrors-csslint>`_
-        stellt `csslint <https://github.com/CSSLint/csslint>`__ bereit
-    `scss-lint <https://github.com/pre-commit/mirrors-scss-lint>`_
-        stellt `scss-lint <https://github.com/sds/scss-lint>`__ bereit
-    `eslint <https://github.com/pre-commit/mirrors-eslint>`_
-        stellt `eslint <https://github.com/eslint/eslint>`__ bereit
-    `fixmyjs <https://github.com/pre-commit/mirrors-fixmyjs>`_
-        stellt `fixmyjs <https://github.com/jshint/fixmyjs>`__ bereit
-    `prettier <https://github.com/pre-commit/mirrors-prettier>`_
-        stellt `prettier <https://github.com/prettier/prettier>`__ bereit
+        $ pre-commit install --hook-type commit-msg
+        pre-commit installed at .git/hooks/commit-msg
 
-`black <https://github.com/psf/black>`_
-    für die Formatierung von Python-Code
+    Der ``commit-msg``-Hook kann mit ``stages: [commit-msg]`` konfiguriert
+    werden, wobei der Name einer Datei übergeben wird, die den aktuellen Inhalt
+    der Commit-Nachricht enthält, der überprüft werden kann.
 
-    ``black``
-        Python-Code-Formattierer
-    ``black-jupyter``
-        Python-Code-Formattierer für Jupyter-Notebooks
+.. _post-checkout-hook:
 
-Python Code Quality Authority
-    Codequalitätswerkzeuge (und Plugins) für die Programmiersprache Python:
+``post-checkout``
+    Der `post-checkout <https://git-scm.com/docs/githooks#_post_checkout>`_-Hook
+    wird aufgerufen, wenn ``git checkout`` oder ``git switch`` ausgeführt wird.
 
-    `flake8 <https://github.com/PyCQA/flake8>`_
-        fördert die Durchsetzung eines konsistenten Python-Stils
-    `autoflake <https://github.com/PyCQA/autoflake>`_
-        entfernt unbenutzte Importe und unbenutzte Variablen aus Python-Code
-    `bandit <https://github.com/PyCQA/bandit>`_
-        Werkzeug zum Auffinden von Sicherheitslücken in Python-Code
-    `pydocstyle <https://github.com/PyCQA/pydocstyle>`_
-        statisches Analysewerkzeug zur Überprüfung der Einhaltung von
-        Python-Docstring-Konventionen.
-    `docformatter <https://github.com/PyCQA/docformatter>`_
-        formatiert docstrings gemäß :pep:`257`
-    `pylint <https://github.com/pylint-dev/pylint>`_
-        Python-Linter
-    `doc8 <https://github.com/PyCQA/doc8>`_
-        führt doc8 zum Linting von Dokumenten aus
-    `prospector <https://github.com/prospector-dev/prospector>`_
-        analysiert Python-Code mit Prospector
-    `isort <https://github.com/PyCQA/isort>`_
-        sortiert Python-Importe
+    Der ``post-checkout``-Hook kann :abbr:`z.B. (zum Beispiel)` verwendet
+    werden für
 
-.. _nbqa:
+    * die Überprüfung von Repositories
+    * die Ansicht der Unterschiede zum vorherigen ``HEAD``
+    * das Ändern der Metadaten des Arbeitsverzeichnisses.
 
-`nbQA <https://github.com/nbQA-dev/nbQA>`__
-    führt isort, pyupgrade, mypy, pylint, flake8 und mehr auf Jupyter Notebooks
-    aus:
+    In pre-commit kann kann er verwendet werden mit:
 
-    ``nbqa``
-        führt jedes Standard-Python-Codequalitätswerkzeug auf einem
-        Jupyter-Notebook aus
-    ``nbqa-black``
-        führt ``black`` auf einem Jupyter-Notebook aus
-    ``nbqa-check-ast``
-        führt ``check-ast`` auf einem Jupyter-Notebook aus
-    ``nbqa-flake8``
-        führt ``flake8`` auf einem Jupyter-Notebook aus
-    ``nbqa-isort``
-        führt ``isort`` auf einem Jupyter-Notebook aus
-    ``nbqa-mypy``
-        führt ``mypy`` auf einem Jupyter-Notebook aus
-    ``nbqa-pylint``
-        führt ``pylint`` auf einem Jupyter-Notebook aus
-    ``nbqa-pyupgrade``
-        führt ``ppyupgrade`` auf einem Jupyter-Notebook aus
-    ``nbqa-yapf``
-        führt ``yapf`` auf einem Jupyter-Notebook aus
-    ``nbqa-autopep8``
-        führt ``autopep8`` auf einem Jupyter-Notebook aus
-    ``nbqa-pydocstyle``
-        führt ``pydocstyle`` auf einem Jupyter-Notebook aus
-    ``nbqa-ruff``
-        führt ``ruff`` auf einem Jupyter-Notebook aus
+    .. code-block:: console
 
-`blacken-docs <https://github.com/adamchainz/blacken-docs>`_
-    wendet ``black`` auf Python-Codeblöcke in Dokumentationsdateien an
+        $ pre-commit install --hook-type post-checkout
+        pre-commit installed at .git/hooks/post-checkout
 
-Misc
+    Da ``post-checkout`` nicht auf Dateien wirkt, muss für alle
+    ``post-checkout``-Skripte ``always_run`` gesetzt werden, :abbr:`z.B. (zum
+    Beispiel)`:
 
-`pyupgrade <https://github.com/asottile/pyupgrade>`_
-    aktualisiert automatisch die Syntax für neuere Versionen
-`reorder-python-imports <https://github.com/asottile/reorder-python-imports>`_
-    ordnet Importe in Python-Dateien neu an
-`dead <https://github.com/asottile/dead>`_
-    erkkent toten Python-Code
-`python-safety-dependencies-check <https://github.com/Lucas-C/pre-commit-hooks-safety>`_
-    analysiert Python-Requirements auf bekannte Sicherheitsschwachstellen
-`gitlint <https://github.com/jorisroovers/gitlint>`_
-    Git commit message Linter
-`nbstripout <https://github.com/kynan/nbstripout>`_
-    entfernt die Ausgabe von Jupyter Notebooks
-`ripsecrets <https://github.com/sirwart/ripsecrets>`_
-    verhindert, dass geheime Schlüssel in euren Quellcode aufgenommen werden
-`detect-secrets <https://github.com/Yelp/detect-secrets>`_
-    erkennt Zeichenfolgen mit hoher Entropie, bei denen es sich wahrscheinlich
-    um Passwörter handelt
-`pip-compile <https://github.com/jazzband/pip-tools>`_
-    kompiliert automatisch Anforderungen
-`kontrolilo <https://github.com/kontrolilo/kontrolilo>`_
-    Werkzeug zur Kontrolle der Lizenzen für OSS-Abhängigkeiten
+    .. code-block:: yaml
 
-.. seealso::
-    * `Supported hooks <https://pre-commit.com/hooks.html>`_
+        - repo: local
+          hooks:
+          - id: post-checkout-local
+            name: Post checkout
+            always_run: true
+            stages: [post-checkout]
+            # …
+
+    Dabei gibt es drei Umgebungsvariablen, die den drei Arguementen von
+    ``post-checkout`` entsprechen:
+
+    ``$PRE_COMMIT_FROM_REF``
+        gibt die Referenz des vorherigen ``HEAD`` aus
+    ``$PRE_COMMIT_TO_REF``
+        gibt die Referenz des neuen ``HEAD`` aus,  der sich geändert haben kann
+        oder auch nicht
+    ``$PRE_COMMIT_CHECKOUT_TYPE``
+        gibt ``Flag=1`` aus, wenn es ein Branch-Checkout war und ``Flag=0``,
+        wenn es ein File-Checkout war.
+
+.. _post-commit-hook:
+
+``post-commit``
+    Ab Version 2.4.0 kann das Framework auch `post-commit
+    <https://git-scm.com/docs/githooks#_post_commit>`_-Hooks ausführen mit:
+
+    Da ``post-commit`` jedoch nicht auf Dateien wirkt, müssen all diese Hooks
+    ``always_run`` setzen:
+
+    .. code-block:: yaml
+
+        - repo: local
+          hooks:
+          - id: post-commit-local
+            name: post commit
+            always_run: true
+            stages: [post-commit]
+            # …
+
+.. _post-merge-hook:
+
+``post-merge``
+    Ab Version 2.11.0 kann das Framework auch Skripte für den `post-merge
+    <https://git-scm.com/docs/githooks#_post_merge>`_-Hook ausführen:
+
+    .. code-block:: console
+
+        $ uv run pre-commit install --hook-type post-merge
+        pre-commit installed at .git/hooks/post-merge
+
+    Mit ``$PRE_COMMIT_IS_SQUASH_MERGE`` könnt ihr herausfinden, ob es sich um
+    einen Squash-Merge handelte.
+
+.. _post-rewrite-hook:
+
+``post-rewrite``
+    `post-rewrite <https://git-scm.com/docs/githooks#_post_rewrite>`_ wird
+    aufgerufen, wenn Commits umgeschrieben werden, also von ``git commit
+    --amend`` oder von ``git rebase``.
+
+    .. code-block:: console
+
+        $ pre-commit install --hook-type post-rewrite
+        pre-commit installed at .git/hooks/post-rewrite
+
+    Da ``post-rewrite`` nicht auf Dateien wirkt, muss ``always_run: true``
+    gesetzt werden.
+
+    Git teilt dem ``post-rewrite``-Hook mit, welcher Befehl das Rewrite
+    ausgelöst hat. pre-commit gibt dies als ``$PRE_COMMIT_REWRITE_COMMAND`` aus.
+
+.. _pre-merge-commit-hook:
+
+``pre-merge-commit``
+    Ab Git 2.24 gibt es den `pre-merge-commit
+    <https://git-scm.com/docs/githooks#_pre_merge_commit>`_-Hook, der ausgelöst
+    wird, ausgelöst, nachdem eine Zusammenführung erfolgreich war, aber bevor
+    der Merge-Commit erstellt wird. Ihr könnt ihn mit dem pre-commit-Framework
+    nutzen mit:
+
+    .. code-block:: console
+
+        $ pre-commit install --hook-type pre-merge-commit
+        pre-commit installed at .git/hooks/pre-merge-commit
+
+.. _pre-push-hook:
+
+``pre-push``
+    Um den `pre-push <https://git-scm.com/docs/githooks#_pre_push>`_-Hook mit
+    dem pre-commit-Framework verwenden zu können, gebt folgendes ein:
+
+    .. code-block:: console
+
+        $ pre-commit install --hook-type pre-push
+        pre-commit installed at .git/hooks/pre-push
+
+    Hierfür werden die folgenden Umgebungsvariablen bereitgestellt:
+
+    ``$PRE_COMMIT_FROM_REF``
+        Die entfernte Revision, zu der gepusht wurde
+    ``$PRE_COMMIT_TO_REF``
+        Die lokale Revision, die an die entfernte Revision gepusht wurde
+    ``$PRE_COMMIT_REMOTE_NAME``
+        Die lokale Revision, die an die entfernte Revision gepusht wurde,
+        :abbr:`z.B. (zum Beispiel)` :samp:`origin`
+    ``$PRE_COMMIT_REMOTE_URL``
+        Die URL des entfernten Repository, zu dem gepusht wurde,
+        :abbr:`z.B. (zum Beispiel)`
+        :samp:`git@github.com:veit/python4datascience`
+    ``$PRE_COMMIT_REMOTE_BRANCH``
+        Der Name des entfernten Zweigs, zu dem gepusht wurde, :abbr:`z.B. (zum
+        Beispiel)` :samp:`refs/heads/{TARGET_BRANCH}`
+    ``$PRE_COMMIT_LOCAL_BRANCH``
+        Der Name des lokalen Zweigs, der in den entfernten Zweig verschoben
+        wurde, :abbr:`z.B. (zum Beispiel)` :samp:`{HEAD}`
+
+.. _pre-rebase-hook:
+
+``pre-rebase``
+    Seit Version 3.2.0 unterstützt das Framework auch `pre-rebase
+    <https://git-scm.com/docs/githooks#_pre_rebase>`_-Hooks:
+
+    .. code-block:: console
+
+       $ uv run pre-commit install --hook-type pre-rebase
+       pre-rebase installed at .git/hooks/pre-rebase
+
+.. _prepare-commit-msg-hook:
+
+``prepare-commit-msg``
+    `prepare-commit-msg
+    <https://git-scm.com/docs/githooks#_prepare_commit_msg>`_ kann mit
+    pre-commit verwendet werden mit:
+
+    .. code-block:: console
+
+        $ pre-commit install --hook-type prepare-commit-msg
+        pre-commit installed at .git/hooks/prepare-commit-msg
+
+    Der ``prepare-commit-msg``-Hook wird mit ``stages: [prepare-commit-msg]``
+    konfiguriert, wobei der Name einer Datei übergeben wird, die die anfängliche
+    Commit-Nachricht enthält, :abbr:`z.B. (zum Beispiel)` von :samp:`git commit
+    -m "{COMMIT-MESSAGE}"` um daraus eine dynamische Vorlage zu erstellen, die
+    im Editor angezeigt wird. Schließlich sollte der Hook noch überprüfen, ob
+    kein Editor gestartet wird mit ``GIT_EDITOR=:``.
