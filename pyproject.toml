@@ -3,68 +3,84 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 [project]
-name = "Python4DataScience"
+name = "python4datascience"
 version = "24.2.0"
-authors = [
-  { name="Veit Schiele", email="veit@cusy.io" },
-]
 description = "Teaching materials for the cusy training courses on Python-based data science workflows: https://cusy.io/en/seminars"
 readme = "README.rst"
+authors = [
+  { name = "Veit Schiele", email = "veit@cusy.io" },
+]
 requires-python = ">=3.9"
 classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: BSD License",
-    "Operating System :: OS Independent",
+  "License :: OSI Approved :: BSD License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
 ]
-dependencies = []
+dependencies = [  ]
+
+urls."Bug Tracker" = "https://github.com/cusyio/Python4DataScience/issues"
+urls."Homepage" = "https://github.com/cusyio/Python4DataScience/"
 
 [dependency-groups]
-docs = [
-    "furo",
-    "ipython",
-    "ipywidgets",
-    "matplotlib",
-    "nbsphinx",
-    "notebook",
-    "sphinx<8.2",
-    "sphinx-copybutton",
-    "sphinx-lint",
-    "sphinx-notfound-page",
-    "sphinx-sitemap",
-    "sphinx_inline_tabs",
-    "sphinxcontrib-svg2pdfconverter",
-    "sphinxext.opengraph", # matplotlib is required for social cards
-]
-
 dev = [
-    { include-group = "docs" },
-    "pre-commit",
-    "codespell",
-    "vale",
+  "codespell",
+  "pre-commit",
+  "vale",
+  { include-group = "docs" },
 ]
-
-[project.urls]
-"Homepage" = "https://github.com/cusyio/Python4DataScience/"
-"Bug Tracker" = "https://github.com/cusyio/Python4DataScience/issues"
+docs = [
+  "furo",
+  "ipython",
+  "ipywidgets",
+  "matplotlib",
+  "nbsphinx",
+  "notebook",
+  "sphinx<8.2",
+  "sphinx-copybutton",
+  "sphinx-inline-tabs",
+  "sphinx-lint",
+  "sphinx-notfound-page",
+  "sphinx-sitemap",
+  "sphinxcontrib-svg2pdfconverter",
+  "sphinxext-opengraph",            # matplotlib is required for social cards
+]
 
 [tool.setuptools]
-packages = []
+packages = [  ]
 
 [tool.black]
 line-length = 79
 
 [tool.isort]
-atomic=true
-force_grid_wrap=0
-include_trailing_comma=true
-lines_after_imports=2
-lines_between_types=1
-multi_line_output=3
-not_skip="__init__.py"
-use_parentheses=true
+atomic = true
+force_grid_wrap = 0
+include_trailing_comma = true
+lines_after_imports = 2
+lines_between_types = 1
+multi_line_output = 3
+not_skip = "__init__.py"
+use_parentheses = true
 
-known_first_party="Python4DataScience"
-known_third_party=["Cython", "accounts_pb2", "accounts_pb2_grpc", "dataprep", "grpc", "mpi4py", "numpy", "pandas", "pydantic", "pytest", "requests", "setuptools"]
+known_first_party = "Python4DataScience"
+known_third_party = [
+  "Cython",
+  "accounts_pb2",
+  "accounts_pb2_grpc",
+  "dataprep",
+  "grpc",
+  "mpi4py",
+  "numpy",
+  "pandas",
+  "pydantic",
+  "pytest",
+  "requests",
+  "setuptools",
+]
 
 [tool.codespell]
 skip = "*.csv, *.html, *.pdf, *.rst, *.ipynb, ./docs/_build/*, */books.json,  */books.txt, ./styles/*, ./Python4DataScience.egg-info/*"
