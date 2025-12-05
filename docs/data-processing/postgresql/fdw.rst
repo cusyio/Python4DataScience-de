@@ -5,10 +5,10 @@
 Foreign Data Wrappers (FDW)
 ===========================
 
-2003 wurde SQL erweitert um  SQL/MED (*SQL Management of External Data*).
-PostgreSQL 9.1 unterstützte dies *read-only*, 9.3 dann auch schreibend.
-Seitdem sind eine Reihe von Foreign Data Wrappers (FDW) für PostgreSQL
-entwickelt worden.
+2003 wurde SQL um SQL/MED (*SQL Management of External Data*) erweitert.
+PostgreSQL 9.1 unterstützte dies *read-only*, ab der Version 9.3 dann
+auch schreibend. Seitdem wurden eine Reihe von Foreign Data Wrappers (FDW)
+für PostgreSQL entwickelt.
 
 Im Folgenden nur eine kleine Auswahl der bekanntesten FDW:
 
