@@ -66,8 +66,21 @@ Performance-Messungen
 ---------------------
 
 Wenn ihr erst einmal mit eurem Code gearbeitet habt, kann es nützlich sein, die
-Effizienz genauer zu untersuchen. Hierfür kann :mod:`cProfile`,
+Effizienz genauer zu untersuchen. Hierfür kann :abbr:`z. B. (zum Beispiel)`
+`cProfile <https://docs.python.org/3.14/library/profile.html#module-cProfile>`_,
 :doc:`ipython-profiler` oder :doc:`scalene` genutzt werden.
+
+.. versionadded:: Python3.15
+   Mit :pep:`799` wird ein spezielles Profiling-Modul zur Verfügung stehen, das
+   die in Python integrierten Profiling-Tools unter einem einheitlichen
+   Namespace organisiert. Dieses Modul enthält:
+
+   :mod:`profiling.tracing`
+       deterministische Funktionsaufrufverfolgung, die aus `cProfile
+       <https://docs.python.org/3.14/library/profile.html#module-cProfile>`_
+       verschoben wurde.
+   :mod:`profiling.sampling`
+       der neue statistische Sampling-Profiler :doc:`tachyon`.
 
 .. seealso::
     * `airspeed velocity (asv) <https://asv.readthedocs.io/en/stable/>`_ ist ein
@@ -85,6 +98,7 @@ Effizienz genauer zu untersuchen. Hierfür kann :mod:`cProfile`,
 
     ipython-profiler.ipynb
     scalene.ipynb
+    tachyon
 
 Suche nach bestehenden Implementierungen
 ----------------------------------------
@@ -228,6 +242,20 @@ dürften hingegen kaum profitieren.
 Wenn ihr mit eurem Projekt nicht bis zur Veröffentlichung von Python 3.11 in der
 finalen Version voraussichtlich am 24. Oktober 2022 warten wollt, könnt ihr euch
 auch die folgenden Python-Interpreter anschauen:
+
+Python JIT compiler
+~~~~~~~~~~~~~~~~~~~
+
+.. versionadded:: Python3.15
+   Der `JIT-Compiler <https://de.wikipedia.org/wiki/Just-in-time-Kompilierung>`_
+   in Python 3.15 zeigt eine mittlere Leistungssteigerung von 3–4 gegenüber dem
+   Standard-CPython-Interpreter, wobei die Performance-Messungen schwanken
+   zwischen -20 und über 100 % auf x86-64-Linux- und AArch64-macOS-Systemen.
+
+   .. seealso::
+      * `The JIT Compiler
+        <https://github.com/python/cpython/blob/main/Tools/jit/README.md>`_
+      * :ref:`whatsnew315-jit`
 
 Cython
 ~~~~~~
