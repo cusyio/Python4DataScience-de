@@ -97,9 +97,9 @@ Gibt es ein Sicherheitskonzept für das Projekt?
 
 Risiko: Mittel
 
-Idealerweise sollte mit dem Projekt eine Datei :file:`SECURITY.md` :abbr:`o.ä.
-(oder ähnliches)` veröffentlicht worden sein. Diese Datei sollte Informationen
-enthalten,
+Idealerweise sollte mit dem Projekt eine :ref:`python-basics:security`-Datei
+:abbr:`o.ä. (oder ähnliches)` veröffentlicht worden sein. Diese Datei sollte
+Informationen enthalten,
 
 * wie eine Sicherheitslücke gemeldet werden kann ohne dass sie öffentlich
   sichtbar wird,

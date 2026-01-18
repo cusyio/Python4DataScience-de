@@ -5,7 +5,7 @@
 Python4DataScience
 ==================
 
-.. _badges:
+.. _badges
 
 Status
 ------
@@ -29,7 +29,7 @@ Status
    :alt: Mastodon
    :target: https://mastodon.social/@Python4DataScience
 
-.. _first-steps:
+.. _first-steps
 
 Überblick
 ---------
@@ -125,7 +125,7 @@ Installation
    Das PDF findet ihr anschließend in ``docs/_build/latex/jupytertutorial.pdf``.
 
 
-.. _follow-us:
+.. _follow-us
 
 Folge uns
 ---------
