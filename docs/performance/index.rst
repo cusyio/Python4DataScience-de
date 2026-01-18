@@ -67,8 +67,15 @@ Performance-Messungen
 
 Wenn ihr erst einmal mit eurem Code gearbeitet habt, kann es nützlich sein, die
 Effizienz genauer zu untersuchen. Hierfür kann :abbr:`z. B. (zum Beispiel)`
-`cProfile <https://docs.python.org/3.14/library/profile.html#module-cProfile>`_,
-:doc:`ipython-profiler` oder :doc:`scalene` genutzt werden.
+:doc:`cProfile <tracing>`, :doc:`ipython-profiler`, :doc:`scalene` oder
+:doc:`tprof` genutzt werden. Bisher führe ich meist die folgenden Schritte aus:
+
+#. Ich profilierte das gesamte Programm mit :doc:`cProfile <tracing>` oder
+   `py-spy <https://github.com/benfred/py-spy>`_, um langsame Funktionen zu
+   finden.
+#. Anschließend optimiertee ich eine langsame Funktion.
+#. Schließlich erstellte ich ein neues Profil und filterte das Ergebnis meiner
+   optimierten Version heraus um die Ergebnisse vergleichen zu können.
 
 .. versionadded:: Python3.15
    Mit :pep:`799` wird ein spezielles Profiling-Modul zur Verfügung stehen, das
@@ -76,9 +83,8 @@ Effizienz genauer zu untersuchen. Hierfür kann :abbr:`z. B. (zum Beispiel)`
    Namespace organisiert. Dieses Modul enthält:
 
    :mod:`profiling.tracing`
-       deterministische Funktionsaufrufverfolgung, die aus `cProfile
-       <https://docs.python.org/3.14/library/profile.html#module-cProfile>`_
-       verschoben wurde.
+       deterministische Funktionsaufrufverfolgung, die aus :doc:`cProfile
+       <tracing>` verschoben wurde.
    :mod:`profiling.sampling`
        der neue statistische Sampling-Profiler :doc:`tachyon`.
 
@@ -96,8 +102,10 @@ Effizienz genauer zu untersuchen. Hierfür kann :abbr:`z. B. (zum Beispiel)`
     :titlesonly:
     :maxdepth: 0
 
+    tracing
     ipython-profiler.ipynb
     scalene.ipynb
+    tprof
     tachyon
 
 Suche nach bestehenden Implementierungen
