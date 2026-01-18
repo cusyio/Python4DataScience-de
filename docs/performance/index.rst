@@ -28,8 +28,10 @@ k-Means-Beispiel
 
 Im Folgenden zeige ich Beispiele für den `k-Means-Algorithmus
 <https://de.wikipedia.org/wiki/K-Means-Algorithmus>`_, um aus einer Menge von
-Objekten eine vorher bekannte Anzahl von Gruppen zu bilden. Dies lässt sich in
-den folgenden drei Schritten ereichen:
+Objekten eine vorher bekannte Anzahl von Gruppen zu bilden. Dies lässt sich mit
+dem `MacQueen’s Algorithmus
+<https://de.wikipedia.org/wiki/K-Means-Algorithmus#MacQueen’s_Algorithmus>`_ in
+den folgenden drei Schritten erreichen:
 
 #. Wähle die ersten :samp:`k` Elemente als Clusterzentren
 #. Weise jedes neue Element dem Cluster zu, bei dem sich die Varianz am
@@ -44,6 +46,7 @@ Eine mögliche Implementierung mit reinem Python könnte so aussehen:
 .. literalinclude:: py_kmeans.py
    :caption: py_kmeans.py
    :name: py_kmeans.py
+   :lines: 6-
 
 Beispieldaten können wir uns erstellen mit:
 
@@ -67,8 +70,20 @@ Performance-Messungen
 
 Wenn ihr erst einmal mit eurem Code gearbeitet habt, kann es nützlich sein, die
 Effizienz genauer zu untersuchen. Hierfür kann :abbr:`z. B. (zum Beispiel)`
-`cProfile <https://docs.python.org/3.14/library/profile.html#module-cProfile>`_,
-:doc:`ipython-profiler` oder :doc:`scalene` genutzt werden.
+:doc:`cProfile <tracing>`, :doc:`ipython-profiler`, :doc:`scalene` oder
+:doc:`tprof` genutzt werden. Bisher führe ich meist die folgenden Schritte aus:
+
+#. Ich profiliere das gesamte Programm mit :doc:`cProfile <tracing>` oder
+   `py-spy <https://github.com/benfred/py-spy>`_, um langsame Funktionen zu
+   finden.
+#. :abbr:`Ggf (Gegebenenfalls)` finde ich mit dem `line_profiler
+   <https://github.com/pyutils/line_profiler>`_ die langsamen Stellen innerhalb
+   der Funktion
+#. Sofern die langsame Funktion rechenintensiv ist, versuche ich eine der folgen
+   den Optimierungen; sofern jedoch die Anwendung datenintensiv ist (Dicts,
+   Strings, I/O)), schaue ich mir die Architektur nochmal genauer an.
+#. Schließlich erstelle ich ein neues Profil und filtere das Ergebnis meiner
+   optimierten Version heraus um die Ergebnisse vergleichen zu können.
 
 .. versionadded:: Python3.15
    Mit :pep:`799` wird ein spezielles Profiling-Modul zur Verfügung stehen, das
@@ -76,9 +91,8 @@ Effizienz genauer zu untersuchen. Hierfür kann :abbr:`z. B. (zum Beispiel)`
    Namespace organisiert. Dieses Modul enthält:
 
    :mod:`profiling.tracing`
-       deterministische Funktionsaufrufverfolgung, die aus `cProfile
-       <https://docs.python.org/3.14/library/profile.html#module-cProfile>`_
-       verschoben wurde.
+       deterministische Funktionsaufrufverfolgung, die aus :doc:`cProfile
+       <tracing>` verschoben wurde.
    :mod:`profiling.sampling`
        der neue statistische Sampling-Profiler :doc:`tachyon`.
 
@@ -96,12 +110,14 @@ Effizienz genauer zu untersuchen. Hierfür kann :abbr:`z. B. (zum Beispiel)`
     :titlesonly:
     :maxdepth: 0
 
+    tracing
     ipython-profiler.ipynb
     scalene.ipynb
+    tprof
     tachyon
 
-Suche nach bestehenden Implementierungen
-----------------------------------------
+1. Suche nach bestehenden Implementierungen
+-------------------------------------------
 
 Ihr solltet nicht das Rad neu erfinden wollen: Wenn es bestehende
 Implementierungen gibt, solltet ihr diese auch verwenden. für den
@@ -133,8 +149,8 @@ an anderen Stellen `scikit-learn <https://scikit-learn.org/stable/>`_ oder
 `Dask-ML <https://ml.dask.org>`_ einsetzt. Im Folgenden werde ich daher weitere
 Möglichkeiten zeigen, euren eigenen Code zu optimieren.
 
-Anti-Patterns finden
---------------------
+2. Anti-Patterns finden
+-----------------------
 
 Anschließend könnt ihr mit :doc:`perflint` euren Code durchsuchen nach den
 häufigsten Performance-Anti-Patterns in Python.
@@ -149,24 +165,32 @@ häufigsten Performance-Anti-Patterns in Python.
 .. seealso::
    * `Effective Python <https://effectivepython.com>`_
 
-Vektorisierungen mit NumPy
---------------------------
+3. Vektorisierungen mit NumPy
+-----------------------------
 
-:doc:`../workspace/numpy/index` verlagert sich wiederholte Operationen in eine
-statisch typisierte kompilierte Schicht, um so  die schnelle Entwicklungszeit
-von Python mit der schnellen Ausführungszeit von C zu kombinieren. :abbr:`Evtl.
-(Eventuell)` könnt ihr :doc:`../workspace/numpy/ufunc`, :doc:`Vektorisierung
-<../workspace/numpy/vectorisation>` und
+:doc:`../workspace/numpy/index` verlagert sich wiederholende Operationen in eine
+statisch typisierte kompilierte Schicht, um so die schnelle Entwicklungszeit von
+Python mit der schnellen Ausführungszeit von C zu kombinieren.
+
++---------------+---------------+----------+
+| Version       | Spectral-norm | vs 3.14x |
++===============+===============+==========+
+| CPython 3.14  | 14,046ms      |          |
+| – Basis       |               |          |
++---------------+---------------+----------+
+| NumPy         | 27ms          | 520x     |
++---------------+---------------+----------+
+
+:abbr:`Evtl. (Eventuell)` könnt ihr :doc:`../workspace/numpy/ufunc`,
+:doc:`Vektorisierung <../workspace/numpy/vectorisation>` und
 :doc:`../workspace/numpy/indexing-slicing` in allen Kombinationen nutzen um sich
 wiederholende Operationen in kompilierten Code zu verschieben und damit langsame
-Schleifen zu vermeiden.
-
-Mit NumPy können wir auf einige Schleifen verzichten:
+Schleifen zu vermeiden, :abbr:`z. B. (zum Beispiel)`:
 
 .. literalinclude:: np_kmeans.py
    :caption: np_kmeans.py
    :name: np_kmeans.py
-   :lines: 1-8
+   :lines: 5-12
 
 Die Vorteile von NumPy sind, dass der Python-Overhead nur je Array und nicht je
 Array-Element auftritt. Da NumPy eine spezifische Sprache für Array-Operationen
@@ -174,8 +198,13 @@ verwendet, erfordert es jedoch auch eine andere Denkweise beim Schreiben von
 Code. Schließlich können die Batch-Operationen auch zu übermäßigem
 Speicherverbrauch führen.
 
-Spezielle Datenstrukturen
--------------------------
+.. seealso::
+   * `Speeding up NumPy with parallelism
+     <https://pythonspeed.com/articles/numpy-parallelism/>`_ by Itamar
+     Turner-Trauring
+
+4. Spezielle Datenstrukturen
+----------------------------
 
 :doc:`../workspace/pandas/index`
     für SQL-ähnliche :doc:`../workspace/pandas/group-operations` und
@@ -186,7 +215,7 @@ Spezielle Datenstrukturen
     .. literalinclude:: pd_kmeans.py
        :caption: pd_kmeans.py
        :name: pd_kmeans.py
-       :lines: 2-4, 11-15
+       :lines: 5-8, 16-19
 
 `scipy.spatial <https://docs.scipy.org/doc/scipy/reference/spatial.html>`_
     für räumliche Abfragen wie Entfernungen, nächstgelegene Nachbarn,  k-Means
@@ -198,13 +227,13 @@ Spezielle Datenstrukturen
     .. literalinclude:: sp_kmeans.py
        :caption: sp_kmeans.py
        :name: sp_kmeans.py
-       :lines: 4-10
+       :lines: 5-14
 
 `scipy.sparse <https://docs.scipy.org/doc/scipy/reference/sparse.html>`_
     `dünnbesetzte Matrizen <https://de.wikipedia.org/wiki/Dünnbesetzte_Matrix>`_
     für 2-dimensionale strukturierte Daten.
 `Sparse <https://sparse.pydata.org/en/stable/>`_
-    für N-diemensional strukturierte Daten.
+    für N-dimensional strukturierte Daten.
 `scipy.sparse.csgraph <https://docs.scipy.org/doc/scipy/reference/sparse.csgraph.html>`_
     für graphenähnliche Probleme, :abbr:`z.B. (zum Beispiel)` die Suche nach
     kürzesten Wegen.
@@ -218,8 +247,8 @@ Spezielle Datenstrukturen
 
     parallelise-pandas
 
-Compiler wählen
----------------
+5. Compiler wählen
+------------------
 
 Faster Cpython
 ~~~~~~~~~~~~~~
@@ -235,13 +264,47 @@ Von den Änderungen profitieren dürfte vor allem CPU-intensiver Python-Code;
 bereits in C geschriebener Code, I/O-lastige Prozesse und Multithreading-Code
 dürften hingegen kaum profitieren.
 
+Und tatsächlich sind die cPython-Versionen seitdem deutlich performanter
+geworden:
+
++------------------+---------+
+| Version          |         |
++==================+=========+
+| CPython 3.10.4   | 1.422x  |
++------------------+---------+
+| CPython 3.12.0   | 1.093x  |
++------------------+---------+
+| CPython 3.13.0   | 1.024x  |
++------------------+---------+
+| CPython 3.15.0a0 |         |
+| – Basis          |         |
++------------------+---------+
+
 .. seealso::
    * `Faster CPython
      <https://web.archive.org/web/20221007175548/https://faster-cpython.readthedocs.io/>`__
+   * `Faster CPython Benchmark Infrastructure
+     <https://github.com/faster-cpython/benchmarking-public?tab=readme-ov-file>`_
 
-Wenn ihr mit eurem Projekt nicht bis zur Veröffentlichung von Python 3.11 in der
-finalen Version voraussichtlich am 24. Oktober 2022 warten wollt, könnt ihr euch
-auch die folgenden Python-Interpreter anschauen:
+In einen anderen Vergleich wurde auch Free-threaded Python einbezogen:
+
++---------------+---------+---------+---------------+----------+
+| Version       | N-body  | vs 3.14 | Spectral-norm | vs 3.14x |
++===============+=========+=========+===============+==========+
+| CPython 3.10  | 1,663ms | 0.75x   | 16,826ms      | 0.83x    |
++---------------+---------+---------+---------------+----------+
+| CPython 3.11  | 1,200ms | 1.04x   | 13,430ms      | 1.05x    |
++---------------+---------+---------+---------------+----------+
+| CPython 3.13  | 1,134ms | 1.10x   | 13,637ms      | 1.03x    |
++---------------+---------+---------+---------------+----------+
+| CPython 3.14  | 1,242ms |         | 14,046ms      |          |
+| – Basis       |         |         |               |          |
++---------------+---------+---------+---------------+----------+
+| CPython 3.14t | 1,513ms | 0.82x   | 14,551ms      | 0.97x    |
++---------------+---------+---------+---------------+----------+
+
+– Quelle: `The Optimization Ladder
+<https://cemrehancavdar.com/2026/03/10/optimization-ladder/>`_
 
 Python JIT compiler
 ~~~~~~~~~~~~~~~~~~~
@@ -257,26 +320,49 @@ Python JIT compiler
         <https://github.com/python/cpython/blob/main/Tools/jit/README.md>`_
       * :ref:`whatsnew315-jit`
 
++------------------+---------+
+| Version          |         |
++==================+=========+
+| CPython 3.15.0a0 | 1.001x  |
+| (JIT)            |         |
++------------------+---------+
+| CPython 3.15.0a0 |         |
+| – Basis          |         |
++------------------+---------+
+
 Cython
 ~~~~~~
 
 Bei intensiven numerischen Operationen kann Python sehr langsam sein, auch wenn
 ihr alle Anti-Patterns vermieden und Vektorisierungen mit NumPy genutzt habt.
 Dann kann das Übersetzen von Code in `Cython <https://cython.org>`_ hilfreich
-sein.  Leider muss der Code jedoch häufig umstrukturiert werden und nimmt
-dadurch an Komplexität zu. Auch werden explizite Type Annotations und das
-Bereitstellen des Codes umständlicher.
+sein.
+
++---------------+---------+---------+---------------+----------+
+| Version       | N-body  | vs 3.14 | Spectral-norm | vs 3.14x |
++===============+=========+=========+===============+==========+
+| CPython 3.14  | 1,242ms |         | 14,046ms      |          |
+| – Basis       |         |         |               |          |
++---------------+---------+---------+---------------+----------+
+| Cython        | 10ms    | 124x    | 142ms         | 99x      |
++---------------+---------+---------+---------------+----------+
+
+Leider muss der Code jedoch häufig umstrukturiert werden und nimmt dadurch an
+Komplexität zu. Auch werden explizite Type Annotations und das Bereitstellen des
+Codes umständlicher.
 
 Unser Beispiel könnte dann so aussehen:
 
 .. literalinclude:: cy_kmeans.pyx
    :caption: cy_kmeans.pyx
    :name: cy_kmeans.pyx
-   :lines: 1-28
+   :lines: 5-32
 
 .. seealso::
-    * `Cython Tutorials
-      <https://cython.readthedocs.io/en/latest/src/tutorial/>`_
+   * `Cython Tutorials
+     <https://cython.readthedocs.io/en/latest/src/tutorial/>`_
+   * `The Cython Minefield
+     <https://github.com/cemrehancavdar/faster-python-bench/blob/main/docs/cython-minefield.md>`_
 
 Numba
 ~~~~~
@@ -288,13 +374,22 @@ wissenschaftlichen Python- und NumPy-Code in schnellen Maschinencode
 .. literalinclude:: nb_kmeans.py
    :caption: nb_kmeans.py
    :name: nb_kmeans.py
-   :lines: 1-25
+   :lines: 5-29
 
 Numba benötigt allerdings `LLVM <https://de.wikipedia.org/wiki/LLVM>`_ und
 einige Python-Konstrukte werden nicht unterstützt.
 
-Aufgabenplaner
---------------
++---------------+---------+---------+---------------+----------+
+| Version       | N-body  | vs 3.14 | Spectral-norm | vs 3.14x |
++===============+=========+=========+===============+==========+
+| CPython 3.14  | 1,242ms |         | 14,046ms      |          |
+| – Basis       |         |         |               |          |
++---------------+---------+---------+---------------+----------+
+| Numba         | 22ms    | 56x     | 104ms         | 135x     |
++---------------+---------+---------+---------------+----------+
+
+6. Aufgabenplaner
+-----------------
 
 :doc:`jupyter-tutorial:hub/ipyparallel/index`, :doc:`dask` und `Ray
 <https://docs.ray.io/en/latest/>`_ können Aufgaben in einem Cluster verteilen.
@@ -332,7 +427,7 @@ Unser Beispiel könnte mit Dask so aussehen:
 .. literalinclude:: ds_kmeans.py
    :caption: ds_kmeans.py
    :name: ds_kmeans.py
-   :lines: 1-
+   :lines: 5-
 
 .. toctree::
     :hidden:
@@ -341,8 +436,8 @@ Unser Beispiel könnte mit Dask so aussehen:
 
     dask.ipynb
 
-Multithreading, Multiprocessing und Async
------------------------------------------
+7. Multithreading, Multiprocessing und Async
+--------------------------------------------
 
 Nach einem kurzen :doc:`Überblick <multiprocessing-threading-async>`
 werden anhand von drei Beispielen zu :doc:`Threading <threading-example>`,
