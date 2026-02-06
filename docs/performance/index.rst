@@ -23,6 +23,10 @@ zu kümmern.
        <http://www.literateprogramming.com/>`_, in Computer Programming as an
        Art (1974)
 
+.. seealso::
+   * `Speed up your data science and scientific computing code
+     <https://pythonspeed.com/datascience/>`_
+
 k-Means-Beispiel
 ----------------
 
