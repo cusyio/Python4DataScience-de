@@ -23,6 +23,10 @@ zu kümmern.
        <http://www.literateprogramming.com/>`_, in Computer Programming as an
        Art (1974)
 
+.. seealso::
+   * `Speed up your data science and scientific computing code
+     <https://pythonspeed.com/datascience/>`_
+
 k-Means-Beispiel
 ----------------
 
@@ -300,6 +304,11 @@ wissenschaftlichen Python- und NumPy-Code in schnellen Maschinencode
 
 Numba benötigt allerdings `LLVM <https://de.wikipedia.org/wiki/LLVM>`_ und
 einige Python-Konstrukte werden nicht unterstützt.
+
+.. seealso::
+   * `Speeding up NumPy with parallelism
+     <https://pythonspeed.com/articles/numpy-parallelism/> by Itamar
+     Turner-Trauring`_
 
 Aufgabenplaner
 --------------
