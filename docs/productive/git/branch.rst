@@ -337,6 +337,8 @@ Zweige löschen
 
     ``-D`` statt ``-d`` erzwingt die Löschung.
 
+.. _remote-branches:
+
 Entfernte Zweige
 ----------------
 
