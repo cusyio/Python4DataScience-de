@@ -18,7 +18,6 @@
 import os
 import re
 
-
 # Set canonical URL for the sitemap
 html_baseurl = "https://python4data.science/de/latest/"
 
@@ -32,7 +31,6 @@ if os.environ.get("READTHEDOCS", "") == "True":
 
 import os
 import re
-
 
 project = "Python für Data Science"
 author = "Veit Schiele"
