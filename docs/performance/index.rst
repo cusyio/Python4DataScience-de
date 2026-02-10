@@ -71,8 +71,9 @@ Performance-Messungen
 
 Wenn ihr erst einmal mit eurem Code gearbeitet habt, kann es nützlich sein, die
 Effizienz genauer zu untersuchen. Hierfür kann :abbr:`z. B. (zum Beispiel)`
-:doc:`cProfile <tracing>`, :doc:`ipython-profiler`, :doc:`scalene` oder
-:doc:`tprof` genutzt werden. Bisher führe ich meist die folgenden Schritte aus:
+:doc:`cProfile <tracing>`, :doc:`ipython-profiler`, :doc:`scalene`, :doc:`tprof`
+oder :doc:`memray` genutzt werden. Bisher führe ich meist die folgenden Schritte
+aus:
 
 #. Ich profilierte das gesamte Programm mit :doc:`cProfile <tracing>` oder
    `py-spy <https://github.com/benfred/py-spy>`_, um langsame Funktionen zu
@@ -110,6 +111,7 @@ Effizienz genauer zu untersuchen. Hierfür kann :abbr:`z. B. (zum Beispiel)`
     ipython-profiler.ipynb
     scalene.ipynb
     tprof
+    memray
     tachyon
 
 Suche nach bestehenden Implementierungen
