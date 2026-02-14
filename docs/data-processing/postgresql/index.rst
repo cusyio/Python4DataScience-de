@@ -99,7 +99,7 @@ Common Table Expression
 Multi-Version Concurrency Control (MVCC)
     `Multi-Version Concurrency Control
     <https://www.postgresql.org/docs/current/mvcc.html>`_ erlaubt, dass zwei
-    oder mehr Sessions gleicheitig auf dieselben Daten zugreifen ohne dabei die
+    oder mehr Sessions gleichzeitig auf dieselben Daten zugreifen, ohne dabei die
     Integrität der Daten zu gefährden.
 
 Cross Platform

@@ -13,8 +13,8 @@ Definieren der Datenstruktur
 ----------------------------
 
 Der erste Schritt bei der Arbeit mit Protocol-Buffers besteht darin, die
-Struktur für die Daten zu definieren, die Sie in einer ``.proto``-Datei
-serialisieren möchten. Protocol-Buffers-Daten sind als *Nachrichten*
+Struktur für die Daten zu definieren, die ihr in einer ``.proto``-Datei
+serialisieren möchtet. Protocol-Buffers-Daten sind als *Nachrichten*
 strukturiert, wobei jede Nachricht ein kleiner logischer Datensatz ist, der eine
 Reihe von Name-Wert-Paaren enthält, die *fields* genannt werden.
 :download:`accounts.proto` ist ein einfaches Beispiel hierfür:
@@ -34,7 +34,7 @@ Reihe von Name-Wert-Paaren enthält, die *fields* genannt werden.
 
 Nachdem ihr eure Datenstruktur definiert habt, könnt ihr das
 Protocol-Buffer-Compiler-Protokoll ``protoc`` verwenden, um Deskriptoren in
-eurer bevorzugten Sprache zu erzeugen. Diese bietet einfache Zugriffsfunktionen
+eurer bevorzugten Sprache zu erzeugen. Dieses bietet einfache Zugriffsfunktionen
 für jedes Feld sowie Methoden zur Serialisierung der gesamten Struktur. Wenn
 eure Sprache z.B. Python ist, werden beim Ausführen des Compilers für das obige
 Beispiel Deklaratoren generiert, die ihr dann in eurer Anwendung zum Einpflegen,
@@ -83,7 +83,7 @@ Hierfür schreiben wir die Datei :download:`accounts_server.py`:
 Client erstellen
 ----------------
 
-Hierfür schreiben wir :download:`accounts_client.py`:
+Hierfür schreiben wir die Datei :download:`accounts_client.py`:
 
 .. literalinclude:: accounts_client.py
    :caption: accounts_client.py
@@ -93,13 +93,13 @@ Hierfür schreiben wir :download:`accounts_client.py`:
 Client und Server starten
 -------------------------
 
-#. Starten des Server:
+#. Starten des Servers in einem Terminal:
 
    .. code-block:: console
 
         $ uv run python accounts_server.py
 
-#. Starten des Client von einem anderen Terminal aus:
+#. Starten des Clients von einem anderen Terminal aus:
 
    .. code-block:: console
 
