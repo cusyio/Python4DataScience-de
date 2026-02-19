@@ -245,6 +245,26 @@ JSON-Tools
     .. image:: https://raster.shields.io/github/license/stefankoegl/python-json-patch
        :alt: Lizenz
 
+`jsonata-python <https://github.com/rayokota/jsonata-python>`_
+    `JSONata <https://docs.jsonata.org/overview.html>`_ ist eine
+    leichtgewichtige Abfrage- und Transformationssprache für JSON-Daten,
+    inspiriert von XPath.
+
+    .. image:: https://raster.shields.io/github/stars/rayokota/jsonata-python
+       :alt: Stars
+       :target: https://github.com/rayokota/jsonata-python
+
+    .. image:: https://raster.shields.io/github/contributors/rayokota/jsonata-python
+       :alt: Contributors
+       :target: https://github.com/rayokota/jsonata-python/graphs/contributors
+
+    .. image:: https://raster.shields.io/github/commit-activity/y/rayokota/jsonata-python
+       :alt: Commit activity
+       :target: https://github.com/rayokota/jsonata-python/graphs/commit-activity
+
+    .. image:: https://raster.shields.io/github/license/rayokota/jsonata-python
+       :alt: Lizenz
+
 .. _`standard`: https://www.json.org/json-en.html
 .. _`JSON_Checker`: http://www.json.org/JSON_checker/
 .. _`JSON Schema Proposal`: https://json-schema.org
