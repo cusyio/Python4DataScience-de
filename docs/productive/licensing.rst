@@ -262,6 +262,9 @@ fehlen:
    * Alek Tarkowski, Open Future in Zusammenarbeit mit der Open Source
      Initiative: `Data Governance in Open Source AI
      <https://opensource.org/wp-content/uploads/2025/02/2025-OSI-DataGovernanceOSAI-final-v5.pdf>`_
+   * Andreas Liesenfeld, Mark Dingemanse: `Rethinking open source generative AI:
+     open-washing and the EU AI Act
+     <https://pure.mpg.de/rest/items/item_3588217_2/component/file_3588218/content>`_
 
 Datenbanken
 ~~~~~~~~~~~
