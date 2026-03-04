@@ -13,7 +13,7 @@ Dateiformate
 PMTiles
 ~~~~~~~
 
-`PMTiles <https://docs.protomaps.com>`_ ist ein allgemeines Format für
+`PMTiles <https://docs.protomaps.com>`__ ist ein allgemeines Format für
 Kacheldaten, die durch Z/X/Y-Koordinaten adressiert werden. Dabei kann es sich
 um kartografische Vektorkacheln, :ref:`Fernerkundungsdaten <remote-sensing>`,
 JPEG-Bilder oder ähnliches handeln.
@@ -65,23 +65,21 @@ werden.
 MBTiles
 ~~~~~~~
 
-`MBTiles <https://docs.mapbox.com/help/glossary/mbtiles/>`_ ist ein
+`MBTiles <https://docs.mapbox.com/help/glossary/mbtiles/>`__ ist ein
 Containerformat für Kacheldaten auf der Grundlage von SQLite. Es ist für den
 lokalen Zugriff optimiert, nicht wie :ref:`pmtiles` auf den Zugriff via HTTP.
 
 .. seealso::
    * `MBTiles specification <https://github.com/mapbox/mbtiles-spec>`_
 
-.. _geodata-repositories:
-
 Cloud Optimized GeoTIFF (COG)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 `Cloud Optimized GeoTIFF <https://cogeo.org>`_ ist eine Raster-TIFF-Datei, die
 ähnlich wie :ref:`pmtiles` für das Lesen aus einem Cloud-Speicher optimiert ist.
-:ref:`pmtiles` kann jedoch auch andere Kacheldaten, :abbr:`z.B. (zum Beispiel)`
-Vektor-Kacheln ausliefern. COG ist jedoch mit den meisten GIS-Programmen, die
-mit GeoTIFF arbeiten, abwärtskompatibel.
+:ref:`pmtiles` kann jedoch auch andere Kacheldaten, :abbr:`z. B. (zum Beispiel)`
+Vektor-Kacheln ausliefern. COG ist jedoch mit den meisten
+GIS-Programmen, die mit GeoTIFF arbeiten, abwärtskompatibel.
 
 .. seealso::
    * `OGC Cloud Optimized GeoTIFF Standard
@@ -96,7 +94,7 @@ GeoParquet
 spaltenorientiertes Datendateiformat, das für die effiziente Speicherung und
 Abfrage von Daten entwickelt wurde. Es bietet effiziente
 Datenkomprimierungs- und -kodierungsverfahren mit optimierter Verarbeitung
-großer, komplexer Daten. `GeoParquet <https://geoparquet.org>`_ erweitert
+großer, komplexer Daten. `GeoParquet <https://geoparquet.org>`__ erweitert
 Parquet um interoperable Geodatentypen (Punkt, Linie, Polygon).
 
 * :doc:`pyviz:matplotlib/geopandas/index`  unterstützt das `Lesen
@@ -121,20 +119,8 @@ Parquet um interoperable Geodatentypen (Punkt, Linie, Polygon).
 Daten-Repositorien
 ------------------
 
-`Norwegian Polar Data Centre: Datasets <https://data.npolar.no/dataset>`_
-    Antarktis, Arktischer Ozean und Svalbard
-`Common Metadata Repository (CMR) <https://cmr.earthdata.nasa.gov/search>`_
-    Such-API für die Metadaten der NASA zu fernerkundeten Geowissenschaften
-`UC Irvine Machine Learning Repository <https://archive.ics.uci.edu>`_
-    Datensätze zum maschinellen Lernen mit Daten zur Luftqualität, zur Erkennung
-    von Ozonwerten, zur Konzentration von Treibhausgasen, zur aquatischen
-    Toxizität und mehr
-`National Data Buoy Center <https://www.ndbc.noaa.gov>`_
-    Meteorologische und ozeanografische Messungen für die Meeresumwelt.
-
 .. seealso::
-   `List of GIS data sources
-   <https://en.wikipedia.org/wiki/List_of_GIS_data_sources>`_
+   :ref:`geodata-repositories`
 
 Software
 --------
@@ -330,7 +316,7 @@ Allgemeine Zwecke
 
 .. _geopython:
 
-`geopython <https://geopython.github.io>`_
+`geopython <https://geopython.github.io>`__
     ist eine GitHub-Organisation, die Python-Projekte rund um Geodaten umfasst.
 
     `pygeoapi <https://github.com/geopython/pygeoapi>`_
