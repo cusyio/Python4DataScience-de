@@ -6,10 +6,6 @@
 Offene Daten
 ============
 
-.. seealso::
-   * `Authors Alliance: Open Data
-     <https://www.authorsalliance.org/resources/open-data/>`_
-
 Themenbezogener Überblick über öffentliche Repositories mit Forschungsdaten.
 
 Agrarwissenschaften
