@@ -30,8 +30,8 @@ Für eine solche Überprüfung könnt ihr :abbr:`z.B. (zum Beispiel)` `uv-secure
 Vulnerability Database <https://osv.dev>`_ zurückgreift.
 
 Wenn eine Schwachstelle in einer Abhängigkeit gefunden wird, solltet ihr auf
-eine Version nicht-anfällige Version aktualisieren; wenn kein Update verfügbar
-ist, solltet ihr überlegen, die Abhängigkeit zu entfernen.
+eine nicht-anfällige Version aktualisieren; wenn kein Update verfügbar ist,
+solltet ihr überlegen, die Abhängigkeit zu entfernen.
 
 Wenn ihr glaubt, dass die Sicherheitslücke euer Projekt nicht betrifft, kann für
 ``osv`` eine :file:`osv-scanner.toml`-Datei erstellt werden, :abbr:`u.a. (unter
@@ -126,35 +126,19 @@ verwendet werden darf oder nicht. Das Fehlen einer Lizenz erschwert jede Art von
 Sicherheitsüberprüfung oder Audit und stellt ein rechtliches Risiko für die
 potenzielle Nutzung dar.
 
-OSSF-Scorecard verwendet die `GitHub License API
+OpenSSF-Scorecard verwendet die `GitHub License API
 <https://docs.github.com/en/rest/licenses/licenses?apiVersion=2022-11-28#get-the-license-for-a-repository>`_
 für auf GitHub gehostete Projekte, ansonsten eine eigene Heuristik, um eine
 veröffentlichte Lizenzdatei zu erkennen. Dateien in einem
-:file:`LICENSES`-Verzeichnis sollten mit mit ihrem :ref:`SPDX
-<standard_format_licensing>`-Lizenzbezeichner benannt werden, gefolgt
-von einer entsprechenden Dateierweiterung, wie in der :ref:`REUSE
-<reuse>`-Spezifikation beschrieben.
+:file:`LICENSES`-Verzeichnis sollten mit ihrem :ref:`SPDX
+<standard_format_licensing>`-Lizenzbezeichner benannt werden, gefolgt von einer
+entsprechenden Dateierweiterung, wie in der :ref:`REUSE <reuse>`-Spezifikation
+beschrieben.
 
-Wird nach den Best Practices der :abbr:`OpenSSF (Open Source Security Foundation)` gehandelt?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+OpenSSF Best Practices Badge
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Risiko: Niedrig
-
-Das `Open Source Security Foundation (OpenSSF) Best Practices Program
-<https://github.com/ossf/wg-best-practices-os-developers>`_ umfasst eine Reihe
-von sicherheitsorientierten Best Practices für die Entwicklung von
-Open-Source-Software:
-
-* das Verfahren zur Meldung von Schwachstellen ist auf der Projektseite
-  veröffentlicht
-* ein funktionierendes Build-System  erstellt die Software automatisch aus dem
-  Quellcode neu
-* eine allgemeine Richtlinie, dass Tests zu einer automatisierten Testsuite
-  hinzugefügt werden, wenn wichtige neue Funktionen hinzukommen
-* :abbr:`ggf. (gegebenenfalls)` verschiedene Kryptographie-Kriterien werden
-  erfüllt
-* mindestens ein statisches Code-Analyse-Tool, das auf jede geplante größere
-  Produktionsversion angewendet wird
 
 Mit dem `OpenSSF Best Practices Badge Programm
 <https://www.bestpractices.dev/de>`_ könnt ihr euch auch ein entsprechendes
@@ -171,6 +155,9 @@ Risiko: Niedrig
 Bevor Code in Pull- oder Merge-Requests zusammengeführt wird, sollten Tests
 durchgeführt werden, die dabei helfen, Fehler frühzeitig zu erkennen und die
 Anzahl der Schwachstellen in einem Projekt zu reduzieren.
+
+.. seealso::
+   * :ref:`coverage-github-actions`
 
 Verwendet das Projekt Fuzzing-Tools?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -190,31 +177,20 @@ finden.
   Repository eingesetzt?
 * Sind benutzerdefinierte sprachenspezifische Fuzzing-Funktionen im Repository
   vorhanden, :abbr:`z.B. (zum Beispiel)` mit `atheris
-  <https://pypi.org/project/atheris/>`_ oder `OneFuzz
-  <https://github.com/microsoft/onefuzz>`_?
+  <https://pypi.org/project/atheris/>`_?
 
 Verwendet euer Projekt Werkzeuge zur statischen Codeanalyse?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Risiko: Mittel
 
-`Statische Codeanalysen <https://de.wikipedia.org/wiki/Statische_Code-Analyse>`_
-testen den Quellcode, bevor die Anwendung ausgeführt wird. Dies kann verhindern,
-dass bekannte Fehlerklassen versehentlich in die Codebasis eingeführt werden.
+:term:`Statische Testverfahren` testen den Quellcode, bevor die Anwendung
+ausgeführt wird. Dies kann verhindern, dass bekannte Fehlerklassen versehentlich
+in die Codebasis eingeführt werden.
 
-.. _bandit:
-
-Um Schwachstellen zu überprüfen, könnt ihr `bandit
-<https://github.com/PyCQA/bandit>`__ verwenden, das ihr auch in eure
-:file:`.pre-commit-hooks.yaml` integrieren könnt:
-
-.. code-block:: yaml
-
-    repos:
-    - repo: https://github.com/PyCQA/bandit
-      rev: '1.7.5'
-      hooks:
-      - id: bandit
+Um Schwachstellen zu überprüfen, könnt ihr `Bandit
+<https://github.com/PyCQA/bandit>`__ mit :doc:`qa/ruff` verwenden, das ihr auch
+in Jupyter Notebooks, IDEs und das pre-commit-Framework integrieren könnt.
 
 Zudem könnt ihr :doc:`/productive/qa/pysa` für `Taint
 <https://en.wikipedia.org/wiki/Taint_checking>`_-Analysen verwenden.
