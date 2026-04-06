@@ -58,7 +58,6 @@ Beispieldaten können wir uns erstellen mit:
 
     from sklearn.datasets import make_blobs
 
-
     points, labels_true = make_blobs(
         n_samples=1000, centers=3, random_state=0, cluster_std=0.60
     )
@@ -136,7 +135,6 @@ k-Means-Algorithmus gibt es sogar gleich zwei Implementierungen:
 
      from sklearn.cluster import KMeans
 
-
      KMeans(10).fit_predict(points)
 
 * `dask_ml.cluster.KMeans
@@ -145,7 +143,6 @@ k-Means-Algorithmus gibt es sogar gleich zwei Implementierungen:
   .. code-block:: python
 
      from dask_ml.cluster import KMeans
-
 
      KMeans(10).fit(points).predict(points)
 

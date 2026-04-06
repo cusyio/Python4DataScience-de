@@ -16,7 +16,6 @@ Erstellt die Datei :file:`main.py` mit diesem Inhalt:
 
     from fastapi import FastAPI
 
-
     app = FastAPI()
 
 
@@ -80,7 +79,6 @@ zu erhalten:
     from pydantic import BaseModel
 
     from fastapi import FastAPI
-
 
     app = FastAPI()
 
