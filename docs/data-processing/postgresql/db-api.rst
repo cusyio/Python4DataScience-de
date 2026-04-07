@@ -27,26 +27,20 @@ Connection
 
     Beispiel:
 
-    .. blacken-docs:off
-
     .. code-block:: python
 
         import driver
 
-        conn = driver.connect(database='example',
-                               host='localhost',
-                               port=5432)
+        conn = driver.connect(database="example", host="localhost", port=5432)
 
         try:
-            # create the cursor
-            # use the cursor
+            cursor = conn.cursor()
+            cursor.execute("SQL-STATEMENT")
         except Exception:
             conn.rollback()
         else:
             conn.commit()
             conn.close()
-
-    .. blacken-docs:on
 
 Cursor
     `Cursorobjekte <https://peps.python.org/pep-0249/#cursor-objects>`_ werden
@@ -82,12 +76,10 @@ Cursor
     .. code-block:: python
 
         cursor = conn.cursor()
-        cursor.execute(
-            """
+        cursor.execute("""
             SELECT column1, column2
             FROM tableA
-            """
-        )
+            """)
         for column1, column2 in cursor.fetchall():
             print(column1, column2)
 

@@ -326,7 +326,7 @@ An einem Projekt arbeiten
 
         .. tip::
            Normalerweise müsst ihr nach jedem Befehl, der einen Buchstaben
-           enthält, die Taste ︎:kbd:`↩︎` drücken. Ihr könnt diesen Overhead jedoch
+           enthält, die Taste :kbd:`↩︎` drücken. Ihr könnt diesen Overhead jedoch
            abschalten:
 
            .. code-block:: console

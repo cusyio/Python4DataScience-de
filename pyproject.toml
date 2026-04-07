@@ -22,8 +22,7 @@ classifiers = [
   "Programming Language :: Python :: 3.13",
   "Programming Language :: Python :: 3.14",
 ]
-dependencies = [  ]
-
+dependencies = []
 urls."Bug Tracker" = "https://github.com/cusyio/Python4DataScience/issues"
 urls."Homepage" = "https://github.com/cusyio/Python4DataScience/"
 
@@ -52,7 +51,7 @@ docs = [
 ]
 
 [tool.setuptools]
-packages = [  ]
+packages = []
 
 [tool.black]
 line-length = 79
@@ -64,9 +63,7 @@ include_trailing_comma = true
 lines_after_imports = 2
 lines_between_types = 1
 multi_line_output = 3
-not_skip = "__init__.py"
 use_parentheses = true
-
 known_first_party = "Python4DataScience"
 known_third_party = [
   "Cython",
@@ -84,5 +81,8 @@ known_third_party = [
 ]
 
 [tool.codespell]
-skip = "*.csv, *.html, *.pdf, *.rst, *.ipynb, ./docs/_build/*, */books.json,  */books.txt, ./styles/*, ./Python4DataScience.egg-info/*"
+skip = """\
+  *.csv, *.html, *.pdf, *.rst, *.ipynb, ./docs/_build/*, */books.json,  */books.txt, ./styles/*, \
+  ./Python4DataScience.egg-info/*\
+  """
 ignore-words-list = "comit"
