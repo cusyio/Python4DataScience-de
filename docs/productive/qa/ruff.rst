@@ -8,9 +8,8 @@ Ruff
 `Ruff <https://docs.astral.sh/ruff/>`_ ist ein extrem schneller Python-Linter
 und Code-Formatierer, geschrieben in Rust, der :abbr:`u.a. (unter anderem)` die
 Regeln von :doc:`flake8`, :doc:`isort`, :doc:`/performance/perflint`,
-:doc:`black` und `Bandit <https://github.com/PyCQA/bandit>`_ ausführen kann.
-Insgesamt kann Ruff `über 800 Regeln <https://docs.astral.sh/ruff/rules/>`_
-überprüfen.
+:doc:`black` und :ref:`Bandit <bandit>` ausführen kann. Insgesamt kann Ruff
+`über 800 Regeln <https://docs.astral.sh/ruff/rules/>`_ überprüfen.
 
 Installation
 ------------

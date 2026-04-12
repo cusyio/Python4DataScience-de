@@ -195,9 +195,34 @@ Risiko: Mittel
 ausgeführt wird. Dies kann verhindern, dass bekannte Fehlerklassen versehentlich
 in die Codebasis eingeführt werden.
 
-Um Schwachstellen zu überprüfen, könnt ihr `Bandit
-<https://github.com/PyCQA/bandit>`__ mit :doc:`qa/ruff` verwenden, das ihr auch
-in Jupyter Notebooks, IDEs und das pre-commit-Framework integrieren könnt.
+.. _bandit:
+
+Mit `Bandit <https://github.com/PyCQA/bandit>`__, das ihr mit :doc:`qa/ruff`
+verwenden könnt lassen sich :abbr:`u. a. (unter anderem)` folgende
+Schwachstellen überprüfen:
+
++--------+-----------------------------------------------------------------------+
+| Regel  | Beschreibung                                                          |
++--------+-----------------------------------------------------------------------+
+| `S105`_| fest codierte Geheimnisse                                             |
++--------+-----------------------------------------------------------------------+
+| `S301`_| :doc:`/data-processing/serialisation-formats/pickle/index` und andere |
+|        | unsichere Deserialisierung                                            |
++--------+-----------------------------------------------------------------------+
+| `S307`_| Verwendung von :func:`eval` mit nicht vertrauenswürdigen Eingaben     |
++--------+-----------------------------------------------------------------------+
+| `S113`_| fehlende Zeitüberschreitungen                                         |
++--------+-----------------------------------------------------------------------+
+| `S324`_| schwache Kryptografie wie :abbr:`z. B. (zum Beispiel)` MD5-Kollisionen|
++--------+-----------------------------------------------------------------------+
+| `S608`_| SQL-Injection über Zeichenfolgenformatierung                          |
++--------+-----------------------------------------------------------------------+
+
+.. seealso:
+   `flake8-bandit <https://docs.astral.sh/ruff/rules/#flake8-bandit-s>`_
+
+Bandit könnt ihr auch in Jupyter Notebooks, IDEs und das pre-commit-Framework
+integrieren.
 
 Zudem könnt ihr :doc:`/productive/qa/pysa` für `Taint
 <https://en.wikipedia.org/wiki/Taint_checking>`_-Analysen verwenden.
@@ -304,3 +329,11 @@ verhindern. Ihr könnt dieses Risiko verringern durch
 * automatisierte Werkzeuge, die euch benachrichtigen, wenn Abhängigkeiten in
   eurem Projekt veraltet sind
 * Anwendungen, die Abhängigkeiten festhalten, schnell aktualisieren.
+
+.. _S105: https://docs.astral.sh/ruff/rules/hardcoded-password-string/
+.. _S301: https://docs.astral.sh/ruff/rules/suspicious-pickle-usage/
+.. _S307: https://docs.astral.sh/ruff/rules/suspicious-eval-usage/
+.. _S113: https://docs.astral.sh/ruff/rules/request-without-timeout/
+.. _S324: https://docs.astral.sh/ruff/rules/hashlib-insecure-hash-function/
+.. _S608: https://docs.astral.sh/ruff/rules/hardcoded-sql-expression/
+.. _S608: https://docs.astral.sh/ruff/rules/hardcoded-sql-expression/
