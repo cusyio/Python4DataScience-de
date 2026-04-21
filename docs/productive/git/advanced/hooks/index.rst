@@ -6,7 +6,7 @@ Git Hooks
 =========
 
 Git-Hooks sind Skripte, die bei bestimmten Ereignissen in einem Git-Repository
-automatisch ausgeführt werden, :abbr:`u.a. (unter anderem)`:
+automatisch ausgeführt werden, :abbr:`u. a. (unter anderem)`:
 
 +---------------+-------------------------------------------------------+
 | Befehl        | Hooks                                                 |
@@ -25,9 +25,9 @@ automatisch ausgeführt werden, :abbr:`u.a. (unter anderem)`:
 |               | `push-to-checkout`_                                   |
 +---------------+-------------------------------------------------------+
 
-Sie können sich entweder in lokalen oder serverseitigen Repositories befinden.
-So können Git-Repositories individuell angepasst und benutzerdefinierte Aktionen
-ausgelöst werden.
+Sie können sich entweder in lokalen oder serverseitigen Repositories befinden
+und erlauben so, Git-Repositories individuell anzupassen und benutzerdefinierte
+Aktionen auszulösen.
 
 Git Hooks befinden sich im Verzeichnis :file:`.git/hooks/`. Beim Anlegen eines
 Repository werden dort auch bereits einige Beispielskripte angelegt:
@@ -59,10 +59,34 @@ Die integrierten Skripte sind Shell- und Perl-Skripte, es können jedoch
 beliebige Skriptsprachen verwenden werden. Dabei bestimmt die Shebang-Zeile
 (:samp:`#!/bin/sh`), wie die Datei interpretiert werden soll.
 
-Die Skripte können jedoch nicht in das serverseitige Repository kopiert werden.
+Die Skripte werden jedoch mit ``git push`` **nicht** auf den Git-Server kopiert.
+Um Skripte in mehreren Repositories verwenden zu können, empfiehlt sich daher
+das :doc:`pre-commit`.
 
 .. seealso::
    * `Hooks <https://git-scm.com/docs/githooks#_hooks>`_
+
+Konfigurationsbasierte Hooks
+----------------------------
+
+.. version-added:: 2.54
+
+   Git 2.54 führt nun eine neue Möglichkeit ein, Hooks in euren
+   Konfigurationsdateien zu definieren: Anstatt eines Skripts in
+   :file:`.git/hooks/pre-commit` abzulegen, kann nun folgendes angegeben werden:
+
+   .. code-block:: ini
+
+      [hook "ruff check"]
+         event = pre-commit
+         command = ~/bin/ruff check --fix --exit-non-zero-on-fix
+
+   Diese Konfiguration kann jedoch nicht nur für jedes Projekt angegeben werden,
+   sondern auch global oder systemweit in :file:`~/.gitconfig` oder in
+   :file:`/etc/gitconfig`.
+
+   Mit ``git hook list pre-commit`` erfahrt ihr, welche Hooks konfiguriert sind
+   und woher sie stammen.
 
 .. toctree::
     :hidden:

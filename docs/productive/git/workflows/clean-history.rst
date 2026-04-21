@@ -1,9 +1,18 @@
-Commits für ein sauberes Log ändern
-===================================
+Geschichte umschreiben
+======================
 
-Mit ``git commit --fixup`` und ``git rebase --autosquash`` könnt ihr relativ
-einfach eine Reihe von Commits korrigieren. Um dies an einem Beispiel zu
-demonstrieren, stelle ich euch folgendes Szenario vor:
+Es gibt in Git mehrere Befehle zum Umschreiben der Geschcihte. ``git rebase -i``
+ist das bekannteste und flexibelste: ihr könnt Commits neu anordnen,
+zusammenfassen, bearbeiten und entfernen. diese Flexibilität geht jedoch mit
+einiger Komplexität einher: euer `Working Tree
+<https://git-scm.com/docs/gitglossary#Documentation/gitglossary.txt-workingtree>`_
+und euer `Index <https://git-scm.com/docs/gitglossary#def_index>`_ werden
+aktualisiert und Konflikte können entstehen, die gelöst werden müssen, bevor ihr
+mit der Arbeit fortfahren könnt.
+
+Mit ``git commit --fixup`` und ``git rebase --autosquash`` könnt ihr hingegen
+relativ einfach eine Reihe von Commits korrigieren. Im Folgenden wollen wir dies
+an einem Beispiel demonstrieren:
 
 #. Wir haben in unserem ``my-feature``-Branch zwei Commits: den einen für die
    eigentliche Funktion, den anderen für die zugehörigen Tests:
@@ -64,8 +73,10 @@ demonstrieren, stelle ich euch folgendes Szenario vor:
       31a140a (my-feature) Add test for my new feature
       132ae9b Add new feature
 
-#. Die Änderungen können nun mit ``git push -f`` an unseren entfernten Zweig
-   gesendet werden.
+#. Die Änderungen können nun mit ``git push --force-with-lease`` an unseren
+   entfernten Zweig gesendet werden. ``--force-with-lease`` gewährleistet, dass
+   Änderungen im entfernten Zweig :abbr:`ggf. (gegebenenfalls)` nicht
+   überschrieben werden.
 
 …mit ``git commit --fixup``  und ``git rebase --autosquash``
 ------------------------------------------------------------
@@ -118,3 +129,32 @@ korrigieren: mit ``git commit--fixup`` und ``git rebase --autosquash``.
 
       Weitere Optionen findet ihr in der `Git Commit-Dokumentation
       <https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---fixupamendrewordltcommitgt>`_.
+
+``git history``
+---------------
+
+.. version-added:: 2.54
+
+   Git 2.54 führt experimentell ``git history`` ein, :abbr:`d. h. (das heißt)`,
+   dass sich die Schnittstelle noch weiterentwickeln kann. Mit ``git history``
+   wird die Korrektur von Tippfehlern früherer Commit-Meldungen und das
+   Aufteilen von Commits in zwei Teile erleichtert:
+
+   :samp:`git history reword {SHA}`
+       öffnet deinen Editor mit der Nachricht des angegebenen Commits und
+       schreibt diese direkt um, wobei alle Zweige aktualisiert werden, die von
+       diesem Commit abstammen. Im Gegensatz zu :doc:`../rebase` greift es weder
+       auf deinen Working Tree noch auf deinen Index zu.
+   :samp:`git history split {SHA}`
+       teilt einen Commit interaktiv in zwei Teile, wobei ihr auswählt, welche
+       Teile in einen neuen übergeordneten Commit ausgelagert werden sollen. Das
+       Interface entspricht dem von ``git add –p``. Nach der Auswahl der Blöcke
+       erstellt Git einen neuen Commit mit diesen Änderungen als Vorgänger des
+       ursprünglichen Commits, der alle nicht ausgewählten Blöcke beibehält, und
+       schreibt alle nachgelagerten Zweige um, sodass sie auf den aktualisierten
+       Verlauf verweisen.
+
+   .. warning::
+      ``history`` unterstützt keine Historien, die Merge-Commits enthalten, und
+      es können auch keine Operationen ausgeführt werden, die zu einem
+      Merge-Konflikt führen würden.

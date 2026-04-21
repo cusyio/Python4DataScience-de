@@ -3,7 +3,6 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 import sys
-
 from io import StringIO
 
 import pandas as pd
