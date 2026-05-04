@@ -6,7 +6,6 @@ from pathlib import Path
 
 import grpc
 import pytest
-
 from accounts_pb2 import CreateAccountRequest, GetAccountsRequest
 
 

@@ -44,7 +44,6 @@ Datenbankverbindung
 
     from sqlalchemy import create_engine
 
-
     engine = create_engine("postgresql:///example", echo=True)
 
 Datenmodell
@@ -55,7 +54,6 @@ Datenmodell
     from sqlalchemy import Column, ForeignKey, Integer, String
     from sqlalchemy.ext.declarative import declarative_base
     from sqlalchemy.orm import relationship
-
 
     Base = declarative_base()
 
