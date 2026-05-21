@@ -15,8 +15,13 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 # sys.path.insert(0, os.path.abspath('.'))
+
+
+# -- Project information -----------------------------------------------------
+
 import os
 import re
+
 
 # Set canonical URL for the sitemap
 html_baseurl = "https://python4data.science/de/latest/"
@@ -26,18 +31,13 @@ html_context = {}
 if os.environ.get("READTHEDOCS", "") == "True":
     html_context["READTHEDOCS"] = True
 
-
-# -- Project information -----------------------------------------------------
-
-import os
-import re
-
 project = "Python für Data Science"
 author = "Veit Schiele"
 copyright = f"2019–2025, {author}"
 
 # The full version, including alpha/beta/rc tags
-release = re.sub("^v", "", os.popen("git describe --abbrev=0").read().strip())
+git_tag = "git describe --abbrev=0"
+release = re.sub("^v", "", os.popen(git_tag).read().strip())
 
 
 # -- General configuration ---------------------------------------------------
@@ -100,7 +100,7 @@ html_theme = "furo"
 #
 # Change default HTML title
 html_title = f"{project} {release}"
-#
+
 # html_theme_options = {}
 # html_sidebars = {}
 
@@ -138,7 +138,7 @@ latex_elements = {
 latex_documents = [
     (
         master_doc,
-        "Python4DataScience.tex.tex",
+        "Python4DataScience.tex",
         "Python für Data Science",
         "Veit Schiele",
         "manual",
@@ -175,7 +175,7 @@ intersphinx_mapping = {
     "spack": ("https://spack-tutorial.readthedocs.io/en/latest", None),
     "ipyparallel": ("https://ipyparallel.readthedocs.io/en/latest", None),
     "bokeh": ("https://docs.bokeh.org/en/latest", None),
-    "pandas": ("https://pandas.pydata.org/pandas-docs/stable", None),
+    "pandas": ("https://pandas.pydata.org/docs/", None),
     "pyviz": ("https://pyviz-tutorial.readthedocs.io/de/latest", None),
     "python-basics": (
         "https://python-basics-tutorial.readthedocs.io/de/latest",
@@ -191,11 +191,11 @@ linkcheck_allowed_redirects = {
     r"https://github.com/apps/pre-commit-ci/installations/new": r"https://github.com/login?integration=pre-commit-ci&return_to=%2Fapps%2Fpre-commit-ci%2Finstallations%2Fnew",
     r"https://itsdangerous.palletsprojects.com/": r"https://itsdangerous.palletsprojects.com/en/2.2.x/",
     r"https://jinja.palletsprojects.com/": r"https://jinja.palletsprojects.com/en/3.1.x/",
+    r"https://www.monetdb.org/Documentation": r"https://www.monetdb.org/documentation-Aug2024/",
     r"https://ohwr.org/cern_ohl_p_v2.txt": r"https://ohwr.org/project/cernohl/-/wikis/uploads/3eff4154d05e7a0459f3ddbf0674cae4/cern_ohl_p_v2.txt",
     r"https://ohwr.org/cern_ohl_s_v2.txt": r"https://ohwr.org/project/cernohl/-/wikis/uploads/819d71bea3458f71fba6cf4fb0f2de6b/cern_ohl_s_v2.txt",
     r"https://ohwr.org/cern_ohl_w_v2.txt": r"https://ohwr.org/project/cernohl/-/wikis/uploads/82b567f43ce515395f7ddbfbad7a8806/cern_ohl_w_v2.txt",
     r"https://proj.org/": r"https://proj.org/en/9.5/",
-    r"https://www.monetdb.org/Documentation": r"https://www.monetdb.org/documentation-Aug2024/",
     r"https://sqlalchemy-imageattach.readthedocs.io/": r"https://sqlalchemy-imageattach.readthedocs.io/en/1.1.0/",
 }
 
@@ -214,14 +214,14 @@ linkcheck_ignore = [
     r"https://github.com/spring-projects/spring-framework/blob/30bce7/CONTRIBUTING.md#format-commit-messages",
     r"https://github.com/torvalds/subsurface-for-dirk/blob/master/README.md#contributing",
     # 403 Client Error: Forbidden for url
-    r"https://besjournals.onlinelibrary.wiley.com/journal/*",
     r"https://codebeautify.org/yaml-validator",
     r"https://collections.plos.org/collection/software/",
     r"https://currentprotocols.onlinelibrary.wiley.com/journal/1934340x",
     r"https://data.unicef.org/",
     r"https://direct.mit.edu/artl",
-    r"https://doi.org/10.1002/asi.23538",
+    r"https://besjournals.onlinelibrary.wiley.com/journal/*",
     r"https://journals.sagepub.com/home/*",
+    r"https://doi.org/10.1002/asi.23538",
     r"https://linux.die.net/man/",
     r"https://onlinelibrary.wiley.com/",
     r"https://opensource.org/",

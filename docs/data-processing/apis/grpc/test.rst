@@ -28,7 +28,7 @@ gRPC lässt sich automatisiert testen z.B. mit `pytest-grpc
       :caption: tests/test_accounts.py
       :name: tests/test_accounts.py
       :language: python
-      :lines: 3-27
+      :lines: 6-8, 12-26
 
    .. seealso::
       * `pytest fixtures <https://docs.pytest.org/en/latest/explanation/fixtures.html>`_
@@ -37,14 +37,14 @@ gRPC lässt sich automatisiert testen z.B. mit `pytest-grpc
 
    .. literalinclude:: tests/test_accounts.py
       :language: python
-      :lines: 30-39
+      :lines: 29-38
 
 #. Auch die Authentifizierung lässt sich testen, :abbr:`z.B. (zum Beispiel)`
    mit:
 
    .. literalinclude:: tests/test_accounts.py
       :language: python
-      :lines: 1-2, 48-
+      :lines: 10-13, 48-
 
 #. Anschließend können wir gegen einen realen gRPC-Server testen mit:
 

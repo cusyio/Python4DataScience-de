@@ -8,14 +8,14 @@
 # Editors
 .vscode/
 
+# Sphinx builds
+docs/_build/
+
 # IPython
 .ipynb_checkpoints
 
 # Intersphinx objects
 _intersphinx
-
-# Sphinx builds
-docs/_build/
 
 # spack
 .spack-env

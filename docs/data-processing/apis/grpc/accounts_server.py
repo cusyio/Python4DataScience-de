@@ -20,7 +20,7 @@ class AccountsService(accounts_service.AccountsServicer):
         )
         return accounts_messages.CreateAccountResult(account=account)
 
-    def GetAccounts(self, request, context):
+    def GetAccounts(self, request):
         for account in request.account:
             account = accounts_messages.Account(
                 account_name=account.account_name,
