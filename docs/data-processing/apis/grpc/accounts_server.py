@@ -3,7 +3,6 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 import logging
-
 from concurrent import futures
 
 import accounts_pb2 as accounts_messages

@@ -6,7 +6,6 @@
 import accounts_server
 import grpc
 import pytest
-
 from accounts_pb2 import CreateAccountRequest, GetAccountsRequest
 from accounts_pb2_grpc import AccountsStub, add_AccountsServicer_to_server
 
