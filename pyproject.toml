@@ -153,8 +153,8 @@ lint.isort.lines-after-imports = 2
 lint.isort.lines-between-types = 1
 
 [tool.codespell]
+ignore-words-list = "comit"
 skip = """\
   *.csv, *.html, *.pdf, *.rst, *.ipynb, ./docs/_build/*, */books.json,  */books.txt, ./styles/*, \
   ./Python4DataScience.egg-info/*\
   """
-ignore-words-list = "comit"
