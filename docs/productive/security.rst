@@ -30,27 +30,76 @@ Sicherheitslücken in seiner eigenen Codebasis oder in seinen Abhängigkeiten
 aufweist. Eine offene Sicherheitslücke kann leicht ausgenutzt werden und sollte
 so schnell wie möglich geschlossen werden.
 
-Für eine solche Überprüfung könnt ihr :abbr:`z.B. (zum Beispiel)` `uv-secure
-<https://pypi.org/project/uv-secure/>`_ verwenden. Alternativ könnt ihr auch
-`osv <https://pypi.org/project/osv/>`_ oder `pip-audit
-<https://pypi.org/project/pip-audit/>`_ verwenden, das auf die `Open Source
-Vulnerability Database <https://osv.dev>`_ zurückgreift.
+Für eine solche Überprüfung könnt ihr :abbr:`z.B. (zum Beispiel)` ``uv audit``
+verwenden. Alternativ könnt ihr auch `osv <https://pypi.org/project/osv/>`_ oder
+`pip-audit <https://pypi.org/project/pip-audit/>`_ verwenden.
+
+``uv audit`` ist ein neuer Befehl von uv≥0.11.19, der die Abhängigkeiten in
+eurem Projekt auf bekannte Schwachstellen in der `OSV
+<https://osv.dev>`_-Datenbank und „nachteilige“ Projektstatus :abbr:`z. B. (zum
+Beispiel)` *deprecated* überprüft:
+
+.. code-block:: console
+
+   $ uv audit
+   warning: `uv audit` is experimental and may change without warning. Pass `--preview-features audit-command` to disable this warning.
+   Resolved 115 packages in 16ms
+   Found 12 known vulnerabilities and no adverse project statuses in 114 packages
+
+   Vulnerabilities:
+
+   idna 3.12 has 1 known vulnerability:
+   - GHSA-65pc-fj4g-8rjx: Internationalized Domain Names in Applications (IDNA): Specially crafted inputs to idna.encode() can bypass CVE-2024-3651 fix
+     Fixed in: 3.15
+     Advisory information: https://github.com/kjd/idna/security/advisories/GHSA-65pc-fj4g-8rjx
+   …
+
+``uv add``, ``uv sync`` :abbr:`usw. (und so weiter)` können nun bei jedem
+Synchronisierungsvorgang nach zuvor identifizierter Malware suchen. Diese
+Funktion ist standardmäßig nicht aktiviert, sie kann jedoch mit
+``UV_MALWARE_CHECK=1`` in der Shell einfach ermöglicht werden.
+
+.. seealso::
+   * `uv audit <https://docs.astral.sh/uv/reference/cli/#uv-audit>`_
+   * `uv audit settings <https://docs.astral.sh/uv/reference/settings/#audit>`_
 
 Wenn eine Schwachstelle in einer Abhängigkeit gefunden wird, solltet ihr auf
 eine nicht-anfällige Version aktualisieren; wenn kein Update verfügbar ist,
 solltet ihr überlegen, die Abhängigkeit zu entfernen.
 
 Wenn ihr glaubt, dass die Sicherheitslücke euer Projekt nicht betrifft, kann für
-``osv`` eine :file:`osv-scanner.toml`-Datei erstellt werden, :abbr:`u.a. (unter
-anderem)` mit der zu ignorierenden ID und einer Begründung, :abbr:`z.B. (zum
-Beispiel)`:
+``uv audit`` in der :file:`pyproject.toml`-Datei Ausnahmen definiert werden,
+:abbr:`z.B. (zum Beispiel)`:
 
 .. code-block:: toml
+   :caption: pyproject.toml
 
-   [[IgnoredVulns]]
-   id = "GO-2022-1059"
-   # ignoreUntil = 2022-11-09 # Optional exception expiry date
-   reason = "No external http servers are written in Go lang."
+   [tool.uv.audit]
+   ignore = ["PYSEC-2022-43017", "GHSA-5239-wwwm-4pmq"]
+
+oder besser:
+
+.. code-block:: toml
+   :caption: pyproject.toml
+
+   [tool.uv.audit]
+   ignore-until-fixed = ["PYSEC-2022-43017"]
+
+.. seealso::
+   * `ignore <https://docs.astral.sh/uv/reference/settings/#audit_ignore>`_
+   * `ignore-until-fixed
+     <https://docs.astral.sh/uv/reference/settings/#audit_ignore-until-fixed>`_
+
+Ihr könnt die Schwachstellenanalyse mit ``uv-audit`` auch in eure
+:doc:`pre-commit <git/advanced/hooks/pre-commit>`-Checks übernehmen:
+
+.. code-block:: yaml
+
+   - repo: https://github.com/astral-sh/uv-pre-commit
+     rev: 73c2d77a42a113aee9e4b748c24937f09557b82d # 0.11.24
+     hooks:
+     - id: uv-audit
+       files: ^(uv\.lock|pyproject\.toml)$
 
 Wartung
 -------
