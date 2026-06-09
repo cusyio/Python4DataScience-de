@@ -81,6 +81,9 @@ Linter und Formatierer
     `prettier <https://github.com/pre-commit/mirrors-prettier>`_
         stellt `prettier <https://github.com/prettier/prettier>`__ bereit
 
+`ruff-pre-commit <https://github.com/astral-sh/ruff-pre-commit>`_
+    pre-commit-Hook für :doc:`../../../qa/ruff`
+
 `black <https://github.com/psf/black>`_
     für die Formatierung von Python-Code
 
