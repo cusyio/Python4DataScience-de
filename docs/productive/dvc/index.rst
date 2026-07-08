@@ -24,13 +24,14 @@ anderem)` für :abbr:`SSH (Secure Shell)` und :abbr:`HDFS (Hadoop Distributed
 File System)`.
 
 .. tip::
-   `cusy Seminar: Code und Daten versioniert und reproduzierbar speichern
-   <https://cusy.io/de/unsere-schulungsangebote/code-und-daten-versioniert-und-reproduzierbar-speichern>`_
+   `cusy Seminar: Versionierte und reproduzierbare Speicherung von Code und
+   Daten
+   <https://cusy.io/de/our-training-courses/versioned-and-reproducible-storage-of-code-and-data.html>`_
 
 .. seealso::
-   * `Get Started with DVC <https://dvc.org/doc/start>`_
-   * `Documentation <https://dvc.org/doc>`_
-   * `Git Repository <https://github.com/iterative/dvc>`_
+   * `Get Started with DVC <https://doc.dvc.org/start>`_
+   * `Documentation <https://doc.dvc.org/>`_
+   * `Git Repository <https://github.com/treeverse/dvc>`_
 
 Vergleich mit verwandten Technologien
 -------------------------------------

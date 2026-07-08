@@ -8,7 +8,7 @@ CI-freundliche Git-Repos
 Im Folgenden möchte ich einige Tipps geben, wie Git-Repositories und
 `Kontinuierliche Integration
 <https://de.wikipedia.org/wiki/Kontinuierliche_Integration>`_ mit `GitLab CI/CD
-<https://docs.gitlab.com/ee/ci/>`_ oder `GitHub Actions
+<https://docs.gitlab.com/ci/>`_ oder `GitHub Actions
 <https://docs.github.com/en/actions>`_ gut zusammenspielen können.
 
 Speichert große Dateien außerhalb eures Repositories

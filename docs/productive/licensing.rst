@@ -23,7 +23,7 @@ beanspruchen können.
      <https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1002598>`_
    * Karl Fogel: `Producing Open Source Software <https://producingoss.com/>`_
    * `Forschungsdaten veröffentlichen
-     <https://forschungsdaten.info/themen/rechte-und-pflichten/forschungsdaten-veroeffentlichen/>`_
+     <https://forschungsdaten.info/fdm-allgemein/rechte-und-pflichten/forschungsdaten-veroeffentlichen>`_
 
 Proprietäre Softwarelizenzen
 ----------------------------
@@ -62,9 +62,9 @@ beispielsweise die 3-Clause-BSD-Lizenz mit der :abbr:`GPL (GNU General Public
 License)` inkompatibel.
 
 Die `EUPL
-<https://joinup.ec.europa.eu/collection/eupl/introduction-eupl-licence>`_ ist
-hingegen eine reziproke Lizenz, die zumindest mit den meisten anderen offenen
-reziproken Lizenzen kompatibel und interoperabel ist: Die kompatiblen
+<https://interoperable-europe.ec.europa.eu/collection/eupl/introduction-eupl-licence>`_
+ist hingegen eine reziproke Lizenz, die zumindest mit den meisten anderen
+offenen reziproken Lizenzen kompatibel und interoperabel ist: Die kompatiblen
 Lizenzverpflichtungen haben Vorrang, wenn sie mit den sich aus der EUPL
 ergebenden Verpflichtungen in Konflikt geraten.
 
@@ -172,7 +172,7 @@ Reihe von ML-Modell-spezifischen Lizenzen, die für ein Unternehmen oder
 bestimmte Modelle entwickelt wurden:
 
 * `Microsoft Data Use Agreement for Open AI Model Development
-  <https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Rjfq>`_
+  <https://web.archive.org/web/20250228025544/https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Rjfq>`_
 * `OPT-175B
   <https://github.com/facebookresearch/metaseq/blob/main/projects/OPT/MODEL_LICENSE.md>`_
 * `BigScience BLOOM RAIL v1.0
@@ -230,10 +230,8 @@ anderem)` für folgende Modelle gilt:
   <https://www.eleuther.ai/artifacts/gpt-j>`_
 * The Allen Institute for Artificial Intelligence: `OLMo 2
   <https://allenai.org/olmo>`_, `Molmo <https://allenai.org/blog/molmo>`_
-* LLM360: `K2
-  <https://huggingface.co/collections/LLM360/k2-6622ae6911e3eb6219690039>`_,
-  `Amber
-  <https://huggingface.co/collections/LLM360/amber-65e7333ff73c7bbb014f2f2f>`_,
+* LLM360: `K2 <https://huggingface.co/collections/LLM360/k2-v1>`_,
+  `Amber <https://huggingface.co/collections/LLM360/amber>`_,
   `CrystalCoder <https://huggingface.co/LLM360/Crystal>`_
 * Google: `T5
   <https://github.com/google-research/text-to-text-transfer-transformer>`_
@@ -244,7 +242,7 @@ sie ihre rechtlichen Bedingungen ändern würden:
 * BigScience: `Bloom <https://huggingface.co/bigscience/bloom>`_
 * BigCode: `StarCoder 2 <https://github.com/bigcode-project/starcoder2>`_
 * Technology Innovation Institute: `Falcon
-  <https://huggingface.co/collections/tiiuae/falcon-h1-6819f2795bc406da60fab8df>`_
+  <https://huggingface.co/collections/tiiuae/falcon-h1>`_
 
 Es gibt jedoch auch einige Modelle, die analysiert wurden und nicht bestanden
 haben, weil ihnen erforderlichen Komponenten und/oder rechtlichen Vereinbarungen
@@ -300,7 +298,7 @@ Schriftarten
 
 `SIL Open Font License 1.1 <https://opensource.org/license/OFL-1.1>`_
     Schriftlizenz, die in anderen Werken frei verwendet werden kann.
-`GNU General Public License 3 <https://www.gnu.org/licenses/gpl-3.0>`_
+`GNU General Public License 3 <https://www.gnu.org/licenses/gpl-3.0.html>`_
     Sie kann auch für Schriften verwendet werden, sie darf jedoch nur mit der
     `Schriftausnahme <https://www.gnu.org/licenses/gpl-faq.html#FontException>`_
     in Dokumente eingebunden werden.
@@ -320,11 +318,11 @@ Schriftarten
 Hardware
 ~~~~~~~~
 
-Die `Open Source Hardware Association (OSHWA)
-<https://www.oshwa.org/definition/>`_ akzeptiert neben der `GNU General Public
-License (GPL) <http://www.gnu.org/licenses/gpl.html/>`_ und den `Creative
-Commons Lizenzen <https://creativecommons.org/licenses/>`_ auch die folgenden
-speizialisierten Lizenzen:
+Die `Open Source Hardware Association (OSHWA) <https://oshwa.org/definition/>`_
+akzeptiert neben der `GNU General Public License (GPL)
+<https://www.gnu.org/licenses/gpl-3.0.html>`_ und den `Creative Commons Lizenzen
+<https://creativecommons.org/licenses/>`_ auch die folgenden speizialisierten
+Lizenzen:
 
 `CERN-OHL-P-2.0 <https://ohwr.org/cern_ohl_p_v2.txt>`_
     Freizügige Variante
@@ -340,7 +338,7 @@ speizialisierten Lizenzen:
 
 .. seealso::
    * Michael Weinberg: `Licensing Open Source Hardware
-     <https://larszimmermann.de/licensing-open-source-hardware-by-michael-weinberg/>`_
+     <https://www.oreilly.com/library/view/building-open-source/9780133373912/ch03.html>`_
    * `OSHW 101 <https://oshwa.org/oshw-101/>`_
    * `Certified Open Source Hardware Projects
      <https://certification.oshwa.org/list.html>`_
@@ -458,12 +456,12 @@ License-Badge generieren lassen, das ihr :abbr:`z.B. (zum Beispiel)` auf eurer
     |License|
 
     .. |License| image:: https://img.shields.io/github/license/veit/python4datascience.svg
-       :target: https://github.com/veit/python4datascience/blob/main/LICENSE
+       :target: https://github.com/cusyio/Python4DataScience/blob/main/LICENSES/BSD-3-Clause.txt
 
 |License|
 
 .. |License| image:: https://img.shields.io/github/license/veit/python4datascience.svg
-   :target: https://github.com/cusyio/Python4DataScience/blob/main/LICENSE
+   :target: https://github.com/cusyio/Python4DataScience/blob/main/LICENSES/BSD-3-Clause.txt
 
 .. _standard_format_licensing:
 
@@ -621,11 +619,15 @@ Alternativen
     Source durch die Entwicklung von Open-Source-Tools für die Software
     Composition Analysis (SCA) erleichtern.
 
-    `ScanCode <https://aboutcode.org/scancode/>`_
+    `ScanCode Toolkit <https://github.com/aboutcode-org/scancode-toolkit>`_
         bietet eine Reihe von Tools und Anwendungen zum Scannen von
         Software-Codebasen und -paketen, um den Ursprung und die Lizenz
         (Provenienz) von Open-Source-Software (und anderer Software von
         Drittanbietern) zu ermitteln.
+
+        .. seealso::
+           * `Scan code with ScanCode
+             <https://aboutcode.org/projects/#scancode-projects>`_
 
     `DeltaCode <https://github.com/aboutcode-org/deltacode>`_
         vergleicht zwei Codebase-Scans, um signifikante Änderungen zu erkennen.

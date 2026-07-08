@@ -48,6 +48,6 @@ Beispiele für XML-Datenbanksysteme sind eXist und MonetDB.
 .. _`MonetDB/MonetDB`: https://github.com/MonetDB/MonetDB
 .. _`BaseXdb/basex`: https://github.com/BaseXdb/basex
 .. _`exist-db.org/exist/apps/doc/documentation`: https://exist-db.org/exist/apps/doc/documentation
-.. _`www.monetdb.org/Documentation`: https://www.monetdb.org/Documentation
+.. _`www.monetdb.org/Documentation`: https://www.monetdb.org/documentation-Dec2025/
 .. _`docs.basex.org`: https://docs.basex.org/main/Main_Page
 .. _`Geo-Daten`: https://basex.readthedocs.io/en/search/Geo%20Module/

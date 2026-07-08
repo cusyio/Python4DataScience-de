@@ -37,7 +37,7 @@ anschließend die mit DVC verwalteten Daten ab:
        └── train.tsv
 
 Anschließend könnt ihr die Ergebnisse einfach reproduzieren mit `dvc repro
-<https://dvc.org/doc/command-reference/repro>`_:
+<https://doc.dvc.org/command-reference/repro>`_:
 
 .. code-block:: console
 

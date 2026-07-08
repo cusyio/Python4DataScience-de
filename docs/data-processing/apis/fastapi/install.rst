@@ -24,7 +24,7 @@ Optionale Anforderungen
 
 Für die Produktion benötigt ihr außerdem einen `ASGI
 <https://asgi.readthedocs.io/en/latest/>`_-Server wie `uvicorn
-<http://www.uvicorn.org/>`_:
+<https://uvicorn.dev/>`_:
 
 .. code-block:: console
 
@@ -97,7 +97,7 @@ Starlette kann die folgenden optionalen Abhängigkeiten verwenden:
     .. image:: https://raster.shields.io/github/license/encode/httpx
        :alt: Lizenz
 
-`jinja <https://jinja.palletsprojects.com/>`_
+`jinja <https://jinja.palletsprojects.com/en/stable/>`_
     wenn ihr die Standard-Template-Konfiguration verwenden wollt.
 
     .. image:: https://raster.shields.io/github/stars/pallets/jinja
@@ -169,7 +169,7 @@ Starlette kann die folgenden optionalen Abhängigkeiten verwenden:
     .. image:: https://raster.shields.io/github/license/Tinche/aiofiles
        :alt: Lizenz
 
-`itsdangerous <https://itsdangerous.palletsprojects.com/>`_
+`itsdangerous <https://itsdangerous.palletsprojects.com/en/stable/>`_
     erforderlich für die Unterstützung von ``SessionMiddleware``.
 
     .. image:: https://raster.shields.io/github/stars/pallets/itsdangerous

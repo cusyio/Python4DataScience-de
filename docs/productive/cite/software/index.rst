@@ -47,7 +47,7 @@ Zitierinformationen für Software abrufen lassen.
    * `Module-5-Open-Research-Software-and-Open-Source
      <https://github.com/OpenScienceMOOC/Module-5-Open-Research-Software-and-Open-Source/blob/master/content_development/README.md/>`_
    * Software Heritage: `Save and reference research software
-     <https://www.softwareheritage.org/save-and-reference-research-software/>`_
+     <https://web.archive.org/web/20240430165711/https://www.softwareheritage.org/save-and-reference-research-software/>`_
    * `Mining software metadata for 80 M projects and even more
      <https://www.softwareheritage.org/2019/05/28/mining-software-metadata-for-80-m-projects-and-even-more/>`_
    * `Extensions to schema.org to support structured, semantic, and executable

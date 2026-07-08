@@ -51,7 +51,7 @@ Publikationsrepositories aktualisiert.
       :alt: Zenodo: Neues persönliches Zugangstoken
 
 #. Kopiert das neu erstellte Token in ein neues `GitHub Secret
-   <https://docs.github.com/de/actions/security-for-github-actions/security-guides/using-secrets-in-github-actions#creating-secrets-for-a-repository>`_
+   <https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets#creating-secrets-for-a-repository>`_
    namens :samp:`ZENODO_SANDBOX` in Ihrem Repository: :menuselection:`Settings
    --> Secrets and Variables --> Actions --> New repository secret`:
 

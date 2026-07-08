@@ -7,8 +7,8 @@ Repositories an, diese dürfen jedoch nicht den zusätzlichen Storage von 1 GiB
 teuer.
 
 .. seealso::
-   * `Informationen zur Speicher- und Bandbreitennutzung
-     <https://docs.github.com/de/repositories/working-with-files/managing-large-files/about-storage-and-bandwidth-usage>`_
+   * `Abrechnung für Git Large File Storage
+     <https://docs.github.com/de/billing/concepts/product-billing/git-lfs>`_
 
 Nur wie wird man Git LFS in einem solchen Repository wieder los?
 

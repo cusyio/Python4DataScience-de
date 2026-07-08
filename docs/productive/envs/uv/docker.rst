@@ -48,7 +48,7 @@ wahrscheinlich ändert sich unser Code schneller als der der Abhängigkeiten.
        ``set -ex`` voranstellen, wodurch die Fehlersuche einfacher wird.
 
        .. seealso::
-          * https://github.com/containers/podman/issues/8477
+          * https://github.com/podman-container-tools/podman/issues/8477
 
 #. Anschließend bauen wir eine :ref:`virtuelle Python-Umgebung <venv>` mit
    unserer Anwendung im Verzeichnis :file:`/app` und kopieren diese dann in

@@ -116,7 +116,7 @@ Schwachstellen. Daher sollte der Prozess der Aktualisierung von Abhängigkeiten
 automatisiert werden, indem nach veralteten oder unsicheren Anforderungen
 gesucht und :abbr:`ggf. (gegebenenfalls)` aktualisiert werden. Hierfür könnt ihr
 :abbr:`z.B. (zum Beispiel)` `dependabot <https://github.com/dependabot>`_ oder
-`Safety CLI <https://safetycli.com>`_ verwenden.
+`Safety CLI <https://www.getsafety.com/>`_ verwenden.
 
 Ihr könnt eure :doc:`/productive/envs/uv/index`-Umgebungen auch automatisch
 aktualisieren.
@@ -168,7 +168,7 @@ Informationen enthalten,
      open source projects
      <https://github.com/ossf/oss-vulnerability-guide/blob/main/maintainer-guide.md>`_
    * `Adding a security policy to your repository
-     <https://docs.github.com/en/code-security/getting-started/adding-a-security-policy-to-your-repository>`_
+     <https://docs.github.com/de/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting/add-security-policy>`_
    * `Runbook
      <https://github.com/ossf/oss-vulnerability-guide/blob/main/runbook.md>`_
 

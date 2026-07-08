@@ -128,7 +128,7 @@ korrigieren: mit ``git commit--fixup`` und ``git rebase --autosquash``.
       :samp:`git commit --fixup:amend={SHA}`.
 
       Weitere Optionen findet ihr in der `Git Commit-Dokumentation
-      <https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---fixupamendrewordltcommitgt>`_.
+      <https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---fixupamendrewordcommit>`_.
 
 ``git history``
 ---------------

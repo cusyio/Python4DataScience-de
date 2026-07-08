@@ -39,7 +39,7 @@ wesentlichen Funktionsumfang von NumPy geben:
 
 .. tip::
    `cusy Seminar: Numerische Berechnungen mit NumPy
-   <https://cusy.io/de/unsere-schulungsangebote/numerische-berechnungen-mit-numpy?set_language=de>`_
+   <https://cusy.io/de/our-training-courses/numerical-calculations-with-numpy.html>`_
 
 .. seealso::
     * `Home

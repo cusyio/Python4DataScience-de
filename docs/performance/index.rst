@@ -58,7 +58,6 @@ Beispieldaten können wir uns erstellen mit:
 
     from sklearn.datasets import make_blobs
 
-
     points, labels_true = make_blobs(
         n_samples=1000, centers=3, random_state=0, cluster_std=0.60
     )
@@ -136,7 +135,6 @@ k-Means-Algorithmus gibt es sogar gleich zwei Implementierungen:
 
      from sklearn.cluster import KMeans
 
-
      KMeans(10).fit_predict(points)
 
 * `dask_ml.cluster.KMeans
@@ -145,7 +143,6 @@ k-Means-Algorithmus gibt es sogar gleich zwei Implementierungen:
   .. code-block:: python
 
      from dask_ml.cluster import KMeans
-
 
      KMeans(10).fit(points).predict(points)
 
@@ -413,19 +410,18 @@ Dabei haben sie unterschiedliche Schwerpunkte:
   * Ein `Backend für Joblib
     <https://docs.ray.io/en/latest/ray-more-libs/joblib.html>`_ unterstützt
     verteilte `scikit-learn <https://scikit-learn.org/stable/>`_-Programme.
-  * `XGBoost-Ray
-    <https://docs.ray.io/en/latest/train/distributed-xgboost-lightgbm.html>`_
+  * `XGBoost-Ray <https://docs.ray.io/en/latest/train/api/api.html#xgboost>`_
     ist ein Backend für verteiltes `XGBoost
     <https://xgboost.readthedocs.io/en/latest/>`_.
   * `LightGBM-Ray
-    <https://docs.ray.io/en/latest/train/distributed-xgboost-lightgbm.html>`_
+    <https://docs.ray.io/en/latest/train/train.html#train-docs>`_
     ist ein Backend für verteiltes `LightGBM
     <https://lightgbm.readthedocs.io/en/latest/>`_
   * `Collective Communication Lib
     <https://docs.ray.io/en/latest/ray-more-libs/ray-collective.html>`_ bietet
     eine Reihe von nativen Collective-Primitiven für `Gloo
-    <https://github.com/facebookincubator/gloo>`_ und die `NVIDIA Collective
-    Communication Library (NCCL)
+    <https://github.com/pytorch/gloo>`_ und die `NVIDIA Collective Communication
+    Library (NCCL)
     <https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/index.html>`_.
 
 Unser Beispiel könnte mit Dask so aussehen:

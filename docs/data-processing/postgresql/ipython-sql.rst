@@ -82,7 +82,8 @@ lassen:
    Wenn ``autopandas`` auf ``True`` gesetzt wurde, wird ``displaylimit`` nicht
    angewendet. In diesem Fall kann die ``max_rows``-Option von pandas verwendet
    werden wie in der `pandas-Dokumentation
-   <https://pandas.pydata.org/pandas-docs/version/0.18.1/options.html#frequently-used-options>`_ beschrieben.
+   <https://pandas.pydata.org/docs/user_guide/options.html#frequently-used-options>`_
+   beschrieben.
 
 pandas
 ------

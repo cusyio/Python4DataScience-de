@@ -16,7 +16,6 @@ Erstellt die Datei :file:`main.py` mit diesem Inhalt:
 
     from fastapi import FastAPI
 
-
     app = FastAPI()
 
 
@@ -33,7 +32,7 @@ Erstellt die Datei :file:`main.py` mit diesem Inhalt:
 ------------
 
 Startet den Server mit dem folgenden Aufruf (hier wieder am Beispiel von
-`uvicorn <http://www.uvicorn.org/>`_):
+`uvicorn <https://uvicorn.dev>`_):
 
 .. code-block:: console
 
@@ -80,7 +79,6 @@ zu erhalten:
     from pydantic import BaseModel
 
     from fastapi import FastAPI
-
 
     app = FastAPI()
 

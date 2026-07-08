@@ -45,7 +45,7 @@ andererseits für das :doc:`testing`, :doc:`python-basics:logging/index`,
        <https://github.com/TIBHannover/2018-07-09-FAIR-Data-and-Software>`_
      * `Slides <https://zenodo.org/records/3707745>`_
    * `Dryad: Best practices for creating reusable data publications
-     <https://datadryad.org/stash/best_practices>`_
+     <https://datadryad.org/help/guides/best_practices>`_
    * Projektvorlagen:
 
      * `GIN-Tonic: Research folder structure standard

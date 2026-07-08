@@ -112,7 +112,8 @@ Git-Glossar
     ``HEAD``
         Der ``HEAD``-Zeiger repräsentiert euer aktuelles Arbeitsverzeichnis und
         kann mit ``git switch`` in verschiedene :term:`Zweige <Zweig>`,
-        :doc:`Tags <tag>` oder :term:`Commits <Commit>` verschoben werden.
+        :doc:`Tags <Tag-Objekt>` oder :term:`Commits <Commit>` verschoben
+        werden.
 
     Index
     Staging Area

@@ -21,7 +21,7 @@ OrientDB und ArangoDB.
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **GitHub**             | `mongodb/mongo`_               | `apache/couchdb`_              | `basho/riak`_                  | `orientechnologies/orientdb`_  | `arangodb/arangodb`_           |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Docs**               | `www.mongodb.com/docs/`_       | `docs.couchdb.org`_            | `docs.riak.com`_               | `www.orientdb.com/docs`_       | `docs.arangodb.com`_           |
+| **Docs**               | `www.mongodb.com/docs/`_       | `docs.couchdb.org`_            | `docs.riak.com`_               | `orientdb.dev/documentation`_  | `docs.arango.ai`_              |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Anwendungsgebiete**  | IoT, Mobile apps, CMS,         | Mobile, CRM, CMS, …            | Session storage, Log data,     | Stammdatenverwaltung, soziale  | Fraud Detection, IoT,          |
 |                        | `einfache Geodaten`_, …        |                                | Sensor data, CMS               | Netzwerke, `Time Series`_,     | Identitätsmanagement,          |
@@ -56,8 +56,8 @@ OrientDB und ArangoDB.
 .. _`MongoDB`: https://www.mongodb.com/
 .. _`CouchDB`: https://couchdb.apache.org/
 .. _`Riak`: https://riak.com/
-.. _`OrientDB`: https://orientdb.org/
-.. _`ArangoDB`: https://arangodb.com
+.. _`OrientDB`: https://orientdb.dev/
+.. _`ArangoDB`: https://arango.ai/
 .. _`mongodb/mongo`: https://github.com/mongodb/mongo
 .. _`apache/couchdb`: https://github.com/apache/couchdb
 .. _`basho/riak`: https://github.com/basho/riak
@@ -66,13 +66,13 @@ OrientDB und ArangoDB.
 .. _`www.mongodb.com/docs/`: https://www.mongodb.com/docs/
 .. _`docs.couchdb.org`: https://docs.couchdb.org/en/stable/
 .. _`docs.riak.com`: https://docs.riak.com/
-.. _`www.orientdb.com/docs`: http://www.orientdb.com/docs
-.. _`docs.arangodb.com`: https://docs.arangodb.com/stable/
-.. _`Time Series`: https://orientdb.org/docs/2.2.x/Time-series-use-case.html
-.. _`Key Value`: https://orientdb.org/docs/2.2.x/Key-Value-use-case.html
-.. _`Chat`: https://orientdb.org/docs/2.2.x/Chat-use-case.html
-.. _`Extended SQL`: https://orientdb.org/docs/2.2.x/SQL.html
+.. _`orientdb.dev/documentation`: https://orientdb.dev/documentation/
+.. _`docs.arango.ai`: https://docs.arango.ai/
+.. _`Time Series`: https://orientdb.dev/docs/3.2.x/gettingstarted/Time-series-use-case.html?highlight=Time%20series#time-series-use-case
+.. _`Key Value`: https://orientdb.dev/docs/3.2.x/gettingstarted/Key-Value-use-case.html
+.. _`Chat`: https://orientdb.dev/docs/3.2.x/gettingstarted/Chat-use-case.html
+.. _`Extended SQL`: https://orientdb.dev/docs/3.2.x/gettingstarted/Tutorial-SQL.html
 .. _`Gremlin`: https://github.com/tinkerpop/gremlin/wiki
-.. _`ArangoDB Query Language (AQL)`: https://docs.arangodb.com/stable/aql/
+.. _`ArangoDB Query Language (AQL)`: https://docs.arango.ai/arangodb/stable/aql/
 .. _`einfache Geodaten`: https://www.mongodb.com/docs/manual/core/indexes/index-types/geospatial/2d/internals/
 .. _`BSON`: http://www.bsonspec.org/

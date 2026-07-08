@@ -13,7 +13,7 @@ umzugehen.
 
 .. tip::
    `Entwurfsmuster in Python
-   <https://cusy.io/de/unsere-schulungsangebote/entwurfsmuster-in-python>`_
+   <https://cusy.io/de/our-training-courses/design-patterns-in-python.html>`_
 
 Erkennen von Code-Smells
 ------------------------
@@ -164,7 +164,6 @@ ersetzt werden durch:
       [14.4, 18.3, 19.2, 20.7]
       >>> median(clean)
       18.75
-
 
 Query-Tools für komplexe Dicts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

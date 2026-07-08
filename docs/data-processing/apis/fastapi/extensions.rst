@@ -8,17 +8,17 @@ Erweiterungen
 Administration
 --------------
 
-`SQLAlchemy Admin for Starlette/FastAPI <https://github.com/aminalaee/sqladmin>`_
+`SQLAlchemy Admin for Starlette/FastAPI <https://github.com/smithyhq/sqladmin>`_
     Flexible Admin-Schnittstelle für
     :doc:`/data-processing/postgresql/sqlalchemy`-Modelle
 
     .. image:: https://raster.shields.io/pypi/dm/sqladmin
        :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/aminalaee/sqladmin
+    .. image:: https://raster.shields.io/github/contributors/smithyhq/sqladmin
        :alt: Mitwirkende
-    .. image:: https://raster.shields.io/github/commit-activity/y/aminalaee/sqladmin
+    .. image:: https://raster.shields.io/github/commit-activity/y/smithyhq/sqladmin
        :alt: Commit-Aktivität
-    .. image:: https://raster.shields.io/github/license/aminalaee/sqladmin
+    .. image:: https://raster.shields.io/github/license/smithyhq/sqladmin
        :alt: Lizenz
 
 `Piccolo Admin <https://github.com/piccolo-orm/piccolo_admin>`_
@@ -131,10 +131,10 @@ ORMs
     .. image:: https://raster.shields.io/github/license/tortoise/tortoise-orm
        :alt: Lizenz
 
-`ormar <https://github.com/collerek/ormar/>`_
+`ormar <https://github.com/ormar-orm/ormar/>`_
     Asynchroner Mini-ORM, mit dem ihr nur ein Set von Modellen pflegen und ggf.
     mit :doc:`/data-processing/postgresql/alembic` migrieren müsst (→ `Beispiel
-    <https://collerek.github.io/ormar/latest/fastapi/>`__); zudem wird er
+    <https://ormar-orm.github.io/ormar/latest/fastapi/>`__); zudem wird er
     unterstützt von `fastapi-users
     <https://github.com/fastapi-users/fastapi-users>`_, `fastapi-crudrouter
     <https://github.com/awtkns/fastapi-crudrouter>`_ und `fastapi-pagination
@@ -142,11 +142,11 @@ ORMs
 
     .. image:: https://raster.shields.io/pypi/dm/ormar
        :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/collerek/ormar
+    .. image:: https://raster.shields.io/github/contributors/ormar-orm/ormar
        :alt: Mitwirkende
-    .. image:: https://raster.shields.io/github/commit-activity/y/collerek/ormar
+    .. image:: https://raster.shields.io/github/commit-activity/y/ormar-orm/ormar
        :alt: Commit-Aktivität
-    .. image:: https://raster.shields.io/github/license/collerek/ormar
+    .. image:: https://raster.shields.io/github/license/ormar-orm/ormar
        :alt: Lizenz
 
 `Prisma Client Python <https://github.com/RobertCraigie/prisma-client-py>`_
@@ -229,7 +229,7 @@ ODMs
 `Beanie <https://github.com/BeanieODM/beanie>`_
     Asynchroner Python-Objekt-Dokumenten-Mapper (ODM) für MongoDB, basierend auf
     `Motor <https://motor.readthedocs.io/en/stable/>`_ und `Pydantic
-    <https://docs.pydantic.dev/latest/>`__
+    <https://pydantic.dev/docs/validation/latest/get-started/>`__
 
     .. image:: https://raster.shields.io/pypi/dm/beanie
        :alt: Downloads
@@ -242,7 +242,8 @@ ODMs
 
 `ODMantic <https://github.com/art049/odmantic/>`_
     Asynchroner ODM (Object Document Mapper) für MongoDB basierend auf
-    Python-Type-Hints und `pydantic <https://docs.pydantic.dev/latest/>`__
+    Python-Type-Hints und `pydantic
+    <https://pydantic.dev/docs/validation/latest/get-started/>`__
 
     .. image:: https://raster.shields.io/pypi/dm/odmantic
        :alt: Downloads
@@ -675,17 +676,17 @@ Ruhende Projekte
     .. image:: https://raster.shields.io/github/license/perdy/starlette-prometheus
        :alt: Lizenz
 
-`FastAPI Utilities <https://github.com/dmontagu/fastapi-utils>`_
+`FastAPI Utilities <https://github.com/fastapiutils/fastapi-utils>`_
     Hilfsprogramme zur Reduzierung von Boilerplate und zur Wiederverwendung
     gemeinsamer Funktionen in verschiedenen Projekten.
 
     .. image:: https://raster.shields.io/pypi/dm/fastapi-utils
        :alt: Downloads
-    .. image:: https://raster.shields.io/github/contributors/dmontagu/fastapi-utils
+    .. image:: https://raster.shields.io/github/contributors/fastapiutils/fastapi-utils
        :alt: Mitwirkende
-    .. image:: https://raster.shields.io/github/commit-activity/y/dmontagu/fastapi-utils
+    .. image:: https://raster.shields.io/github/commit-activity/y/fastapiutils/fastapi-utils
        :alt: Commit-Aktivität
-    .. image:: https://raster.shields.io/github/license/dmontagu/fastapi-utils
+    .. image:: https://raster.shields.io/github/license/fastapiutils/fastapi-utils
        :alt: Lizenz
 
 `Fastapi Camelcase <https://github.com/nf1s/fastapi-camelcase>`_

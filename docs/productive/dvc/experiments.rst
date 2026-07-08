@@ -35,7 +35,7 @@ euer aktuelles Arbeitsverzeichnis mit dem letzten Commit (``HEAD``) vergleichen:
 ``dvc exp``
 -----------
 
-Mit `dvc exp <https://dvc.org/doc/command-reference/exp>`_ könnt ihr die
+Mit `dvc exp <https://doc.dvc.org/command-reference/exp>`_ könnt ihr die
 Parameter auch in der Kommandozeile setzen, :abbr:`z. B. (zum Beispiel)`:
 
 .. code-block:: console
@@ -98,7 +98,7 @@ die Experimente verwenden:
 
 .. seealso::
    * `Get Started: Experimenting Using Pipelines
-     <https://dvc.org/doc/start/experiments/experiment-pipelines>`_
+     <https://doc.dvc.org/start/experiments/experiment-pipelines>`_
    * `Running Experiments
-     <https://dvc.org/doc/user-guide/experiment-management/running-experiments#the-experiments-queue>`_
-   * `dvc queue <https://dvc.org/doc/command-reference/queue>`_
+     <https://doc.dvc.org/user-guide/experiment-management/running-experiments#the-experiments-queue>`_
+   * `dvc queue <https://doc.dvc.org/command-reference/queue>`_

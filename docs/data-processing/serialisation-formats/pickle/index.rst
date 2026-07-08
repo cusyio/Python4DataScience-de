@@ -44,7 +44,7 @@ Pickle
         Indizierte Datenbanken von ``pickle``-Objekten
     `Uwe Korn: The implications of pickling ML models <https://uwekorn.com/2021/04/26/implications-of-pickling-ml-models.html>`_
         Alternativen zu ``pickle`` für ML-Modelle
-    `Ned Batchelder: Pickle’s nine flaws <https://nedbatchelder.com/blog/202006/pickles_nine_flaws.html>`_
+    `Ned Batchelder: Pickle’s nine flaws <https://nedbatchelder.com/blog/202006/pickles_nine_flaws>`_
         Nachteile von ``pickle`` und Alternativen
 
 .. _`307`: https://peps.python.org/pep-0307/

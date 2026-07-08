@@ -46,4 +46,4 @@ konfiguriert werden:
     { "husky": { "hooks": { "pre-commit": "pretty-quick --staged" } } }
 
 .. seealso::
-    * `Prettier docs <https://prettier.io/docs/en/index.html>`_
+    * `Prettier docs <https://prettier.io/docs/index.html>`_

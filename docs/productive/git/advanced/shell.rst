@@ -7,7 +7,7 @@ vorstellen:
 .. tab:: oh-my-zsh
 
    `oh-my-zsh <https://ohmyz.sh>`_ kann für die `Z Shell
-   <https://zsh.sourceforge.io>`_ verwendet werden.
+   <https://zsh.sourceforge.io/>`_ verwendet werden.
 
    .. seealso::
       * `Getting Started <https://github.com/ohmyzsh/ohmyzsh#getting-started>`_

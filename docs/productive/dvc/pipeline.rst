@@ -105,7 +105,7 @@ geschrieben. Die Verzeichnisstruktur sieht dann so aus:
    └── uv.lock
 
 .. seealso::
-   `dvc repro <https://dvc.org/doc/command-reference/repro>`_
+   `dvc repro <https://doc.dvc.org/command-reference/repro>`_
 
 Die neuen und geänderten Programm- und Konfigurationsdateien sollten nun in Git
 verwaltet werden:

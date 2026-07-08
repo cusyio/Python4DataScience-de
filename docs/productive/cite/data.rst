@@ -75,9 +75,10 @@ können.
 .. seealso::
    * Luc Moreau, Paul Groth: `Provenance: An Introduction to PROV
      <https://www.provbook.org/>`_
-   * `Provenance storage and distribution <https://openprovenance.org/store/>`_
+   * `Provenance storage and distribution
+     <https://web.archive.org/web/20241006110919/https://openprovenance.org/store/>`_
    * `ProvStore’s API documentation
-     <https://openprovenance.org/store/help/api/>`_
+     <https://provstore-api.readthedocs.io/en/latest/>`_
 
 Python prov
 ~~~~~~~~~~~

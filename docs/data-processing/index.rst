@@ -18,10 +18,10 @@ wir euch :doc:`serialisation-formats/index` und drei Werkzeuge genauer vor:
 
 .. tip::
    `cusy Seminar: Daten lesen, schreiben und bereitstellen mit Python
-   <https://cusy.io/de/unsere-schulungsangebote/daten-lesen-schreiben-und-bereitstellen-mit-python>`_
+   <https://cusy.io/de/our-training-courses/read-write-and-provide-data-with-python.html>`_
 
 .. seealso::
-    `Scrapy <https://scrapy.org/>`_
+    `Scrapy <https://www.scrapy.org/>`_
         Framework zum Extrahieren von Daten aus Websites als JSON-, CSV- oder
         XML-Dateien.
     `Pattern <https://github.com/clips/pattern>`_

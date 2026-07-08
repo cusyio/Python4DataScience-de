@@ -31,4 +31,4 @@ erhalten können.
 .. seealso::
    * :doc:`python-basics:document/index`
    * `Read the Docs for Science
-     <https://docs.readthedocs.io/en/latest/science.html>`_
+     <https://docs.readthedocs.com/platform/latest/science.html>`_

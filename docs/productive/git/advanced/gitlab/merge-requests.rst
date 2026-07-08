@@ -29,7 +29,7 @@ Zusammenführungsanfragen enthalten:
      Änderungen müssten dann über euch laufen.
 
 .. seealso::
-   * `Merge requests <https://docs.gitlab.com/ee/user/project/merge_requests/>`_
+   * `Merge requests <https://docs.gitlab.com/user/project/merge_requests/>`_
 
 Merge-Request-Arbeitsabläufe
 ----------------------------
@@ -39,16 +39,16 @@ Merge-Request-Arbeitsabläufe
 #. Ihr holt Feedback von eurem Team ein.
 #. Ihr arbeitet an der Implementierung und optimiert den Code mit
    `Codequalitätsberichten
-   <https://docs.gitlab.com/ee/ci/testing/code_quality.html>`_.
+   <https://docs.gitlab.com/ci/testing/code_quality/>`_.
 #. Ihr verifiziert eure Änderungen mit `Berichten von Unit-Tests
-   <https://docs.gitlab.com/ee/ci/testing/unit_test_reports.html>`_ in
-   :doc:`GitLab CI/CD <ci-cd/index>`.
+   <https://docs.gitlab.com/ci/testing/unit_test_reports/>`_ in :doc:`GitLab
+   CI/CD <ci-cd/index>`.
 #. Ihr vermeidet die Verwendung von Abhängigkeiten, deren Lizenz nicht mit eurem
    Projekt kompatibel ist, mit :ref:`Berichten zur Lizenzkonformität
    <reuse-in-gitlab-ci>`.
 #. Ihr beantragt die `Genehmigung
-   <https://docs.gitlab.com/ee/user/project/merge_requests/approvals/index.html>`_
-   eurer Änderungen.
+   <https://docs.gitlab.com/user/project/merge_requests/approvals/>`_ eurer
+   Änderungen.
 #. Wenn die Zusammenführungsanforderung genehmigt wurde, wird die :doc:`GitLab
    CI/CD <ci-cd/index>` die Änderungen in der ``production``-Umgebung
    bereitstellen.

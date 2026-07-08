@@ -86,4 +86,4 @@ Beispiel für GitLab Actions
 
     Weitere Informationen zur Feinabstimmung des Caching findet ihr in `Good
     caching practices
-    <https://docs.gitlab.com/ee/ci/caching/#good-caching-practices>`_.
+    <https://docs.gitlab.com/ci/caching/#good-caching-practices>`_.

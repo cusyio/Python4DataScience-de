@@ -90,7 +90,7 @@ Die zugehörige Konfigurationsdatei :file:`.dvc/config` sieht dann so aus:
 
 .. seealso::
    `Remote Storage
-   <https://dvc.org/doc/user-guide/data-management/remote-storage>`_
+   <https://doc.dvc.org/user-guide/data-management/remote-storage>`_
 
 pre-commit konfigurieren
 ------------------------

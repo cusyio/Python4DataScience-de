@@ -24,8 +24,9 @@ Git kann jedoch nicht nur verteilt genutzt werden, sondern ist auch performant,
 sicher und flexibel.
 
 .. tip::
-   `cusy Seminar: Code und Daten versioniert und reproduzierbar speichern
-   <https://cusy.io/de/unsere-schulungsangebote/code-und-daten-versioniert-und-reproduzierbar-speichern>`_
+   `cusy Seminar: Versionierte und reproduzierbare Speicherung von Code und
+   Daten
+   <https://www.cusy.io/de/our-training-courses/versioned-and-reproducible-storage-of-code-and-data.html>`_
 
 Performance
 -----------

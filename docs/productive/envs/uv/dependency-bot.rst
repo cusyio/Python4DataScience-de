@@ -65,7 +65,7 @@ aktualisieren wollt, solltet ihr :abbr:`z.B. (zum Beispiel)` in der
 <https://docs.renovatebot.com/configuration-options/#lockfilemaintenance>`_
 verwenden:
 
-.. code-block:: json5
+.. code-block::
    :caption: renovate.json5
 
    {
@@ -77,11 +77,11 @@ verwenden:
 
 Renovate erkennt jedoch nicht automatisch Dateien mit
 :ref:`inline-script-metadata`. Ihr müsst diese Python-Skripte explizit mit
-`fileMatch
-<https://docs.renovatebot.com/configuration-options/#filematch>`_ angegeben,
-:abbr:`z.B. (zum Beispiel)` mit:
+`managerFilePatterns
+<https://docs.renovatebot.com/configuration-options/#managerfilepatterns>`_
+angegeben, :abbr:`z.B. (zum Beispiel)` mit:
 
-.. code-block:: json5
+.. code-block::
    :caption: renovate.json5
    :emphasize-lines: 4-5
 

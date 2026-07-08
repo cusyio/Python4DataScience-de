@@ -1,5 +1,4 @@
 .. SPDX-FileCopyrightText: 2020 cusy GmbH
-.. SPDX-FileCopyrightText: 2021 cusy GmbH
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
@@ -27,7 +26,7 @@ Agrarwissenschaften
 `Index DataBase <https://www.indexdatabase.de/>`_
     Vegetationsindizes des Instituts für Nutzpflanzenwissenschaften und
     Ressourcenschutz (INRES)
-`PLANTS Database <https://plants.sc.egov.usda.gov>`_
+`PLANTS Database <https://plants.sc.egov.usda.gov/>`_
     Standardisierte Informationen über Gefäßpflanzen, Moose und Flechten in den
     USA
 
@@ -97,7 +96,7 @@ Bildverarbeitung
     IEEE-Datensätze zur Bildverarbeitung
 `ImageNet <https://www.image-net.org>`_
     Bilddatenbank, die nach der `WordNet
-    <https://wordnet.princeton.edu>`_-Hierarchie gegliedert ist
+    <https://wordnet.princeton.edu/>`_-Hierarchie gegliedert ist
 `Indoor Scene Recognition <https://web.mit.edu/torralba/www/indoor.html>`_
     Bilder für die Erkennung von Innenräumen
 `Iranis Dataset <https://alitourani.github.io/Iranis-dataset/>`_
@@ -324,7 +323,7 @@ Energiesektor
     auf Ebene der Kraftwerke und der Antriebsmaschinen
 `Global Power Plant Database <https://datasets.wri.org/datasets/global-power-plant-database>`_
     Weltweite Open-Source-Datenbank für Kraftwerke
-`Household Electricity Study - EV0702 <https://randd.defra.gov.uk/ProjectDetails?ProjectID=17359&FromSearch=Y&Publisher=1&SearchText=EV0702&SortString=ProjectCode&SortOrder=Asc&Paging=10#Description>`_
+`Household Electricity Study - EV0702 <https://randd.defra.gov.uk/ProjectDetails?ProjectID=17359>`_
     Daten zum Stromverbrauch in Haushalten von April 2010 bis April 2011 von
     Haushaltsgeräten in insgesamt 251 Eigenheimbewohnerhaushalten in ganz
     England
@@ -378,11 +377,11 @@ Finanzsektor
 `FAANG- Complete Stock Data <https://www.kaggle.com/datasets/aayushmishra1512/faang-complete-stock-data>`_
     Daten zu den Aktien der FAANG (Facebook, Amazon, Apple, Netflix und
     Google)-Unternehmen seit Beginn ihrer Börsennotierung
-`Federal Reserve Economic Data (FRED) <https://fred.stlouisfed.org>`_
+`Federal Reserve Economic Data (FRED) <https://fred.stlouisfed.org/>`_
     Online-Datenbank, die Hunderttausende von Zeitreihen mit Wirtschaftsdaten
     aus zahlreichen nationalen, internationalen, öffentlichen und privaten
     Quellen umfasst
-`Google Finance <https://www.google.com/finance/>`_
+`Google Finance <https://www.google.com/finance/beta>`_
     Suche nach Aktien, ETFs :abbr:`etc. (et cetera)`
 `Nasdaq Data Link <https://data.nasdaq.com/institutional-investors>`_
     Plattform für Finanz- und alternative Daten, die Finanzfachleuten nützliche
@@ -516,7 +515,7 @@ Gesundheitswesen
 `The Global Health Observatory <https://www.who.int/data/gho>`_
     Das GHO-Datenarchiv ist das Portal der WHO für gesundheitsbezogene
     Statistiken ihrer 194 Mitgliedstaaten
-`Informatics for Integrating Biology & the Bedside (i2b2) <https://www.i2b2.org/NLP/DataSets/Main.php>`_
+`Informatics for Integrating Biology & the Bedside (i2b2) <https://i2b2.org/>`_
     NLP-Forschungsdatensätze
 
 Klima und Wetter
@@ -639,7 +638,7 @@ Medizin
 `CCLE Cancer Cell Line Encyclopedia <https://sites.broadinstitute.org/ccle>`_
     Krebszelllinien-Modelle zur Erforschung der Krebsbiologie, zur Validierung
     von Krebs-Targets und zur Bestimmung der Wirksamkeit von Medikamenten
-`Genomics of Drug Sensitivity in Cancer datasets <https://www.cancerrxgene.org>`_
+`Genomics of Drug Sensitivity in Cancer datasets <https://www.cancerrxgene.org/>`_
     Datensätze und Merkmale zur Genomik der Arzneimittelempfindlichkeit bei
     Krebserkrankungen
 `Grand Challenge <https://grand-challenge.org>`_
@@ -665,7 +664,7 @@ Natürliche Sprache
     -Anforderungen, wie Dokumentenklassifizierung, automatische
     Bildbeschriftung, Dialoge, Clustering, Intent-Klassifizierung,
     Sprachmodellierung, maschinelle Übersetzung, Textkorpora und vieles mehr
-`Blizzard Challenge 2018 <https://www.synsig.org/index.php/Blizzard_Challenge_2018>`_
+`The Blizzard Challenge <https://www.cstr.ed.ac.uk/projects/blizzard/>`_
     Ca. 6,5 Stunden Sprachdaten in britischem Englisch von einer einzigen
     Sprecherin
 `The Blog Authorship Corpus <https://u.cs.biu.ac.il/~koppel/BlogCorpus.htm>`_
@@ -734,7 +733,7 @@ Natürliche Sprache
     zugänglichen Webseiten stammen
 `Wikidata <https://www.wikidata.org/wiki/Wikidata:Database_download>`_
     Wikidata Datenbank-Dumps
-`Wordbank <https://wordbank.stanford.edu>`_
+`Wordbank <https://wordbank.stanford.edu/>`_
     Eine offene Datenbank zur Wortschatzentwicklung von Kindern
 `WordNet – A Lexical Database for English wndb(5WN) <https://wordnet.princeton.edu/documentation/wndb5wn>`_
     Umfangreiche lexikalische Datenbank der englischen Sprache. Substantive,
@@ -836,7 +835,7 @@ Regierungsinformationen
 `Metadaten Verbund (MetaVer) <https://metaver.de>`_
     Gemeinsames Portal der Bundesländer Brandenburg, Bremen, Hamburg, Hessen,
     Mecklenburg-Vorpommern, Saarland, Sachsen und Sachsen-Anhalt
-`National Bureau of Statistics of China (NBS) <https://data.stats.gov.cn/english/>`_
+`National Bureau of Statistics of China (NBS) <https://data.stats.gov.cn/dg/website/page.html#/pc/national/en/home>`_
     Offene Daten des chinesischen Statistikamtes
 `Debt to the Penny <https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny>`_
     Informationen des US-Finanzministeriums über die gesamte ausstehende
@@ -856,7 +855,7 @@ Regierungsinformationen
     Finnisches Open-Data-Portal
 `data.gouv <https://www.data.gouv.fr/datasets>`_
     Plattform für französische offene Daten
-`GENESIS-Online <https://www-genesis.destatis.de/datenbank/online>`_
+`GENESIS-Online <https://genesis.destatis.de/datenbank/online/>`_
     Datenbank des deutschen Statistischen Bundesamtes
 `data.gov.gr <https://data.gov.gr/>`_
     Griechisches Register für offene Daten des öffentlichen Sektors
@@ -878,7 +877,7 @@ Regierungsinformationen
     Luxemburgische Open-Data-Plattform
 `data.gov.my <https://data.gov.my>`_
     Malaysias offizielles Open-Data-Portal
-`datos.gob.mx <https://www.datos.gob.mx>`_
+`datos.gob.mx <https://www.datos.gob.mx/>`_
     Nationale mexikanische Plattform für offene Daten
 `date.gov.md <https://date.gov.md/>`_
     Datenportal der moldavischen Regierung
@@ -995,6 +994,11 @@ Suchmaschinen
     Vom Open Data Institute (ODI) zertifizierte Datensätze
 `Open Data Inception <https://opendatainception.io/>`_
     Open-Data-Portale weltweit
+`Open Research Europe (ORE) <https://open-research-europe.ec.europa.eu>`_
+    Open-Access-Publikationsplattform für alle Forschungseinrichtungen der
+    teilnehmenden Länder (Österreich, Frankreich, Deutschland, Italien, die
+    Niederlande, Norwegen, Portugal, Slowenien, Spanien, Schweden und die
+    Schweiz).
 `PaN-Finder <https://pan-finder.panosc.ess.eu>`_
     Aufbauend auf dem :abbr:`PaNOSC (Photon and Neutron Open Science
     Cloud)`-Projekt werden Datenkataloge großer Forschungseinrichtungen
@@ -1020,7 +1024,7 @@ Sozialwissenschaften
     :abbr:`ARED (Authoritarian Ruling Elites Database)` ist eine Sammlung
     biografischer und beruflicher Informationen über Personen, die die oberste
     Elite autoritärer Regime bilden
-`CanLII <https://www.canlii.org>`_
+`CanLII <https://www.canlii.org/>`_
     Kanadisches Institut für Rechtsinformationen
 `CEWS <https://www.gesis.org/cews/daten-und-informationen/statistiken/datenzugang>`_
     Statistische Daten zu Geschlechterverhältnissen in der Wissenschaft
@@ -1064,7 +1068,7 @@ Sozialwissenschaften
 `IDB Open Data <https://data.iadb.org>`_
     Daten zur wirtschaftlichen und sozialen Entwicklung in Lateinamerika und der
     Karibik der :abbr:`IDB (Inter-American Development Bank)`
-`INED surveys and data <https://www.ined.fr/en/node/153>`_
+`INED surveys and data <https://www.ined.fr/en/recherche/our-surveys-our-data>`_
     Online-Katalog der Erhebungen und Daten des französischen Instituts für
     demografische Studien (INED)
 `INFORM Severity Index <https://drmkc.jrc.ec.europa.eu/inform-index>`_
@@ -1088,7 +1092,7 @@ Sozialwissenschaften
     Das :abbr:`ISSP (International Social Survey Programme)` ist ein
     länderübergreifendes Kooperationsprogramm, das jährlich Umfragen zu
     verschiedenen sozialwissenschaftlich relevanten Themen durchführt
-`IPUMS <https://www.ipums.org>`_
+`IPUMS <https://www.ipums.org/>`_
     IPUMS stellt Volkszählungs- und Erhebungsdaten aus aller Welt bereit, die
     zeitlich und räumlich miteinander verknüpft sind
 `Mass Mobilization Protest Data <https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/HTTWYL>`_
@@ -1104,7 +1108,7 @@ Sozialwissenschaften
     unterstützt, durch den Klimawandel verschärfte Risiken wie Überbevölkerung,
     Ernährungsunsicherheit, unzureichende Infrastruktur und zivile Konflikte zu
     untersuchen
-`OpenSanctions <https://www.opensanctions.org/#downloads>`__
+`OpenSanctions <https://www.opensanctions.org/>`__
     OpenSanctions ist eine internationale Datenbank mit Personen und
     Unternehmen, die von politischem, strafrechtlichem oder wirtschaftlichem
     Interesse sind
@@ -1120,12 +1124,12 @@ Sozialwissenschaften
     Möglichkeiten von Smartphones menschliche Interaktionen über die
     traditionellen, auf Umfragen oder Simulationen basierenden Methoden hinaus
     zu erforschen
-`Stack Exchange Data Explorer <https://data.stackexchange.com>`_
+`Stack Exchange Data Explorer <https://data.stackexchange.com/>`_
     Open-Source-Tool zur Durchführung beliebiger Abfragen auf öffentliche Daten
     aus dem Stack Exchange-Netzwerk
 `Titanic Dataset <https://www.kaggle.com/datasets/yasserh/titanic-dataset>`_
     Datensatz zu Vorhersagen über Überlebende der Titanic
-`UC DATA <https://dlab.berkeley.edu/data/uc-data>`_
+`UC DATA <https://dlab.berkeley.edu/uc-data>`_
     Archiv der UC Berkeley für digitalisierte sozialwissenschaftliche Daten und
     Statistiken
 `UCLA Social Science Data Archive <https://dataverse.harvard.edu/dataverse/ssda_ucla>`_
@@ -1179,11 +1183,11 @@ Transport und Verkehr
     Verkehrsdatensätze aus Brüssel
 `Düsseldorf  Verkehrsmeldungen – Mobilitätsdaten <https://opendata.duesseldorf.de/dataset/verkehrsmeldungen-mobilitätsdaten>`_
     Verkehrsmeldungen und Geodaten der Stadt Düsseldorf
-`England National Highways <https://www.trafficengland.com/services-info>`_
+`National Highways Digital Lab <https://nationalhighways.co.uk/our-work/digital-lab/>`_
     Aktuelle Verkehrsinformationen des National Traffic Information Service
 `Fatality Analysis Reporting System (FARS) <https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars>`_
     FARS-Meldungen von tödlichen Unfällen
-`Finish Transport Infrastructure Agency <https://aineistot.vayla.fi/spa/ava/>`_
+`Finish Transport Infrastructure Agency <https://aineistot.vayla.fi/spa/?path=ava>`_
     Offene Daten der finnischen Verkehrsbehörde
 `Fintraffic Data sources <https://www.digitraffic.fi/en/road-traffic/>`_
     Verkehrsinformationen aus den Verkehrsmanagementsystemen von ITM Finland
@@ -1196,10 +1200,10 @@ Transport und Verkehr
 `GeoLife GPS Trajectories <https://www.microsoft.com/en-us/download/details.aspx?id=52367>`_
     GPS-Bewegungsdaten im Rahmen des Geolife-Projekts (Microsoft Research Asia)
     von 182 Nutzern von April 2007 bis August 2012
-`Jena Open Data: Mobilität <https://opendata.jena.de/group/mobilitat>`_
+`WISSENsAllmende Jena: Transport <https://wissensallmende.jena.de/datasets?locale=de&categories=TRAN&page=1>`_
     Parken, Verkehrsbehinderungen, touristische Radwege, Straßenbaumaßnahmen
     :abbr:`etc. (et cetera)`
-`Köln: Transport und Verkehr <https://www.offenedaten-koeln.de/search/type/dataset/field_tags/transport-und-verkehr-52?sort_by=changed>`_
+`Köln: Transport und Verkehr <https://offenedaten-koeln.de/datasets?f%5B0%5D=dataset_keyword%3Atransport%20und%20verkehr>`_
     Transport- und Verkehrsaten der Stadt Köln
 `Transport for London <https://tfl.gov.uk/info-for/open-data-users/our-open-data>`_
     Liste der verfügbaren :abbr:`TfL (Transport for London)`-Datenfeeds
@@ -1228,13 +1232,13 @@ Transport und Verkehr
     erfasst wurden
 `renfe Data <https://data.renfe.com/estadisticas>`_
     Daten der spanischen Eisenbahnen
-`Schweizer Bundesamt für Strassen ASTRA <https://www.astra.admin.ch/astra/de/home/dokumentation/daten-informationsprodukte/verkehrsdaten.html>`_
+`Schweizer Bundesamt für Strassen ASTRA <https://www.astra.admin.ch/de/verkehrsdaten>`_
     Verkehrsdaten des ASTRA
 `Traffic Scotland Data Hub <https://www.traffic.gov.scot/traffic-scotland-developer-hub>`_
     Verkehrs- und Reiseinformationen von Traffic Scotland
 `SF Bay Area Bike Share <https://www.kaggle.com/datasets/benhamner/sf-bay-area-bike-share>`_
     Das Unternehmen *Bay Area Bike Share* veröffentlicht regelmäßig offene Daten
-`Tark Tee Smart Road DATEX II data gateway <https://tarktee.mnt.ee/#/en/datex>`_
+`Tark Tee Smart Road DATEX II data gateway <https://tarktee.transpordiamet.ee/#/en/datex>`_
     Verkehrs- und straßenbezogene Informationen der estnischen Verkehrsbehörde
     in `DATEX II <https://datex2.eu/>`_-Format
 `TLC Trip Record Data <https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page>`_

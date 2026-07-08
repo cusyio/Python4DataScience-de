@@ -67,15 +67,15 @@ Galaxy
 
     .. image:: https://raster.shields.io/github/commit-activity/y/galaxyproject/galaxy
        :alt: Commit activity
-       :target: https://github.com/galaxyproject/galaxy/commit-activity
+       :target: https://github.com/galaxyproject/galaxy/graphs/commit-activity
 
     .. image:: https://raster.shields.io/github/license/galaxyproject/galaxy
        :alt: Lizenz
 
 DSpace
     `Home <https://dspace.org>`_ | `Docs
-    <https://wiki.lyrasis.org/display/DSDOC9x/DSpace+9.x+Documentation>`_ |
-    `GitHub <https://github.com/DSpace>`_
+    <https://wiki.lyrasis.org/spaces/DSDOC9x/pages/379125826/DSpace+9.x+Documentation>`_
+    | `GitHub <https://github.com/DSpace>`_
 
     .. image:: https://raster.shields.io/github/stars/DSpace/DSpace
        :alt: Stars
@@ -93,7 +93,7 @@ DSpace
        :alt: Lizenz
 
 Dataverse
-    `Home <https://dataverse.org>`_ | `Docs
+    `Home <https://dataverse.org/>`_ | `Docs
     <https://guides.dataverse.org/en/latest/>`_ | `GitHub
     <https://github.com/IQSS/dataverse>`_
 
@@ -107,7 +107,7 @@ Dataverse
 
     .. image:: https://raster.shields.io/github/commit-activity/y/IQSS/dataverse
        :alt: Commit activity
-       :target: https://github.com//IQSS/dataversegraphs/commit-activity
+       :target: https://github.com//IQSS/dataverse/graphs/commit-activity
 
     .. image:: https://raster.shields.io/github/license/IQSS/dataverse
        :alt: Lizenz
@@ -132,8 +132,8 @@ iRODS
        :alt: Lizenz
 
 Fedora Commons
-    `Home <https://wiki.lyrasis.org/display/FF/>`_ | `Docs
-    <https://wiki.lyrasis.org/display/FEDORA6x>`_ | `GitHub
+    `Home <https://wiki.lyrasis.org/spaces/FF/overview>`_ | `Docs
+    <https://wiki.lyrasis.org/spaces/FEDORA6x/overview>`_ | `GitHub
     <https://github.com/fcrepo/fcrepo>`_
 
     .. image:: https://raster.shields.io/github/stars/fcrepo/fcrepo

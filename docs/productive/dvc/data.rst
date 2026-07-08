@@ -14,7 +14,7 @@ werden muss:
 
 .. code-block:: console
 
-    $ uv run dvc get https://github.com/iterative/dataset-registry \
+    $ uv run dvc get https://github.com/treeverse/dataset-registry \
         get-started/data.xml -o data/data.xml
     $ uv run dvc add data/data.xml
 
@@ -22,7 +22,7 @@ Dies fügt die Datei :file:`data/data.xml` in :file:`data/.gitignore` hinzu und
 schreibt die Meta-Angaben in :file:`data/data.xml.dvc`.
 
 .. seealso::
-   `.dvc Files <https://dvc.org/doc/user-guide/project-structure/dvc-files>`_
+   `.dvc Files <https://doc.dvc.org/user-guide/project-structure/dvc-files>`_
 
 Um nun verschiedene Versionen eurer Projektdaten mit Git verwalten zu können,
 fügt ihr nur :file:`data/.gitignore` und :file:`data/data.xml.dvc` hinzu:
@@ -34,7 +34,7 @@ fügt ihr nur :file:`data/.gitignore` und :file:`data/data.xml.dvc` hinzu:
 
 .. seealso::
    `External Dependencies and Outputs
-   <https://dvc.org/doc/user-guide/pipelines/external-dependencies-and-outputs>`_
+   <https://doc.dvc.org/user-guide/pipelines/external-dependencies-and-outputs>`_
 
 Daten speichern und abrufen
 ---------------------------
@@ -60,11 +60,11 @@ Projekts mit ``dvc import`` importieren, :abbr:`z. B. (zum Beispiel)`:
 
 .. code-block:: console
 
-   $ uv run dvc import https://github.com/iterative/dataset-registry  get-started/data.xml -o data/data.xml
-   Importing 'get-started/data.xml (https://github.com/iterative/dataset-registry)' -> 'data/data.xml'
+   $ uv run dvc import https://github.com/treeverse/dataset-registry  get-started/data.xml -o data/data.xml
+   Importing 'get-started/data.xml (https://github.com/treeverse/dataset-registry)' -> 'data/data.xml'
 
 Dies lädt die Datei aus der `dataset-registry
-<https://github.com/iterative/dataset-registry>`_ in unser
+<https://github.com/treeverse/dataset-registry>`_ in unser
 :file:`data`-Verzeichnis, fügt sie :file:`.gitignore` hinzu und erstellt
 :file:`data.xml.dvc`.
 
@@ -79,16 +79,16 @@ Beispiel)`:
 
 .. seealso::
    * `Discovering and accessing data
-     <https://dvc.org/doc/user-guide/data-management/discovering-and-accessing-data>`_
+     <https://doc.dvc.org/user-guide/data-management/discovering-and-accessing-data>`_
    * `External Data
-     <https://dvc.org/doc/user-guide/data-management/importing-external-data>`_
+     <https://doc.dvc.org/user-guide/data-management/importing-external-data>`_
 
 Daten löschen
 -------------
 
 Wenn ihr Dateien oder Verzeichnisse aus der Verwaltung von DVC entfernen
 möchtet, könnt ihr dies mit `dvc remove
-<https://dvc.org/doc/command-reference/remove>`_:
+<https://doc.dvc.org/command-reference/remove>`_:
 
 .. code-block::
 

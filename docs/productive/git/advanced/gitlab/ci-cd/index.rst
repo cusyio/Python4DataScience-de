@@ -67,8 +67,7 @@ Jobs
     oder Testen.
 
     .. seealso::
-       * `GitLab Docs: Jobs
-         <https://docs.gitlab.com/ee/ci/jobs/index.html>`_
+       * `GitLab Docs: Jobs <https://docs.gitlab.com/ci/jobs/>`_
        * :doc:`python-basics:packs/cibuildwheel`
        * :ref:`pre-commit Hooks <pre-commit-in-gitlab-ci>`
        * :ref:`Lizenzieren <reuse-in-gitlab-ci>`
@@ -80,12 +79,12 @@ Stages
 
     .. seealso::
        `GitLab Docs: CI/CD YAML syntax reference
-       <https://docs.gitlab.com/ee/ci/yaml/index.html#stages>`_
+       <https://docs.gitlab.com/ci/yaml/#stages>`_
 
 *Jobs* werden von :abbr:`sog. (sogenannten)` `Runners
-<https://docs.gitlab.com/ee/ci/runners/index.html>`_ ausgeführt. Mehrere *Jobs*
-in einem *Stage* werden parallel ausgeführt, sofernes genügend gleichzeitige
-Runner zur Verfügung stehen.
+<https://docs.gitlab.com/ci/runners/>`_ ausgeführt. Mehrere *Jobs* in einem
+*Stage* werden parallel ausgeführt, sofernes genügend gleichzeitige Runner zur
+Verfügung stehen.
 
 Wenn alle *Jobs* in einem *Stage* erfolgreich sind, fährt die Pipeline mit dem
 nächsten *Stage* fort.
@@ -169,13 +168,13 @@ Pipeline löschen.
 
 .. seealso::
    * `GitLab Docs: Customize pipeline configuration
-     <https://docs.gitlab.com/ee/ci/yaml/index.html>`_
+     <https://docs.gitlab.com/ci/yaml/>`_
    * `GitLab Docs: Scheduled pipelines
-     <https://docs.gitlab.com/ee/ci/pipelines/schedules.html>`_
+     <https://docs.gitlab.com/ci/pipelines/schedules/>`_
    * `GitLab Docs: GitLab CI/CD variables
-     <https://docs.gitlab.com/ee/ci/variables/index.html>`_
+     <https://docs.gitlab.com/ci/variables/>`_
    * `GitLab Docs: Predefined variables reference
-     <https://docs.gitlab.com/ee/ci/variables/predefined_variables.html>`_
+     <https://docs.gitlab.com/ci/variables/predefined_variables/>`_
 
 .. toctree::
    :hidden:

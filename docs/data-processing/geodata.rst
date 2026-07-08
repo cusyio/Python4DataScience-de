@@ -19,10 +19,11 @@ um kartografische Vektorkacheln, :ref:`Fernerkundungsdaten <remote-sensing>`,
 JPEG-Bilder oder ähnliches handeln.
 
 Zum Lesen werden `HTTP Range Requests
-<https://developer.mozilla.org/en-US/docs/Web/HTTP/Range_requests>`_ verwendet,
-um nur die relevanten Kacheln oder Metadaten innerhalb eines PMTiles-Archivs
-abzurufen. Die Anordnung der Kacheln und Verzeichnisse ist so konzipiert, dass
-die Anzahl der Anfragen beim Verschieben und Zoomen minimiert wird.
+<https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Range_requests>`_
+verwendet, um nur die relevanten Kacheln oder Metadaten innerhalb eines
+PMTiles-Archivs abzurufen. Die Anordnung der Kacheln und Verzeichnisse ist so
+konzipiert, dass die Anzahl der Anfragen beim Verschieben und Zoomen minimiert
+wird.
 
 PMTiles ist jedoch ein schreibgeschütztes Format: Es ist nicht möglich, einen
 Teil des Archivs zu aktualisieren, ohne die gesamte Datei neu zu schreiben. Wenn
@@ -106,8 +107,8 @@ Parquet um interoperable Geodatentypen (Punkt, Linie, Polygon).
   <https://plugins.qgis.org/plugins/qgis_plugin_gpq_downloader/>`_ für `QGIS
   <https://qgis.org>`_ ermöglicht Streaming-Downloads von großen
   GeoParquet-Datensätzen.
-* `DuckDB <https://duckdb.org>`_ erlaubt mit der `Spatial Extension
-  <https://duckdb.org/docs/stable/extensions/spatial/overview.html>`_ das Lesen
+* `DuckDB <https://duckdb.org/>`_ erlaubt mit der `Spatial Extension
+  <https://duckdb.org/docs/current/core_extensions/spatial/overview>`_ das Lesen
   und Schreiben von GeoParquet-Dateien.
 
 .. seealso::
@@ -302,8 +303,8 @@ Allgemeine Zwecke
 ~~~~~~~~~~~~~~~~~
 
 `pyproj <https://github.com/pyproj4/pyproj>`_
-    Python-Schnittstelle zu `PROJ <https://proj.org/>`_, einer Bibliothek für
-    kartographische Projektionen und Koordinatentransformationen.
+    Python-Schnittstelle zu `PROJ <https://proj.org/en/stable/>`_, einer
+    Bibliothek für kartographische Projektionen und Koordinatentransformationen.
 
     .. image::
        https://raster.shields.io/github/stars/pyproj4/pyproj
@@ -462,7 +463,7 @@ Räumlich-zeitliche Statistik
     .. image::
        https://raster.shields.io/github/license/rasterio/rasterio
 
-`eofs <https://ajdawson.github.io/eofs/latest/>`_
+`eofs <https://ajdawson.github.io/eofs/>`_
     :abbr:`EOF (Empirische orthogonale Funktionen)` zur Analyse von
     räumlich-zeitlichen Daten.
 
@@ -599,7 +600,7 @@ Meteorologie
     .. image::
        https://raster.shields.io/github/license/NCAR/wrf-python
 
-`windspharm <https://ajdawson.github.io/windspharm/latest/>`_
+`windspharm <https://ajdawson.github.io/windspharm/>`_
     Berechnungen zu globalen Windfeldern in sphärischer Geometrie.
 
     .. image::

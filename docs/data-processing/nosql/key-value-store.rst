@@ -78,7 +78,7 @@ Cassandra, Redis und MongoDB.
 .. _`redis.io/docs`: https://redis.io/docs/latest/
 .. _`www.mongodb.com/docs/`: https://www.mongodb.com/docs/
 .. _`einfache Geodaten`: https://www.mongodb.com/docs/manual/core/indexes/index-types/geospatial/2d/internals/
-.. _`Cassandra Query Language (CQL)`: https://cassandra.apache.org/doc/stable/cassandra/cql/
+.. _`Cassandra Query Language (CQL)`: https://cassandra.apache.org/doc/4.0/cassandra/cql/
 .. _`Scylla`: https://www.scylladb.com/
 .. _`KeyDB`: https://github.com/Snapchat/KeyDB
 .. _`Redict`: https://redict.io/

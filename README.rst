@@ -10,18 +10,18 @@ Python4DataScience
 Status
 ------
 
-.. image:: https://img.shields.io/github/contributors/cusyio/python4datascience-de.svg
+.. image:: https://img.shields.io/github/contributors/cusyio/Python4DataScience-de.svg
    :alt: Contributors
-   :target: https://github.com/cusyio/python4datascience-de/graphs/contributors
-.. image:: https://img.shields.io/github/license/cusyio/python4datascience-de.svg
+   :target: https://github.com/cusyio/Python4DataScience-de/graphs/contributors
+.. image:: https://img.shields.io/github/license/cusyio/Python4DataScience-de.svg
    :alt: License
-   :target: https://github.com/cusyio/python4datascience-de/blob/main/LICENSE
+   :target: https://github.com/cusyio/Python4DataScience-de/blob/main/LICENSES/BSD-3-Clause.txt
 .. image:: https://results.pre-commit.ci/badge/github/cusyio/Python4DataScience-de/main.svg
    :target: https://results.pre-commit.ci/run/github/649725482/1726568571.WhuLTrgJT3aZZkF-R0Fd8w
    :alt: pre-commit.ci status
-.. image:: https://readthedocs.org/projects/python4datascience-de/badge/?version=latest
+.. image:: https://app.readthedocs.org/projects/python4datascience-de/badge/?version=latest
    :alt: Docs
-   :target: https://python4datascience-de.readthedocs.io/de/latest/
+   :target: https://python4data.science/de/latest/
 .. image:: https://zenodo.org/badge/DOI/10.5281/zenodo..14031392.svg
    :alt: DOI
    :target: https://doi.org/10.5281/zenodo.14031392
@@ -49,18 +49,18 @@ Installation
 
    .. code-block:: console
 
-    $ curl -O https://codeload.github.com/cusyio/python4datascience-de/zip/main
+    $ curl -O https://codeload.github.com/cusyio/Python4DataScience-de/zip/main
     $ unzip main
     Archive:  main
     …
-       creating: python4datascience-de-main/
+       creating: Python4DataScience-de-main/
     …
 
 #. Installieren der Python-Pakete
 
    .. code-block:: console
 
-    $ cd python4datascience-de-main
+    $ cd Python4DataScience-de-main
     $ python3 -m venv .venv
     $ . .venv/bin/activate
     $ python -m pip install -e ".[dev]"

@@ -118,7 +118,7 @@ GitLab CI/CD-Syntax für Docker-Images
 
 .. seealso::
    * `Run your CI/CD jobs in Docker containers
-     <https://docs.gitlab.com/ee/ci/docker/using_docker_images.html>`_
+     <https://docs.gitlab.com/ci/docker/using_docker_images/>`_
 
 Syntax für Bedingungen und Ausdrücke
 ------------------------------------
@@ -160,9 +160,9 @@ Neben ``if`` bietet GitLab auch noch weitere Regeln wie ``changes``, ``exists``,
 ``allow_failure``, ``variables`` und ``when``.
 
 .. seealso::
-   * `rules <https://docs.gitlab.com/ee/ci/yaml/#rules>`_
+   * `rules <https://docs.gitlab.com/ci/yaml/#rules>`_
    * `Specify when jobs run with rules
-     <https://docs.gitlab.com/ee/ci/jobs/job_rules.html>`_
+     <https://docs.gitlab.com/ci/jobs/job_rules/>`_
 
 Abhängigkeiten zwischen Jobs
 ----------------------------

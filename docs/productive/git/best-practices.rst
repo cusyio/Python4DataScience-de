@@ -283,7 +283,7 @@ Dann beginnt Git jede neue Commit-Nachricht mit der *Scissors*-Zeile:
 
 .. seealso::
    * `GitLab-specific references
-     <https://docs.gitlab.com/ee/user/markdown.html#gitlab-specific-references>`_
+     https://docs.gitlab.com/user/markdown/#gitlab-specific-references>`_
 
 Co-Autoren angeben
 ~~~~~~~~~~~~~~~~~~

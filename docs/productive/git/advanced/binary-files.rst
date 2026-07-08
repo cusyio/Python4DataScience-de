@@ -163,7 +163,7 @@ Medien-Dateien in Text zu konvertieren.
       > choco install exiftool
 
 .. seealso::
-   * `Installing ExifTool <https://exiftool.org/install.html>`_
+   * `Installing ExifTool <https://exiftool.sourceforge.net/install.html>`_
 
 Anschließend könnt ihr in der globalen Git-Konfigurationsdatei
 :file:`~/.config/git/config` folgenden Abschnitt hinzufügen:

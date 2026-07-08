@@ -67,5 +67,5 @@ Beispiele für spaltenorientierte Datenbanksysteme sind
 .. _`cassandra.apache.org/doc/`: https://cassandra.apache.org/doc/latest/
 .. _`hypertable.com/documentation`: https://hypertable.com/documentation/
 .. _`hbase.apache.org/book.html`: https://hbase.apache.org/book.html
-.. _`Cassandra Query Language (CQL)`: https://cassandra.apache.org/doc/stable/cassandra/cql/
+.. _`Cassandra Query Language (CQL)`: https://cassandra.apache.org/doc/stable/cassandra/developing/cql/index.html
 .. _`Hypertable Query Language (HQL)`: https://hypertable.com/documentation/reference_manual/hql/

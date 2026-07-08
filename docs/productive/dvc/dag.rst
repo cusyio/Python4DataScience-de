@@ -8,7 +8,7 @@ Pipelines anzeigen
 DVC stellt eine Pipeline intern als gerichtete azyklische Graphen (engl.: :abbr:`DAG (directed acyclic graphs)` dar.
 
 .. seealso::
-   `DVC DAG <https://dvc.org/doc/user-guide/pipelines/running-pipelines#dag>`_
+   `DVC DAG <https://doc.dvc.org/user-guide/pipelines/running-pipelines#dag>`_
 
 Ihr könnt ``dvc dag`` verwenden, um Pipelines zu visualisieren oder zu
 exportieren:
@@ -76,7 +76,7 @@ entfernte Speicher geändert wurden:
            modified:           eval
 
 .. seealso::
-   `dvc status <https://man.dvc.org/status>`_
+   `dvc status <https://doc.dvc.org/command-reference/status>`_
 
 In :doc:`CI-Jobs <../git/advanced/gitlab/ci-cd/index>` soll üblicherweise
 überprüft werden, ob die Pipeline auf dem neuesten Stand ist, ohne etwas

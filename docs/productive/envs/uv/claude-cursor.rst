@@ -45,14 +45,13 @@ die Python-Paketverwaltung verwendet wird?
       Code arbeiten, automatisch die gleiche Konfiguration erhalten.
 
    .. seealso::
-      * `Claude Docs <https://docs.claude.com/en/home>`_
-      * `Manage Claude's memory
-        <https://docs.claude.com/en/docs/claude-code/memory>`_
+      * `Claude Docs <https://code.claude.com/docs>`_
+      * `Manage Claude's memory <https://code.claude.com/docs/en/memory>`_
 
 .. tab:: Cursor
 
-   `Cursor Rules <https://cursor.com/docs/context/rules>`_ können verwendet
-   werden, um uv anstelle von pip zu verwenden.
+   `Cursor Rules <https://cursor.com/docs/rules>`_ können verwendet werden, um
+   uv anstelle von pip zu verwenden.
 
    Vorausgesetzt, Cursor und uv sind bereits auf eurem System installiert und
    ihr habt bereits ein uv-basiertes Python-Projekt :abbr:`z. B. (zum Beispiel)`

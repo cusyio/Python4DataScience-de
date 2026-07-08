@@ -180,7 +180,7 @@ Einrichten
 
    #. Zunächst fügt ihr in :file:`~/.config/git/config` folgendes hinzu:
 
-      .. code-block:: console
+      .. code-block::
 
          [core]
          attributesfile = ~/.config/git/attributes

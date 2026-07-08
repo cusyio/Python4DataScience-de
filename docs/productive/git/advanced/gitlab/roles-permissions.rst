@@ -10,7 +10,7 @@ innehat, verfügt sie über unterschiedliche Berechtigungen. Wenn sie sowohl in
 einer Projektgruppe als auch im Projekt ist, wird die höchste Rolle verwendet.
 
 .. seealso::
-   * `Permissions and roles <https://docs.gitlab.com/ee/user/permissions.html>`_
+   * `Permissions and roles <https://docs.gitlab.com/user/permissions/>`_
 
 Mitglieder eines Projekts
 -------------------------
@@ -73,9 +73,9 @@ für den Zweig erzwungen:
 
 .. seealso::
    * `Protected branches
-     <https://docs.gitlab.com/ee/user/project/protected_branches.html>`_
+     <https://docs.gitlab.com/user/project/repository/branches/protected/>`_
    * `Pipeline security on protected branches
-     <https://docs.gitlab.com/ee/ci/pipelines/index.html#pipeline-security-on-protected-branches>`_
+     <https://docs.gitlab.com/ci/pipelines/#pipeline-security-on-protected-branches>`_
 
 Geschützte Zweige konfigurieren
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

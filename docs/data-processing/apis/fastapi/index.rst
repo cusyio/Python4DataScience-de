@@ -10,8 +10,9 @@ basierenden Type-Hints.
 
 Hauptmerkmale sind:
 
-* sehr hohe Leistung dank `pydantic <https://docs.pydantic.dev/latest/>`_ für
-  den Datenteil und `Starlette <https://www.starlette.io/>`_ für den Web-Teil
+* sehr hohe Leistung dank `pydantic
+  <https://pydantic.dev/docs/validation/latest/get-started/>`_ für den Datenteil
+  und `Starlette <https://www.starlette.io/>`_ für den Web-Teil
 * schnell und einfach zu codieren
 * Validierung für die meisten Python-Datentypen, einschließlich
 

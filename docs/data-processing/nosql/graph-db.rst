@@ -60,7 +60,7 @@ Typische Graphdatenbanken sind Neo4j, OrientDB InfiniteGraph und ArangoDB.
 +------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **GitHub**             | `neo4j/neo4j`_                 | `orientechnologies/orientdb`_  | `arangodb/arangodb`_           |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+
-| **Docs**               | `neo4j.com/docs/`_             | `orientdb.org/docs/`_          | `docs.arangodb.com`_           |
+| **Docs**               | `neo4j.com/docs/`_             | `orientdb.dev/documentation`_  | `docs.arango.ai`_              |
 +------------------------+--------------------------------+--------------------------------+--------------------------------+
 | **Anwendungsgebiete**  | CMS, Soziale Netzwerke,        | Stammdatenverwaltung, soziale  | Fraud Detection, IoT,          |
 |                        | GIS-Systeme, ERP, …            | Netzwerke, `Time Series`_,     | Identitätsmanagement,          |
@@ -109,17 +109,17 @@ Typische Graphdatenbanken sind Neo4j, OrientDB InfiniteGraph und ArangoDB.
    * `gremlinpython <https://pypi.org/project/gremlinpython/>`_
 
 .. _`Neo4j`: https://neo4j.com
-.. _`OrientDB`: https://orientdb.org/
+.. _`OrientDB`: https://orientdb.dev/
 .. _`neo4j/neo4j`: https://github.com/neo4j/neo4j
-.. _`ArangoDB`: https://arangodb.com
+.. _`ArangoDB`: https://arango.ai/
 .. _`orientechnologies/orientdb`: https://github.com/orientechnologies/orientdb
 .. _`arangodb/arangodb`: https://github.com/arangodb/arangodb
-.. _`Time Series`: https://orientdb.org/docs//2.0/orientdb.wiki/Time-series-use-case.html
-.. _`Key Value`: https://orientdb.org/docs//2.0/orientdb.wiki/Key-Value-use-case.html
+.. _`Time Series`: https://orientdb.dev/docs/3.2.x/gettingstarted/Time-series-use-case.html
+.. _`Key Value`: https://orientdb.dev/docs/3.2.x/gettingstarted/Key-Value-use-case.html
 .. _`neo4j.com/docs/`: https://neo4j.com/docs/
-.. _`orientdb.org/docs/`: https://orientdb.org/docs/
-.. _`docs.arangodb.com`: https://docs.arangodb.com/stable/
-.. _`Extended SQL`: https://orientdb.org/docs/2.2.x/SQL.html
+.. _`orientdb.dev/documentation`: https://orientdb.dev/documentation/
+.. _`docs.arango.ai`: https://docs.arango.ai/
+.. _`Extended SQL`: https://orientdb.dev/docs/3.2.x/gettingstarted/Tutorial-SQL.html
 .. _`Cypher`: https://neo4j.com/docs/1.4/cypher-query-lang.html
 .. _`Gremlin`: https://github.com/tinkerpop/gremlin/wiki
-.. _`ArangoDB Query Language (AQL)`: https://docs.arangodb.com/stable/aql/
+.. _`ArangoDB Query Language (AQL)`: https://docs.arango.ai/arangodb/stable/aql/

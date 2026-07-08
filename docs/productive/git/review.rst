@@ -95,7 +95,7 @@ Filtern und sortieren
 
 ``$ git log -L``
    Mit der Option `-L
-   <https://git-scm.com/docs/git-log#Documentation/git-log.txt--Lltstartgtltendgtltfilegt>`_
+   <https://git-scm.com/docs/git-log#Documentation/git-log.txt--Lstartendfile>`_
    könnt ihr eine verfeinerte Suche durchführen, indem ihr das Log nur eines
    Teils einer Datei überprüft:
 

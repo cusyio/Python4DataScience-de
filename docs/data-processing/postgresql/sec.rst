@@ -48,7 +48,8 @@ einfach aktiviert werden kann mit
     CREATE EXTENSION pgcrypto;
 
 Daher sollten bereits beim Anlegen sichere Passwörter vergeben werden, die
-anschließend z.B. in `Vault <https://www.vaultproject.io/>`_ o.ä.
+anschließend :abbr:`z. B. (zum Beispiel)` in `Vault
+<https://developer.hashicorp.com/vault>`_ :abbr.`o. ä. (oder ähnlichem)`
 gespeichert werden:
 
 .. code-block:: postgresql
@@ -140,7 +141,7 @@ dreißig Tagen mit:
 Das Löschen kann noch beschleunigt werden, wenn für jeden Tag mit der
 PostgreSQL-Erweiterung `pg_partman <https://github.com/pgpartman/pg_partman>`_
 eine eigene `Partition
-<https://github.com/pgpartman/pg_partman/blob/master/doc/pg_partman_howto.md>`_
+<https://github.com/pgpartman/pg_partman/blob/master-old/doc/pg_partman_howto.md>`_
 erstellt wird.
 
 .. seealso::

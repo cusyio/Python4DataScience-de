@@ -296,7 +296,7 @@ Das Auflösen von Merge-Konflikten kann aufwändig sein, aber Aliase können den
 Prozess beschleunigen.
 
 Ihr könnt die `--diff-filter
-<https://git-scm.com/docs/diff-options#Documentation/diff-options.txt-code--diff-filterACDMRTUXBcode>`_-Option
+<https://git-scm.com/docs/diff-options#Documentation/diff-options.txt---diff-filterACDMRTUXB>`_-Option
 für ``git diff`` verwenden, um euch nur die Dateien anzeigen zu lassen, die
 nicht zusammengeführt werden können.
 
