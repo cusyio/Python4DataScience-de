@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 [project]
 name = "python4datascience"
-version = "24.2.0"
+version = "26.1.0"
 description = """\
   Unterrichtsmaterialien für die Cusy-Schulungen zu Python-basierten Data-Science-Workflows: \
   https://cusy.io/de/seminars\
