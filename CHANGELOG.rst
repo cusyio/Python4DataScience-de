@@ -19,6 +19,11 @@ Notfälle, wenn Zweige für ältere Versionen erstellt werden müssen.
 `Unreleased <https://github.com/cusyio/Python4DataScience-de/compare/26.1.0...HEAD>`_
 -------------------------------------------------------------------------------------
 
+Added
+~~~~~
+
+* 📝 Add protobuf-py
+
 Changed
 ~~~~~~~
 
