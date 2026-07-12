@@ -40,4 +40,11 @@ Protocol Buffers (Protobuf)
       * `Docs <https://buf.build/docs/introduction>`__
       * `GitHub <https://github.com/bufbuild/buf>`__
 
+    * protobuf-py
+
+      * `protobuf-py: Protobuf for Python, without compromises
+        <https://buf.build/blog/protobuf-py>`_
+      * `Home <https://protobufpy.com>`_
+      * `GitHub <https://github.com/bufbuild/protobuf-py>`_
+
     * :doc:`../apis/grpc/index`
