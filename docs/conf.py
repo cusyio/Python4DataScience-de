@@ -188,7 +188,6 @@ intersphinx_mapping = {
 linkcheck_allowed_redirects = {
     r"https://app.pganalyze.com/": r"https://app.pganalyze.com/users/sign_in",
     r"https://doi.org/10.5281/zenodo.21259741": r"https://zenodo.org/records/21259741",
-    r"https://github.com/apps/pre-commit-ci/installations/new": r"https://github.com/login?integration=pre-commit-ci&return_to=%2Fapps%2Fpre-commit-ci%2Finstallations%2Fnew",
     r"https://itsdangerous.palletsprojects.com/": r"https://itsdangerous.palletsprojects.com/en/2.2.x/",
     r"https://jinja.palletsprojects.com/": r"https://jinja.palletsprojects.com/en/3.1.x/",
     r"https://ohwr.org/cern_ohl_p_v2.txt": r"https://ohwr.org/project/cernohl/-/wikis/uploads/3eff4154d05e7a0459f3ddbf0674cae4/cern_ohl_p_v2.txt",
@@ -203,7 +202,6 @@ linkcheck_ignore = [
     r"http://127.0.0.1:8000/",
     r"https://docs.arangodb.com/",
     r"https://github.com/cusyio/Python4DataScience-de/fork",
-    r"https://github.com/apps/pre-commit-ci/installations/new",
     r"https://iopscience.iop.org/journal/*",
     r"https://sandbox.zenodo.org/account/settings/applications/tokens/new/",
     # Anchor not found

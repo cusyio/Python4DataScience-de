@@ -547,14 +547,14 @@ Ihr könnt REUSE problemlos in euren Continuous Integration-Workflow integrieren
 .. tab:: Pre-commit
 
     Ihr könnt ``reuse lint`` automatisch als :doc:`Pre-Commit-Hook
-    <git/advanced/hooks/pre-commit>` bei jedem Commit ausführen lassen, indem ihr
+    <git/advanced/hooks/prek>` bei jedem Commit ausführen lassen, indem ihr
     Folgendes zu eurer :file:`.pre-commit-config.yaml`-Datei hinzufügt:
 
     .. code-block:: yaml
 
         repos:
         - repo: https://github.com/fsfe/reuse-tool
-          rev: v2.1.0
+          rev: a1bb792acda6fd0724936b4ebbdbc8eceb9c0459 # v6.2.0
           hooks:
           - id: reuse
 

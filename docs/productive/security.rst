@@ -90,13 +90,13 @@ oder besser:
    * `ignore-until-fixed
      <https://docs.astral.sh/uv/reference/settings/#audit_ignore-until-fixed>`_
 
-Ihr könnt die Schwachstellenanalyse mit ``uv-audit`` auch in eure
-:doc:`pre-commit <git/advanced/hooks/pre-commit>`-Checks übernehmen:
+Ihr könnt die Schwachstellenanalyse mit ``uv-audit`` auch in eure :doc:`prek
+<git/advanced/hooks/prek>`-Checks übernehmen:
 
 .. code-block:: yaml
 
    - repo: https://github.com/astral-sh/uv-pre-commit
-     rev: 73c2d77a42a113aee9e4b748c24937f09557b82d # 0.11.24
+     rev: d9fca3320346514799461a80b0753eb45d707d46 # 0.11.28
      hooks:
      - id: uv-audit
        files: ^(uv\.lock|pyproject\.toml)$
@@ -270,10 +270,10 @@ Schwachstellen überprüfen:
 .. seealso:
    `flake8-bandit <https://docs.astral.sh/ruff/rules/#flake8-bandit-s>`_
 
-Bandit könnt ihr auch in Jupyter Notebooks, IDEs und das pre-commit-Framework
-integrieren.
+Bandit könnt ihr auch in Jupyter Notebooks, IDEs und
+:doc:`git/advanced/hooks/prek` integrieren.
 
-Zudem könnt ihr :doc:`/productive/qa/pysa` für `Taint
+Zudem könnt ihr :doc:`qa/pysa` für `Taint
 <https://en.wikipedia.org/wiki/Taint_checking>`_-Analysen verwenden.
 
 Für GitHub-Repositories könnt ihr alternativ auch `CodeQL

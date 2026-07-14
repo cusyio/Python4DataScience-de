@@ -61,7 +61,7 @@ beliebige Skriptsprachen verwenden werden. Dabei bestimmt die Shebang-Zeile
 
 Die Skripte werden jedoch mit ``git push`` **nicht** auf den Git-Server kopiert.
 Um Skripte in mehreren Repositories verwenden zu können, empfiehlt sich daher
-das :doc:`pre-commit`.
+das :doc:`prek`.
 
 .. seealso::
    * `Hooks <https://git-scm.com/docs/githooks#_hooks>`_
@@ -91,8 +91,8 @@ Konfigurationsbasierte Hooks
 .. toctree::
     :hidden:
 
-    pre-commit
-    scripts
+    prek
+    checks
     hooks
     ci
     skip

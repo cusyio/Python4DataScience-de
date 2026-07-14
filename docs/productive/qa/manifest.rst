@@ -102,7 +102,7 @@ ignoriert werden, indem ihr einen Abschnitt ``[tool.check-manifest]`` in eurer
 Integration in die Versionskontrolle
 ------------------------------------
 
-Mit :doc:`../git/advanced/hooks/pre-commit` kann `check-manifest` Teil eures
+Mit :doc:`../git/advanced/hooks/prek` kann `check-manifest` Teil eures
 Git-Workflows sein. Fügt hierfür eurer `.pre-commit-config.yaml`-Datei folgendes
 hinzu:
 
@@ -110,6 +110,6 @@ hinzu:
 
     repos:
     -   repo: https://github.com/mgedmin/check-manifest
-        rev: "0.39"
+        rev: 61edb7590386f8b78000219b503e81e24b48c712 # 0.51
         hooks:
         -   id: check-manifest

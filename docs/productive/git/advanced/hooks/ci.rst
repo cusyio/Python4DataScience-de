@@ -2,88 +2,76 @@
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
-pre-commit in CI-Pipelines
-==========================
+prek in CI-Pipelines
+====================
 
 Pre-Commit kann auch für kontinuierliche Integration (:abbr:`CI (Continuous
 Integration)`) verwendet werden.
 
-.. _gh-action-pre-commit-example:
+.. _gh-action-prek-example:
 
-Beispiele für GitHub Actions
-----------------------------
+Beispiel für GitHub Actions
+---------------------------
 
-`pre-commit ci <https://pre-commit.ci>`_
-    Service, der eurem GitHub-Repository die *pre-commit ci*-App in eurem
-    Repository unter
-    :samp:`https://github.com/{PROFILE}/{REPOSITORY}/installations` hinzufügt.
+.. code-block:: yaml
+   :caption: .github/workflows/prek.yml
 
-    Neben der automatischen Änderung von Pull-Requests führt die App auch
-    `autoupdate <https://pre-commit.com/#pre-commit-autoupdate>`_ aus, um eure
-    Konfiguration aktuell zu halten.
+   name: prek
 
-    Weitere Installationen könnt ihr hinzufügen unter `Install pre-commit ci
-    <https://github.com/apps/pre-commit-ci/installations/new>`_.
+   on:
+     pull_request:
+     push:
+       branches: [main]
 
-:samp:`.github/workflows/pre-commit.yml`
-    Alternative Konfiguration als GitHub-Workflow, :abbr:`z.B. (zum Beispiel)`:
+   concurrency:
+     group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+     cancel-in-progress: true
 
-    .. code-block:: yaml
+   permissions: {}
 
-        name: pre-commit
+   jobs:
+     prek:
+       name: prek
+       # External pull requests should be checked, but not our own internal pull
+       # requests again, as these are already checked by the push on the branch.
+       # Without this if condition, the checks would be performed twice, as
+       # internal pull requests correspond to both the push and pull_request
+       # events.
+       if:
+         github.event_name == 'push' ||
+         github.event.pull_request.head.repo.full_name != github.repository
+       runs-on: ubuntu-latest
+       steps:
+       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+         with:
+           persist-credentials: false
+       - uses: j178/prek-action@e98a699c41eb69ab013a45817a0406469a748f8d # v2.0.5
 
-        on:
-          pull_request:
-          push:
-            branches: [main]
-
-        jobs:
-          pre-commit:
-            runs-on: ubuntu-latest
-            steps:
-            - uses: actions/checkout@v4
-            - uses: actions/setup-python@v5
-            - uses: actions/cache@v4
-              with:
-                path: ~/.cache/pre-commit
-                key: pre-commit|${{ env.pythonLocation }}|${{ hashFiles('.pre-commit-config.yaml') }}
-            - uses: pre-commit/action@v3.0.1
-
-    .. seealso::
-
-        * `pre-commit/action <https://github.com/pre-commit/action>`_
-
-.. _pre-commit-in-gitlab-ci:
+.. _prek-in-gitlab-ci:
 
 Beispiel für GitLab Actions
 ---------------------------
 
 .. code-block:: yaml
+   :caption: .gitlab-ci.yml
 
-    stages:
-      - validate
+   stages:
+     - validate
 
-    pre-commit:
-      stage: validate
-      image:
-        name: python:3.12
-      variables:
-        PRE_COMMIT_HOME: ${CI_PROJECT_DIR}/.cache/pre-commit
-      only:
-        refs:
-          - merge_requests
-          - tags
-          - main
-      cache:
-        paths:
-          - ${PRE_COMMIT_HOME}
-      before_script:
-        - pip install pre-commit
-      script:
-        - pre-commit run --all-files
+   prek:
+     stage: validate
+     image:
+       name: python:3.14
+     only:
+       refs:
+         - merge_requests
+         - tags
+         - main
+     script:
+       - uvx prek run --all-files
 
 .. seealso::
 
-    Weitere Informationen zur Feinabstimmung des Caching findet ihr in `Good
-    caching practices
-    <https://docs.gitlab.com/ci/caching/#good-caching-practices>`_.
+   Weitere Informationen zur Feinabstimmung des Caching findet ihr in `Good
+   caching practices
+   <https://docs.gitlab.com/ci/caching/#good-caching-practices>`_.

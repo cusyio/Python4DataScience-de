@@ -16,9 +16,9 @@ Status
 .. image:: https://img.shields.io/github/license/cusyio/Python4DataScience-de.svg
    :alt: License
    :target: https://github.com/cusyio/Python4DataScience-de/blob/main/LICENSES/BSD-3-Clause.txt
-.. image:: https://results.pre-commit.ci/badge/github/cusyio/Python4DataScience-de/main.svg
-   :target: https://results.pre-commit.ci/run/github/649725482/1726568571.WhuLTrgJT3aZZkF-R0Fd8w
-   :alt: pre-commit.ci status
+.. image:: https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/cusyio/Python4Datascience-de/main/badge-v0.json
+   :target: https://github.com/j178/prek
+   :alt: prek
 .. image:: https://app.readthedocs.org/projects/python4datascience-de/badge/?version=latest
    :alt: Docs
    :target: https://python4data.science/de/latest/

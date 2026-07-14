@@ -21,8 +21,8 @@ niedriger Qualität 15 Mal höher ist.
 Im Folgenden zeige ich euch einige :doc:`code-smells` und dann einige Tools, mit
 denen ihr automatisierte statische Analysen durchführen und den Code neu
 formatieren könnt. Einige dieser Tools könnt ihr sowohl in euren Editor wie auch
-über das :doc:`../git/advanced/hooks/pre-commit` einbinden. Zum Schluss stelle
-ich euch noch :doc:`rope` vor, ein Tool, das euch bei Refactorings unterstützt.
+über das :doc:`../git/advanced/hooks/prek` einbinden. Zum Schluss stelle ich
+euch noch :doc:`rope` vor, ein Tool, das euch bei Refactorings unterstützt.
 
 .. seealso::
    * `PyCQA Meta Documentation <https://meta.pycqa.org>`_

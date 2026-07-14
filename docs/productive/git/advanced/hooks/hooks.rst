@@ -5,9 +5,8 @@
 Unterstützte Git-Hooks
 ======================
 
-Die vom pre-commit-Framework verwalteten Hooks beschränken sich nicht darauf,
-vor Commits ausgeführt zu werden; sie können auch für andere Git-Hooks verwendet
-werden:
+Die von prek verwalteten Hooks beschränken sich nicht darauf, vor Commits
+ausgeführt zu werden; sie können auch für andere Git-Hooks verwendet werden:
 
 * :ref:`commit-msg <commit-msg-hook>`
 * :ref:`post-checkout <post-checkout-hook>`
@@ -27,8 +26,8 @@ werden:
 
     .. code-block:: console
 
-        $ pre-commit install --hook-type commit-msg
-        pre-commit installed at .git/hooks/commit-msg
+        $ uv run prek install --hook-type commit-msg
+        prek installed at .git/hooks/commit-msg
 
     Der ``commit-msg``-Hook kann mit ``stages: [commit-msg]`` konfiguriert
     werden, wobei der Name einer Datei übergeben wird, die den aktuellen Inhalt
@@ -40,19 +39,19 @@ werden:
     Der `post-checkout <https://git-scm.com/docs/githooks#_post_checkout>`_-Hook
     wird aufgerufen, wenn ``git checkout`` oder ``git switch`` ausgeführt wird.
 
-    Der ``post-checkout``-Hook kann :abbr:`z.B. (zum Beispiel)` verwendet
+    Der ``post-checkout``-Hook kann :abbr:`z. B. (zum Beispiel)` verwendet
     werden für
 
     * die Überprüfung von Repositories
     * die Ansicht der Unterschiede zum vorherigen ``HEAD``
     * das Ändern der Metadaten des Arbeitsverzeichnisses.
 
-    In pre-commit kann kann er verwendet werden mit:
+    In prek kann kann er verwendet werden mit:
 
     .. code-block:: console
 
-        $ pre-commit install --hook-type post-checkout
-        pre-commit installed at .git/hooks/post-checkout
+        $ uv run prek install --hook-type post-checkout
+        prek installed at .git/hooks/post-checkout
 
     Da ``post-checkout`` nicht auf Dateien wirkt, muss für alle
     ``post-checkout``-Skripte ``always_run`` gesetzt werden, :abbr:`z.B. (zum
@@ -107,8 +106,8 @@ werden:
 
     .. code-block:: console
 
-        $ uv run pre-commit install --hook-type post-merge
-        pre-commit installed at .git/hooks/post-merge
+        $ uv run prek install --hook-type post-merge
+        prek installed at .git/hooks/post-merge
 
     Mit ``$PRE_COMMIT_IS_SQUASH_MERGE`` könnt ihr herausfinden, ob es sich um
     einen Squash-Merge handelte.
@@ -122,14 +121,14 @@ werden:
 
     .. code-block:: console
 
-        $ pre-commit install --hook-type post-rewrite
-        pre-commit installed at .git/hooks/post-rewrite
+        $ uv run prek install --hook-type post-rewrite
+        prek installed at .git/hooks/post-rewrite
 
     Da ``post-rewrite`` nicht auf Dateien wirkt, muss ``always_run: true``
     gesetzt werden.
 
     Git teilt dem ``post-rewrite``-Hook mit, welcher Befehl das Rewrite
-    ausgelöst hat. pre-commit gibt dies als ``$PRE_COMMIT_REWRITE_COMMAND`` aus.
+    ausgelöst hat. prek gibt dies als ``$PRE_COMMIT_REWRITE_COMMAND`` aus.
 
 .. _pre-merge-commit-hook:
 
@@ -137,24 +136,23 @@ werden:
     Ab Git 2.24 gibt es den `pre-merge-commit
     <https://git-scm.com/docs/githooks#_pre_merge_commit>`_-Hook, der ausgelöst
     wird, ausgelöst, nachdem eine Zusammenführung erfolgreich war, aber bevor
-    der Merge-Commit erstellt wird. Ihr könnt ihn mit dem pre-commit-Framework
-    nutzen mit:
+    der Merge-Commit erstellt wird. Ihr könnt ihn mit prek nutzen mit:
 
     .. code-block:: console
 
-        $ pre-commit install --hook-type pre-merge-commit
-        pre-commit installed at .git/hooks/pre-merge-commit
+        $ uv run prek install --hook-type pre-merge-commit
+        prek installed at .git/hooks/pre-merge-commit
 
 .. _pre-push-hook:
 
 ``pre-push``
     Um den `pre-push <https://git-scm.com/docs/githooks#_pre_push>`_-Hook mit
-    dem pre-commit-Framework verwenden zu können, gebt folgendes ein:
+    prek verwenden zu können, gebt folgendes ein:
 
     .. code-block:: console
 
-        $ pre-commit install --hook-type pre-push
-        pre-commit installed at .git/hooks/pre-push
+        $ uv run prek install --hook-type pre-push
+        prek installed at .git/hooks/pre-push
 
     Hierfür werden die folgenden Umgebungsvariablen bereitgestellt:
 
@@ -184,20 +182,20 @@ werden:
 
     .. code-block:: console
 
-       $ uv run pre-commit install --hook-type pre-rebase
-       pre-rebase installed at .git/hooks/pre-rebase
+       $ uv run prek install --hook-type pre-rebase
+       prek installed at .git/hooks/pre-rebase
 
 .. _prepare-commit-msg-hook:
 
 ``prepare-commit-msg``
     `prepare-commit-msg
-    <https://git-scm.com/docs/githooks#_prepare_commit_msg>`_ kann mit
-    pre-commit verwendet werden mit:
+    <https://git-scm.com/docs/githooks#_prepare_commit_msg>`_ kann mit prek
+    verwendet werden mit:
 
     .. code-block:: console
 
-        $ pre-commit install --hook-type prepare-commit-msg
-        pre-commit installed at .git/hooks/prepare-commit-msg
+        $ uv run prek install --hook-type prepare-commit-msg
+        prek installed at .git/hooks/prepare-commit-msg
 
     Der ``prepare-commit-msg``-Hook wird mit ``stages: [prepare-commit-msg]``
     konfiguriert, wobei der Name einer Datei übergeben wird, die die anfängliche

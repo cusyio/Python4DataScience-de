@@ -97,14 +97,14 @@ pre-commit konfigurieren
 
 Ihr könnt vor jedem ``git commit`` und ``git push`` sowie nach jedem ``git
 checkout`` die von DVC verwalteten Daten mit dem
-:doc:`../git/advanced/hooks/pre-commit` überprüfen. Mit ``dvc config
+:doc:`../git/advanced/hooks/prek` überprüfen. Mit ``dvc config
 --use-pre-commit-tool`` erhält die :file:`.pre-commit-config.yaml`-Datei
 folgende Checks:
 
 .. code-block:: yaml
 
     - repo: https://github.com/iterative/dvc
-      rev: 3.63.0
+      rev: 356dfa03278058b02df42124f243c2c345329dae # 3.67.1
       hooks:
       - id: dvc-pre-commit
         additional_dependencies:
@@ -131,7 +131,7 @@ Damit nicht nur der ``pre-commit``-Hook verwendet wird, müsst ihr auch die
 
 .. code-block:: console
 
-   $ pre-commit install --hook-type pre-commit --hook-type pre-push --hook-type post-checkout
-   pre-commit installed at .git/hooks/pre-commit
-   pre-commit installed at .git/hooks/pre-push
-   pre-commit installed at .git/hooks/post-checkout
+   $ uv run prek install --hook-type pre-commit --hook-type pre-push --hook-type post-checkout
+   prek installed at `.git/hooks/pre-commit`
+   prek installed at `.git/hooks/pre-push`
+   prek installed at `.git/hooks/post-checkout`

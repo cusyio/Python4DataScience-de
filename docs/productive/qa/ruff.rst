@@ -119,18 +119,18 @@ Auch die Integration in andere Editoren wie `Visual Studio Code
 Editor-spezifische Konfiguration schaut euch `Setup
 <https://docs.astral.sh/ruff/editors/setup/>`_ an.
 
-pre-commit
-~~~~~~~~~~
+prek
+~~~~
 
 Ruff kann über `ruff-pre-commit <https://github.com/astral-sh/ruff-pre-commit>`_
-als :doc:`Pre-Commit-Hook </productive/git/advanced/hooks/pre-commit>` verwendet
+als :doc:`Pre-Commit-Check </productive/git/advanced/hooks/prek>` verwendet
 werden:
 
 .. code-block:: yaml
 
    repos:
      - repo: https://github.com/astral-sh/ruff-pre-commit
-       rev: v0.12.10
+       rev: 01a675ea018f2fb714478a5ffb83fcea8374bb06 # v0.15.21
        hooks:
        - id: ruff-check
          args: [--fix, --exit-non-zero-on-fix]

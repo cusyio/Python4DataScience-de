@@ -35,15 +35,15 @@ Verwendung
 … als pre-commit-Hook
 ~~~~~~~~~~~~~~~~~~~~~
 
-perflint kann auch mit dem :doc:`/productive/git/advanced/hooks/pre-commit`
-verwendet werden:
+perflint kann auch mit :doc:`/productive/git/advanced/hooks/prek` verwendet
+werden:
 
 .. code-block:: yaml
    :caption: .pre-commit-config.yaml
 
    repos:
      - repo: https://github.com/tonybaloney/perflint
-       rev: 0.8.1
+       rev: 22f831509bc7765ce272ad6fcb99398d86a26a52 # 0.8.1
        hooks:
        - id: perflint
 

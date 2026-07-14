@@ -354,14 +354,14 @@ ihr mit ``git stash drop`` entfernen.
 Mit `Gitleaks <https://github.com/gitleaks/gitleaks>`_ könnt ihr eure
 Repositories regelmäßig auf ungewollt gespeicherte Zugangsdaten überprüfen.
 
-Ihr könnt Gitleaks mit dem :doc:`advanced/hooks/pre-commit` verwenden, indem ihr
-in der :file:`.pre-commit-config.yaml`-Datei folgendes eintragt:
+Ihr könnt Gitleaks mit dem :doc:`advanced/hooks/prek` verwenden, indem ihr in
+der :file:`.pre-commit-config.yaml`-Datei folgendes eintragt:
 
 .. code-block:: yaml
 
    repos:
      - repo: https://github.com/gitleaks/gitleaks
-       rev: v8.21.1
+       rev: 6eaad039603a4de39fddd1cf5f727391efe9974e # v8.30.0
        hooks:
          - id: gitleaks
 
@@ -375,7 +375,7 @@ in der :file:`.pre-commit-config.yaml`-Datei folgendes eintragt:
       Detect hardcoded secrets................................................Skipped
 
    Alternativ könnt ihr auch den ``gitleaks:allow``-Kommentar einer Zeile
-   anhängen, :abbr:`z.B. (zum Beispiel)`:
+   anhängen, :abbr:`z. B. (zum Beispiel)`:
 
    .. code-block:: Python
 

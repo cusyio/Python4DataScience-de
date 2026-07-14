@@ -175,12 +175,12 @@ Verwendung
 
         $ uv run wily list-metrics
 
-… als pre-commit Hook
-~~~~~~~~~~~~~~~~~~~~~
+… als prek-Check
+~~~~~~~~~~~~~~~~
 
-Ihr könnt Wily auch als :doc:`../git/advanced/hooks/pre-commit` verwenden. Hierzu müsstet
-ihr in der ``pre-commit-config.yaml``-Konfigurationsdatei :abbr:`z.B. (zum
-Beispiel)` folgendes hinzufügen:
+Ihr könnt Wily auch als :doc:`../git/advanced/hooks/prek`-Check verwenden.
+Hierzu müsstet ihr in der ``pre-commit-config.yaml``-Konfigurationsdatei
+:abbr:`z. B. (zum Beispiel)` folgendes hinzufügen:
 
 .. code-block:: yaml
 
