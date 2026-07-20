@@ -51,7 +51,7 @@ Ab Kapitel 2 folgt das Tutorial dem Prototyp eines Forschungsprojekts:
    verschiedenen Möglichkeiten verschoben.
 #. :doc:`performance/index` stellt Möglichkeiten vor, wie ihr euren Code
    schneller laufen lassen könnt.
-#. :doc:`productive/index` product zeigt, was notwendig ist, um reproduzierbare
+#. :doc:`productive/index` zeigt, was notwendig ist, um reproduzierbare
    Ergebnisse zu erzielen: Es werden nicht nur :doc:`reproducible environments
    <productive/envs/index>` benötigt, sondern auch die Versionierung des
    :doc:`Quellcodes <productive/git/index>` und der :doc:`Daten
@@ -61,7 +61,7 @@ Ab Kapitel 2 folgt das Tutorial dem Prototyp eines Forschungsprojekts:
    :doc:`Rests <productive/testing>` und :doc:`python-basics:logging/index`.
    Schließlich enthält das Kapitel Ratschläge zur :doc:`Verbesserung der
    Codequalität <productive/qa/index>` und des :doc:`sicheren Betriebs
-   <productive/security>`.
+   <productive/security/index>`.
 #. :doc:`web/index` kann entweder Dashboards aus Jupyter-Notebooks generieren
    oder eine umfassendere Anwendungslogik erfordern, wie in
    :doc:`pyviz:bokeh/embedding-export/flask`, demonstriert, oder Daten über

@@ -22,7 +22,7 @@ externe Integrationen erforderlich wären, :abbr:`z.B. (zum Beispiel)` das
 Wenn bereits eine PaaS-Lösung wie `Kubernetes
 <https://de.wikipedia.org/wiki/Kubernetes>`_ verwendet wird, können mit
 GitLab-CI/CD Apps automatisch bereitgestellt, getestet und skaliert werden.
-Zudem kann automatisch die :doc:`/productive/security` eures Projekts
+Zudem kann automatisch die :doc:`/productive/security/index` eures Projekts
 überprüft werden.
 
 GitLab ist eine komplett paketierte Plattform, während GitHub mit Apps aus dem
