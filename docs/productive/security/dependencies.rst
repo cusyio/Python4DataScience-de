@@ -2,42 +2,135 @@
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
-Sicherheit
-==========
+Abhängigkeiten verwalten
+========================
 
-In früheren Kapiteln haben wir schon einige Hinweise gegeben, die einen
-sichereren Betrieb ermöglichen sollen.
+Genau hier finden Angriffe auf die Software-Lieferkette statt. Das `OpenSSF
+Secure Supply Chain Consumption Framework (S2C2F)
+<https://github.com/ossf/s2c2f>`_ bietet ein strukturiertes Reifegradmodell
+dafür, wie Unternehmen Open-Source-Software nutzen sollten.
 
 .. seealso::
-   * :ref:`secure-release-workflow`
-   * :ref:`zizmorcore`
-   * :ref:`add_2fa`
+   Für ein umfassenderes Bedrohungsmodell über alle Ökosysteme hinweg ist das
+   `CNCF Software Supply Chain Security Whitepaper
+   <https://tag-security.cncf.io/community/working-groups/supply-chain-security/supply-chain-security-paper-v2/Software_Supply_Chain_Practices_whitepaper_v2.pdf>`_
+   eine gute Einführung.
 
-Hier wollen wir die einzelnen Elemente nun nochmal zusammenfassen und erweitern.
-Dabei orientieren wir uns an der `OpenSSF Scorecard
-<https://securityscorecards.dev/>`_. Alternativ könnt ihr euch auch an
-:ref:`open_chain` orientieren.
+Wählt eure Abhängigkeiten sorgfältig aus
+----------------------------------------
 
-.. _check-vulnerabilities:
+Bevor ihr eine Abhängigkeit hinzufügt, solltet ihr prüfen, ob ihr diese
+überhaupt benötigt, denn jede Abhängigkeit vergrößert eure Angriffsfläche.
+Weniger oder kleinere Abhängigkeiten bedeuten weniger Angriffsmöglichkeiten.
+Wenn ihr eine Abhängigkeit hinzufügt, bewertet die Sicherheitslage mithilfe der
+`OpenSSF-Scorecard <https://securityscorecards.dev>`_, die Projekte bewertet
+hinsichtlich
 
-Schwachstellen überprüfen
--------------------------
+* :doc:`Branch<../git/branch>`-Protection
+* signierte Releases
+* Tools zur Aktualisierung von Abhängigkeiten
+* Vulnerability Disclosure
 
-Risiko: Hoch
+Eine niedrige Punktzahl gibt euch Aufschluss darüber, wie viel Vertrauen ihr in
+ein Projekt mit eingeschränkter Sicherheitshygiene setzen solltet.
 
-Mit dieser Prüfung wird festgestellt, ob das Projekt offene, nicht behobene
-Sicherheitslücken in seiner eigenen Codebasis oder in seinen Abhängigkeiten
-aufweist. Eine offene Sicherheitslücke kann leicht ausgenutzt werden und sollte
-so schnell wie möglich geschlossen werden.
+Schreibt die Abhängigkeiten fest
+--------------------------------
 
-Für eine solche Überprüfung könnt ihr :abbr:`z.B. (zum Beispiel)` ``uv audit``
-verwenden. Alternativ könnt ihr auch `osv <https://pypi.org/project/osv/>`_ oder
-`pip-audit <https://pypi.org/project/pip-audit/>`_ verwenden.
+.. warning::
+   Wenn ihr eine Bibliothek auf :term:`PyPI` veröffentlicht, solltet ihr im
+   ``dependencies``-Abschnitt eurer :file:`pyproject.toml`-Datei möglichst
+   breite Versionsbereiche verwenden, um Konflikte zu vermeiden, wenn andere
+   eure Bibliothek zusammen mit weiteren Bibliotheken installieren wollen. Die
+   Hinweise in diesem Abschnitt gelten ausschließlich für die Bereitstellung von
+   Anwendungen.
 
-``uv audit`` ist ein neuer Befehl von uv≥0.11.19, der die Abhängigkeiten in
-eurem Projekt auf bekannte Schwachstellen in der `OSV
-<https://osv.dev>`_-Datenbank und „nachteilige“ Projektstatus :abbr:`z. B. (zum
-Beispiel)` *deprecated* überprüft:
+Denkt euch folgendes Szenario: ``uv add`` schreibt in eure
+:file:`pyproject.toml`-Datei die ungefähre Version eurer Abhängigkeit,
+:abbr:`z. B. (zum Beispiel)` :samp:`"{MYDEP}>=3.0.5"`. Wenn das Projekt neu
+aufgesetzt wird, kann ``uv sync`` dazu führen, dass :samp:`{MYDEP}` in der
+Version ``3.0.6`` installiert wird. So könnte unbemerkt eine bösartige Version
+heruntergeladen werden ohne dass auch nur eine einzige Zeile Code geändert
+wurde.
+
+Eine festgelegte Version :samp:`"{MYDEP}==3.0.5"` ist besser, da wir zumindest
+keine neuere Version als die getestete im Projekt erhalten. Dennoch erhaltet ihr
+somit immer noch keine Integritätsprüfung: Sollte bei einem Angriff das Konto
+des Maintainer kompromittiert werden und ein neues, mit einer Hintertür
+versehenes Release für dieselbe Version, aber für eine andere Plattform
+veröffentlicht werden, könnte auch dieses unwissentlich installiert werden. Um
+dieses Angriffsszenario zu reduzieren, sind zukünftig auf :term:`PyPI` `nur noch
+Releases für eine Version innerhalb von 14 Tagen erlaubt
+<https://blog.pypi.org/posts/2026-07-22-releases-now-reject-new-files-after-14-days/>`_.
+
+Hash-Pinning ist sicherer – es erstellt einen kryptografischen Fingerabdruck der
+Paketdatei, der mit :term:`uv` in der :file:`uv.lock`-Datei festgeschrieben
+wird. Alternativ könnt ihr auch die ``--require-hashes``-Option von :term:`pip`
+verwenden. Ihr solltet jedoch nicht nur für eure Python-Abhängigkeiten
+Hash-Pinning verwenden, sondern :abbr:`z. B. (zum Beispiel)` auch für eure
+:doc:`pre-commit Checks <../git/advanced/hooks/checks>` und GitHub Actions.
+
+Hash-Pinning schützt jedoch nicht davor, ein schädliches Paket zum ersten Mal zu
+installieren; in diesem Fall würdet ihr nur den Hash des schädlichen Pakets
+festlegen. Daher solltet ihr das Hash-Pinning mit Schwachstellenscans und
+verzögerter Übernahme kombinieren.
+
+.. seealso::
+   `The lockfile
+   <https://docs.astral.sh/uv/concepts/projects/layout/#the-lockfile>`_
+
+.. _automatic-update:
+
+Aktualisiert die Abhängigkeiten automatisch
+-------------------------------------------
+
+Abhängigkeiten sollten regelmäßig aktualisiert  werden, um Schwachstellen zu
+vermeiden, Inkompatibilitäten zwischen Abhängigkeiten einzuschränken und
+komplexe Upgrades zu vermeiden, wenn von einer zu alten Version aktualisiert
+wird. Eine Vielzahl von Werkzeugen kann dabei helfen, auf dem neuesten Stand zu
+bleiben.
+
+Veraltete Abhängigkeiten machen ein Projekt anfällig für Angriffe auf bekannte
+Schwachstellen. Daher sollte die Aktualisierung von Abhängigkeiten automatisiert
+werden, indem nach veralteten Anforderungen gesucht wird und diese :abbr:`ggf.
+(gegebenenfalls)` aktualisiert werden. Mit :doc:`../git/advanced/hooks/prek`
+könnt ihr regelmäßig eure :file:`uv.lock`-Datei aktualisieren:
+
+.. code-block:: yaml
+   :caption: .pre-commit-config.yaml
+
+   - repo: https://github.com/astral-sh/uv-pre-commit
+     rev: 6a280ba12b7901e47757c868c8c13c6a624c9ecb # 0.11.7
+     hooks:
+       - id: uv-lock
+         args: ["--exclude-newer = 'P3D'", "--quiet"]
+
+``--exclude-newer``
+    *Dependency Cooldown*, das Pakete ausschließt, die erst seit einigen Tagen,
+    mit ``P3D`` erst seit drei Tagen, auf :term:`PyPI` veröffentlicht sind. Dies
+    gibt den PyPI-Administrator*innen die Möglichkeit, in dieser Zeit auf
+    Malware zu reagieren.
+
+.. seealso::
+   * :ref:`Update uv.lock <python-basics:update-uv-lock>`
+
+Alternativ könnt ihr euch auch von :doc:`../envs/uv/renovate>` unterstützen
+lassen.
+
+.. _vulnerability_scans:
+
+Schwachstellen-Scans
+--------------------
+
+*Dependency Pinning* verhindert unbefugte Änderungen – doch was passiert, wenn
+ihr eine Version gestgeschrieben habt, die eine bekannte Sicherheitslücke
+aufweist? Forschende entdecken immer wieder neue :abbr:`CVEs (Common
+Vulnerabilities and Exposures)` in Paketen. Ein Paket, das gestern noch
+problemlos war, könnte heute schon eine kritische Sicherheitslücke aufweisen.
+Offene Sicherheitslücken in euren Abhängigkeiten können leicht ausgenutzt
+werden, und sie sollten daher so schnell wie möglich geschlossen werden. Hierfür
+könnt ihr ``uv audit`` verwenden und überprüfen, ob euer Projekt bekannte
+Sicherheitslücken in den Abhängigkeiten aufweist:
 
 .. code-block:: console
 
@@ -63,7 +156,7 @@ Funktion ist standardmäßig nicht aktiviert, sie kann jedoch mit
    * `uv audit <https://docs.astral.sh/uv/reference/cli/#uv-audit>`_
    * `uv audit settings <https://docs.astral.sh/uv/reference/settings/#audit>`_
 
-Wenn eine Schwachstelle in einer Abhängigkeit gefunden wird, solltet ihr auf
+Wenn in einer Abhängigkeit eine Schwachstelle gefunden wird, solltet ihr auf
 eine nicht-anfällige Version aktualisieren; wenn kein Update verfügbar ist,
 solltet ihr überlegen, die Abhängigkeit zu entfernen.
 
@@ -91,7 +184,7 @@ oder besser:
      <https://docs.astral.sh/uv/reference/settings/#audit_ignore-until-fixed>`_
 
 Ihr könnt die Schwachstellenanalyse mit ``uv-audit`` auch in eure :doc:`prek
-<git/advanced/hooks/prek>`-Checks übernehmen:
+<../git/advanced/hooks/prek>`-Checks übernehmen:
 
 .. code-block:: yaml
 
@@ -101,28 +194,118 @@ Ihr könnt die Schwachstellenanalyse mit ``uv-audit`` auch in eure :doc:`prek
      - id: uv-audit
        files: ^(uv\.lock|pyproject\.toml)$
 
-Wartung
--------
+Sicherheitsprüfungen sollten automatisiert durchgeführt werden. Hierzu könnt ihr
+``uv audit`` :abbr:`z.B . (zum Beispiel)` in einer GitHub Action verwenden:
 
-.. _automatic-update:
+.. code-block:: yaml
 
-Werden die Abhängigkeiten automatisch aktualisiert?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   name: Security Scan
+   jobs:
+     security:
+       runs-on: ubuntu-latest
+       steps:
+         - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+         - uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+         - run: uv audit
 
-Risiko: Hoch
+oder in einer GitLb CI/CD-Pipeline:
 
-Veraltete Abhängigkeiten machen ein Projekt anfällig für Angriffe auf bekannte
-Schwachstellen. Daher sollte der Prozess der Aktualisierung von Abhängigkeiten
-automatisiert werden, indem nach veralteten oder unsicheren Anforderungen
-gesucht und :abbr:`ggf. (gegebenenfalls)` aktualisiert werden. Hierfür könnt ihr
-:abbr:`z.B. (zum Beispiel)` `dependabot <https://github.com/dependabot>`_ oder
-`Safety CLI <https://www.getsafety.com/>`_ verwenden.
+.. code-block:: yaml
 
-Ihr könnt eure :doc:`/productive/envs/uv/index`-Umgebungen auch automatisch
-aktualisieren.
+   security-scan:
+     image: ghcr.io/astral-sh/uv:python3.14
+     script:
+       - uv audit
+
+Alternativ zu ``uv audit`` könnt ihr hierfür auch `osv
+<https://pypi.org/project/osv/>`_ oder `pip-audit
+<https://pypi.org/project/pip-audit/>`_ verwenden.
+
+Vermeidet Abhängigkeitskonflikte
+--------------------------------
+
+Abhängigkeitskonflikte können durch die Art und Weise entstehen, wie
+Paketmanager Namen auflösen, wenn sowohl öffentliche als auch private
+Paketverzeichnisse verwendet werden. Ein bösartiges Paket, das auf :term:`PyPI`
+veröffentlicht wurde und denselben Namen wie euer internes Paket trägt, kann vom
+Build-System stattdessen installiert werden. Bei :term:`pip` funktioniert der
+Angriff wie folgt:
+
+#. Beim Aufruf von :samp:`python -m pip install --extra-index-url
+   {https://EXAPMPLE.COM/simple MYPACKAGE}` :abbr:`o. ä. (oder ähnlichem)`
+   würdet ihr vermutlich erwarten, dass :samp:`{MYPACKAGE}` von eurem Index
+   :samp:`https://{EXAPMPLE.COM}/simple` geladen würde.
+#. ``pip`` schaut jeddoch in allen Indexen nach und wählt die höchste Version
+   aus.
+#. Liegt also auf :term:`PyPI` eine höhere Version von :samp:`{MYPACKAGE}` mit
+   bösartigem Code, wird diese installiert.
+
+Mit ``--index-url`` für einen einzelnen Index könnt ihr dieses Problem umgehen.
+Dabei geht ``pip`` davon aus, dass euer interner Index als Proxy für den
+öffentlichen :term:`PyPI` fungiert; falls er jedoch nur interne Pakete hostet,
+könnt ihr ihn zunächst als PyPI-Proxy konfigurieren:
+
+.. code-block:: ini
+   :caption: pip.conf
+
+   [install]
+   index-url = https://EXAPMPLE.COM/simple
+   trusted-host = EXAPMPLE.COM
+
+:doc:`SBOMs <sbom>` können dabei helfen, potenzielle Namenskonflikte
+aufzudecken, indem sie eine Bestandsliste zur Überprüfung bereitstellen; es
+handelt sich dabei jedoch um nachträgliche Kontrollmaßnahmen – sie zeigen euch
+also erst im Nachhinein, was ihr installiert habt.
+
+:term:`uv` verwendet hingegen üblicherweise die ``first-index``-Strategie, nimmtalso den erstgenannten Index, in dem ein Paket gefunden wird. Dadurch werden die
+oben beschriebenen Abhängigkeitskonflikte vermieden:
+
+.. code-block:: toml
+   :caption: pyoroject.toml
+   :linenos:
+
+   [[tool.uv.index]]
+   name = "internal"
+   url = "https://EXAPMPLE.COM/simple"
+   explicit = true
+
+   [tool.uv.sources]
+   mypackage = { index = "internal" }
+
+Zeile 4:
+    Diesen Index wird nur für explizit angeheftete Pakete verwendet.
 
 .. seealso::
-   * :ref:`Update uv.lock <python-basics:update-uv-lock>`
+   `Searching across multiple indexes
+   <https://docs.astral.sh/uv/concepts/indexes/#searching-across-multiple-indexes>`_
+
+----
+
+Im folgenden schauen wir uns nun an, wie die Abhängigkeiten in unseren
+Python-Projekten abgesichert werden kann. Dabei orientieren wir uns an der
+`OpenSSF Scorecard <https://securityscorecards.dev/>`_. Alternativ könnt ihr
+euch auch an :ref:`open_chain` orientieren.
+
+In einem früheren Abschnitt haben wir schon einige Hinweise gegeben, wie die
+Veröffentlichung von Python-Paketen auf :term:`PyPI` abgesichert werden kann:
+
+.. seealso::
+   * :ref:`secure-release-workflow`
+   * :ref:`add_2fa`
+
+.. seealso::
+   Für ein umfassenderes Bedrohungsmodell über alle Ökosysteme hinweg ist das
+   `CNCF Software Supply Chain Security Whitepaper
+   <https://tag-security.cncf.io/community/working-groups/supply-chain-security/supply-chain-security-paper-v2/Software_Supply_Chain_Practices_whitepaper_v2.pdf>`_
+   eine gute Einführung.
+
+Nun wollen wir uns anschauen, wie Python-Projekte weiter abgesichert werden
+können. Dabei orientieren wir uns an der `OpenSSF Scorecard
+<https://securityscorecards.dev/>`_. Alternativ könnt ihr euch auch an
+:ref:`open_chain` orientieren.
+
+Wartung
+-------
 
 Werden die Abhängigkeiten noch gewartet?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -246,7 +429,7 @@ in die Codebasis eingeführt werden.
 
 .. _bandit:
 
-Mit `Bandit <https://github.com/PyCQA/bandit>`__, das ihr mit :doc:`qa/ruff`
+Mit `Bandit <https://github.com/PyCQA/bandit>`__, das ihr mit :doc:`../qa/ruff`
 verwenden könnt lassen sich :abbr:`u. a. (unter anderem)` folgende
 Schwachstellen überprüfen:
 
@@ -271,9 +454,9 @@ Schwachstellen überprüfen:
    `flake8-bandit <https://docs.astral.sh/ruff/rules/#flake8-bandit-s>`_
 
 Bandit könnt ihr auch in Jupyter Notebooks, IDEs und
-:doc:`git/advanced/hooks/prek` integrieren.
+:doc:`../git/advanced/hooks/prek` integrieren.
 
-Zudem könnt ihr :doc:`qa/pysa` für `Taint
+Zudem könnt ihr :doc:`../qa/pysa` für `Taint
 <https://en.wikipedia.org/wiki/Taint_checking>`_-Analysen verwenden.
 
 Für GitHub-Repositories könnt ihr alternativ auch `CodeQL
@@ -311,9 +494,10 @@ Risiko: Hoch
 Mit :ref:`geschützten Git-Zweigen <protected_branches>` können Regeln für die
 Übernahme von Änderungen in Standard- und Veröffentlichungszweige definiert
 werden, :abbr:`z.B. (zum Beispiel)` automatisierte `statische Code-Analysen
-<https://de.wikipedia.org/wiki/Statische_Code-Analyse>`_ mit :doc:`qa/flake8`,
-:doc:`qa/pysa`, :doc:`qa/wily` und :ref:`Code-Reviews <code_reviews>` über
-:abbr:`sog. (sogenannte)` :doc:`git/advanced/gitlab/merge-requests`.
+<https://de.wikipedia.org/wiki/Statische_Code-Analyse>`_ mit
+:doc:`../qa/flake8`, :doc:`../qa/pysa`, :doc:`../qa/wily` und :ref:`Code-Reviews
+<code_reviews>` über
+:abbr:`sog. (sogenannte)` :doc:`../git/advanced/gitlab/merge-requests`.
 
 .. _code_reviews:
 
@@ -353,12 +537,12 @@ Release-Prozesses verwendet werden, festgeschrieben werden. Dabei sollte eine
 *gepinnte Abhängigkeit* explizit auf einen bestimmten Hash gesetzt sein und
 nicht nur auf eine veränderbare Version oder einen Versionsbereich.
 
-:doc:`envs/spack/index` schreibt für die jeweilige Umgebung diese Hashes in
-:ref:`spack_lock`, :doc:`envs/uv/index` in :ref:`uv_lock` fest.
+:doc:`../envs/spack/index` schreibt für die jeweilige Umgebung diese Hashes in
+:ref:`spack_lock`, :doc:`../envs/uv/index` in :ref:`uv_lock` fest.
 
 .. tip::
    Üblicherweise verwalte ich diese Dateien jedoch nur bei
-   :doc:`python-basics:packs/apps` in :doc:`Git <git/index>`. Bei
+   :doc:`python-basics:packs/apps` in :doc:`Git <../git/index>`. Bei
    :doc:`python-basics:libs/index` schränke ich üblicherweise lediglich den
    Versionsbereich der Abhängigkeiten in der :file:`pyproject.toml`-Datei ein.
 

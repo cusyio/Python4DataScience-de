@@ -59,7 +59,7 @@ könnt, sodass auch `Claude Code <https://claude.com/product/claude-code>`_ oder
 `Cursor <https://cursor.com>`_ zuverlässig uv verwenden.
 
 Wie ihr regelmäßig automatisiert die Abhängigkeiten eures Projekts aktualisieren
-könnt, beschreiben wir in :doc:`dependency-bot`. Diese Maßnahmen erhöhen die
+könnt, beschreiben wir in :doc:`renovate`. Diese Maßnahmen erhöhen die
 Sicherheit eures Projekts erheblich.
 
 .. seealso::
@@ -78,6 +78,6 @@ automatisiert in den verschiedenen Python-Umgebungen testen.
    :hidden:
 
    cicd
-   dependency-bot
+   renovate
    claude-cursor
    docker
