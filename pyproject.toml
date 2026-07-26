@@ -61,11 +61,13 @@ src = [ "docs", "fastAPI" ]
 extend-exclude = [
   "docs/productive/qa/requests/*",
   "docs/workspace/ipython/examples.ipynb", # `np.*mean*?` is valid iPython syntax
+  "docs/data-processing/apis/grpc/accounts_pb2_grpc.py", # Changing the function signature would violate the Liskov Substitution Principle
 ]
 lint.select = [ "ALL" ]
 lint.ignore = [
   "ANN",     # We don’t use type annotations
   "COM812",  # May cause conflicts when used with the formatter
+  "CPY001",  # Not all files allow copyright information at top of file
   "D",       # We prefer our own docstring style, not  pydocstyle.
   "G004",    # Logging statements should be allowed to use f-strings
   "INP001",  # Most `*.py` files are not part of a namespace package
