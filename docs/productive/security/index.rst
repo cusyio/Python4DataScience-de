@@ -55,16 +55,18 @@ Phishing-Angriff per E-Mail auf PyPI-User
        `PyPI Users Email Phishing Attack
        <https://blog.pypi.org/posts/2025-07-28-pypi-phishing-attack/>`_
 
-ZIP-Parser-Verwirrungsangriffe
-    Im August 2025 führte :term:`PyPI` Restriktionen ein, die verhindern sollen,
-    dass es bei Installations- und Prüfprogramme für Python-Pakete durch
-    unterschiedliche Implementierungen des ZIP-Parsers zu Verwechslungen kommen
-    kann. :term:`uv` zeigte ein anderes Entpackungsverhalten als viele
-    Python-basierte Installationsprogramme, die :mod:`zipfile` verwenden.
+Shai-Hulud
+    Im November 2025 entwickelt sich ein Angriff auf das `npm
+    <https://www.npmjs.com/>`_-Ökosystem weiter und nutzt kompromittierte Konten
+    aus, um schädliche Pakete zu veröffentlichen. Diese als *Shai-Hulud*
+    bezeichnete Kampagne hat eine große Anzahl von JavaScript-Paketen ins Visier
+    genommen und Zugangsdaten abgezogen, um sich weiter zu verbreiten.
+    :term:`PyPI` selbst wurde zwar nicht ausgenutzt, jedoch wurden einige
+    PyPI-Anmeldedaten in kompromittierten Repositories offengelegt.
 
     .. seealso::
-       `uv security advisory: ZIP payload obfuscation
-       <https://astral.sh/blog/uv-security-advisory-cve-2025-54368>`_
+       `PyPI and Shai-Hulud: Staying Secure Amid Emerging Threats
+       <https://blog.pypi.org/posts/2025-11-26-pypi-and-shai-hulud/>`_
 
 .. _token_exfiltration:
 
@@ -79,6 +81,19 @@ Token Exfiltration
        `Token Exfiltration Campaign via GitHub Actions Workflows
        <https://blog.pypi.org/posts/2025-09-16-github-actions-token-exfiltration/>`_
 
+ZIP-Parser-Verwirrungsangriffe
+    Im August 2025 führte :term:`PyPI` Restriktionen ein, die verhindern sollen,
+    dass es bei Installations- und Prüfprogramme für Python-Pakete durch
+    unterschiedliche Implementierungen des ZIP-Parsers zu Verwechslungen kommen
+    kann. :term:`uv` zeigte ein anderes Entpackungsverhalten als viele
+    Python-basierte Installationsprogramme, die :mod:`zipfile` verwenden.
+
+    .. seealso::
+       `uv security advisory: ZIP payload obfuscation
+       <https://astral.sh/blog/uv-security-advisory-cve-2025-54368>`_
+
+.. _ultralytics:
+
 Ultralytics
     Im Dezember 2024 wurde `ultralytics
     <https://pypi.org/project/ultralytics/>`_ Opfer eines Supply-Chain-Angriffs,
@@ -89,19 +104,6 @@ Ultralytics
     .. seealso::
        `Supply-chain attack analysis: Ultralytics
        <https://blog.pypi.org/posts/2024-12-11-ultralytics-attack-analysis/>`_
-
-Shai-Hulud
-    Im November 2025 entwickelt sich ein Angriff auf das `npm
-    <https://www.npmjs.com/>`_-Ökosystem weiter und nutzt kompromittierte Konten
-    aus, um schädliche Pakete zu veröffentlichen. Diese als *Shai-Hulud*
-    bezeichnete Kampagne hat eine große Anzahl von JavaScript-Paketen ins Visier
-    genommen und Zugangsdaten abgezogen, um sich weiter zu verbreiten.
-    :term:`PyPI` selbst wurde zwar nicht ausgenutzt, jedoch wurden einige
-    PyPI-Anmeldedaten in kompromittierten Repositoriess offengelegt.
-
-    .. seealso::
-       `PyPI and Shai-Hulud: Staying Secure Amid Emerging Threats
-       <https://blog.pypi.org/posts/2025-11-26-pypi-and-shai-hulud/>`_
 
 Das sind keine theoretischen Angriffe. Sie haben sich bei echten Projekten mit
 Millionen von Nutzer*innen ereignet. Wenn ihr ein bösartiges Paket auf PyPI
@@ -137,6 +139,7 @@ seit Juli 2024 erstellten Berichte zu GitHub-Sicherheitshinweisen:
     :titlesonly:
     :maxdepth: 0
 
+    own-code
     dependencies
     environments
     sbom

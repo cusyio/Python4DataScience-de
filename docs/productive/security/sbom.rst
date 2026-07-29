@@ -9,14 +9,22 @@ Eine Software Bill-of-Materials (SBOM) ist ein Dokument zum Austausch von
 Informationen über Software und deren Zusammensetzung. Dieses Format wird vor
 allem im Sicherheitsbereich verwendet, um Software und ihre Abhängigkeiten
 mithilfe von Schwachstellendatenbanken wie `CVE <https://www.cve.org/>`_ und
-`OSV <https://osv.dev/>`_ auf Schwachstellen zu überprüfen. Das vom
-CPython-Projekt verwendete SBOM-Format ist `SPDX
+`OSV <https://osv.dev/>`_ auf Schwachstellen zu überprüfen.
+
+Das vom CPython-Projekt verwendete SBOM-Format ist `SPDX
 <https://spdx.github.io/spdx-spec/v3.0.1/model/Software/Classes/Sbom/>`_, das
 bei Bedarf in andere Formate konvertiert werden kann. Die SBOM-Datei für die in
 CPython enthaltenen Abhängigkeiten wird unter `Misc/sbom.spdx.json
 <https://github.com/python/cpython/blob/main/Misc/sbom.spdx.json>`_ verwaltet.
 Die Datei wird erstellt mit `Tools/build/generate_sbom.py
 <https://github.com/python/cpython/blob/main/Tools/build/generate_sbom.py>`_.
+Ihr könnt die SBOM-Datei für jede Python-Version abrufen unter
+:samp:`https://www.python.org/ftp/python/{MAJOR.MINOR.PATCH}/Python-{MAJOR.MINOR.PATCH}.tgz.spdx.json`, also :abbr:`z.B. (zum Beispiel)` unter
+https://www.python.org/ftp/python/3.14.6/Python-3.14.6.tgz.spdx.json.
+
+.. seealso::
+   * `Python Software Bill-of-Materials Information
+     <https://www.python.org/downloads/metadata/sbom/>`_
 
 SBOM-Datei erstellen
 --------------------

@@ -54,7 +54,7 @@ die Entwicklungsumgebung enthält alle Abhängigkeiten.
 So wie eure Python-Umgebung mit unveränderbaren Referenzen aktuell gehalten
 werden sollte, sollten auch eure
 :doc:`../git/advanced/hooks/checks` und GitHub Actions regelmäßig aktualisiert
-werdenn.
+werden.
 
 In der :file:`.pre-commit-config.yaml` sollten die Versionen der Checks mit
 ihren Hashes regelmäßig aktualisiert werden, :abbr:`z. B. (zum Beispiel)` mit:
@@ -68,19 +68,25 @@ ihren Hashes regelmäßig aktualisiert werden, :abbr:`z. B. (zum Beispiel)` mi
 .. seealso::
    :doc:`../git/advanced/hooks/prek`
 
-GitHub Actions könnt ihr `pinact <https://github.com/suzuki-shunsuke/pinact>`_
-verwenden, :abbr:`z. B. (zum Beispiel)` mit:
+.. _pinact:
+
+Überprüft eure GitHub-Actions
+-----------------------------
+
+Für GitHub Actions könnt ihr `pinact
+<https://github.com/suzuki-shunsuke/pinact>`_ verwenden, :abbr:`z. B. (zum
+Beispiel)` mit:
 
 .. code-block:: console
 
    $ pinact run -u --min-age 7
 
-Überprüft eure GitHub-Actions
------------------------------
+`zizmor <https://docs.zizmor.sh>`_ ist ein Tool zur statischen Analyse, das
+Sicherheitslücken in GitHub-Actions-Workflows aufspürt – darunter
+Template-Injection, nicht fixierte Aktionen, übermäßige Berechtigungen, das
+Offenlegen von Anmeldedaten sowie `mehr als 30 weitere Prüfregeln
+<https://docs.zizmor.sh/audits/>`_. ``zizmor`` erkennt Schwachstellen wie
+diejenigen, die durch :ref:`token_exfiltration` ausgenutzt wurden.
 
-:ref:`zizmorcore` ist ein Tool zur statischen Analyse, das Sicherheitslücken in
-GitHub-Actions-Workflows aufspürt – darunter Template-Injection, nicht fixierte
-Aktionen, übermäßige Berechtigungen, das Offenlegen von Anmeldedaten sowie `mehr
-als 30 weitere Prüfregeln <https://docs.zizmor.sh/audits/>`_. ``zizmor`` erkennt
-Schwachstellen wie diejenigen, die durch :ref:`token_exfiltration` ausgenutzt
-wurden.
+.. seealso::
+   * :ref:`zizmorcore`

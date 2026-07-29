@@ -2,19 +2,22 @@
 ..
 .. SPDX-License-Identifier: BSD-3-Clause
 
-Abhängigkeiten verwalten
-========================
+Abhängigkeiten
+==============
 
 Genau hier finden Angriffe auf die Software-Lieferkette statt. Das `OpenSSF
 Secure Supply Chain Consumption Framework (S2C2F)
 <https://github.com/ossf/s2c2f>`_ bietet ein strukturiertes Reifegradmodell
-dafür, wie Unternehmen Open-Source-Software nutzen sollten.
+dafür, wie Unternehmen Open-Source-Software nutzen sollten. Bedauerlicherweise
+ist das :abbr:`S2C2F (Secure Supply Chain Consumption Framework)` jedoch
+beschränkt auf GitHub-Projekte. Daher suchten wir nach vergleichbaren Lösungen
+für unsere Python-Projekte, die ohne GitHub auskommen.
 
 .. seealso::
-   Für ein umfassenderes Bedrohungsmodell über alle Ökosysteme hinweg ist das
-   `CNCF Software Supply Chain Security Whitepaper
-   <https://tag-security.cncf.io/community/working-groups/supply-chain-security/supply-chain-security-paper-v2/Software_Supply_Chain_Practices_whitepaper_v2.pdf>`_
-   eine gute Einführung.
+   * `OpenSSF Scorecard <https://securityscorecards.dev/>`_
+   * :ref:`open_chain`
+   * `CNCF Software Supply Chain Security Whitepaper
+     <https://tag-security.cncf.io/community/working-groups/supply-chain-security/supply-chain-security-paper-v2/Software_Supply_Chain_Practices_whitepaper_v2.pdf>`_
 
 Wählt eure Abhängigkeiten sorgfältig aus
 ----------------------------------------
@@ -22,17 +25,151 @@ Wählt eure Abhängigkeiten sorgfältig aus
 Bevor ihr eine Abhängigkeit hinzufügt, solltet ihr prüfen, ob ihr diese
 überhaupt benötigt, denn jede Abhängigkeit vergrößert eure Angriffsfläche.
 Weniger oder kleinere Abhängigkeiten bedeuten weniger Angriffsmöglichkeiten.
-Wenn ihr eine Abhängigkeit hinzufügt, bewertet die Sicherheitslage mithilfe der
-`OpenSSF-Scorecard <https://securityscorecards.dev>`_, die Projekte bewertet
-hinsichtlich
-
-* :doc:`Branch<../git/branch>`-Protection
-* signierte Releases
-* Tools zur Aktualisierung von Abhängigkeiten
-* Vulnerability Disclosure
+Wenn ihr eine Abhängigkeit hinzufügt, könnt ihr die Sicherheitslage mithilfe der
+`OpenSSF-Scorecard <https://securityscorecards.dev>`_ bewerten:
 
 Eine niedrige Punktzahl gibt euch Aufschluss darüber, wie viel Vertrauen ihr in
 ein Projekt mit eingeschränkter Sicherheitshygiene setzen solltet.
+
+Gibt es ein Sicherheitskonzept?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Idealerweise sollte mit der Abhängigkeit eine
+:ref:`python-basics:security`-Datei :abbr:`o. ä. (oder ähnliches)`
+veröffentlicht worden sein. Diese Datei sollte Informationen enthalten,
+
+* wie eine Sicherheitslücke gemeldet werden kann ohne dass sie öffentlich
+  sichtbar wird,
+* über den Ablauf und den Zeitplan für die Offenlegung der Schwachstelle,
+* zu Links, :abbr:`z. B. (zum Beispiel)` URLs und E-Mails, unter denen
+  Unterstützung angefragt werden kann.
+
+.. seealso::
+   * `Guide to implementing a coordinated vulnerability disclosure process for
+     open source projects
+     <https://github.com/ossf/oss-vulnerability-guide/blob/main/maintainer-guide.md>`_
+   * `Adding a security policy to your repository
+     <https://docs.github.com/de/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting/add-security-policy>`_
+   * `Runbook
+     <https://github.com/ossf/oss-vulnerability-guide/blob/main/runbook.md>`_
+
+Werden CI-Tests durchgeführt?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Bevor Code in Pull- oder Merge-Requests zusammengeführt wird, sollten Tests
+durchgeführt werden, die dabei helfen, Fehler frühzeitig zu erkennen und die
+Anzahl der Schwachstellen in einem Projekt zu reduzieren.
+
+.. seealso::
+   * :ref:`coverage-github-actions`
+
+Werden Fuzzing-Tools verwendet?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Fuzzing oder Fuzz-Testing übergibt unerwartete oder zufällige Daten an euer
+Programm, um Fehler zu entdecken. Regelmäßiges Fuzzing ist wichtig, um
+Schwachstellen aufzuspüren, die von anderen ausgenutzt werden können, zumal auch
+bei einem Angriff Fuzzing genutzt werden kann, um dieselben Schwachstellen zu
+finden.
+
+* Verwendet euer Projekt `Fuzzing <https://owasp.org/www-community/Fuzzing>`_?
+* Ist der Name des Repository in der `OSS-Fuzz
+  <https://github.com/google/oss-fuzz>`_-Projektliste enthalten?
+* Wird `ClusterFuzzLite <https://google.github.io/clusterfuzzlite/>`_ im
+  Repository eingesetzt?
+* Sind benutzerdefinierte sprachenspezifische Fuzzing-Funktionen im Repository
+  vorhanden, :abbr:`z. B. (zum Beispiel)` mit `atheris
+  <https://pypi.org/project/atheris/>`_?
+
+Werden Werkzeuge zur statischen Codeanalyse verwendet?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:term:`Statische Testverfahren` testen den Quellcode, bevor die Anwendung
+ausgeführt wird. Dies kann verhindern, dass bekannte Fehlerklassen versehentlich
+in die Codebasis eingeführt werden.
+
+Ist der Quellcode frei von eingecheckten Binärdateien?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Generierte ausführbare Dateien im Quellcode-Repository (:abbr:`z. B. (zum
+Beispiel)` Python :file:`.pyc` Dateien) erhöhen das Risiko, da sie schwer
+überprüft werden können, so dass sie veraltet oder böswillig manipuliert sein
+können. Diesen Problemen kann mit verifizierten, reproduzierbaren Builds
+begegnet werden, deren ausführbare Dateien jedoch nicht wieder im
+Quellcode-Repository landen sollten.
+
+.. seealso::
+   * `Reproducible Builds <https://reproducible-builds.org>`_
+   * `Python 3.12.0 from a supply chain security perspective
+     <https://sethmlarson.dev/security-developer-in-residence-weekly-report-13>`_
+   * `Defending against the PyTorch supply chain attack PoC
+     <https://sethmlarson.dev/security-developer-in-residence-weekly-report-25>`_
+
+Kann bösartigem Code eingeschleust werden?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Mit :ref:`geschützten Git-Zweigen <protected_branches>` können Regeln für die
+Übernahme von Änderungen in Standard- und Veröffentlichungszweige definiert
+werden, :abbr:`z. B. (zum Beispiel)` automatisierte `statische Code-Analysen
+<https://de.wikipedia.org/wiki/Statische_Code-Analyse>`_ mit
+:doc:`../qa/ruff`, :doc:`../qa/pysa`, :doc:`../qa/wily` und :ref:`Code-Reviews
+<code_reviews>` über :abbr:`sog. (sogenannte)`
+:doc:`../git/advanced/gitlab/merge-requests`.
+
+.. _code_reviews:
+
+Werden Code-Reviews durchgeführt?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Mit Code-Reviews lassen sich unbeabsichtigte Schwachstellen oder das mögliche
+Einschleusen von bösartigem Code erkennen. :abbr:`Ggf. (Gegebenenfalls)` können
+so Angriffe aufgespürt werden, bei denen das Konto eines Teammitglieds
+unterwandert wurde.
+
+Wirken Personen aus mehreren Organisationen mit?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Dies wird als Indiz für eine geringere Anzahl von vertrauenswürdigen
+Code-Reviewers gewertet. Hierfür kann in den Profilen nach unterschiedlichen
+Einträgen im Feld *Unternehmen* gesucht werden. Wünschenswert sind mindestens
+drei verschiedene Unternehmen in den letzten 30 Commits, wobei jedes dieser
+Teammitglieder mindestens fünf Commits gemacht haben sollte.
+
+.. _lock-dependencies:
+
+Werden Abhängigkeiten deklariert und festgeschrieben?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In eurem Projekt sollten Abhängigkeiten, die während des Build- und
+Release-Prozesses verwendet werden, festgeschrieben werden. Dabei sollte eine
+*gepinnte Abhängigkeit* explizit auf einen bestimmten Hash gesetzt sein und
+nicht nur auf eine veränderbare Version oder einen Versionsbereich.
+
+:doc:`../envs/spack/index` schreibt für die jeweilige Umgebung diese Hashes in
+:ref:`spack_lock`, :doc:`../envs/uv/index` in :ref:`uv_lock` fest.
+
+.. tip::
+   Üblicherweise verwalte ich diese Dateien jedoch nur bei
+   :doc:`python-basics:packs/apps` in :doc:`Git <../git/index>`. Bei
+   :doc:`python-basics:libs/index` schränke ich üblicherweise lediglich den
+   Versionsbereich der Abhängigkeiten in der :file:`pyproject.toml`-Datei ein.
+
+Für :doc:`python-basics:packs/apps` können sich dadurch die folgenden
+Sicherheitsrisiken verringern:
+
+* Die Prüfung und Bereitstellung erfolgt mit derselben Software, was die Risiken
+  beim Deployment verringert, die Fehlersuche vereinfacht und Reproduzierbarkeit
+  ermöglicht.
+* Kompromittierte Abhängigkeiten untergraben nicht die Sicherheit des Projekts.
+* Substitutionsangriffe, also Angriffe, die auf die Verwechslung von
+  Abhängigkeiten abzielen, kann so entgegengewirkt werden.
+
+Das Festschreiben der Abhängigkeiten sollte jedoch Software-Updates nicht
+verhindern. Ihr könnt dieses Risiko verringern durch
+
+* automatisierte Werkzeuge, die euch benachrichtigen, wenn Abhängigkeiten in
+  eurem Projekt veraltet sind
+* Anwendungen, die Abhängigkeiten festhalten, schnell aktualisieren.
 
 Schreibt die Abhängigkeiten fest
 --------------------------------
@@ -65,14 +202,24 @@ Releases für eine Version innerhalb von 14 Tagen erlaubt
 
 Hash-Pinning ist sicherer – es erstellt einen kryptografischen Fingerabdruck der
 Paketdatei, der mit :term:`uv` in der :file:`uv.lock`-Datei festgeschrieben
-wird. Alternativ könnt ihr auch die ``--require-hashes``-Option von :term:`pip`
-verwenden. Ihr solltet jedoch nicht nur für eure Python-Abhängigkeiten
-Hash-Pinning verwenden, sondern :abbr:`z. B. (zum Beispiel)` auch für eure
-:doc:`pre-commit Checks <../git/advanced/hooks/checks>` und GitHub Actions.
+wird. Alternativ könnt ihr auch ``pip-compile --generate-hashes`` der `pip-tools
+<https://pip-tools.readthedocs.io/en/stable/>`_ verwenden:
+
+.. code-block:: console
+
+   $ python -m pip install pip-tools
+   $ pip-compile --generate-hashes pyproject.toml -o requirements.txt
+
+.. seealso::
+   * `Secure installs <https://pip.pypa.io/en/stable/topics/secure-installs/>`_
+
+Ihr solltet jedoch nicht nur für eure Python-Abhängigkeiten Hash-Pinning
+verwenden, sondern :abbr:`z. B. (zum Beispiel)` auch für eure :doc:`pre-commit
+Checks <../git/advanced/hooks/checks>` und :ref:`GitHub Actions <pinact>`.
 
 Hash-Pinning schützt jedoch nicht davor, ein schädliches Paket zum ersten Mal zu
 installieren; in diesem Fall würdet ihr nur den Hash des schädlichen Pakets
-festlegen. Daher solltet ihr das Hash-Pinning mit Schwachstellenscans und
+festlegen. Daher solltet ihr das Hash-Pinning mit Schwachstellen-Scans und
 verzögerter Übernahme kombinieren.
 
 .. seealso::
@@ -114,7 +261,7 @@ könnt ihr regelmäßig eure :file:`uv.lock`-Datei aktualisieren:
 .. seealso::
    * :ref:`Update uv.lock <python-basics:update-uv-lock>`
 
-Alternativ könnt ihr euch auch von :doc:`../envs/uv/renovate>` unterstützen
+Alternativ könnt ihr euch auch von :doc:`../envs/uv/dependency-bot` unterstützen
 lassen.
 
 .. _vulnerability_scans:
@@ -123,7 +270,7 @@ Schwachstellen-Scans
 --------------------
 
 *Dependency Pinning* verhindert unbefugte Änderungen – doch was passiert, wenn
-ihr eine Version gestgeschrieben habt, die eine bekannte Sicherheitslücke
+ihr eine Version festgeschrieben habt, die eine bekannte Sicherheitslücke
 aufweist? Forschende entdecken immer wieder neue :abbr:`CVEs (Common
 Vulnerabilities and Exposures)` in Paketen. Ein Paket, das gestern noch
 problemlos war, könnte heute schon eine kritische Sicherheitslücke aufweisen.
@@ -183,7 +330,7 @@ oder besser:
    * `ignore-until-fixed
      <https://docs.astral.sh/uv/reference/settings/#audit_ignore-until-fixed>`_
 
-Ihr könnt die Schwachstellenanalyse mit ``uv-audit`` auch in eure :doc:`prek
+Ihr könnt die Schwachstellen-Analyse mit ``uv-audit`` auch in eure :doc:`prek
 <../git/advanced/hooks/prek>`-Checks übernehmen:
 
 .. code-block:: yaml
@@ -195,7 +342,7 @@ Ihr könnt die Schwachstellenanalyse mit ``uv-audit`` auch in eure :doc:`prek
        files: ^(uv\.lock|pyproject\.toml)$
 
 Sicherheitsprüfungen sollten automatisiert durchgeführt werden. Hierzu könnt ihr
-``uv audit`` :abbr:`z.B . (zum Beispiel)` in einer GitHub Action verwenden:
+``uv audit`` :abbr:`z. B. (zum Beispiel)` in einer GitHub Action verwenden:
 
 .. code-block:: yaml
 
@@ -219,7 +366,9 @@ oder in einer GitLb CI/CD-Pipeline:
 
 Alternativ zu ``uv audit`` könnt ihr hierfür auch `osv
 <https://pypi.org/project/osv/>`_ oder `pip-audit
-<https://pypi.org/project/pip-audit/>`_ verwenden.
+<https://pypi.org/project/pip-audit/>`_ verwenden. Es gibt auch eine
+entsprechende GitHub-Action: `pypa/gh-action-pip-audit
+<https://github.com/pypa/gh-action-pip-audit>`_.
 
 Vermeidet Abhängigkeitskonflikte
 --------------------------------
@@ -235,7 +384,7 @@ Angriff wie folgt:
    {https://EXAPMPLE.COM/simple MYPACKAGE}` :abbr:`o. ä. (oder ähnlichem)`
    würdet ihr vermutlich erwarten, dass :samp:`{MYPACKAGE}` von eurem Index
    :samp:`https://{EXAPMPLE.COM}/simple` geladen würde.
-#. ``pip`` schaut jeddoch in allen Indexen nach und wählt die höchste Version
+#. ``pip`` schaut jedoch in allen Indexen nach und wählt die höchste Version
    aus.
 #. Liegt also auf :term:`PyPI` eine höhere Version von :samp:`{MYPACKAGE}` mit
    bösartigem Code, wird diese installiert.
@@ -257,7 +406,8 @@ aufzudecken, indem sie eine Bestandsliste zur Überprüfung bereitstellen; es
 handelt sich dabei jedoch um nachträgliche Kontrollmaßnahmen – sie zeigen euch
 also erst im Nachhinein, was ihr installiert habt.
 
-:term:`uv` verwendet hingegen üblicherweise die ``first-index``-Strategie, nimmtalso den erstgenannten Index, in dem ein Paket gefunden wird. Dadurch werden die
+:term:`uv` verwendet hingegen üblicherweise die ``first-index``-Strategie, nimmt
+also den erstgenannten Index, in dem ein Paket gefunden wird. Dadurch werden die
 oben beschriebenen Abhängigkeitskonflikte vermieden:
 
 .. code-block:: toml
@@ -279,294 +429,196 @@ Zeile 4:
    `Searching across multiple indexes
    <https://docs.astral.sh/uv/concepts/indexes/#searching-across-multiple-indexes>`_
 
-----
-
-Im folgenden schauen wir uns nun an, wie die Abhängigkeiten in unseren
-Python-Projekten abgesichert werden kann. Dabei orientieren wir uns an der
-`OpenSSF Scorecard <https://securityscorecards.dev/>`_. Alternativ könnt ihr
-euch auch an :ref:`open_chain` orientieren.
-
-In einem früheren Abschnitt haben wir schon einige Hinweise gegeben, wie die
-Veröffentlichung von Python-Paketen auf :term:`PyPI` abgesichert werden kann:
-
-.. seealso::
-   * :ref:`secure-release-workflow`
-   * :ref:`add_2fa`
-
-.. seealso::
-   Für ein umfassenderes Bedrohungsmodell über alle Ökosysteme hinweg ist das
-   `CNCF Software Supply Chain Security Whitepaper
-   <https://tag-security.cncf.io/community/working-groups/supply-chain-security/supply-chain-security-paper-v2/Software_Supply_Chain_Practices_whitepaper_v2.pdf>`_
-   eine gute Einführung.
-
-Nun wollen wir uns anschauen, wie Python-Projekte weiter abgesichert werden
-können. Dabei orientieren wir uns an der `OpenSSF Scorecard
-<https://securityscorecards.dev/>`_. Alternativ könnt ihr euch auch an
-:ref:`open_chain` orientieren.
-
-Wartung
--------
-
-Werden die Abhängigkeiten noch gewartet?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risiko: Hoch
-
-Dies weist auf möglicherweise ungepatchte Sicherheitslücken hin. Daher sollte
-regelmäßig überprüft werden, ob ein Projekt archiviert wurde. Umgekehrt wird bei
-der OSSF-Scorecard davon ausgegangen, dass bei mindestens einem Commit in der
-Woche über 90 Tage hinweg das Projekt sehr aktiv gewartet wird. Ein Mangel an
-aktiver Wartung ist jedoch nicht unbedingt immer ein Problem: insbesondere
-kleinere Dienstprogramme müssen normalerweise nicht oder nur sehr selten
-gewartet werden. Fehlende aktive Wartung weist euch also nur darauf hin, dass
-ihr die Situation genauer untersuchen solltet.
-
-Ihr könnt euch die Aktivitäten eines Projekts auch mit Badges anzeigen lassen,
-:abbr:`z.B. (zum Beispiel)`:
-
-.. image:: https://img.shields.io/github/commit-activity/y/veit/python4datascience
-   :alt: Jährliche Commit-Aktivität
-.. image:: https://img.shields.io/github/commit-activity/m/veit/python4datascience
-   :alt: Monatliche Commit-Aktivität
-.. image:: https://img.shields.io/github/commit-activity/w/veit/python4datascience
-   :alt: Wöchentliche Commit-Aktivität
-
-Gibt es ein Sicherheitskonzept für das Projekt?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risiko: Mittel
-
-Idealerweise sollte mit dem Projekt eine :ref:`python-basics:security`-Datei
-:abbr:`o.ä. (oder ähnliches)` veröffentlicht worden sein. Diese Datei sollte
-Informationen enthalten,
-
-* wie eine Sicherheitslücke gemeldet werden kann ohne dass sie öffentlich
-  sichtbar wird,
-* über den Ablauf und den Zeitplan für die Offenlegung der Schwachstelle,
-* zu Links, :abbr:`z.B. (zum Beispiel)` URLs und E-Mails, unter denen
-  Unterstützung angefragt werden kann.
-
-.. seealso::
-   * `Guide to implementing a coordinated vulnerability disclosure process for
-     open source projects
-     <https://github.com/ossf/oss-vulnerability-guide/blob/main/maintainer-guide.md>`_
-   * `Adding a security policy to your repository
-     <https://docs.github.com/de/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting/add-security-policy>`_
-   * `Runbook
-     <https://github.com/ossf/oss-vulnerability-guide/blob/main/runbook.md>`_
-
-Enthält das Projekt eine verwendbare Lizenz?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risiko: Niedrig
-
-Eine :doc:`Lizenz </productive/licensing>` weist darauf hin, wie der Quellcode
-verwendet werden darf oder nicht. Das Fehlen einer Lizenz erschwert jede Art von
-Sicherheitsüberprüfung oder Audit und stellt ein rechtliches Risiko für die
-potenzielle Nutzung dar.
-
-OpenSSF-Scorecard verwendet die `GitHub License API
-<https://docs.github.com/en/rest/licenses/licenses?apiVersion=2022-11-28#get-the-license-for-a-repository>`_
-für auf GitHub gehostete Projekte, ansonsten eine eigene Heuristik, um eine
-veröffentlichte Lizenzdatei zu erkennen. Dateien in einem
-:file:`LICENSES`-Verzeichnis sollten mit ihrem :ref:`SPDX
-<standard_format_licensing>`-Lizenzbezeichner benannt werden, gefolgt von einer
-entsprechenden Dateierweiterung, wie in der :ref:`REUSE <reuse>`-Spezifikation
-beschrieben.
-
-OpenSSF Best Practices Badge
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risiko: Niedrig
-
-Mit dem `OpenSSF Best Practices Badge Programm
-<https://www.bestpractices.dev/de>`_ könnt ihr euch auch ein entsprechendes
-Badge holen.
-
-Kontinuierliches Testen
------------------------
-
-Werden im Projekt CI-Tests durchgeführt?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risiko: Niedrig
-
-Bevor Code in Pull- oder Merge-Requests zusammengeführt wird, sollten Tests
-durchgeführt werden, die dabei helfen, Fehler frühzeitig zu erkennen und die
-Anzahl der Schwachstellen in einem Projekt zu reduzieren.
-
-.. seealso::
-   * :ref:`coverage-github-actions`
-
-Verwendet das Projekt Fuzzing-Tools?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risiko: Mittel
-
-Fuzzing oder Fuzz-Testing übergibt unerwartete oder zufällige Daten an euer
-Programm, um Fehler zu entdecken. Regelmäßiges Fuzzing ist wichtig, um
-Schwachstellen aufzuspüren, die von anderen ausgenutzt werden können, zumal auch
-bei einem Angriff Fuzzing genutzt werden kann, um dieselben Schwachstellen zu
-finden.
-
-* Verwendet euer Projekt `Fuzzing <https://owasp.org/www-community/Fuzzing>`_?
-* Ist der Name des Repository in der `OSS-Fuzz
-  <https://github.com/google/oss-fuzz>`_-Projektliste enthalten?
-* Wird `ClusterFuzzLite <https://google.github.io/clusterfuzzlite/>`_ im
-  Repository eingesetzt?
-* Sind benutzerdefinierte sprachenspezifische Fuzzing-Funktionen im Repository
-  vorhanden, :abbr:`z.B. (zum Beispiel)` mit `atheris
-  <https://pypi.org/project/atheris/>`_?
-
-Verwendet euer Projekt Werkzeuge zur statischen Codeanalyse?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risiko: Mittel
-
-:term:`Statische Testverfahren` testen den Quellcode, bevor die Anwendung
-ausgeführt wird. Dies kann verhindern, dass bekannte Fehlerklassen versehentlich
-in die Codebasis eingeführt werden.
-
-.. _bandit:
-
-Mit `Bandit <https://github.com/PyCQA/bandit>`__, das ihr mit :doc:`../qa/ruff`
-verwenden könnt lassen sich :abbr:`u. a. (unter anderem)` folgende
-Schwachstellen überprüfen:
-
-+--------+-----------------------------------------------------------------------+
-| Regel  | Beschreibung                                                          |
-+--------+-----------------------------------------------------------------------+
-| `S105`_| fest codierte Geheimnisse                                             |
-+--------+-----------------------------------------------------------------------+
-| `S301`_| :doc:`/data-processing/serialisation-formats/pickle/index` und andere |
-|        | unsichere Deserialisierung                                            |
-+--------+-----------------------------------------------------------------------+
-| `S307`_| Verwendung von :func:`eval` mit nicht vertrauenswürdigen Eingaben     |
-+--------+-----------------------------------------------------------------------+
-| `S113`_| fehlende Zeitüberschreitungen                                         |
-+--------+-----------------------------------------------------------------------+
-| `S324`_| schwache Kryptografie wie :abbr:`z. B. (zum Beispiel)` MD5-Kollisionen|
-+--------+-----------------------------------------------------------------------+
-| `S608`_| SQL-Injection über Zeichenfolgenformatierung                          |
-+--------+-----------------------------------------------------------------------+
-
-.. seealso:
-   `flake8-bandit <https://docs.astral.sh/ruff/rules/#flake8-bandit-s>`_
-
-Bandit könnt ihr auch in Jupyter Notebooks, IDEs und
-:doc:`../git/advanced/hooks/prek` integrieren.
-
-Zudem könnt ihr :doc:`../qa/pysa` für `Taint
-<https://en.wikipedia.org/wiki/Taint_checking>`_-Analysen verwenden.
-
-Für GitHub-Repositories könnt ihr alternativ auch `CodeQL
-<https://codeql.github.com>`_ verwenden; :abbr:`s.a. (siehe auch)`
-`codeql-action
-<https://github.com/github/codeql-action/blob/main/README.md#usage>`_.
-
-Risikobewertung des Quellcodes
+Überprüft Package Attestations
 ------------------------------
 
-Ist das Projekt frei von eingecheckten Binärdateien?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Risiko: Hoch
-
-Generierte ausführbare Dateien im Quellcode-Repository (:abbr:`z.B. (zum
-Beispiel)` Java :file:`.class`-Dateien, Python :file:`.pyc` Dateien) erhöhen das
-Risiko, da sie schwer überprüft werden können, so dass sie veraltet oder
-böswillig manipuliert sein können. Diesen Problemen kann mit verifizierten,
-reproduzierbaren Builds begegnet werden, deren ausführbare Dateien jedoch nicht
-wieder im Quellcode-Repository landen sollten.
+:term:`PyPI` :ref:`Package Attestations <package-attestations>` liefern mithilfe
+von `Sigstore <https://www.sigstore.dev>`_ einen kryptografischen Nachweis über
+die Herkunft eines Pakets gemäß :pep:`740`. Seit `gh-action-pypi-publish v1.11.0
+<https://github.com/pypa/gh-action-pypi-publish/discussions/281>`_ werden
+die Bescheinigungen auch automatisch generiert. Bis Ende 2025 nutzten mehr als
+50-Tsd. Projekte *Trusted Publishing*, und 17 % der Uploads enthielten
+Attestations. *Trusted Publishing* wurde zudem auf Organisationen und
+selbstverwaltete GitLab-Instanzen ausgeweitet.
 
 .. seealso::
-   * `Reproducible Builds <https://reproducible-builds.org>`_
-   * `Python 3.12.0 from a supply chain security perspective
-     <https://sethmlarson.dev/security-developer-in-residence-weekly-report-13>`_
-   * `Defending against the PyTorch supply chain attack PoC
-     <https://sethmlarson.dev/security-developer-in-residence-weekly-report-25>`_
+   * `PyPI in 2025: A Year in Review
+     <https://blog.pypi.org/posts/2025-12-31-pypi-2025-in-review/>`_
+   * `Are we PEP 740 yet? 🔏
+     <https://trailofbits.github.io/are-we-pep740-yet/>`_
 
-Ist der Entwicklungsprozess anfällig für das Einschleusen von bösartigem Code?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+:pep:`740` definiert neben *Package Attestations* auch :abbr:`SLSA (Supply-chain
+Levels for Software Artifacts)`-Provenance-Attestations. Für Anwendungsfälle
+außerhalb von :term:`PyPI` kann `actions/attest
+<https://github.com/actions/attest>`_ diese SLSA-Provenienz- und
+:doc:`SBOM <sbom>`-Bescheinigungen für jedes Artefakt generieren.
 
-Risiko: Hoch
+Im Fall des Angriffs auf :ref:`Ultralytics <ultralytics>` hätte mit den
+Attestations erkannt werden können, welche Versionen aus einem kompromittierten
+Workflow stammten und welche legitim waren – ganz ohne manuelle forensische
+Analyse. Die Transparency-Logs von Sigstore bieten einen unabhängigen Prüfpfad
+mit exakten Zeitstempeln und Angaben zur Herkunft jedes veröffentlichten
+Artefakts.
 
-Mit :ref:`geschützten Git-Zweigen <protected_branches>` können Regeln für die
-Übernahme von Änderungen in Standard- und Veröffentlichungszweige definiert
-werden, :abbr:`z.B. (zum Beispiel)` automatisierte `statische Code-Analysen
-<https://de.wikipedia.org/wiki/Statische_Code-Analyse>`_ mit
-:doc:`../qa/flake8`, :doc:`../qa/pysa`, :doc:`../qa/wily` und :ref:`Code-Reviews
-<code_reviews>` über
-:abbr:`sog. (sogenannte)` :doc:`../git/advanced/gitlab/merge-requests`.
+Fügt zeitbasierte Abwehrmaßnahmen hinzu
+---------------------------------------
 
-.. _code_reviews:
+Wenn ein bösartiges Paket auf :term:`PyPI` veröffentlicht wird, ist es sofort
+weltweit verfügbar. Die Erkennungszeiten variieren – manche Angriffe werden
+innerhalb weniger Stunden entdeckt, während andere wochen- oder monatelang
+unbemerkt bleiben. 2025 gab es über 2.000 Malware-Meldungen, wovon 66 %
+innerhalb von vier Stunden bearbeitet wurden.
 
-Werden Code-Reviews durchgeführt?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Mit dem Abwarten vor der Verwendung neu veröffentlichter Pakete erhaltet ihr
+zwar keine Garantie, aber das Risiko wird vermindert, da die Community
+vermutlich innerhalb kurzer Zeit offensichtliche Bedrohungen aufdeckt.
 
-Risiko: Hoch
+Moderne Paketmanager unterstützen zeitbasierte Filterung. :term:`uv` verfügt
+über die Option ``--exclude-newer``, und pip ≥ v26 hat die Option
+``--uploaded-prior-to`` mit demselben Zweck eingeführt wobei beide sich gemäß
+:pep:`700` auf Metadaten zur Upload-Zeit stützen.
 
-Mit Code-Reviews lassen sich unbeabsichtigte Schwachstellen oder das mögliche
-Einschleusen von bösartigem Code erkennen. :abbr:`Ggf. (Gegebenenfalls)` können
-so Angriffe aufgespürt werden, bei denen das Konto eines Teammitglieds
-unterwandert wurde.
+Verwendet interne Paket-Repositories in euren Organisationen
+------------------------------------------------------------
 
-Wirken an dem Projekt Personen aus mehreren Organisationen mit?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In kleineren Organisationen kann ein einfacher Spiegel des :term:`PyPI`, der
+Pakete um eine Woche verzögert bereitstellt, bereits das Sicherheitsrisiko für
+die Organisation vermindern. Ihr solltet dann jedoch darauf achten, dass ihr für
+kritische Sicherheits-Patches die Verzögerung aufheben könnt. Sofern ihr in
+eurer Organisation interne Paket-Repositories verwendet, könnt ihr darüberhinaus
+noch weitere Sicherheitsmaßnahmen treffen:
 
-Risiko: Niedrig
+#. Automatisierte Security-Scans der Pakete
+#. Automatisiertes Bauen der Pakete mit `fromager
+   <https://fromager.readthedocs.io/en/latest/>`_
 
-Dies wird als Indiz für eine geringere Anzahl von vertrauenswürdigen
-Code-Reviewers gewertet. Hierfür kann in den Profilen nach unterschiedlichen
-Einträgen im Feld *Unternehmen* gesucht werden. Wünschenswert sind mindestens
-drei verschiedene Unternehmen in den letzten 30 Commits, wobei jedes dieser
-Teammitglieder mindestens fünf Commits gemacht haben sollte.
+Reagiert schnell, wenn ihr ein schädliches Paket entdeckt
+---------------------------------------------------------
 
-Risikobewertung der Builds
---------------------------
+Wenn ihr ein kompromittiertes Paket bei euch entdeckt, könnt ihr mit schnellem
+Handeln häufig größeren Schaden vermeiden.
 
-.. _lock-dependencies:
+#. Isoliert das Paket unverzüglich
 
-Werden im Projekt Abhängigkeiten deklariert und festgeschrieben?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   Stoppt alle Deployments, die diese Abhängigkeit nutzen, und sperrt die
+   Paketversion in eurem internen Mirror, falls ihr einen solchen betreibt. Ziel
+   ist es, weitere Installationen zu verhindern, während ihr die Ursache weiter
+   untersuchen könnt.
 
-Risiko: Mittel
+#. Bewertet den Schaden
 
-In eurem Projekt sollten Abhängigkeiten, die während des Build- und
-Release-Prozesses verwendet werden, festgeschrieben werden. Dabei sollte eine
-*gepinnte Abhängigkeit* explizit auf einen bestimmten Hash gesetzt sein und
-nicht nur auf eine veränderbare Version oder einen Versionsbereich.
+   Überprüft anhand von Logs und Prozessdaten, ob der Schadcode ausgeführt
+   wurde. Ermittelt, auf welche vertraulichen Daten das Paket möglicherweise
+   zugegriffen hat: Umgebungsvariablen, Anmeldedaten, Cloud-Token :abbr:`etc.
+   (et cetera)`. Nutzt eure :doc:`SBOM <sbom>`, um alle betroffenen Projekte bei
+   euch im Unternehmen zu identifizieren.
 
-:doc:`../envs/spack/index` schreibt für die jeweilige Umgebung diese Hashes in
-:ref:`spack_lock`, :doc:`../envs/uv/index` in :ref:`uv_lock` fest.
+#. Begrenzt den Schaden
 
-.. tip::
-   Üblicherweise verwalte ich diese Dateien jedoch nur bei
-   :doc:`python-basics:packs/apps` in :doc:`Git <../git/index>`. Bei
-   :doc:`python-basics:libs/index` schränke ich üblicherweise lediglich den
-   Versionsbereich der Abhängigkeiten in der :file:`pyproject.toml`-Datei ein.
+   Ändert alle Anmeldedaten, auf die das Paket möglicherweise zugegriffen hat:
+   API-Schlüssel, Datenbankpasswörter, Cloud-Anmeldedaten. Scannt Systeme auf
+   Anzeichen einer Kompromittierung und überprüft ausgehende
+   Netzwerkverbindungen auf Anzeichen von Datenexfiltration.
 
-Für :doc:`python-basics:packs/apps` können sich dadurch die folgenden
-Sicherheitsrisiken verringern:
+#. Entfernt die Abhängigkeit vollständig
 
-* Die Prüfung und Bereitstellung erfolgt mit derselben Software, was die Risiken
-  beim Deployment verringert, die Fehlersuche vereinfacht und Reproduzierbarkeit
-  ermöglicht.
-* Kompromittierte Abhängigkeiten untergraben nicht die Sicherheit des Projekts.
-* Substitutionsangriffe, also Angriffe, die auf die Verwechslung von
-  Abhängigkeiten abzielen, kann so entgegengewirkt werden.
+   Fixiert eine bekanntermaßen fehlerfreie Version und entfernt die Abhängigkeit
+   vollständig. Führt ``pip-audit`` aus, um sicherzustellen, dass keine weiteren
+   Schwachstellen eingeführt wurden. Aktualisiert anschließend eure Lockfiles
+   mit der korrigierten Version.
 
-Das Festschreiben der Abhängigkeiten sollte jedoch Software-Updates nicht
-verhindern. Ihr könnt dieses Risiko verringern durch
+#. Meldet das schädliche Paket
 
-* automatisierte Werkzeuge, die euch benachrichtigen, wenn Abhängigkeiten in
-  eurem Projekt veraltet sind
-* Anwendungen, die Abhängigkeiten festhalten, schnell aktualisieren.
+   Über `PyPI’s security reporting system <https://pypi.org/security/>`_ könnt
+   ihr das schädliche Paket melden. Benachrichtigt auch Verantwortliche eurer
+   Organisation und potenziell betroffene Kunden. Dokumentiert den Vorfall: Was
+   ist passiert? Wie wurde das Paket entdeckt? Welche Änderungen habt ihr
+   vorgenommen, um eine Wiederholung zu verhindern?
 
-.. _S105: https://docs.astral.sh/ruff/rules/hardcoded-password-string/
-.. _S301: https://docs.astral.sh/ruff/rules/suspicious-pickle-usage/
-.. _S307: https://docs.astral.sh/ruff/rules/suspicious-eval-usage/
-.. _S113: https://docs.astral.sh/ruff/rules/request-without-timeout/
-.. _S324: https://docs.astral.sh/ruff/rules/hashlib-insecure-hash-function/
-.. _S608: https://docs.astral.sh/ruff/rules/hardcoded-sql-expression/
-.. _S608: https://docs.astral.sh/ruff/rules/hardcoded-sql-expression/
+Überprüft, ob eure Abhängigkeiten noch gewartet werden?
+-------------------------------------------------------
+
+Es sollte regelmäßig überprüft werden, ob eine Abhängigkeit archiviert wurde.
+Die Checks der OSSF-Scorecard sind jedoch nur erfolgreich, wenn das Projekt
+älter als 90 Tage ist. Ein Mangel an aktiver Wartung ist jedoch nicht unbedingt
+immer ein Problem: insbesondere kleinere Dienstprogramme müssen normalerweise
+nur sehr selten gewartet werden. Fehlende aktive Wartung weist euch also nur
+darauf hin, dass ihr die Situation genauer untersuchen solltet.
+
+Mit `pypi-changes <https://github.com/gaborbernat/pypi-changes>`_ gibt es ein
+CLI-Tool, das die für einem Python-Interpreter installierten Pakete überprüft
+und mit den neuesten Versionen auf :term:`PyPI` vergleicht. Es zeigt an, welche
+Pakete veraltet sind, wie lange die Veröffentlichung der jeweiligen Version
+zurückliegt, und hebt wichtige Versionssprünge hervor, damit ihr fundierte
+Entscheidungen bezüglich Upgrades treffen können, :abbr:`z. B. (zum Beispiel)`:
+
+.. figure:: pypi-changes.png
+   :alt: Kommandozeilenaufruf uvx pypi-changes mit der Auflistung aller in einem
+         Projekt verwendeten Python-Bibliotheken, deren Version und
+         Veröffentlichungsdatum
+
+..
+    $ uvx pypi-changes
+    Installed 26 packages in 18ms
+    🐍 Distributions within
+    /Users/veit/.cache/uv/archive-v0/soguBMAn2UOVYxDU/bin/python
+    ├── annotated-types 0.8.0 7 days
+    ├── certifi 2026.7.22 9 days
+    ├── soupsieve 2.9.1 9 days
+    ├── pypi-changes 1.6.0 9 days
+    ├── platformdirs 4.11.0 9 days
+    ├── charset-normalizer 3.4.9 a month
+    ├── requests-cache 1.3.3 a month
+    ├── typing_extensions 4.16.0 a month
+    ├── humanize 4.16.0 a month
+    ├── beautifulsoup4 4.15.0 2 months
+    ├── idna 3.18 2 months
+    ├── pydantic_core 2.46.4 3 months remote 2.47.0 2 months
+    ├── requests 2.34.2 3 months
+    ├── urllib3 2.7.0 3 months
+    ├── markdown-it-py 4.2.0 3 months
+    ├── pydantic 2.13.4 3 months
+    ├── url-normalize 3.0.0 3 months
+    ├── packaging 26.2 3 months
+    ├── rich 15.0.0 4 months
+    ├── Pygments 2.20.0 4 months
+    ├── attrs 26.1.0 4 months
+    ├── cattrs 26.1.0 5 months
+    ├── mailbits 0.2.3 8 months
+    ├── typing-inspection 0.4.2 10 months
+    ├── pypi-simple 1.8.0 11 months
+    └── mdurl 0.1.2 3 years
+
+Alternativ könnt ihr euch auch die PyPI-Versionen eines Projekts mit Badges
+anzeigen lassen, :abbr:`z. B. (zum Beispiel)`:
+
++---------------+-------------------------------------------------------+
+| Paketname     | aktuelle PyPI-Version                                 |
++===============+=======================================================+
+| pypi-simple   | .. image:: https://img.shields.io/pypi/v/pypi-simple  |
+|               |    :alt: PyPI Version                                 |
+|               |    :target: https://pypi.org/project/pypi-simple      |
++---------------+-------------------------------------------------------+
+| mdurl         | .. image:: https://img.shields.io/pypi/v/mdurl        |
+|               |    :alt: PyPI Version                                 |
+|               |    :target: https://pypi.org/project/mdurl            |
++---------------+-------------------------------------------------------+
+
+.. tab:: reST
+
+   .. code-block:: rst
+
+      +---------------+-------------------------------------------------------+
+      | Paketname     | aktuelle PyPI-Version                                 |
+      +===============+=======================================================+
+      | pypi-simple   | .. image:: https://img.shields.io/pypi/v/pypi-simple  |
+      |               |    :alt: PyPI Version                                 |
+      |               |    :target: https://pypi.org/project/pypi-simple      |
+      +---------------+-------------------------------------------------------+
+      | mdurl         | .. image:: https://img.shields.io/pypi/v/mdurl        |
+      |               |    :alt: PyPI Version                                 |
+      |               |    :target: https://pypi.org/project/mdurl            |
+      +---------------+-------------------------------------------------------+
+
+.. seealso::
+   * `Is it maintained? <https://isitmaintained.com/>`_

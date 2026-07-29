@@ -27,6 +27,7 @@ Added
 Changed
 ~~~~~~~
 
+* 📝 Extend seccurity section
 * 👷🔧📝 Switch to prek
 
   * Remove pre-commit
