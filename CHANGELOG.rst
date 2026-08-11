@@ -22,6 +22,7 @@ Notfälle, wenn Zweige für ältere Versionen erstellt werden müssen.
 Added
 ~~~~~
 
+* 📝 Add Narwhals
 * 📝 Add protobuf-py
 
 Changed

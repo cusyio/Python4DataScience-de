@@ -52,6 +52,9 @@ und `DuckDB <https://duckdb.org>`_ hängt von der Art der Arbeitslast ab:
 pandas
     ist die kanonische Python-DataFrame-Bibliothek für Analysen auf einem
     einzelnen Rechner.
+
+.. _polars:
+
 Polars
     ist in Rust geschrieben und erlaubt leistungsfähige Analysen auf einem
     einzigen Knoten oder wenn `Lazy
@@ -59,10 +62,16 @@ Polars
     `Expressions-API
     <https://docs.pola.rs/api/python/stable/reference/expressions/index.html>`_
     wichtig sind.
+
+.. _dask:
+
 Dask
     ist eine Python-Bibliothek für paralleles Rechnen, die bekannte APIs,
     :abbr:`u.a. (unter anderem)` von pandas und `Scikit-Learn
     <https://scikit-learn.org/stable/>`_ auf Cluster skaliert.
+
+.. _duckdb:
+
 DuckDB
     ist eine In-Process `OLAP
     <https://de.wikipedia.org/wiki/Online_Analytical_Processing>`_-Datenbank
