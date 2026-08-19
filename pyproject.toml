@@ -44,6 +44,7 @@ docs = [
   "notebook",
   "sphinx",
   "sphinx-copybutton",
+  "sphinx-design",
   "sphinx-inline-tabs",
   "sphinx-lint",
   "sphinx-notfound-page",
@@ -59,9 +60,9 @@ packages = []
 line-length = 79
 src = [ "docs", "fastAPI" ]
 extend-exclude = [
-  "docs/productive/qa/requests/*",
-  "docs/workspace/ipython/examples.ipynb", # `np.*mean*?` is valid iPython syntax
   "docs/data-processing/apis/grpc/accounts_pb2_grpc.py", # Changing the function signature would violate the Liskov Substitution Principle
+  "docs/productive/qa/requests/*",
+  "docs/workspace/ipython/examples.ipynb",               # `np.*mean*?` is valid iPython syntax
 ]
 lint.select = [ "ALL" ]
 lint.ignore = [

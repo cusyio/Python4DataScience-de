@@ -15,67 +15,74 @@ Codemustern, die bei einem Code-Review zunächst unbedenklich erscheinen und von
 Menschen übersehen werden können. Diese mit einem Linter aufzuspüren, ist die
 erste Verteidigungsstufe.
 
-Das ewige Geheimnis
--------------------
+.. card-carousel:: 1
 
-Durchgesickerte Zugangsdaten sind der Ausgangspunkt für viele
-Sicherheitsverletzungen in der Lieferkette. Ein offengelegtes :term:`PyPI`-Token
-ermöglicht, mit Hintertüren versehene Versionen eurer Pakete zu veröffentlichen.
-Eine offengelegte Datenbank-URL ermöglicht, Daten zu entwenden. Und doch ist ein
-solches Muster weit verbreitet. Besser ist die Verwendung von
-Umgebungsvariablen:
+   .. card::
 
-.. code-block:: python
+      **Das ewige Geheimnis**
 
-   import os
+      Durchgesickerte Zugangsdaten sind der Ausgangspunkt für viele
+      Sicherheitsverletzungen in der Lieferkette. Ein offengelegtes
+      :term:`PyPI`-Token ermöglicht, mit Hintertüren versehene Versionen eurer
+      Pakete zu veröffentlichen. Eine offengelegte Datenbank-URL ermöglicht,
+      Daten  zu entwenden. Und doch ist ein solches Muster weit verbreitet.
+      Besser ist die Verwendung von Umgebungsvariablen:
 
-   DATABASE_KEY = os.environ["DB_KEY"]
-   DATABASE_URL = os.environ["DB_URL"]
+      .. code-block:: python
 
-.. warning::
-   Git vergisst nie: wenn ihr ein Secret einmal durch Git verwaltet habt, bleibt
-   es für immer in der Historie eures Repositories erhalten. Es in einem
-   späteren Commit einfach zu löschen, hilft nicht wirklich. Alle, die Zugriff
-   auf das Repository haben, können diese Anmeldedaten wieder extrahieren. Bei
-   Angriffen wird oft zunächst die Git-Historie nach Geheimnissen durchforstet,
-   und ein einmal veröffentlichts PyPI-Token oder Cloud-Anmeldedaten sind oft
-   der erste Schritt bei einer Kompromittierung der Lieferkette.
+         import os
 
-Kryptografische Schwachstellen
-------------------------------
+         DATABASE_KEY = os.environ["DB_KEY"]
+         DATABASE_URL = os.environ["DB_URL"]
 
-Weitere häufige Sicherheitslücken sind kryptografische Schwachstellen wie
-`MD5 <https://de.wikipedia.org/wiki/Message-Digest_Algorithm_5>`_ und `SHA-1
-<https://de.wikipedia.org/wiki/Secure_Hash_Algorithm#SHA-1>`_. MD5-Kollisionen
-wurden erstmals 2004 nachgewiesen und SHA1-Kollisionen 2017. Es können also
-Kollisionen erzeugt werden durch andere Eingaben, die denselben Hash-Wert
-ergeben. Dies ermöglicht die Fälschung von Zertifikaten, die Manipulation von
-Downloads oder die Umgehung von Integritätsprüfungen. Verwendet daher keines der
-beiden Verfahren für Sicherheitszwecke sondern stattdessen `SHA256 oder besser
-<https://de.wikipedia.org/wiki/SHA-2>`_:
+      .. warning::
+         Git vergisst nie: wenn ihr ein Secret einmal durch Git verwaltet habt,
+         bleibt es für immer in der Historie eures Repositories erhalten. Es in
+         einem späteren Commit einfach zu löschen, hilft nicht wirklich. Alle,
+         die Zugriff auf das Repository haben, können diese Anmeldedaten wieder
+         extrahieren. Bei Angriffen wird oft zunächst die Git-Historie nach
+         Geheimnissen durchforstet, und ein einmal veröffentlichts PyPI-Token
+         oder Cloud-Anmeldedaten sind oft der erste Schritt bei einer
+         Kompromittierung der Lieferkette.
 
-.. code-block:: python
+   .. card::
 
-   import hashlib
+      **Kryptografische Schwachstellen**
 
-   digest = hashlib.sha256(payload).hexdigest()
+      Weitere häufige Sicherheitslücken sind kryptografische Schwachstellen wie
+      `MD5 <https://de.wikipedia.org/wiki/Message-Digest_Algorithm_5>`_ und
+      `SHA-1 <https://de.wikipedia.org/wiki/Secure_Hash_Algorithm#SHA-1>`_.
+      MD5-Kollisionen wurden erstmals 2004 nachgewiesen und SHA1-Kollisionen
+      2017. Es können also Kollisionen erzeugt werden durch andere Eingaben, die
+      denselben Hash-Wert ergeben. Dies ermöglicht die Fälschung von
+      Zertifikaten, die Manipulation von Downloads oder die Umgehung von
+      Integritätsprüfungen. Verwendet daher keines der beiden Verfahren für
+      Sicherheitszwecke sondern stattdessen `SHA256 oder besser
+      <https://de.wikipedia.org/wiki/SHA-2>`_:
 
-Hängende Verbindungen
----------------------
+      .. code-block:: python
 
-Das hier ist zwar subtil, aber dennoch gefährlich, da  ein langsamer Server
-euren Prozess auf unbestimmte Zeit zum Stillstand bringen kann. Ein Angriff über
-einen solchen Server, mit dem eure Anwendung kommuniziert, kann jede Anfrage zum
-Erliegen bringen, euren Thread-Pool erschöpfen und einen
-Denial-of-Service-Angriff auslösen. Eure gesamte Anwendung kommt dann zum
-Stillstand, weil ihr einen Parameter vergessen habt. Daher solltet ihr immer
-einen Timeout angeben:
+         import hashlib
 
-.. code-block:: pycon
+         digest = hashlib.sha256(payload).hexdigest()
 
-   >>> import httpx
-   >>> r = httpx.get("https://httpbin.org/get", timeout=30)
-   httpx.ReadTimeout: The read operation timed out
+   .. card::
+
+      **Hängende Verbindungen**
+
+      Das hier ist zwar subtil, aber dennoch gefährlich, da  ein langsamer
+      Server euren Prozess auf unbestimmte Zeit zum Stillstand bringen kann. Ein
+      Angriff über einen solchen Server, mit dem eure Anwendung kommuniziert,
+      kann jede Anfrage zum Erliegen bringen, euren Thread-Pool erschöpfen und
+      einen Denial-of-Service-Angriff auslösen. Eure gesamte Anwendung kommt
+      dann zum Stillstand, weil ihr einen Parameter vergessen habt. Daher
+      solltet ihr immer einen Timeout angeben:
+
+      .. code-block:: pycon
+
+         >>> import httpx
+         >>> r = httpx.get("https://httpbin.org/get", timeout=30)
+         httpx.ReadTimeout: The read operation timed out
 
 .. _bandit:
 

@@ -30,85 +30,110 @@ zu dem, was ihr selbst in ``dependencies`` angegeben habt.
 
 Hier nur einige Angriffe der letzten Zeit auf die Software-Lieferkette:
 
-LiteLLM/Telnyx
-    Im März diesen Jahres wurden nach der Offenlegung eines API-Tokens aufgrund
-    einer `ausgenutzten trivy-Abhängigkeit
-    <https://www.aquasec.com/blog/trivy-supply-chain-attack-what-you-need-to-know/>`_
-    Versionen der Pakete `litellm <https://pypi.org/project/litellm/>`_ und
-    `telnyx <https://pypi.org/project/telnyx/>`_ auf :term:`PyPI`
-    veröffentlicht, die Malware zum Ausspähen von Anmeldedaten enthielten. Die
-    Malware wurde bei der Installation ausgeführt, sammelte sensible
-    Anmeldedaten und Dateien und leitete diese an eine entfernte API weiter.
+.. card-carousel:: 2
 
-    .. seealso::
-       `Incident Report: LiteLLM/Telnyx supply-chain attacks, with guidance
-       <https://blog.pypi.org/posts/2026-04-02-incident-report-litellm-telnyx-supply-chain-attack/>`_
+   .. card::
 
-Phishing-Angriff per E-Mail auf PyPI-User
-    Auch im April 2026 hält die Welle von Phishing-Angriffen, bei denen
-    Domain-Verwechslungen ausgenutzt und seriös wirkende E-Mails versendet
-    werden, weiterhin an. Es handelt sich um denselben Angriff, der bereits im
-    Juni 2025 auftrat und auf viele andere Open-Source-Repositorys abzielt,
-    allerdings mit einem anderen Domainnamen.
+      **LiteLLM/Telnyx**
 
-    .. seealso::
-       `PyPI Users Email Phishing Attack
-       <https://blog.pypi.org/posts/2025-07-28-pypi-phishing-attack/>`_
+      Im März diesen Jahres wurden nach der Offenlegung eines API-Tokens aufgrund
+      einer `ausgenutzten trivy-Abhängigkeit
+      <https://www.aquasec.com/blog/trivy-supply-chain-attack-what-you-need-to-know/>`_
+      Versionen der Pakete `litellm <https://pypi.org/project/litellm/>`_ und
+      `telnyx <https://pypi.org/project/telnyx/>`_ auf :term:`PyPI`
+      veröffentlicht, die Malware zum Ausspähen von Anmeldedaten enthielten. Die
+      Malware wurde bei der Installation ausgeführt, sammelte sensible
+      Anmeldedaten und Dateien und leitete diese an eine entfernte API weiter.
 
-Shai-Hulud
-    Im November 2025 entwickelt sich ein Angriff auf das `npm
-    <https://www.npmjs.com/>`_-Ökosystem weiter und nutzt kompromittierte Konten
-    aus, um schädliche Pakete zu veröffentlichen. Diese als *Shai-Hulud*
-    bezeichnete Kampagne hat eine große Anzahl von JavaScript-Paketen ins Visier
-    genommen und Zugangsdaten abgezogen, um sich weiter zu verbreiten.
-    :term:`PyPI` selbst wurde zwar nicht ausgenutzt, jedoch wurden einige
-    PyPI-Anmeldedaten in kompromittierten Repositories offengelegt.
+      .. seealso::
+         `Incident Report: LiteLLM/Telnyx supply-chain attacks, with guidance
+         <https://blog.pypi.org/posts/2026-04-02-incident-report-litellm-telnyx-supply-chain-attack/>`_
 
-    .. seealso::
-       `PyPI and Shai-Hulud: Staying Secure Amid Emerging Threats
-       <https://blog.pypi.org/posts/2025-11-26-pypi-and-shai-hulud/>`_
+   .. card::
 
-.. _token_exfiltration:
+      **Phishing-Angriff per E-Mail auf PyPI-User**
 
-Token Exfiltration
-    Im September 2025 wurde Code in GitHub-Actions-Workflows in über 570
-    Repositories eingeschleust und dabei mehr als 3.300 Secrets, darunter
-    :term:`PyPI`- npm-Token sowie AWS-Zugriffsschlüssel gestohlen. PyPI sperrte
-    alle gestohlenen Token aus und forderte alle User auf, zu
-    :ref:`trusted_publishers` zu wechseln.
+      Auch im April 2026 hält die Welle von Phishing-Angriffen, bei denen
+      Domain-Verwechslungen ausgenutzt und seriös wirkende E-Mails versendet
+      werden, weiterhin an. Es handelt sich um denselben Angriff, der bereits im
+      Juni 2025 auftrat und auf viele andere Open-Source-Repositorys abzielt,
+      allerdings mit einem anderen Domainnamen.
 
-    .. seealso::
-       `Token Exfiltration Campaign via GitHub Actions Workflows
-       <https://blog.pypi.org/posts/2025-09-16-github-actions-token-exfiltration/>`_
+      .. seealso::
+         `PyPI Users Email Phishing Attack
+         <https://blog.pypi.org/posts/2025-07-28-pypi-phishing-attack/>`_
 
-ZIP-Parser-Verwirrungsangriffe
-    Im August 2025 führte :term:`PyPI` Restriktionen ein, die verhindern sollen,
-    dass es bei Installations- und Prüfprogramme für Python-Pakete durch
-    unterschiedliche Implementierungen des ZIP-Parsers zu Verwechslungen kommen
-    kann. :term:`uv` zeigte ein anderes Entpackungsverhalten als viele
-    Python-basierte Installationsprogramme, die :mod:`zipfile` verwenden.
+   .. card::
 
-    .. seealso::
-       `uv security advisory: ZIP payload obfuscation
-       <https://astral.sh/blog/uv-security-advisory-cve-2025-54368>`_
+      **Shai-Hulud**
 
-.. _ultralytics:
+      Im November 2025 entwickelt sich ein Angriff auf das `npm
+      <https://www.npmjs.com/>`_-Ökosystem weiter und nutzt kompromittierte
+      Konten aus, um schädliche Pakete zu veröffentlichen. Diese als
+      *Shai-Hulud* bezeichnete Kampagne hat eine große Anzahl von
+      JavaScript-Paketen ins Visier genommen und Zugangsdaten abgezogen, um sich
+      weiter zu verbreiten. :term:`PyPI` selbst wurde zwar nicht ausgenutzt,
+      jedoch wurden einige PyPI-Anmeldedaten in kompromittierten Repositories
+      offengelegt.
 
-Ultralytics
-    Im Dezember 2024 wurde `ultralytics
-    <https://pypi.org/project/ultralytics/>`_ Opfer eines Supply-Chain-Angriffs,
-    bei dem zunächst die GitHub-Actions-Workflows des Projekts und anschließend
-    dessen PyPI-API-Token kompromittiert wurden. Zur Durchführung dieses
-    Angriffs wurde keine Sicherheitslücke in :term:`PyPI` ausgenutzt.
+      .. seealso::
+         `PyPI and Shai-Hulud: Staying Secure Amid Emerging Threats
+         <https://blog.pypi.org/posts/2025-11-26-pypi-and-shai-hulud/>`_
 
-    .. seealso::
-       `Supply-chain attack analysis: Ultralytics
-       <https://blog.pypi.org/posts/2024-12-11-ultralytics-attack-analysis/>`_
+   .. card::
+
+      .. _token-exfiltration:
+
+      **Token Exfiltration**
+
+      Im September 2025 wurde Code in GitHub-Actions-Workflows in über 570
+      Repositories eingeschleust und dabei mehr als 3.300 Secrets, darunter
+      :term:`PyPI`- npm-Token sowie AWS-Zugriffsschlüssel gestohlen. PyPI
+      sperrte alle gestohlenen Token aus und forderte alle User auf, zu
+      :ref:`trusted_publishers` zu wechseln.
+
+      .. seealso::
+         `Token Exfiltration Campaign via GitHub Actions Workflows
+         <https://blog.pypi.org/posts/2025-09-16-github-actions-token-exfiltration/>`_
+
+   .. card::
+
+      *ZIP-Parser-Verwirrungsangriffe**
+
+      Im August 2025 führte :term:`PyPI` Restriktionen ein, die verhindern
+      sollen, dass es bei Installations- und Prüfprogramme für Python-Pakete
+      durch unterschiedliche Implementierungen des ZIP-Parsers zu Verwechslungen
+      kommen kann. :term:`uv` zeigte ein anderes Entpackungsverhalten als viele
+      Python-basierte Installationsprogramme, die :mod:`zipfile` verwenden.
+
+      .. seealso::
+         `uv security advisory: ZIP payload obfuscation
+         <https://astral.sh/blog/uv-security-advisory-cve-2025-54368>`_
+
+   .. card::
+
+      .. _ultralytics:
+
+      **Ultralytics**
+
+      Im Dezember 2024 wurde `ultralytics
+      <https://pypi.org/project/ultralytics/>`_ Opfer eines
+      Supply-Chain-Angriffs, bei dem zunächst die GitHub-Actions-Workflows des
+      Projekts und anschließend dessen PyPI-API-Token kompromittiert wurden. Zur
+      Durchführung dieses Angriffs wurde keine Sicherheitslücke in :term:`PyPI`
+      ausgenutzt.
+
+      .. seealso::
+         `Supply-chain attack analysis: Ultralytics
+         <https://blog.pypi.org/posts/2024-12-11-ultralytics-attack-analysis/>`_
 
 Das sind keine theoretischen Angriffe. Sie haben sich bei echten Projekten mit
 Millionen von Nutzer*innen ereignet. Wenn ihr ein bösartiges Paket auf PyPI
 entdeckt, könnt ihr es über das `Sicherheitsmeldesystem von PyPI
 <https://pypi.org/security/>`_ melden.
+
+Die Sicherheitsherausforderungen nehmen zu
+------------------------------------------
 
 Im Juni 2026 veröffentlichte Seth Larson, Mitglied des `Python Security Response
 Team <https://devguide.python.org/security/psrt/>`_, eine Grafik zur jährlichen

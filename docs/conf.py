@@ -55,6 +55,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.todo",
     "sphinx_copybutton",
+    "sphinx_design",
     "sphinx_inline_tabs",
     "sphinx_sitemap",
     "sphinxcontrib.cairosvgconverter",

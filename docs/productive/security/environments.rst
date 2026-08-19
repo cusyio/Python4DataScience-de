@@ -86,7 +86,7 @@ Sicherheitslücken in GitHub-Actions-Workflows aufspürt – darunter
 Template-Injection, nicht fixierte Aktionen, übermäßige Berechtigungen, das
 Offenlegen von Anmeldedaten sowie `mehr als 30 weitere Prüfregeln
 <https://docs.zizmor.sh/audits/>`_. ``zizmor`` erkennt Schwachstellen wie
-diejenigen, die durch :ref:`token_exfiltration` ausgenutzt wurden.
+diejenigen, die durch :ref:`token-exfiltration` ausgenutzt wurden.
 
 .. seealso::
    * :ref:`zizmorcore`

@@ -592,17 +592,19 @@ Entscheidungen bezüglich Upgrades treffen können, :abbr:`z. B. (zum Beispiel
 Alternativ könnt ihr euch auch die PyPI-Versionen eines Projekts mit Badges
 anzeigen lassen, :abbr:`z. B. (zum Beispiel)`:
 
-+---------------+-------------------------------------------------------+
-| Paketname     | aktuelle PyPI-Version                                 |
-+===============+=======================================================+
-| pypi-simple   | .. image:: https://img.shields.io/pypi/v/pypi-simple  |
-|               |    :alt: PyPI Version                                 |
-|               |    :target: https://pypi.org/project/pypi-simple      |
-+---------------+-------------------------------------------------------+
-| mdurl         | .. image:: https://img.shields.io/pypi/v/mdurl        |
-|               |    :alt: PyPI Version                                 |
-|               |    :target: https://pypi.org/project/mdurl            |
-+---------------+-------------------------------------------------------+
+.. tab:: Ansicht
+
+   +---------------+-------------------------------------------------------+
+   | Paketname     | aktuelle PyPI-Version                                 |
+   +===============+=======================================================+
+   | pypi-simple   | .. image:: https://img.shields.io/pypi/v/pypi-simple  |
+   |               |    :alt: PyPI Version                                 |
+   |               |    :target: https://pypi.org/project/pypi-simple      |
+   +---------------+-------------------------------------------------------+
+   | mdurl         | .. image:: https://img.shields.io/pypi/v/mdurl        |
+   |               |    :alt: PyPI Version                                 |
+   |               |    :target: https://pypi.org/project/mdurl            |
+   +---------------+-------------------------------------------------------+
 
 .. tab:: reST
 
