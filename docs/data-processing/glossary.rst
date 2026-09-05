@@ -25,12 +25,12 @@ Glossar
             Nebenläufigkeit einschränkt.
         Durability
             Daten müssen nach erfolgreicher Transaktion dauerhaft in der
-            Datenbankgespeichert bleiben und kann z.B. durch das Schreiben
-            eines Transaktionslogs sichergestellt werden.
+            Datenbankgespeichert bleiben und kann :abbr:`z. B. (zum Beispiel)`
+            durch das Schreiben eines Transaktionslogs sichergestellt werden.
 
     BASE
         BASE ist ein Akronym für **B**\asically **A**\vailable, **S**\oft State,
-        **E**\ventually Consistent und als Gegenbegriff zu :term:`ACID`
+        **E**\ventually Consistent und ist als Gegenbegriff zu :term:`ACID`
         entstanden.
 
         Dabei wird ein sehr optimistischer Konsistenzbegriff verwendet, der ohne
@@ -70,9 +70,10 @@ Glossar
         CA-, CP-, AP-Applikation realisiert werden soll.
 
     Cassandra
-        Cassandra ist ein :doc:`nosql/column-oriented-db`, und wurde
-        ursprünglich von Facebook entwickelt um Suchen im E-Mail-Engang zu
-        optimieren. Heute wird es unter dem Dach der `Apache Software Foundation
+        Cassandra ist ein :doc:`spaltenorientiertes Datenbanksystem
+        <nosql/column-oriented-db>` und wurde ursprünglich von Facebook
+        entwickelt um Suchen im E-Mail-Engang zu optimieren. Heute wird es
+        unter dem Dach der `Apache Software Foundation
         <https://www.apache.org/>`_ weiterentwickelt.
 
         Das Datenmodell von Cassandra hat weder eine logische Struktur noch ein
@@ -84,7 +85,8 @@ Glossar
         In Cassandra kann für jede Anfrage die Konsistenz angegeben werden. Das
         ermöglicht, dass spezifische Anfragen sehr konsistent sein können
         während andere die Konsistenz der Geschwindigkeit opfern. Für die
-        Schreibkonsistenz gibt es z.B. die folgenden vier Ebenen:
+        Schreibkonsistenz gibt es :abbr:`z. B. (zum Beispiel)` die folgenden
+        vier Ebenen:
 
         ANY
             gewährleistet, dass die Daten in mindestens einem Knoten gespeichert
@@ -104,7 +106,8 @@ Glossar
 
     Column Family
         Column Families entsprechen Tabellen in relationalen Datenbanken. Sie
-        gruppieren Spalten gleichen oder ähnlichen Inhalts, z.B.:
+        gruppieren Spalten gleichen oder ähnlichen Inhalts, :abbr:`z. B. (zum
+        Beispiel)`:
 
         .. code-block:: javascript
 
@@ -166,32 +169,36 @@ Glossar
     Graphenmodell
         Ein Graph besteht aus einer Menge an Knoten und Kanten. Graphen werden
         genutzt, um eine Vielfalt an Problemen durch Knoten, Kanten und ihren
-        Beziehungen darzustellen, z.B. in Navigationssystemen, in denen die Wege
-        in Form von Graphen gespeichert werden.
+        Beziehungen darzustellen, :abbr:`z. B. (zum Beispiel)` in
+        Navigationssystemen, in denen die Wege in Form von Graphen gespeichert
+        werden.
 
     Graphpartitionierung
         Mit Graphpartitionierung werden Graphen in kleinere Teilgraphen
         unterteilt. Dabei gibt es jedoch keine mathematisch exakte Methode, um
         die Anzahl der durchschnittenen Kanten zu minimieren, sondern nur ein
-        paar heuristische Algorithmen, z.B. Clustering-Algorithmen, die stark
-        vernetzte Teilgraphen zu abstrakten Knoten zusammenziehen.
+        paar heuristische Algorithmen, :abbr:`z. B. (zum Beispiel)`
+        Clustering-Algorithmen, die stark vernetzte Teilgraphen zu abstrakten
+        Knoten zusammenziehen.
 
         Von sich überlappenden Partitionierung spricht man bei Graphen, die
         nicht komplett geteilt werden können und in mehreren Teilgraphen
         existieren.
 
     HBase
-        HBase ist ein :doc:`nosql/column-oriented-db`, welches auf verteilten
-        Dateisystemen aufbaut und für real-time-Zugriffe auf großen
-        Datenbeständen konzipiert ist.
+        HBase ist ein :doc:`spaltenorientiertes Datenbanksystem
+        <nosql/column-oriented-db>`, welches auf verteilten Dateisystemen
+        aufbaut und für real-time-Zugriffe auf großen Datenbeständen konzipiert
+        ist.
 
     Hypertable
-        Hypertable ist ein :doc:`nosql/column-oriented-db` und auf
-        verteilten Dateisystemen basiert. Das Datenmodell ist das einer
-        mehrdimensionalen Tabelle, die mit Schlüsseln durchsucht werden
-        kann. Die erste Dimension ist der sog. *row-key*, die zweite die
-        :term:`Column Family` die dritte Dimension der *Column Qualifier*
-        und die vierte Dimension die Zeit.
+        Hypertable ist ein :doc:`spaltenorientiertes Datenbanksystem
+        <nosql/column-oriented-db>` und basiert auf verteilten Dateisystemen.
+        Das Datenmodell ist das einer mehrdimensionalen Tabelle, die mit
+        Schlüsseln durchsucht werden kann. Die erste Dimension ist der
+        :abbr:`sog. (sogenannte)` *row-key*, die zweite die :term:`Column
+        Family` die dritte Dimension der *Column Qualifier* und die vierte
+        Dimension die Zeit.
 
     Konsistente Hashfunktion
         Konsistente Hashfunktionen minimieren die Anzahl der Neuzuordnungen, da
@@ -200,8 +207,8 @@ Glossar
 
     Konsistenz
         Der Zustand einer Datenbank wird als konsistent bezeichnet, wenn die
-        gespeicherten Daten alle Anforderungen for :term:`Semantische
-        Integrität` erfüllen.
+        gespeicherten Daten alle Anforderungen for :term:`semantische Integrität
+        <Semantische Integrität>` erfüllen.
 
     Locking
         Als Locking bezeichnet man das Sperren von Daten für nebenläufige
@@ -211,7 +218,7 @@ Glossar
 
         * :term:`Optimistic concurrency`
         * :term:`Pessimistic locking`
-        * :term:`Two-phase locking (2PL)`
+        * :term:`Two-phase locking`
 
     MapReduce
         MapReduce ist ein von Google Inc. 2004 eingeführtes Framework, das für
@@ -261,8 +268,8 @@ Glossar
         einer flexiblen :term:`MapReduce`-Engine.
 
     Redis
-        Redis ist ein :doc:`nosql/key-value-store`, die üblicherweise alle
-        Daten im RAM speichert.
+        Redis ist ein :doc:`Schlüssel-Werte-Datenbanksystem
+        <nosql/key-value-store>`, die üblicherweise alle Daten im RAM speichert.
 
     Schlüssel/Wert-Paar
         Ein Wert ist immer einem bestimmten Schlüssel zugeordnet, der aus einer
@@ -277,7 +284,8 @@ Glossar
         kann die semantische Integrität mit ``TRIGGER`` und ``CONSTRAINT``
         überprüft werden.
 
-    Two-phase locking (2PL)
+    Two-phase locking
+    2PL
         Das Zwei-Phasen-Sperrprotokoll unterscheidet zwei Phasen von
         Transaktionen:
 
@@ -288,12 +296,12 @@ Glossar
 
         Das Zwei-Phasen-Sperrprotokoll kennt dabei drei Sperrzustände:
 
-        SLOCK, Shared Lock oder Read-Lock
+        ``SLOCK``, Shared Lock oder Read-Lock
             wird bei lesendem Zugriff auf Daten gesetzt
-        XLOCK, Exclusive Lock oder Write-Lock
+        ``XLOCK``, Exclusive Lock oder Write-Lock
             wird bei schreibendem Zugriff auf Daten gesetzt
-        UNLOCK
-                hebt die Sperren SLOCK und XLOCK auf.
+        ``UNLOCK``
+                hebt die Sperren ``SLOCK`` und ``XLOCK`` auf.
 
     Vektoruhr
         Eine Vektoruhr ist eine Softwarekomponente zum Zuweisen von eindeutigen
@@ -304,10 +312,10 @@ Glossar
     XPATH
         XPATH verarbeitet die Baumstruktur eines XML-Dokuments und erzeugt dabei
         Ausschnitte aus XML-Dokumenten. Um als Ergebnis vollständige
-        XML-Dokumente zu erhalten, müssen diese z.B. mit :term:`XQuery` oder
-        :term:`XSLT` erstellt werden. XPATH ist keine vollständige
-        Abfragesprache, da sie auf Selektionen und Extraktionen beschränkt
-        ist.
+        XML-Dokumente zu erhalten, müssen diese :abbr:`z. B. (zum Beispiel)` mit
+        :term:`XQuery` oder :term:`XSLT` erstellt werden. XPATH ist keine
+        vollständige Abfragesprache, da sie auf Selektionen und Extraktionen
+        beschränkt ist.
 
         XPATH ist ein Bestandteil von :term:`XQuery` seit Version 1.1 und ab
         Version 2.0 wird XPATH durch :term:`XQuery` erweitert.
