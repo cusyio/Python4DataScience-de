@@ -29,6 +29,7 @@ Added
 Changed
 ~~~~~~~
 
+* 📝 Update CodeMeta
 * 📝 Update string matching
 
   * Replace deprecated fuzzywuzzy lib with thefuzz
