@@ -9,11 +9,11 @@ DataCite Metadata Schema
 ------------------------
 
 Die DataCite Metadata Working Group veröffentlichte 2019 die `DataCite Metadata
-Schema <https://schema.datacite.org/meta/kernel-4.3/>`_ zum Veröffentlichen und
+Schema <https://schema.datacite.org/meta/kernel-4.7/>`_ zum Veröffentlichen und
 Zitieren von Forschungsdaten zusammen mit einer XSD (XML Schema Definition):
-`metadata.xsd <https://schema.datacite.org/meta/kernel-4.3/metadata.xsd>`_.
+`metadata.xsd <https://schema.datacite.org/meta/kernel-4.7/metadata.xsd>`_.
 
-Ein einfaches Datacite-Beispiel kann folgendermaßen aussehen:
+Ein einfaches DataCite-Beispiel kann folgendermaßen aussehen:
 
 .. code-block:: xml
 
