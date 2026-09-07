@@ -23,6 +23,7 @@ Added
 ~~~~~
 
 * 📝 Add Narwhals
+* 📝 Add SBOM
 * 📝 Add protobuf-py
 
 Changed
