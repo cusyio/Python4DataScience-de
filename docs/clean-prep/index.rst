@@ -5,65 +5,60 @@
 Daten bereinigen und validieren
 ===============================
 
-Im Folgenden wollen wir euch einen praktischen Überblick über verschiedene
-Bibliotheken und Methoden zur `Datenbereinigung
-<https://de.wikipedia.org/wiki/Datenbereinigung>`_ und -validierung mit Python
-geben. Dabei verwenden wir neben bekannten Bibliotheken wie
-:doc:`/workspace/numpy/index` und :doc:`/workspace/pandas/index` auch mehrere
-kleine, spezialisierte Bibliotheken wie :doc:`dedupe <deduplicate>`,
-:doc:`TheFuzz <string-matching>`, :doc:`voluptuous <voluptuous>`, :doc:`tdda
-<tdda>` und :doc:`hypothesis <hypothesis>`. Wir bevorzugen diese
-leichtgewichtigeren Lösungen gegenüber großen, universellen Systemen wie `Great
-Expectations <https://greatexpectations.io/>`_ oder `MobyDQ
-<https://ubisoft.github.io/mobydq/>`_.
+*„Garbage In, Garbage Out“* ist der verzweifelte Hinweis, dass aus mangelhaften
+Daten kaum gute Erkenntnisse gezogen werden können. Zwar gibt es stark
+regulierte, sicherheitskritische Bereiche, in denen Daten routinemäßig in allen
+Phasen überprüft werden, das allgemeine Niveau der Datenvalidierung ist in den
+meisten Analyseprojekten jedoch eher gering.
+
+Wenn wir jedoch Code schreiben, um Daten auszuwerten, die Daten jedoch nicht
+vorher überprüfen, werden einige Ergebnisse irreführend, falsch oder ungültig
+sein. Ähnlich verhält es sich, wenn wir unsere Ausgaben nicht validieren. So
+tragen wir dann auch noch zu den *„schlechten Daten“* bei, gegen das wir alle
+wettern. Hilfreich ist hier das *Postelsche Gesetz*, für das im TCP-Standard
+vorgeschlagene Prinzip der Robustheit:
+
+    *„Sei konservativ in dem, was du tust, sei liberal in dem, was du von
+    anderen akzeptierst.“* [#]_
+
+Dies steht in auffälligem Kontrast zu einer der Prinzipien von Python:
+
+    *„Fehler sollten niemals unbemerkt bleiben.“* [#]_
+
+Auch die :doc:`XML
+<../data-processing/serialisation-formats/xml-html/index>`-Spezifikation
+schreibt vor, dass nicht wohlgeformte XML-Dokumente zurückgewiesen werden
+sollen:
+
+    *„Validierende Prozessoren MÜSSEN … Verstöße gegen … die Nichteinhaltung der
+    in dieser Spezifikation festgelegten Gültigkeitsbedingungen melden.“* [#]_
+
+Die Abschnitte :doc:`procedures/index`, :doc:`procedures/ranges` und
+:doc:`procedures/regression_tests` setzen keine Python-Kenntnisse voraus und
+sind damit auch allgemein für Fachkräfte aus den Bereichen Datenmanagement,
+Unternehmensführung und Qualitätssicherung geeignet.
+
+Anschließend geben wir euch einen praktischen Überblick über verschiedene
+:doc:`libs-methods/index` zur `Datenbereinigung
+<https://de.wikipedia.org/wiki/Datenbereinigung>`_ und -validierung mit Python.
 
 .. tip::
    `cusy Seminar: Daten bereinigen und validieren mit Python
    <https://cusy.io/de/our-training-courses/cleanse-and-validate-data-with-python.html>`_
 
-Überblick
----------
+----
 
-.. csv-table:: GitHub-Insights
-    :header: "Name", "Stars", "Mitwirkende", "Commit-Aktivität", "Lizenz"
-
-    "`scikit-learn <https://github.com/scikit-learn/scikit-learn>`_",".. image:: https://raster.shields.io/github/stars/scikit-learn/scikit-learn",".. image:: https://raster.shields.io/github/contributors/scikit-learn/scikit-learn",".. image:: https://raster.shields.io/github/commit-activity/y/scikit-learn/scikit-learn",".. image:: https://raster.shields.io/github/license/scikit-learn/scikit-learn"
-    "`fg-data-profiling <https://github.com/Data-Centric-AI-Community/fg-data-profiling>`_",".. image:: https://raster.shields.io/github/stars/Data-Centric-AI-Community/fg-data-profiling",".. image:: https://raster.shields.io/github/contributors/Data-Centric-AI-Community/fg-data-profiling",".. image:: https://raster.shields.io/github/commit-activity/y/Data-Centric-AI-Community/fg-data-profiling",".. image:: https://raster.shields.io/github/license/Data-Centric-AI-Community/fg-data-profiling"
-    "`Hypothesis <https://github.com/HypothesisWorks/hypothesis>`_",".. image:: https://raster.shields.io/github/stars/HypothesisWorks/hypothesis",".. image:: https://raster.shields.io/github/contributors/HypothesisWorks/hypothesis",".. image:: https://raster.shields.io/github/commit-activity/y/HypothesisWorks/hypothesis",".. image:: https://raster.shields.io/github/license/HypothesisWorks/hypothesis"
-    "`marshmallow <https://github.com/marshmallow-code/marshmallow>`_",".. image:: https://raster.shields.io/github/stars/marshmallow-code/marshmallow",".. image:: https://raster.shields.io/github/contributors/marshmallow-code/marshmallow",".. image:: https://raster.shields.io/github/commit-activity/y/marshmallow-code/marshmallow",".. image:: https://raster.shields.io/github/license/marshmallow-code/marshmallow"
-    "`dedupe <https://github.com/dedupeio/dedupe>`_",".. image:: https://raster.shields.io/github/stars/dedupeio/dedupe",".. image:: https://raster.shields.io/github/contributors/dedupeio/dedupe",".. image:: https://raster.shields.io/github/commit-activity/y/dedupeio/dedupe",".. image:: https://raster.shields.io/github/license/dedupeio/dedupe"
-    "`pandera <https://github.com/unionai-oss/pandera>`_",".. image:: https://raster.shields.io/github/stars/unionai-oss/pandera",".. image:: https://raster.shields.io/github/contributors/unionai-oss/pandera",".. image:: https://raster.shields.io/github/commit-activity/y/unionai-oss/pandera",".. image:: https://raster.shields.io/github/license/unionai-oss/pandera"
-    "`thefuzz <https://github.com/seatgeek/thefuzz>`_",".. image:: https://raster.shields.io/github/stars/seatgeek/thefuzz",".. image:: https://raster.shields.io/github/contributors/seatgeek/thefuzz",".. image:: https://raster.shields.io/github/commit-activity/y/seatgeek/thefuzz",".. image:: https://raster.shields.io/github/license/seatgeek/thefuzz"
-    "`Voluptuous <https://github.com/alecthomas/voluptuous>`_",".. image:: https://raster.shields.io/github/stars/alecthomas/voluptuous",".. image:: https://raster.shields.io/github/contributors/alecthomas/voluptuous",".. image:: https://raster.shields.io/github/commit-activity/y/alecthomas/voluptuous",".. image:: https://raster.shields.io/github/license/alecthomas/voluptuous"
-    "`datacleaner <https://github.com/rhiever/datacleaner>`_",".. image:: https://raster.shields.io/github/stars/rhiever/datacleaner",".. image:: https://raster.shields.io/github/contributors/rhiever/datacleaner",".. image:: https://raster.shields.io/github/commit-activity/y/rhiever/datacleaner",".. image:: https://raster.shields.io/github/license/rhiever/datacleaner"
-    "`popmon <https://github.com/ing-bank/popmon>`_",".. image:: https://raster.shields.io/github/stars/ing-bank/popmon",".. image:: https://raster.shields.io/github/contributors/ing-bank/popmon",".. image:: https://raster.shields.io/github/commit-activity/y/ing-bank/popmon",".. image:: https://raster.shields.io/github/license/ing-bank/popmon"
-    "`TDDA <https://github.com/tdda/tdda>`_",".. image:: https://raster.shields.io/github/stars/tdda/tdda",".. image:: https://raster.shields.io/github/contributors/tdda/tdda",".. image:: https://raster.shields.io/github/commit-activity/y/tdda/tdda",".. image:: https://raster.shields.io/github/license/tdda/tdda"
-    "`Validr <https://github.com/guyskk/validr>`_",".. image:: https://raster.shields.io/github/stars/guyskk/validr",".. image:: https://raster.shields.io/github/contributors/guyskk/validr",".. image:: https://raster.shields.io/github/commit-activity/y/guyskk/validr",".. image:: https://raster.shields.io/github/license/guyskk/validr"
-    "`Probatus <https://github.com/ing-bank/probatus>`_",".. image:: https://raster.shields.io/github/stars/ing-bank/probatus",".. image:: https://raster.shields.io/github/contributors/ing-bank/probatus",".. image:: https://raster.shields.io/github/commit-activity/y/ing-bank/probatus",".. image:: https://raster.shields.io/github/license/ing-bank/probatus"
-
-Ruhende Projekte
-----------------
-
-.. csv-table:: GitHub-Insights
-    :header: "Name", "Stars", "Mitwirkende", "Commit-Aktivität", "Lizenz"
-
-    "`Bulwark <https://github.com/ZaxR/bulwark>`_",".. image:: https://raster.shields.io/github/stars/ZaxR/bulwark",".. image:: https://raster.shields.io/github/contributors/ZaxR/bulwark",".. image:: https://raster.shields.io/github/commit-activity/y/ZaxR/bulwark",".. image:: https://raster.shields.io/github/license/ZaxR/bulwark"
-    "`PandasSchema <https://github.com/multimeric/PandasSchema>`_",".. image:: https://raster.shields.io/github/stars/multimeric/PandasSchema",".. image:: https://raster.shields.io/github/contributors/multimeric/PandasSchema",".. image:: https://raster.shields.io/github/commit-activity/y/multimeric/PandasSchema",".. image:: https://raster.shields.io/github/license/multimeric/PandasSchema"
-    "`pandas-validation <https://github.com/jmenglund/pandas-validation>`_",".. image:: https://raster.shields.io/github/stars/jmenglund/pandas-validation",".. image:: https://raster.shields.io/github/contributors/jmenglund/pandas-validation",".. image:: https://raster.shields.io/github/commit-activity/y/jmenglund/pandas-validation",".. image:: https://raster.shields.io/github/license/jmenglund/pandas-validation"
-    "`Opulent-Pandas <https://github.com/danielvdende/opulent-pandas>`_",".. image:: https://raster.shields.io/github/stars/danielvdende/opulent-pandas",".. image:: https://raster.shields.io/github/contributors/danielvdende/opulent-pandas",".. image:: https://raster.shields.io/github/commit-activity/y/danielvdende/opulent-pandas",".. image:: https://raster.shields.io/github/license/danielvdende/opulent-pandas"
-    "`signpost <https://github.com/ilsedippenaar/signpost>`_",".. image:: https://raster.shields.io/github/stars/ilsedippenaar/signpost",".. image:: https://raster.shields.io/github/contributors/ilsedippenaar/signpost",".. image:: https://raster.shields.io/github/commit-activity/y/ilsedippenaar/signpost",".. image:: https://raster.shields.io/github/license/ilsedippenaar/signpost"
+.. [#] Jon Postel: `Transmission Control Protocol
+       <https://www.rfc-editor.org/info/rfc761/#section-2.10>`_, 1980
+.. [#] Tim Peters: :pep:`The Zen of Python <20>`, 1999
+.. [#] `XML-Spezifikation 1.0, Abschnitt 5.1
+       <https://www.w3.org/TR/2008/REC-xml-20081126/#proc-types>`_, 1998
 
 .. toctree::
     :hidden:
     :titlesonly:
     :maxdepth: 0
 
-    nulls.ipynb
-    outliers.ipynb
-    string-matching.ipynb
-    deduplicate.ipynb
-    hypothesis.ipynb
-    tdda.ipynb
-    voluptuous.ipynb
-    scikit-learn-reprocessing.ipynb
-    dask-pipeline.ipynb
+    categories
+    procedures/index
+    libs-methods/index

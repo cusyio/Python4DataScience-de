@@ -128,6 +128,93 @@ Glossar
         **c**\ommodity **h**\ardware **D**\ata **B**\ase. Dabei handelt es sich
         um ein :doc:`nosql/document-oriented-db`.
 
+    Data Lake
+        Die Architektur von Data Lakes ist gekennzeichnet durch folgende Ebenen:
+
+        Speicher-Ebene
+            Hochskalierbare Plattform, die verschiedenste Datenformate speichern
+            kann
+        Übernahme-Ebene
+            Prozesse, die Daten in den Speicher laden, entweder in :abbr:`sog.
+            (sogenannten)` Batches oder als Datenstrom (→ `Apache Kafka
+            <https://kafka.apache.org/>`_, → `Apache NiFi
+            <https://nifi.apache.org/>`_)
+        Metadaten und Katalogisierung
+            Systeme, die Datensätze, Schemata und :term:`Data-Lineage`
+            dokumentieren, :abbr:`s. a. (siehe auch)` :term:`Datenkataloge
+            <Datenkatalog>`. Ohne geeignete Metadaten würde ein :abbr:`sog.
+            (sogenannter)` Datensumpf (engl.: Data Swamp) entstehen.
+        Governance und Sicherheit
+            Mechanismen für Zugriffskontrolle, Verschlüsselung, Protokollierung
+
+    Data-Lineage
+    Datenherkunft
+    Data Provenance
+    Data Pedigree
+         Operative Infrastruktur, die den Weg der Daten durch die Systeme
+         aufzeigen: woher sie stammen, wie sie transformiert wurden und wo sie
+         konsumiert werden.
+
+    Data Mesh
+        Dezentrale Datenarchitektur für Teams mit Datenprodukten in deren
+        jeweiliger Fachdomäne (→ `Domain-driven Design (DDD)
+        <https://de.wikipedia.org/wiki/Domain-driven_Design>`_, → `Team
+        Topologies <https://teamtopologies.com>`_)
+
+        Data Mesh basiert auf den folgenden vier fundamentalen Prinzipien:
+
+        Domain Ownership
+            Data Mesh überträgt die Verantwortung für Datenanalysen in fachlich
+            geschnittene Domänenteams.
+        Data as a Product
+            Analytische Daten werden in Form von Datenprodukten auch anderen
+            Teams zugänglich gemacht, um übergreifende Auswertungen zu
+            ermöglichen.
+        Federated Governance
+            Gemeinsame Standards und Regeln werden in Form einer *Federated
+            Governance* von den Teams gemeinsam festgelegt, um Interoperabilität
+            und Sicherheitsanforderungen zu gewährleisten.
+        Self-Serve Data Platform
+            Die Dateninfrastruktur wird in Form einer Datenplattform nach dem
+            Self-Service-Gedanken von einem Data Platform Team bereitgestellt.
+
+    Data Warehouse
+        Für Analysezwecke optimierte Datenbank mit folgenden Eigenschaften:
+
+        integrated (vereinheitlicht)
+            Verschiedene Quellsysteme mit unterschiedlich strukturierten Daten
+            werden in zentraler Datenbank in einheitlicher Form zusammengeführt
+        subject-oriented (themenorientiert)
+            Analyse von Kennzahlen, nicht für operative Prozesse
+        time-variant (zeitabhängig)
+            Analysen über zeitliche Veränderungen und Entwicklungen sind möglich
+        nonvolatile (beständig)
+            Daten werden dauerhaft, nicht nur temporär, gespeichert
+
+    DataOps
+        Nach dem Vorbild von :term:`DevOps` verfolgt DataOps das Ziel, bisher
+        isolierte  Datenverarbeitungsfunktionen automatisiert, agil und
+        konsistent zu gestalten. Durch kontinuierliches Testen und Überwachen
+        trägt DataOps dazu bei, die Datenqualität und -verfügbarkeit in
+        :term:`Data Warehouses <Data Warehouse>`, :term:`Data Lakes <Data Lake>`
+        und :term:`Data Meshes <Data Mesh>` zu verbessern.
+
+    Datenkatalog
+        Ein Datenkatalog ist ein zentraler Überblick über die Datenbestände
+        einer Organisation. Er nutzt Metadaten, um Kontextinformationen zu jedem
+        Datensatz bereitzustellen, darunter dessen Herkunft, Struktur,
+        Eigentumsverhältnisse, Nutzungsverlauf und Qualität. Datenkataloge
+        helfen Usern dabei, Daten zu finden und zu bewerten, unterstützen
+        Maßnahmen zur Datenverwaltung und zur Einhaltung von Vorschriften und
+        erleichtern die teamübergreifende Zusammenarbeit.
+
+    DevOps
+        Softwareentwicklungsmethodik, die die Bereitstellung von
+        Software-Anwendungen und -Diensten beschleunigt, indem sie
+        Software-Entwicklung (Dev) und -Betrieb (Ops) miteinander verbindet und
+        automatisiert. Beiden Gruppen arbeiteten traditionell getrennt
+        voneinander in unterschiedlichen Silos.
+
     Eventual Consistency
         *»Konsistenz als Zustandsübergang, der irgendwann erreicht wird.«*
 
@@ -226,6 +313,11 @@ Glossar
         Computerclustern verwendet wird. Es wurde durch die, in der funktionalen
         Programmierung häufig verwendeten Funktionen *map* und *reduce*
         inspiriert auch wenn die Semantik von diesen etwas abweicht.
+
+    MLOps
+        MLOps kombiniert Machine Learning (ML) und :term:`DevOps` und ist ein
+        Prozess zum Erstellen und Betrieb von Machine-Learning-Modellen, wobei
+        die einzelnen Aufgaben automatisiert und überwacht werden.
 
     MongoDB
         MongoDB ist eine schemafrei :doc:`nosql/document-oriented-db`,
