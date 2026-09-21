@@ -22,6 +22,11 @@ Notfälle, wenn Zweige für ältere Versionen erstellt werden müssen.
 Added
 ~~~~~
 
+* 📝 Add CSVW
+
+  * Switch to xan
+  * Add tdda.serial
+
 * 📝 Add Narwhals
 * 📝 Add SBOM
 * 📝 Add protobuf-py
