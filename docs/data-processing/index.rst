@@ -10,11 +10,12 @@ z.B. in :doc:`opendata`.
 
 Neben spezifischen Python-Bibliotheken zum Zugriff auf
 :doc:`/data-processing/file-systems` und :doc:`/data-processing/geodata` stellen
-wir euch :doc:`serialisation-formats/index` und drei Werkzeuge genauer vor:
+wir euch :doc:`serialisation-formats/index` und vier Werkzeuge genauer vor:
 
 * :doc:`/data-processing/pandas-io`
 * :doc:`/data-processing/httpx/index`
 * :doc:`/data-processing/intake/index`
+* :doc:`/data-processing/frictionless/index`
 
 .. tip::
    `cusy Seminar: Daten lesen, schreiben und bereitstellen mit Python
@@ -54,6 +55,7 @@ hilfreiche Python-Pakete zum :doc:`Bereinigen und Validieren von Daten
     pandas-io
     serialisation-formats/index
     intake/index
+    frictionless/index
     httpx/index
     file-systems
     geodata

@@ -14,7 +14,7 @@ Bokeh≥2.0 und Panel verfügbar sein.
 Installation
 ------------
 
-Intake lässt sich einfach für euren Jupyter-Kernel installieren mit:
+Intake lässt sich einfach installieren mit:
 
 .. code-block:: console
 

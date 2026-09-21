@@ -42,6 +42,7 @@ docs = [
   "matplotlib",
   "nbsphinx",
   "notebook",
+  "pygments-csv-lexer",
   "sphinx",
   "sphinx-copybutton",
   "sphinx-design",

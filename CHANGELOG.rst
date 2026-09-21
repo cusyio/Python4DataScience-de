@@ -22,6 +22,10 @@ Notfälle, wenn Zweige für ältere Versionen erstellt werden müssen.
 Added
 ~~~~~
 
+* 📝 Add frictionless
+
+  * 🔧 Add pygments-csv-lexer
+
 * 📝 Add CSVW
 
   * Switch to xan
