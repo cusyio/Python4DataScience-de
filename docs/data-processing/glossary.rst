@@ -178,6 +178,26 @@ Glossar
             Die Dateninfrastruktur wird in Form einer Datenplattform nach dem
             Self-Service-Gedanken von einem Data Platform Team bereitgestellt.
 
+    Data Package
+    Frictionless Specs
+        `Data Package <https://datapackage.org/standard/data-package/>`_ ist ein
+        leichtgewichtiger Open-Source-Standard zum Bündeln, Beschreiben und FAIR
+        Use von Datensätzen.
+
+        Data Package Descriptor
+            Zentrale JSON-Datei :file:`datapackage.json` Stammverzeichnis mit
+            allgemeinen Metadaten wie (Titel, Lizenz, Autoren) und einer
+            Ressourcen-Liste.
+        Data Resource
+            Beschreibt einzelne Dateien oder Datenquellen (Pfad, Format, URL).
+        Table Schema
+            JSON-Schema für tabulare Daten (Spaltentypen, Datentypen wie
+            ``string``/``integer``/``date``, Constraints und externe
+            Fremdschlüssel).
+        Table Dialect
+            beschreibt CSV-Dialekte Formatierungen (Trennungseichen,
+            Anführungszeichen, Header-Zeilen)
+
     Data Warehouse
         Für Analysezwecke optimierte Datenbank mit folgenden Eigenschaften:
 
@@ -190,6 +210,14 @@ Glossar
             Analysen über zeitliche Veränderungen und Entwicklungen sind möglich
         nonvolatile (beständig)
             Daten werden dauerhaft, nicht nur temporär, gespeichert
+
+    DataONE Data Packaging
+        `DataONE Data Packaging
+        <https://dataone-architecture-documentation.readthedocs.io/en/latest/design/DataPackage.html>`_
+        ist eine gebündelte Sammlung, die mindestens ein wissenschaftliches
+        Metadaten-Dokument, ein oder mehrere Datenobjekte sowie eine
+        RDF-Ressourcenzuordnung enthält, die deren Beziehungen unter Verwendung
+        von :term:`OAI-ORE`-Begriffen definiert.
 
     DataOps
         Nach dem Vorbild von :term:`DevOps` verfolgt DataOps das Ziel, bisher
@@ -207,6 +235,25 @@ Glossar
         helfen Usern dabei, Daten zu finden und zu bewerten, unterstützen
         Maßnahmen zur Datenverwaltung und zur Einhaltung von Vorschriften und
         erleichtern die teamübergreifende Zusammenarbeit.
+
+    DCAT
+    Data Catalog Vocabulary
+        `DCAT <https://www.w3.org/TR/vocab-dcat-3/>`_ ist ein vom W3C
+        entwickelter Metadatenstandard zur Beschreibung von Datensätzen und
+        Datenkatalogen im Web. Es soll das Auffinden, Verknüpfen und den
+        Austausch von Daten erleichtern und nutzt dazu :abbr:`RDF (Resource
+        Description Framework)`. Dabei wird primär zwischen *Catalog*, *Dataset
+        und *Distribution* eines Datensatzes unterschieden.
+
+    DCAT-AP.de
+        Gemeinsames deutsches Metadatenmodell zum Austausch von offenen
+        Verwaltungsdaten.
+
+        .. seealso::
+           * `DCAT-AP.de Spezifikation 3.0
+             <https://www.dcat-ap.de/def/dcatde/3.0/spec/>`_
+           * `Metadatenschema
+             <https://www.govdata.de/informationen/metadatenschema>`_
 
     DevOps
         Softwareentwicklungsmethodik, die die Bereitstellung von
@@ -314,6 +361,13 @@ Glossar
         Programmierung häufig verwendeten Funktionen *map* und *reduce*
         inspiriert auch wenn die Semantik von diesen etwas abweicht.
 
+    MediaWiki Tabular Data
+        MediaWiki `Tabular Data
+        <https://www.mediawiki.org/wiki/Help:Tabular_data>`_ speichert
+        strukturierte Zeilen und Spalten als JSON im Namensraum ``Data:`` mit
+        dem Datei-Suffix :file:`.tab` für wikiübergreifende Listen und
+        Diagramme.
+
     MLOps
         MLOps kombiniert Machine Learning (ML) und :term:`DevOps` und ist ein
         Prozess zum Erstellen und Betrieb von Machine-Learning-Modellen, wobei
@@ -394,6 +448,13 @@ Glossar
             wird bei schreibendem Zugriff auf Daten gesetzt
         ``UNLOCK``
                 hebt die Sperren ``SLOCK`` und ``XLOCK`` auf.
+
+    OAI-ORE
+    ORE
+    Open Archives Initiative Object Reuse and Exchange
+        `Open Archives Initiative Object Reuse and Exchange (OAI-ORE)
+        <https://www.openarchives.org/ore/>`_ definiert Standards für die
+        Beschreibung und den Austausch von Aggregationen von Webressourcen.
 
     Vektoruhr
         Eine Vektoruhr ist eine Softwarekomponente zum Zuweisen von eindeutigen

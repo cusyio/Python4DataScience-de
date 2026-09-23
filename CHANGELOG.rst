@@ -22,6 +22,7 @@ Notfälle, wenn Zweige für ältere Versionen erstellt werden müssen.
 Added
 ~~~~~
 
+* 📝 Add citation specifications for data
 * 📝 Add CSVW
 
   * Switch to xan

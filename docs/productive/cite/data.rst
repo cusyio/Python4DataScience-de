@@ -5,6 +5,21 @@
 Daten zitieren
 ==============
 
+Ähnlich wie Forschende routinemäßig bibliografische Verweise auf andere
+wissenschaftliche Quellen angeben, soll auch auf Daten verwiesen werden. Obwohl
+Daten häufig weitergegeben werden, werden sie nicht immer auf dieselbe Weise
+zitiert und erschweren so, den Zugang, die Transparenz und die
+Reproduzierbarkeit sowie die Wiederverwendung.
+
+.. seealso::
+   * :term:`Data Package`
+   * :term:`DCAT`
+   * :term:`DCAT-AP.de`
+   * :term:`OAI-ORE`
+   * :term:`DataONE Data Packaging`
+   * `Springer Nature: Data repository guidance
+     <https://www.springernature.com/gp/authors/research-data-policy/recommended-repositories>`_
+
 DataCite Metadata Schema
 ------------------------
 
