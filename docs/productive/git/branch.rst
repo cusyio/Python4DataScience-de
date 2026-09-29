@@ -54,13 +54,9 @@ Gebräuchliche Befehle
     ``-c``
         erstellt einen neuen Zweig.
 
-:samp:`$ git switch -`
-    wechselt zu dem zuvor zuvor ausgecheckten Zweig. Das hin und her springen
-    zwischen zwei Zweigen wird damit deutlich vereinfacht.
+    .. version-added:: 2.24
 
-    .. note::
-
-       In Git < 2.23 steht euch ``git switch`` noch nicht zur Verfügung. In
+       Vor Git 2.24 steht euch ``git switch`` noch nicht zur Verfügung. In
        diesem Fall müsst ihr noch ``git checkout`` verwenden:
 
        :samp:`$ git checkout [-b] [{BRANCH_NAME}]`
@@ -68,6 +64,10 @@ Gebräuchliche Befehle
 
            ``-b``
                erstellt den angegebenen Zweig, wenn dieser nicht schon besteht.
+
+:samp:`$ git switch -`
+    wechselt zu dem zuvor zuvor ausgecheckten Zweig. Das hin und her springen
+    zwischen zwei Zweigen wird damit deutlich vereinfacht.
 
 :samp:`$ git merge {FROM_BRANCH_NAME}`
     verbindet den angegebenen mit dem aktuellen Zweig, in dem ihr euch gerade
@@ -101,6 +101,20 @@ Gebräuchliche Befehle
         ist eine Merge-Strategie, die verwendet wird, sofern die Zusammenführung
         nur zu ``HEAD`` erfolgt.
 
+:samp:`$ git merge-base [-a|--all] {COMMIT {COMMIT}`
+    findet die bestmöglichen gemeinsamen Vorfahren für einen Merge.
+
+    .. _git-merge-base:
+
+    .. version-added:: 2.56
+
+       Ab Git 2.56 ist die Suche vor allem bei :abbr:`sog. (sogenannten)`
+       *Criss-Cross Merges* erheblich besser geworden.
+
+       .. seealso::
+          * `Stop searching history once no more merge bases can exist
+            <https://github.blog/open-source/git/highlights-from-git-2-56/#h-stop-searching-history-once-no-more-merge-bases-can-exist>`_
+
 .. _merge-conflicts:
 
 Merge-Konflikte
@@ -126,6 +140,13 @@ Die Historie kann dann :abbr:`z.B. (zum Beispiel)` so aussehen:
    * | 46ab1a2 Hotfix directly in main
    |/
    * 0c65f04 Initial commit
+
+.. _git-add-resolved:
+
+.. version-added:: 2.56
+
+   Ab Git 2.56 könnt ihr ``git add --resolved`` verwenden nur diejenigen Pfade,
+   die im Index noch nicht zusammengeführt sind, zu berücksichtigen.
 
 .. seealso::
 
