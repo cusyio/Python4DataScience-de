@@ -344,10 +344,11 @@ verwenden:
 Nun könnt ihr die nicht-zusammengeführten Dateien editieren mit
 ``git edit-unmerged`` und anschließend alle Dateien in die Staging-Area überführen mit ``git add -u``.
 
+Alternativ könnt ihr auch ``git mergetool`` verwenden.
+
 .. seealso::
-   Ich habe die Editor-Variable dem `gitalias
-   <https://github.com/GitAlias/gitalias/tree/main>`_-Projekt entnommen. Und
-   vielleicht findet ihr dort ja noch mehr Ideen für eure Aliase.
+   * `gitalias <https://github.com/GitAlias/gitalias/tree/main>`_
+   * `git-mergetool <https://git-scm.com/docs/git-mergetool>`_
 
 Zweige löschen
 --------------

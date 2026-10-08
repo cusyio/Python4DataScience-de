@@ -22,7 +22,8 @@ Notfälle, wenn Zweige für ältere Versionen erstellt werden müssen.
 Added
 ~~~~~
 
-📝 Adopt Git 2.56 features
+* 📝 Add git mergetool
+* 📝 Adopt Git 2.56 features
 
   * Add git add --resolved
   * Add git merge-base
