@@ -38,6 +38,8 @@ SQLite oder :doc:`postgresql/postgis/index` und `ST_asMVT
    * `pmtiles Python package
      <https://github.com/protomaps/PMTiles/tree/main/python/pmtiles>`_
 
+.. _mvt:
+
 Mapbox Vector Tiles (MVT)
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -71,7 +73,10 @@ Containerformat für Kacheldaten auf der Grundlage von SQLite. Es ist für den
 lokalen Zugriff optimiert, nicht wie :ref:`pmtiles` auf den Zugriff via HTTP.
 
 .. seealso::
+   * :ref:`MBTiles konvertieren <pyviz:pmtiles-cli>`
    * `MBTiles specification <https://github.com/mapbox/mbtiles-spec>`_
+
+.. _cog:
 
 Cloud Optimized GeoTIFF (COG)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
