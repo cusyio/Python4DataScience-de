@@ -92,6 +92,6 @@ Speicher und Anzahl der Zuweisungen.
 
 .. tip::
    Mit :ref:`python-basics:pytest_memray` gibt es auch ein Plugin für
-   :doc:`python-basics:test/pytest/index`, mit dem ihr überprüfen könnt, ob
+   :doc:`python-basics:test/libs/pytest/index`, mit dem ihr überprüfen könnt, ob
    von euch festgelegte Obergrenzen für den Speicherverbrauch und Speicherlecks
    eingehalten werden.

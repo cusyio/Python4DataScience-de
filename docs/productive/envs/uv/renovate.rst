@@ -1,5 +1,5 @@
-Dependency-Bot
-==============
+Renovate
+========
 
 Es ist eine bewährte Praxis, Abhängigkeiten regelmäßig zu aktualisieren, um
 Schwachstellen zu vermeiden, Inkompatibilitäten zwischen Abhängigkeiten

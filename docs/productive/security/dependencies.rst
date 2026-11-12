@@ -215,7 +215,8 @@ wird. Alternativ könnt ihr auch ``pip-compile --generate-hashes`` der `pip-tool
 
 Ihr solltet jedoch nicht nur für eure Python-Abhängigkeiten Hash-Pinning
 verwenden, sondern :abbr:`z. B. (zum Beispiel)` auch für eure :doc:`pre-commit
-Checks <../git/advanced/hooks/checks>` und :ref:`GitHub Actions <pinact>`.
+Checks <../git/advanced/hooks/checks>` und :ref:`GitHub Actions
+<gh-actions-lock>`.
 
 Hash-Pinning schützt jedoch nicht davor, ein schädliches Paket zum ersten Mal zu
 installieren; in diesem Fall würdet ihr nur den Hash des schädlichen Pakets
@@ -261,7 +262,7 @@ könnt ihr regelmäßig eure :file:`uv.lock`-Datei aktualisieren:
 .. seealso::
    * :ref:`Update uv.lock <python-basics:update-uv-lock>`
 
-Alternativ könnt ihr euch auch von :doc:`../envs/uv/dependency-bot` unterstützen
+Alternativ könnt ihr euch auch von :doc:`../envs/uv/renovate` unterstützen
 lassen.
 
 .. _vulnerability_scans:
