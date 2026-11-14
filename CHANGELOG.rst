@@ -22,6 +22,7 @@ Notfälle, wenn Zweige für ältere Versionen erstellt werden müssen.
 Added
 ~~~~~
 
+* 📝 Add python-sbom
 * 📝 Add git mergetool
 * 📝 Adopt Git 2.56 features
 
