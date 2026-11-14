@@ -24,37 +24,37 @@ repos:
     - id: end-of-file-fixer
     - id: trailing-whitespace
   - repo: https://github.com/zizmorcore/zizmor-pre-commit
-    rev: 06a39750ec31860bb44f2acf67182c40016cd1e7  # frozen: v1.32.0
+    rev: c7d31dc612dffdd4d3b2f2b88b9660d3ab057ee8  # frozen: v1.33.1
     hooks:
       - id: zizmor
   - repo: https://github.com/tox-dev/pyproject-fmt
-    rev: 59e7b26529dc6f15c43063064b8b06ded60d0910 # frozen: v2.29.4
+    rev: 02ef6d1c28994054a843e58604e1a343faa42987  # frozen: v2.31.2
     hooks:
     - id: pyproject-fmt
   - repo: https://github.com/abravalheri/validate-pyproject
-    rev: 17e12779811926f000bdfa1795f9e3735dd71ac3 # frozen: 0.26
+    rev: 82d21874c3242e4dc27bb47641c996902ef64eef  # frozen: v0.27
     hooks:
     - id: validate-pyproject
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: a56c0b927e6465d37cae3e97d35d4d18ab2b96cd # frozen: v0.16.9
+    rev: 9026c9127e153371d7a78dfcb0c45ae2046a3d10  # frozen: v0.17.6
     hooks:
       - id: ruff-check
         args: [--fix, --exit-non-zero-on-fix]
       - id: ruff-format
   - repo: https://github.com/sphinx-contrib/sphinx-lint
-    rev: c883505f64b59c3c5c9375191e4ad9f98e727ccd # frozen: v1.0.2
+    rev: c883505f64b59c3c5c9375191e4ad9f98e727ccd  # frozen: v1.0.2
     hooks:
     - id: sphinx-lint
       types: [rst]
   - repo: https://github.com/adamchainz/blacken-docs
-    rev: fda77690955e9b63c6687d8806bafd56a526e45f # frozen: 1.20.0
+    rev: fda77690955e9b63c6687d8806bafd56a526e45f  # frozen: 1.20.0
     hooks:
     - id: blacken-docs
       args: [--line-length=79]
       additional_dependencies:
       - black
   - repo: https://github.com/codespell-project/codespell
-    rev: 57b21406f092110c18776e39b0bda50d37c945c8 # frozen: v2.4.3
+    rev: 57b21406f092110c18776e39b0bda50d37c945c8  # frozen: v2.4.3
     hooks:
     - id: codespell
       args: [--toml pyproject.toml]
